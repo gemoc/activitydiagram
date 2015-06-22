@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Activity Diagram Test
+Bundle-SymbolicName: org.modelexecution.operationalsemantics.ad.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.junit,
+ org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0",
+ org.modelexecution.operationalsemantics.ad.grammar;bundle-version="1.0.0",
+ org.eclipse.xtext.ecore;bundle-version="2.7.2",
+ org.eclipse.emf;bundle-version="2.6.0",
+ org.modelexecution.operationalsemantics.ad.input.grammar;bundle-version="1.0.0"
+Export-Package: org.modelexecution.operationalsemantics.ad.test

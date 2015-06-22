@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<conf:LanguageDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:conf="http://www.gemoc.org/gemoc_language_workbench_conf" name="xad_sequential">
+  <dsaProject projectName="org.modelexecution.operationalsemantics.gemoc.sequential.dynamic"/>
+  <domainModelProject projectName="org.modelexecution.operationalsemantics.ad" defaultRootEObjectQualifiedName="activitydiagram::Activity" genmodeluri="platform:/resource/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.genmodel"/>
+  <editorProjects xsi:type="conf:XTextEditorProject" projectName="org.modelexecution.operationalsemantics.ad.grammar"/>
+  <editorProjects xsi:type="conf:SiriusEditorProject" projectName="org.modelexecution.operationalsemantics.ad.design"/>
+  <animatorProjects xsi:type="conf:SiriusAnimatorProject" projectName="org.modelexecution.operationalsemantics.ad.design"/>
+</conf:LanguageDefinition>

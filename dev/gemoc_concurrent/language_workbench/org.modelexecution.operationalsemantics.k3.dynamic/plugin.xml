@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="fr.inria.diverse.melange.adapter">
+      <adapter
+            metamodel_uri="http://activitydiagram/1.0"
+            class="org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.activitydiagram.adapters.activitydiagrammt.ActivityDiagramAdapter"
+            modeltype_name="ActivityDiagramMT">
+      </adapter>
+   </extension>
+
+</plugin>
