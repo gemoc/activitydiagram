@@ -1,2 +1,2 @@
-# activitydiagram
-Sample for GEMOC that illustrates the various GEMOC usages on an Activity Diagram
+# DSL for Activity Diagram
+Design and implementation of a DSL for Activity Diagram according to the GEMOC methodology and tooling. 
