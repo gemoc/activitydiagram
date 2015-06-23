@@ -1,2 +1,2 @@
 # DSL for Activity Diagram
-Design and implementation of a DSL for Activity Diagram according to the GEMOC methodology and tooling. 
+Design and implementation of a DSL for activity diagrams according to the GEMOC methodology and tooling. 
