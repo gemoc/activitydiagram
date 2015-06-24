@@ -29,10 +29,12 @@ import static extension org.modelexecution.operationalsemantics.gemoc.sequential
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.OfferAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.OpaqueActionAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.InitialNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.InitialNode_QueryAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.ActivityFinalNodeAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.ForkNodeAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.JoinNodeAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.MergeNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.MergeNode_QueryAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.DecisionNodeAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.IntegerVariableAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.BooleanVariableAspect.*
@@ -210,7 +212,7 @@ class NamedElementAspect {
 
 @Aspect(className=ActivityNode, transactionSupport = TransactionSupport.EMF )
 class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.NamedElementAspect {
-	List<Token> heldTokens = new ArrayList<Token>
+	//List<Token> heldTokens = new ArrayList<Token>
 
 	@OverrideAspectMethod
 	def void execute(Context c) {
@@ -221,9 +223,9 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 		_self.running = false;
 	}
 
-	def boolean isReady() {
-		return _self.isRunning();
-	}
+//	def boolean isReady() {
+//		return _self.isRunning();
+//	}
 
 	def void sendOffers1(List<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
@@ -251,6 +253,64 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 		}
 	}
 
+//	def boolean hasOffers1() {
+//		var hasOffer = true;
+//		for (ActivityEdge edge : _self.getIncoming()) {
+//			if (!edge.hasOffer1()) {
+//				hasOffer = false;
+//			}
+//		}
+//		return hasOffer;
+//	}
+
+	def void removeToken1(Token token) {
+		_self.heldTokens.remove(token);
+	}
+}
+
+@Aspect(className=ActivityNode )
+class ActivityNode_QueryAspect extends org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.NamedElementAspect {
+	//List<Token> heldTokens = new ArrayList<Token>
+
+//	@OverrideAspectMethod
+//	def void execute(Context c) {
+//		//_self.sendOffers1(_self.takeOfferdTokens1)
+//	}
+//
+//	def void terminate() {
+//		_self.running = false;
+//	}
+
+	def boolean isReady() {
+		return _self.isRunning();
+	}
+
+//	def void sendOffers1(List<Token> tokens) {
+//		for (ActivityEdge edge : _self.getOutgoing()) {
+//			edge.sendOffer1(tokens);
+//		}
+//	}
+//
+//	def List<Token> takeOfferdTokens1() {
+//		val allTokens = new ArrayList<Token>();
+//		for (ActivityEdge edge : _self.getIncoming()) {
+//			val tokens = edge.takeOfferedTokens1();
+//			for (Token token : tokens) {
+//				token.withdraw1();
+//				token.holder=_self
+//			}
+//			allTokens.addAll(tokens);
+//		}
+//		return allTokens;
+//	}
+//
+//	def void addTokens1(List<Token> tokens) {
+//		for (Token token : tokens) {
+//			var transferredToken = token.transfer1(_self);
+//			_self.heldTokens.add(transferredToken);
+//		}
+//	}
+
 	def boolean hasOffers1() {
 		var hasOffer = true;
 		for (ActivityEdge edge : _self.getIncoming()) {
@@ -261,14 +321,14 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 		return hasOffer;
 	}
 
-	def void removeToken1(Token token) {
-		_self.heldTokens.remove(token);
-	}
+//	def void removeToken1(Token token) {
+//		_self.heldTokens.remove(token);
+//	}
 }
 
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
-	public List<Offer> offers = new ArrayList<Offer>
+	//public List<Offer> offers = new ArrayList<Offer>
 
 	def void sendOffer1(List<Token> tokens) {
 		val offer = ActivitydiagramFactory.eINSTANCE.createOffer;
@@ -316,12 +376,32 @@ class InitialNodeAspect extends ActivityNodeAspect {
 		c.output.executedNodes.add(_self)
 //		_self.outgoing.forEach[e|e.execute(c)]
 	}
+//	@OverrideAspectMethod
+//	def boolean hasOffers1() {		
+//		return false;
+//	}
+	
+}
+
+@Aspect(className=InitialNode)
+class InitialNode_QueryAspect extends ActivityNode_QueryAspect {
+//	@OverrideAspectMethod
+//	def void execute(Context c) {
+//		var r = ActivitydiagramFactory.eINSTANCE.createControlToken
+//		r.holder = _self
+//		var list = new ArrayList<Token>
+//		list.add(r)
+//		_self.sendOffers1(list)
+//		c.output.executedNodes.add(_self)
+////		_self.outgoing.forEach[e|e.execute(c)]
+//	}
 	@OverrideAspectMethod
 	def boolean hasOffers1() {		
 		return false;
 	}
 	
 }
+
 
 @Aspect(className=Expression)
 class ExpressionAspect {
@@ -366,8 +446,11 @@ class JoinNodeAspect extends ActivityNodeAspect {
 		tokens.forEach[t| if ((t as ForkedToken).remainingOffersCount>1){
 			(t as ForkedToken).remainingOffersCount = (t as ForkedToken).remainingOffersCount -1
 		}else{
+			
 			var list = new ArrayList<Token>
-			list.add(t)
+			list.add((t as ForkedToken).baseToken)
+			_self.heldTokens.clear()
+			_self.heldTokens.add((t as ForkedToken).baseToken)
 			_self.sendOffers1(list)
 		}
 		]
@@ -383,6 +466,19 @@ class MergeNodeAspect extends ActivityNodeAspect {
 	//	_self.outgoing.forEach[e|e.execute(c)]
 
 	}
+//	def boolean hasOffers1() {
+//		return  _self.incoming.exists[edge|edge.hasOffer1()]
+//	}
+}
+@Aspect(className=MergeNode)
+class MergeNode_QueryAspect extends ActivityNode_QueryAspect {
+//	@OverrideAspectMethod
+//	def void execute(Context c) {
+//		c.output.executedNodes.add(_self)		
+//		_self.sendOffers1(_self.takeOfferdTokens1)
+//	//	_self.outgoing.forEach[e|e.execute(c)]
+//
+//	}
 	def boolean hasOffers1() {
 		return  _self.incoming.exists[edge|edge.hasOffer1()]
 	}
