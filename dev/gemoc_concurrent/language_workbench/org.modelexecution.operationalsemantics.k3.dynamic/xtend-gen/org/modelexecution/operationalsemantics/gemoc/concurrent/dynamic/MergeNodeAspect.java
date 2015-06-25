@@ -3,6 +3,7 @@ package org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic;
 import activitydiagram.Activity;
 import activitydiagram.ActivityEdge;
 import activitydiagram.MergeNode;
+import activitydiagram.Offer;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import java.util.function.Consumer;
@@ -36,7 +37,12 @@ public class MergeNodeAspect extends ActivityNodeAspect {
     EList<ActivityEdge> _incoming = _self.getIncoming();
     final Consumer<ActivityEdge> _function = new Consumer<ActivityEdge>() {
       public void accept(final ActivityEdge i) {
-        ActivityEdgeAspect.takeOfferedTokens(i);
+        EList<Offer> _offers = i.getOffers();
+        int _size = _offers.size();
+        boolean _greaterThan = (_size > 0);
+        if (_greaterThan) {
+          ActivityEdgeAspect.takeOfferedTokens(i);
+        }
       }
     };
     _incoming.forEach(_function);

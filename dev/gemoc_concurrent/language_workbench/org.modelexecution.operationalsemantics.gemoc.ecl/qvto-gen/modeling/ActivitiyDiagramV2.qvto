@@ -1114,13 +1114,14 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 		{
 			action := object FeedBack::Force{
 				kind := ForceKind::Presence;
+				onTrigger := seqOfMSE->select(mse | mse.name = 'MSE_'+name+'_')->first();
 				eventToBeForced := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evalFalse')->first();
 				
 			};
 			condition := object FeedBack::ActionResultCondition{
-				comparisonValue := false;
+				comparisonValue := invalid;
 			};
-			source := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evaluate')->first();
+			source := self.resolveone(ModelSpecificEvent);
 			
 			end{
 				theFeedBackSpec.whenStatements += result;
@@ -1131,18 +1132,20 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 		{
 			action := object FeedBack::Force{
 				kind := ForceKind::Presence;
+				onTrigger := seqOfMSE->select(mse | mse.name = 'MSE_'+name+'_')->first();
 				eventToBeForced := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evalTrue')->first();
 				
 			};
 			condition := object FeedBack::ActionResultCondition{
-				comparisonValue := true;
+				comparisonValue := invalid;
 			};
-			source :=seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evaluate')->first();
+			source := self.resolveone(ModelSpecificEvent);
 			
 			end{
 				theFeedBackSpec.whenStatements += result;
 			}
 		}
+
 
 
 
