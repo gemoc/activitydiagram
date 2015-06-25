@@ -24,6 +24,11 @@
     <package uri="activitydiagramTrace_activitydiagram" class="activitydiagramTrace.Traced.activitydiagram.ActivitydiagramPackage" genModel="model/activitydiagramTrace.genmodel" />
   </extension>
   <extension point="org.gemoc.gemoc_language_workbench.engine_addon">
-    <Addon Class="org.modelexecution.operationalsemantics.gemoc.sequential.trace.tracemanager.ActivitydiagramTraceEngineAddon" Default="false" Name="activitydiagramTrace Addon" />
+    <Addon
+          Class="org.modelexecution.operationalsemantics.gemoc.sequential.trace.tracemanager.ActivitydiagramTraceEngineAddon"
+          Default="false"
+          Name="Activitydiagram Multidimensionnal Trace Addon"
+          ShortDescription="Records data changes in ActivityDiagram models. Opens a Timeline view to analyse the trace."
+          id="ActivitydiagramTraceEngineAddon"/>
   </extension>
 </plugin>
