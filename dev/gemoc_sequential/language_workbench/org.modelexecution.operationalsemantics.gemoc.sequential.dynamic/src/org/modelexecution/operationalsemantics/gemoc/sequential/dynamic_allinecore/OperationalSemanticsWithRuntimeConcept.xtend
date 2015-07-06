@@ -77,9 +77,9 @@ import activitydiagram.Offer
 import activitydiagram.Token
 import activitydiagram.Trace
 import activitydiagram.ForkedToken
-import fr.inria.diverse.k3.al.annotationprocessor.TransactionSupport
 import org.modelexecution.operationalsemantics.gemoc.sequential.dynamic.XtendRecordingCommand
-
+import fr.inria.diverse.k3.al.annotationprocessor.Step
+ 
 class Context {
 	public Trace output;
 	public Activity activity;
@@ -104,8 +104,10 @@ class Util {
 
 }
 
-@Aspect(className=Activity, transactionSupport=TransactionSupport.EMF)
+@Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
+	
+	@Step
 	def void initializeContext(List<InputValue> value, Context context) {
 		context.inputValues = value
 		context.activity = _self
@@ -114,14 +116,12 @@ class ActivityAspect extends NamedElementAspect {
 		value?.forEach[v|v.getVariable().setCurrentValue(v.getValue());]
 		_self.nodes.forEach[n|n.running = true]
 	}
-}
-
-@Aspect(className=Activity)
-class Activity_QueryAspect extends NamedElementAspect {
-
+	
+	
 	Trace trace
 
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		_self.locals.forEach[v|v.init(c)]
 		_self.inputs.forEach[v|v.init(c)]
@@ -134,6 +134,7 @@ class Activity_QueryAspect extends NamedElementAspect {
 		}
 	}
 
+	@Step
 	def void reset() {
 		_self.trace = null;
 	}
@@ -197,12 +198,14 @@ class Activity_QueryAspect extends NamedElementAspect {
 		return null;
 	}
 
+	@Step
 	def void writeTrace() {
 		_self.writeToFile;
 		_self.reset();
 	}
-
+	
 }
+
 
 @Aspect(className=NamedElement)
 class NamedElementAspect {
@@ -210,15 +213,17 @@ class NamedElementAspect {
 	}
 }
 
-@Aspect(className=ActivityNode, transactionSupport=TransactionSupport.EMF)
+@Aspect(className=ActivityNode)
 class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.NamedElementAspect {
 	List<Token> heldTokens = new ArrayList<Token>
 
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		//_self.sendOffers1(_self.takeOfferdTokens1)
 	}
 
+	@Step
 	def void terminate() {
 		_self.running = false;
 	}
@@ -227,12 +232,14 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 		return _self.isRunning();
 	}
 
+	@Step
 	def void sendOffers1(List<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
 			edge.sendOffer1(tokens);
 		}
 	}
 
+	@Step
 	def List<Token> takeOfferdTokens1() {
 		val allTokens = new ArrayList<Token>();
 		for (ActivityEdge edge : _self.getIncoming()) {
@@ -246,6 +253,7 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 		return allTokens;
 	}
 
+	@Step
 	def void addTokens1(List<Token> tokens) {
 		for (Token token : tokens) {
 			var transferredToken = token.transfer1(_self);
@@ -263,6 +271,7 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 		return hasOffer;
 	}
 
+	@Step
 	def void removeToken1(Token token) {
 		_self.heldTokens.remove(token);
 	}
@@ -415,14 +424,15 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 	}
 }
 
-@Aspect(className=Variable, transactionSupport=TransactionSupport.EMF)
+@Aspect(className=Variable)
 class VariableAspect {
+	@Step
 	def void execute(Context c) {
 	}
-
+	@Step
 	def void init(Context c) {
 	}
-
+	@Step
 	def String print() {
 	}
 }

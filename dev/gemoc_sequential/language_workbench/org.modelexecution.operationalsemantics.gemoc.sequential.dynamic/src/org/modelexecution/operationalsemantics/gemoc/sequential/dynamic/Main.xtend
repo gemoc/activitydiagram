@@ -24,7 +24,6 @@ import org.eclipse.xtext.resource.XtextResourceSet
 import org.modelexecution.operationalsemantics.ActivityDiagramInputStandaloneSetup
 import org.modelexecution.operationalsemantics.ActivityDiagramStandaloneSetup
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.ActivityAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.Activity_QueryAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.ControlFlowAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.OpaqueActionAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.InitialNodeAspect.*
