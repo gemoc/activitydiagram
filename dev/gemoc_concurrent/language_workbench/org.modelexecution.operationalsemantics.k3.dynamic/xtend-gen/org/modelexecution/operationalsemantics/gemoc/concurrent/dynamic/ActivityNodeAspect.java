@@ -17,16 +17,16 @@ public class ActivityNodeAspect extends NamedElementAspect {
      org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.JoinNodeAspect.execute((activitydiagram.JoinNode)_self);
     } else  if (_self instanceof activitydiagram.ForkNode){
      org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ForkNodeAspect.execute((activitydiagram.ForkNode)_self);
+    } else  if (_self instanceof activitydiagram.InitialNode){
+     org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.InitialNodeAspect.execute((activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof activitydiagram.DecisionNode){
+     org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.DecisionNodeAspect.execute((activitydiagram.DecisionNode)_self);
+    } else  if (_self instanceof activitydiagram.MergeNode){
+     org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.MergeNodeAspect.execute((activitydiagram.MergeNode)_self);
     } else  if (_self instanceof activitydiagram.OpaqueAction){
      org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.OpaqueActionAspect.execute((activitydiagram.OpaqueAction)_self);
     } else  if (_self instanceof activitydiagram.ActivityFinalNode){
      org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityFinalNodeAspect.execute((activitydiagram.ActivityFinalNode)_self);
-    } else  if (_self instanceof activitydiagram.DecisionNode){
-     org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.DecisionNodeAspect.execute((activitydiagram.DecisionNode)_self);
-    } else  if (_self instanceof activitydiagram.InitialNode){
-     org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.InitialNodeAspect.execute((activitydiagram.InitialNode)_self);
-    } else  if (_self instanceof activitydiagram.MergeNode){
-     org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.MergeNodeAspect.execute((activitydiagram.MergeNode)_self);
     } else  if (_self instanceof activitydiagram.ActivityNode){
      org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityNodeAspect._privk3_execute(_self_, (activitydiagram.ActivityNode)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };

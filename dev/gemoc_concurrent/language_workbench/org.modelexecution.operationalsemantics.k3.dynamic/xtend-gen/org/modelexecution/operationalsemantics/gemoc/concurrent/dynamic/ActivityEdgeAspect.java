@@ -6,6 +6,7 @@ import activitydiagram.ActivitydiagramFactory;
 import activitydiagram.BooleanValue;
 import activitydiagram.BooleanVariable;
 import activitydiagram.ControlFlow;
+import activitydiagram.ForkNode;
 import activitydiagram.Offer;
 import activitydiagram.Token;
 import activitydiagram.Value;
@@ -13,7 +14,6 @@ import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityEdgeAspectActivityEdgeAspectProperties;
 import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityNodeAspect;
@@ -64,10 +64,27 @@ public class ActivityEdgeAspect extends NamedElementAspect {
   
   protected static void _privk3_sendOffer(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
     final Offer offer = ActivitydiagramFactory.eINSTANCE.createOffer();
-    EList<Token> _offeredTokens = offer.getOfferedTokens();
     ActivityNode _source = _self.getSource();
-    EList<Token> _heldTokens = _source.getHeldTokens();
-    _offeredTokens.addAll(_heldTokens);
+    if ((_source instanceof ForkNode)) {
+      ActivityNode _source_1 = _self.getSource();
+      EList<ActivityEdge> _outgoing = _source_1.getOutgoing();
+      int indexOfSelf = _outgoing.indexOf(_self);
+      EList<Token> _offeredTokens = offer.getOfferedTokens();
+      ActivityNode _source_2 = _self.getSource();
+      EList<Token> _heldTokens = _source_2.getHeldTokens();
+      Token _get = _heldTokens.get(indexOfSelf);
+      _offeredTokens.add(_get);
+    } else {
+      EList<Token> _offeredTokens_1 = offer.getOfferedTokens();
+      ActivityNode _source_3 = _self.getSource();
+      EList<Token> _heldTokens_1 = _source_3.getHeldTokens();
+      ActivityNode _source_4 = _self.getSource();
+      EList<Token> _heldTokens_2 = _source_4.getHeldTokens();
+      int _size = _heldTokens_2.size();
+      int _minus = (_size - 1);
+      Token _get_1 = _heldTokens_1.get(_minus);
+      _offeredTokens_1.add(_get_1);
+    }
     EList<Offer> _offers = _self.getOffers();
     _offers.add(offer);
   }
@@ -80,23 +97,40 @@ public class ActivityEdgeAspect extends NamedElementAspect {
   protected static void _privk3_takeOfferedTokens(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
     final ArrayList<Token> tokens = new ArrayList<Token>();
     EList<Offer> _offers = _self.getOffers();
-    final Consumer<Offer> _function = new Consumer<Offer>() {
-      public void accept(final Offer o) {
-        EList<Token> _offeredTokens = o.getOfferedTokens();
-        tokens.addAll(_offeredTokens);
-      }
-    };
-    _offers.forEach(_function);
     EList<Offer> _offers_1 = _self.getOffers();
-    _offers_1.clear();
+    int _size = _offers_1.size();
+    int _minus = (_size - 1);
+    Offer _get = _offers.get(_minus);
+    EList<Token> _offeredTokens = _get.getOfferedTokens();
+    tokens.addAll(_offeredTokens);
+    EList<Offer> _offers_2 = _self.getOffers();
+    EList<Offer> _offers_3 = _self.getOffers();
+    int _size_1 = _offers_3.size();
+    int _minus_1 = (_size_1 - 1);
+    _offers_2.remove(_minus_1);
     ActivityNode _source = _self.getSource();
     EList<Token> _heldTokens = _source.getHeldTokens();
-    int _size = _heldTokens.size();
-    boolean _greaterThan = (_size > 0);
+    int _size_2 = _heldTokens.size();
+    boolean _greaterThan = (_size_2 > 0);
     if (_greaterThan) {
       ActivityNode _source_1 = _self.getSource();
-      EList<Token> _heldTokens_1 = _source_1.getHeldTokens();
-      _heldTokens_1.remove(0);
+      if ((_source_1 instanceof ForkNode)) {
+        ActivityNode _source_2 = _self.getSource();
+        EList<Token> _heldTokens_1 = _source_2.getHeldTokens();
+        Token _get_1 = tokens.get(0);
+        int indexOfToken0 = _heldTokens_1.indexOf(_get_1);
+        ActivityNode _source_3 = _self.getSource();
+        EList<Token> _heldTokens_2 = _source_3.getHeldTokens();
+        _heldTokens_2.remove(indexOfToken0);
+      } else {
+        ActivityNode _source_4 = _self.getSource();
+        EList<Token> _heldTokens_3 = _source_4.getHeldTokens();
+        ActivityNode _source_5 = _self.getSource();
+        EList<Token> _heldTokens_4 = _source_5.getHeldTokens();
+        int _size_3 = _heldTokens_4.size();
+        int _minus_2 = (_size_3 - 1);
+        _heldTokens_3.remove(_minus_2);
+      }
     }
     ActivityNode _target = _self.getTarget();
     ActivityNodeAspect.addTokens(_target, tokens);

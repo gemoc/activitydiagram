@@ -2,10 +2,8 @@ package org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinec
 
 import activitydiagram.Activity
 import activitydiagram.ActivityNode
-import activitydiagram.ActivitydiagramPackage
 import activitydiagram.BooleanValue
 import activitydiagram.BooleanVariable
-import activitydiagram.Input
 import activitydiagram.InputValue
 import activitydiagram.IntegerValue
 import activitydiagram.IntegerVariable
@@ -18,11 +16,6 @@ import java.io.IOException
 import java.io.OutputStreamWriter
 import java.util.ArrayList
 import java.util.List
-import org.eclipse.emf.common.util.URI
-import org.eclipse.emf.ecore.EPackage
-import org.eclipse.xtext.resource.XtextResourceSet
-import org.modelexecution.operationalsemantics.ActivityDiagramInputStandaloneSetup
-import org.modelexecution.operationalsemantics.ActivityDiagramStandaloneSetup
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.ActivityAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.ControlFlowAspect.*
 import static extension org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.TokenAspect.*
@@ -57,29 +50,18 @@ import activitydiagram.BooleanBinaryExpression
 import activitydiagram.ControlFlow
 import activitydiagram.NamedElement
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
-import fr.inria.diverse.k3.al.annotationprocessor.ReplaceAspectMethod
-import java.util.concurrent.Executors
 import activitydiagram.ActivityEdge
-import java.util.concurrent.Future
-import java.util.concurrent.Callable
-import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl
-import org.eclipse.emf.ecore.resource.Resource
 import activitydiagram.Expression
 import activitydiagram.IntegerCalculationOperator
 import activitydiagram.IntegerComparisonOperator
 import activitydiagram.BooleanUnaryOperator
 import activitydiagram.BooleanBinaryOperator
-import activitydiagram.FinalNode
-import activitydiagram.impl.ForkedTokenImpl
 import activitydiagram.Offer
 import activitydiagram.Token
 import activitydiagram.Trace
 import activitydiagram.ForkedToken
-import org.modelexecution.operationalsemantics.gemoc.sequential.dynamic.XtendRecordingCommand
 import fr.inria.diverse.k3.al.annotationprocessor.Step
- 
+
 class Context {
 	public Trace output;
 	public Activity activity;
@@ -106,7 +88,7 @@ class Util {
 
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
-	
+
 	@Step
 	def void initializeContext(List<InputValue> value, Context context) {
 		context.inputValues = value
@@ -116,8 +98,7 @@ class ActivityAspect extends NamedElementAspect {
 		value?.forEach[v|v.getVariable().setCurrentValue(v.getValue());]
 		_self.nodes.forEach[n|n.running = true]
 	}
-	
-	
+
 	Trace trace
 
 	@OverrideAspectMethod
@@ -203,9 +184,8 @@ class ActivityAspect extends NamedElementAspect {
 		_self.writeToFile;
 		_self.reset();
 	}
-	
-}
 
+}
 
 @Aspect(className=NamedElement)
 class NamedElementAspect {
@@ -429,9 +409,11 @@ class VariableAspect {
 	@Step
 	def void execute(Context c) {
 	}
+
 	@Step
 	def void init(Context c) {
 	}
+
 	@Step
 	def String print() {
 	}

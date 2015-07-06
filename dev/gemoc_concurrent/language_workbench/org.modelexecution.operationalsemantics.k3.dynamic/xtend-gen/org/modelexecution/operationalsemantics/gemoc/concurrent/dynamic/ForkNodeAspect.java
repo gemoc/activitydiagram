@@ -9,9 +9,11 @@ import activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import java.util.ArrayList;
+import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityAspect;
+import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityEdgeAspect;
 import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityNodeAspect;
 import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.Context;
 import org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ForkNodeAspectForkNodeAspectProperties;
@@ -35,21 +37,36 @@ public class ForkNodeAspect extends ActivityNodeAspect {
   }
   
   protected static void _privk3_execute(final ForkNodeAspectForkNodeAspectProperties _self_, final ForkNode _self) {
+    EList<ActivityEdge> _incoming = _self.getIncoming();
+    final Consumer<ActivityEdge> _function = new Consumer<ActivityEdge>() {
+      public void accept(final ActivityEdge i) {
+        ActivityEdgeAspect.takeOfferedTokens(i);
+      }
+    };
+    _incoming.forEach(_function);
     EObject _eContainer = _self.eContainer();
     Context _context = ActivityAspect.context(((Activity) _eContainer));
     _context.output.executedNodes.add(_self);
     EList<Token> tokens = _self.getHeldTokens();
     ArrayList<Token> forkedTokens = new ArrayList<Token>();
     for (final Token token : tokens) {
-      {
-        ForkedToken forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken();
-        forkedToken.setBaseToken(token);
-        EList<ActivityEdge> _outgoing = _self.getOutgoing();
-        int _size = _outgoing.size();
-        forkedToken.setRemainingOffersCount(_size);
-        forkedTokens.add(forkedToken);
+      for (int i = 0; (i < _self.getOutgoing().size()); i++) {
+        {
+          ForkedToken forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken();
+          forkedToken.setBaseToken(token);
+          forkedTokens.add(forkedToken);
+        }
       }
     }
+    EList<Token> _heldTokens = _self.getHeldTokens();
+    _heldTokens.clear();
     ActivityNodeAspect.addTokens(_self, forkedTokens);
+    EList<ActivityEdge> _outgoing = _self.getOutgoing();
+    final Consumer<ActivityEdge> _function_1 = new Consumer<ActivityEdge>() {
+      public void accept(final ActivityEdge o) {
+        ActivityEdgeAspect.sendOffer(o);
+      }
+    };
+    _outgoing.forEach(_function_1);
   }
 }
