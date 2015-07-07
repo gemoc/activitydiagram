@@ -15,8 +15,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.Traced.activitydiagram.TracedForkedToken#getBaseTokenTrace <em>Base Token Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Traced.activitydiagram.TracedForkedToken#getRemainingOffersCountTrace <em>Remaining Offers Count Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Traced.activitydiagram.TracedForkedToken#getBaseTokenTrace <em>Base Token Trace</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,24 +25,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface TracedForkedToken extends TracedToken {
-	/**
-	 * Returns the value of the '<em><b>Base Token Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.ForkedToken_baseToken_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.ForkedToken_baseToken_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Base Token Trace</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Token Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Traced.activitydiagram.ActivitydiagramPackage#getTracedForkedToken_BaseTokenTrace()
-	 * @see activitydiagramTrace.Values.ForkedToken_baseToken_Value#getParent
-	 * @model opposite="parent" containment="true"
-	 * @generated
-	 */
-	EList<ForkedToken_baseToken_Value> getBaseTokenTrace();
-
 	/**
 	 * Returns the value of the '<em><b>Remaining Offers Count Trace</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value}.
@@ -60,5 +42,23 @@ public interface TracedForkedToken extends TracedToken {
 	 * @generated
 	 */
 	EList<ForkedToken_remainingOffersCount_Value> getRemainingOffersCountTrace();
+
+	/**
+	 * Returns the value of the '<em><b>Base Token Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.ForkedToken_baseToken_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.ForkedToken_baseToken_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Base Token Trace</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Token Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Traced.activitydiagram.ActivitydiagramPackage#getTracedForkedToken_BaseTokenTrace()
+	 * @see activitydiagramTrace.Values.ForkedToken_baseToken_Value#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<ForkedToken_baseToken_Value> getBaseTokenTrace();
 
 } // TracedForkedToken

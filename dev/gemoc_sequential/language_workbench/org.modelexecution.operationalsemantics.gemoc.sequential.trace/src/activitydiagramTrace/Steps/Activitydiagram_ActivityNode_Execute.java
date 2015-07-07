@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_Execute extends BigStep {
+public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Activity_Execute_AbstractSubEvent, BigStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->

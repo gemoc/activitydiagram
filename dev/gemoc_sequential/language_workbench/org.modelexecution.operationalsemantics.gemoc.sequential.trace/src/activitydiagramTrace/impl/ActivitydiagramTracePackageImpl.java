@@ -206,7 +206,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_ActivityEdge_offers_Values() {
+	public EReference getState_IntegerValue_value_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -215,7 +215,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_Activity_trace_Values() {
+	public EReference getState_Input_inputValues_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -224,7 +224,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_ActivityNode_heldTokens_Values() {
+	public EReference getState_BooleanValue_value_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -233,7 +233,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_BooleanValue_value_Values() {
+	public EReference getState_Trace_executedNodes_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -242,7 +242,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_Offer_offeredTokens_Values() {
+	public EReference getState_ActivityEdge_offers_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -251,7 +251,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_Trace_executedNodes_Values() {
+	public EReference getState_Token_holder_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -260,7 +260,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_Token_holder_Values() {
+	public EReference getState_InputValue_value_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -269,7 +269,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_ForkedToken_baseToken_Values() {
+	public EReference getState_InputValue_variable_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -287,7 +287,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_Input_inputValues_Values() {
+	public EReference getState_ForkedToken_baseToken_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -296,7 +296,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_IntegerValue_value_Values() {
+	public EReference getState_ActivityNode_heldTokens_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -305,7 +305,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_InputValue_value_Values() {
+	public EReference getState_Activity_trace_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -314,7 +314,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_InputValue_variable_Values() {
+	public EReference getState_Offer_offeredTokens_Values() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -364,19 +364,19 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		createEReference(stateEClass, STATE__FOLLOWING_STEP);
 		createEReference(stateEClass, STATE__STARTED_BIG_STEPS);
 		createEReference(stateEClass, STATE__ENDED_BIG_STEPS);
-		createEReference(stateEClass, STATE__ACTIVITY_EDGE_OFFERS_VALUES);
-		createEReference(stateEClass, STATE__ACTIVITY_TRACE_VALUES);
-		createEReference(stateEClass, STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES);
-		createEReference(stateEClass, STATE__BOOLEAN_VALUE_VALUE_VALUES);
-		createEReference(stateEClass, STATE__OFFER_OFFERED_TOKENS_VALUES);
-		createEReference(stateEClass, STATE__TRACE_EXECUTED_NODES_VALUES);
-		createEReference(stateEClass, STATE__TOKEN_HOLDER_VALUES);
-		createEReference(stateEClass, STATE__FORKED_TOKEN_BASE_TOKEN_VALUES);
-		createEReference(stateEClass, STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES);
-		createEReference(stateEClass, STATE__INPUT_INPUT_VALUES_VALUES);
 		createEReference(stateEClass, STATE__INTEGER_VALUE_VALUE_VALUES);
+		createEReference(stateEClass, STATE__INPUT_INPUT_VALUES_VALUES);
+		createEReference(stateEClass, STATE__BOOLEAN_VALUE_VALUE_VALUES);
+		createEReference(stateEClass, STATE__TRACE_EXECUTED_NODES_VALUES);
+		createEReference(stateEClass, STATE__ACTIVITY_EDGE_OFFERS_VALUES);
+		createEReference(stateEClass, STATE__TOKEN_HOLDER_VALUES);
 		createEReference(stateEClass, STATE__INPUT_VALUE_VALUE_VALUES);
 		createEReference(stateEClass, STATE__INPUT_VALUE_VARIABLE_VALUES);
+		createEReference(stateEClass, STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES);
+		createEReference(stateEClass, STATE__FORKED_TOKEN_BASE_TOKEN_VALUES);
+		createEReference(stateEClass, STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES);
+		createEReference(stateEClass, STATE__ACTIVITY_TRACE_VALUES);
+		createEReference(stateEClass, STATE__OFFER_OFFERED_TOKENS_VALUES);
 		createEReference(stateEClass, STATE__VARIABLE_CURRENT_VALUE_VALUES);
 	}
 
@@ -429,19 +429,19 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		initEReference(getState_FollowingStep(), theStepsPackage.getSmallStep(), theStepsPackage.getSmallStep_PrecedingState(), "followingStep", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getState_StartedBigSteps(), theStepsPackage.getBigStep(), theStepsPackage.getBigStep_StartingState(), "startedBigSteps", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getState_EndedBigSteps(), theStepsPackage.getBigStep(), theStepsPackage.getBigStep_EndingState(), "endedBigSteps", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_ActivityEdge_offers_Values(), theValuesPackage.getActivityEdge_offers_Value(), theValuesPackage.getActivityEdge_offers_Value_States(), "activityEdge_offers_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_Activity_trace_Values(), theValuesPackage.getActivity_trace_Value(), theValuesPackage.getActivity_trace_Value_States(), "activity_trace_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_ActivityNode_heldTokens_Values(), theValuesPackage.getActivityNode_heldTokens_Value(), theValuesPackage.getActivityNode_heldTokens_Value_States(), "activityNode_heldTokens_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_BooleanValue_value_Values(), theValuesPackage.getBooleanValue_value_Value(), theValuesPackage.getBooleanValue_value_Value_States(), "booleanValue_value_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_Offer_offeredTokens_Values(), theValuesPackage.getOffer_offeredTokens_Value(), theValuesPackage.getOffer_offeredTokens_Value_States(), "offer_offeredTokens_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_Trace_executedNodes_Values(), theValuesPackage.getTrace_executedNodes_Value(), theValuesPackage.getTrace_executedNodes_Value_States(), "trace_executedNodes_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_Token_holder_Values(), theValuesPackage.getToken_holder_Value(), theValuesPackage.getToken_holder_Value_States(), "token_holder_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_ForkedToken_baseToken_Values(), theValuesPackage.getForkedToken_baseToken_Value(), theValuesPackage.getForkedToken_baseToken_Value_States(), "forkedToken_baseToken_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_ForkedToken_remainingOffersCount_Values(), theValuesPackage.getForkedToken_remainingOffersCount_Value(), theValuesPackage.getForkedToken_remainingOffersCount_Value_States(), "forkedToken_remainingOffersCount_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getState_Input_inputValues_Values(), theValuesPackage.getInput_inputValues_Value(), theValuesPackage.getInput_inputValues_Value_States(), "input_inputValues_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getState_IntegerValue_value_Values(), theValuesPackage.getIntegerValue_value_Value(), theValuesPackage.getIntegerValue_value_Value_States(), "integerValue_value_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_Input_inputValues_Values(), theValuesPackage.getInput_inputValues_Value(), theValuesPackage.getInput_inputValues_Value_States(), "input_inputValues_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_BooleanValue_value_Values(), theValuesPackage.getBooleanValue_value_Value(), theValuesPackage.getBooleanValue_value_Value_States(), "booleanValue_value_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_Trace_executedNodes_Values(), theValuesPackage.getTrace_executedNodes_Value(), theValuesPackage.getTrace_executedNodes_Value_States(), "trace_executedNodes_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_ActivityEdge_offers_Values(), theValuesPackage.getActivityEdge_offers_Value(), theValuesPackage.getActivityEdge_offers_Value_States(), "activityEdge_offers_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_Token_holder_Values(), theValuesPackage.getToken_holder_Value(), theValuesPackage.getToken_holder_Value_States(), "token_holder_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getState_InputValue_value_Values(), theValuesPackage.getInputValue_value_Value(), theValuesPackage.getInputValue_value_Value_States(), "inputValue_value_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getState_InputValue_variable_Values(), theValuesPackage.getInputValue_variable_Value(), theValuesPackage.getInputValue_variable_Value_States(), "inputValue_variable_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_ForkedToken_remainingOffersCount_Values(), theValuesPackage.getForkedToken_remainingOffersCount_Value(), theValuesPackage.getForkedToken_remainingOffersCount_Value_States(), "forkedToken_remainingOffersCount_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_ForkedToken_baseToken_Values(), theValuesPackage.getForkedToken_baseToken_Value(), theValuesPackage.getForkedToken_baseToken_Value_States(), "forkedToken_baseToken_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_ActivityNode_heldTokens_Values(), theValuesPackage.getActivityNode_heldTokens_Value(), theValuesPackage.getActivityNode_heldTokens_Value_States(), "activityNode_heldTokens_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_Activity_trace_Values(), theValuesPackage.getActivity_trace_Value(), theValuesPackage.getActivity_trace_Value_States(), "activity_trace_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getState_Offer_offeredTokens_Values(), theValuesPackage.getOffer_offeredTokens_Value(), theValuesPackage.getOffer_offeredTokens_Value_States(), "offer_offeredTokens_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getState_Variable_currentValue_Values(), theValuesPackage.getVariable_currentValue_Value(), theValuesPackage.getVariable_currentValue_Value_States(), "variable_currentValue_Values", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create resource

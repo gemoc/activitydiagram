@@ -57,22 +57,24 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case StepsPackage.STEPS: return createSteps();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: return createActivitydiagram_ActivityNode_Terminate();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1: return createActivitydiagram_ActivityNode_SendOffers1();
+			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE: return createActivitydiagram_Variable_Execute();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_FILL_EVENT: return createActivitydiagram_Activity_Execute_FillEvent();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_FILL_EVENT: return createActivitydiagram_ActivityNode_Execute_FillEvent();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_FILL_EVENT: return createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1: return createActivitydiagram_ActivityNode_RemoveToken1();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_FILL_EVENT: return createActivitydiagram_ActivityNode_AddTokens1_FillEvent();
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE: return createActivitydiagram_Variable_Execute();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_HAS_OFFERS1: return createActivitydiagram_ActivityNode_HasOffers1();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT: return createActivitydiagram_Activity_InitializeContext();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1: return createActivitydiagram_ActivityNode_SendOffers1();
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT: return createActivitydiagram_Variable_Init();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_IS_READY: return createActivitydiagram_ActivityNode_IsReady();
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_PRINT: return createActivitydiagram_Variable_Print();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET: return createActivitydiagram_Activity_Reset();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: return createActivitydiagram_ActivityNode_Terminate();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT: return createActivitydiagram_Activity_InitializeContext();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE_FILL_EVENT: return createActivitydiagram_Activity_WriteTrace_FillEvent();
 			case StepsPackage.FILL_EVENT: return createFillEvent();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE: return createActivitydiagram_Activity_Execute();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE: return createActivitydiagram_ActivityNode_Execute();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1: return createActivitydiagram_ActivityNode_TakeOfferdTokens1();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1: return createActivitydiagram_ActivityNode_AddTokens1();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE: return createActivitydiagram_Activity_WriteTrace();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -93,9 +95,9 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activitydiagram_ActivityNode_Terminate createActivitydiagram_ActivityNode_Terminate() {
-		Activitydiagram_ActivityNode_TerminateImpl activitydiagram_ActivityNode_Terminate = new Activitydiagram_ActivityNode_TerminateImpl();
-		return activitydiagram_ActivityNode_Terminate;
+	public Activitydiagram_Variable_Execute createActivitydiagram_Variable_Execute() {
+		Activitydiagram_Variable_ExecuteImpl activitydiagram_Variable_Execute = new Activitydiagram_Variable_ExecuteImpl();
+		return activitydiagram_Variable_Execute;
 	}
 
 	/**
@@ -103,9 +105,9 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activitydiagram_ActivityNode_SendOffers1 createActivitydiagram_ActivityNode_SendOffers1() {
-		Activitydiagram_ActivityNode_SendOffers1Impl activitydiagram_ActivityNode_SendOffers1 = new Activitydiagram_ActivityNode_SendOffers1Impl();
-		return activitydiagram_ActivityNode_SendOffers1;
+	public Activitydiagram_Activity_Execute_FillEvent createActivitydiagram_Activity_Execute_FillEvent() {
+		Activitydiagram_Activity_Execute_FillEventImpl activitydiagram_Activity_Execute_FillEvent = new Activitydiagram_Activity_Execute_FillEventImpl();
+		return activitydiagram_Activity_Execute_FillEvent;
 	}
 
 	/**
@@ -153,29 +155,9 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activitydiagram_Variable_Execute createActivitydiagram_Variable_Execute() {
-		Activitydiagram_Variable_ExecuteImpl activitydiagram_Variable_Execute = new Activitydiagram_Variable_ExecuteImpl();
-		return activitydiagram_Variable_Execute;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activitydiagram_ActivityNode_HasOffers1 createActivitydiagram_ActivityNode_HasOffers1() {
-		Activitydiagram_ActivityNode_HasOffers1Impl activitydiagram_ActivityNode_HasOffers1 = new Activitydiagram_ActivityNode_HasOffers1Impl();
-		return activitydiagram_ActivityNode_HasOffers1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activitydiagram_Activity_InitializeContext createActivitydiagram_Activity_InitializeContext() {
-		Activitydiagram_Activity_InitializeContextImpl activitydiagram_Activity_InitializeContext = new Activitydiagram_Activity_InitializeContextImpl();
-		return activitydiagram_Activity_InitializeContext;
+	public Activitydiagram_ActivityNode_SendOffers1 createActivitydiagram_ActivityNode_SendOffers1() {
+		Activitydiagram_ActivityNode_SendOffers1Impl activitydiagram_ActivityNode_SendOffers1 = new Activitydiagram_ActivityNode_SendOffers1Impl();
+		return activitydiagram_ActivityNode_SendOffers1;
 	}
 
 	/**
@@ -193,9 +175,9 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activitydiagram_ActivityNode_IsReady createActivitydiagram_ActivityNode_IsReady() {
-		Activitydiagram_ActivityNode_IsReadyImpl activitydiagram_ActivityNode_IsReady = new Activitydiagram_ActivityNode_IsReadyImpl();
-		return activitydiagram_ActivityNode_IsReady;
+	public Activitydiagram_Activity_Reset createActivitydiagram_Activity_Reset() {
+		Activitydiagram_Activity_ResetImpl activitydiagram_Activity_Reset = new Activitydiagram_Activity_ResetImpl();
+		return activitydiagram_Activity_Reset;
 	}
 
 	/**
@@ -203,9 +185,29 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activitydiagram_Variable_Print createActivitydiagram_Variable_Print() {
-		Activitydiagram_Variable_PrintImpl activitydiagram_Variable_Print = new Activitydiagram_Variable_PrintImpl();
-		return activitydiagram_Variable_Print;
+	public Activitydiagram_ActivityNode_Terminate createActivitydiagram_ActivityNode_Terminate() {
+		Activitydiagram_ActivityNode_TerminateImpl activitydiagram_ActivityNode_Terminate = new Activitydiagram_ActivityNode_TerminateImpl();
+		return activitydiagram_ActivityNode_Terminate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activitydiagram_Activity_InitializeContext createActivitydiagram_Activity_InitializeContext() {
+		Activitydiagram_Activity_InitializeContextImpl activitydiagram_Activity_InitializeContext = new Activitydiagram_Activity_InitializeContextImpl();
+		return activitydiagram_Activity_InitializeContext;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activitydiagram_Activity_WriteTrace_FillEvent createActivitydiagram_Activity_WriteTrace_FillEvent() {
+		Activitydiagram_Activity_WriteTrace_FillEventImpl activitydiagram_Activity_WriteTrace_FillEvent = new Activitydiagram_Activity_WriteTrace_FillEventImpl();
+		return activitydiagram_Activity_WriteTrace_FillEvent;
 	}
 
 	/**
@@ -216,6 +218,16 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public FillEvent createFillEvent() {
 		FillEventImpl fillEvent = new FillEventImpl();
 		return fillEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activitydiagram_Activity_Execute createActivitydiagram_Activity_Execute() {
+		Activitydiagram_Activity_ExecuteImpl activitydiagram_Activity_Execute = new Activitydiagram_Activity_ExecuteImpl();
+		return activitydiagram_Activity_Execute;
 	}
 
 	/**
@@ -246,6 +258,16 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public Activitydiagram_ActivityNode_AddTokens1 createActivitydiagram_ActivityNode_AddTokens1() {
 		Activitydiagram_ActivityNode_AddTokens1Impl activitydiagram_ActivityNode_AddTokens1 = new Activitydiagram_ActivityNode_AddTokens1Impl();
 		return activitydiagram_ActivityNode_AddTokens1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activitydiagram_Activity_WriteTrace createActivitydiagram_Activity_WriteTrace() {
+		Activitydiagram_Activity_WriteTraceImpl activitydiagram_Activity_WriteTrace = new Activitydiagram_Activity_WriteTraceImpl();
+		return activitydiagram_Activity_WriteTrace;
 	}
 
 	/**

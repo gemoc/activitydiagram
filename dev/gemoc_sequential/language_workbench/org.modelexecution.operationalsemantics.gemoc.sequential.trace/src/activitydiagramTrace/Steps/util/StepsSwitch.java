@@ -84,18 +84,24 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: {
-				Activitydiagram_ActivityNode_Terminate activitydiagram_ActivityNode_Terminate = (Activitydiagram_ActivityNode_Terminate)theEObject;
-				T result = caseActivitydiagram_ActivityNode_Terminate(activitydiagram_ActivityNode_Terminate);
-				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_Terminate);
+			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE: {
+				Activitydiagram_Variable_Execute activitydiagram_Variable_Execute = (Activitydiagram_Variable_Execute)theEObject;
+				T result = caseActivitydiagram_Variable_Execute(activitydiagram_Variable_Execute);
+				if (result == null) result = caseSmallStep(activitydiagram_Variable_Execute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1: {
-				Activitydiagram_ActivityNode_SendOffers1 activitydiagram_ActivityNode_SendOffers1 = (Activitydiagram_ActivityNode_SendOffers1)theEObject;
-				T result = caseActivitydiagram_ActivityNode_SendOffers1(activitydiagram_ActivityNode_SendOffers1);
-				if (result == null) result = caseActivitydiagram_ActivityNode_Execute_AbstractSubEvent(activitydiagram_ActivityNode_SendOffers1);
-				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_SendOffers1);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_EVENT: {
+				Activitydiagram_Activity_Execute_AbstractSubEvent activitydiagram_Activity_Execute_AbstractSubEvent = (Activitydiagram_Activity_Execute_AbstractSubEvent)theEObject;
+				T result = caseActivitydiagram_Activity_Execute_AbstractSubEvent(activitydiagram_Activity_Execute_AbstractSubEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_FILL_EVENT: {
+				Activitydiagram_Activity_Execute_FillEvent activitydiagram_Activity_Execute_FillEvent = (Activitydiagram_Activity_Execute_FillEvent)theEObject;
+				T result = caseActivitydiagram_Activity_Execute_FillEvent(activitydiagram_Activity_Execute_FillEvent);
+				if (result == null) result = caseActivitydiagram_Activity_Execute_AbstractSubEvent(activitydiagram_Activity_Execute_FillEvent);
+				if (result == null) result = caseSmallStep(activitydiagram_Activity_Execute_FillEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,17 +156,34 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE: {
-				Activitydiagram_Variable_Execute activitydiagram_Variable_Execute = (Activitydiagram_Variable_Execute)theEObject;
-				T result = caseActivitydiagram_Variable_Execute(activitydiagram_Variable_Execute);
-				if (result == null) result = caseSmallStep(activitydiagram_Variable_Execute);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1: {
+				Activitydiagram_ActivityNode_SendOffers1 activitydiagram_ActivityNode_SendOffers1 = (Activitydiagram_ActivityNode_SendOffers1)theEObject;
+				T result = caseActivitydiagram_ActivityNode_SendOffers1(activitydiagram_ActivityNode_SendOffers1);
+				if (result == null) result = caseActivitydiagram_ActivityNode_Execute_AbstractSubEvent(activitydiagram_ActivityNode_SendOffers1);
+				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_SendOffers1);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_HAS_OFFERS1: {
-				Activitydiagram_ActivityNode_HasOffers1 activitydiagram_ActivityNode_HasOffers1 = (Activitydiagram_ActivityNode_HasOffers1)theEObject;
-				T result = caseActivitydiagram_ActivityNode_HasOffers1(activitydiagram_ActivityNode_HasOffers1);
-				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_HasOffers1);
+			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT: {
+				Activitydiagram_Variable_Init activitydiagram_Variable_Init = (Activitydiagram_Variable_Init)theEObject;
+				T result = caseActivitydiagram_Variable_Init(activitydiagram_Variable_Init);
+				if (result == null) result = caseActivitydiagram_Activity_Execute_AbstractSubEvent(activitydiagram_Variable_Init);
+				if (result == null) result = caseSmallStep(activitydiagram_Variable_Init);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET: {
+				Activitydiagram_Activity_Reset activitydiagram_Activity_Reset = (Activitydiagram_Activity_Reset)theEObject;
+				T result = caseActivitydiagram_Activity_Reset(activitydiagram_Activity_Reset);
+				if (result == null) result = caseActivitydiagram_Activity_WriteTrace_AbstractSubEvent(activitydiagram_Activity_Reset);
+				if (result == null) result = caseSmallStep(activitydiagram_Activity_Reset);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: {
+				Activitydiagram_ActivityNode_Terminate activitydiagram_ActivityNode_Terminate = (Activitydiagram_ActivityNode_Terminate)theEObject;
+				T result = caseActivitydiagram_ActivityNode_Terminate(activitydiagram_ActivityNode_Terminate);
+				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_Terminate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -171,24 +194,17 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT: {
-				Activitydiagram_Variable_Init activitydiagram_Variable_Init = (Activitydiagram_Variable_Init)theEObject;
-				T result = caseActivitydiagram_Variable_Init(activitydiagram_Variable_Init);
-				if (result == null) result = caseSmallStep(activitydiagram_Variable_Init);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE_ABSTRACT_SUB_EVENT: {
+				Activitydiagram_Activity_WriteTrace_AbstractSubEvent activitydiagram_Activity_WriteTrace_AbstractSubEvent = (Activitydiagram_Activity_WriteTrace_AbstractSubEvent)theEObject;
+				T result = caseActivitydiagram_Activity_WriteTrace_AbstractSubEvent(activitydiagram_Activity_WriteTrace_AbstractSubEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_IS_READY: {
-				Activitydiagram_ActivityNode_IsReady activitydiagram_ActivityNode_IsReady = (Activitydiagram_ActivityNode_IsReady)theEObject;
-				T result = caseActivitydiagram_ActivityNode_IsReady(activitydiagram_ActivityNode_IsReady);
-				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_IsReady);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_PRINT: {
-				Activitydiagram_Variable_Print activitydiagram_Variable_Print = (Activitydiagram_Variable_Print)theEObject;
-				T result = caseActivitydiagram_Variable_Print(activitydiagram_Variable_Print);
-				if (result == null) result = caseSmallStep(activitydiagram_Variable_Print);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE_FILL_EVENT: {
+				Activitydiagram_Activity_WriteTrace_FillEvent activitydiagram_Activity_WriteTrace_FillEvent = (Activitydiagram_Activity_WriteTrace_FillEvent)theEObject;
+				T result = caseActivitydiagram_Activity_WriteTrace_FillEvent(activitydiagram_Activity_WriteTrace_FillEvent);
+				if (result == null) result = caseActivitydiagram_Activity_WriteTrace_AbstractSubEvent(activitydiagram_Activity_WriteTrace_FillEvent);
+				if (result == null) result = caseSmallStep(activitydiagram_Activity_WriteTrace_FillEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -199,9 +215,17 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE: {
+				Activitydiagram_Activity_Execute activitydiagram_Activity_Execute = (Activitydiagram_Activity_Execute)theEObject;
+				T result = caseActivitydiagram_Activity_Execute(activitydiagram_Activity_Execute);
+				if (result == null) result = caseBigStep(activitydiagram_Activity_Execute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE: {
 				Activitydiagram_ActivityNode_Execute activitydiagram_ActivityNode_Execute = (Activitydiagram_ActivityNode_Execute)theEObject;
 				T result = caseActivitydiagram_ActivityNode_Execute(activitydiagram_ActivityNode_Execute);
+				if (result == null) result = caseActivitydiagram_Activity_Execute_AbstractSubEvent(activitydiagram_ActivityNode_Execute);
 				if (result == null) result = caseBigStep(activitydiagram_ActivityNode_Execute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -219,6 +243,13 @@ public class StepsSwitch<T> extends Switch<T> {
 				T result = caseActivitydiagram_ActivityNode_AddTokens1(activitydiagram_ActivityNode_AddTokens1);
 				if (result == null) result = caseActivitydiagram_ActivityNode_Execute_AbstractSubEvent(activitydiagram_ActivityNode_AddTokens1);
 				if (result == null) result = caseBigStep(activitydiagram_ActivityNode_AddTokens1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE: {
+				Activitydiagram_Activity_WriteTrace activitydiagram_Activity_WriteTrace = (Activitydiagram_Activity_WriteTrace)theEObject;
+				T result = caseActivitydiagram_Activity_WriteTrace(activitydiagram_Activity_WriteTrace);
+				if (result == null) result = caseBigStep(activitydiagram_Activity_WriteTrace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -272,32 +303,47 @@ public class StepsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Variable Execute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Variable Execute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
+	public T caseActivitydiagram_Variable_Execute(Activitydiagram_Variable_Execute object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Execute Abstract Sub Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Execute Abstract Sub Event</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivitydiagram_ActivityNode_SendOffers1(Activitydiagram_ActivityNode_SendOffers1 object) {
+	public T caseActivitydiagram_Activity_Execute_AbstractSubEvent(Activitydiagram_Activity_Execute_AbstractSubEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Execute Fill Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Execute Fill Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_Execute_FillEvent(Activitydiagram_Activity_Execute_FillEvent object) {
 		return null;
 	}
 
@@ -407,47 +453,17 @@ public class StepsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Variable Execute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Variable Execute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivitydiagram_Variable_Execute(Activitydiagram_Variable_Execute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Has Offers1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Has Offers1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_ActivityNode_HasOffers1(Activitydiagram_ActivityNode_HasOffers1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Initialize Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Initialize Context</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_Activity_InitializeContext(Activitydiagram_Activity_InitializeContext object) {
+	public T caseActivitydiagram_ActivityNode_SendOffers1(Activitydiagram_ActivityNode_SendOffers1 object) {
 		return null;
 	}
 
@@ -467,32 +483,77 @@ public class StepsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Is Ready</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Reset</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Is Ready</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Reset</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivitydiagram_ActivityNode_IsReady(Activitydiagram_ActivityNode_IsReady object) {
+	public T caseActivitydiagram_Activity_Reset(Activitydiagram_Activity_Reset object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Variable Print</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Variable Print</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivitydiagram_Variable_Print(Activitydiagram_Variable_Print object) {
+	public T caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Initialize Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Initialize Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_InitializeContext(Activitydiagram_Activity_InitializeContext object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Write Trace Abstract Sub Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Write Trace Abstract Sub Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_WriteTrace_AbstractSubEvent(Activitydiagram_Activity_WriteTrace_AbstractSubEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Write Trace Fill Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Write Trace Fill Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_WriteTrace_FillEvent(Activitydiagram_Activity_WriteTrace_FillEvent object) {
 		return null;
 	}
 
@@ -508,6 +569,21 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFillEvent(FillEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Execute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Execute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_Execute(Activitydiagram_Activity_Execute object) {
 		return null;
 	}
 
@@ -553,6 +629,21 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseActivitydiagram_ActivityNode_AddTokens1(Activitydiagram_ActivityNode_AddTokens1 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Write Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Write Trace</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_WriteTrace(Activitydiagram_Activity_WriteTrace object) {
 		return null;
 	}
 

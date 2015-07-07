@@ -2,8 +2,12 @@
  */
 package activitydiagramTrace.Steps.impl;
 
+import activitydiagramTrace.ActivitydiagramTracePackage;
+import activitydiagramTrace.State;
+
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute;
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubEvent;
+import activitydiagramTrace.Steps.BigStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
 import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
@@ -11,6 +15,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -28,6 +33,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl#getStartingState <em>Starting State</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl#getEndingState <em>Ending State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl#getThis <em>This</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
@@ -35,7 +42,27 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class Activitydiagram_ActivityNode_ExecuteImpl extends BigStepImpl implements Activitydiagram_ActivityNode_Execute {
+public class Activitydiagram_ActivityNode_ExecuteImpl extends Activitydiagram_Activity_Execute_AbstractSubEventImpl implements Activitydiagram_ActivityNode_Execute {
+	/**
+	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartingState()
+	 * @generated
+	 * @ordered
+	 */
+	protected State startingState;
+
+	/**
+	 * The cached value of the '{@link #getEndingState() <em>Ending State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndingState()
+	 * @generated
+	 * @ordered
+	 */
+	protected State endingState;
+
 	/**
 	 * The cached value of the '{@link #getThis() <em>This</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -73,6 +100,126 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends BigStepImpl implem
 	@Override
 	protected EClass eStaticClass() {
 		return StepsPackage.Literals.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State getStartingState() {
+		if (startingState != null && startingState.eIsProxy()) {
+			InternalEObject oldStartingState = (InternalEObject)startingState;
+			startingState = (State)eResolveProxy(oldStartingState);
+			if (startingState != oldStartingState) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE, oldStartingState, startingState));
+			}
+		}
+		return startingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State basicGetStartingState() {
+		return startingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStartingState(State newStartingState, NotificationChain msgs) {
+		State oldStartingState = startingState;
+		startingState = newStartingState;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE, oldStartingState, newStartingState);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStartingState(State newStartingState) {
+		if (newStartingState != startingState) {
+			NotificationChain msgs = null;
+			if (startingState != null)
+				msgs = ((InternalEObject)startingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+			if (newStartingState != null)
+				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+			msgs = basicSetStartingState(newStartingState, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE, newStartingState, newStartingState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State getEndingState() {
+		if (endingState != null && endingState.eIsProxy()) {
+			InternalEObject oldEndingState = (InternalEObject)endingState;
+			endingState = (State)eResolveProxy(oldEndingState);
+			if (endingState != oldEndingState) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE, oldEndingState, endingState));
+			}
+		}
+		return endingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State basicGetEndingState() {
+		return endingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEndingState(State newEndingState, NotificationChain msgs) {
+		State oldEndingState = endingState;
+		endingState = newEndingState;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE, oldEndingState, newEndingState);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEndingState(State newEndingState) {
+		if (newEndingState != endingState) {
+			NotificationChain msgs = null;
+			if (endingState != null)
+				msgs = ((InternalEObject)endingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+			if (newEndingState != null)
+				msgs = ((InternalEObject)newEndingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+			msgs = basicSetEndingState(newEndingState, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE, newEndingState, newEndingState));
 	}
 
 	/**
@@ -131,8 +278,50 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends BigStepImpl implem
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE:
+				if (startingState != null)
+					msgs = ((InternalEObject)startingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+				return basicSetStartingState((State)otherEnd, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE:
+				if (endingState != null)
+					msgs = ((InternalEObject)endingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+				return basicSetEndingState((State)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE:
+				return basicSetStartingState(null, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE:
+				return basicSetEndingState(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE:
+				if (resolve) return getStartingState();
+				return basicGetStartingState();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE:
+				if (resolve) return getEndingState();
+				return basicGetEndingState();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__THIS:
 				if (resolve) return getThis();
 				return basicGetThis();
@@ -151,6 +340,12 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends BigStepImpl implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE:
+				setStartingState((State)newValue);
+				return;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE:
+				setEndingState((State)newValue);
+				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__THIS:
 				setThis((TracedActivityNode)newValue);
 				return;
@@ -170,6 +365,12 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends BigStepImpl implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE:
+				setStartingState((State)null);
+				return;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE:
+				setEndingState((State)null);
+				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__THIS:
 				setThis((TracedActivityNode)null);
 				return;
@@ -188,12 +389,50 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends BigStepImpl implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE:
+				return startingState != null;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE:
+				return endingState != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__THIS:
 				return this_ != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS:
 				return subSteps != null && !subSteps.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == BigStep.class) {
+			switch (derivedFeatureID) {
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE: return StepsPackage.BIG_STEP__STARTING_STATE;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE: return StepsPackage.BIG_STEP__ENDING_STATE;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == BigStep.class) {
+			switch (baseFeatureID) {
+				case StepsPackage.BIG_STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE;
+				case StepsPackage.BIG_STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //Activitydiagram_ActivityNode_ExecuteImpl

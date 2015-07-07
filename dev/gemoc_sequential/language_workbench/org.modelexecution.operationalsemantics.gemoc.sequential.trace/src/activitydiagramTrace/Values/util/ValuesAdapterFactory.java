@@ -68,48 +68,28 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl {
 	protected ValuesSwitch<Adapter> modelSwitch =
 		new ValuesSwitch<Adapter>() {
 			@Override
-			public Adapter caseActivityEdge_offers_Value(ActivityEdge_offers_Value object) {
-				return createActivityEdge_offers_ValueAdapter();
-			}
-			@Override
-			public Adapter caseActivity_trace_Value(Activity_trace_Value object) {
-				return createActivity_trace_ValueAdapter();
-			}
-			@Override
-			public Adapter caseActivityNode_heldTokens_Value(ActivityNode_heldTokens_Value object) {
-				return createActivityNode_heldTokens_ValueAdapter();
-			}
-			@Override
-			public Adapter caseBooleanValue_value_Value(BooleanValue_value_Value object) {
-				return createBooleanValue_value_ValueAdapter();
-			}
-			@Override
-			public Adapter caseOffer_offeredTokens_Value(Offer_offeredTokens_Value object) {
-				return createOffer_offeredTokens_ValueAdapter();
-			}
-			@Override
-			public Adapter caseTrace_executedNodes_Value(Trace_executedNodes_Value object) {
-				return createTrace_executedNodes_ValueAdapter();
-			}
-			@Override
-			public Adapter caseToken_holder_Value(Token_holder_Value object) {
-				return createToken_holder_ValueAdapter();
-			}
-			@Override
-			public Adapter caseForkedToken_baseToken_Value(ForkedToken_baseToken_Value object) {
-				return createForkedToken_baseToken_ValueAdapter();
-			}
-			@Override
-			public Adapter caseForkedToken_remainingOffersCount_Value(ForkedToken_remainingOffersCount_Value object) {
-				return createForkedToken_remainingOffersCount_ValueAdapter();
+			public Adapter caseIntegerValue_value_Value(IntegerValue_value_Value object) {
+				return createIntegerValue_value_ValueAdapter();
 			}
 			@Override
 			public Adapter caseInput_inputValues_Value(Input_inputValues_Value object) {
 				return createInput_inputValues_ValueAdapter();
 			}
 			@Override
-			public Adapter caseIntegerValue_value_Value(IntegerValue_value_Value object) {
-				return createIntegerValue_value_ValueAdapter();
+			public Adapter caseBooleanValue_value_Value(BooleanValue_value_Value object) {
+				return createBooleanValue_value_ValueAdapter();
+			}
+			@Override
+			public Adapter caseTrace_executedNodes_Value(Trace_executedNodes_Value object) {
+				return createTrace_executedNodes_ValueAdapter();
+			}
+			@Override
+			public Adapter caseActivityEdge_offers_Value(ActivityEdge_offers_Value object) {
+				return createActivityEdge_offers_ValueAdapter();
+			}
+			@Override
+			public Adapter caseToken_holder_Value(Token_holder_Value object) {
+				return createToken_holder_ValueAdapter();
 			}
 			@Override
 			public Adapter caseInputValue_value_Value(InputValue_value_Value object) {
@@ -118,6 +98,26 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInputValue_variable_Value(InputValue_variable_Value object) {
 				return createInputValue_variable_ValueAdapter();
+			}
+			@Override
+			public Adapter caseForkedToken_remainingOffersCount_Value(ForkedToken_remainingOffersCount_Value object) {
+				return createForkedToken_remainingOffersCount_ValueAdapter();
+			}
+			@Override
+			public Adapter caseForkedToken_baseToken_Value(ForkedToken_baseToken_Value object) {
+				return createForkedToken_baseToken_ValueAdapter();
+			}
+			@Override
+			public Adapter caseActivityNode_heldTokens_Value(ActivityNode_heldTokens_Value object) {
+				return createActivityNode_heldTokens_ValueAdapter();
+			}
+			@Override
+			public Adapter caseActivity_trace_Value(Activity_trace_Value object) {
+				return createActivity_trace_ValueAdapter();
+			}
+			@Override
+			public Adapter caseOffer_offeredTokens_Value(Offer_offeredTokens_Value object) {
+				return createOffer_offeredTokens_ValueAdapter();
 			}
 			@Override
 			public Adapter caseVariable_currentValue_Value(Variable_currentValue_Value object) {
@@ -144,128 +144,16 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ActivityEdge_offers_Value <em>Activity Edge offers Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.IntegerValue_value_Value <em>Integer Value value Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.ActivityEdge_offers_Value
+	 * @see activitydiagramTrace.Values.IntegerValue_value_Value
 	 * @generated
 	 */
-	public Adapter createActivityEdge_offers_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Activity_trace_Value <em>Activity trace Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.Activity_trace_Value
-	 * @generated
-	 */
-	public Adapter createActivity_trace_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ActivityNode_heldTokens_Value <em>Activity Node held Tokens Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.ActivityNode_heldTokens_Value
-	 * @generated
-	 */
-	public Adapter createActivityNode_heldTokens_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.BooleanValue_value_Value <em>Boolean Value value Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.BooleanValue_value_Value
-	 * @generated
-	 */
-	public Adapter createBooleanValue_value_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Offer_offeredTokens_Value <em>Offer offered Tokens Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.Offer_offeredTokens_Value
-	 * @generated
-	 */
-	public Adapter createOffer_offeredTokens_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Trace_executedNodes_Value <em>Trace executed Nodes Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.Trace_executedNodes_Value
-	 * @generated
-	 */
-	public Adapter createTrace_executedNodes_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Token_holder_Value <em>Token holder Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.Token_holder_Value
-	 * @generated
-	 */
-	public Adapter createToken_holder_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ForkedToken_baseToken_Value <em>Forked Token base Token Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.ForkedToken_baseToken_Value
-	 * @generated
-	 */
-	public Adapter createForkedToken_baseToken_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value <em>Forked Token remaining Offers Count Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value
-	 * @generated
-	 */
-	public Adapter createForkedToken_remainingOffersCount_ValueAdapter() {
+	public Adapter createIntegerValue_value_ValueAdapter() {
 		return null;
 	}
 
@@ -284,16 +172,58 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.IntegerValue_value_Value <em>Integer Value value Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.BooleanValue_value_Value <em>Boolean Value value Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see activitydiagramTrace.Values.IntegerValue_value_Value
+	 * @see activitydiagramTrace.Values.BooleanValue_value_Value
 	 * @generated
 	 */
-	public Adapter createIntegerValue_value_ValueAdapter() {
+	public Adapter createBooleanValue_value_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Trace_executedNodes_Value <em>Trace executed Nodes Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.Trace_executedNodes_Value
+	 * @generated
+	 */
+	public Adapter createTrace_executedNodes_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ActivityEdge_offers_Value <em>Activity Edge offers Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.ActivityEdge_offers_Value
+	 * @generated
+	 */
+	public Adapter createActivityEdge_offers_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Token_holder_Value <em>Token holder Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.Token_holder_Value
+	 * @generated
+	 */
+	public Adapter createToken_holder_ValueAdapter() {
 		return null;
 	}
 
@@ -322,6 +252,76 @@ public class ValuesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputValue_variable_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value <em>Forked Token remaining Offers Count Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value
+	 * @generated
+	 */
+	public Adapter createForkedToken_remainingOffersCount_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ForkedToken_baseToken_Value <em>Forked Token base Token Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.ForkedToken_baseToken_Value
+	 * @generated
+	 */
+	public Adapter createForkedToken_baseToken_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.ActivityNode_heldTokens_Value <em>Activity Node held Tokens Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.ActivityNode_heldTokens_Value
+	 * @generated
+	 */
+	public Adapter createActivityNode_heldTokens_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Activity_trace_Value <em>Activity trace Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.Activity_trace_Value
+	 * @generated
+	 */
+	public Adapter createActivity_trace_ValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Values.Offer_offeredTokens_Value <em>Offer offered Tokens Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Values.Offer_offeredTokens_Value
+	 * @generated
+	 */
+	public Adapter createOffer_offeredTokens_ValueAdapter() {
 		return null;
 	}
 

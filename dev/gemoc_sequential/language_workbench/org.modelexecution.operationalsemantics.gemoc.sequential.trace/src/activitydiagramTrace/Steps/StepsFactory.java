@@ -31,22 +31,22 @@ public interface StepsFactory extends EFactory {
 	Steps createSteps();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Variable Execute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * @return a new object of class '<em>Activitydiagram Variable Execute</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_Terminate createActivitydiagram_ActivityNode_Terminate();
+	Activitydiagram_Variable_Execute createActivitydiagram_Variable_Execute();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Execute Fill Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Execute Fill Event</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_SendOffers1 createActivitydiagram_ActivityNode_SendOffers1();
+	Activitydiagram_Activity_Execute_FillEvent createActivitydiagram_Activity_Execute_FillEvent();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Execute Fill Event</em>'.
@@ -85,31 +85,13 @@ public interface StepsFactory extends EFactory {
 	Activitydiagram_ActivityNode_AddTokens1_FillEvent createActivitydiagram_ActivityNode_AddTokens1_FillEvent();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Variable Execute</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Variable Execute</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * @generated
 	 */
-	Activitydiagram_Variable_Execute createActivitydiagram_Variable_Execute();
-
-	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Has Offers1</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Has Offers1</em>'.
-	 * @generated
-	 */
-	Activitydiagram_ActivityNode_HasOffers1 createActivitydiagram_ActivityNode_HasOffers1();
-
-	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Initialize Context</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Initialize Context</em>'.
-	 * @generated
-	 */
-	Activitydiagram_Activity_InitializeContext createActivitydiagram_Activity_InitializeContext();
+	Activitydiagram_ActivityNode_SendOffers1 createActivitydiagram_ActivityNode_SendOffers1();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Variable Init</em>'.
@@ -121,22 +103,40 @@ public interface StepsFactory extends EFactory {
 	Activitydiagram_Variable_Init createActivitydiagram_Variable_Init();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Is Ready</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Reset</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Is Ready</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Reset</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_IsReady createActivitydiagram_ActivityNode_IsReady();
+	Activitydiagram_Activity_Reset createActivitydiagram_Activity_Reset();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Variable Print</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Terminate</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Variable Print</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Node Terminate</em>'.
 	 * @generated
 	 */
-	Activitydiagram_Variable_Print createActivitydiagram_Variable_Print();
+	Activitydiagram_ActivityNode_Terminate createActivitydiagram_ActivityNode_Terminate();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Initialize Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Initialize Context</em>'.
+	 * @generated
+	 */
+	Activitydiagram_Activity_InitializeContext createActivitydiagram_Activity_InitializeContext();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Write Trace Fill Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Write Trace Fill Event</em>'.
+	 * @generated
+	 */
+	Activitydiagram_Activity_WriteTrace_FillEvent createActivitydiagram_Activity_WriteTrace_FillEvent();
 
 	/**
 	 * Returns a new object of class '<em>Fill Event</em>'.
@@ -146,6 +146,15 @@ public interface StepsFactory extends EFactory {
 	 * @generated
 	 */
 	FillEvent createFillEvent();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Execute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Execute</em>'.
+	 * @generated
+	 */
+	Activitydiagram_Activity_Execute createActivitydiagram_Activity_Execute();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Execute</em>'.
@@ -173,6 +182,15 @@ public interface StepsFactory extends EFactory {
 	 * @generated
 	 */
 	Activitydiagram_ActivityNode_AddTokens1 createActivitydiagram_ActivityNode_AddTokens1();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Write Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Write Trace</em>'.
+	 * @generated
+	 */
+	Activitydiagram_Activity_WriteTrace createActivitydiagram_Activity_WriteTrace();
 
 	/**
 	 * Returns the package supported by this factory.

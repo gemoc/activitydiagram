@@ -66,57 +66,9 @@ public class ValuesSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ValuesPackage.ACTIVITY_EDGE_OFFERS_VALUE: {
-				ActivityEdge_offers_Value activityEdge_offers_Value = (ActivityEdge_offers_Value)theEObject;
-				T result = caseActivityEdge_offers_Value(activityEdge_offers_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.ACTIVITY_TRACE_VALUE: {
-				Activity_trace_Value activity_trace_Value = (Activity_trace_Value)theEObject;
-				T result = caseActivity_trace_Value(activity_trace_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE: {
-				ActivityNode_heldTokens_Value activityNode_heldTokens_Value = (ActivityNode_heldTokens_Value)theEObject;
-				T result = caseActivityNode_heldTokens_Value(activityNode_heldTokens_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.BOOLEAN_VALUE_VALUE_VALUE: {
-				BooleanValue_value_Value booleanValue_value_Value = (BooleanValue_value_Value)theEObject;
-				T result = caseBooleanValue_value_Value(booleanValue_value_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.OFFER_OFFERED_TOKENS_VALUE: {
-				Offer_offeredTokens_Value offer_offeredTokens_Value = (Offer_offeredTokens_Value)theEObject;
-				T result = caseOffer_offeredTokens_Value(offer_offeredTokens_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.TRACE_EXECUTED_NODES_VALUE: {
-				Trace_executedNodes_Value trace_executedNodes_Value = (Trace_executedNodes_Value)theEObject;
-				T result = caseTrace_executedNodes_Value(trace_executedNodes_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.TOKEN_HOLDER_VALUE: {
-				Token_holder_Value token_holder_Value = (Token_holder_Value)theEObject;
-				T result = caseToken_holder_Value(token_holder_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE: {
-				ForkedToken_baseToken_Value forkedToken_baseToken_Value = (ForkedToken_baseToken_Value)theEObject;
-				T result = caseForkedToken_baseToken_Value(forkedToken_baseToken_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ValuesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE: {
-				ForkedToken_remainingOffersCount_Value forkedToken_remainingOffersCount_Value = (ForkedToken_remainingOffersCount_Value)theEObject;
-				T result = caseForkedToken_remainingOffersCount_Value(forkedToken_remainingOffersCount_Value);
+			case ValuesPackage.INTEGER_VALUE_VALUE_VALUE: {
+				IntegerValue_value_Value integerValue_value_Value = (IntegerValue_value_Value)theEObject;
+				T result = caseIntegerValue_value_Value(integerValue_value_Value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,9 +78,27 @@ public class ValuesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ValuesPackage.INTEGER_VALUE_VALUE_VALUE: {
-				IntegerValue_value_Value integerValue_value_Value = (IntegerValue_value_Value)theEObject;
-				T result = caseIntegerValue_value_Value(integerValue_value_Value);
+			case ValuesPackage.BOOLEAN_VALUE_VALUE_VALUE: {
+				BooleanValue_value_Value booleanValue_value_Value = (BooleanValue_value_Value)theEObject;
+				T result = caseBooleanValue_value_Value(booleanValue_value_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.TRACE_EXECUTED_NODES_VALUE: {
+				Trace_executedNodes_Value trace_executedNodes_Value = (Trace_executedNodes_Value)theEObject;
+				T result = caseTrace_executedNodes_Value(trace_executedNodes_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.ACTIVITY_EDGE_OFFERS_VALUE: {
+				ActivityEdge_offers_Value activityEdge_offers_Value = (ActivityEdge_offers_Value)theEObject;
+				T result = caseActivityEdge_offers_Value(activityEdge_offers_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.TOKEN_HOLDER_VALUE: {
+				Token_holder_Value token_holder_Value = (Token_holder_Value)theEObject;
+				T result = caseToken_holder_Value(token_holder_Value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -144,6 +114,36 @@ public class ValuesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ValuesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE: {
+				ForkedToken_remainingOffersCount_Value forkedToken_remainingOffersCount_Value = (ForkedToken_remainingOffersCount_Value)theEObject;
+				T result = caseForkedToken_remainingOffersCount_Value(forkedToken_remainingOffersCount_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE: {
+				ForkedToken_baseToken_Value forkedToken_baseToken_Value = (ForkedToken_baseToken_Value)theEObject;
+				T result = caseForkedToken_baseToken_Value(forkedToken_baseToken_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE: {
+				ActivityNode_heldTokens_Value activityNode_heldTokens_Value = (ActivityNode_heldTokens_Value)theEObject;
+				T result = caseActivityNode_heldTokens_Value(activityNode_heldTokens_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.ACTIVITY_TRACE_VALUE: {
+				Activity_trace_Value activity_trace_Value = (Activity_trace_Value)theEObject;
+				T result = caseActivity_trace_Value(activity_trace_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ValuesPackage.OFFER_OFFERED_TOKENS_VALUE: {
+				Offer_offeredTokens_Value offer_offeredTokens_Value = (Offer_offeredTokens_Value)theEObject;
+				T result = caseOffer_offeredTokens_Value(offer_offeredTokens_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ValuesPackage.VARIABLE_CURRENT_VALUE_VALUE: {
 				Variable_currentValue_Value variable_currentValue_Value = (Variable_currentValue_Value)theEObject;
 				T result = caseVariable_currentValue_Value(variable_currentValue_Value);
@@ -155,137 +155,17 @@ public class ValuesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivityEdge_offers_Value(ActivityEdge_offers_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivity_trace_Value(Activity_trace_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivityNode_heldTokens_Value(ActivityNode_heldTokens_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBooleanValue_value_Value(BooleanValue_value_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Offer offered Tokens Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Offer offered Tokens Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOffer_offeredTokens_Value(Offer_offeredTokens_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Trace executed Nodes Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Trace executed Nodes Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrace_executedNodes_Value(Trace_executedNodes_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Token holder Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Token holder Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToken_holder_Value(Token_holder_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Forked Token base Token Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Forked Token base Token Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseForkedToken_baseToken_Value(ForkedToken_baseToken_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Forked Token remaining Offers Count Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Forked Token remaining Offers Count Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseForkedToken_remainingOffersCount_Value(ForkedToken_remainingOffersCount_Value object) {
+	public T caseIntegerValue_value_Value(IntegerValue_value_Value object) {
 		return null;
 	}
 
@@ -305,17 +185,62 @@ public class ValuesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerValue_value_Value(IntegerValue_value_Value object) {
+	public T caseBooleanValue_value_Value(BooleanValue_value_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trace executed Nodes Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trace executed Nodes Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrace_executedNodes_Value(Trace_executedNodes_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivityEdge_offers_Value(ActivityEdge_offers_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Token holder Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Token holder Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToken_holder_Value(Token_holder_Value object) {
 		return null;
 	}
 
@@ -346,6 +271,81 @@ public class ValuesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInputValue_variable_Value(InputValue_variable_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Forked Token remaining Offers Count Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Forked Token remaining Offers Count Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseForkedToken_remainingOffersCount_Value(ForkedToken_remainingOffersCount_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Forked Token base Token Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Forked Token base Token Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseForkedToken_baseToken_Value(ForkedToken_baseToken_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivityNode_heldTokens_Value(ActivityNode_heldTokens_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivity_trace_Value(Activity_trace_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Offer offered Tokens Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Offer offered Tokens Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOffer_offeredTokens_Value(Offer_offeredTokens_Value object) {
 		return null;
 	}
 

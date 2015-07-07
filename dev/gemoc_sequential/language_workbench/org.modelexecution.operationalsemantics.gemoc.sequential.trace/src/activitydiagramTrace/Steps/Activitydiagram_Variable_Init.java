@@ -20,7 +20,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedVariable;
  * @model
  * @generated
  */
-public interface Activitydiagram_Variable_Init extends SmallStep {
+public interface Activitydiagram_Variable_Init extends Activitydiagram_Activity_Execute_AbstractSubEvent, SmallStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
