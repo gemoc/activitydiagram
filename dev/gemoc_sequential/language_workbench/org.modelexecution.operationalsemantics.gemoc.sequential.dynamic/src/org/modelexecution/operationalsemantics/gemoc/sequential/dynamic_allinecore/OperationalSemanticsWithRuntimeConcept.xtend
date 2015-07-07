@@ -414,7 +414,6 @@ class VariableAspect {
 	def void init(Context c) {
 	}
 
-	@Step
 	def String print() {
 	}
 }
