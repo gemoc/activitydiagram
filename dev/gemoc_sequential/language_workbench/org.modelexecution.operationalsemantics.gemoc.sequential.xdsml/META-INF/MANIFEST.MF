@@ -1,26 +1,18 @@
 Bundle-SymbolicName: org.modelexecution.operationalsemantics.gemoc.sequential.xdsml;singleton:=true
-Export-Package: xad_sequential.xdsml.api.impl
 Bundle-Name: Xdsml
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: org.gemoc.gemoc_language_workbench.api;bundle-version="0.0.0";visibility:="reexport",
- 
- org.eclipse.emf.ecore.xmi;bundle-version="2.8.0";visibility:="reexport",
- 
- org.gemoc.execution.engine;bundle-version="0.0.0";visibility:="reexport",
- 
- org.gemoc.execution.engine.commons;bundle-version="0.0.0";visibility:="reexport",
- 
- org.modelexecution.operationalsemantics.gemoc.sequential.dynamic;bundle-version="0.0.0";visibility:="reexport",
- 
- org.gemoc.gemoc_language_workbench.extensions.k3;bundle-version="0.0.0";visibility:="reexport",
- 
- org.modelexecution.operationalsemantics.ad;bundle-version="0.0.0";visibility:="reexport",
- 
- org.gemoc.gemoc_language_workbench.extensions.sirius;bundle-version="0.0.0";visibility:="reexport",
- 
- org.modelexecution.operationalsemantics.ad.grammar;bundle-version="0.0.0";visibility:="reexport",
- 
- org.modelexecution.operationalsemantics.ad.design;bundle-version="0.0.0";visibility:=reexport
+Require-Bundle: org.gemoc.gemoc_language_workbench.api;bundle-version="0.0.0";visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.8.0";visibility:=reexport,
+ org.gemoc.execution.engine;bundle-version="0.0.0";visibility:=reexport,
+ org.gemoc.execution.engine.commons;bundle-version="0.0.0";visibility:=reexport,
+ org.modelexecution.operationalsemantics.gemoc.sequential.dynamic;bundle-version="0.0.0";visibility:=reexport,
+ org.gemoc.gemoc_language_workbench.extensions.k3;bundle-version="0.0.0";visibility:=reexport,
+ org.modelexecution.operationalsemantics.ad;bundle-version="0.0.0";visibility:=reexport,
+ org.gemoc.gemoc_language_workbench.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
+ org.modelexecution.operationalsemantics.ad.grammar;bundle-version="0.0.0";visibility:=reexport,
+ org.modelexecution.operationalsemantics.ad.design;bundle-version="0.0.0";visibility:=reexport,
+ org.gemoc.executionengine.ccsljava.engine,
+ org.gemoc.executionengine.ccsljava.api;bundle-version="1.0.0"
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Manifest-Version: 1.0
