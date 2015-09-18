@@ -13,7 +13,7 @@ modeltype TimeModel uses 'http://fr.inria.aoste.timemodel';
 
 modeltype FeedBack uses 'http://timesquare.inria.fr/feedback';
 
-transformation doactivitydiagram_ecore_To_CCSL(in inM : inMM1, out ccsl : TimeModel, out feedback : FeedBack);
+transformation doactivitydiagram_To_CCSL(in inM : inMM1, out ccsl : TimeModel, out feedback : FeedBack);
 property theFeedBackSpec		:FeedBack::ActionModel = null;
 property seqOfMSE :	Sequence(FeedBack::ModelSpecificEvent)    = Sequence{};
 
@@ -83,119 +83,34 @@ main() {
 			alias := 'CCSL';
 			
 		}; 
-	
 		imports+= object TimeModel::ImportStatement{
 			importURI := getModelPath(inM.rootObjects()->asSequence()->first().oclAsType(EObject));
 			alias := getModelAlias(inM.rootObjects()->asSequence()->first().oclAsType(EObject));
 			
 		};
-
-		
-
 		////[ ActivityNode ]
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ActivityNode.oclAsType(EClass)).oclAsType(ActivityNode)->map executeIt2Clock();
-		
-
-
-		
-
 		////[ Activity ]
-		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Activity.oclAsType(EClass)).oclAsType(Activity)->map start2Clock();
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Activity.oclAsType(EClass)).oclAsType(Activity)->map startActivity2Clock();
 		////[ Activity ]
-		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Activity.oclAsType(EClass)).oclAsType(Activity)->map finish2Clock();
-		
-
-
-		
-
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Activity.oclAsType(EClass)).oclAsType(Activity)->map finishActivity2Clock();
 		////[ ControlFlow ]
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ControlFlow.oclAsType(EClass)).oclAsType(ControlFlow)->map evalFalse2Clock();
 		////[ ControlFlow ]
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ControlFlow.oclAsType(EClass)).oclAsType(ControlFlow)->map evalTrue2Clock();
 		////[ ControlFlow ]
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ControlFlow.oclAsType(EClass)).oclAsType(ControlFlow)->map evaluate2Clock();
-		
-
-
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ControlFlow.oclAsType(EClass)).oclAsType(ControlFlow)->map trueOrFalse102trueOrFalse();
-		
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ControlFlow.oclAsType(EClass)).oclAsType(ControlFlow)->map evalImpliesTrueOrFalse212evalImpliesTrueOrFalse();
-		
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ControlFlow.oclAsType(EClass)).oclAsType(ControlFlow)->map evalwhenSourceExec102evalwhenSourceExec();
-		
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ActivityNode.oclAsType(EClass)).oclAsType(ActivityNode)->map waitControlToExecute552waitControlToExecute();
-		
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ActivityNode.oclAsType(EClass)).oclAsType(ActivityNode)->map waitControlToExecute2442waitControlToExecute2();
-		
-		
-		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ActivityNode.oclAsType(EClass)).oclAsType(ActivityNode)->map waitControlToExecute3442waitControlToExecute3();
-		
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Activity.oclAsType(EClass)).oclAsType(Activity)->map NonReentrant12NonReentrant();
-		
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), DecisionNode.oclAsType(EClass)).oclAsType(DecisionNode)->map DecisionCausalities162DecisionCausalities();
-		
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), DecisionNode.oclAsType(EClass)).oclAsType(DecisionNode)->map DecisionExclusion12DecisionExclusion();
-		
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), MergeNode.oclAsType(EClass)).oclAsType(MergeNode)->map MergeCausalities132MergeCausalities();
-		
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), InitialNode.oclAsType(EClass)).oclAsType(InitialNode)->map startedWhenActivityStart12startedWhenActivityStart();
-		
-		
-
-		
-
-
-		
 		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), ActivityFinalNode.oclAsType(EClass)).oclAsType(ActivityFinalNode)->map finishWhenActivityFinished12finishWhenActivityFinished();
-		
-		
-
-		
-
-
-		
-		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Activity.oclAsType(EClass)).oclAsType(Activity)->map runOnlyOnce82runOnlyOnce();
-		
 	}
 
 
@@ -450,64 +365,6 @@ main() {
 		}
 	}
 
-	
-	
-//Create an intermediate expression
-//create the expressions... 
-	mapping inMM1::Activity::intermediate_firstStart2Expression(an1 : Activity, an2 : Activity, nb : Integer):TimeModel::CCSLModel::ClockExpressionAndRelation::Expression
-	{ 
-		name := self.name+'intermediate_firstStart'+nb.toString();
-		type := seqOfExpressionDeclaration->select(rd | rd.name = "OneTickAndNoMore")->first();
-				 
-				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-		 			bindable := theMainBlock.elements[name = an1.name+'_start']->first();
-					_abstract := seqOfAbstractEntity[name = 'OneTickAndNoMoreClock' and container().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration).name = 'OneTickAndNoMore']->first();
-				};
-		end{
-			theMainBlock.expressions += result;
-		}
-	}
-
-	mapping inMM1::Activity::intermediate_firstStart2Expression(expr :TimeModel::CCSLModel::ClockExpressionAndRelation::Expression , an : Activity, nb : Integer):TimeModel::CCSLModel::ClockExpressionAndRelation::Expression
-	{
-		name := self.name+'intermediate_firstStart'+nb.toString();
-		type := seqOfExpressionDeclaration->select(rd | rd.name = "OneTickAndNoMore")->first();
-				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.expressions[name = expr.name]->first();
-					_abstract := seqOfExpressionDeclaration[name = 'OneTickAndNoMore']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration).allSubobjectsOfKind(TimeModel::CCSLModel::ClockExpressionAndRelation::AbstractEntity)->asSequence()->at(1).oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::AbstractEntity);
-				};
-		end{
-			theMainBlock.expressions += result;
-		}
-	}
-	
-	mapping inMM1::Activity::firstStart2Expression():TimeModel::CCSLModel::ClockExpressionAndRelation::Expression
-	{
-		init{
-		var sources : Sequence(Activity) := self->asSequence();
-		var lastExpr : TimeModel::CCSLModel::ClockExpressionAndRelation::Expression :=null;
-		var i : Integer := 3;
-		var newExpr : TimeModel::CCSLModel::ClockExpressionAndRelation::Expression := lastExpr;
-		var size : Integer = sources->size(); 
-		if(size = 1)then{
-			result := self.map intermediate_firstStart2Expression(sources->at(1),sources->at(1), 1);
-		}else{
-			lastExpr := self.map intermediate_firstStart2Expression(sources->at(1),sources->at(2), 1);
-			while (i <= size){
-				newExpr := self.map intermediate_firstStart2Expression(lastExpr,sources->at(i), i);
-				lastExpr := newExpr;
-				i := i + 1;
-			};
-			result := lastExpr;
-		}
-		endif;
-		}
-		
-		end{
-			theMainBlock.expressions += result;
-		}
-	}
-
 
 
 
@@ -532,16 +389,16 @@ main() {
 		}
 
 //relation stuff		
-	 	mapping inMM1::Activity::start2Clock() :TimeModel::Clock 
+	 	mapping inMM1::Activity::startActivity2Clock() :TimeModel::Clock 
 			when {  }
 		{
-			name:= self.name+'_start';
+			name:= self.name+'_startActivity';
 			tickingEvent := object TimeModel::Event{
  				referencedObjectRefs += self.oclAsType(EObject);
 				//referencedObjectRefs += self.oclAsType(EObject);
 				referencedObjectRefs += self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "initialize")->first().oclAsType(EObject);
 			
-				name := 'evt_'+self.name+'_start';
+				name := 'evt_'+self.name+'_startActivity';
 			kind :=TimeModel::EventKind::undefined;
 						
 			};
@@ -551,16 +408,16 @@ main() {
 				theMainBlock.elements += result;
 			}
 		}
-	 	mapping inMM1::Activity::finish2Clock() :TimeModel::Clock 
+	 	mapping inMM1::Activity::finishActivity2Clock() :TimeModel::Clock 
 			when {  }
 		{
-			name:= self.name+'_finish';
+			name:= self.name+'_finishActivity';
 			tickingEvent := object TimeModel::Event{
  				referencedObjectRefs += self.oclAsType(EObject);
 				//referencedObjectRefs += self.oclAsType(EObject);
 				referencedObjectRefs += self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "finish")->first().oclAsType(EObject);
 			
-				name := 'evt_'+self.name+'_finish';
+				name := 'evt_'+self.name+'_finishActivity';
 			kind :=TimeModel::EventKind::undefined;
 						
 			};
@@ -746,31 +603,6 @@ main() {
 		theMainBlock.relations += result;
 		}
 		
-	
-		mapping inMM1::ActivityNode::waitControlToExecute3442waitControlToExecute3(): TimeModel::CCSLModel::ClockExpressionAndRelation::Relation
-			when { 
-				((not ((self).oclIsKindOf(MergeNode)))
-		and
-		(self.incoming->size() = 1)
-	    and (self.incoming->first().oclAsType(ControlFlow).guard <> null)
-		) 
-				
-}
-		{
-		 	name := self.name+"Precedes_waitControlToExecute3";
-			type := seqOfRelationDeclaration->select(rd | rd.name = "Precedes")->first();
-				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.incoming->first().oclAsType(ControlFlow).name+'_evalTrue']->first();
-					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
-				};
-				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.name+'_executeIt']->first();
-					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).rightEntity;
-				};
-		
-		theMainBlock.relations += result;
-		}
-		
 
 //relation stuff		
 	
@@ -779,11 +611,11 @@ main() {
 		 	name := self.name+"Alternates_NonReentrant";
 			type := seqOfRelationDeclaration->select(rd | rd.name = "Alternates")->first();
 				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.name+'_start']->first();
+					bindable := theMainBlock.elements[name = self.name+'_startActivity']->first();
 					_abstract := seqOfAbstractEntity[name = 'AlternatesLeftClock']->first();
 				};
 				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.name+'_finish']->first();
+					bindable := theMainBlock.elements[name = self.name+'_finishActivity']->first();
 					_abstract := seqOfAbstractEntity[name = 'AlternatesRightClock']->first();
 				};
 		
@@ -876,7 +708,7 @@ main() {
 		 	name := self.name+"Precedes_startedWhenActivityStart";
 			type := seqOfRelationDeclaration->select(rd | rd.name = "Precedes")->first();
 				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.activity.name+'_start']->first();
+					bindable := theMainBlock.elements[name = self.activity.name+'_startActivity']->first();
 					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
 				};
 				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
@@ -899,26 +731,7 @@ main() {
 					_abstract := seqOfRelationDeclaration[name = 'Coincides']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
 				};
 				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.activity.name+'_finish']->first();
-					_abstract := seqOfRelationDeclaration[name = 'Coincides']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).rightEntity;
-				};
-		
-		theMainBlock.relations += result;
-		}
-		
-
-//relation stuff		
-	
-		mapping inMM1::Activity::runOnlyOnce82runOnlyOnce(): TimeModel::CCSLModel::ClockExpressionAndRelation::Relation
-		{
-		 	name := self.name+"Coincides_runOnlyOnce";
-			type := seqOfRelationDeclaration->select(rd | rd.name = "Coincides")->first();
-				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-					bindable := theMainBlock.elements[name = self.name+'_start']->first();
-					_abstract := seqOfRelationDeclaration[name = 'Coincides']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
-				};
-				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
-							bindable := self -> map firstStart2Expression()->asSequence()->first();
+					bindable := theMainBlock.elements[name = self.activity.name+'_finishActivity']->first();
 					_abstract := seqOfRelationDeclaration[name = 'Coincides']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).rightEntity;
 				};
 		
@@ -960,8 +773,8 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 
 		
 
-	inM.rootObjects().allSubobjects()->including(self)[ Activity ]->map start2MSE();
-	inM.rootObjects().allSubobjects()->including(self)[ Activity ]->map finish2MSE();
+	inM.rootObjects().allSubobjects()->including(self)[ Activity ]->map startActivity2MSE();
+	inM.rootObjects().allSubobjects()->including(self)[ Activity ]->map finishActivity2MSE();
 
 
 
@@ -1019,12 +832,6 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 
 
 
-		
-
-
-
-
-
 
 	}		
 
@@ -1035,33 +842,33 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 			name:= 'MSE_'+self.name+'_executeIt';
 				caller := self.oclAsType(EObject);
 				action := self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "execute")->first();
-				solverEvent := theMainBlock.elements[Clock]->select(c|c.name=self.name+'_executeIt')->first().oclAsType(EObject);
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=self.name+'_executeIt')->first().oclAsType(EObject);
 				
 			end{
 				theFeedBackSpec.events += result;
 				seqOfMSE += result
 			}
 		}
-	 	mapping inMM1::Activity::start2MSE() :FeedBack::ModelSpecificEvent 
+	 	mapping inMM1::Activity::startActivity2MSE() :FeedBack::ModelSpecificEvent 
 			when {  }
 		{
-			name:= 'MSE_'+self.name+'_start';
+			name:= 'MSE_'+self.name+'_startActivity';
 				caller := self.oclAsType(EObject);
 				action := self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "initialize")->first();
-				solverEvent := theMainBlock.elements[Clock]->select(c|c.name=self.name+'_start')->first().oclAsType(EObject);
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=self.name+'_startActivity')->first().oclAsType(EObject);
 				
 			end{
 				theFeedBackSpec.events += result;
 				seqOfMSE += result
 			}
 		}
-	 	mapping inMM1::Activity::finish2MSE() :FeedBack::ModelSpecificEvent 
+	 	mapping inMM1::Activity::finishActivity2MSE() :FeedBack::ModelSpecificEvent 
 			when {  }
 		{
-			name:= 'MSE_'+self.name+'_finish';
+			name:= 'MSE_'+self.name+'_finishActivity';
 				caller := self.oclAsType(EObject);
 				action := self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "finish")->first();
-				solverEvent := theMainBlock.elements[Clock]->select(c|c.name=self.name+'_finish')->first().oclAsType(EObject);
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=self.name+'_finishActivity')->first().oclAsType(EObject);
 				
 			end{
 				theFeedBackSpec.events += result;
@@ -1074,7 +881,7 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 			name:= 'MSE_'+self.name+'_evalFalse';
 				caller := self.oclAsType(EObject);
 				action := self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "clearOffer")->first();
-				solverEvent := theMainBlock.elements[Clock]->select(c|c.name=self.name+'_evalFalse')->first().oclAsType(EObject);
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=self.name+'_evalFalse')->first().oclAsType(EObject);
 				
 			end{
 				theFeedBackSpec.events += result;
@@ -1085,7 +892,7 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 			when { (self.guard <> null) }
 		{
 			name:= 'MSE_'+self.name+'_evalTrue';
-				solverEvent := theMainBlock.elements[Clock]->select(c|c.name=self.name+'_evalTrue')->first().oclAsType(EObject);
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=self.name+'_evalTrue')->first().oclAsType(EObject);
 				
 			end{
 				theFeedBackSpec.events += result;
@@ -1098,7 +905,7 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 			name:= 'MSE_'+self.name+'_evaluate';
 				caller := self.oclAsType(EObject);
 				action := self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "evaluateGuard")->first();
-				solverEvent := theMainBlock.elements[Clock]->select(c|c.name=self.name+'_evaluate')->first().oclAsType(EObject);
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=self.name+'_evaluate')->first().oclAsType(EObject);
 				
 			end{
 				theFeedBackSpec.events += result;
@@ -1114,14 +921,13 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 		{
 			action := object FeedBack::Force{
 				kind := ForceKind::Presence;
-				onTrigger := seqOfMSE->select(mse | mse.name = 'MSE_'+name+'_')->first();
 				eventToBeForced := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evalFalse')->first();
 				
 			};
 			condition := object FeedBack::ActionResultCondition{
 				comparisonValue := invalid;
 			};
-			source := self.resolveone(ModelSpecificEvent);
+			source := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evaluateGuard')->first();
 			
 			end{
 				theFeedBackSpec.whenStatements += result;
@@ -1132,14 +938,13 @@ mapping inMM1::Activity::activitydiagram2FeedBack() : FeedBack::ActionModel {
 		{
 			action := object FeedBack::Force{
 				kind := ForceKind::Presence;
-				onTrigger := seqOfMSE->select(mse | mse.name = 'MSE_'+name+'_')->first();
 				eventToBeForced := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evalTrue')->first();
 				
 			};
 			condition := object FeedBack::ActionResultCondition{
 				comparisonValue := invalid;
 			};
-			source := self.resolveone(ModelSpecificEvent);
+			source := seqOfMSE->select(mse | mse.name = 'MSE_'+self.name+'_evaluateGuard')->first();
 			
 			end{
 				theFeedBackSpec.whenStatements += result;
