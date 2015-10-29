@@ -20,7 +20,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent, Activitydiagram_ActivityNode_AddTokens1_AbstractSubEvent, SmallStep {
+public interface Activitydiagram_ActivityNode_RemoveToken1 extends SmallStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->

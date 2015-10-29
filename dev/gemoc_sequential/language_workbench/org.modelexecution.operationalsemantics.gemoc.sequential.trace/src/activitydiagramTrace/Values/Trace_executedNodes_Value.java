@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see activitydiagramTrace.Values.ValuesPackage#getTrace_executedNodes_Value()
- * @model
+ * @model annotation="http://www.modelexecution.org/trace/XMOF executionMetamodelElement='null'"
  * @generated
  */
 public interface Trace_executedNodes_Value extends EObject {

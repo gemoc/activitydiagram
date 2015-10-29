@@ -20,7 +20,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
  * @model
  * @generated
  */
-public interface Activitydiagram_Activity_Reset extends Activitydiagram_Activity_WriteTrace_AbstractSubEvent, SmallStep {
+public interface Activitydiagram_Activity_Reset extends Activitydiagram_Activity_WriteTrace_AbstractSubStep, SmallStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->

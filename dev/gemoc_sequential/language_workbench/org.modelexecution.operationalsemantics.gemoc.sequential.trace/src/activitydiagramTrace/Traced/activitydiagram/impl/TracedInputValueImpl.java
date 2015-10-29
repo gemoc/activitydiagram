@@ -30,24 +30,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.Traced.activitydiagram.impl.TracedInputValueImpl#getValueTrace <em>Value Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Traced.activitydiagram.impl.TracedInputValueImpl#getVariableTrace <em>Variable Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Traced.activitydiagram.impl.TracedInputValueImpl#getValueTrace <em>Value Trace</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class TracedInputValueImpl extends MinimalEObjectImpl.Container implements TracedInputValue {
-	/**
-	 * The cached value of the '{@link #getValueTrace() <em>Value Trace</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValueTrace()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputValue_value_Value> valueTrace;
-
 	/**
 	 * The cached value of the '{@link #getVariableTrace() <em>Variable Trace</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -57,6 +47,16 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected EList<InputValue_variable_Value> variableTrace;
+
+	/**
+	 * The cached value of the '{@link #getValueTrace() <em>Value Trace</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValueTrace()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<InputValue_value_Value> valueTrace;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,18 +82,6 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InputValue_value_Value> getValueTrace() {
-		if (valueTrace == null) {
-			valueTrace = new EObjectContainmentWithInverseEList<InputValue_value_Value>(InputValue_value_Value.class, this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE, ValuesPackage.INPUT_VALUE_VALUE_VALUE__PARENT);
-		}
-		return valueTrace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<InputValue_variable_Value> getVariableTrace() {
 		if (variableTrace == null) {
 			variableTrace = new EObjectContainmentWithInverseEList<InputValue_variable_Value>(InputValue_variable_Value.class, this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE, ValuesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT);
@@ -106,14 +94,26 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<InputValue_value_Value> getValueTrace() {
+		if (valueTrace == null) {
+			valueTrace = new EObjectContainmentWithInverseEList<InputValue_value_Value>(InputValue_value_Value.class, this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE, ValuesPackage.INPUT_VALUE_VALUE_VALUE__PARENT);
+		}
+		return valueTrace;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getValueTrace()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVariableTrace()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getValueTrace()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -126,10 +126,10 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
-				return ((InternalEList<?>)getValueTrace()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE:
 				return ((InternalEList<?>)getVariableTrace()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
+				return ((InternalEList<?>)getValueTrace()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -142,10 +142,10 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
-				return getValueTrace();
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE:
 				return getVariableTrace();
+			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
+				return getValueTrace();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,13 +159,13 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
-				getValueTrace().clear();
-				getValueTrace().addAll((Collection<? extends InputValue_value_Value>)newValue);
-				return;
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE:
 				getVariableTrace().clear();
 				getVariableTrace().addAll((Collection<? extends InputValue_variable_Value>)newValue);
+				return;
+			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
+				getValueTrace().clear();
+				getValueTrace().addAll((Collection<? extends InputValue_value_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,11 +179,11 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
-				getValueTrace().clear();
-				return;
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE:
 				getVariableTrace().clear();
+				return;
+			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
+				getValueTrace().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,10 +197,10 @@ public class TracedInputValueImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
-				return valueTrace != null && !valueTrace.isEmpty();
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_TRACE:
 				return variableTrace != null && !variableTrace.isEmpty();
+			case ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_TRACE:
+				return valueTrace != null && !valueTrace.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

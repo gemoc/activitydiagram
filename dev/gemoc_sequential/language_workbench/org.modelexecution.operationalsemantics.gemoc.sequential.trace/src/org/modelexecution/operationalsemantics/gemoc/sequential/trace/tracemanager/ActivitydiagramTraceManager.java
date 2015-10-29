@@ -37,11 +37,13 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 	private Resource traceResource;
 	private Deque<activitydiagramTrace.Steps.BigStep> context = new ArrayDeque<activitydiagramTrace.Steps.BigStep>();
 	private static final List<String> macroEvents = Arrays.asList(
-			"Activitydiagram_Activity_Execute",
 			"Activitydiagram_ActivityNode_AddTokens1",
+			"Activitydiagram_Activity_Execute",
 			"Activitydiagram_Activity_WriteTrace",
 			"Activitydiagram_ActivityNode_Execute",
-			"Activitydiagram_ActivityNode_TakeOfferdTokens1");
+			"Activitydiagram_ActivityNode_TakeOfferdTokens1",
+			"Activitydiagram_ActivityNode_SendOffers1",
+			"Activitydiagram_Variable_Init");
 
 	public ActivitydiagramTraceManager(Resource exeModel, Resource traceResource) {
 		this.traceResource = traceResource;
@@ -76,63 +78,35 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		return null;
 	}
 
-	private void storeAsTracedObject(activitydiagram.IntegerValue o) {
+	private void storeAsTracedObject(activitydiagram.Offer o) {
 
 		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedIntegerValue tracedObject;
+		activitydiagramTrace.Traced.activitydiagram.TracedOffer tracedObject;
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedIntegerValue();
+					.createTracedOffer();
 			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedIntegerValues().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getValueTrace(), this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.Input o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedInput tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedInput();
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedInputs().add(tracedObject);
-
-			traces.add(new GenericValueTrace(
-					tracedObject.getInputValuesTrace(), this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.BooleanValue o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedBooleanValue tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedBooleanValue();
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedBooleanValues().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getValueTrace(), this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.Trace o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedTrace tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedTrace();
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedTraces().add(tracedObject);
+			tracedObjects.getActivitydiagram_tracedOffers().add(tracedObject);
 
 			traces.add(new GenericValueTrace(tracedObject
-					.getExecutedNodesTrace(), this));
+					.getOfferedTokensTrace(), this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.IntegerVariable o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedIntegerVariable();
+			tracedObject.setOriginalObject(o);
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedIntegerVariables().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject
+					.getCurrentValueTrace(), this));
 		}
 	}
 
@@ -148,40 +122,6 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 					tracedObject);
 
 			traces.add(new GenericValueTrace(tracedObject.getHolderTrace(),
-					this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.DecisionNode o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedDecisionNode();
-			tracedObject.setOriginalObject(o);
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedDecisionNodes().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
-					this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.JoinNode o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedJoinNode tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedJoinNode();
-			tracedObject.setOriginalObject(o);
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedJoinNodes()
-					.add(tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
 					this));
 		}
 	}
@@ -203,6 +143,138 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		}
 	}
 
+	private void storeAsTracedObject(activitydiagram.InputValue o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedInputValue tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedInputValue();
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedInputValues().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getVariableTrace(),
+					this));
+			traces.add(new GenericValueTrace(tracedObject.getValueTrace(), this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.Input o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedInput tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedInput();
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedInputs().add(tracedObject);
+
+			traces.add(new GenericValueTrace(
+					tracedObject.getInputValuesTrace(), this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.Activity o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedActivity tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedActivity();
+			tracedObject.setOriginalObject(o);
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedActivitys()
+					.add(tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getTraceTrace(), this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.InitialNode o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedInitialNode tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedInitialNode();
+			tracedObject.setOriginalObject(o);
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedInitialNodes().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
+					this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.Trace o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedTrace tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedTrace();
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedTraces().add(tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject
+					.getExecutedNodesTrace(), this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.ForkedToken o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedForkedToken tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedForkedToken();
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedForkedTokens().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getHolderTrace(),
+					this));
+			traces.add(new GenericValueTrace(tracedObject
+					.getRemainingOffersCountTrace(), this));
+			traces.add(new GenericValueTrace(tracedObject.getBaseTokenTrace(),
+					this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.BooleanValue o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedBooleanValue tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedBooleanValue();
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedBooleanValues().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getValueTrace(), this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.DecisionNode o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedDecisionNode();
+			tracedObject.setOriginalObject(o);
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedDecisionNodes().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
+					this));
+		}
+	}
+
 	private void storeAsTracedObject(activitydiagram.ActivityFinalNode o) {
 
 		// First we find the traced object, and we create it if required
@@ -216,23 +288,6 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 					tracedObject);
 
 			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
-					this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.InputValue o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedInputValue tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedInputValue();
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedInputValues().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getValueTrace(), this));
-			traces.add(new GenericValueTrace(tracedObject.getVariableTrace(),
 					this));
 		}
 	}
@@ -254,104 +309,17 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		}
 	}
 
-	private void storeAsTracedObject(activitydiagram.ForkNode o) {
+	private void storeAsTracedObject(activitydiagram.JoinNode o) {
 
 		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedForkNode tracedObject;
+		activitydiagramTrace.Traced.activitydiagram.TracedJoinNode tracedObject;
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedForkNode();
+					.createTracedJoinNode();
 			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedForkNodes()
+			tracedObjects.getActivitydiagram_tracedJoinNodes()
 					.add(tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
-					this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.ForkedToken o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedForkedToken tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedForkedToken();
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedForkedTokens().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject
-					.getRemainingOffersCountTrace(), this));
-			traces.add(new GenericValueTrace(tracedObject.getHolderTrace(),
-					this));
-			traces.add(new GenericValueTrace(tracedObject.getBaseTokenTrace(),
-					this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.IntegerVariable o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedIntegerVariable();
-			tracedObject.setOriginalObject(o);
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedIntegerVariables().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject
-					.getCurrentValueTrace(), this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.Activity o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedActivity tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedActivity();
-			tracedObject.setOriginalObject(o);
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedActivitys()
-					.add(tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getTraceTrace(), this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.OpaqueAction o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedOpaqueAction();
-			tracedObject.setOriginalObject(o);
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedOpaqueActions().add(
-					tracedObject);
-
-			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
-					this));
-		}
-	}
-
-	private void storeAsTracedObject(activitydiagram.InitialNode o) {
-
-		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedInitialNode tracedObject;
-		if (!exeToTraced.containsKey(o)) {
-			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedInitialNode();
-			tracedObject.setOriginalObject(o);
-			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedInitialNodes().add(
-					tracedObject);
 
 			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
 					this));
@@ -375,97 +343,131 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		}
 	}
 
-	private void storeAsTracedObject(activitydiagram.Offer o) {
+	private void storeAsTracedObject(activitydiagram.OpaqueAction o) {
 
 		// First we find the traced object, and we create it if required
-		activitydiagramTrace.Traced.activitydiagram.TracedOffer tracedObject;
+		activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction tracedObject;
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
-					.createTracedOffer();
+					.createTracedOpaqueAction();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
-			tracedObjects.getActivitydiagram_tracedOffers().add(tracedObject);
+			tracedObjects.getActivitydiagram_tracedOpaqueActions().add(
+					tracedObject);
 
-			traces.add(new GenericValueTrace(tracedObject
-					.getOfferedTokensTrace(), this));
+			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
+					this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.ForkNode o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedForkNode tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedForkNode();
+			tracedObject.setOriginalObject(o);
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedForkNodes()
+					.add(tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getHeldTokensTrace(),
+					this));
+		}
+	}
+
+	private void storeAsTracedObject(activitydiagram.IntegerValue o) {
+
+		// First we find the traced object, and we create it if required
+		activitydiagramTrace.Traced.activitydiagram.TracedIntegerValue tracedObject;
+		if (!exeToTraced.containsKey(o)) {
+			tracedObject = activitydiagramTrace.Traced.activitydiagram.ActivitydiagramFactory.eINSTANCE
+					.createTracedIntegerValue();
+			exeToTraced.put(o, tracedObject);
+			tracedObjects.getActivitydiagram_tracedIntegerValues().add(
+					tracedObject);
+
+			traces.add(new GenericValueTrace(tracedObject.getValueTrace(), this));
 		}
 	}
 
 	private void storeAsTracedObject(EObject o) {
 
-		if (o instanceof activitydiagram.Offer)
-			storeAsTracedObject((activitydiagram.Offer) o);
-		else
-
-		if (o instanceof activitydiagram.MergeNode)
-			storeAsTracedObject((activitydiagram.MergeNode) o);
-		else
-
-		if (o instanceof activitydiagram.InitialNode)
-			storeAsTracedObject((activitydiagram.InitialNode) o);
-		else
-
-		if (o instanceof activitydiagram.OpaqueAction)
-			storeAsTracedObject((activitydiagram.OpaqueAction) o);
-		else
-
-		if (o instanceof activitydiagram.Activity)
-			storeAsTracedObject((activitydiagram.Activity) o);
-		else
-
-		if (o instanceof activitydiagram.IntegerVariable)
-			storeAsTracedObject((activitydiagram.IntegerVariable) o);
-		else
-
-		if (o instanceof activitydiagram.ForkedToken)
-			storeAsTracedObject((activitydiagram.ForkedToken) o);
+		if (o instanceof activitydiagram.IntegerValue)
+			storeAsTracedObject((activitydiagram.IntegerValue) o);
 		else
 
 		if (o instanceof activitydiagram.ForkNode)
 			storeAsTracedObject((activitydiagram.ForkNode) o);
 		else
 
-		if (o instanceof activitydiagram.ControlFlow)
-			storeAsTracedObject((activitydiagram.ControlFlow) o);
+		if (o instanceof activitydiagram.OpaqueAction)
+			storeAsTracedObject((activitydiagram.OpaqueAction) o);
 		else
 
-		if (o instanceof activitydiagram.InputValue)
-			storeAsTracedObject((activitydiagram.InputValue) o);
-		else
-
-		if (o instanceof activitydiagram.ActivityFinalNode)
-			storeAsTracedObject((activitydiagram.ActivityFinalNode) o);
-		else
-
-		if (o instanceof activitydiagram.BooleanVariable)
-			storeAsTracedObject((activitydiagram.BooleanVariable) o);
+		if (o instanceof activitydiagram.MergeNode)
+			storeAsTracedObject((activitydiagram.MergeNode) o);
 		else
 
 		if (o instanceof activitydiagram.JoinNode)
 			storeAsTracedObject((activitydiagram.JoinNode) o);
 		else
 
+		if (o instanceof activitydiagram.ControlFlow)
+			storeAsTracedObject((activitydiagram.ControlFlow) o);
+		else
+
+		if (o instanceof activitydiagram.ActivityFinalNode)
+			storeAsTracedObject((activitydiagram.ActivityFinalNode) o);
+		else
+
 		if (o instanceof activitydiagram.DecisionNode)
 			storeAsTracedObject((activitydiagram.DecisionNode) o);
-		else
-
-		if (o instanceof activitydiagram.ControlToken)
-			storeAsTracedObject((activitydiagram.ControlToken) o);
-		else
-
-		if (o instanceof activitydiagram.Trace)
-			storeAsTracedObject((activitydiagram.Trace) o);
 		else
 
 		if (o instanceof activitydiagram.BooleanValue)
 			storeAsTracedObject((activitydiagram.BooleanValue) o);
 		else
 
+		if (o instanceof activitydiagram.ForkedToken)
+			storeAsTracedObject((activitydiagram.ForkedToken) o);
+		else
+
+		if (o instanceof activitydiagram.Trace)
+			storeAsTracedObject((activitydiagram.Trace) o);
+		else
+
+		if (o instanceof activitydiagram.InitialNode)
+			storeAsTracedObject((activitydiagram.InitialNode) o);
+		else
+
+		if (o instanceof activitydiagram.Activity)
+			storeAsTracedObject((activitydiagram.Activity) o);
+		else
+
 		if (o instanceof activitydiagram.Input)
 			storeAsTracedObject((activitydiagram.Input) o);
 		else
 
-		if (o instanceof activitydiagram.IntegerValue)
-			storeAsTracedObject((activitydiagram.IntegerValue) o);
+		if (o instanceof activitydiagram.InputValue)
+			storeAsTracedObject((activitydiagram.InputValue) o);
+		else
+
+		if (o instanceof activitydiagram.BooleanVariable)
+			storeAsTracedObject((activitydiagram.BooleanVariable) o);
+		else
+
+		if (o instanceof activitydiagram.ControlToken)
+			storeAsTracedObject((activitydiagram.ControlToken) o);
+		else
+
+		if (o instanceof activitydiagram.IntegerVariable)
+			storeAsTracedObject((activitydiagram.IntegerVariable) o);
+		else
+
+		if (o instanceof activitydiagram.Offer)
+			storeAsTracedObject((activitydiagram.Offer) o);
 
 	}
 
@@ -484,84 +486,57 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			EObject o = i.next();
 
 			/**
-			 * Storing the state of a activitydiagram.Offer object
+			 * Storing the state of a activitydiagram.IntegerValue object
 			 */
-			if (o instanceof activitydiagram.Offer) {
+			if (o instanceof activitydiagram.IntegerValue) {
 
-				activitydiagram.Offer o_cast = (activitydiagram.Offer) o;
+				activitydiagram.IntegerValue o_cast = (activitydiagram.IntegerValue) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedOffer tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedOffer) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedIntegerValue tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedIntegerValue) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
 				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Offer_offeredTokens_Value> localTrace1 = tracedObject
-						.getOfferedTokensTrace();
-				activitydiagramTrace.Values.Offer_offeredTokens_Value previousValue1 = null;
+				List<activitydiagramTrace.Values.IntegerValue_value_Value> localTrace1 = tracedObject
+						.getValueTrace();
+				activitydiagramTrace.Values.IntegerValue_value_Value previousValue1 = null;
 				if (!localTrace1.isEmpty())
 					previousValue1 = localTrace1.get(localTrace1.size() - 1);
 
-				for (activitydiagram.Token aValue : o_cast.getOfferedTokens()) {
-					storeAsTracedObject(aValue);
-				}
+				int content1 = o_cast.getValue();
 
-				boolean noChange1 = true;
-				if (previousValue1 != null) {
-
-					if (previousValue1.getOfferedTokens().size() == o_cast
-							.getOfferedTokens().size()) {
-
-						java.util.Iterator<activitydiagram.Token> it = o_cast
-								.getOfferedTokens().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue1
-								.getOfferedTokens()) {
-							activitydiagram.Token aCurrentValue = it.next();
-							if (aPreviousValue != exeToTraced
-									.get(aCurrentValue)) {
-								noChange1 = false;
-								break;
-							}
-						}
-
-					} else {
-						noChange1 = false;
-					}
-				} else {
-					noChange1 = false;
-				}
+				boolean noChange1 = previousValue1 != null
+						&& previousValue1.getValue() == content1;
 
 				if (noChange1) {
-					newState.getOffer_offeredTokens_Values()
-							.add(previousValue1);
+					newState.getIntegerValue_value_Values().add(previousValue1);
 
 				} // Else we create one
 				else {
 					changed = true;
-					activitydiagramTrace.Values.Offer_offeredTokens_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createOffer_offeredTokens_Value();
+					activitydiagramTrace.Values.IntegerValue_value_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createIntegerValue_value_Value();
 
-					newValue.getOfferedTokens()
-							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedToken>) getExeToTraced(o_cast
-									.getOfferedTokens()));
+					newValue.setValue(content1);
 
-					tracedObject.getOfferedTokensTrace().add(newValue);
-					newState.getOffer_offeredTokens_Values().add(newValue);
+					tracedObject.getValueTrace().add(newValue);
+					newState.getIntegerValue_value_Values().add(newValue);
 				}
 
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.MergeNode object
+			 * Storing the state of a activitydiagram.ForkNode object
 			 */
-			if (o instanceof activitydiagram.MergeNode) {
+			if (o instanceof activitydiagram.ForkNode) {
 
-				activitydiagram.MergeNode o_cast = (activitydiagram.MergeNode) o;
+				activitydiagram.ForkNode o_cast = (activitydiagram.ForkNode) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedMergeNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedMergeNode) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedForkNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedForkNode) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
@@ -622,15 +597,15 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.InitialNode object
+			 * Storing the state of a activitydiagram.OpaqueAction object
 			 */
-			if (o instanceof activitydiagram.InitialNode) {
+			if (o instanceof activitydiagram.OpaqueAction) {
 
-				activitydiagram.InitialNode o_cast = (activitydiagram.InitialNode) o;
+				activitydiagram.OpaqueAction o_cast = (activitydiagram.OpaqueAction) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedInitialNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedInitialNode) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
@@ -691,15 +666,15 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.OpaqueAction object
+			 * Storing the state of a activitydiagram.MergeNode object
 			 */
-			if (o instanceof activitydiagram.OpaqueAction) {
+			if (o instanceof activitydiagram.MergeNode) {
 
-				activitydiagram.OpaqueAction o_cast = (activitydiagram.OpaqueAction) o;
+				activitydiagram.MergeNode o_cast = (activitydiagram.MergeNode) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedMergeNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedMergeNode) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
@@ -760,263 +735,57 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.Activity object
+			 * Storing the state of a activitydiagram.JoinNode object
 			 */
-			if (o instanceof activitydiagram.Activity) {
+			if (o instanceof activitydiagram.JoinNode) {
 
-				activitydiagram.Activity o_cast = (activitydiagram.Activity) o;
+				activitydiagram.JoinNode o_cast = (activitydiagram.JoinNode) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedActivity tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedActivity) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedJoinNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedJoinNode) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
 				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Activity_trace_Value> localTrace5 = tracedObject
-						.getTraceTrace();
-				activitydiagramTrace.Values.Activity_trace_Value previousValue5 = null;
+				List<activitydiagramTrace.Values.ActivityNode_heldTokens_Value> localTrace5 = tracedObject
+						.getHeldTokensTrace();
+				activitydiagramTrace.Values.ActivityNode_heldTokens_Value previousValue5 = null;
 				if (!localTrace5.isEmpty())
 					previousValue5 = localTrace5.get(localTrace5.size() - 1);
-
-				storeAsTracedObject(o_cast.getTrace());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedTrace content1 = null;
-				if (o_cast.getTrace() != null)
-					content1 = ((activitydiagramTrace.Traced.activitydiagram.TracedTrace) exeToTraced
-							.get(o_cast.getTrace()));
-
-				boolean noChange5 = previousValue5 != null
-						&& previousValue5.getTrace() == content1;
-
-				if (noChange5) {
-					newState.getActivity_trace_Values().add(previousValue5);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.Activity_trace_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createActivity_trace_Value();
-
-					newValue.setTrace(content1);
-
-					tracedObject.getTraceTrace().add(newValue);
-					newState.getActivity_trace_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.IntegerVariable object
-			 */
-			if (o instanceof activitydiagram.IntegerVariable) {
-
-				activitydiagram.IntegerVariable o_cast = (activitydiagram.IntegerVariable) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Variable_currentValue_Value> localTrace6 = tracedObject
-						.getCurrentValueTrace();
-				activitydiagramTrace.Values.Variable_currentValue_Value previousValue6 = null;
-				if (!localTrace6.isEmpty())
-					previousValue6 = localTrace6.get(localTrace6.size() - 1);
-
-				storeAsTracedObject(o_cast.getCurrentValue());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedValue content2 = null;
-				if (o_cast.getCurrentValue() != null)
-					content2 = ((activitydiagramTrace.Traced.activitydiagram.TracedValue) exeToTraced
-							.get(o_cast.getCurrentValue()));
-
-				boolean noChange6 = previousValue6 != null
-						&& previousValue6.getCurrentValue() == content2;
-
-				if (noChange6) {
-					newState.getVariable_currentValue_Values().add(
-							previousValue6);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.Variable_currentValue_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createVariable_currentValue_Value();
-
-					newValue.setCurrentValue(content2);
-
-					tracedObject.getCurrentValueTrace().add(newValue);
-					newState.getVariable_currentValue_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.ForkedToken object
-			 */
-			if (o instanceof activitydiagram.ForkedToken) {
-
-				activitydiagram.ForkedToken o_cast = (activitydiagram.ForkedToken) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedForkedToken tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedForkedToken) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value> localTrace7 = tracedObject
-						.getRemainingOffersCountTrace();
-				activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value previousValue7 = null;
-				if (!localTrace7.isEmpty())
-					previousValue7 = localTrace7.get(localTrace7.size() - 1);
-
-				int content3 = o_cast.getRemainingOffersCount();
-
-				boolean noChange7 = previousValue7 != null
-						&& previousValue7.getRemainingOffersCount() == content3;
-
-				if (noChange7) {
-					newState.getForkedToken_remainingOffersCount_Values().add(
-							previousValue7);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createForkedToken_remainingOffersCount_Value();
-
-					newValue.setRemainingOffersCount(content3);
-
-					tracedObject.getRemainingOffersCountTrace().add(newValue);
-					newState.getForkedToken_remainingOffersCount_Values().add(
-							newValue);
-				}
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Token_holder_Value> localTrace8 = tracedObject
-						.getHolderTrace();
-				activitydiagramTrace.Values.Token_holder_Value previousValue8 = null;
-				if (!localTrace8.isEmpty())
-					previousValue8 = localTrace8.get(localTrace8.size() - 1);
-
-				storeAsTracedObject(o_cast.getHolder());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedActivityNode content4 = null;
-				if (o_cast.getHolder() != null)
-					content4 = ((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
-							.get(o_cast.getHolder()));
-
-				boolean noChange8 = previousValue8 != null
-						&& previousValue8.getHolder() == content4;
-
-				if (noChange8) {
-					newState.getToken_holder_Values().add(previousValue8);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.Token_holder_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createToken_holder_Value();
-
-					newValue.setHolder(content4);
-
-					tracedObject.getHolderTrace().add(newValue);
-					newState.getToken_holder_Values().add(newValue);
-				}
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.ForkedToken_baseToken_Value> localTrace9 = tracedObject
-						.getBaseTokenTrace();
-				activitydiagramTrace.Values.ForkedToken_baseToken_Value previousValue9 = null;
-				if (!localTrace9.isEmpty())
-					previousValue9 = localTrace9.get(localTrace9.size() - 1);
-
-				storeAsTracedObject(o_cast.getBaseToken());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedToken content5 = null;
-				if (o_cast.getBaseToken() != null)
-					content5 = ((activitydiagramTrace.Traced.activitydiagram.TracedToken) exeToTraced
-							.get(o_cast.getBaseToken()));
-
-				boolean noChange9 = previousValue9 != null
-						&& previousValue9.getBaseToken() == content5;
-
-				if (noChange9) {
-					newState.getForkedToken_baseToken_Values().add(
-							previousValue9);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.ForkedToken_baseToken_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createForkedToken_baseToken_Value();
-
-					newValue.setBaseToken(content5);
-
-					tracedObject.getBaseTokenTrace().add(newValue);
-					newState.getForkedToken_baseToken_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.ForkNode object
-			 */
-			if (o instanceof activitydiagram.ForkNode) {
-
-				activitydiagram.ForkNode o_cast = (activitydiagram.ForkNode) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedForkNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedForkNode) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.ActivityNode_heldTokens_Value> localTrace10 = tracedObject
-						.getHeldTokensTrace();
-				activitydiagramTrace.Values.ActivityNode_heldTokens_Value previousValue10 = null;
-				if (!localTrace10.isEmpty())
-					previousValue10 = localTrace10.get(localTrace10.size() - 1);
 
 				for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 					storeAsTracedObject(aValue);
 				}
 
-				boolean noChange10 = true;
-				if (previousValue10 != null) {
+				boolean noChange5 = true;
+				if (previousValue5 != null) {
 
-					if (previousValue10.getHeldTokens().size() == o_cast
+					if (previousValue5.getHeldTokens().size() == o_cast
 							.getHeldTokens().size()) {
 
 						java.util.Iterator<activitydiagram.Token> it = o_cast
 								.getHeldTokens().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue10
+						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue5
 								.getHeldTokens()) {
 							activitydiagram.Token aCurrentValue = it.next();
 							if (aPreviousValue != exeToTraced
 									.get(aCurrentValue)) {
-								noChange10 = false;
+								noChange5 = false;
 								break;
 							}
 						}
 
 					} else {
-						noChange10 = false;
+						noChange5 = false;
 					}
 				} else {
-					noChange10 = false;
+					noChange5 = false;
 				}
 
-				if (noChange10) {
+				if (noChange5) {
 					newState.getActivityNode_heldTokens_Values().add(
-							previousValue10);
+							previousValue5);
 
 				} // Else we create one
 				else {
@@ -1048,44 +817,44 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 				// Then we compare the value of the field with the last stored value
 				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.ActivityEdge_offers_Value> localTrace11 = tracedObject
+				List<activitydiagramTrace.Values.ActivityEdge_offers_Value> localTrace6 = tracedObject
 						.getOffersTrace();
-				activitydiagramTrace.Values.ActivityEdge_offers_Value previousValue11 = null;
-				if (!localTrace11.isEmpty())
-					previousValue11 = localTrace11.get(localTrace11.size() - 1);
+				activitydiagramTrace.Values.ActivityEdge_offers_Value previousValue6 = null;
+				if (!localTrace6.isEmpty())
+					previousValue6 = localTrace6.get(localTrace6.size() - 1);
 
 				for (activitydiagram.Offer aValue : o_cast.getOffers()) {
 					storeAsTracedObject(aValue);
 				}
 
-				boolean noChange11 = true;
-				if (previousValue11 != null) {
+				boolean noChange6 = true;
+				if (previousValue6 != null) {
 
-					if (previousValue11.getOffers().size() == o_cast
-							.getOffers().size()) {
+					if (previousValue6.getOffers().size() == o_cast.getOffers()
+							.size()) {
 
 						java.util.Iterator<activitydiagram.Offer> it = o_cast
 								.getOffers().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedOffer aPreviousValue : previousValue11
+						for (activitydiagramTrace.Traced.activitydiagram.TracedOffer aPreviousValue : previousValue6
 								.getOffers()) {
 							activitydiagram.Offer aCurrentValue = it.next();
 							if (aPreviousValue != exeToTraced
 									.get(aCurrentValue)) {
-								noChange11 = false;
+								noChange6 = false;
 								break;
 							}
 						}
 
 					} else {
-						noChange11 = false;
+						noChange6 = false;
 					}
 				} else {
-					noChange11 = false;
+					noChange6 = false;
 				}
 
-				if (noChange11) {
-					newState.getActivityEdge_offers_Values().add(
-							previousValue11);
+				if (noChange6) {
+					newState.getActivityEdge_offers_Values()
+							.add(previousValue6);
 
 				} // Else we create one
 				else {
@@ -1104,87 +873,6 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.InputValue object
-			 */
-			if (o instanceof activitydiagram.InputValue) {
-
-				activitydiagram.InputValue o_cast = (activitydiagram.InputValue) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedInputValue tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedInputValue) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.InputValue_value_Value> localTrace12 = tracedObject
-						.getValueTrace();
-				activitydiagramTrace.Values.InputValue_value_Value previousValue12 = null;
-				if (!localTrace12.isEmpty())
-					previousValue12 = localTrace12.get(localTrace12.size() - 1);
-
-				storeAsTracedObject(o_cast.getValue());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedValue content6 = null;
-				if (o_cast.getValue() != null)
-					content6 = ((activitydiagramTrace.Traced.activitydiagram.TracedValue) exeToTraced
-							.get(o_cast.getValue()));
-
-				boolean noChange12 = previousValue12 != null
-						&& previousValue12.getValue() == content6;
-
-				if (noChange12) {
-					newState.getInputValue_value_Values().add(previousValue12);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.InputValue_value_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createInputValue_value_Value();
-
-					newValue.setValue(content6);
-
-					tracedObject.getValueTrace().add(newValue);
-					newState.getInputValue_value_Values().add(newValue);
-				}
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.InputValue_variable_Value> localTrace13 = tracedObject
-						.getVariableTrace();
-				activitydiagramTrace.Values.InputValue_variable_Value previousValue13 = null;
-				if (!localTrace13.isEmpty())
-					previousValue13 = localTrace13.get(localTrace13.size() - 1);
-
-				storeAsTracedObject(o_cast.getVariable());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedVariable content7 = null;
-				if (o_cast.getVariable() != null)
-					content7 = ((activitydiagramTrace.Traced.activitydiagram.TracedVariable) exeToTraced
-							.get(o_cast.getVariable()));
-
-				boolean noChange13 = previousValue13 != null
-						&& previousValue13.getVariable() == content7;
-
-				if (noChange13) {
-					newState.getInputValue_variable_Values().add(
-							previousValue13);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.InputValue_variable_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createInputValue_variable_Value();
-
-					newValue.setVariable(content7);
-
-					tracedObject.getVariableTrace().add(newValue);
-					newState.getInputValue_variable_Values().add(newValue);
-				}
-
-			} else
-
-			/**
 			 * Storing the state of a activitydiagram.ActivityFinalNode object
 			 */
 			if (o instanceof activitydiagram.ActivityFinalNode) {
@@ -1194,6 +882,368 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 				storeAsTracedObject(o_cast);
 
 				activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.ActivityNode_heldTokens_Value> localTrace7 = tracedObject
+						.getHeldTokensTrace();
+				activitydiagramTrace.Values.ActivityNode_heldTokens_Value previousValue7 = null;
+				if (!localTrace7.isEmpty())
+					previousValue7 = localTrace7.get(localTrace7.size() - 1);
+
+				for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
+					storeAsTracedObject(aValue);
+				}
+
+				boolean noChange7 = true;
+				if (previousValue7 != null) {
+
+					if (previousValue7.getHeldTokens().size() == o_cast
+							.getHeldTokens().size()) {
+
+						java.util.Iterator<activitydiagram.Token> it = o_cast
+								.getHeldTokens().iterator();
+						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue7
+								.getHeldTokens()) {
+							activitydiagram.Token aCurrentValue = it.next();
+							if (aPreviousValue != exeToTraced
+									.get(aCurrentValue)) {
+								noChange7 = false;
+								break;
+							}
+						}
+
+					} else {
+						noChange7 = false;
+					}
+				} else {
+					noChange7 = false;
+				}
+
+				if (noChange7) {
+					newState.getActivityNode_heldTokens_Values().add(
+							previousValue7);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.ActivityNode_heldTokens_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createActivityNode_heldTokens_Value();
+
+					newValue.getHeldTokens()
+							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedToken>) getExeToTraced(o_cast
+									.getHeldTokens()));
+
+					tracedObject.getHeldTokensTrace().add(newValue);
+					newState.getActivityNode_heldTokens_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.DecisionNode object
+			 */
+			if (o instanceof activitydiagram.DecisionNode) {
+
+				activitydiagram.DecisionNode o_cast = (activitydiagram.DecisionNode) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.ActivityNode_heldTokens_Value> localTrace8 = tracedObject
+						.getHeldTokensTrace();
+				activitydiagramTrace.Values.ActivityNode_heldTokens_Value previousValue8 = null;
+				if (!localTrace8.isEmpty())
+					previousValue8 = localTrace8.get(localTrace8.size() - 1);
+
+				for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
+					storeAsTracedObject(aValue);
+				}
+
+				boolean noChange8 = true;
+				if (previousValue8 != null) {
+
+					if (previousValue8.getHeldTokens().size() == o_cast
+							.getHeldTokens().size()) {
+
+						java.util.Iterator<activitydiagram.Token> it = o_cast
+								.getHeldTokens().iterator();
+						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue8
+								.getHeldTokens()) {
+							activitydiagram.Token aCurrentValue = it.next();
+							if (aPreviousValue != exeToTraced
+									.get(aCurrentValue)) {
+								noChange8 = false;
+								break;
+							}
+						}
+
+					} else {
+						noChange8 = false;
+					}
+				} else {
+					noChange8 = false;
+				}
+
+				if (noChange8) {
+					newState.getActivityNode_heldTokens_Values().add(
+							previousValue8);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.ActivityNode_heldTokens_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createActivityNode_heldTokens_Value();
+
+					newValue.getHeldTokens()
+							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedToken>) getExeToTraced(o_cast
+									.getHeldTokens()));
+
+					tracedObject.getHeldTokensTrace().add(newValue);
+					newState.getActivityNode_heldTokens_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.BooleanValue object
+			 */
+			if (o instanceof activitydiagram.BooleanValue) {
+
+				activitydiagram.BooleanValue o_cast = (activitydiagram.BooleanValue) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedBooleanValue tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedBooleanValue) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.BooleanValue_value_Value> localTrace9 = tracedObject
+						.getValueTrace();
+				activitydiagramTrace.Values.BooleanValue_value_Value previousValue9 = null;
+				if (!localTrace9.isEmpty())
+					previousValue9 = localTrace9.get(localTrace9.size() - 1);
+
+				boolean content2 = o_cast.isValue();
+
+				boolean noChange9 = previousValue9 != null
+						&& previousValue9.isValue() == content2;
+
+				if (noChange9) {
+					newState.getBooleanValue_value_Values().add(previousValue9);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.BooleanValue_value_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createBooleanValue_value_Value();
+
+					newValue.setValue(content2);
+
+					tracedObject.getValueTrace().add(newValue);
+					newState.getBooleanValue_value_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.ForkedToken object
+			 */
+			if (o instanceof activitydiagram.ForkedToken) {
+
+				activitydiagram.ForkedToken o_cast = (activitydiagram.ForkedToken) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedForkedToken tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedForkedToken) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.Token_holder_Value> localTrace10 = tracedObject
+						.getHolderTrace();
+				activitydiagramTrace.Values.Token_holder_Value previousValue10 = null;
+				if (!localTrace10.isEmpty())
+					previousValue10 = localTrace10.get(localTrace10.size() - 1);
+
+				storeAsTracedObject(o_cast.getHolder());
+
+				activitydiagramTrace.Traced.activitydiagram.TracedActivityNode content3 = null;
+				if (o_cast.getHolder() != null)
+					content3 = ((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
+							.get(o_cast.getHolder()));
+
+				boolean noChange10 = previousValue10 != null
+						&& previousValue10.getHolder() == content3;
+
+				if (noChange10) {
+					newState.getToken_holder_Values().add(previousValue10);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.Token_holder_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createToken_holder_Value();
+
+					newValue.setHolder(content3);
+
+					tracedObject.getHolderTrace().add(newValue);
+					newState.getToken_holder_Values().add(newValue);
+				}
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value> localTrace11 = tracedObject
+						.getRemainingOffersCountTrace();
+				activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value previousValue11 = null;
+				if (!localTrace11.isEmpty())
+					previousValue11 = localTrace11.get(localTrace11.size() - 1);
+
+				int content4 = o_cast.getRemainingOffersCount();
+
+				boolean noChange11 = previousValue11 != null
+						&& previousValue11.getRemainingOffersCount() == content4;
+
+				if (noChange11) {
+					newState.getForkedToken_remainingOffersCount_Values().add(
+							previousValue11);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createForkedToken_remainingOffersCount_Value();
+
+					newValue.setRemainingOffersCount(content4);
+
+					tracedObject.getRemainingOffersCountTrace().add(newValue);
+					newState.getForkedToken_remainingOffersCount_Values().add(
+							newValue);
+				}
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.ForkedToken_baseToken_Value> localTrace12 = tracedObject
+						.getBaseTokenTrace();
+				activitydiagramTrace.Values.ForkedToken_baseToken_Value previousValue12 = null;
+				if (!localTrace12.isEmpty())
+					previousValue12 = localTrace12.get(localTrace12.size() - 1);
+
+				storeAsTracedObject(o_cast.getBaseToken());
+
+				activitydiagramTrace.Traced.activitydiagram.TracedToken content5 = null;
+				if (o_cast.getBaseToken() != null)
+					content5 = ((activitydiagramTrace.Traced.activitydiagram.TracedToken) exeToTraced
+							.get(o_cast.getBaseToken()));
+
+				boolean noChange12 = previousValue12 != null
+						&& previousValue12.getBaseToken() == content5;
+
+				if (noChange12) {
+					newState.getForkedToken_baseToken_Values().add(
+							previousValue12);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.ForkedToken_baseToken_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createForkedToken_baseToken_Value();
+
+					newValue.setBaseToken(content5);
+
+					tracedObject.getBaseTokenTrace().add(newValue);
+					newState.getForkedToken_baseToken_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.Trace object
+			 */
+			if (o instanceof activitydiagram.Trace) {
+
+				activitydiagram.Trace o_cast = (activitydiagram.Trace) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedTrace tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedTrace) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.Trace_executedNodes_Value> localTrace13 = tracedObject
+						.getExecutedNodesTrace();
+				activitydiagramTrace.Values.Trace_executedNodes_Value previousValue13 = null;
+				if (!localTrace13.isEmpty())
+					previousValue13 = localTrace13.get(localTrace13.size() - 1);
+
+				for (activitydiagram.ActivityNode aValue : o_cast
+						.getExecutedNodes()) {
+					storeAsTracedObject(aValue);
+				}
+
+				boolean noChange13 = true;
+				if (previousValue13 != null) {
+
+					if (previousValue13.getExecutedNodes().size() == o_cast
+							.getExecutedNodes().size()) {
+
+						java.util.Iterator<activitydiagram.ActivityNode> it = o_cast
+								.getExecutedNodes().iterator();
+						for (activitydiagramTrace.Traced.activitydiagram.TracedActivityNode aPreviousValue : previousValue13
+								.getExecutedNodes()) {
+							activitydiagram.ActivityNode aCurrentValue = it
+									.next();
+							if (aPreviousValue != exeToTraced
+									.get(aCurrentValue)) {
+								noChange13 = false;
+								break;
+							}
+						}
+
+					} else {
+						noChange13 = false;
+					}
+				} else {
+					noChange13 = false;
+				}
+
+				if (noChange13) {
+					newState.getTrace_executedNodes_Values().add(
+							previousValue13);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.Trace_executedNodes_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createTrace_executedNodes_Value();
+
+					newValue.getExecutedNodes()
+							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedActivityNode>) getExeToTraced(o_cast
+									.getExecutedNodes()));
+
+					tracedObject.getExecutedNodesTrace().add(newValue);
+					newState.getTrace_executedNodes_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.InitialNode object
+			 */
+			if (o instanceof activitydiagram.InitialNode) {
+
+				activitydiagram.InitialNode o_cast = (activitydiagram.InitialNode) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedInitialNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedInitialNode) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
@@ -1254,348 +1304,48 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.BooleanVariable object
+			 * Storing the state of a activitydiagram.Activity object
 			 */
-			if (o instanceof activitydiagram.BooleanVariable) {
+			if (o instanceof activitydiagram.Activity) {
 
-				activitydiagram.BooleanVariable o_cast = (activitydiagram.BooleanVariable) o;
+				activitydiagram.Activity o_cast = (activitydiagram.Activity) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedActivity tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedActivity) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
 				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Variable_currentValue_Value> localTrace15 = tracedObject
-						.getCurrentValueTrace();
-				activitydiagramTrace.Values.Variable_currentValue_Value previousValue15 = null;
+				List<activitydiagramTrace.Values.Activity_trace_Value> localTrace15 = tracedObject
+						.getTraceTrace();
+				activitydiagramTrace.Values.Activity_trace_Value previousValue15 = null;
 				if (!localTrace15.isEmpty())
 					previousValue15 = localTrace15.get(localTrace15.size() - 1);
 
-				storeAsTracedObject(o_cast.getCurrentValue());
+				storeAsTracedObject(o_cast.getTrace());
 
-				activitydiagramTrace.Traced.activitydiagram.TracedValue content8 = null;
-				if (o_cast.getCurrentValue() != null)
-					content8 = ((activitydiagramTrace.Traced.activitydiagram.TracedValue) exeToTraced
-							.get(o_cast.getCurrentValue()));
+				activitydiagramTrace.Traced.activitydiagram.TracedTrace content6 = null;
+				if (o_cast.getTrace() != null)
+					content6 = ((activitydiagramTrace.Traced.activitydiagram.TracedTrace) exeToTraced
+							.get(o_cast.getTrace()));
 
 				boolean noChange15 = previousValue15 != null
-						&& previousValue15.getCurrentValue() == content8;
+						&& previousValue15.getTrace() == content6;
 
 				if (noChange15) {
-					newState.getVariable_currentValue_Values().add(
-							previousValue15);
+					newState.getActivity_trace_Values().add(previousValue15);
 
 				} // Else we create one
 				else {
 					changed = true;
-					activitydiagramTrace.Values.Variable_currentValue_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createVariable_currentValue_Value();
+					activitydiagramTrace.Values.Activity_trace_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createActivity_trace_Value();
 
-					newValue.setCurrentValue(content8);
+					newValue.setTrace(content6);
 
-					tracedObject.getCurrentValueTrace().add(newValue);
-					newState.getVariable_currentValue_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.JoinNode object
-			 */
-			if (o instanceof activitydiagram.JoinNode) {
-
-				activitydiagram.JoinNode o_cast = (activitydiagram.JoinNode) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedJoinNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedJoinNode) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.ActivityNode_heldTokens_Value> localTrace16 = tracedObject
-						.getHeldTokensTrace();
-				activitydiagramTrace.Values.ActivityNode_heldTokens_Value previousValue16 = null;
-				if (!localTrace16.isEmpty())
-					previousValue16 = localTrace16.get(localTrace16.size() - 1);
-
-				for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
-					storeAsTracedObject(aValue);
-				}
-
-				boolean noChange16 = true;
-				if (previousValue16 != null) {
-
-					if (previousValue16.getHeldTokens().size() == o_cast
-							.getHeldTokens().size()) {
-
-						java.util.Iterator<activitydiagram.Token> it = o_cast
-								.getHeldTokens().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue16
-								.getHeldTokens()) {
-							activitydiagram.Token aCurrentValue = it.next();
-							if (aPreviousValue != exeToTraced
-									.get(aCurrentValue)) {
-								noChange16 = false;
-								break;
-							}
-						}
-
-					} else {
-						noChange16 = false;
-					}
-				} else {
-					noChange16 = false;
-				}
-
-				if (noChange16) {
-					newState.getActivityNode_heldTokens_Values().add(
-							previousValue16);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.ActivityNode_heldTokens_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createActivityNode_heldTokens_Value();
-
-					newValue.getHeldTokens()
-							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedToken>) getExeToTraced(o_cast
-									.getHeldTokens()));
-
-					tracedObject.getHeldTokensTrace().add(newValue);
-					newState.getActivityNode_heldTokens_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.DecisionNode object
-			 */
-			if (o instanceof activitydiagram.DecisionNode) {
-
-				activitydiagram.DecisionNode o_cast = (activitydiagram.DecisionNode) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.ActivityNode_heldTokens_Value> localTrace17 = tracedObject
-						.getHeldTokensTrace();
-				activitydiagramTrace.Values.ActivityNode_heldTokens_Value previousValue17 = null;
-				if (!localTrace17.isEmpty())
-					previousValue17 = localTrace17.get(localTrace17.size() - 1);
-
-				for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
-					storeAsTracedObject(aValue);
-				}
-
-				boolean noChange17 = true;
-				if (previousValue17 != null) {
-
-					if (previousValue17.getHeldTokens().size() == o_cast
-							.getHeldTokens().size()) {
-
-						java.util.Iterator<activitydiagram.Token> it = o_cast
-								.getHeldTokens().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue17
-								.getHeldTokens()) {
-							activitydiagram.Token aCurrentValue = it.next();
-							if (aPreviousValue != exeToTraced
-									.get(aCurrentValue)) {
-								noChange17 = false;
-								break;
-							}
-						}
-
-					} else {
-						noChange17 = false;
-					}
-				} else {
-					noChange17 = false;
-				}
-
-				if (noChange17) {
-					newState.getActivityNode_heldTokens_Values().add(
-							previousValue17);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.ActivityNode_heldTokens_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createActivityNode_heldTokens_Value();
-
-					newValue.getHeldTokens()
-							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedToken>) getExeToTraced(o_cast
-									.getHeldTokens()));
-
-					tracedObject.getHeldTokensTrace().add(newValue);
-					newState.getActivityNode_heldTokens_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.ControlToken object
-			 */
-			if (o instanceof activitydiagram.ControlToken) {
-
-				activitydiagram.ControlToken o_cast = (activitydiagram.ControlToken) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedControlToken tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedControlToken) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Token_holder_Value> localTrace18 = tracedObject
-						.getHolderTrace();
-				activitydiagramTrace.Values.Token_holder_Value previousValue18 = null;
-				if (!localTrace18.isEmpty())
-					previousValue18 = localTrace18.get(localTrace18.size() - 1);
-
-				storeAsTracedObject(o_cast.getHolder());
-
-				activitydiagramTrace.Traced.activitydiagram.TracedActivityNode content9 = null;
-				if (o_cast.getHolder() != null)
-					content9 = ((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
-							.get(o_cast.getHolder()));
-
-				boolean noChange18 = previousValue18 != null
-						&& previousValue18.getHolder() == content9;
-
-				if (noChange18) {
-					newState.getToken_holder_Values().add(previousValue18);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.Token_holder_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createToken_holder_Value();
-
-					newValue.setHolder(content9);
-
-					tracedObject.getHolderTrace().add(newValue);
-					newState.getToken_holder_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.Trace object
-			 */
-			if (o instanceof activitydiagram.Trace) {
-
-				activitydiagram.Trace o_cast = (activitydiagram.Trace) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedTrace tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedTrace) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Trace_executedNodes_Value> localTrace19 = tracedObject
-						.getExecutedNodesTrace();
-				activitydiagramTrace.Values.Trace_executedNodes_Value previousValue19 = null;
-				if (!localTrace19.isEmpty())
-					previousValue19 = localTrace19.get(localTrace19.size() - 1);
-
-				for (activitydiagram.ActivityNode aValue : o_cast
-						.getExecutedNodes()) {
-					storeAsTracedObject(aValue);
-				}
-
-				boolean noChange19 = true;
-				if (previousValue19 != null) {
-
-					if (previousValue19.getExecutedNodes().size() == o_cast
-							.getExecutedNodes().size()) {
-
-						java.util.Iterator<activitydiagram.ActivityNode> it = o_cast
-								.getExecutedNodes().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedActivityNode aPreviousValue : previousValue19
-								.getExecutedNodes()) {
-							activitydiagram.ActivityNode aCurrentValue = it
-									.next();
-							if (aPreviousValue != exeToTraced
-									.get(aCurrentValue)) {
-								noChange19 = false;
-								break;
-							}
-						}
-
-					} else {
-						noChange19 = false;
-					}
-				} else {
-					noChange19 = false;
-				}
-
-				if (noChange19) {
-					newState.getTrace_executedNodes_Values().add(
-							previousValue19);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.Trace_executedNodes_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createTrace_executedNodes_Value();
-
-					newValue.getExecutedNodes()
-							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedActivityNode>) getExeToTraced(o_cast
-									.getExecutedNodes()));
-
-					tracedObject.getExecutedNodesTrace().add(newValue);
-					newState.getTrace_executedNodes_Values().add(newValue);
-				}
-
-			} else
-
-			/**
-			 * Storing the state of a activitydiagram.BooleanValue object
-			 */
-			if (o instanceof activitydiagram.BooleanValue) {
-
-				activitydiagram.BooleanValue o_cast = (activitydiagram.BooleanValue) o;
-
-				storeAsTracedObject(o_cast);
-
-				activitydiagramTrace.Traced.activitydiagram.TracedBooleanValue tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedBooleanValue) exeToTraced
-						.get(o);
-
-				// Then we compare the value of the field with the last stored value
-				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.BooleanValue_value_Value> localTrace20 = tracedObject
-						.getValueTrace();
-				activitydiagramTrace.Values.BooleanValue_value_Value previousValue20 = null;
-				if (!localTrace20.isEmpty())
-					previousValue20 = localTrace20.get(localTrace20.size() - 1);
-
-				boolean content10 = o_cast.isValue();
-
-				boolean noChange20 = previousValue20 != null
-						&& previousValue20.isValue() == content10;
-
-				if (noChange20) {
-					newState.getBooleanValue_value_Values()
-							.add(previousValue20);
-
-				} // Else we create one
-				else {
-					changed = true;
-					activitydiagramTrace.Values.BooleanValue_value_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createBooleanValue_value_Value();
-
-					newValue.setValue(content10);
-
-					tracedObject.getValueTrace().add(newValue);
-					newState.getBooleanValue_value_Values().add(newValue);
+					tracedObject.getTraceTrace().add(newValue);
+					newState.getActivity_trace_Values().add(newValue);
 				}
 
 			} else
@@ -1614,45 +1364,45 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 				// Then we compare the value of the field with the last stored value
 				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.Input_inputValues_Value> localTrace21 = tracedObject
+				List<activitydiagramTrace.Values.Input_inputValues_Value> localTrace16 = tracedObject
 						.getInputValuesTrace();
-				activitydiagramTrace.Values.Input_inputValues_Value previousValue21 = null;
-				if (!localTrace21.isEmpty())
-					previousValue21 = localTrace21.get(localTrace21.size() - 1);
+				activitydiagramTrace.Values.Input_inputValues_Value previousValue16 = null;
+				if (!localTrace16.isEmpty())
+					previousValue16 = localTrace16.get(localTrace16.size() - 1);
 
 				for (activitydiagram.InputValue aValue : o_cast
 						.getInputValues()) {
 					storeAsTracedObject(aValue);
 				}
 
-				boolean noChange21 = true;
-				if (previousValue21 != null) {
+				boolean noChange16 = true;
+				if (previousValue16 != null) {
 
-					if (previousValue21.getInputValues().size() == o_cast
+					if (previousValue16.getInputValues().size() == o_cast
 							.getInputValues().size()) {
 
 						java.util.Iterator<activitydiagram.InputValue> it = o_cast
 								.getInputValues().iterator();
-						for (activitydiagramTrace.Traced.activitydiagram.TracedInputValue aPreviousValue : previousValue21
+						for (activitydiagramTrace.Traced.activitydiagram.TracedInputValue aPreviousValue : previousValue16
 								.getInputValues()) {
 							activitydiagram.InputValue aCurrentValue = it
 									.next();
 							if (aPreviousValue != exeToTraced
 									.get(aCurrentValue)) {
-								noChange21 = false;
+								noChange16 = false;
 								break;
 							}
 						}
 
 					} else {
-						noChange21 = false;
+						noChange16 = false;
 					}
 				} else {
-					noChange21 = false;
+					noChange16 = false;
 				}
 
-				if (noChange21) {
-					newState.getInput_inputValues_Values().add(previousValue21);
+				if (noChange16) {
+					newState.getInput_inputValues_Values().add(previousValue16);
 
 				} // Else we create one
 				else {
@@ -1671,44 +1421,294 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			} else
 
 			/**
-			 * Storing the state of a activitydiagram.IntegerValue object
+			 * Storing the state of a activitydiagram.InputValue object
 			 */
-			if (o instanceof activitydiagram.IntegerValue) {
+			if (o instanceof activitydiagram.InputValue) {
 
-				activitydiagram.IntegerValue o_cast = (activitydiagram.IntegerValue) o;
+				activitydiagram.InputValue o_cast = (activitydiagram.InputValue) o;
 
 				storeAsTracedObject(o_cast);
 
-				activitydiagramTrace.Traced.activitydiagram.TracedIntegerValue tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedIntegerValue) exeToTraced
+				activitydiagramTrace.Traced.activitydiagram.TracedInputValue tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedInputValue) exeToTraced
 						.get(o);
 
 				// Then we compare the value of the field with the last stored value
 				// If same value, we create no local state and we refer to the previous
-				List<activitydiagramTrace.Values.IntegerValue_value_Value> localTrace22 = tracedObject
-						.getValueTrace();
-				activitydiagramTrace.Values.IntegerValue_value_Value previousValue22 = null;
-				if (!localTrace22.isEmpty())
-					previousValue22 = localTrace22.get(localTrace22.size() - 1);
+				List<activitydiagramTrace.Values.InputValue_variable_Value> localTrace17 = tracedObject
+						.getVariableTrace();
+				activitydiagramTrace.Values.InputValue_variable_Value previousValue17 = null;
+				if (!localTrace17.isEmpty())
+					previousValue17 = localTrace17.get(localTrace17.size() - 1);
 
-				int content11 = o_cast.getValue();
+				storeAsTracedObject(o_cast.getVariable());
 
-				boolean noChange22 = previousValue22 != null
-						&& previousValue22.getValue() == content11;
+				activitydiagramTrace.Traced.activitydiagram.TracedVariable content7 = null;
+				if (o_cast.getVariable() != null)
+					content7 = ((activitydiagramTrace.Traced.activitydiagram.TracedVariable) exeToTraced
+							.get(o_cast.getVariable()));
 
-				if (noChange22) {
-					newState.getIntegerValue_value_Values()
-							.add(previousValue22);
+				boolean noChange17 = previousValue17 != null
+						&& previousValue17.getVariable() == content7;
+
+				if (noChange17) {
+					newState.getInputValue_variable_Values().add(
+							previousValue17);
 
 				} // Else we create one
 				else {
 					changed = true;
-					activitydiagramTrace.Values.IntegerValue_value_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
-							.createIntegerValue_value_Value();
+					activitydiagramTrace.Values.InputValue_variable_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createInputValue_variable_Value();
 
-					newValue.setValue(content11);
+					newValue.setVariable(content7);
+
+					tracedObject.getVariableTrace().add(newValue);
+					newState.getInputValue_variable_Values().add(newValue);
+				}
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.InputValue_value_Value> localTrace18 = tracedObject
+						.getValueTrace();
+				activitydiagramTrace.Values.InputValue_value_Value previousValue18 = null;
+				if (!localTrace18.isEmpty())
+					previousValue18 = localTrace18.get(localTrace18.size() - 1);
+
+				storeAsTracedObject(o_cast.getValue());
+
+				activitydiagramTrace.Traced.activitydiagram.TracedValue content8 = null;
+				if (o_cast.getValue() != null)
+					content8 = ((activitydiagramTrace.Traced.activitydiagram.TracedValue) exeToTraced
+							.get(o_cast.getValue()));
+
+				boolean noChange18 = previousValue18 != null
+						&& previousValue18.getValue() == content8;
+
+				if (noChange18) {
+					newState.getInputValue_value_Values().add(previousValue18);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.InputValue_value_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createInputValue_value_Value();
+
+					newValue.setValue(content8);
 
 					tracedObject.getValueTrace().add(newValue);
-					newState.getIntegerValue_value_Values().add(newValue);
+					newState.getInputValue_value_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.BooleanVariable object
+			 */
+			if (o instanceof activitydiagram.BooleanVariable) {
+
+				activitydiagram.BooleanVariable o_cast = (activitydiagram.BooleanVariable) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.Variable_currentValue_Value> localTrace19 = tracedObject
+						.getCurrentValueTrace();
+				activitydiagramTrace.Values.Variable_currentValue_Value previousValue19 = null;
+				if (!localTrace19.isEmpty())
+					previousValue19 = localTrace19.get(localTrace19.size() - 1);
+
+				storeAsTracedObject(o_cast.getCurrentValue());
+
+				activitydiagramTrace.Traced.activitydiagram.TracedValue content9 = null;
+				if (o_cast.getCurrentValue() != null)
+					content9 = ((activitydiagramTrace.Traced.activitydiagram.TracedValue) exeToTraced
+							.get(o_cast.getCurrentValue()));
+
+				boolean noChange19 = previousValue19 != null
+						&& previousValue19.getCurrentValue() == content9;
+
+				if (noChange19) {
+					newState.getVariable_currentValue_Values().add(
+							previousValue19);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.Variable_currentValue_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createVariable_currentValue_Value();
+
+					newValue.setCurrentValue(content9);
+
+					tracedObject.getCurrentValueTrace().add(newValue);
+					newState.getVariable_currentValue_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.ControlToken object
+			 */
+			if (o instanceof activitydiagram.ControlToken) {
+
+				activitydiagram.ControlToken o_cast = (activitydiagram.ControlToken) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedControlToken tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedControlToken) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.Token_holder_Value> localTrace20 = tracedObject
+						.getHolderTrace();
+				activitydiagramTrace.Values.Token_holder_Value previousValue20 = null;
+				if (!localTrace20.isEmpty())
+					previousValue20 = localTrace20.get(localTrace20.size() - 1);
+
+				storeAsTracedObject(o_cast.getHolder());
+
+				activitydiagramTrace.Traced.activitydiagram.TracedActivityNode content10 = null;
+				if (o_cast.getHolder() != null)
+					content10 = ((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
+							.get(o_cast.getHolder()));
+
+				boolean noChange20 = previousValue20 != null
+						&& previousValue20.getHolder() == content10;
+
+				if (noChange20) {
+					newState.getToken_holder_Values().add(previousValue20);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.Token_holder_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createToken_holder_Value();
+
+					newValue.setHolder(content10);
+
+					tracedObject.getHolderTrace().add(newValue);
+					newState.getToken_holder_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.IntegerVariable object
+			 */
+			if (o instanceof activitydiagram.IntegerVariable) {
+
+				activitydiagram.IntegerVariable o_cast = (activitydiagram.IntegerVariable) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.Variable_currentValue_Value> localTrace21 = tracedObject
+						.getCurrentValueTrace();
+				activitydiagramTrace.Values.Variable_currentValue_Value previousValue21 = null;
+				if (!localTrace21.isEmpty())
+					previousValue21 = localTrace21.get(localTrace21.size() - 1);
+
+				storeAsTracedObject(o_cast.getCurrentValue());
+
+				activitydiagramTrace.Traced.activitydiagram.TracedValue content11 = null;
+				if (o_cast.getCurrentValue() != null)
+					content11 = ((activitydiagramTrace.Traced.activitydiagram.TracedValue) exeToTraced
+							.get(o_cast.getCurrentValue()));
+
+				boolean noChange21 = previousValue21 != null
+						&& previousValue21.getCurrentValue() == content11;
+
+				if (noChange21) {
+					newState.getVariable_currentValue_Values().add(
+							previousValue21);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.Variable_currentValue_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createVariable_currentValue_Value();
+
+					newValue.setCurrentValue(content11);
+
+					tracedObject.getCurrentValueTrace().add(newValue);
+					newState.getVariable_currentValue_Values().add(newValue);
+				}
+
+			} else
+
+			/**
+			 * Storing the state of a activitydiagram.Offer object
+			 */
+			if (o instanceof activitydiagram.Offer) {
+
+				activitydiagram.Offer o_cast = (activitydiagram.Offer) o;
+
+				storeAsTracedObject(o_cast);
+
+				activitydiagramTrace.Traced.activitydiagram.TracedOffer tracedObject = (activitydiagramTrace.Traced.activitydiagram.TracedOffer) exeToTraced
+						.get(o);
+
+				// Then we compare the value of the field with the last stored value
+				// If same value, we create no local state and we refer to the previous
+				List<activitydiagramTrace.Values.Offer_offeredTokens_Value> localTrace22 = tracedObject
+						.getOfferedTokensTrace();
+				activitydiagramTrace.Values.Offer_offeredTokens_Value previousValue22 = null;
+				if (!localTrace22.isEmpty())
+					previousValue22 = localTrace22.get(localTrace22.size() - 1);
+
+				for (activitydiagram.Token aValue : o_cast.getOfferedTokens()) {
+					storeAsTracedObject(aValue);
+				}
+
+				boolean noChange22 = true;
+				if (previousValue22 != null) {
+
+					if (previousValue22.getOfferedTokens().size() == o_cast
+							.getOfferedTokens().size()) {
+
+						java.util.Iterator<activitydiagram.Token> it = o_cast
+								.getOfferedTokens().iterator();
+						for (activitydiagramTrace.Traced.activitydiagram.TracedToken aPreviousValue : previousValue22
+								.getOfferedTokens()) {
+							activitydiagram.Token aCurrentValue = it.next();
+							if (aPreviousValue != exeToTraced
+									.get(aCurrentValue)) {
+								noChange22 = false;
+								break;
+							}
+						}
+
+					} else {
+						noChange22 = false;
+					}
+				} else {
+					noChange22 = false;
+				}
+
+				if (noChange22) {
+					newState.getOffer_offeredTokens_Values().add(
+							previousValue22);
+
+				} // Else we create one
+				else {
+					changed = true;
+					activitydiagramTrace.Values.Offer_offeredTokens_Value newValue = activitydiagramTrace.Values.ValuesFactory.eINSTANCE
+							.createOffer_offeredTokens_Value();
+
+					newValue.getOfferedTokens()
+							.addAll((Collection<? extends activitydiagramTrace.Traced.activitydiagram.TracedToken>) getExeToTraced(o_cast
+									.getOfferedTokens()));
+
+					tracedObject.getOfferedTokensTrace().add(newValue);
+					newState.getOffer_offeredTokens_Values().add(newValue);
 				}
 
 			}
@@ -1729,19 +1729,19 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			newState.getEndedBigSteps().clear();
 			newState.setFollowingStep(null);
 
-			newState.getIntegerValue_value_Values().clear();
+			newState.getOffer_offeredTokens_Values().clear();
+			newState.getToken_holder_Values().clear();
 			newState.getActivityEdge_offers_Values().clear();
-			newState.getInputValue_value_Values().clear();
 			newState.getInputValue_variable_Values().clear();
+			newState.getInputValue_value_Values().clear();
 			newState.getInput_inputValues_Values().clear();
-			newState.getForkedToken_remainingOffersCount_Values().clear();
-			newState.getForkedToken_baseToken_Values().clear();
-			newState.getBooleanValue_value_Values().clear();
+			newState.getActivity_trace_Values().clear();
 			newState.getTrace_executedNodes_Values().clear();
 			newState.getActivityNode_heldTokens_Values().clear();
-			newState.getActivity_trace_Values().clear();
-			newState.getToken_holder_Values().clear();
-			newState.getOffer_offeredTokens_Values().clear();
+			newState.getForkedToken_remainingOffersCount_Values().clear();
+			newState.getForkedToken_baseToken_Values().clear();
+			newState.getIntegerValue_value_Values().clear();
+			newState.getBooleanValue_value_Values().clear();
 			newState.getVariable_currentValue_Values().clear();
 		}
 
@@ -1756,12 +1756,27 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		if (state instanceof activitydiagramTrace.State) {
 			activitydiagramTrace.State stateToGo = (activitydiagramTrace.State) state;
 
-			for (activitydiagramTrace.Values.IntegerValue_value_Value value : stateToGo
-					.getIntegerValue_value_Values()) {
+			for (activitydiagramTrace.Values.Offer_offeredTokens_Value value : stateToGo
+					.getOffer_offeredTokens_Values()) {
 
-				activitydiagram.IntegerValue exeObject = (activitydiagram.IntegerValue) getTracedToExe(value
+				activitydiagram.Offer exeObject = (activitydiagram.Offer) getTracedToExe(value
 						.getParent());
-				exeObject.setValue(value.getValue());
+				exeObject.getOfferedTokens().clear();
+				exeObject
+						.getOfferedTokens()
+						.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+								.getOfferedTokens()));
+
+			}
+
+			for (activitydiagramTrace.Values.Token_holder_Value value : stateToGo
+					.getToken_holder_Values()) {
+
+				activitydiagram.Token exeObject = (activitydiagram.Token) getTracedToExe(value
+						.getParent());
+				exeObject
+						.setHolder(((activitydiagram.ActivityNode) getTracedToExe(value
+								.getHolder())));
 
 			}
 
@@ -1782,17 +1797,6 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 			}
 
-			for (activitydiagramTrace.Values.InputValue_value_Value value : stateToGo
-					.getInputValue_value_Values()) {
-
-				activitydiagram.InputValue exeObject = (activitydiagram.InputValue) getTracedToExe(value
-						.getParent());
-				exeObject
-						.setValue(((activitydiagram.Value) getTracedToExe(value
-								.getValue())));
-
-			}
-
 			for (activitydiagramTrace.Values.InputValue_variable_Value value : stateToGo
 					.getInputValue_variable_Values()) {
 
@@ -1801,6 +1805,17 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 				exeObject
 						.setVariable(((activitydiagram.Variable) getTracedToExe(value
 								.getVariable())));
+
+			}
+
+			for (activitydiagramTrace.Values.InputValue_value_Value value : stateToGo
+					.getInputValue_value_Values()) {
+
+				activitydiagram.InputValue exeObject = (activitydiagram.InputValue) getTracedToExe(value
+						.getParent());
+				exeObject
+						.setValue(((activitydiagram.Value) getTracedToExe(value
+								.getValue())));
 
 			}
 
@@ -1814,6 +1829,120 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						.getInputValues()
 						.addAll((Collection<? extends activitydiagram.InputValue>) getTracedToExe(value
 								.getInputValues()));
+
+			}
+
+			for (activitydiagramTrace.Values.Activity_trace_Value value : stateToGo
+					.getActivity_trace_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedActivity) {
+					activitydiagramTrace.Traced.activitydiagram.TracedActivity parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedActivity) value
+							.getParent();
+					activitydiagram.Trace toset = ((activitydiagram.Trace) getTracedToExe(value
+							.getTrace()));
+					activitydiagram.Trace current = ((activitydiagram.Activity) parent_cast
+							.getOriginalObject()).getTrace();
+					if (current != toset)
+						((activitydiagram.Activity) parent_cast
+								.getOriginalObject()).setTrace(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.Values.Trace_executedNodes_Value value : stateToGo
+					.getTrace_executedNodes_Values()) {
+
+				activitydiagram.Trace exeObject = (activitydiagram.Trace) getTracedToExe(value
+						.getParent());
+				exeObject.getExecutedNodes().clear();
+				exeObject
+						.getExecutedNodes()
+						.addAll((Collection<? extends activitydiagram.ActivityNode>) getTracedToExe(value
+								.getExecutedNodes()));
+
+			}
+
+			for (activitydiagramTrace.Values.ActivityNode_heldTokens_Value value : stateToGo
+					.getActivityNode_heldTokens_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedInitialNode) {
+					activitydiagramTrace.Traced.activitydiagram.TracedInitialNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedInitialNode) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode) {
+					activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode) {
+					activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedMergeNode) {
+					activitydiagramTrace.Traced.activitydiagram.TracedMergeNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedMergeNode) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction) {
+					activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedForkNode) {
+					activitydiagramTrace.Traced.activitydiagram.TracedForkNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedForkNode) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedJoinNode) {
+					activitydiagramTrace.Traced.activitydiagram.TracedJoinNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedJoinNode) value
+							.getParent();
+					parent_cast.getOriginalObject().getHeldTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getHeldTokens()));
+
+				}
 
 			}
 
@@ -1838,6 +1967,15 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 			}
 
+			for (activitydiagramTrace.Values.IntegerValue_value_Value value : stateToGo
+					.getIntegerValue_value_Values()) {
+
+				activitydiagram.IntegerValue exeObject = (activitydiagram.IntegerValue) getTracedToExe(value
+						.getParent());
+				exeObject.setValue(value.getValue());
+
+			}
+
 			for (activitydiagramTrace.Values.BooleanValue_value_Value value : stateToGo
 					.getBooleanValue_value_Values()) {
 
@@ -1847,149 +1985,11 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 			}
 
-			for (activitydiagramTrace.Values.Trace_executedNodes_Value value : stateToGo
-					.getTrace_executedNodes_Values()) {
-
-				activitydiagram.Trace exeObject = (activitydiagram.Trace) getTracedToExe(value
-						.getParent());
-				exeObject.getExecutedNodes().clear();
-				exeObject
-						.getExecutedNodes()
-						.addAll((Collection<? extends activitydiagram.ActivityNode>) getTracedToExe(value
-								.getExecutedNodes()));
-
-			}
-
-			for (activitydiagramTrace.Values.ActivityNode_heldTokens_Value value : stateToGo
-					.getActivityNode_heldTokens_Values()) {
-
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode) {
-					activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedDecisionNode) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedJoinNode) {
-					activitydiagramTrace.Traced.activitydiagram.TracedJoinNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedJoinNode) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedMergeNode) {
-					activitydiagramTrace.Traced.activitydiagram.TracedMergeNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedMergeNode) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode) {
-					activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedActivityFinalNode) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedForkNode) {
-					activitydiagramTrace.Traced.activitydiagram.TracedForkNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedForkNode) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedInitialNode) {
-					activitydiagramTrace.Traced.activitydiagram.TracedInitialNode parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedInitialNode) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction) {
-					activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedOpaqueAction) value
-							.getParent();
-					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-									.getHeldTokens()));
-
-				}
-
-			}
-
-			for (activitydiagramTrace.Values.Activity_trace_Value value : stateToGo
-					.getActivity_trace_Values()) {
-
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedActivity) {
-					activitydiagramTrace.Traced.activitydiagram.TracedActivity parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedActivity) value
-							.getParent();
-					activitydiagram.Trace toset = ((activitydiagram.Trace) getTracedToExe(value
-							.getTrace()));
-					activitydiagram.Trace current = ((activitydiagram.Activity) parent_cast
-							.getOriginalObject()).getTrace();
-					if (current != toset)
-						((activitydiagram.Activity) parent_cast
-								.getOriginalObject()).setTrace(toset);
-
-				}
-
-			}
-
-			for (activitydiagramTrace.Values.Token_holder_Value value : stateToGo
-					.getToken_holder_Values()) {
-
-				activitydiagram.Token exeObject = (activitydiagram.Token) getTracedToExe(value
-						.getParent());
-				exeObject
-						.setHolder(((activitydiagram.ActivityNode) getTracedToExe(value
-								.getHolder())));
-
-			}
-
-			for (activitydiagramTrace.Values.Offer_offeredTokens_Value value : stateToGo
-					.getOffer_offeredTokens_Values()) {
-
-				activitydiagram.Offer exeObject = (activitydiagram.Offer) getTracedToExe(value
-						.getParent());
-				exeObject.getOfferedTokens().clear();
-				exeObject
-						.getOfferedTokens()
-						.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
-								.getOfferedTokens()));
-
-			}
-
 			for (activitydiagramTrace.Values.Variable_currentValue_Value value : stateToGo
 					.getVariable_currentValue_Values()) {
 
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable) {
-					activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable) value
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable) {
+					activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable) value
 							.getParent();
 					activitydiagram.Value toset = ((activitydiagram.Value) getTracedToExe(value
 							.getCurrentValue()));
@@ -2000,8 +2000,8 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 								.getOriginalObject()).setCurrentValue(toset);
 
 				}
-				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable) {
-					activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedBooleanVariable) value
+				if (value.getParent() instanceof activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable) {
+					activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable parent_cast = (activitydiagramTrace.Traced.activitydiagram.TracedIntegerVariable) value
 							.getParent();
 					activitydiagram.Value toset = ((activitydiagram.Value) getTracedToExe(value
 							.getCurrentValue()));
@@ -2084,51 +2084,19 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 			switch (eventName) {
 
-			case "Activitydiagram_Activity_Reset":
+			case "Activitydiagram_ActivityNode_AddTokens1":
 
 				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_Activity_Reset activitydiagram_Activity_ResetInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_Activity_Reset();
-				activitydiagram_Activity_ResetInstance.setPrecedingState(state);
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1 activitydiagram_ActivityNode_AddTokens1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_AddTokens1();
+				activitydiagram_ActivityNode_AddTokens1Instance
+						.setStartingState(state);
 
 				if (!context.isEmpty()) {
 					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_Activity_ResetInstance);
+							activitydiagram_ActivityNode_AddTokens1Instance);
 				}
-				if (params != null) {
-					for (String k : params.keySet()) {
-
-						switch (k) {
-						case "this":
-							Object v = params.get(k);
-							if (v instanceof activitydiagram.Activity)
-								activitydiagram_Activity_ResetInstance
-										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivity) exeToTraced
-												.get(v));
-
-							break;
-
-						}
-					}
-				}
-
-				// Then we add it to its trace
-				this.events.getActivitydiagram_Activity_Reset_Trace().add(
-						activitydiagram_Activity_ResetInstance);
-				break;
-
-			case "Activitydiagram_ActivityNode_RemoveToken1":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1 activitydiagram_ActivityNode_RemoveToken1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_RemoveToken1();
-				activitydiagram_ActivityNode_RemoveToken1Instance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_RemoveToken1Instance);
-				}
+				context.push(activitydiagram_ActivityNode_AddTokens1Instance);
 				if (params != null) {
 					for (String k : params.keySet()) {
 
@@ -2136,7 +2104,7 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						case "this":
 							Object v = params.get(k);
 							if (v instanceof activitydiagram.ActivityNode)
-								activitydiagram_ActivityNode_RemoveToken1Instance
+								activitydiagram_ActivityNode_AddTokens1Instance
 										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
 												.get(v));
 
@@ -2147,235 +2115,8 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 				}
 
 				// Then we add it to its trace
-				this.events
-						.getActivitydiagram_ActivityNode_RemoveToken1_Trace()
-						.add(activitydiagram_ActivityNode_RemoveToken1Instance);
-				break;
-
-			case "Activitydiagram_ActivityNode_SendOffers1":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1 activitydiagram_ActivityNode_SendOffers1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_SendOffers1();
-				activitydiagram_ActivityNode_SendOffers1Instance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_SendOffers1Instance);
-				}
-				if (params != null) {
-					for (String k : params.keySet()) {
-
-						switch (k) {
-						case "this":
-							Object v = params.get(k);
-							if (v instanceof activitydiagram.ActivityNode)
-								activitydiagram_ActivityNode_SendOffers1Instance
-										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
-												.get(v));
-
-							break;
-
-						}
-					}
-				}
-
-				// Then we add it to its trace
-				this.events.getActivitydiagram_ActivityNode_SendOffers1_Trace()
-						.add(activitydiagram_ActivityNode_SendOffers1Instance);
-				break;
-
-			case "Activitydiagram_Activity_Execute_FillEvent":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_FillEvent activitydiagram_Activity_Execute_FillEventInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_Activity_Execute_FillEvent();
-				activitydiagram_Activity_Execute_FillEventInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_Activity_Execute_FillEventInstance);
-				}
-
-				// Then we add it to its trace
-				this.events
-						.getActivitydiagram_Activity_Execute_FillEvent_Trace()
-						.add(activitydiagram_Activity_Execute_FillEventInstance);
-				break;
-
-			case "Activitydiagram_ActivityNode_Execute_FillEvent":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_FillEvent activitydiagram_ActivityNode_Execute_FillEventInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_Execute_FillEvent();
-				activitydiagram_ActivityNode_Execute_FillEventInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_Execute_FillEventInstance);
-				}
-
-				// Then we add it to its trace
-				this.events
-						.getActivitydiagram_ActivityNode_Execute_FillEvent_Trace()
-						.add(activitydiagram_ActivityNode_Execute_FillEventInstance);
-				break;
-
-			case "Activitydiagram_Activity_WriteTrace_FillEvent":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_FillEvent activitydiagram_Activity_WriteTrace_FillEventInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_Activity_WriteTrace_FillEvent();
-				activitydiagram_Activity_WriteTrace_FillEventInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_Activity_WriteTrace_FillEventInstance);
-				}
-
-				// Then we add it to its trace
-				this.events
-						.getActivitydiagram_Activity_WriteTrace_FillEvent_Trace()
-						.add(activitydiagram_Activity_WriteTrace_FillEventInstance);
-				break;
-
-			case "Activitydiagram_Variable_Init":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_Variable_Init activitydiagram_Variable_InitInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_Variable_Init();
-				activitydiagram_Variable_InitInstance.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_Variable_InitInstance);
-				}
-				if (params != null) {
-					for (String k : params.keySet()) {
-
-						switch (k) {
-						case "this":
-							Object v = params.get(k);
-							if (v instanceof activitydiagram.Variable)
-								activitydiagram_Variable_InitInstance
-										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedVariable) exeToTraced
-												.get(v));
-
-							break;
-
-						}
-					}
-				}
-
-				// Then we add it to its trace
-				this.events.getActivitydiagram_Variable_Init_Trace().add(
-						activitydiagram_Variable_InitInstance);
-				break;
-
-			case "Activitydiagram_Variable_Execute":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_Variable_Execute activitydiagram_Variable_ExecuteInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_Variable_Execute();
-				activitydiagram_Variable_ExecuteInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_Variable_ExecuteInstance);
-				}
-				if (params != null) {
-					for (String k : params.keySet()) {
-
-						switch (k) {
-						case "this":
-							Object v = params.get(k);
-							if (v instanceof activitydiagram.Variable)
-								activitydiagram_Variable_ExecuteInstance
-										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedVariable) exeToTraced
-												.get(v));
-
-							break;
-
-						}
-					}
-				}
-
-				// Then we add it to its trace
-				this.events.getActivitydiagram_Variable_Execute_Trace().add(
-						activitydiagram_Variable_ExecuteInstance);
-				break;
-
-			case "Activitydiagram_ActivityNode_AddTokens1_FillEvent":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_FillEvent activitydiagram_ActivityNode_AddTokens1_FillEventInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_AddTokens1_FillEvent();
-				activitydiagram_ActivityNode_AddTokens1_FillEventInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_AddTokens1_FillEventInstance);
-				}
-
-				// Then we add it to its trace
-				this.events
-						.getActivitydiagram_ActivityNode_AddTokens1_FillEvent_Trace()
-						.add(activitydiagram_ActivityNode_AddTokens1_FillEventInstance);
-				break;
-
-			case "Activitydiagram_ActivityNode_Terminate":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate activitydiagram_ActivityNode_TerminateInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_Terminate();
-				activitydiagram_ActivityNode_TerminateInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_TerminateInstance);
-				}
-				if (params != null) {
-					for (String k : params.keySet()) {
-
-						switch (k) {
-						case "this":
-							Object v = params.get(k);
-							if (v instanceof activitydiagram.ActivityNode)
-								activitydiagram_ActivityNode_TerminateInstance
-										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
-												.get(v));
-
-							break;
-
-						}
-					}
-				}
-
-				// Then we add it to its trace
-				this.events.getActivitydiagram_ActivityNode_Terminate_Trace()
-						.add(activitydiagram_ActivityNode_TerminateInstance);
-				break;
-
-			case "FillEvent":
-
-				// First we create the event
-				activitydiagramTrace.Steps.FillEvent fillEventInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createFillEvent();
-				fillEventInstance.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps", fillEventInstance);
-				}
-
-				// Then we add it to its trace
-				this.events.getFillEvent_Trace().add(fillEventInstance);
+				this.events.getActivitydiagram_ActivityNode_AddTokens1_Trace()
+						.add(activitydiagram_ActivityNode_AddTokens1Instance);
 				break;
 
 			case "Activitydiagram_Activity_Execute":
@@ -2413,28 +2154,28 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						activitydiagram_Activity_ExecuteInstance);
 				break;
 
-			case "Activitydiagram_ActivityNode_AddTokens1":
+			case "Activitydiagram_Activity_WriteTrace":
 
 				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1 activitydiagram_ActivityNode_AddTokens1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_AddTokens1();
-				activitydiagram_ActivityNode_AddTokens1Instance
+				activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace activitydiagram_Activity_WriteTraceInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Activity_WriteTrace();
+				activitydiagram_Activity_WriteTraceInstance
 						.setStartingState(state);
 
 				if (!context.isEmpty()) {
 					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_AddTokens1Instance);
+							activitydiagram_Activity_WriteTraceInstance);
 				}
-				context.push(activitydiagram_ActivityNode_AddTokens1Instance);
+				context.push(activitydiagram_Activity_WriteTraceInstance);
 				if (params != null) {
 					for (String k : params.keySet()) {
 
 						switch (k) {
 						case "this":
 							Object v = params.get(k);
-							if (v instanceof activitydiagram.ActivityNode)
-								activitydiagram_ActivityNode_AddTokens1Instance
-										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
+							if (v instanceof activitydiagram.Activity)
+								activitydiagram_Activity_WriteTraceInstance
+										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivity) exeToTraced
 												.get(v));
 
 							break;
@@ -2444,27 +2185,8 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 				}
 
 				// Then we add it to its trace
-				this.events.getActivitydiagram_ActivityNode_AddTokens1_Trace()
-						.add(activitydiagram_ActivityNode_AddTokens1Instance);
-				break;
-
-			case "Activitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent":
-
-				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent activitydiagram_ActivityNode_TakeOfferdTokens1_FillEventInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent();
-				activitydiagram_ActivityNode_TakeOfferdTokens1_FillEventInstance
-						.setPrecedingState(state);
-
-				if (!context.isEmpty()) {
-					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_TakeOfferdTokens1_FillEventInstance);
-				}
-
-				// Then we add it to its trace
-				this.events
-						.getActivitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent_Trace()
-						.add(activitydiagram_ActivityNode_TakeOfferdTokens1_FillEventInstance);
+				this.events.getActivitydiagram_Activity_WriteTrace_Trace().add(
+						activitydiagram_Activity_WriteTraceInstance);
 				break;
 
 			case "Activitydiagram_Activity_InitializeContext":
@@ -2502,19 +2224,193 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						.add(activitydiagram_Activity_InitializeContextInstance);
 				break;
 
-			case "Activitydiagram_Activity_WriteTrace":
+			case "Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep":
 
 				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace activitydiagram_Activity_WriteTraceInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_Activity_WriteTrace();
-				activitydiagram_Activity_WriteTraceInstance
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep activitydiagram_ActivityNode_TakeOfferdTokens1_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep();
+				activitydiagram_ActivityNode_TakeOfferdTokens1_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_ActivityNode_TakeOfferdTokens1_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep_Trace()
+						.add(activitydiagram_ActivityNode_TakeOfferdTokens1_FillStepInstance);
+				break;
+
+			case "Activitydiagram_ActivityNode_TakeOfferdTokens1":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1 activitydiagram_ActivityNode_TakeOfferdTokens1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_TakeOfferdTokens1();
+				activitydiagram_ActivityNode_TakeOfferdTokens1Instance
 						.setStartingState(state);
 
 				if (!context.isEmpty()) {
 					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_Activity_WriteTraceInstance);
+							activitydiagram_ActivityNode_TakeOfferdTokens1Instance);
 				}
-				context.push(activitydiagram_Activity_WriteTraceInstance);
+				context.push(activitydiagram_ActivityNode_TakeOfferdTokens1Instance);
+				if (params != null) {
+					for (String k : params.keySet()) {
+
+						switch (k) {
+						case "this":
+							Object v = params.get(k);
+							if (v instanceof activitydiagram.ActivityNode)
+								activitydiagram_ActivityNode_TakeOfferdTokens1Instance
+										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
+												.get(v));
+
+							break;
+
+						}
+					}
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_ActivityNode_TakeOfferdTokens1_Trace()
+						.add(activitydiagram_ActivityNode_TakeOfferdTokens1Instance);
+				break;
+
+			case "Activitydiagram_ActivityNode_SendOffers1":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1 activitydiagram_ActivityNode_SendOffers1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_SendOffers1();
+				activitydiagram_ActivityNode_SendOffers1Instance
+						.setStartingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_ActivityNode_SendOffers1Instance);
+				}
+				context.push(activitydiagram_ActivityNode_SendOffers1Instance);
+				if (params != null) {
+					for (String k : params.keySet()) {
+
+						switch (k) {
+						case "this":
+							Object v = params.get(k);
+							if (v instanceof activitydiagram.ActivityNode)
+								activitydiagram_ActivityNode_SendOffers1Instance
+										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
+												.get(v));
+
+							break;
+
+						}
+					}
+				}
+
+				// Then we add it to its trace
+				this.events.getActivitydiagram_ActivityNode_SendOffers1_Trace()
+						.add(activitydiagram_ActivityNode_SendOffers1Instance);
+				break;
+
+			case "Activitydiagram_Variable_Init_FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_Variable_Init_FillStep activitydiagram_Variable_Init_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Variable_Init_FillStep();
+				activitydiagram_Variable_Init_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_Variable_Init_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events.getActivitydiagram_Variable_Init_FillStep_Trace()
+						.add(activitydiagram_Variable_Init_FillStepInstance);
+				break;
+
+			case "Activitydiagram_Variable_Init":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_Variable_Init activitydiagram_Variable_InitInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Variable_Init();
+				activitydiagram_Variable_InitInstance.setStartingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_Variable_InitInstance);
+				}
+				context.push(activitydiagram_Variable_InitInstance);
+				if (params != null) {
+					for (String k : params.keySet()) {
+
+						switch (k) {
+						case "this":
+							Object v = params.get(k);
+							if (v instanceof activitydiagram.Variable)
+								activitydiagram_Variable_InitInstance
+										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedVariable) exeToTraced
+												.get(v));
+
+							break;
+
+						}
+					}
+				}
+
+				// Then we add it to its trace
+				this.events.getActivitydiagram_Variable_Init_Trace().add(
+						activitydiagram_Variable_InitInstance);
+				break;
+
+			case "Activitydiagram_ActivityNode_AddTokens1_FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_FillStep activitydiagram_ActivityNode_AddTokens1_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_AddTokens1_FillStep();
+				activitydiagram_ActivityNode_AddTokens1_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_ActivityNode_AddTokens1_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_ActivityNode_AddTokens1_FillStep_Trace()
+						.add(activitydiagram_ActivityNode_AddTokens1_FillStepInstance);
+				break;
+
+			case "FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.FillStep fillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createFillStep();
+				fillStepInstance.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps", fillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events.getFillStep_Trace().add(fillStepInstance);
+				break;
+
+			case "Activitydiagram_Activity_Reset":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_Activity_Reset activitydiagram_Activity_ResetInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Activity_Reset();
+				activitydiagram_Activity_ResetInstance.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_Activity_ResetInstance);
+				}
 				if (params != null) {
 					for (String k : params.keySet()) {
 
@@ -2522,7 +2418,7 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						case "this":
 							Object v = params.get(k);
 							if (v instanceof activitydiagram.Activity)
-								activitydiagram_Activity_WriteTraceInstance
+								activitydiagram_Activity_ResetInstance
 										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivity) exeToTraced
 												.get(v));
 
@@ -2533,8 +2429,80 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 				}
 
 				// Then we add it to its trace
-				this.events.getActivitydiagram_Activity_WriteTrace_Trace().add(
-						activitydiagram_Activity_WriteTraceInstance);
+				this.events.getActivitydiagram_Activity_Reset_Trace().add(
+						activitydiagram_Activity_ResetInstance);
+				break;
+
+			case "Activitydiagram_Activity_Execute_FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_FillStep activitydiagram_Activity_Execute_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Activity_Execute_FillStep();
+				activitydiagram_Activity_Execute_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_Activity_Execute_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_Activity_Execute_FillStep_Trace()
+						.add(activitydiagram_Activity_Execute_FillStepInstance);
+				break;
+
+			case "Activitydiagram_Variable_Execute":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_Variable_Execute activitydiagram_Variable_ExecuteInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Variable_Execute();
+				activitydiagram_Variable_ExecuteInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_Variable_ExecuteInstance);
+				}
+				if (params != null) {
+					for (String k : params.keySet()) {
+
+						switch (k) {
+						case "this":
+							Object v = params.get(k);
+							if (v instanceof activitydiagram.Variable)
+								activitydiagram_Variable_ExecuteInstance
+										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedVariable) exeToTraced
+												.get(v));
+
+							break;
+
+						}
+					}
+				}
+
+				// Then we add it to its trace
+				this.events.getActivitydiagram_Variable_Execute_Trace().add(
+						activitydiagram_Variable_ExecuteInstance);
+				break;
+
+			case "Activitydiagram_ActivityNode_Execute_FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_FillStep activitydiagram_ActivityNode_Execute_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_Execute_FillStep();
+				activitydiagram_ActivityNode_Execute_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_ActivityNode_Execute_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_ActivityNode_Execute_FillStep_Trace()
+						.add(activitydiagram_ActivityNode_Execute_FillStepInstance);
 				break;
 
 			case "Activitydiagram_ActivityNode_Execute":
@@ -2572,19 +2540,18 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						.add(activitydiagram_ActivityNode_ExecuteInstance);
 				break;
 
-			case "Activitydiagram_ActivityNode_TakeOfferdTokens1":
+			case "Activitydiagram_ActivityNode_Terminate":
 
 				// First we create the event
-				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1 activitydiagram_ActivityNode_TakeOfferdTokens1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-						.createActivitydiagram_ActivityNode_TakeOfferdTokens1();
-				activitydiagram_ActivityNode_TakeOfferdTokens1Instance
-						.setStartingState(state);
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate activitydiagram_ActivityNode_TerminateInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_Terminate();
+				activitydiagram_ActivityNode_TerminateInstance
+						.setPrecedingState(state);
 
 				if (!context.isEmpty()) {
 					emfAdd(context.getFirst(), "subSteps",
-							activitydiagram_ActivityNode_TakeOfferdTokens1Instance);
+							activitydiagram_ActivityNode_TerminateInstance);
 				}
-				context.push(activitydiagram_ActivityNode_TakeOfferdTokens1Instance);
 				if (params != null) {
 					for (String k : params.keySet()) {
 
@@ -2592,7 +2559,41 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 						case "this":
 							Object v = params.get(k);
 							if (v instanceof activitydiagram.ActivityNode)
-								activitydiagram_ActivityNode_TakeOfferdTokens1Instance
+								activitydiagram_ActivityNode_TerminateInstance
+										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
+												.get(v));
+
+							break;
+
+						}
+					}
+				}
+
+				// Then we add it to its trace
+				this.events.getActivitydiagram_ActivityNode_Terminate_Trace()
+						.add(activitydiagram_ActivityNode_TerminateInstance);
+				break;
+
+			case "Activitydiagram_ActivityNode_RemoveToken1":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1 activitydiagram_ActivityNode_RemoveToken1Instance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_RemoveToken1();
+				activitydiagram_ActivityNode_RemoveToken1Instance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_ActivityNode_RemoveToken1Instance);
+				}
+				if (params != null) {
+					for (String k : params.keySet()) {
+
+						switch (k) {
+						case "this":
+							Object v = params.get(k);
+							if (v instanceof activitydiagram.ActivityNode)
+								activitydiagram_ActivityNode_RemoveToken1Instance
 										.setThis((activitydiagramTrace.Traced.activitydiagram.TracedActivityNode) exeToTraced
 												.get(v));
 
@@ -2604,8 +2605,46 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 				// Then we add it to its trace
 				this.events
-						.getActivitydiagram_ActivityNode_TakeOfferdTokens1_Trace()
-						.add(activitydiagram_ActivityNode_TakeOfferdTokens1Instance);
+						.getActivitydiagram_ActivityNode_RemoveToken1_Trace()
+						.add(activitydiagram_ActivityNode_RemoveToken1Instance);
+				break;
+
+			case "Activitydiagram_ActivityNode_SendOffers1_FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1_FillStep activitydiagram_ActivityNode_SendOffers1_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_ActivityNode_SendOffers1_FillStep();
+				activitydiagram_ActivityNode_SendOffers1_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_ActivityNode_SendOffers1_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_ActivityNode_SendOffers1_FillStep_Trace()
+						.add(activitydiagram_ActivityNode_SendOffers1_FillStepInstance);
+				break;
+
+			case "Activitydiagram_Activity_WriteTrace_FillStep":
+
+				// First we create the event
+				activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_FillStep activitydiagram_Activity_WriteTrace_FillStepInstance = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+						.createActivitydiagram_Activity_WriteTrace_FillStep();
+				activitydiagram_Activity_WriteTrace_FillStepInstance
+						.setPrecedingState(state);
+
+				if (!context.isEmpty()) {
+					emfAdd(context.getFirst(), "subSteps",
+							activitydiagram_Activity_WriteTrace_FillStepInstance);
+				}
+
+				// Then we add it to its trace
+				this.events
+						.getActivitydiagram_Activity_WriteTrace_FillStep_Trace()
+						.add(activitydiagram_Activity_WriteTrace_FillStepInstance);
 				break;
 			}
 
@@ -2661,11 +2700,18 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		StringBuilder result = new StringBuilder();
 		activitydiagramTrace.State gs = traceRoot.getStatesTrace().get(index);
 
-		if (!gs.getIntegerValue_value_Values().isEmpty())
-			result.append("\nValue values:");
-		for (activitydiagramTrace.Values.IntegerValue_value_Value currenState : gs
-				.getIntegerValue_value_Values()) {
-			result.append("\n\t" + currenState.getValue());
+		if (!gs.getOffer_offeredTokens_Values().isEmpty())
+			result.append("\nOfferedTokens values:");
+		for (activitydiagramTrace.Values.Offer_offeredTokens_Value currenState : gs
+				.getOffer_offeredTokens_Values()) {
+			result.append("\n\t" + currenState.getOfferedTokens());
+		}
+
+		if (!gs.getToken_holder_Values().isEmpty())
+			result.append("\nHolder values:");
+		for (activitydiagramTrace.Values.Token_holder_Value currenState : gs
+				.getToken_holder_Values()) {
+			result.append("\n\t" + currenState.getHolder());
 		}
 
 		if (!gs.getActivityEdge_offers_Values().isEmpty())
@@ -2675,18 +2721,18 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			result.append("\n\t" + currenState.getOffers());
 		}
 
-		if (!gs.getInputValue_value_Values().isEmpty())
-			result.append("\nValue values:");
-		for (activitydiagramTrace.Values.InputValue_value_Value currenState : gs
-				.getInputValue_value_Values()) {
-			result.append("\n\t" + currenState.getValue());
-		}
-
 		if (!gs.getInputValue_variable_Values().isEmpty())
 			result.append("\nVariable values:");
 		for (activitydiagramTrace.Values.InputValue_variable_Value currenState : gs
 				.getInputValue_variable_Values()) {
 			result.append("\n\t" + currenState.getVariable());
+		}
+
+		if (!gs.getInputValue_value_Values().isEmpty())
+			result.append("\nValue values:");
+		for (activitydiagramTrace.Values.InputValue_value_Value currenState : gs
+				.getInputValue_value_Values()) {
+			result.append("\n\t" + currenState.getValue());
 		}
 
 		if (!gs.getInput_inputValues_Values().isEmpty())
@@ -2696,25 +2742,11 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			result.append("\n\t" + currenState.getInputValues());
 		}
 
-		if (!gs.getForkedToken_remainingOffersCount_Values().isEmpty())
-			result.append("\nRemainingOffersCount values:");
-		for (activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value currenState : gs
-				.getForkedToken_remainingOffersCount_Values()) {
-			result.append("\n\t" + currenState.getRemainingOffersCount());
-		}
-
-		if (!gs.getForkedToken_baseToken_Values().isEmpty())
-			result.append("\nBaseToken values:");
-		for (activitydiagramTrace.Values.ForkedToken_baseToken_Value currenState : gs
-				.getForkedToken_baseToken_Values()) {
-			result.append("\n\t" + currenState.getBaseToken());
-		}
-
-		if (!gs.getBooleanValue_value_Values().isEmpty())
-			result.append("\nValue values:");
-		for (activitydiagramTrace.Values.BooleanValue_value_Value currenState : gs
-				.getBooleanValue_value_Values()) {
-			result.append("\n\t" + currenState.isValue());
+		if (!gs.getActivity_trace_Values().isEmpty())
+			result.append("\nTrace values:");
+		for (activitydiagramTrace.Values.Activity_trace_Value currenState : gs
+				.getActivity_trace_Values()) {
+			result.append("\n\t" + currenState.getTrace());
 		}
 
 		if (!gs.getTrace_executedNodes_Values().isEmpty())
@@ -2731,25 +2763,32 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			result.append("\n\t" + currenState.getHeldTokens());
 		}
 
-		if (!gs.getActivity_trace_Values().isEmpty())
-			result.append("\nTrace values:");
-		for (activitydiagramTrace.Values.Activity_trace_Value currenState : gs
-				.getActivity_trace_Values()) {
-			result.append("\n\t" + currenState.getTrace());
+		if (!gs.getForkedToken_remainingOffersCount_Values().isEmpty())
+			result.append("\nRemainingOffersCount values:");
+		for (activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value currenState : gs
+				.getForkedToken_remainingOffersCount_Values()) {
+			result.append("\n\t" + currenState.getRemainingOffersCount());
 		}
 
-		if (!gs.getToken_holder_Values().isEmpty())
-			result.append("\nHolder values:");
-		for (activitydiagramTrace.Values.Token_holder_Value currenState : gs
-				.getToken_holder_Values()) {
-			result.append("\n\t" + currenState.getHolder());
+		if (!gs.getForkedToken_baseToken_Values().isEmpty())
+			result.append("\nBaseToken values:");
+		for (activitydiagramTrace.Values.ForkedToken_baseToken_Value currenState : gs
+				.getForkedToken_baseToken_Values()) {
+			result.append("\n\t" + currenState.getBaseToken());
 		}
 
-		if (!gs.getOffer_offeredTokens_Values().isEmpty())
-			result.append("\nOfferedTokens values:");
-		for (activitydiagramTrace.Values.Offer_offeredTokens_Value currenState : gs
-				.getOffer_offeredTokens_Values()) {
-			result.append("\n\t" + currenState.getOfferedTokens());
+		if (!gs.getIntegerValue_value_Values().isEmpty())
+			result.append("\nValue values:");
+		for (activitydiagramTrace.Values.IntegerValue_value_Value currenState : gs
+				.getIntegerValue_value_Values()) {
+			result.append("\n\t" + currenState.getValue());
+		}
+
+		if (!gs.getBooleanValue_value_Values().isEmpty())
+			result.append("\nValue values:");
+		for (activitydiagramTrace.Values.BooleanValue_value_Value currenState : gs
+				.getBooleanValue_value_Values()) {
+			result.append("\n\t" + currenState.isValue());
 		}
 
 		if (!gs.getVariable_currentValue_Values().isEmpty())
@@ -2825,22 +2864,22 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 		// We find all current values
 		Set<EObject> currentValues = new HashSet<EObject>();
 		if (currentState != null) {
-			currentValues.addAll(currentState.getIntegerValue_value_Values());
+			currentValues.addAll(currentState.getOffer_offeredTokens_Values());
+			currentValues.addAll(currentState.getToken_holder_Values());
 			currentValues.addAll(currentState.getActivityEdge_offers_Values());
-			currentValues.addAll(currentState.getInputValue_value_Values());
 			currentValues.addAll(currentState.getInputValue_variable_Values());
+			currentValues.addAll(currentState.getInputValue_value_Values());
 			currentValues.addAll(currentState.getInput_inputValues_Values());
+			currentValues.addAll(currentState.getActivity_trace_Values());
+			currentValues.addAll(currentState.getTrace_executedNodes_Values());
+			currentValues.addAll(currentState
+					.getActivityNode_heldTokens_Values());
 			currentValues.addAll(currentState
 					.getForkedToken_remainingOffersCount_Values());
 			currentValues
 					.addAll(currentState.getForkedToken_baseToken_Values());
+			currentValues.addAll(currentState.getIntegerValue_value_Values());
 			currentValues.addAll(currentState.getBooleanValue_value_Values());
-			currentValues.addAll(currentState.getTrace_executedNodes_Values());
-			currentValues.addAll(currentState
-					.getActivityNode_heldTokens_Values());
-			currentValues.addAll(currentState.getActivity_trace_Values());
-			currentValues.addAll(currentState.getToken_holder_Values());
-			currentValues.addAll(currentState.getOffer_offeredTokens_Values());
 			currentValues
 					.addAll(currentState.getVariable_currentValue_Values());
 		}
@@ -2853,38 +2892,34 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 
 	@Override
 	public String getDescriptionOfValue(EObject eObject) {
-		if (eObject instanceof activitydiagramTrace.Values.IntegerValue_value_Value) {
-			return "activitydiagramTrace.Values.IntegerValue_value_Value: "
-					+ ((activitydiagramTrace.Values.IntegerValue_value_Value) eObject)
-							.getValue();
+		if (eObject instanceof activitydiagramTrace.Values.Offer_offeredTokens_Value) {
+			return "activitydiagramTrace.Values.Offer_offeredTokens_Value: "
+					+ ((activitydiagramTrace.Values.Offer_offeredTokens_Value) eObject)
+							.getOfferedTokens();
+		} else if (eObject instanceof activitydiagramTrace.Values.Token_holder_Value) {
+			return "activitydiagramTrace.Values.Token_holder_Value: "
+					+ ((activitydiagramTrace.Values.Token_holder_Value) eObject)
+							.getHolder();
 		} else if (eObject instanceof activitydiagramTrace.Values.ActivityEdge_offers_Value) {
 			return "activitydiagramTrace.Values.ActivityEdge_offers_Value: "
 					+ ((activitydiagramTrace.Values.ActivityEdge_offers_Value) eObject)
 							.getOffers();
-		} else if (eObject instanceof activitydiagramTrace.Values.InputValue_value_Value) {
-			return "activitydiagramTrace.Values.InputValue_value_Value: "
-					+ ((activitydiagramTrace.Values.InputValue_value_Value) eObject)
-							.getValue();
 		} else if (eObject instanceof activitydiagramTrace.Values.InputValue_variable_Value) {
 			return "activitydiagramTrace.Values.InputValue_variable_Value: "
 					+ ((activitydiagramTrace.Values.InputValue_variable_Value) eObject)
 							.getVariable();
+		} else if (eObject instanceof activitydiagramTrace.Values.InputValue_value_Value) {
+			return "activitydiagramTrace.Values.InputValue_value_Value: "
+					+ ((activitydiagramTrace.Values.InputValue_value_Value) eObject)
+							.getValue();
 		} else if (eObject instanceof activitydiagramTrace.Values.Input_inputValues_Value) {
 			return "activitydiagramTrace.Values.Input_inputValues_Value: "
 					+ ((activitydiagramTrace.Values.Input_inputValues_Value) eObject)
 							.getInputValues();
-		} else if (eObject instanceof activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value) {
-			return "activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value: "
-					+ ((activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value) eObject)
-							.getRemainingOffersCount();
-		} else if (eObject instanceof activitydiagramTrace.Values.ForkedToken_baseToken_Value) {
-			return "activitydiagramTrace.Values.ForkedToken_baseToken_Value: "
-					+ ((activitydiagramTrace.Values.ForkedToken_baseToken_Value) eObject)
-							.getBaseToken();
-		} else if (eObject instanceof activitydiagramTrace.Values.BooleanValue_value_Value) {
-			return "activitydiagramTrace.Values.BooleanValue_value_Value: "
-					+ ((activitydiagramTrace.Values.BooleanValue_value_Value) eObject)
-							.isValue();
+		} else if (eObject instanceof activitydiagramTrace.Values.Activity_trace_Value) {
+			return "activitydiagramTrace.Values.Activity_trace_Value: "
+					+ ((activitydiagramTrace.Values.Activity_trace_Value) eObject)
+							.getTrace();
 		} else if (eObject instanceof activitydiagramTrace.Values.Trace_executedNodes_Value) {
 			return "activitydiagramTrace.Values.Trace_executedNodes_Value: "
 					+ ((activitydiagramTrace.Values.Trace_executedNodes_Value) eObject)
@@ -2893,18 +2928,22 @@ public class ActivitydiagramTraceManager implements ITraceManager {
 			return "activitydiagramTrace.Values.ActivityNode_heldTokens_Value: "
 					+ ((activitydiagramTrace.Values.ActivityNode_heldTokens_Value) eObject)
 							.getHeldTokens();
-		} else if (eObject instanceof activitydiagramTrace.Values.Activity_trace_Value) {
-			return "activitydiagramTrace.Values.Activity_trace_Value: "
-					+ ((activitydiagramTrace.Values.Activity_trace_Value) eObject)
-							.getTrace();
-		} else if (eObject instanceof activitydiagramTrace.Values.Token_holder_Value) {
-			return "activitydiagramTrace.Values.Token_holder_Value: "
-					+ ((activitydiagramTrace.Values.Token_holder_Value) eObject)
-							.getHolder();
-		} else if (eObject instanceof activitydiagramTrace.Values.Offer_offeredTokens_Value) {
-			return "activitydiagramTrace.Values.Offer_offeredTokens_Value: "
-					+ ((activitydiagramTrace.Values.Offer_offeredTokens_Value) eObject)
-							.getOfferedTokens();
+		} else if (eObject instanceof activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value) {
+			return "activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value: "
+					+ ((activitydiagramTrace.Values.ForkedToken_remainingOffersCount_Value) eObject)
+							.getRemainingOffersCount();
+		} else if (eObject instanceof activitydiagramTrace.Values.ForkedToken_baseToken_Value) {
+			return "activitydiagramTrace.Values.ForkedToken_baseToken_Value: "
+					+ ((activitydiagramTrace.Values.ForkedToken_baseToken_Value) eObject)
+							.getBaseToken();
+		} else if (eObject instanceof activitydiagramTrace.Values.IntegerValue_value_Value) {
+			return "activitydiagramTrace.Values.IntegerValue_value_Value: "
+					+ ((activitydiagramTrace.Values.IntegerValue_value_Value) eObject)
+							.getValue();
+		} else if (eObject instanceof activitydiagramTrace.Values.BooleanValue_value_Value) {
+			return "activitydiagramTrace.Values.BooleanValue_value_Value: "
+					+ ((activitydiagramTrace.Values.BooleanValue_value_Value) eObject)
+							.isValue();
 		} else if (eObject instanceof activitydiagramTrace.Values.Variable_currentValue_Value) {
 			return "activitydiagramTrace.Values.Variable_currentValue_Value: "
 					+ ((activitydiagramTrace.Values.Variable_currentValue_Value) eObject)

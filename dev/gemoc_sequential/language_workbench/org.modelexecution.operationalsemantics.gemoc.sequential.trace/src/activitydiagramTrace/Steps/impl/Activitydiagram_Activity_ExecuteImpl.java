@@ -3,7 +3,7 @@
 package activitydiagramTrace.Steps.impl;
 
 import activitydiagramTrace.Steps.Activitydiagram_Activity_Execute;
-import activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_AbstractSubEvent;
+import activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_AbstractSubStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
 import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
@@ -54,7 +54,7 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Activitydiagram_Activity_Execute_AbstractSubEvent> subSteps;
+	protected EList<Activitydiagram_Activity_Execute_AbstractSubStep> subSteps;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,9 +118,9 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activitydiagram_Activity_Execute_AbstractSubEvent> getSubSteps() {
+	public EList<Activitydiagram_Activity_Execute_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
-			subSteps = new EObjectResolvingEList<Activitydiagram_Activity_Execute_AbstractSubEvent>(Activitydiagram_Activity_Execute_AbstractSubEvent.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS);
+			subSteps = new EObjectResolvingEList<Activitydiagram_Activity_Execute_AbstractSubStep>(Activitydiagram_Activity_Execute_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS);
 		}
 		return subSteps;
 	}
@@ -156,7 +156,7 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS:
 				getSubSteps().clear();
-				getSubSteps().addAll((Collection<? extends Activitydiagram_Activity_Execute_AbstractSubEvent>)newValue);
+				getSubSteps().addAll((Collection<? extends Activitydiagram_Activity_Execute_AbstractSubStep>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

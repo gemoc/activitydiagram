@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see activitydiagramTrace.Values.ValuesPackage#getActivityEdge_offers_Value()
- * @model
+ * @model annotation="http://www.modelexecution.org/trace/XMOF executionMetamodelElement='null'"
  * @generated
  */
 public interface ActivityEdge_offers_Value extends EObject {

@@ -6,7 +6,7 @@ import activitydiagramTrace.ActivitydiagramTracePackage;
 import activitydiagramTrace.State;
 
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute;
-import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubEvent;
+import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep;
 import activitydiagramTrace.Steps.BigStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class Activitydiagram_ActivityNode_ExecuteImpl extends Activitydiagram_Activity_Execute_AbstractSubEventImpl implements Activitydiagram_ActivityNode_Execute {
+public class Activitydiagram_ActivityNode_ExecuteImpl extends Activitydiagram_Activity_Execute_AbstractSubStepImpl implements Activitydiagram_ActivityNode_Execute {
 	/**
 	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends Activitydiagram_Ac
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Activitydiagram_ActivityNode_Execute_AbstractSubEvent> subSteps;
+	protected EList<Activitydiagram_ActivityNode_Execute_AbstractSubStep> subSteps;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,9 +265,9 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends Activitydiagram_Ac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activitydiagram_ActivityNode_Execute_AbstractSubEvent> getSubSteps() {
+	public EList<Activitydiagram_ActivityNode_Execute_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
-			subSteps = new EObjectResolvingEList<Activitydiagram_ActivityNode_Execute_AbstractSubEvent>(Activitydiagram_ActivityNode_Execute_AbstractSubEvent.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS);
+			subSteps = new EObjectResolvingEList<Activitydiagram_ActivityNode_Execute_AbstractSubStep>(Activitydiagram_ActivityNode_Execute_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS);
 		}
 		return subSteps;
 	}
@@ -351,7 +351,7 @@ public class Activitydiagram_ActivityNode_ExecuteImpl extends Activitydiagram_Ac
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS:
 				getSubSteps().clear();
-				getSubSteps().addAll((Collection<? extends Activitydiagram_ActivityNode_Execute_AbstractSubEvent>)newValue);
+				getSubSteps().addAll((Collection<? extends Activitydiagram_ActivityNode_Execute_AbstractSubStep>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

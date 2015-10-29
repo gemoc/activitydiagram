@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see activitydiagramTrace.Values.ValuesPackage#getOffer_offeredTokens_Value()
- * @model
+ * @model annotation="http://www.modelexecution.org/trace/XMOF executionMetamodelElement='null'"
  * @generated
  */
 public interface Offer_offeredTokens_Value extends EObject {

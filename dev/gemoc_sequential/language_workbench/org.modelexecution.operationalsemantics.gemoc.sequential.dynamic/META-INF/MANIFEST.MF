@@ -3,7 +3,7 @@ Export-Package: org.modelexecution.operationalsemantics.gemoc.sequential.dynamic
 Bundle-Name: org.modelexecution.operationalsemantics.gemoc.sequential.dynamic
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
-Require-Bundle: fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="3.0.0";visibility:=reexport,
+Require-Bundle: fr.inria.diverse.k3.al.annotationprocessor.plugin,
  org.eclipse.xtend.lib;bundle-version="2.6.0";visibility:=private,
  org.eclipse.xtext.xbase.lib;bundle-version="2.6.0";visibility:=private,
  com.google.guava;bundle-version="0.0.0";visibility:=private,

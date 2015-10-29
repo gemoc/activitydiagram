@@ -6,7 +6,7 @@ import activitydiagramTrace.ActivitydiagramTracePackage;
 import activitydiagramTrace.State;
 
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1;
-import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent;
+import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep;
 import activitydiagramTrace.Steps.BigStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activitydiagram_ActivityNode_Execute_AbstractSubEventImpl implements Activitydiagram_ActivityNode_TakeOfferdTokens1 {
+public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl implements Activitydiagram_ActivityNode_TakeOfferdTokens1 {
 	/**
 	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent> subSteps;
+	protected EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep> subSteps;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,9 +265,9 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent> getSubSteps() {
+	public EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
-			subSteps = new EObjectResolvingEList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent>(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS);
+			subSteps = new EObjectResolvingEList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep>(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS);
 		}
 		return subSteps;
 	}
@@ -351,7 +351,7 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS:
 				getSubSteps().clear();
-				getSubSteps().addAll((Collection<? extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubEvent>)newValue);
+				getSubSteps().addAll((Collection<? extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

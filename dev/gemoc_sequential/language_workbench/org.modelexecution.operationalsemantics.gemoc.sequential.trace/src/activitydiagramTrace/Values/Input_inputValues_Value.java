@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see activitydiagramTrace.Values.ValuesPackage#getInput_inputValues_Value()
- * @model
+ * @model annotation="http://www.modelexecution.org/trace/XMOF executionMetamodelElement='null'"
  * @generated
  */
 public interface Input_inputValues_Value extends EObject {

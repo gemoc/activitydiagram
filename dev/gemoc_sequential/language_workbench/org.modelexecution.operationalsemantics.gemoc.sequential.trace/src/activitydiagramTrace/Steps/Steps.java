@@ -14,23 +14,25 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Variable_Execute_Trace <em>Activitydiagram Variable Execute Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_Execute_FillEvent_Trace <em>Activitydiagram Activity Execute Fill Event Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_Execute_FillEvent_Trace <em>Activitydiagram Activity Node Execute Fill Event Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent_Trace <em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Event Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_RemoveToken1_Trace <em>Activitydiagram Activity Node Remove Token1 Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_AddTokens1_FillEvent_Trace <em>Activitydiagram Activity Node Add Tokens1 Fill Event Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_SendOffers1_Trace <em>Activitydiagram Activity Node Send Offers1 Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Variable_Init_Trace <em>Activitydiagram Variable Init Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_Reset_Trace <em>Activitydiagram Activity Reset Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_Execute_FillStep_Trace <em>Activitydiagram Activity Node Execute Fill Step Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_SendOffers1_FillStep_Trace <em>Activitydiagram Activity Node Send Offers1 Fill Step Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_AddTokens1_FillStep_Trace <em>Activitydiagram Activity Node Add Tokens1 Fill Step Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep_Trace <em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_RemoveToken1_Trace <em>Activitydiagram Activity Node Remove Token1 Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_Execute_FillStep_Trace <em>Activitydiagram Activity Execute Fill Step Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Variable_Init_FillStep_Trace <em>Activitydiagram Variable Init Fill Step Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_WriteTrace_FillStep_Trace <em>Activitydiagram Activity Write Trace Fill Step Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_Terminate_Trace <em>Activitydiagram Activity Node Terminate Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_InitializeContext_Trace <em>Activitydiagram Activity Initialize Context Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_WriteTrace_FillEvent_Trace <em>Activitydiagram Activity Write Trace Fill Event Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getFillEvent_Trace <em>Fill Event Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_Execute_Trace <em>Activitydiagram Activity Execute Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Variable_Execute_Trace <em>Activitydiagram Variable Execute Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getFillStep_Trace <em>Fill Step Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_Execute_Trace <em>Activitydiagram Activity Node Execute Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_TakeOfferdTokens1_Trace <em>Activitydiagram Activity Node Take Offerd Tokens1 Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_SendOffers1_Trace <em>Activitydiagram Activity Node Send Offers1 Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_AddTokens1_Trace <em>Activitydiagram Activity Node Add Tokens1 Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_ActivityNode_TakeOfferdTokens1_Trace <em>Activitydiagram Activity Node Take Offerd Tokens1 Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_Execute_Trace <em>Activitydiagram Activity Execute Trace</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Variable_Init_Trace <em>Activitydiagram Variable Init Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.Steps#getActivitydiagram_Activity_WriteTrace_Trace <em>Activitydiagram Activity Write Trace Trace</em>}</li>
  * </ul>
  * </p>
@@ -41,68 +43,84 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Steps extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Variable Execute Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Reset Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Reset}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Variable Execute Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Reset Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Variable Execute Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Variable_Execute_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Reset Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_Reset_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_Variable_Execute> getActivitydiagram_Variable_Execute_Trace();
+	EList<Activitydiagram_Activity_Reset> getActivitydiagram_Activity_Reset_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Execute Fill Event Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_FillEvent}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Execute Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Execute Fill Event Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Node Execute Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Execute Fill Event Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_Execute_FillEvent_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Node Execute Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_Execute_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_Activity_Execute_FillEvent> getActivitydiagram_Activity_Execute_FillEvent_Trace();
+	EList<Activitydiagram_ActivityNode_Execute_FillStep> getActivitydiagram_ActivityNode_Execute_FillStep_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Execute Fill Event Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_FillEvent}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Send Offers1 Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1_FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Execute Fill Event Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Node Send Offers1 Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Execute Fill Event Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_Execute_FillEvent_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Node Send Offers1 Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_SendOffers1_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_Execute_FillEvent> getActivitydiagram_ActivityNode_Execute_FillEvent_Trace();
+	EList<Activitydiagram_ActivityNode_SendOffers1_FillStep> getActivitydiagram_ActivityNode_SendOffers1_FillStep_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Fill Event Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Add Tokens1 Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Event Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Node Add Tokens1 Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Event Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Node Add Tokens1 Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_AddTokens1_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent> getActivitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent_Trace();
+	EList<Activitydiagram_ActivityNode_AddTokens1_FillStep> getActivitydiagram_ActivityNode_AddTokens1_FillStep_Trace();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step Trace</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep_Trace()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep> getActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep_Trace();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Node Remove Token1 Trace</b></em>' containment reference list.
@@ -121,68 +139,52 @@ public interface Steps extends EObject {
 	EList<Activitydiagram_ActivityNode_RemoveToken1> getActivitydiagram_ActivityNode_RemoveToken1_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Add Tokens1 Fill Event Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_FillEvent}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Execute Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Add Tokens1 Fill Event Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Execute Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Add Tokens1 Fill Event Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_AddTokens1_FillEvent_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Execute Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_Execute_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_AddTokens1_FillEvent> getActivitydiagram_ActivityNode_AddTokens1_FillEvent_Trace();
+	EList<Activitydiagram_Activity_Execute_FillStep> getActivitydiagram_Activity_Execute_FillStep_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Send Offers1 Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1}.
+	 * Returns the value of the '<em><b>Activitydiagram Variable Init Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init_FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Send Offers1 Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Variable Init Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Send Offers1 Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_SendOffers1_Trace()
+	 * @return the value of the '<em>Activitydiagram Variable Init Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Variable_Init_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_SendOffers1> getActivitydiagram_ActivityNode_SendOffers1_Trace();
+	EList<Activitydiagram_Variable_Init_FillStep> getActivitydiagram_Variable_Init_FillStep_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Variable Init Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Write Trace Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Variable Init Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Write Trace Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Variable Init Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Variable_Init_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Write Trace Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_WriteTrace_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_Variable_Init> getActivitydiagram_Variable_Init_Trace();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Reset Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Reset}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Reset Trace</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Reset Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_Reset_Trace()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Activitydiagram_Activity_Reset> getActivitydiagram_Activity_Reset_Trace();
+	EList<Activitydiagram_Activity_WriteTrace_FillStep> getActivitydiagram_Activity_WriteTrace_FillStep_Trace();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Node Terminate Trace</b></em>' containment reference list.
@@ -217,52 +219,36 @@ public interface Steps extends EObject {
 	EList<Activitydiagram_Activity_InitializeContext> getActivitydiagram_Activity_InitializeContext_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Write Trace Fill Event Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_FillEvent}.
+	 * Returns the value of the '<em><b>Activitydiagram Variable Execute Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Write Trace Fill Event Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Variable Execute Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Write Trace Fill Event Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_WriteTrace_FillEvent_Trace()
+	 * @return the value of the '<em>Activitydiagram Variable Execute Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Variable_Execute_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_Activity_WriteTrace_FillEvent> getActivitydiagram_Activity_WriteTrace_FillEvent_Trace();
+	EList<Activitydiagram_Variable_Execute> getActivitydiagram_Variable_Execute_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Fill Event Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.FillEvent}.
+	 * Returns the value of the '<em><b>Fill Step Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.FillStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Fill Event Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Fill Step Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fill Event Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_FillEvent_Trace()
+	 * @return the value of the '<em>Fill Step Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_FillStep_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<FillEvent> getFillEvent_Trace();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Execute Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Execute Trace</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Execute Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_Execute_Trace()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Activitydiagram_Activity_Execute> getActivitydiagram_Activity_Execute_Trace();
+	EList<FillStep> getFillStep_Trace();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Node Execute Trace</b></em>' containment reference list.
@@ -281,20 +267,20 @@ public interface Steps extends EObject {
 	EList<Activitydiagram_ActivityNode_Execute> getActivitydiagram_ActivityNode_Execute_Trace();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Trace</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Send Offers1 Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Trace</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Node Send Offers1 Trace</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Trace</em>' containment reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_TakeOfferdTokens1_Trace()
+	 * @return the value of the '<em>Activitydiagram Activity Node Send Offers1 Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_SendOffers1_Trace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_TakeOfferdTokens1> getActivitydiagram_ActivityNode_TakeOfferdTokens1_Trace();
+	EList<Activitydiagram_ActivityNode_SendOffers1> getActivitydiagram_ActivityNode_SendOffers1_Trace();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Node Add Tokens1 Trace</b></em>' containment reference list.
@@ -311,6 +297,54 @@ public interface Steps extends EObject {
 	 * @generated
 	 */
 	EList<Activitydiagram_ActivityNode_AddTokens1> getActivitydiagram_ActivityNode_AddTokens1_Trace();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Trace</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_ActivityNode_TakeOfferdTokens1_Trace()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Activitydiagram_ActivityNode_TakeOfferdTokens1> getActivitydiagram_ActivityNode_TakeOfferdTokens1_Trace();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Execute Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Execute Trace</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Execute Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Activity_Execute_Trace()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Activitydiagram_Activity_Execute> getActivitydiagram_Activity_Execute_Trace();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Variable Init Trace</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Variable Init Trace</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Variable Init Trace</em>' containment reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getSteps_Activitydiagram_Variable_Init_Trace()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Activitydiagram_Variable_Init> getActivitydiagram_Variable_Init_Trace();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Write Trace Trace</b></em>' containment reference list.

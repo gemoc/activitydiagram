@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see activitydiagramTrace.Values.ValuesPackage#getIntegerValue_value_Value()
- * @model
+ * @model annotation="http://www.modelexecution.org/trace/XMOF executionMetamodelElement='null'"
  * @generated
  */
 public interface IntegerValue_value_Value extends EObject {

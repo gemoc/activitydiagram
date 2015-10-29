@@ -35,20 +35,20 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link activitydiagramTrace.State#getFollowingStep <em>Following Step</em>}</li>
  *   <li>{@link activitydiagramTrace.State#getStartedBigSteps <em>Started Big Steps</em>}</li>
  *   <li>{@link activitydiagramTrace.State#getEndedBigSteps <em>Ended Big Steps</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getInput_inputValues_Values <em>Input input Values Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getBooleanValue_value_Values <em>Boolean Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getActivityEdge_offers_Values <em>Activity Edge offers Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getToken_holder_Values <em>Token holder Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getInputValue_value_Values <em>Input Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getInputValue_variable_Values <em>Input Value variable Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getActivityNode_heldTokens_Values <em>Activity Node held Tokens Values</em>}</li>
- *   <li>{@link activitydiagramTrace.State#getActivity_trace_Values <em>Activity trace Values</em>}</li>
  *   <li>{@link activitydiagramTrace.State#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}</li>
  *   <li>{@link activitydiagramTrace.State#getVariable_currentValue_Values <em>Variable current Value Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getToken_holder_Values <em>Token holder Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getActivityEdge_offers_Values <em>Activity Edge offers Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getInputValue_variable_Values <em>Input Value variable Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getInputValue_value_Values <em>Input Value value Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getInput_inputValues_Values <em>Input input Values Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getActivity_trace_Values <em>Activity trace Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getBooleanValue_value_Values <em>Boolean Value value Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getActivityNode_heldTokens_Values <em>Activity Node held Tokens Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}</li>
  * </ul>
  * </p>
  *
@@ -122,94 +122,40 @@ public interface State extends EObject {
 	EList<BigStep> getEndedBigSteps();
 
 	/**
-	 * Returns the value of the '<em><b>Integer Value value Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.IntegerValue_value_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.IntegerValue_value_Value#getStates <em>States</em>}'.
+	 * Returns the value of the '<em><b>Offer offered Tokens Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.Offer_offeredTokens_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Offer_offeredTokens_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Integer Value value Values</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Offer offered Tokens Values</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Integer Value value Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_IntegerValue_value_Values()
-	 * @see activitydiagramTrace.Values.IntegerValue_value_Value#getStates
+	 * @return the value of the '<em>Offer offered Tokens Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Offer_offeredTokens_Values()
+	 * @see activitydiagramTrace.Values.Offer_offeredTokens_Value#getStates
 	 * @model opposite="states" ordered="false"
 	 * @generated
 	 */
-	EList<IntegerValue_value_Value> getIntegerValue_value_Values();
+	EList<Offer_offeredTokens_Value> getOffer_offeredTokens_Values();
 
 	/**
-	 * Returns the value of the '<em><b>Input input Values Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.Input_inputValues_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Input_inputValues_Value#getStates <em>States</em>}'.
+	 * Returns the value of the '<em><b>Variable current Value Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.Variable_currentValue_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Variable_currentValue_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input input Values Values</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Variable current Value Values</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input input Values Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Input_inputValues_Values()
-	 * @see activitydiagramTrace.Values.Input_inputValues_Value#getStates
+	 * @return the value of the '<em>Variable current Value Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Variable_currentValue_Values()
+	 * @see activitydiagramTrace.Values.Variable_currentValue_Value#getStates
 	 * @model opposite="states" ordered="false"
 	 * @generated
 	 */
-	EList<Input_inputValues_Value> getInput_inputValues_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Boolean Value value Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.BooleanValue_value_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.BooleanValue_value_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Boolean Value value Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Boolean Value value Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_BooleanValue_value_Values()
-	 * @see activitydiagramTrace.Values.BooleanValue_value_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<BooleanValue_value_Value> getBooleanValue_value_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Trace executed Nodes Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.Trace_executedNodes_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Trace_executedNodes_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Trace executed Nodes Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trace executed Nodes Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Trace_executedNodes_Values()
-	 * @see activitydiagramTrace.Values.Trace_executedNodes_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<Trace_executedNodes_Value> getTrace_executedNodes_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Activity Edge offers Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.ActivityEdge_offers_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.ActivityEdge_offers_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activity Edge offers Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activity Edge offers Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_ActivityEdge_offers_Values()
-	 * @see activitydiagramTrace.Values.ActivityEdge_offers_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<ActivityEdge_offers_Value> getActivityEdge_offers_Values();
+	EList<Variable_currentValue_Value> getVariable_currentValue_Values();
 
 	/**
 	 * Returns the value of the '<em><b>Token holder Values</b></em>' reference list.
@@ -230,22 +176,22 @@ public interface State extends EObject {
 	EList<Token_holder_Value> getToken_holder_Values();
 
 	/**
-	 * Returns the value of the '<em><b>Input Value value Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.InputValue_value_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.InputValue_value_Value#getStates <em>States</em>}'.
+	 * Returns the value of the '<em><b>Activity Edge offers Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.ActivityEdge_offers_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.ActivityEdge_offers_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Input Value value Values</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activity Edge offers Values</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Value value Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_InputValue_value_Values()
-	 * @see activitydiagramTrace.Values.InputValue_value_Value#getStates
+	 * @return the value of the '<em>Activity Edge offers Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_ActivityEdge_offers_Values()
+	 * @see activitydiagramTrace.Values.ActivityEdge_offers_Value#getStates
 	 * @model opposite="states" ordered="false"
 	 * @generated
 	 */
-	EList<InputValue_value_Value> getInputValue_value_Values();
+	EList<ActivityEdge_offers_Value> getActivityEdge_offers_Values();
 
 	/**
 	 * Returns the value of the '<em><b>Input Value variable Values</b></em>' reference list.
@@ -264,6 +210,78 @@ public interface State extends EObject {
 	 * @generated
 	 */
 	EList<InputValue_variable_Value> getInputValue_variable_Values();
+
+	/**
+	 * Returns the value of the '<em><b>Input Value value Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.InputValue_value_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.InputValue_value_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Input Value value Values</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input Value value Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_InputValue_value_Values()
+	 * @see activitydiagramTrace.Values.InputValue_value_Value#getStates
+	 * @model opposite="states" ordered="false"
+	 * @generated
+	 */
+	EList<InputValue_value_Value> getInputValue_value_Values();
+
+	/**
+	 * Returns the value of the '<em><b>Input input Values Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.Input_inputValues_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Input_inputValues_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Input input Values Values</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input input Values Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Input_inputValues_Values()
+	 * @see activitydiagramTrace.Values.Input_inputValues_Value#getStates
+	 * @model opposite="states" ordered="false"
+	 * @generated
+	 */
+	EList<Input_inputValues_Value> getInput_inputValues_Values();
+
+	/**
+	 * Returns the value of the '<em><b>Activity trace Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.Activity_trace_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Activity_trace_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activity trace Values</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activity trace Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Activity_trace_Values()
+	 * @see activitydiagramTrace.Values.Activity_trace_Value#getStates
+	 * @model opposite="states" ordered="false"
+	 * @generated
+	 */
+	EList<Activity_trace_Value> getActivity_trace_Values();
+
+	/**
+	 * Returns the value of the '<em><b>Trace executed Nodes Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.Trace_executedNodes_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Trace_executedNodes_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Trace executed Nodes Values</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Trace executed Nodes Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Trace_executedNodes_Values()
+	 * @see activitydiagramTrace.Values.Trace_executedNodes_Value#getStates
+	 * @model opposite="states" ordered="false"
+	 * @generated
+	 */
+	EList<Trace_executedNodes_Value> getTrace_executedNodes_Values();
 
 	/**
 	 * Returns the value of the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list.
@@ -302,6 +320,24 @@ public interface State extends EObject {
 	EList<ForkedToken_baseToken_Value> getForkedToken_baseToken_Values();
 
 	/**
+	 * Returns the value of the '<em><b>Boolean Value value Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.BooleanValue_value_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.BooleanValue_value_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Boolean Value value Values</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Boolean Value value Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_BooleanValue_value_Values()
+	 * @see activitydiagramTrace.Values.BooleanValue_value_Value#getStates
+	 * @model opposite="states" ordered="false"
+	 * @generated
+	 */
+	EList<BooleanValue_value_Value> getBooleanValue_value_Values();
+
+	/**
 	 * Returns the value of the '<em><b>Activity Node held Tokens Values</b></em>' reference list.
 	 * The list contents are of type {@link activitydiagramTrace.Values.ActivityNode_heldTokens_Value}.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.ActivityNode_heldTokens_Value#getStates <em>States</em>}'.
@@ -320,57 +356,21 @@ public interface State extends EObject {
 	EList<ActivityNode_heldTokens_Value> getActivityNode_heldTokens_Values();
 
 	/**
-	 * Returns the value of the '<em><b>Activity trace Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.Activity_trace_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Activity_trace_Value#getStates <em>States</em>}'.
+	 * Returns the value of the '<em><b>Integer Value value Values</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Values.IntegerValue_value_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.IntegerValue_value_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activity trace Values</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Integer Value value Values</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activity trace Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Activity_trace_Values()
-	 * @see activitydiagramTrace.Values.Activity_trace_Value#getStates
+	 * @return the value of the '<em>Integer Value value Values</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_IntegerValue_value_Values()
+	 * @see activitydiagramTrace.Values.IntegerValue_value_Value#getStates
 	 * @model opposite="states" ordered="false"
 	 * @generated
 	 */
-	EList<Activity_trace_Value> getActivity_trace_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Offer offered Tokens Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.Offer_offeredTokens_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Offer_offeredTokens_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Offer offered Tokens Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offer offered Tokens Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Offer_offeredTokens_Values()
-	 * @see activitydiagramTrace.Values.Offer_offeredTokens_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<Offer_offeredTokens_Value> getOffer_offeredTokens_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Variable current Value Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Values.Variable_currentValue_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.Values.Variable_currentValue_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Variable current Value Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable current Value Values</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getState_Variable_currentValue_Values()
-	 * @see activitydiagramTrace.Values.Variable_currentValue_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<Variable_currentValue_Value> getVariable_currentValue_Values();
+	EList<IntegerValue_value_Value> getIntegerValue_value_Values();
 
 } // State

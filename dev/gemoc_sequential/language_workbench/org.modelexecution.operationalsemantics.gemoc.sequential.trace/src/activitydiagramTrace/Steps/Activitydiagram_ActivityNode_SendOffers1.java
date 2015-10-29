@@ -4,6 +4,8 @@ package activitydiagramTrace.Steps;
 
 import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Activitydiagram Activity Node Send Offers1</b></em>'.
@@ -13,6 +15,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
  * The following features are supported:
  * <ul>
  *   <li>{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1#getThis <em>This</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  * </p>
  *
@@ -20,7 +23,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_SendOffers1 extends Activitydiagram_ActivityNode_Execute_AbstractSubEvent, SmallStep {
+public interface Activitydiagram_ActivityNode_SendOffers1 extends Activitydiagram_ActivityNode_Execute_AbstractSubStep, BigStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,5 +49,21 @@ public interface Activitydiagram_ActivityNode_SendOffers1 extends Activitydiagra
 	 * @generated
 	 */
 	void setThis(TracedActivityNode value);
+
+	/**
+	 * Returns the value of the '<em><b>Sub Steps</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1_AbstractSubStep}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sub Steps</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sub Steps</em>' reference list.
+	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_ActivityNode_SendOffers1_SubSteps()
+	 * @model
+	 * @generated
+	 */
+	EList<Activitydiagram_ActivityNode_SendOffers1_AbstractSubStep> getSubSteps();
 
 } // Activitydiagram_ActivityNode_SendOffers1

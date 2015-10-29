@@ -99,7 +99,7 @@ class ActivityAspect extends NamedElementAspect {
 		_self.nodes.forEach[n|n.running = true]
 	}
 
-	Trace trace
+	//Trace trace
 
 	@OverrideAspectMethod
 	@Step
@@ -195,7 +195,7 @@ class NamedElementAspect {
 
 @Aspect(className=ActivityNode)
 class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.NamedElementAspect {
-	List<Token> heldTokens = new ArrayList<Token>
+	//List<Token> heldTokens = new ArrayList<Token>
 
 	@OverrideAspectMethod
 	@Step
@@ -259,7 +259,7 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.s
 
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
-	public List<Offer> offers = new ArrayList<Offer>
+	//public List<Offer> offers = new ArrayList<Offer>
 
 	def void sendOffer1(List<Token> tokens) {
 		val offer = ActivitydiagramFactory.eINSTANCE.createOffer;

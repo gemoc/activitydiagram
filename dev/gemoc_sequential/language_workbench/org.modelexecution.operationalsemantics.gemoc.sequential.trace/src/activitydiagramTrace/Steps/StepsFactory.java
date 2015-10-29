@@ -31,40 +31,49 @@ public interface StepsFactory extends EFactory {
 	Steps createSteps();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Variable Execute</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Reset</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Variable Execute</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Reset</em>'.
 	 * @generated
 	 */
-	Activitydiagram_Variable_Execute createActivitydiagram_Variable_Execute();
+	Activitydiagram_Activity_Reset createActivitydiagram_Activity_Reset();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Execute Fill Event</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Execute Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Execute Fill Event</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Node Execute Fill Step</em>'.
 	 * @generated
 	 */
-	Activitydiagram_Activity_Execute_FillEvent createActivitydiagram_Activity_Execute_FillEvent();
+	Activitydiagram_ActivityNode_Execute_FillStep createActivitydiagram_ActivityNode_Execute_FillStep();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Execute Fill Event</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Send Offers1 Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Execute Fill Event</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Node Send Offers1 Fill Step</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_Execute_FillEvent createActivitydiagram_ActivityNode_Execute_FillEvent();
+	Activitydiagram_ActivityNode_SendOffers1_FillStep createActivitydiagram_ActivityNode_SendOffers1_FillStep();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Event</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Add Tokens1 Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Event</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Node Add Tokens1 Fill Step</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillEvent();
+	Activitydiagram_ActivityNode_AddTokens1_FillStep createActivitydiagram_ActivityNode_AddTokens1_FillStep();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>'.
+	 * @generated
+	 */
+	Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Remove Token1</em>'.
@@ -76,40 +85,31 @@ public interface StepsFactory extends EFactory {
 	Activitydiagram_ActivityNode_RemoveToken1 createActivitydiagram_ActivityNode_RemoveToken1();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Add Tokens1 Fill Event</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Execute Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Add Tokens1 Fill Event</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Execute Fill Step</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_AddTokens1_FillEvent createActivitydiagram_ActivityNode_AddTokens1_FillEvent();
+	Activitydiagram_Activity_Execute_FillStep createActivitydiagram_Activity_Execute_FillStep();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Variable Init Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * @return a new object of class '<em>Activitydiagram Variable Init Fill Step</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_SendOffers1 createActivitydiagram_ActivityNode_SendOffers1();
+	Activitydiagram_Variable_Init_FillStep createActivitydiagram_Variable_Init_FillStep();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Variable Init</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Write Trace Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Variable Init</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Write Trace Fill Step</em>'.
 	 * @generated
 	 */
-	Activitydiagram_Variable_Init createActivitydiagram_Variable_Init();
-
-	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Reset</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Reset</em>'.
-	 * @generated
-	 */
-	Activitydiagram_Activity_Reset createActivitydiagram_Activity_Reset();
+	Activitydiagram_Activity_WriteTrace_FillStep createActivitydiagram_Activity_WriteTrace_FillStep();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Terminate</em>'.
@@ -130,31 +130,22 @@ public interface StepsFactory extends EFactory {
 	Activitydiagram_Activity_InitializeContext createActivitydiagram_Activity_InitializeContext();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Write Trace Fill Event</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Variable Execute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Write Trace Fill Event</em>'.
+	 * @return a new object of class '<em>Activitydiagram Variable Execute</em>'.
 	 * @generated
 	 */
-	Activitydiagram_Activity_WriteTrace_FillEvent createActivitydiagram_Activity_WriteTrace_FillEvent();
+	Activitydiagram_Variable_Execute createActivitydiagram_Variable_Execute();
 
 	/**
-	 * Returns a new object of class '<em>Fill Event</em>'.
+	 * Returns a new object of class '<em>Fill Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fill Event</em>'.
+	 * @return a new object of class '<em>Fill Step</em>'.
 	 * @generated
 	 */
-	FillEvent createFillEvent();
-
-	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Execute</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Execute</em>'.
-	 * @generated
-	 */
-	Activitydiagram_Activity_Execute createActivitydiagram_Activity_Execute();
+	FillStep createFillStep();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Execute</em>'.
@@ -166,13 +157,13 @@ public interface StepsFactory extends EFactory {
 	Activitydiagram_ActivityNode_Execute createActivitydiagram_ActivityNode_Execute();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
+	 * @return a new object of class '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * @generated
 	 */
-	Activitydiagram_ActivityNode_TakeOfferdTokens1 createActivitydiagram_ActivityNode_TakeOfferdTokens1();
+	Activitydiagram_ActivityNode_SendOffers1 createActivitydiagram_ActivityNode_SendOffers1();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Add Tokens1</em>'.
@@ -182,6 +173,33 @@ public interface StepsFactory extends EFactory {
 	 * @generated
 	 */
 	Activitydiagram_ActivityNode_AddTokens1 createActivitydiagram_ActivityNode_AddTokens1();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
+	 * @generated
+	 */
+	Activitydiagram_ActivityNode_TakeOfferdTokens1 createActivitydiagram_ActivityNode_TakeOfferdTokens1();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Activity Execute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Activity Execute</em>'.
+	 * @generated
+	 */
+	Activitydiagram_Activity_Execute createActivitydiagram_Activity_Execute();
+
+	/**
+	 * Returns a new object of class '<em>Activitydiagram Variable Init</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activitydiagram Variable Init</em>'.
+	 * @generated
+	 */
+	Activitydiagram_Variable_Init createActivitydiagram_Variable_Init();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Write Trace</em>'.

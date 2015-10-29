@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-  <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
-    <XDSML_Definition
-          modelLoader_class="org.gemoc.gemoc_language_workbench.extensions.sirius.modelloader.DefaultModelLoader"
-          name="xad_sequential"
-          xdsmlFilePath="/org.modelexecution.operationalsemantics.gemoc.sequential.xdsml/project.xdsml"/>
+  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition name="ad_exe" xdsmlFilePath="/org.modelexecution.operationalsemantics.gemoc.sequential.xdsml/project.xdsml" modelLoader_class="org.gemoc.gemoc_language_workbench.extensions.sirius.modelloader.DefaultModelLoader" />
   </extension>
 </plugin>

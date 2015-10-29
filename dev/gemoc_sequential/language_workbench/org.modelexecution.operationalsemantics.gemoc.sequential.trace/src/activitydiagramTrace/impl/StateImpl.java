@@ -51,20 +51,20 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagramTrace.impl.StateImpl#getFollowingStep <em>Following Step</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.StateImpl#getStartedBigSteps <em>Started Big Steps</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.StateImpl#getEndedBigSteps <em>Ended Big Steps</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getIntegerValue_value_Values <em>Integer Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getInput_inputValues_Values <em>Input input Values Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getBooleanValue_value_Values <em>Boolean Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getActivityEdge_offers_Values <em>Activity Edge offers Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getToken_holder_Values <em>Token holder Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getInputValue_value_Values <em>Input Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getInputValue_variable_Values <em>Input Value variable Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getActivityNode_heldTokens_Values <em>Activity Node held Tokens Values</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.StateImpl#getActivity_trace_Values <em>Activity trace Values</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.StateImpl#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.StateImpl#getVariable_currentValue_Values <em>Variable current Value Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getToken_holder_Values <em>Token holder Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getActivityEdge_offers_Values <em>Activity Edge offers Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getInputValue_variable_Values <em>Input Value variable Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getInputValue_value_Values <em>Input Value value Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getInput_inputValues_Values <em>Input input Values Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getActivity_trace_Values <em>Activity trace Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getBooleanValue_value_Values <em>Boolean Value value Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getActivityNode_heldTokens_Values <em>Activity Node held Tokens Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.impl.StateImpl#getIntegerValue_value_Values <em>Integer Value value Values</em>}</li>
  * </ul>
  * </p>
  *
@@ -102,54 +102,24 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	protected EList<BigStep> endedBigSteps;
 
 	/**
-	 * The cached value of the '{@link #getIntegerValue_value_Values() <em>Integer Value value Values</em>}' reference list.
+	 * The cached value of the '{@link #getOffer_offeredTokens_Values() <em>Offer offered Tokens Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIntegerValue_value_Values()
+	 * @see #getOffer_offeredTokens_Values()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IntegerValue_value_Value> integerValue_value_Values;
+	protected EList<Offer_offeredTokens_Value> offer_offeredTokens_Values;
 
 	/**
-	 * The cached value of the '{@link #getInput_inputValues_Values() <em>Input input Values Values</em>}' reference list.
+	 * The cached value of the '{@link #getVariable_currentValue_Values() <em>Variable current Value Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput_inputValues_Values()
+	 * @see #getVariable_currentValue_Values()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Input_inputValues_Value> input_inputValues_Values;
-
-	/**
-	 * The cached value of the '{@link #getBooleanValue_value_Values() <em>Boolean Value value Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBooleanValue_value_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BooleanValue_value_Value> booleanValue_value_Values;
-
-	/**
-	 * The cached value of the '{@link #getTrace_executedNodes_Values() <em>Trace executed Nodes Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTrace_executedNodes_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Trace_executedNodes_Value> trace_executedNodes_Values;
-
-	/**
-	 * The cached value of the '{@link #getActivityEdge_offers_Values() <em>Activity Edge offers Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActivityEdge_offers_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ActivityEdge_offers_Value> activityEdge_offers_Values;
+	protected EList<Variable_currentValue_Value> variable_currentValue_Values;
 
 	/**
 	 * The cached value of the '{@link #getToken_holder_Values() <em>Token holder Values</em>}' reference list.
@@ -162,14 +132,14 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	protected EList<Token_holder_Value> token_holder_Values;
 
 	/**
-	 * The cached value of the '{@link #getInputValue_value_Values() <em>Input Value value Values</em>}' reference list.
+	 * The cached value of the '{@link #getActivityEdge_offers_Values() <em>Activity Edge offers Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputValue_value_Values()
+	 * @see #getActivityEdge_offers_Values()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InputValue_value_Value> inputValue_value_Values;
+	protected EList<ActivityEdge_offers_Value> activityEdge_offers_Values;
 
 	/**
 	 * The cached value of the '{@link #getInputValue_variable_Values() <em>Input Value variable Values</em>}' reference list.
@@ -180,6 +150,46 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * @ordered
 	 */
 	protected EList<InputValue_variable_Value> inputValue_variable_Values;
+
+	/**
+	 * The cached value of the '{@link #getInputValue_value_Values() <em>Input Value value Values</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputValue_value_Values()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<InputValue_value_Value> inputValue_value_Values;
+
+	/**
+	 * The cached value of the '{@link #getInput_inputValues_Values() <em>Input input Values Values</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput_inputValues_Values()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Input_inputValues_Value> input_inputValues_Values;
+
+	/**
+	 * The cached value of the '{@link #getActivity_trace_Values() <em>Activity trace Values</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivity_trace_Values()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Activity_trace_Value> activity_trace_Values;
+
+	/**
+	 * The cached value of the '{@link #getTrace_executedNodes_Values() <em>Trace executed Nodes Values</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrace_executedNodes_Values()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Trace_executedNodes_Value> trace_executedNodes_Values;
 
 	/**
 	 * The cached value of the '{@link #getForkedToken_remainingOffersCount_Values() <em>Forked Token remaining Offers Count Values</em>}' reference list.
@@ -202,6 +212,16 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	protected EList<ForkedToken_baseToken_Value> forkedToken_baseToken_Values;
 
 	/**
+	 * The cached value of the '{@link #getBooleanValue_value_Values() <em>Boolean Value value Values</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanValue_value_Values()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BooleanValue_value_Value> booleanValue_value_Values;
+
+	/**
 	 * The cached value of the '{@link #getActivityNode_heldTokens_Values() <em>Activity Node held Tokens Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,34 +232,14 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	protected EList<ActivityNode_heldTokens_Value> activityNode_heldTokens_Values;
 
 	/**
-	 * The cached value of the '{@link #getActivity_trace_Values() <em>Activity trace Values</em>}' reference list.
+	 * The cached value of the '{@link #getIntegerValue_value_Values() <em>Integer Value value Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActivity_trace_Values()
+	 * @see #getIntegerValue_value_Values()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Activity_trace_Value> activity_trace_Values;
-
-	/**
-	 * The cached value of the '{@link #getOffer_offeredTokens_Values() <em>Offer offered Tokens Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffer_offeredTokens_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Offer_offeredTokens_Value> offer_offeredTokens_Values;
-
-	/**
-	 * The cached value of the '{@link #getVariable_currentValue_Values() <em>Variable current Value Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVariable_currentValue_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Variable_currentValue_Value> variable_currentValue_Values;
+	protected EList<IntegerValue_value_Value> integerValue_value_Values;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,11 +349,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IntegerValue_value_Value> getIntegerValue_value_Values() {
-		if (integerValue_value_Values == null) {
-			integerValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<IntegerValue_value_Value>(IntegerValue_value_Value.class, this, ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES, ValuesPackage.INTEGER_VALUE_VALUE_VALUE__STATES);
+	public EList<Offer_offeredTokens_Value> getOffer_offeredTokens_Values() {
+		if (offer_offeredTokens_Values == null) {
+			offer_offeredTokens_Values = new EObjectWithInverseResolvingEList.ManyInverse<Offer_offeredTokens_Value>(Offer_offeredTokens_Value.class, this, ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES, ValuesPackage.OFFER_OFFERED_TOKENS_VALUE__STATES);
 		}
-		return integerValue_value_Values;
+		return offer_offeredTokens_Values;
 	}
 
 	/**
@@ -361,47 +361,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Input_inputValues_Value> getInput_inputValues_Values() {
-		if (input_inputValues_Values == null) {
-			input_inputValues_Values = new EObjectWithInverseResolvingEList.ManyInverse<Input_inputValues_Value>(Input_inputValues_Value.class, this, ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES, ValuesPackage.INPUT_INPUT_VALUES_VALUE__STATES);
+	public EList<Variable_currentValue_Value> getVariable_currentValue_Values() {
+		if (variable_currentValue_Values == null) {
+			variable_currentValue_Values = new EObjectWithInverseResolvingEList.ManyInverse<Variable_currentValue_Value>(Variable_currentValue_Value.class, this, ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES, ValuesPackage.VARIABLE_CURRENT_VALUE_VALUE__STATES);
 		}
-		return input_inputValues_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<BooleanValue_value_Value> getBooleanValue_value_Values() {
-		if (booleanValue_value_Values == null) {
-			booleanValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<BooleanValue_value_Value>(BooleanValue_value_Value.class, this, ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES, ValuesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES);
-		}
-		return booleanValue_value_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Trace_executedNodes_Value> getTrace_executedNodes_Values() {
-		if (trace_executedNodes_Values == null) {
-			trace_executedNodes_Values = new EObjectWithInverseResolvingEList.ManyInverse<Trace_executedNodes_Value>(Trace_executedNodes_Value.class, this, ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES, ValuesPackage.TRACE_EXECUTED_NODES_VALUE__STATES);
-		}
-		return trace_executedNodes_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ActivityEdge_offers_Value> getActivityEdge_offers_Values() {
-		if (activityEdge_offers_Values == null) {
-			activityEdge_offers_Values = new EObjectWithInverseResolvingEList.ManyInverse<ActivityEdge_offers_Value>(ActivityEdge_offers_Value.class, this, ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES, ValuesPackage.ACTIVITY_EDGE_OFFERS_VALUE__STATES);
-		}
-		return activityEdge_offers_Values;
+		return variable_currentValue_Values;
 	}
 
 	/**
@@ -421,11 +385,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InputValue_value_Value> getInputValue_value_Values() {
-		if (inputValue_value_Values == null) {
-			inputValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<InputValue_value_Value>(InputValue_value_Value.class, this, ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES, ValuesPackage.INPUT_VALUE_VALUE_VALUE__STATES);
+	public EList<ActivityEdge_offers_Value> getActivityEdge_offers_Values() {
+		if (activityEdge_offers_Values == null) {
+			activityEdge_offers_Values = new EObjectWithInverseResolvingEList.ManyInverse<ActivityEdge_offers_Value>(ActivityEdge_offers_Value.class, this, ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES, ValuesPackage.ACTIVITY_EDGE_OFFERS_VALUE__STATES);
 		}
-		return inputValue_value_Values;
+		return activityEdge_offers_Values;
 	}
 
 	/**
@@ -438,6 +402,54 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			inputValue_variable_Values = new EObjectWithInverseResolvingEList.ManyInverse<InputValue_variable_Value>(InputValue_variable_Value.class, this, ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES, ValuesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES);
 		}
 		return inputValue_variable_Values;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<InputValue_value_Value> getInputValue_value_Values() {
+		if (inputValue_value_Values == null) {
+			inputValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<InputValue_value_Value>(InputValue_value_Value.class, this, ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES, ValuesPackage.INPUT_VALUE_VALUE_VALUE__STATES);
+		}
+		return inputValue_value_Values;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Input_inputValues_Value> getInput_inputValues_Values() {
+		if (input_inputValues_Values == null) {
+			input_inputValues_Values = new EObjectWithInverseResolvingEList.ManyInverse<Input_inputValues_Value>(Input_inputValues_Value.class, this, ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES, ValuesPackage.INPUT_INPUT_VALUES_VALUE__STATES);
+		}
+		return input_inputValues_Values;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Activity_trace_Value> getActivity_trace_Values() {
+		if (activity_trace_Values == null) {
+			activity_trace_Values = new EObjectWithInverseResolvingEList.ManyInverse<Activity_trace_Value>(Activity_trace_Value.class, this, ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES, ValuesPackage.ACTIVITY_TRACE_VALUE__STATES);
+		}
+		return activity_trace_Values;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Trace_executedNodes_Value> getTrace_executedNodes_Values() {
+		if (trace_executedNodes_Values == null) {
+			trace_executedNodes_Values = new EObjectWithInverseResolvingEList.ManyInverse<Trace_executedNodes_Value>(Trace_executedNodes_Value.class, this, ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES, ValuesPackage.TRACE_EXECUTED_NODES_VALUE__STATES);
+		}
+		return trace_executedNodes_Values;
 	}
 
 	/**
@@ -469,6 +481,18 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<BooleanValue_value_Value> getBooleanValue_value_Values() {
+		if (booleanValue_value_Values == null) {
+			booleanValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<BooleanValue_value_Value>(BooleanValue_value_Value.class, this, ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES, ValuesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES);
+		}
+		return booleanValue_value_Values;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<ActivityNode_heldTokens_Value> getActivityNode_heldTokens_Values() {
 		if (activityNode_heldTokens_Values == null) {
 			activityNode_heldTokens_Values = new EObjectWithInverseResolvingEList.ManyInverse<ActivityNode_heldTokens_Value>(ActivityNode_heldTokens_Value.class, this, ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES, ValuesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE__STATES);
@@ -481,35 +505,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activity_trace_Value> getActivity_trace_Values() {
-		if (activity_trace_Values == null) {
-			activity_trace_Values = new EObjectWithInverseResolvingEList.ManyInverse<Activity_trace_Value>(Activity_trace_Value.class, this, ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES, ValuesPackage.ACTIVITY_TRACE_VALUE__STATES);
+	public EList<IntegerValue_value_Value> getIntegerValue_value_Values() {
+		if (integerValue_value_Values == null) {
+			integerValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<IntegerValue_value_Value>(IntegerValue_value_Value.class, this, ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES, ValuesPackage.INTEGER_VALUE_VALUE_VALUE__STATES);
 		}
-		return activity_trace_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Offer_offeredTokens_Value> getOffer_offeredTokens_Values() {
-		if (offer_offeredTokens_Values == null) {
-			offer_offeredTokens_Values = new EObjectWithInverseResolvingEList.ManyInverse<Offer_offeredTokens_Value>(Offer_offeredTokens_Value.class, this, ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES, ValuesPackage.OFFER_OFFERED_TOKENS_VALUE__STATES);
-		}
-		return offer_offeredTokens_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Variable_currentValue_Value> getVariable_currentValue_Values() {
-		if (variable_currentValue_Values == null) {
-			variable_currentValue_Values = new EObjectWithInverseResolvingEList.ManyInverse<Variable_currentValue_Value>(Variable_currentValue_Value.class, this, ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES, ValuesPackage.VARIABLE_CURRENT_VALUE_VALUE__STATES);
-		}
-		return variable_currentValue_Values;
+		return integerValue_value_Values;
 	}
 
 	/**
@@ -529,34 +529,34 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStartedBigSteps()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEndedBigSteps()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIntegerValue_value_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInput_inputValues_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBooleanValue_value_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTrace_executedNodes_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivityEdge_offers_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getToken_holder_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputValue_value_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputValue_variable_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getForkedToken_remainingOffersCount_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getForkedToken_baseToken_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivityNode_heldTokens_Values()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivity_trace_Values()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOffer_offeredTokens_Values()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVariable_currentValue_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getToken_holder_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivityEdge_offers_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputValue_variable_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputValue_value_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInput_inputValues_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivity_trace_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTrace_executedNodes_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getForkedToken_remainingOffersCount_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getForkedToken_baseToken_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBooleanValue_value_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivityNode_heldTokens_Values()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIntegerValue_value_Values()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -575,34 +575,34 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return ((InternalEList<?>)getStartedBigSteps()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS:
 				return ((InternalEList<?>)getEndedBigSteps()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
-				return ((InternalEList<?>)getIntegerValue_value_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return ((InternalEList<?>)getInput_inputValues_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
-				return ((InternalEList<?>)getBooleanValue_value_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
-				return ((InternalEList<?>)getTrace_executedNodes_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
-				return ((InternalEList<?>)getActivityEdge_offers_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
-				return ((InternalEList<?>)getToken_holder_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return ((InternalEList<?>)getInputValue_value_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return ((InternalEList<?>)getInputValue_variable_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
-				return ((InternalEList<?>)getForkedToken_remainingOffersCount_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
-				return ((InternalEList<?>)getForkedToken_baseToken_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
-				return ((InternalEList<?>)getActivityNode_heldTokens_Values()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
-				return ((InternalEList<?>)getActivity_trace_Values()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
 				return ((InternalEList<?>)getOffer_offeredTokens_Values()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
 				return ((InternalEList<?>)getVariable_currentValue_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
+				return ((InternalEList<?>)getToken_holder_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
+				return ((InternalEList<?>)getActivityEdge_offers_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
+				return ((InternalEList<?>)getInputValue_variable_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
+				return ((InternalEList<?>)getInputValue_value_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
+				return ((InternalEList<?>)getInput_inputValues_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
+				return ((InternalEList<?>)getActivity_trace_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
+				return ((InternalEList<?>)getTrace_executedNodes_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
+				return ((InternalEList<?>)getForkedToken_remainingOffersCount_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
+				return ((InternalEList<?>)getForkedToken_baseToken_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
+				return ((InternalEList<?>)getBooleanValue_value_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
+				return ((InternalEList<?>)getActivityNode_heldTokens_Values()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
+				return ((InternalEList<?>)getIntegerValue_value_Values()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -622,34 +622,34 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return getStartedBigSteps();
 			case ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS:
 				return getEndedBigSteps();
-			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
-				return getIntegerValue_value_Values();
-			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return getInput_inputValues_Values();
-			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
-				return getBooleanValue_value_Values();
-			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
-				return getTrace_executedNodes_Values();
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
-				return getActivityEdge_offers_Values();
-			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
-				return getToken_holder_Values();
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return getInputValue_value_Values();
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return getInputValue_variable_Values();
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
-				return getForkedToken_remainingOffersCount_Values();
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
-				return getForkedToken_baseToken_Values();
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
-				return getActivityNode_heldTokens_Values();
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
-				return getActivity_trace_Values();
 			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
 				return getOffer_offeredTokens_Values();
 			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
 				return getVariable_currentValue_Values();
+			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
+				return getToken_holder_Values();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
+				return getActivityEdge_offers_Values();
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
+				return getInputValue_variable_Values();
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
+				return getInputValue_value_Values();
+			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
+				return getInput_inputValues_Values();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
+				return getActivity_trace_Values();
+			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
+				return getTrace_executedNodes_Values();
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
+				return getForkedToken_remainingOffersCount_Values();
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
+				return getForkedToken_baseToken_Values();
+			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
+				return getBooleanValue_value_Values();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
+				return getActivityNode_heldTokens_Values();
+			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
+				return getIntegerValue_value_Values();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -674,37 +674,41 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				getEndedBigSteps().clear();
 				getEndedBigSteps().addAll((Collection<? extends BigStep>)newValue);
 				return;
-			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
-				getIntegerValue_value_Values().clear();
-				getIntegerValue_value_Values().addAll((Collection<? extends IntegerValue_value_Value>)newValue);
+			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
+				getOffer_offeredTokens_Values().clear();
+				getOffer_offeredTokens_Values().addAll((Collection<? extends Offer_offeredTokens_Value>)newValue);
 				return;
-			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				getInput_inputValues_Values().clear();
-				getInput_inputValues_Values().addAll((Collection<? extends Input_inputValues_Value>)newValue);
-				return;
-			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
-				getBooleanValue_value_Values().clear();
-				getBooleanValue_value_Values().addAll((Collection<? extends BooleanValue_value_Value>)newValue);
-				return;
-			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
-				getTrace_executedNodes_Values().clear();
-				getTrace_executedNodes_Values().addAll((Collection<? extends Trace_executedNodes_Value>)newValue);
-				return;
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
-				getActivityEdge_offers_Values().clear();
-				getActivityEdge_offers_Values().addAll((Collection<? extends ActivityEdge_offers_Value>)newValue);
+			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
+				getVariable_currentValue_Values().clear();
+				getVariable_currentValue_Values().addAll((Collection<? extends Variable_currentValue_Value>)newValue);
 				return;
 			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
 				getToken_holder_Values().clear();
 				getToken_holder_Values().addAll((Collection<? extends Token_holder_Value>)newValue);
 				return;
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				getInputValue_value_Values().clear();
-				getInputValue_value_Values().addAll((Collection<? extends InputValue_value_Value>)newValue);
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
+				getActivityEdge_offers_Values().clear();
+				getActivityEdge_offers_Values().addAll((Collection<? extends ActivityEdge_offers_Value>)newValue);
 				return;
 			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
 				getInputValue_variable_Values().clear();
 				getInputValue_variable_Values().addAll((Collection<? extends InputValue_variable_Value>)newValue);
+				return;
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
+				getInputValue_value_Values().clear();
+				getInputValue_value_Values().addAll((Collection<? extends InputValue_value_Value>)newValue);
+				return;
+			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
+				getInput_inputValues_Values().clear();
+				getInput_inputValues_Values().addAll((Collection<? extends Input_inputValues_Value>)newValue);
+				return;
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
+				getActivity_trace_Values().clear();
+				getActivity_trace_Values().addAll((Collection<? extends Activity_trace_Value>)newValue);
+				return;
+			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
+				getTrace_executedNodes_Values().clear();
+				getTrace_executedNodes_Values().addAll((Collection<? extends Trace_executedNodes_Value>)newValue);
 				return;
 			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				getForkedToken_remainingOffersCount_Values().clear();
@@ -714,21 +718,17 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				getForkedToken_baseToken_Values().clear();
 				getForkedToken_baseToken_Values().addAll((Collection<? extends ForkedToken_baseToken_Value>)newValue);
 				return;
+			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
+				getBooleanValue_value_Values().clear();
+				getBooleanValue_value_Values().addAll((Collection<? extends BooleanValue_value_Value>)newValue);
+				return;
 			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
 				getActivityNode_heldTokens_Values().clear();
 				getActivityNode_heldTokens_Values().addAll((Collection<? extends ActivityNode_heldTokens_Value>)newValue);
 				return;
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
-				getActivity_trace_Values().clear();
-				getActivity_trace_Values().addAll((Collection<? extends Activity_trace_Value>)newValue);
-				return;
-			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
-				getOffer_offeredTokens_Values().clear();
-				getOffer_offeredTokens_Values().addAll((Collection<? extends Offer_offeredTokens_Value>)newValue);
-				return;
-			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
-				getVariable_currentValue_Values().clear();
-				getVariable_currentValue_Values().addAll((Collection<? extends Variable_currentValue_Value>)newValue);
+			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
+				getIntegerValue_value_Values().clear();
+				getIntegerValue_value_Values().addAll((Collection<? extends IntegerValue_value_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -751,29 +751,32 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			case ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS:
 				getEndedBigSteps().clear();
 				return;
-			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
-				getIntegerValue_value_Values().clear();
+			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
+				getOffer_offeredTokens_Values().clear();
 				return;
-			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				getInput_inputValues_Values().clear();
-				return;
-			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
-				getBooleanValue_value_Values().clear();
-				return;
-			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
-				getTrace_executedNodes_Values().clear();
-				return;
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
-				getActivityEdge_offers_Values().clear();
+			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
+				getVariable_currentValue_Values().clear();
 				return;
 			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
 				getToken_holder_Values().clear();
 				return;
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				getInputValue_value_Values().clear();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
+				getActivityEdge_offers_Values().clear();
 				return;
 			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
 				getInputValue_variable_Values().clear();
+				return;
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
+				getInputValue_value_Values().clear();
+				return;
+			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
+				getInput_inputValues_Values().clear();
+				return;
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
+				getActivity_trace_Values().clear();
+				return;
+			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
+				getTrace_executedNodes_Values().clear();
 				return;
 			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				getForkedToken_remainingOffersCount_Values().clear();
@@ -781,17 +784,14 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
 				getForkedToken_baseToken_Values().clear();
 				return;
+			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
+				getBooleanValue_value_Values().clear();
+				return;
 			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
 				getActivityNode_heldTokens_Values().clear();
 				return;
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
-				getActivity_trace_Values().clear();
-				return;
-			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
-				getOffer_offeredTokens_Values().clear();
-				return;
-			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
-				getVariable_currentValue_Values().clear();
+			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
+				getIntegerValue_value_Values().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -811,34 +811,34 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return startedBigSteps != null && !startedBigSteps.isEmpty();
 			case ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS:
 				return endedBigSteps != null && !endedBigSteps.isEmpty();
-			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
-				return integerValue_value_Values != null && !integerValue_value_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return input_inputValues_Values != null && !input_inputValues_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
-				return booleanValue_value_Values != null && !booleanValue_value_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
-				return trace_executedNodes_Values != null && !trace_executedNodes_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
-				return activityEdge_offers_Values != null && !activityEdge_offers_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
-				return token_holder_Values != null && !token_holder_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return inputValue_value_Values != null && !inputValue_value_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return inputValue_variable_Values != null && !inputValue_variable_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
-				return forkedToken_remainingOffersCount_Values != null && !forkedToken_remainingOffersCount_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
-				return forkedToken_baseToken_Values != null && !forkedToken_baseToken_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
-				return activityNode_heldTokens_Values != null && !activityNode_heldTokens_Values.isEmpty();
-			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
-				return activity_trace_Values != null && !activity_trace_Values.isEmpty();
 			case ActivitydiagramTracePackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
 				return offer_offeredTokens_Values != null && !offer_offeredTokens_Values.isEmpty();
 			case ActivitydiagramTracePackage.STATE__VARIABLE_CURRENT_VALUE_VALUES:
 				return variable_currentValue_Values != null && !variable_currentValue_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__TOKEN_HOLDER_VALUES:
+				return token_holder_Values != null && !token_holder_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_EDGE_OFFERS_VALUES:
+				return activityEdge_offers_Values != null && !activityEdge_offers_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
+				return inputValue_variable_Values != null && !inputValue_variable_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__INPUT_VALUE_VALUE_VALUES:
+				return inputValue_value_Values != null && !inputValue_value_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__INPUT_INPUT_VALUES_VALUES:
+				return input_inputValues_Values != null && !input_inputValues_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_TRACE_VALUES:
+				return activity_trace_Values != null && !activity_trace_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__TRACE_EXECUTED_NODES_VALUES:
+				return trace_executedNodes_Values != null && !trace_executedNodes_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
+				return forkedToken_remainingOffersCount_Values != null && !forkedToken_remainingOffersCount_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__FORKED_TOKEN_BASE_TOKEN_VALUES:
+				return forkedToken_baseToken_Values != null && !forkedToken_baseToken_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__BOOLEAN_VALUE_VALUE_VALUES:
+				return booleanValue_value_Values != null && !booleanValue_value_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES:
+				return activityNode_heldTokens_Values != null && !activityNode_heldTokens_Values.isEmpty();
+			case ActivitydiagramTracePackage.STATE__INTEGER_VALUE_VALUE_VALUES:
+				return integerValue_value_Values != null && !integerValue_value_Values.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

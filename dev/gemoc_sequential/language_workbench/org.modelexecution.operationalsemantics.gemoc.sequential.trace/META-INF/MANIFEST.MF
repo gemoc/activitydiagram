@@ -29,7 +29,7 @@ Require-Bundle: org.eclipse.core.runtime,
  fr.inria.diverse.trace.gemoc,
  org.gemoc.gemoc_language_workbench.api,
  org.gemoc.execution.engine.trace.model,
- org.gemoc.execution.engine.io,
+ org.gemoc.sequential_addons.multidimensional.timeline,
  fr.obeo.timeline
 Bundle-ActivationPolicy: lazy
 

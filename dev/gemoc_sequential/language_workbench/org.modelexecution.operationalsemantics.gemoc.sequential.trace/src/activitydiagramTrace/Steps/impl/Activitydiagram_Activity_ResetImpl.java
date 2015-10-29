@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity_WriteTrace_AbstractSubEventImpl implements Activitydiagram_Activity_Reset {
+public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity_WriteTrace_AbstractSubStepImpl implements Activitydiagram_Activity_Reset {
 	/**
 	 * The cached value of the '{@link #getPrecedingState() <em>Preceding State</em>}' reference.
 	 * <!-- begin-user-doc -->

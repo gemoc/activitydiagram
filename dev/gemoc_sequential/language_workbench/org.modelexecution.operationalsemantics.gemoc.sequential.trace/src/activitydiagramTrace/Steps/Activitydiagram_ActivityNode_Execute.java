@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Activity_Execute_AbstractSubEvent, BigStep {
+public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Activity_Execute_AbstractSubStep, BigStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Ac
 
 	/**
 	 * Returns the value of the '<em><b>Sub Steps</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubEvent}.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sub Steps</em>' reference list isn't clear,
@@ -64,6 +64,6 @@ public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Ac
 	 * @model
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_Execute_AbstractSubEvent> getSubSteps();
+	EList<Activitydiagram_ActivityNode_Execute_AbstractSubStep> getSubSteps();
 
 } // Activitydiagram_ActivityNode_Execute

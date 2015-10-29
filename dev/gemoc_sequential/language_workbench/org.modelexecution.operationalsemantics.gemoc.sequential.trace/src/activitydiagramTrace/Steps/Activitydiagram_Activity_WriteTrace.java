@@ -52,7 +52,7 @@ public interface Activitydiagram_Activity_WriteTrace extends BigStep {
 
 	/**
 	 * Returns the value of the '<em><b>Sub Steps</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_AbstractSubEvent}.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_AbstractSubStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sub Steps</em>' reference list isn't clear,
@@ -64,6 +64,6 @@ public interface Activitydiagram_Activity_WriteTrace extends BigStep {
 	 * @model
 	 * @generated
 	 */
-	EList<Activitydiagram_Activity_WriteTrace_AbstractSubEvent> getSubSteps();
+	EList<Activitydiagram_Activity_WriteTrace_AbstractSubStep> getSubSteps();
 
 } // Activitydiagram_Activity_WriteTrace
