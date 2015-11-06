@@ -2,10 +2,10 @@
  */
 package activitydiagramTrace.Steps.impl;
 
+import activitydiagram.Variable;
+
 import activitydiagramTrace.Steps.Activitydiagram_Variable_Execute;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import activitydiagramTrace.Traced.activitydiagram.TracedVariable;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -36,7 +36,7 @@ public class Activitydiagram_Variable_ExecuteImpl extends SmallStepImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedVariable this_;
+	protected Variable this_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,10 @@ public class Activitydiagram_Variable_ExecuteImpl extends SmallStepImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedVariable getThis() {
+	public Variable getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedVariable)eResolveProxy(oldThis);
+			this_ = (Variable)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE__THIS, oldThis, this_));
@@ -79,7 +79,7 @@ public class Activitydiagram_Variable_ExecuteImpl extends SmallStepImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedVariable basicGetThis() {
+	public Variable basicGetThis() {
 		return this_;
 	}
 
@@ -88,8 +88,8 @@ public class Activitydiagram_Variable_ExecuteImpl extends SmallStepImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedVariable newThis) {
-		TracedVariable oldThis = this_;
+	public void setThis(Variable newThis) {
+		Variable oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE__THIS, oldThis, this_));
@@ -119,7 +119,7 @@ public class Activitydiagram_Variable_ExecuteImpl extends SmallStepImpl implemen
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE__THIS:
-				setThis((TracedVariable)newValue);
+				setThis((Variable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,7 +134,7 @@ public class Activitydiagram_Variable_ExecuteImpl extends SmallStepImpl implemen
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_EXECUTE__THIS:
-				setThis((TracedVariable)null);
+				setThis((Variable)null);
 				return;
 		}
 		super.eUnset(featureID);

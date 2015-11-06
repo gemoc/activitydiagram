@@ -57,7 +57,6 @@ public class ActivitydiagramTraceFactoryImpl extends EFactoryImpl implements Act
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ActivitydiagramTracePackage.TRACE: return createTrace();
-			case ActivitydiagramTracePackage.STATE: return createState();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,16 +70,6 @@ public class ActivitydiagramTraceFactoryImpl extends EFactoryImpl implements Act
 	public Trace createTrace() {
 		TraceImpl trace = new TraceImpl();
 		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State createState() {
-		StateImpl state = new StateImpl();
-		return state;
 	}
 
 	/**

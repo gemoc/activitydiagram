@@ -2,14 +2,15 @@
  */
 package activitydiagramTrace.Steps.impl;
 
-import activitydiagramTrace.ActivitydiagramTracePackage;
-import activitydiagramTrace.State;
+import activitydiagram.Activity;
+
+import activitydiagramTrace.States.State;
+import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.Steps.Activitydiagram_Activity_Reset;
 import activitydiagramTrace.Steps.SmallStep;
+import activitydiagramTrace.Steps.Step;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,7 +27,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_ResetImpl#getPrecedingState <em>Preceding State</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_ResetImpl#getStartingState <em>Starting State</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_ResetImpl#getEndingState <em>Ending State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_ResetImpl#getThis <em>This</em>}</li>
  * </ul>
  * </p>
@@ -35,14 +37,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity_WriteTrace_AbstractSubStepImpl implements Activitydiagram_Activity_Reset {
 	/**
-	 * The cached value of the '{@link #getPrecedingState() <em>Preceding State</em>}' reference.
+	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrecedingState()
+	 * @see #getStartingState()
 	 * @generated
 	 * @ordered
 	 */
-	protected State precedingState;
+	protected State startingState;
+
+	/**
+	 * The cached value of the '{@link #getEndingState() <em>Ending State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndingState()
+	 * @generated
+	 * @ordered
+	 */
+	protected State endingState;
 
 	/**
 	 * The cached value of the '{@link #getThis() <em>This</em>}' reference.
@@ -52,7 +64,7 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivity this_;
+	protected Activity this_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,16 +90,16 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getPrecedingState() {
-		if (precedingState != null && precedingState.eIsProxy()) {
-			InternalEObject oldPrecedingState = (InternalEObject)precedingState;
-			precedingState = (State)eResolveProxy(oldPrecedingState);
-			if (precedingState != oldPrecedingState) {
+	public State getStartingState() {
+		if (startingState != null && startingState.eIsProxy()) {
+			InternalEObject oldStartingState = (InternalEObject)startingState;
+			startingState = (State)eResolveProxy(oldStartingState);
+			if (startingState != oldStartingState) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE, oldPrecedingState, precedingState));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE, oldStartingState, startingState));
 			}
 		}
-		return precedingState;
+		return startingState;
 	}
 
 	/**
@@ -95,8 +107,8 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State basicGetPrecedingState() {
-		return precedingState;
+	public State basicGetStartingState() {
+		return startingState;
 	}
 
 	/**
@@ -104,11 +116,11 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrecedingState(State newPrecedingState, NotificationChain msgs) {
-		State oldPrecedingState = precedingState;
-		precedingState = newPrecedingState;
+	public NotificationChain basicSetStartingState(State newStartingState, NotificationChain msgs) {
+		State oldStartingState = startingState;
+		startingState = newStartingState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE, oldPrecedingState, newPrecedingState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE, oldStartingState, newStartingState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -119,18 +131,18 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrecedingState(State newPrecedingState) {
-		if (newPrecedingState != precedingState) {
+	public void setStartingState(State newStartingState) {
+		if (newStartingState != startingState) {
 			NotificationChain msgs = null;
-			if (precedingState != null)
-				msgs = ((InternalEObject)precedingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__FOLLOWING_STEP, State.class, msgs);
-			if (newPrecedingState != null)
-				msgs = ((InternalEObject)newPrecedingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__FOLLOWING_STEP, State.class, msgs);
-			msgs = basicSetPrecedingState(newPrecedingState, msgs);
+			if (startingState != null)
+				msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
+			if (newStartingState != null)
+				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
+			msgs = basicSetStartingState(newStartingState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE, newPrecedingState, newPrecedingState));
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE, newStartingState, newStartingState));
 	}
 
 	/**
@@ -138,10 +150,70 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity getThis() {
+	public State getEndingState() {
+		if (endingState != null && endingState.eIsProxy()) {
+			InternalEObject oldEndingState = (InternalEObject)endingState;
+			endingState = (State)eResolveProxy(oldEndingState);
+			if (endingState != oldEndingState) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE, oldEndingState, endingState));
+			}
+		}
+		return endingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State basicGetEndingState() {
+		return endingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEndingState(State newEndingState, NotificationChain msgs) {
+		State oldEndingState = endingState;
+		endingState = newEndingState;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE, oldEndingState, newEndingState);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEndingState(State newEndingState) {
+		if (newEndingState != endingState) {
+			NotificationChain msgs = null;
+			if (endingState != null)
+				msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
+			if (newEndingState != null)
+				msgs = ((InternalEObject)newEndingState).eInverseAdd(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
+			msgs = basicSetEndingState(newEndingState, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE, newEndingState, newEndingState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activity getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedActivity)eResolveProxy(oldThis);
+			this_ = (Activity)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__THIS, oldThis, this_));
@@ -155,7 +227,7 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity basicGetThis() {
+	public Activity basicGetThis() {
 		return this_;
 	}
 
@@ -164,8 +236,8 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedActivity newThis) {
-		TracedActivity oldThis = this_;
+	public void setThis(Activity newThis) {
+		Activity oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__THIS, oldThis, this_));
@@ -179,10 +251,14 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE:
-				if (precedingState != null)
-					msgs = ((InternalEObject)precedingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__FOLLOWING_STEP, State.class, msgs);
-				return basicSetPrecedingState((State)otherEnd, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE:
+				if (startingState != null)
+					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
+				return basicSetStartingState((State)otherEnd, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE:
+				if (endingState != null)
+					msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
+				return basicSetEndingState((State)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -195,8 +271,10 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE:
-				return basicSetPrecedingState(null, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE:
+				return basicSetStartingState(null, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE:
+				return basicSetEndingState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,9 +287,12 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE:
-				if (resolve) return getPrecedingState();
-				return basicGetPrecedingState();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE:
+				if (resolve) return getStartingState();
+				return basicGetStartingState();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE:
+				if (resolve) return getEndingState();
+				return basicGetEndingState();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__THIS:
 				if (resolve) return getThis();
 				return basicGetThis();
@@ -227,11 +308,14 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE:
-				setPrecedingState((State)newValue);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE:
+				setStartingState((State)newValue);
+				return;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE:
+				setEndingState((State)newValue);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__THIS:
-				setThis((TracedActivity)newValue);
+				setThis((Activity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,11 +329,14 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE:
-				setPrecedingState((State)null);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE:
+				setStartingState((State)null);
+				return;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE:
+				setEndingState((State)null);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__THIS:
-				setThis((TracedActivity)null);
+				setThis((Activity)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -263,8 +350,10 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE:
-				return precedingState != null;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE:
+				return startingState != null;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE:
+				return endingState != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__THIS:
 				return this_ != null;
 		}
@@ -278,9 +367,15 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Step.class) {
+			switch (derivedFeatureID) {
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE: return StepsPackage.STEP__STARTING_STATE;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE: return StepsPackage.STEP__ENDING_STATE;
+				default: return -1;
+			}
+		}
 		if (baseClass == SmallStep.class) {
 			switch (derivedFeatureID) {
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE: return StepsPackage.SMALL_STEP__PRECEDING_STATE;
 				default: return -1;
 			}
 		}
@@ -294,9 +389,15 @@ public class Activitydiagram_Activity_ResetImpl extends Activitydiagram_Activity
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Step.class) {
+			switch (baseFeatureID) {
+				case StepsPackage.STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__STARTING_STATE;
+				case StepsPackage.STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__ENDING_STATE;
+				default: return -1;
+			}
+		}
 		if (baseClass == SmallStep.class) {
 			switch (baseFeatureID) {
-				case StepsPackage.SMALL_STEP__PRECEDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET__PRECEDING_STATE;
 				default: return -1;
 			}
 		}

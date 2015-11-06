@@ -2,7 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
+import activitydiagram.ActivityNode;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_AddTokens1 extends Activitydiagram_ActivityNode_Execute_AbstractSubStep, BigStep {
+public interface Activitydiagram_ActivityNode_AddTokens1 extends Activitydiagram_Activity_Execute_AbstractSubStep, BigStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -33,12 +33,12 @@ public interface Activitydiagram_ActivityNode_AddTokens1 extends Activitydiagram
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedActivityNode)
+	 * @see #setThis(ActivityNode)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_ActivityNode_AddTokens1_This()
 	 * @model
 	 * @generated
 	 */
-	TracedActivityNode getThis();
+	ActivityNode getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1#getThis <em>This</em>}' reference.
@@ -48,20 +48,20 @@ public interface Activitydiagram_ActivityNode_AddTokens1 extends Activitydiagram
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedActivityNode value);
+	void setThis(ActivityNode value);
 
 	/**
-	 * Returns the value of the '<em><b>Sub Steps</b></em>' reference list.
+	 * Returns the value of the '<em><b>Sub Steps</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sub Steps</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sub Steps</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Steps</em>' reference list.
+	 * @return the value of the '<em>Sub Steps</em>' containment reference list.
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_ActivityNode_AddTokens1_SubSteps()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep> getSubSteps();

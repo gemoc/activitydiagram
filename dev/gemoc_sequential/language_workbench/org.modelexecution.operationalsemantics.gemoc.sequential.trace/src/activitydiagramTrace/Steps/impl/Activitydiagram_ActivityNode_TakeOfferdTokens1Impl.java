@@ -2,15 +2,16 @@
  */
 package activitydiagramTrace.Steps.impl;
 
-import activitydiagramTrace.ActivitydiagramTracePackage;
-import activitydiagramTrace.State;
+import activitydiagram.ActivityNode;
+
+import activitydiagramTrace.States.State;
+import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1;
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep;
 import activitydiagramTrace.Steps.BigStep;
+import activitydiagramTrace.Steps.Step;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
 
 import java.util.Collection;
 
@@ -24,7 +25,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +44,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl implements Activitydiagram_ActivityNode_TakeOfferdTokens1 {
+public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activitydiagram_Activity_Execute_AbstractSubStepImpl implements Activitydiagram_ActivityNode_TakeOfferdTokens1 {
 	/**
 	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -71,10 +73,10 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivityNode this_;
+	protected ActivityNode this_;
 
 	/**
-	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' reference list.
+	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSubSteps()
@@ -152,9 +154,9 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 		if (newStartingState != startingState) {
 			NotificationChain msgs = null;
 			if (startingState != null)
-				msgs = ((InternalEObject)startingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 			if (newStartingState != null)
-				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 			msgs = basicSetStartingState(newStartingState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -212,9 +214,9 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 		if (newEndingState != endingState) {
 			NotificationChain msgs = null;
 			if (endingState != null)
-				msgs = ((InternalEObject)endingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 			if (newEndingState != null)
-				msgs = ((InternalEObject)newEndingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)newEndingState).eInverseAdd(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 			msgs = basicSetEndingState(newEndingState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -227,10 +229,10 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode getThis() {
+	public ActivityNode getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedActivityNode)eResolveProxy(oldThis);
+			this_ = (ActivityNode)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__THIS, oldThis, this_));
@@ -244,7 +246,7 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode basicGetThis() {
+	public ActivityNode basicGetThis() {
 		return this_;
 	}
 
@@ -253,8 +255,8 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedActivityNode newThis) {
-		TracedActivityNode oldThis = this_;
+	public void setThis(ActivityNode newThis) {
+		ActivityNode oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__THIS, oldThis, this_));
@@ -267,7 +269,7 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 */
 	public EList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
-			subSteps = new EObjectResolvingEList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep>(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS);
+			subSteps = new EObjectContainmentEList<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep>(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS);
 		}
 		return subSteps;
 	}
@@ -282,11 +284,11 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__STARTING_STATE:
 				if (startingState != null)
-					msgs = ((InternalEObject)startingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 				return basicSetStartingState((State)otherEnd, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__ENDING_STATE:
 				if (endingState != null)
-					msgs = ((InternalEObject)endingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+					msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 				return basicSetEndingState((State)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -304,6 +306,8 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 				return basicSetStartingState(null, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__ENDING_STATE:
 				return basicSetEndingState(null, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS:
+				return ((InternalEList<?>)getSubSteps()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -347,7 +351,7 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 				setEndingState((State)newValue);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__THIS:
-				setThis((TracedActivityNode)newValue);
+				setThis((ActivityNode)newValue);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS:
 				getSubSteps().clear();
@@ -372,7 +376,7 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 				setEndingState((State)null);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__THIS:
-				setThis((TracedActivityNode)null);
+				setThis((ActivityNode)null);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__SUB_STEPS:
 				getSubSteps().clear();
@@ -408,10 +412,15 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Step.class) {
+			switch (derivedFeatureID) {
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__STARTING_STATE: return StepsPackage.STEP__STARTING_STATE;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__ENDING_STATE: return StepsPackage.STEP__ENDING_STATE;
+				default: return -1;
+			}
+		}
 		if (baseClass == BigStep.class) {
 			switch (derivedFeatureID) {
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__STARTING_STATE: return StepsPackage.BIG_STEP__STARTING_STATE;
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__ENDING_STATE: return StepsPackage.BIG_STEP__ENDING_STATE;
 				default: return -1;
 			}
 		}
@@ -425,10 +434,15 @@ public class Activitydiagram_ActivityNode_TakeOfferdTokens1Impl extends Activity
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Step.class) {
+			switch (baseFeatureID) {
+				case StepsPackage.STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__STARTING_STATE;
+				case StepsPackage.STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__ENDING_STATE;
+				default: return -1;
+			}
+		}
 		if (baseClass == BigStep.class) {
 			switch (baseFeatureID) {
-				case StepsPackage.BIG_STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__STARTING_STATE;
-				case StepsPackage.BIG_STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1__ENDING_STATE;
 				default: return -1;
 			}
 		}

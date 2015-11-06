@@ -2,10 +2,10 @@
  */
 package activitydiagramTrace.Steps.impl;
 
+import activitydiagram.ActivityNode;
+
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -36,7 +36,7 @@ public class Activitydiagram_ActivityNode_TerminateImpl extends SmallStepImpl im
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivityNode this_;
+	protected ActivityNode this_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,10 @@ public class Activitydiagram_ActivityNode_TerminateImpl extends SmallStepImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode getThis() {
+	public ActivityNode getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedActivityNode)eResolveProxy(oldThis);
+			this_ = (ActivityNode)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__THIS, oldThis, this_));
@@ -79,7 +79,7 @@ public class Activitydiagram_ActivityNode_TerminateImpl extends SmallStepImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode basicGetThis() {
+	public ActivityNode basicGetThis() {
 		return this_;
 	}
 
@@ -88,8 +88,8 @@ public class Activitydiagram_ActivityNode_TerminateImpl extends SmallStepImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedActivityNode newThis) {
-		TracedActivityNode oldThis = this_;
+	public void setThis(ActivityNode newThis) {
+		ActivityNode oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__THIS, oldThis, this_));
@@ -119,7 +119,7 @@ public class Activitydiagram_ActivityNode_TerminateImpl extends SmallStepImpl im
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__THIS:
-				setThis((TracedActivityNode)newValue);
+				setThis((ActivityNode)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,7 +134,7 @@ public class Activitydiagram_ActivityNode_TerminateImpl extends SmallStepImpl im
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__THIS:
-				setThis((TracedActivityNode)null);
+				setThis((ActivityNode)null);
 				return;
 		}
 		super.eUnset(featureID);

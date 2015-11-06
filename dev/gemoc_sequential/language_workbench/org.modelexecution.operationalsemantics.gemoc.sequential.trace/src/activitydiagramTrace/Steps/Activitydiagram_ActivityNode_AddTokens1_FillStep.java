@@ -13,5 +13,5 @@ package activitydiagramTrace.Steps;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_AddTokens1_FillStep extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep, SmallStep {
+public interface Activitydiagram_ActivityNode_AddTokens1_FillStep extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep {
 } // Activitydiagram_ActivityNode_AddTokens1_FillStep

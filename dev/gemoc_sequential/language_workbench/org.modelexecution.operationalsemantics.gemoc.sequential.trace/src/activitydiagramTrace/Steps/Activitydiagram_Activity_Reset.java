@@ -2,7 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
+import activitydiagram.Activity;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ public interface Activitydiagram_Activity_Reset extends Activitydiagram_Activity
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedActivity)
+	 * @see #setThis(Activity)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_Activity_Reset_This()
 	 * @model
 	 * @generated
 	 */
-	TracedActivity getThis();
+	Activity getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_Reset#getThis <em>This</em>}' reference.
@@ -45,6 +45,6 @@ public interface Activitydiagram_Activity_Reset extends Activitydiagram_Activity
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedActivity value);
+	void setThis(Activity value);
 
 } // Activitydiagram_Activity_Reset

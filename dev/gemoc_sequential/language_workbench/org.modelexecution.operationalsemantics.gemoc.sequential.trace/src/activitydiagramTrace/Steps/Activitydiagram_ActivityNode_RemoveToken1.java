@@ -2,7 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
+import activitydiagram.ActivityNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_RemoveToken1 extends SmallStep {
+public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep, SmallStep, Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ public interface Activitydiagram_ActivityNode_RemoveToken1 extends SmallStep {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedActivityNode)
+	 * @see #setThis(ActivityNode)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_ActivityNode_RemoveToken1_This()
 	 * @model
 	 * @generated
 	 */
-	TracedActivityNode getThis();
+	ActivityNode getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1#getThis <em>This</em>}' reference.
@@ -45,6 +45,6 @@ public interface Activitydiagram_ActivityNode_RemoveToken1 extends SmallStep {
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedActivityNode value);
+	void setThis(ActivityNode value);
 
 } // Activitydiagram_ActivityNode_RemoveToken1

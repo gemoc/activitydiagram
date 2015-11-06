@@ -2,9 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivityNode;
-
-import org.eclipse.emf.common.util.EList;
+import activitydiagram.ActivityNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getThis <em>This</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Activity_Execute_AbstractSubStep, BigStep {
+public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Activity_Execute_AbstractSubStep, SmallStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -33,12 +30,12 @@ public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Ac
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedActivityNode)
+	 * @see #setThis(ActivityNode)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_ActivityNode_Execute_This()
 	 * @model
 	 * @generated
 	 */
-	TracedActivityNode getThis();
+	ActivityNode getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getThis <em>This</em>}' reference.
@@ -48,22 +45,6 @@ public interface Activitydiagram_ActivityNode_Execute extends Activitydiagram_Ac
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedActivityNode value);
-
-	/**
-	 * Returns the value of the '<em><b>Sub Steps</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sub Steps</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Steps</em>' reference list.
-	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_ActivityNode_Execute_SubSteps()
-	 * @model
-	 * @generated
-	 */
-	EList<Activitydiagram_ActivityNode_Execute_AbstractSubStep> getSubSteps();
+	void setThis(ActivityNode value);
 
 } // Activitydiagram_ActivityNode_Execute

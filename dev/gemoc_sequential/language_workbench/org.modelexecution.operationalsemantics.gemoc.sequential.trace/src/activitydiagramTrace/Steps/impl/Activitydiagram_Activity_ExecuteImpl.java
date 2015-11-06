@@ -2,15 +2,16 @@
  */
 package activitydiagramTrace.Steps.impl;
 
+import activitydiagram.Activity;
+
 import activitydiagramTrace.Steps.Activitydiagram_Activity_Execute;
 import activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_AbstractSubStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -19,7 +20,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,10 +46,10 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivity this_;
+	protected Activity this_;
 
 	/**
-	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' reference list.
+	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSubSteps()
@@ -80,10 +82,10 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity getThis() {
+	public Activity getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedActivity)eResolveProxy(oldThis);
+			this_ = (Activity)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__THIS, oldThis, this_));
@@ -97,7 +99,7 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity basicGetThis() {
+	public Activity basicGetThis() {
 		return this_;
 	}
 
@@ -106,8 +108,8 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedActivity newThis) {
-		TracedActivity oldThis = this_;
+	public void setThis(Activity newThis) {
+		Activity oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__THIS, oldThis, this_));
@@ -120,9 +122,23 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	 */
 	public EList<Activitydiagram_Activity_Execute_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
-			subSteps = new EObjectResolvingEList<Activitydiagram_Activity_Execute_AbstractSubStep>(Activitydiagram_Activity_Execute_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS);
+			subSteps = new EObjectContainmentEList<Activitydiagram_Activity_Execute_AbstractSubStep>(Activitydiagram_Activity_Execute_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS);
 		}
 		return subSteps;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS:
+				return ((InternalEList<?>)getSubSteps()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -152,7 +168,7 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__THIS:
-				setThis((TracedActivity)newValue);
+				setThis((Activity)newValue);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS:
 				getSubSteps().clear();
@@ -171,7 +187,7 @@ public class Activitydiagram_Activity_ExecuteImpl extends BigStepImpl implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__THIS:
-				setThis((TracedActivity)null);
+				setThis((Activity)null);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS:
 				getSubSteps().clear();

@@ -3,340 +3,244 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagramTrace" nsURI="activitydiagramTrace" nsPrefix="activitydiagramTrace">
   <eClassifiers xsi:type="ecore:EClass" name="Trace">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statesTrace" upperBound="-1"
-        eType="#//State" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="steps" lowerBound="1" eType="#//Steps/Steps"
+        eType="#//States/State" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootSteps" upperBound="-1"
+        eType="#//Steps/Step" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedOffers"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedOffer"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tracedObjects" lowerBound="1"
-        eType="#//Traced/TracedObjects" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="State">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="followingStep" eType="#//Steps/SmallStep"
-        eOpposite="#//Steps/SmallStep/precedingState"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="startedBigSteps" upperBound="-1"
-        eType="#//Steps/BigStep" eOpposite="#//Steps/BigStep/startingState"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="endedBigSteps" upperBound="-1"
-        eType="#//Steps/BigStep" eOpposite="#//Steps/BigStep/endingState"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="offer_offeredTokens_Values"
-        ordered="false" upperBound="-1" eType="#//Values/Offer_offeredTokens_Value"
-        eOpposite="#//Values/Offer_offeredTokens_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable_currentValue_Values"
-        ordered="false" upperBound="-1" eType="#//Values/Variable_currentValue_Value"
-        eOpposite="#//Values/Variable_currentValue_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="token_holder_Values" ordered="false"
-        upperBound="-1" eType="#//Values/Token_holder_Value" eOpposite="#//Values/Token_holder_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activityEdge_offers_Values"
-        ordered="false" upperBound="-1" eType="#//Values/ActivityEdge_offers_Value"
-        eOpposite="#//Values/ActivityEdge_offers_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValue_variable_Values"
-        ordered="false" upperBound="-1" eType="#//Values/InputValue_variable_Value"
-        eOpposite="#//Values/InputValue_variable_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValue_value_Values"
-        ordered="false" upperBound="-1" eType="#//Values/InputValue_value_Value" eOpposite="#//Values/InputValue_value_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_inputValues_Values"
-        ordered="false" upperBound="-1" eType="#//Values/Input_inputValues_Value"
-        eOpposite="#//Values/Input_inputValues_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activity_trace_Values"
-        ordered="false" upperBound="-1" eType="#//Values/Activity_trace_Value" eOpposite="#//Values/Activity_trace_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trace_executedNodes_Values"
-        ordered="false" upperBound="-1" eType="#//Values/Trace_executedNodes_Value"
-        eOpposite="#//Values/Trace_executedNodes_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forkedToken_remainingOffersCount_Values"
-        ordered="false" upperBound="-1" eType="#//Values/ForkedToken_remainingOffersCount_Value"
-        eOpposite="#//Values/ForkedToken_remainingOffersCount_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forkedToken_baseToken_Values"
-        ordered="false" upperBound="-1" eType="#//Values/ForkedToken_baseToken_Value"
-        eOpposite="#//Values/ForkedToken_baseToken_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="booleanValue_value_Values"
-        ordered="false" upperBound="-1" eType="#//Values/BooleanValue_value_Value"
-        eOpposite="#//Values/BooleanValue_value_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activityNode_heldTokens_Values"
-        ordered="false" upperBound="-1" eType="#//Values/ActivityNode_heldTokens_Value"
-        eOpposite="#//Values/ActivityNode_heldTokens_Value/states"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="integerValue_value_Values"
-        ordered="false" upperBound="-1" eType="#//Values/IntegerValue_value_Value"
-        eOpposite="#//Values/IntegerValue_value_Value/states"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInitialNodes"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedInitialNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedOpaqueActions"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedOpaqueAction"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedBooleanValues"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedBooleanValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedJoinNodes"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedJoinNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInputs"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedInput"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedControlFlows"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedControlFlow"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInputValues"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedInputValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedTraces"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedTrace"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedActivitys"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedActivity"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedMergeNodes"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedMergeNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedControlTokens"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedControlToken"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedForkNodes"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedForkNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedIntegerVariables"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedIntegerVariable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedBooleanVariables"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedBooleanVariable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedDecisionNodes"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedDecisionNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedActivityFinalNodes"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedActivityFinalNode"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedIntegerValues"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedIntegerValue"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedForkedTokens"
+        ordered="false" upperBound="-1" eType="#//States/activitydiagram/TracedForkedToken"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Execute_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_Activity_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Terminate_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_Terminate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_WriteTrace_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_Activity_WriteTrace"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_AddTokens1_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_AddTokens1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Variable_Execute_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_Variable_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_RemoveToken1_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_RemoveToken1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_SendOffers1_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_SendOffers1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Variable_Init_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_Variable_Init"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_InitializeContext_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_Activity_InitializeContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Reset_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_Activity_Reset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Execute_Sequence"
+        upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_Execute"/>
   </eClassifiers>
   <eSubpackages name="Steps" nsURI="activitydiagramTrace_Steps" nsPrefix="events">
-    <eClassifiers xsi:type="ecore:EClass" name="SmallStep" abstract="true">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="precedingState" lowerBound="1"
-          eType="#//State" eOpposite="#//State/followingStep"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Steps">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Reset_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Activity_Reset" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Execute_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_Execute_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_SendOffers1_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_SendOffers1_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_AddTokens1_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_AddTokens1_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_RemoveToken1_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_RemoveToken1"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Execute_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Activity_Execute_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Variable_Init_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Variable_Init_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_WriteTrace_FillStep_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Activity_WriteTrace_FillStep"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Terminate_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_Terminate"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_InitializeContext_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Activity_InitializeContext"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Variable_Execute_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Variable_Execute" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="FillStep_Trace" upperBound="-1"
-          eType="#//Steps/FillStep" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Execute_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_Execute" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_SendOffers1_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_SendOffers1"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_AddTokens1_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_AddTokens1"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Execute_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Activity_Execute" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Variable_Init_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Variable_Init" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_WriteTrace_Trace"
-          upperBound="-1" eType="#//Steps/Activitydiagram_Activity_WriteTrace" containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="BigStep" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="SmallStep" abstract="true" eSuperTypes="#//Steps/Step"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BigStep" abstract="true" eSuperTypes="#//Steps/Step"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Step" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EReference" name="startingState" lowerBound="1"
-          eType="#//State" eOpposite="#//State/startedBigSteps"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="endingState" eType="#//State"
-          eOpposite="#//State/endedBigSteps"/>
+          eType="#//States/State" eOpposite="#//States/State/startedSteps"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endingState" eType="#//States/State"
+          eOpposite="#//States/State/endedSteps"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Reset" eSuperTypes="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep #//Steps/SmallStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivity"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute_AbstractSubStep"
-        abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_SendOffers1_AbstractSubStep"
-        abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_SendOffers1_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_SendOffers1_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"
-        abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"
-        abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_RemoveToken1"
-        eSuperTypes="#//Steps/SmallStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivityNode"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RootFillStep" eSuperTypes="#//Steps/SmallStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute"
+        eSuperTypes="#//Steps/BigStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
+          eType="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute_AbstractSubStep"
         abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Init_AbstractSubStep"
-        abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Init_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_Variable_Init_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace_AbstractSubStep"
-        abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace_FillStep"
-        eSuperTypes="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep #//Steps/SmallStep"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Terminate"
-        eSuperTypes="#//Steps/SmallStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivityNode"/>
+        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Init" eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Variable"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_InitializeContext"
-        eSuperTypes="#//Steps/SmallStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivity"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Execute"
-        eSuperTypes="#//Steps/SmallStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedVariable"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FillStep" eSuperTypes="#//Steps/SmallStep"/>
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute"
-        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_SendOffers1"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep #//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_ActivityNode_SendOffers1_AbstractSubStep"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep #//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"/>
+        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1"
-        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep #//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivityNode"/>
+        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/BigStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"/>
+          eType="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"
+          containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute"
-        eSuperTypes="#//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1"
+        eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/BigStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+          eType="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"
+          containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Init" eSuperTypes="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep #//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedVariable"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_Variable_Init_AbstractSubStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Terminate"
+        eSuperTypes="#//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace"
         eSuperTypes="#//Steps/BigStep">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="#//Traced/activitydiagram/TracedActivity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subSteps" upperBound="-1"
-          eType="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep"/>
+          eType="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep" containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace_AbstractSubStep"
+        abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace_FillStep"
+        eSuperTypes="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Reset" eSuperTypes="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep #//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"
+        abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1_FillStep"
+        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_RemoveToken1"
+        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep #//Steps/SmallStep #//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Execute"
+        eSuperTypes="#//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Variable"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_InitializeContext"
+        eSuperTypes="#//Steps/SmallStep">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="this" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"
+        abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep"
+        eSuperTypes="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"/>
   </eSubpackages>
-  <eSubpackages name="Values" nsURI="activitydiagramTrace_Values" nsPrefix="states">
+  <eSubpackages name="States" nsURI="activitydiagramTrace_States" nsPrefix="tracedclasses">
+    <eClassifiers xsi:type="ecore:EClass" name="State">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startedSteps" upperBound="-1"
+          eType="#//Steps/Step" eOpposite="#//Steps/Step/startingState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endedSteps" upperBound="-1"
+          eType="#//Steps/Step" eOpposite="#//Steps/Step/endingState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="offer_offeredTokens_Values"
+          ordered="false" upperBound="-1" eType="#//States/Offer_offeredTokens_Value"
+          eOpposite="#//States/Offer_offeredTokens_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activityEdge_offers_Values"
+          ordered="false" upperBound="-1" eType="#//States/ActivityEdge_offers_Value"
+          eOpposite="#//States/ActivityEdge_offers_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanValue_value_Values"
+          ordered="false" upperBound="-1" eType="#//States/BooleanValue_value_Value"
+          eOpposite="#//States/BooleanValue_value_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activityNode_heldTokens_Values"
+          ordered="false" upperBound="-1" eType="#//States/ActivityNode_heldTokens_Value"
+          eOpposite="#//States/ActivityNode_heldTokens_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="input_inputValues_Values"
+          ordered="false" upperBound="-1" eType="#//States/Input_inputValues_Value"
+          eOpposite="#//States/Input_inputValues_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValue_variable_Values"
+          ordered="false" upperBound="-1" eType="#//States/InputValue_variable_Value"
+          eOpposite="#//States/InputValue_variable_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValue_value_Values"
+          ordered="false" upperBound="-1" eType="#//States/InputValue_value_Value"
+          eOpposite="#//States/InputValue_value_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="trace_executedNodes_Values"
+          ordered="false" upperBound="-1" eType="#//States/Trace_executedNodes_Value"
+          eOpposite="#//States/Trace_executedNodes_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity_trace_Values"
+          ordered="false" upperBound="-1" eType="#//States/Activity_trace_Value" eOpposite="#//States/Activity_trace_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="token_holder_Values"
+          ordered="false" upperBound="-1" eType="#//States/Token_holder_Value" eOpposite="#//States/Token_holder_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variable_currentValue_Values"
+          ordered="false" upperBound="-1" eType="#//States/Variable_currentValue_Value"
+          eOpposite="#//States/Variable_currentValue_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="integerValue_value_Values"
+          ordered="false" upperBound="-1" eType="#//States/IntegerValue_value_Value"
+          eOpposite="#//States/IntegerValue_value_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="forkedToken_baseToken_Values"
+          ordered="false" upperBound="-1" eType="#//States/ForkedToken_baseToken_Value"
+          eOpposite="#//States/ForkedToken_baseToken_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="forkedToken_remainingOffersCount_Values"
+          ordered="false" upperBound="-1" eType="#//States/ForkedToken_remainingOffersCount_Value"
+          eOpposite="#//States/ForkedToken_remainingOffersCount_Value/states"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Offer_offeredTokens_Value">
       <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokens" upperBound="-1"
-          eType="#//Traced/activitydiagram/TracedToken"/>
+          eType="#//States/activitydiagram/TracedToken"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedOffer" eOpposite="#//Traced/activitydiagram/TracedOffer/offeredTokensTrace"/>
+          eType="#//States/activitydiagram/TracedOffer" eOpposite="#//States/activitydiagram/TracedOffer/offeredTokensSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/offer_offeredTokens_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Variable_currentValue_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="#//Traced/activitydiagram/TracedValue">
-        <eAnnotations source="aspect"/>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedVariable" eOpposite="#//Traced/activitydiagram/TracedVariable/currentValueTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/variable_currentValue_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Token_holder_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="holder" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedToken" eOpposite="#//Traced/activitydiagram/TracedToken/holderTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/token_holder_Values"/>
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/offer_offeredTokens_Values"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ActivityEdge_offers_Value">
       <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
-          eType="#//Traced/activitydiagram/TracedOffer">
+          eType="#//States/activitydiagram/TracedOffer">
         <eAnnotations source="aspect"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedActivityEdge" eOpposite="#//Traced/activitydiagram/TracedActivityEdge/offersTrace"/>
+          eType="#//States/activitydiagram/TracedActivityEdge" eOpposite="#//States/activitydiagram/TracedActivityEdge/offersSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/activityEdge_offers_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InputValue_variable_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedVariable"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedInputValue" eOpposite="#//Traced/activitydiagram/TracedInputValue/variableTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/inputValue_variable_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InputValue_value_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedValue"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedInputValue" eOpposite="#//Traced/activitydiagram/TracedInputValue/valueTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/inputValue_value_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Input_inputValues_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1"
-          eType="#//Traced/activitydiagram/TracedInputValue"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedInput" eOpposite="#//Traced/activitydiagram/TracedInput/inputValuesTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/input_inputValues_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Activity_trace_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="#//Traced/activitydiagram/TracedTrace">
-        <eAnnotations source="aspect"/>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedActivity" eOpposite="#//Traced/activitydiagram/TracedActivity/traceTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/activity_trace_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Trace_executedNodes_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false"
-          upperBound="-1" eType="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedTrace" eOpposite="#//Traced/activitydiagram/TracedTrace/executedNodesTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/trace_executedNodes_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ForkedToken_remainingOffersCount_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedForkedToken" eOpposite="#//Traced/activitydiagram/TracedForkedToken/remainingOffersCountTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/forkedToken_remainingOffersCount_Values"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ForkedToken_baseToken_Value">
-      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
-        <details key="executionMetamodelElement"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="baseToken" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedToken"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedForkedToken" eOpposite="#//Traced/activitydiagram/TracedForkedToken/baseTokenTrace"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/forkedToken_baseToken_Values"/>
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/activityEdge_offers_Values"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BooleanValue_value_Value">
       <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
@@ -345,22 +249,101 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedBooleanValue" eOpposite="#//Traced/activitydiagram/TracedBooleanValue/valueTrace"/>
+          eType="#//States/activitydiagram/TracedBooleanValue" eOpposite="#//States/activitydiagram/TracedBooleanValue/valueSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/booleanValue_value_Values"/>
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/booleanValue_value_Values"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ActivityNode_heldTokens_Value">
       <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1"
-          eType="#//Traced/activitydiagram/TracedToken">
+          eType="#//States/activitydiagram/TracedToken">
         <eAnnotations source="aspect"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedActivityNode" eOpposite="#//Traced/activitydiagram/TracedActivityNode/heldTokensTrace"/>
+          eType="#//States/activitydiagram/TracedActivityNode" eOpposite="#//States/activitydiagram/TracedActivityNode/heldTokensSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/activityNode_heldTokens_Values"/>
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/activityNode_heldTokens_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Input_inputValues_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1"
+          eType="#//States/activitydiagram/TracedInputValue"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedInput" eOpposite="#//States/activitydiagram/TracedInput/inputValuesSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/input_inputValues_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InputValue_variable_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+          eType="#//States/activitydiagram/TracedVariable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedInputValue" eOpposite="#//States/activitydiagram/TracedInputValue/variableSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/inputValue_variable_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InputValue_value_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1"
+          eType="#//States/activitydiagram/TracedValue"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedInputValue" eOpposite="#//States/activitydiagram/TracedInputValue/valueSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/inputValue_value_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Trace_executedNodes_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false"
+          upperBound="-1" eType="#//States/activitydiagram/TracedActivityNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedTrace" eOpposite="#//States/activitydiagram/TracedTrace/executedNodesSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/trace_executedNodes_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activity_trace_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="#//States/activitydiagram/TracedTrace">
+        <eAnnotations source="aspect"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedActivity" eOpposite="#//States/activitydiagram/TracedActivity/traceSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/activity_trace_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Token_holder_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="holder" lowerBound="1"
+          eType="#//States/activitydiagram/TracedActivityNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedToken" eOpposite="#//States/activitydiagram/TracedToken/holderSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/token_holder_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Variable_currentValue_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="#//States/activitydiagram/TracedValue">
+        <eAnnotations source="aspect"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedVariable" eOpposite="#//States/activitydiagram/TracedVariable/currentValueSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/variable_currentValue_Values"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IntegerValue_value_Value">
       <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
@@ -369,208 +352,172 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//Traced/activitydiagram/TracedIntegerValue" eOpposite="#//Traced/activitydiagram/TracedIntegerValue/valueTrace"/>
+          eType="#//States/activitydiagram/TracedIntegerValue" eOpposite="#//States/activitydiagram/TracedIntegerValue/valueSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
-          upperBound="-1" eType="#//State" eOpposite="#//State/integerValue_value_Values"/>
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/integerValue_value_Values"/>
     </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="Traced" nsURI="activitydiagramTrace_Traced" nsPrefix="tracedclasses">
-    <eClassifiers xsi:type="ecore:EClass" name="TracedObjects">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedOffers"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedOffer"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedIntegerVariables"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedIntegerVariable"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedControlTokens"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedControlToken"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedBooleanVariables"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedBooleanVariable"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInputValues"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedInputValue"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInputs"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedInput"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedActivitys"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedActivity"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInitialNodes"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedInitialNode"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedTraces"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedTrace"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedForkedTokens"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedForkedToken"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedBooleanValues"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedBooleanValue"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedDecisionNodes"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedDecisionNode"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedActivityFinalNodes"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedActivityFinalNode"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedControlFlows"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedControlFlow"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedJoinNodes"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedJoinNode"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedMergeNodes"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedMergeNode"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedOpaqueActions"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedOpaqueAction"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedForkNodes"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedForkNode"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedIntegerValues"
-          ordered="false" upperBound="-1" eType="#//Traced/activitydiagram/TracedIntegerValue"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ForkedToken_baseToken_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseToken" lowerBound="1"
+          eType="#//States/activitydiagram/TracedToken"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedForkedToken" eOpposite="#//States/activitydiagram/TracedForkedToken/baseTokenSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/forkedToken_baseToken_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ForkedToken_remainingOffersCount_Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//States/activitydiagram/TracedForkedToken" eOpposite="#//States/activitydiagram/TracedForkedToken/remainingOffersCountSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
+          upperBound="-1" eType="#//States/State" eOpposite="#//States/State/forkedToken_remainingOffersCount_Values"/>
     </eClassifiers>
     <eSubpackages name="activitydiagram" nsURI="activitydiagramTrace_activitydiagram"
         nsPrefix="">
+      <eClassifiers xsi:type="ecore:EClass" name="TracedAction" abstract="true" eSuperTypes="#//States/activitydiagram/TracedExecutableNode"/>
       <eClassifiers xsi:type="ecore:EClass" name="TracedOffer">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokensTrace"
-            upperBound="-1" eType="#//Values/Offer_offeredTokens_Value" containment="true"
-            eOpposite="#//Values/Offer_offeredTokens_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokensSequence"
+            upperBound="-1" eType="#//States/Offer_offeredTokens_Value" containment="true"
+            eOpposite="#//States/Offer_offeredTokens_Value/parent"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedControlNode" abstract="true"
-          eSuperTypes="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedIntegerVariable" eSuperTypes="#//Traced/activitydiagram/TracedVariable">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerVariable"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedInitialNode" eSuperTypes="#//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//InitialNode"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityEdge" abstract="true"
+          eSuperTypes="#//States/activitydiagram/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+            eType="#//States/activitydiagram/TracedActivityNode"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+            eType="#//States/activitydiagram/TracedActivityNode"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
+            eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Offer">
+          <eAnnotations source="aspect"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="offersSequence" upperBound="-1"
+            eType="#//States/ActivityEdge_offers_Value" containment="true" eOpposite="#//States/ActivityEdge_offers_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedOpaqueAction" eSuperTypes="#//States/activitydiagram/TracedAction">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
+            eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Expression"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//OpaqueAction"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedBooleanValue" eSuperTypes="#//States/activitydiagram/TracedValue">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="valueSequence" upperBound="-1"
+            eType="#//States/BooleanValue_value_Value" containment="true" eOpposite="#//States/BooleanValue_value_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedJoinNode" eSuperTypes="#//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//JoinNode"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedNamedElement" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityNode" abstract="true"
+          eSuperTypes="#//States/activitydiagram/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+            eType="#//States/activitydiagram/TracedActivityEdge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+            eType="#//States/activitydiagram/TracedActivityEdge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+            eType="#//States/activitydiagram/TracedActivity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1"
+            eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Token">
+          <eAnnotations source="aspect"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokensSequence"
+            upperBound="-1" eType="#//States/ActivityNode_heldTokens_Value" containment="true"
+            eOpposite="#//States/ActivityNode_heldTokens_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedInput">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputValuesSequence"
+            upperBound="-1" eType="#//States/Input_inputValues_Value" containment="true"
+            eOpposite="#//States/Input_inputValues_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedControlFlow" eSuperTypes="#//States/activitydiagram/TracedActivityEdge">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="guard" eType="#//States/activitydiagram/TracedBooleanVariable"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ControlFlow"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="TracedExecutableNode" abstract="true"
-          eSuperTypes="#//Traced/activitydiagram/TracedActivityNode"/>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedControlToken" eSuperTypes="#//Traced/activitydiagram/TracedToken"/>
+          eSuperTypes="#//States/activitydiagram/TracedActivityNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedInputValue">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="variableSequence" upperBound="-1"
+            eType="#//States/InputValue_variable_Value" containment="true" eOpposite="#//States/InputValue_variable_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="valueSequence" upperBound="-1"
+            eType="#//States/InputValue_value_Value" containment="true" eOpposite="#//States/InputValue_value_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedTrace">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodesSequence"
+            upperBound="-1" eType="#//States/Trace_executedNodes_Value" containment="true"
+            eOpposite="#//States/Trace_executedNodes_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivity" eSuperTypes="#//States/activitydiagram/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+            eType="#//States/activitydiagram/TracedActivityNode"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1"
+            eType="#//States/activitydiagram/TracedActivityEdge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="locals" upperBound="-1"
+            eType="#//States/activitydiagram/TracedVariable"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+            eType="#//States/activitydiagram/TracedVariable"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Trace">
+          <eAnnotations source="aspect"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="traceSequence" upperBound="-1"
+            eType="#//States/Activity_trace_Value" containment="true" eOpposite="#//States/Activity_trace_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedMergeNode" eSuperTypes="#//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//MergeNode"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedControlToken" eSuperTypes="#//States/activitydiagram/TracedToken"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedForkNode" eSuperTypes="#//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ForkNode"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedToken" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="holderSequence" upperBound="-1"
+            eType="#//States/Token_holder_Value" containment="true" eOpposite="#//States/Token_holder_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedFinalNode" abstract="true"
+          eSuperTypes="#//States/activitydiagram/TracedControlNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedIntegerVariable" eSuperTypes="#//States/activitydiagram/TracedVariable">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerVariable"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedBooleanVariable" eSuperTypes="#//States/activitydiagram/TracedVariable">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanVariable"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedControlNode" abstract="true"
+          eSuperTypes="#//States/activitydiagram/TracedActivityNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedDecisionNode" eSuperTypes="#//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//DecisionNode"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityFinalNode" eSuperTypes="#//States/activitydiagram/TracedFinalNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityFinalNode"/>
+      </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="TracedVariable" abstract="true">
         <eStructuralFeatures xsi:type="ecore:EReference" name="initialValue" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value">
           <eAnnotations source="aspect"/>
         </eStructuralFeatures>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="currentValueTrace"
-            upperBound="-1" eType="#//Values/Variable_currentValue_Value" containment="true"
-            eOpposite="#//Values/Variable_currentValue_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="currentValueSequence"
+            upperBound="-1" eType="#//States/Variable_currentValue_Value" containment="true"
+            eOpposite="#//States/Variable_currentValue_Value/parent"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedBooleanVariable" eSuperTypes="#//Traced/activitydiagram/TracedVariable">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanVariable"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedIntegerValue" eSuperTypes="#//States/activitydiagram/TracedValue">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="valueSequence" upperBound="-1"
+            eType="#//States/IntegerValue_value_Value" containment="true" eOpposite="#//States/IntegerValue_value_Value/parent"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedToken" abstract="true">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="holderTrace" upperBound="-1"
-            eType="#//Values/Token_holder_Value" containment="true" eOpposite="#//Values/Token_holder_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityEdge" abstract="true"
-          eSuperTypes="#//Traced/activitydiagram/TracedNamedElement">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-            eType="#//Traced/activitydiagram/TracedActivityNode"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-            eType="#//Traced/activitydiagram/TracedActivityNode"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
-            eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Offer">
-          <eAnnotations source="aspect"/>
-        </eStructuralFeatures>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="offersTrace" upperBound="-1"
-            eType="#//Values/ActivityEdge_offers_Value" containment="true" eOpposite="#//Values/ActivityEdge_offers_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedInputValue">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="variableTrace" upperBound="-1"
-            eType="#//Values/InputValue_variable_Value" containment="true" eOpposite="#//Values/InputValue_variable_Value/parent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="valueTrace" upperBound="-1"
-            eType="#//Values/InputValue_value_Value" containment="true" eOpposite="#//Values/InputValue_value_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedInput">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="inputValuesTrace" upperBound="-1"
-            eType="#//Values/Input_inputValues_Value" containment="true" eOpposite="#//Values/Input_inputValues_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedActivity" eSuperTypes="#//Traced/activitydiagram/TracedNamedElement">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
-            eType="#//Traced/activitydiagram/TracedActivityNode"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1"
-            eType="#//Traced/activitydiagram/TracedActivityEdge"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="locals" upperBound="-1"
-            eType="#//Traced/activitydiagram/TracedVariable"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-            eType="#//Traced/activitydiagram/TracedVariable"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Trace">
-          <eAnnotations source="aspect"/>
-        </eStructuralFeatures>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="traceTrace" upperBound="-1"
-            eType="#//Values/Activity_trace_Value" containment="true" eOpposite="#//Values/Activity_trace_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedAction" abstract="true" eSuperTypes="#//Traced/activitydiagram/TracedExecutableNode"/>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedInitialNode" eSuperTypes="#//Traced/activitydiagram/TracedControlNode">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//InitialNode"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedFinalNode" abstract="true"
-          eSuperTypes="#//Traced/activitydiagram/TracedControlNode"/>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedTrace">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodesTrace"
-            upperBound="-1" eType="#//Values/Trace_executedNodes_Value" containment="true"
-            eOpposite="#//Values/Trace_executedNodes_Value/parent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedForkedToken" eSuperTypes="#//States/activitydiagram/TracedToken">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="baseTokenSequence"
+            upperBound="-1" eType="#//States/ForkedToken_baseToken_Value" containment="true"
+            eOpposite="#//States/ForkedToken_baseToken_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="remainingOffersCountSequence"
+            upperBound="-1" eType="#//States/ForkedToken_remainingOffersCount_Value"
+            containment="true" eOpposite="#//States/ForkedToken_remainingOffersCount_Value/parent"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="TracedValue" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedForkedToken" eSuperTypes="#//Traced/activitydiagram/TracedToken">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="remainingOffersCountTrace"
-            upperBound="-1" eType="#//Values/ForkedToken_remainingOffersCount_Value"
-            containment="true" eOpposite="#//Values/ForkedToken_remainingOffersCount_Value/parent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="baseTokenTrace" upperBound="-1"
-            eType="#//Values/ForkedToken_baseToken_Value" containment="true" eOpposite="#//Values/ForkedToken_baseToken_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedBooleanValue" eSuperTypes="#//Traced/activitydiagram/TracedValue">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="valueTrace" upperBound="-1"
-            eType="#//Values/BooleanValue_value_Value" containment="true" eOpposite="#//Values/BooleanValue_value_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedDecisionNode" eSuperTypes="#//Traced/activitydiagram/TracedControlNode">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//DecisionNode"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityFinalNode" eSuperTypes="#//Traced/activitydiagram/TracedFinalNode">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityFinalNode"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedControlFlow" eSuperTypes="#//Traced/activitydiagram/TracedActivityEdge">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="guard" eType="#//Traced/activitydiagram/TracedBooleanVariable"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ControlFlow"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedJoinNode" eSuperTypes="#//Traced/activitydiagram/TracedControlNode">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//JoinNode"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedNamedElement" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedMergeNode" eSuperTypes="#//Traced/activitydiagram/TracedControlNode">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//MergeNode"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityNode" abstract="true"
-          eSuperTypes="#//Traced/activitydiagram/TracedNamedElement">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
-            eType="#//Traced/activitydiagram/TracedActivityEdge"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
-            eType="#//Traced/activitydiagram/TracedActivityEdge"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-            eType="#//Traced/activitydiagram/TracedActivity"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1"
-            eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Token">
-          <eAnnotations source="aspect"/>
-        </eStructuralFeatures>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokensTrace" upperBound="-1"
-            eType="#//Values/ActivityNode_heldTokens_Value" containment="true" eOpposite="#//Values/ActivityNode_heldTokens_Value/parent"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedOpaqueAction" eSuperTypes="#//Traced/activitydiagram/TracedAction">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
-            eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Expression"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//OpaqueAction"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedForkNode" eSuperTypes="#//Traced/activitydiagram/TracedControlNode">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ForkNode"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TracedIntegerValue" eSuperTypes="#//Traced/activitydiagram/TracedValue">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="valueTrace" upperBound="-1"
-            eType="#//Values/IntegerValue_value_Value" containment="true" eOpposite="#//Values/IntegerValue_value_Value/parent"/>
-      </eClassifiers>
     </eSubpackages>
   </eSubpackages>
 </ecore:EPackage>

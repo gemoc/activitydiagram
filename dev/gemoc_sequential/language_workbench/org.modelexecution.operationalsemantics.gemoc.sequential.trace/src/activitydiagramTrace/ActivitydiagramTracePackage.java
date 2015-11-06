@@ -75,22 +75,292 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	int TRACE__STATES_TRACE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Steps</b></em>' containment reference.
+	 * The feature id for the '<em><b>Root Steps</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACE__STEPS = 1;
+	int TRACE__ROOT_STEPS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Traced Objects</b></em>' containment reference.
+	 * The feature id for the '<em><b>Activitydiagram traced Offers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACE__TRACED_OBJECTS = 2;
+	int TRACE__ACTIVITYDIAGRAM_TRACED_OFFERS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Initial Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_INITIAL_NODES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Opaque Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_OPAQUE_ACTIONS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Join Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES = 6;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Inputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Control Flows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Input Values</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_INPUT_VALUES = 9;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Traces</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_TRACES = 10;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Activitys</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS = 11;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Merge Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_MERGE_NODES = 12;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Control Tokens</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_TOKENS = 13;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Fork Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_FORK_NODES = 14;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Integer Variables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES = 15;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES = 16;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Decision Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_DECISION_NODES = 17;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Activity Final Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITY_FINAL_NODES = 18;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES = 19;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram traced Forked Tokens</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_TRACED_FORKED_TOKENS = 20;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Execute Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_SEQUENCE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Node Terminate Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE_SEQUENCE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Write Trace Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE_SEQUENCE = 23;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Node Add Tokens1 Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_SEQUENCE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Variable Execute Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_VARIABLE_EXECUTE_SEQUENCE = 25;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Node Remove Token1 Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1_SEQUENCE = 26;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Node Send Offers1 Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1_SEQUENCE = 27;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Variable Init Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_VARIABLE_INIT_SEQUENCE = 28;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Initialize Context Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT_SEQUENCE = 29;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_SEQUENCE = 30;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Reset Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_RESET_SEQUENCE = 31;
+
+	/**
+	 * The feature id for the '<em><b>Activitydiagram Activity Node Execute Sequence</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_SEQUENCE = 32;
 
 	/**
 	 * The number of structural features of the '<em>Trace</em>' class.
@@ -99,7 +369,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACE_FEATURE_COUNT = 3;
+	int TRACE_FEATURE_COUNT = 33;
 
 	/**
 	 * The number of operations of the '<em>Trace</em>' class.
@@ -109,187 +379,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @ordered
 	 */
 	int TRACE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.impl.StateImpl <em>State</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.impl.StateImpl
-	 * @see activitydiagramTrace.impl.ActivitydiagramTracePackageImpl#getState()
-	 * @generated
-	 */
-	int STATE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Following Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__FOLLOWING_STEP = 0;
-
-	/**
-	 * The feature id for the '<em><b>Started Big Steps</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__STARTED_BIG_STEPS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Ended Big Steps</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__ENDED_BIG_STEPS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Offer offered Tokens Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__OFFER_OFFERED_TOKENS_VALUES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Variable current Value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__VARIABLE_CURRENT_VALUE_VALUES = 4;
-
-	/**
-	 * The feature id for the '<em><b>Token holder Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__TOKEN_HOLDER_VALUES = 5;
-
-	/**
-	 * The feature id for the '<em><b>Activity Edge offers Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__ACTIVITY_EDGE_OFFERS_VALUES = 6;
-
-	/**
-	 * The feature id for the '<em><b>Input Value variable Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INPUT_VALUE_VARIABLE_VALUES = 7;
-
-	/**
-	 * The feature id for the '<em><b>Input Value value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INPUT_VALUE_VALUE_VALUES = 8;
-
-	/**
-	 * The feature id for the '<em><b>Input input Values Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INPUT_INPUT_VALUES_VALUES = 9;
-
-	/**
-	 * The feature id for the '<em><b>Activity trace Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__ACTIVITY_TRACE_VALUES = 10;
-
-	/**
-	 * The feature id for the '<em><b>Trace executed Nodes Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__TRACE_EXECUTED_NODES_VALUES = 11;
-
-	/**
-	 * The feature id for the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = 12;
-
-	/**
-	 * The feature id for the '<em><b>Forked Token base Token Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__FORKED_TOKEN_BASE_TOKEN_VALUES = 13;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Value value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__BOOLEAN_VALUE_VALUE_VALUES = 14;
-
-	/**
-	 * The feature id for the '<em><b>Activity Node held Tokens Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES = 15;
-
-	/**
-	 * The feature id for the '<em><b>Integer Value value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INTEGER_VALUE_VALUE_VALUES = 16;
-
-	/**
-	 * The number of structural features of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_FEATURE_COUNT = 17;
-
-	/**
-	 * The number of operations of the '<em>State</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -314,223 +403,356 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	EReference getTrace_StatesTrace();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link activitydiagramTrace.Trace#getSteps <em>Steps</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getRootSteps <em>Root Steps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Steps</em>'.
-	 * @see activitydiagramTrace.Trace#getSteps()
+	 * @return the meta object for the containment reference list '<em>Root Steps</em>'.
+	 * @see activitydiagramTrace.Trace#getRootSteps()
 	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getTrace_Steps();
+	EReference getTrace_RootSteps();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link activitydiagramTrace.Trace#getTracedObjects <em>Traced Objects</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedOffers <em>Activitydiagram traced Offers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Traced Objects</em>'.
-	 * @see activitydiagramTrace.Trace#getTracedObjects()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Offers</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedOffers()
 	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getTrace_TracedObjects();
+	EReference getTrace_Activitydiagram_tracedOffers();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.State <em>State</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInitialNodes <em>Activitydiagram traced Initial Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>State</em>'.
-	 * @see activitydiagramTrace.State
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Initial Nodes</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedInitialNodes()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EClass getState();
+	EReference getTrace_Activitydiagram_tracedInitialNodes();
 
 	/**
-	 * Returns the meta object for the reference '{@link activitydiagramTrace.State#getFollowingStep <em>Following Step</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedOpaqueActions <em>Activitydiagram traced Opaque Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Following Step</em>'.
-	 * @see activitydiagramTrace.State#getFollowingStep()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Opaque Actions</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedOpaqueActions()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_FollowingStep();
+	EReference getTrace_Activitydiagram_tracedOpaqueActions();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getStartedBigSteps <em>Started Big Steps</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanValues <em>Activitydiagram traced Boolean Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Started Big Steps</em>'.
-	 * @see activitydiagramTrace.State#getStartedBigSteps()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Boolean Values</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanValues()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_StartedBigSteps();
+	EReference getTrace_Activitydiagram_tracedBooleanValues();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getEndedBigSteps <em>Ended Big Steps</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedJoinNodes <em>Activitydiagram traced Join Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Ended Big Steps</em>'.
-	 * @see activitydiagramTrace.State#getEndedBigSteps()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Join Nodes</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedJoinNodes()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_EndedBigSteps();
+	EReference getTrace_Activitydiagram_tracedJoinNodes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInputs <em>Activitydiagram traced Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Offer offered Tokens Values</em>'.
-	 * @see activitydiagramTrace.State#getOffer_offeredTokens_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Inputs</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedInputs()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_Offer_offeredTokens_Values();
+	EReference getTrace_Activitydiagram_tracedInputs();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getVariable_currentValue_Values <em>Variable current Value Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedControlFlows <em>Activitydiagram traced Control Flows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Variable current Value Values</em>'.
-	 * @see activitydiagramTrace.State#getVariable_currentValue_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Control Flows</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedControlFlows()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_Variable_currentValue_Values();
+	EReference getTrace_Activitydiagram_tracedControlFlows();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getToken_holder_Values <em>Token holder Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInputValues <em>Activitydiagram traced Input Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Token holder Values</em>'.
-	 * @see activitydiagramTrace.State#getToken_holder_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Input Values</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedInputValues()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_Token_holder_Values();
+	EReference getTrace_Activitydiagram_tracedInputValues();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getActivityEdge_offers_Values <em>Activity Edge offers Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedTraces <em>Activitydiagram traced Traces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activity Edge offers Values</em>'.
-	 * @see activitydiagramTrace.State#getActivityEdge_offers_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Traces</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedTraces()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_ActivityEdge_offers_Values();
+	EReference getTrace_Activitydiagram_tracedTraces();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getInputValue_variable_Values <em>Input Value variable Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedActivitys <em>Activitydiagram traced Activitys</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input Value variable Values</em>'.
-	 * @see activitydiagramTrace.State#getInputValue_variable_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Activitys</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedActivitys()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_InputValue_variable_Values();
+	EReference getTrace_Activitydiagram_tracedActivitys();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getInputValue_value_Values <em>Input Value value Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedMergeNodes <em>Activitydiagram traced Merge Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input Value value Values</em>'.
-	 * @see activitydiagramTrace.State#getInputValue_value_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Merge Nodes</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedMergeNodes()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_InputValue_value_Values();
+	EReference getTrace_Activitydiagram_tracedMergeNodes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getInput_inputValues_Values <em>Input input Values Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedControlTokens <em>Activitydiagram traced Control Tokens</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input input Values Values</em>'.
-	 * @see activitydiagramTrace.State#getInput_inputValues_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Control Tokens</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedControlTokens()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_Input_inputValues_Values();
+	EReference getTrace_Activitydiagram_tracedControlTokens();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getActivity_trace_Values <em>Activity trace Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedForkNodes <em>Activitydiagram traced Fork Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activity trace Values</em>'.
-	 * @see activitydiagramTrace.State#getActivity_trace_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Fork Nodes</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedForkNodes()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_Activity_trace_Values();
+	EReference getTrace_Activitydiagram_tracedForkNodes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerVariables <em>Activitydiagram traced Integer Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Trace executed Nodes Values</em>'.
-	 * @see activitydiagramTrace.State#getTrace_executedNodes_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Integer Variables</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerVariables()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_Trace_executedNodes_Values();
+	EReference getTrace_Activitydiagram_tracedIntegerVariables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanVariables <em>Activitydiagram traced Boolean Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Forked Token remaining Offers Count Values</em>'.
-	 * @see activitydiagramTrace.State#getForkedToken_remainingOffersCount_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Boolean Variables</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanVariables()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_ForkedToken_remainingOffersCount_Values();
+	EReference getTrace_Activitydiagram_tracedBooleanVariables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedDecisionNodes <em>Activitydiagram traced Decision Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Forked Token base Token Values</em>'.
-	 * @see activitydiagramTrace.State#getForkedToken_baseToken_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Decision Nodes</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedDecisionNodes()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_ForkedToken_baseToken_Values();
+	EReference getTrace_Activitydiagram_tracedDecisionNodes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getBooleanValue_value_Values <em>Boolean Value value Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedActivityFinalNodes <em>Activitydiagram traced Activity Final Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Boolean Value value Values</em>'.
-	 * @see activitydiagramTrace.State#getBooleanValue_value_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Activity Final Nodes</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedActivityFinalNodes()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_BooleanValue_value_Values();
+	EReference getTrace_Activitydiagram_tracedActivityFinalNodes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getActivityNode_heldTokens_Values <em>Activity Node held Tokens Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerValues <em>Activitydiagram traced Integer Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activity Node held Tokens Values</em>'.
-	 * @see activitydiagramTrace.State#getActivityNode_heldTokens_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Integer Values</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerValues()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_ActivityNode_heldTokens_Values();
+	EReference getTrace_Activitydiagram_tracedIntegerValues();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}'.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_tracedForkedTokens <em>Activitydiagram traced Forked Tokens</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Integer Value value Values</em>'.
-	 * @see activitydiagramTrace.State#getIntegerValue_value_Values()
-	 * @see #getState()
+	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Forked Tokens</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_tracedForkedTokens()
+	 * @see #getTrace()
 	 * @generated
 	 */
-	EReference getState_IntegerValue_value_Values();
+	EReference getTrace_Activitydiagram_tracedForkedTokens();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_Execute_Sequence <em>Activitydiagram Activity Execute Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Execute Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_Activity_Execute_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_Activity_Execute_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Terminate_Sequence <em>Activitydiagram Activity Node Terminate Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Node Terminate Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Terminate_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_ActivityNode_Terminate_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_WriteTrace_Sequence <em>Activitydiagram Activity Write Trace Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Write Trace Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_Activity_WriteTrace_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_Activity_WriteTrace_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_AddTokens1_Sequence <em>Activitydiagram Activity Node Add Tokens1 Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Node Add Tokens1 Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_AddTokens1_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_ActivityNode_AddTokens1_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_Variable_Execute_Sequence <em>Activitydiagram Variable Execute Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Variable Execute Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_Variable_Execute_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_Variable_Execute_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_RemoveToken1_Sequence <em>Activitydiagram Activity Node Remove Token1 Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Node Remove Token1 Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_RemoveToken1_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_ActivityNode_RemoveToken1_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_SendOffers1_Sequence <em>Activitydiagram Activity Node Send Offers1 Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Node Send Offers1 Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_SendOffers1_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_ActivityNode_SendOffers1_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_Variable_Init_Sequence <em>Activitydiagram Variable Init Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Variable Init Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_Variable_Init_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_Variable_Init_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_InitializeContext_Sequence <em>Activitydiagram Activity Initialize Context Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Initialize Context Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_Activity_InitializeContext_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_Activity_InitializeContext_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_TakeOfferdTokens1_Sequence <em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_TakeOfferdTokens1_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_Reset_Sequence <em>Activitydiagram Activity Reset Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Reset Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_Activity_Reset_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_Activity_Reset_Sequence();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Execute_Sequence <em>Activitydiagram Activity Node Execute Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitydiagram Activity Node Execute Sequence</em>'.
+	 * @see activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Execute_Sequence()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_Activitydiagram_ActivityNode_Execute_Sequence();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -574,166 +796,260 @@ public interface ActivitydiagramTracePackage extends EPackage {
 		EReference TRACE__STATES_TRACE = eINSTANCE.getTrace_StatesTrace();
 
 		/**
-		 * The meta object literal for the '<em><b>Steps</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Root Steps</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRACE__STEPS = eINSTANCE.getTrace_Steps();
+		EReference TRACE__ROOT_STEPS = eINSTANCE.getTrace_RootSteps();
 
 		/**
-		 * The meta object literal for the '<em><b>Traced Objects</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Offers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRACE__TRACED_OBJECTS = eINSTANCE.getTrace_TracedObjects();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_OFFERS = eINSTANCE.getTrace_Activitydiagram_tracedOffers();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.impl.StateImpl <em>State</em>}' class.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Initial Nodes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.impl.StateImpl
-		 * @see activitydiagramTrace.impl.ActivitydiagramTracePackageImpl#getState()
 		 * @generated
 		 */
-		EClass STATE = eINSTANCE.getState();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_INITIAL_NODES = eINSTANCE.getTrace_Activitydiagram_tracedInitialNodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Following Step</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Opaque Actions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__FOLLOWING_STEP = eINSTANCE.getState_FollowingStep();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_OPAQUE_ACTIONS = eINSTANCE.getTrace_Activitydiagram_tracedOpaqueActions();
 
 		/**
-		 * The meta object literal for the '<em><b>Started Big Steps</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__STARTED_BIG_STEPS = eINSTANCE.getState_StartedBigSteps();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES = eINSTANCE.getTrace_Activitydiagram_tracedBooleanValues();
 
 		/**
-		 * The meta object literal for the '<em><b>Ended Big Steps</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Join Nodes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__ENDED_BIG_STEPS = eINSTANCE.getState_EndedBigSteps();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES = eINSTANCE.getTrace_Activitydiagram_tracedJoinNodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Offer offered Tokens Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__OFFER_OFFERED_TOKENS_VALUES = eINSTANCE.getState_Offer_offeredTokens_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS = eINSTANCE.getTrace_Activitydiagram_tracedInputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Variable current Value Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Control Flows</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__VARIABLE_CURRENT_VALUE_VALUES = eINSTANCE.getState_Variable_currentValue_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS = eINSTANCE.getTrace_Activitydiagram_tracedControlFlows();
 
 		/**
-		 * The meta object literal for the '<em><b>Token holder Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Input Values</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__TOKEN_HOLDER_VALUES = eINSTANCE.getState_Token_holder_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_INPUT_VALUES = eINSTANCE.getTrace_Activitydiagram_tracedInputValues();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity Edge offers Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Traces</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__ACTIVITY_EDGE_OFFERS_VALUES = eINSTANCE.getState_ActivityEdge_offers_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_TRACES = eINSTANCE.getTrace_Activitydiagram_tracedTraces();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Value variable Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Activitys</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__INPUT_VALUE_VARIABLE_VALUES = eINSTANCE.getState_InputValue_variable_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS = eINSTANCE.getTrace_Activitydiagram_tracedActivitys();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Value value Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Merge Nodes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__INPUT_VALUE_VALUE_VALUES = eINSTANCE.getState_InputValue_value_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_MERGE_NODES = eINSTANCE.getTrace_Activitydiagram_tracedMergeNodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Input input Values Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Control Tokens</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__INPUT_INPUT_VALUES_VALUES = eINSTANCE.getState_Input_inputValues_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_TOKENS = eINSTANCE.getTrace_Activitydiagram_tracedControlTokens();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity trace Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Fork Nodes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__ACTIVITY_TRACE_VALUES = eINSTANCE.getState_Activity_trace_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_FORK_NODES = eINSTANCE.getTrace_Activitydiagram_tracedForkNodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Trace executed Nodes Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Integer Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__TRACE_EXECUTED_NODES_VALUES = eINSTANCE.getState_Trace_executedNodes_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES = eINSTANCE.getTrace_Activitydiagram_tracedIntegerVariables();
 
 		/**
-		 * The meta object literal for the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = eINSTANCE.getState_ForkedToken_remainingOffersCount_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES = eINSTANCE.getTrace_Activitydiagram_tracedBooleanVariables();
 
 		/**
-		 * The meta object literal for the '<em><b>Forked Token base Token Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Decision Nodes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__FORKED_TOKEN_BASE_TOKEN_VALUES = eINSTANCE.getState_ForkedToken_baseToken_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_DECISION_NODES = eINSTANCE.getTrace_Activitydiagram_tracedDecisionNodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Boolean Value value Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Activity Final Nodes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__BOOLEAN_VALUE_VALUE_VALUES = eINSTANCE.getState_BooleanValue_value_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITY_FINAL_NODES = eINSTANCE.getTrace_Activitydiagram_tracedActivityFinalNodes();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity Node held Tokens Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES = eINSTANCE.getState_ActivityNode_heldTokens_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES = eINSTANCE.getTrace_Activitydiagram_tracedIntegerValues();
 
 		/**
-		 * The meta object literal for the '<em><b>Integer Value value Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activitydiagram traced Forked Tokens</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__INTEGER_VALUE_VALUE_VALUES = eINSTANCE.getState_IntegerValue_value_Values();
+		EReference TRACE__ACTIVITYDIAGRAM_TRACED_FORKED_TOKENS = eINSTANCE.getTrace_Activitydiagram_tracedForkedTokens();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Execute Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_Activity_Execute_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Node Terminate Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_ActivityNode_Terminate_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Write Trace Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_Activity_WriteTrace_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Node Add Tokens1 Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_ActivityNode_AddTokens1_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Variable Execute Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_VARIABLE_EXECUTE_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_Variable_Execute_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Node Remove Token1 Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_ActivityNode_RemoveToken1_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Node Send Offers1 Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_ActivityNode_SendOffers1_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Variable Init Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_VARIABLE_INIT_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_Variable_Init_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Initialize Context Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_Activity_InitializeContext_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Reset Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_RESET_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_Activity_Reset_Sequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitydiagram Activity Node Execute Sequence</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_SEQUENCE = eINSTANCE.getTrace_Activitydiagram_ActivityNode_Execute_Sequence();
 
 	}
 

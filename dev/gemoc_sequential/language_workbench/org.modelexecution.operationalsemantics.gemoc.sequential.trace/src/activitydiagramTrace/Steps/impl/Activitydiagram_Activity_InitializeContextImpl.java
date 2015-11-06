@@ -2,10 +2,10 @@
  */
 package activitydiagramTrace.Steps.impl;
 
+import activitydiagram.Activity;
+
 import activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -36,7 +36,7 @@ public class Activitydiagram_Activity_InitializeContextImpl extends SmallStepImp
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivity this_;
+	protected Activity this_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,10 @@ public class Activitydiagram_Activity_InitializeContextImpl extends SmallStepImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity getThis() {
+	public Activity getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedActivity)eResolveProxy(oldThis);
+			this_ = (Activity)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__THIS, oldThis, this_));
@@ -79,7 +79,7 @@ public class Activitydiagram_Activity_InitializeContextImpl extends SmallStepImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity basicGetThis() {
+	public Activity basicGetThis() {
 		return this_;
 	}
 
@@ -88,8 +88,8 @@ public class Activitydiagram_Activity_InitializeContextImpl extends SmallStepImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedActivity newThis) {
-		TracedActivity oldThis = this_;
+	public void setThis(Activity newThis) {
+		Activity oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__THIS, oldThis, this_));
@@ -119,7 +119,7 @@ public class Activitydiagram_Activity_InitializeContextImpl extends SmallStepImp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__THIS:
-				setThis((TracedActivity)newValue);
+				setThis((Activity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,7 +134,7 @@ public class Activitydiagram_Activity_InitializeContextImpl extends SmallStepImp
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__THIS:
-				setThis((TracedActivity)null);
+				setThis((Activity)null);
 				return;
 		}
 		super.eUnset(featureID);

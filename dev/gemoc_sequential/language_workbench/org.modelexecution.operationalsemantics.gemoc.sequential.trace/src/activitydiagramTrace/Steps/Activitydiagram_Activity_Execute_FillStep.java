@@ -13,5 +13,5 @@ package activitydiagramTrace.Steps;
  * @model
  * @generated
  */
-public interface Activitydiagram_Activity_Execute_FillStep extends Activitydiagram_Activity_Execute_AbstractSubStep, SmallStep {
+public interface Activitydiagram_Activity_Execute_FillStep extends Activitydiagram_Activity_Execute_AbstractSubStep {
 } // Activitydiagram_Activity_Execute_FillStep

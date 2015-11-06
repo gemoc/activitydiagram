@@ -2,29 +2,23 @@
  */
 package activitydiagramTrace.Steps.impl;
 
-import activitydiagramTrace.ActivitydiagramTracePackage;
-import activitydiagramTrace.State;
+import activitydiagram.Variable;
+
+import activitydiagramTrace.States.State;
+import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.Steps.Activitydiagram_Variable_Init;
-import activitydiagramTrace.Steps.Activitydiagram_Variable_Init_AbstractSubStep;
-import activitydiagramTrace.Steps.BigStep;
+import activitydiagramTrace.Steps.SmallStep;
+import activitydiagramTrace.Steps.Step;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import activitydiagramTrace.Traced.activitydiagram.TracedVariable;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +30,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl#getStartingState <em>Starting State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl#getEndingState <em>Ending State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl#getThis <em>This</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,17 +64,7 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedVariable this_;
-
-	/**
-	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubSteps()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Activitydiagram_Variable_Init_AbstractSubStep> subSteps;
+	protected Variable this_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,9 +135,9 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 		if (newStartingState != startingState) {
 			NotificationChain msgs = null;
 			if (startingState != null)
-				msgs = ((InternalEObject)startingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 			if (newStartingState != null)
-				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 			msgs = basicSetStartingState(newStartingState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -212,9 +195,9 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 		if (newEndingState != endingState) {
 			NotificationChain msgs = null;
 			if (endingState != null)
-				msgs = ((InternalEObject)endingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 			if (newEndingState != null)
-				msgs = ((InternalEObject)newEndingState).eInverseAdd(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+				msgs = ((InternalEObject)newEndingState).eInverseAdd(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 			msgs = basicSetEndingState(newEndingState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -227,10 +210,10 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedVariable getThis() {
+	public Variable getThis() {
 		if (this_ != null && this_.eIsProxy()) {
 			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (TracedVariable)eResolveProxy(oldThis);
+			this_ = (Variable)eResolveProxy(oldThis);
 			if (this_ != oldThis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__THIS, oldThis, this_));
@@ -244,7 +227,7 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedVariable basicGetThis() {
+	public Variable basicGetThis() {
 		return this_;
 	}
 
@@ -253,23 +236,11 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setThis(TracedVariable newThis) {
-		TracedVariable oldThis = this_;
+	public void setThis(Variable newThis) {
+		Variable oldThis = this_;
 		this_ = newThis;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__THIS, oldThis, this_));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Activitydiagram_Variable_Init_AbstractSubStep> getSubSteps() {
-		if (subSteps == null) {
-			subSteps = new EObjectResolvingEList<Activitydiagram_Variable_Init_AbstractSubStep>(Activitydiagram_Variable_Init_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__SUB_STEPS);
-		}
-		return subSteps;
 	}
 
 	/**
@@ -282,11 +253,11 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE:
 				if (startingState != null)
-					msgs = ((InternalEObject)startingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__STARTED_BIG_STEPS, State.class, msgs);
+					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
 				return basicSetStartingState((State)otherEnd, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE:
 				if (endingState != null)
-					msgs = ((InternalEObject)endingState).eInverseRemove(this, ActivitydiagramTracePackage.STATE__ENDED_BIG_STEPS, State.class, msgs);
+					msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 				return basicSetEndingState((State)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -325,8 +296,6 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__THIS:
 				if (resolve) return getThis();
 				return basicGetThis();
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__SUB_STEPS:
-				return getSubSteps();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -336,7 +305,6 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -347,11 +315,7 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 				setEndingState((State)newValue);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__THIS:
-				setThis((TracedVariable)newValue);
-				return;
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__SUB_STEPS:
-				getSubSteps().clear();
-				getSubSteps().addAll((Collection<? extends Activitydiagram_Variable_Init_AbstractSubStep>)newValue);
+				setThis((Variable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -372,10 +336,7 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 				setEndingState((State)null);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__THIS:
-				setThis((TracedVariable)null);
-				return;
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__SUB_STEPS:
-				getSubSteps().clear();
+				setThis((Variable)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -395,8 +356,6 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 				return endingState != null;
 			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__THIS:
 				return this_ != null;
-			case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__SUB_STEPS:
-				return subSteps != null && !subSteps.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -408,10 +367,15 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == BigStep.class) {
+		if (baseClass == Step.class) {
 			switch (derivedFeatureID) {
-				case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE: return StepsPackage.BIG_STEP__STARTING_STATE;
-				case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE: return StepsPackage.BIG_STEP__ENDING_STATE;
+				case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE: return StepsPackage.STEP__STARTING_STATE;
+				case StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE: return StepsPackage.STEP__ENDING_STATE;
+				default: return -1;
+			}
+		}
+		if (baseClass == SmallStep.class) {
+			switch (derivedFeatureID) {
 				default: return -1;
 			}
 		}
@@ -425,10 +389,15 @@ public class Activitydiagram_Variable_InitImpl extends Activitydiagram_Activity_
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == BigStep.class) {
+		if (baseClass == Step.class) {
 			switch (baseFeatureID) {
-				case StepsPackage.BIG_STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE;
-				case StepsPackage.BIG_STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE;
+				case StepsPackage.STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE;
+				case StepsPackage.STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE;
+				default: return -1;
+			}
+		}
+		if (baseClass == SmallStep.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

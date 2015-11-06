@@ -2,7 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedVariable;
+import activitydiagram.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ public interface Activitydiagram_Variable_Execute extends SmallStep {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedVariable)
+	 * @see #setThis(Variable)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_Variable_Execute_This()
 	 * @model
 	 * @generated
 	 */
-	TracedVariable getThis();
+	Variable getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute#getThis <em>This</em>}' reference.
@@ -45,6 +45,6 @@ public interface Activitydiagram_Variable_Execute extends SmallStep {
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedVariable value);
+	void setThis(Variable value);
 
 } // Activitydiagram_Variable_Execute

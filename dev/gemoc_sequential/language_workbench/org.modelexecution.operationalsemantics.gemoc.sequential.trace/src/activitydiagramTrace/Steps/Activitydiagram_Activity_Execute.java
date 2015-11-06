@@ -2,7 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
+import activitydiagram.Activity;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -33,12 +33,12 @@ public interface Activitydiagram_Activity_Execute extends BigStep {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedActivity)
+	 * @see #setThis(Activity)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_Activity_Execute_This()
 	 * @model
 	 * @generated
 	 */
-	TracedActivity getThis();
+	Activity getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute#getThis <em>This</em>}' reference.
@@ -48,20 +48,20 @@ public interface Activitydiagram_Activity_Execute extends BigStep {
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedActivity value);
+	void setThis(Activity value);
 
 	/**
-	 * Returns the value of the '<em><b>Sub Steps</b></em>' reference list.
+	 * Returns the value of the '<em><b>Sub Steps</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_AbstractSubStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sub Steps</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sub Steps</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Steps</em>' reference list.
+	 * @return the value of the '<em>Sub Steps</em>' containment reference list.
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_Activity_Execute_SubSteps()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Activitydiagram_Activity_Execute_AbstractSubStep> getSubSteps();

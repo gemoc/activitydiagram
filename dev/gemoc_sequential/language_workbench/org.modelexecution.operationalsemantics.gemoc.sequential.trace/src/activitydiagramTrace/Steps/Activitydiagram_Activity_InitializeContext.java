@@ -2,7 +2,7 @@
  */
 package activitydiagramTrace.Steps;
 
-import activitydiagramTrace.Traced.activitydiagram.TracedActivity;
+import activitydiagram.Activity;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +30,12 @@ public interface Activitydiagram_Activity_InitializeContext extends SmallStep {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>This</em>' reference.
-	 * @see #setThis(TracedActivity)
+	 * @see #setThis(Activity)
 	 * @see activitydiagramTrace.Steps.StepsPackage#getActivitydiagram_Activity_InitializeContext_This()
 	 * @model
 	 * @generated
 	 */
-	TracedActivity getThis();
+	Activity getThis();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext#getThis <em>This</em>}' reference.
@@ -45,6 +45,6 @@ public interface Activitydiagram_Activity_InitializeContext extends SmallStep {
 	 * @see #getThis()
 	 * @generated
 	 */
-	void setThis(TracedActivity value);
+	void setThis(Activity value);
 
 } // Activitydiagram_Activity_InitializeContext
