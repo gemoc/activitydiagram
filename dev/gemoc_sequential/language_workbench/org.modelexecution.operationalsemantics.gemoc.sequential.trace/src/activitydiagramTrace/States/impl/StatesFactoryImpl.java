@@ -57,20 +57,20 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case StatesPackage.STATE: return createState();
-			case StatesPackage.OFFER_OFFERED_TOKENS_VALUE: return createOffer_offeredTokens_Value();
-			case StatesPackage.ACTIVITY_EDGE_OFFERS_VALUE: return createActivityEdge_offers_Value();
+			case StatesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE: return createForkedToken_baseToken_Value();
+			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE: return createForkedToken_remainingOffersCount_Value();
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE: return createBooleanValue_value_Value();
-			case StatesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE: return createActivityNode_heldTokens_Value();
-			case StatesPackage.INPUT_INPUT_VALUES_VALUE: return createInput_inputValues_Value();
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE: return createInputValue_variable_Value();
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE: return createInputValue_value_Value();
-			case StatesPackage.TRACE_EXECUTED_NODES_VALUE: return createTrace_executedNodes_Value();
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE: return createInputValue_variable_Value();
 			case StatesPackage.ACTIVITY_TRACE_VALUE: return createActivity_trace_Value();
+			case StatesPackage.ACTIVITY_EDGE_OFFERS_VALUE: return createActivityEdge_offers_Value();
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE: return createInput_inputValues_Value();
+			case StatesPackage.OFFER_OFFERED_TOKENS_VALUE: return createOffer_offeredTokens_Value();
 			case StatesPackage.TOKEN_HOLDER_VALUE: return createToken_holder_Value();
 			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE: return createVariable_currentValue_Value();
 			case StatesPackage.INTEGER_VALUE_VALUE_VALUE: return createIntegerValue_value_Value();
-			case StatesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE: return createForkedToken_baseToken_Value();
-			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE: return createForkedToken_remainingOffersCount_Value();
+			case StatesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE: return createActivityNode_heldTokens_Value();
+			case StatesPackage.TRACE_EXECUTED_NODES_VALUE: return createTrace_executedNodes_Value();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -91,9 +91,9 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Offer_offeredTokens_Value createOffer_offeredTokens_Value() {
-		Offer_offeredTokens_ValueImpl offer_offeredTokens_Value = new Offer_offeredTokens_ValueImpl();
-		return offer_offeredTokens_Value;
+	public ForkedToken_baseToken_Value createForkedToken_baseToken_Value() {
+		ForkedToken_baseToken_ValueImpl forkedToken_baseToken_Value = new ForkedToken_baseToken_ValueImpl();
+		return forkedToken_baseToken_Value;
 	}
 
 	/**
@@ -101,9 +101,9 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ActivityEdge_offers_Value createActivityEdge_offers_Value() {
-		ActivityEdge_offers_ValueImpl activityEdge_offers_Value = new ActivityEdge_offers_ValueImpl();
-		return activityEdge_offers_Value;
+	public ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value() {
+		ForkedToken_remainingOffersCount_ValueImpl forkedToken_remainingOffersCount_Value = new ForkedToken_remainingOffersCount_ValueImpl();
+		return forkedToken_remainingOffersCount_Value;
 	}
 
 	/**
@@ -121,19 +121,9 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ActivityNode_heldTokens_Value createActivityNode_heldTokens_Value() {
-		ActivityNode_heldTokens_ValueImpl activityNode_heldTokens_Value = new ActivityNode_heldTokens_ValueImpl();
-		return activityNode_heldTokens_Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Input_inputValues_Value createInput_inputValues_Value() {
-		Input_inputValues_ValueImpl input_inputValues_Value = new Input_inputValues_ValueImpl();
-		return input_inputValues_Value;
+	public InputValue_value_Value createInputValue_value_Value() {
+		InputValue_value_ValueImpl inputValue_value_Value = new InputValue_value_ValueImpl();
+		return inputValue_value_Value;
 	}
 
 	/**
@@ -151,29 +141,39 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InputValue_value_Value createInputValue_value_Value() {
-		InputValue_value_ValueImpl inputValue_value_Value = new InputValue_value_ValueImpl();
-		return inputValue_value_Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Trace_executedNodes_Value createTrace_executedNodes_Value() {
-		Trace_executedNodes_ValueImpl trace_executedNodes_Value = new Trace_executedNodes_ValueImpl();
-		return trace_executedNodes_Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Activity_trace_Value createActivity_trace_Value() {
 		Activity_trace_ValueImpl activity_trace_Value = new Activity_trace_ValueImpl();
 		return activity_trace_Value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActivityEdge_offers_Value createActivityEdge_offers_Value() {
+		ActivityEdge_offers_ValueImpl activityEdge_offers_Value = new ActivityEdge_offers_ValueImpl();
+		return activityEdge_offers_Value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Input_inputValues_Value createInput_inputValues_Value() {
+		Input_inputValues_ValueImpl input_inputValues_Value = new Input_inputValues_ValueImpl();
+		return input_inputValues_Value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Offer_offeredTokens_Value createOffer_offeredTokens_Value() {
+		Offer_offeredTokens_ValueImpl offer_offeredTokens_Value = new Offer_offeredTokens_ValueImpl();
+		return offer_offeredTokens_Value;
 	}
 
 	/**
@@ -211,9 +211,9 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ForkedToken_baseToken_Value createForkedToken_baseToken_Value() {
-		ForkedToken_baseToken_ValueImpl forkedToken_baseToken_Value = new ForkedToken_baseToken_ValueImpl();
-		return forkedToken_baseToken_Value;
+	public ActivityNode_heldTokens_Value createActivityNode_heldTokens_Value() {
+		ActivityNode_heldTokens_ValueImpl activityNode_heldTokens_Value = new ActivityNode_heldTokens_ValueImpl();
+		return activityNode_heldTokens_Value;
 	}
 
 	/**
@@ -221,9 +221,9 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value() {
-		ForkedToken_remainingOffersCount_ValueImpl forkedToken_remainingOffersCount_Value = new ForkedToken_remainingOffersCount_ValueImpl();
-		return forkedToken_remainingOffersCount_Value;
+	public Trace_executedNodes_Value createTrace_executedNodes_Value() {
+		Trace_executedNodes_ValueImpl trace_executedNodes_Value = new Trace_executedNodes_ValueImpl();
+		return trace_executedNodes_Value;
 	}
 
 	/**

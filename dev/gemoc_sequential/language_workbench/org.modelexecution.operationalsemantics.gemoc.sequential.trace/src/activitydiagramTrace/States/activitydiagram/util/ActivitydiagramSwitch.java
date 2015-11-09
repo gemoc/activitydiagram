@@ -66,44 +66,10 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ActivitydiagramPackage.TRACED_ACTION: {
-				TracedAction tracedAction = (TracedAction)theEObject;
-				T result = caseTracedAction(tracedAction);
-				if (result == null) result = caseTracedExecutableNode(tracedAction);
-				if (result == null) result = caseTracedActivityNode(tracedAction);
-				if (result == null) result = caseTracedNamedElement(tracedAction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_OFFER: {
-				TracedOffer tracedOffer = (TracedOffer)theEObject;
-				T result = caseTracedOffer(tracedOffer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_INITIAL_NODE: {
-				TracedInitialNode tracedInitialNode = (TracedInitialNode)theEObject;
-				T result = caseTracedInitialNode(tracedInitialNode);
-				if (result == null) result = caseTracedControlNode(tracedInitialNode);
-				if (result == null) result = caseTracedActivityNode(tracedInitialNode);
-				if (result == null) result = caseTracedNamedElement(tracedInitialNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE: {
-				TracedActivityEdge tracedActivityEdge = (TracedActivityEdge)theEObject;
-				T result = caseTracedActivityEdge(tracedActivityEdge);
-				if (result == null) result = caseTracedNamedElement(tracedActivityEdge);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION: {
-				TracedOpaqueAction tracedOpaqueAction = (TracedOpaqueAction)theEObject;
-				T result = caseTracedOpaqueAction(tracedOpaqueAction);
-				if (result == null) result = caseTracedAction(tracedOpaqueAction);
-				if (result == null) result = caseTracedExecutableNode(tracedOpaqueAction);
-				if (result == null) result = caseTracedActivityNode(tracedOpaqueAction);
-				if (result == null) result = caseTracedNamedElement(tracedOpaqueAction);
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN: {
+				TracedForkedToken tracedForkedToken = (TracedForkedToken)theEObject;
+				T result = caseTracedForkedToken(tracedForkedToken);
+				if (result == null) result = caseTracedToken(tracedForkedToken);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -114,59 +80,9 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.TRACED_JOIN_NODE: {
-				TracedJoinNode tracedJoinNode = (TracedJoinNode)theEObject;
-				T result = caseTracedJoinNode(tracedJoinNode);
-				if (result == null) result = caseTracedControlNode(tracedJoinNode);
-				if (result == null) result = caseTracedActivityNode(tracedJoinNode);
-				if (result == null) result = caseTracedNamedElement(tracedJoinNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_NAMED_ELEMENT: {
-				TracedNamedElement tracedNamedElement = (TracedNamedElement)theEObject;
-				T result = caseTracedNamedElement(tracedNamedElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE: {
-				TracedActivityNode tracedActivityNode = (TracedActivityNode)theEObject;
-				T result = caseTracedActivityNode(tracedActivityNode);
-				if (result == null) result = caseTracedNamedElement(tracedActivityNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_INPUT: {
-				TracedInput tracedInput = (TracedInput)theEObject;
-				T result = caseTracedInput(tracedInput);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW: {
-				TracedControlFlow tracedControlFlow = (TracedControlFlow)theEObject;
-				T result = caseTracedControlFlow(tracedControlFlow);
-				if (result == null) result = caseTracedActivityEdge(tracedControlFlow);
-				if (result == null) result = caseTracedNamedElement(tracedControlFlow);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_EXECUTABLE_NODE: {
-				TracedExecutableNode tracedExecutableNode = (TracedExecutableNode)theEObject;
-				T result = caseTracedExecutableNode(tracedExecutableNode);
-				if (result == null) result = caseTracedActivityNode(tracedExecutableNode);
-				if (result == null) result = caseTracedNamedElement(tracedExecutableNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE: {
 				TracedInputValue tracedInputValue = (TracedInputValue)theEObject;
 				T result = caseTracedInputValue(tracedInputValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_TRACE: {
-				TracedTrace tracedTrace = (TracedTrace)theEObject;
-				T result = caseTracedTrace(tracedTrace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,37 +90,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				TracedActivity tracedActivity = (TracedActivity)theEObject;
 				T result = caseTracedActivity(tracedActivity);
 				if (result == null) result = caseTracedNamedElement(tracedActivity);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_MERGE_NODE: {
-				TracedMergeNode tracedMergeNode = (TracedMergeNode)theEObject;
-				T result = caseTracedMergeNode(tracedMergeNode);
-				if (result == null) result = caseTracedControlNode(tracedMergeNode);
-				if (result == null) result = caseTracedActivityNode(tracedMergeNode);
-				if (result == null) result = caseTracedNamedElement(tracedMergeNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_CONTROL_TOKEN: {
-				TracedControlToken tracedControlToken = (TracedControlToken)theEObject;
-				T result = caseTracedControlToken(tracedControlToken);
-				if (result == null) result = caseTracedToken(tracedControlToken);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_FORK_NODE: {
-				TracedForkNode tracedForkNode = (TracedForkNode)theEObject;
-				T result = caseTracedForkNode(tracedForkNode);
-				if (result == null) result = caseTracedControlNode(tracedForkNode);
-				if (result == null) result = caseTracedActivityNode(tracedForkNode);
-				if (result == null) result = caseTracedNamedElement(tracedForkNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_TOKEN: {
-				TracedToken tracedToken = (TracedToken)theEObject;
-				T result = caseTracedToken(tracedToken);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -217,10 +102,130 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE: {
+				TracedActivityEdge tracedActivityEdge = (TracedActivityEdge)theEObject;
+				T result = caseTracedActivityEdge(tracedActivityEdge);
+				if (result == null) result = caseTracedNamedElement(tracedActivityEdge);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_ACTION: {
+				TracedAction tracedAction = (TracedAction)theEObject;
+				T result = caseTracedAction(tracedAction);
+				if (result == null) result = caseTracedExecutableNode(tracedAction);
+				if (result == null) result = caseTracedActivityNode(tracedAction);
+				if (result == null) result = caseTracedNamedElement(tracedAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_EXECUTABLE_NODE: {
+				TracedExecutableNode tracedExecutableNode = (TracedExecutableNode)theEObject;
+				T result = caseTracedExecutableNode(tracedExecutableNode);
+				if (result == null) result = caseTracedActivityNode(tracedExecutableNode);
+				if (result == null) result = caseTracedNamedElement(tracedExecutableNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_CONTROL_TOKEN: {
+				TracedControlToken tracedControlToken = (TracedControlToken)theEObject;
+				T result = caseTracedControlToken(tracedControlToken);
+				if (result == null) result = caseTracedToken(tracedControlToken);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_INPUT: {
+				TracedInput tracedInput = (TracedInput)theEObject;
+				T result = caseTracedInput(tracedInput);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_DECISION_NODE: {
+				TracedDecisionNode tracedDecisionNode = (TracedDecisionNode)theEObject;
+				T result = caseTracedDecisionNode(tracedDecisionNode);
+				if (result == null) result = caseTracedControlNode(tracedDecisionNode);
+				if (result == null) result = caseTracedActivityNode(tracedDecisionNode);
+				if (result == null) result = caseTracedNamedElement(tracedDecisionNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_OFFER: {
+				TracedOffer tracedOffer = (TracedOffer)theEObject;
+				T result = caseTracedOffer(tracedOffer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_NAMED_ELEMENT: {
+				TracedNamedElement tracedNamedElement = (TracedNamedElement)theEObject;
+				T result = caseTracedNamedElement(tracedNamedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ActivitydiagramPackage.TRACED_INTEGER_VARIABLE: {
 				TracedIntegerVariable tracedIntegerVariable = (TracedIntegerVariable)theEObject;
 				T result = caseTracedIntegerVariable(tracedIntegerVariable);
 				if (result == null) result = caseTracedVariable(tracedIntegerVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_FORK_NODE: {
+				TracedForkNode tracedForkNode = (TracedForkNode)theEObject;
+				T result = caseTracedForkNode(tracedForkNode);
+				if (result == null) result = caseTracedControlNode(tracedForkNode);
+				if (result == null) result = caseTracedActivityNode(tracedForkNode);
+				if (result == null) result = caseTracedNamedElement(tracedForkNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW: {
+				TracedControlFlow tracedControlFlow = (TracedControlFlow)theEObject;
+				T result = caseTracedControlFlow(tracedControlFlow);
+				if (result == null) result = caseTracedActivityEdge(tracedControlFlow);
+				if (result == null) result = caseTracedNamedElement(tracedControlFlow);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_TOKEN: {
+				TracedToken tracedToken = (TracedToken)theEObject;
+				T result = caseTracedToken(tracedToken);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_VARIABLE: {
+				TracedVariable tracedVariable = (TracedVariable)theEObject;
+				T result = caseTracedVariable(tracedVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_INTEGER_VALUE: {
+				TracedIntegerValue tracedIntegerValue = (TracedIntegerValue)theEObject;
+				T result = caseTracedIntegerValue(tracedIntegerValue);
+				if (result == null) result = caseTracedValue(tracedIntegerValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_MERGE_NODE: {
+				TracedMergeNode tracedMergeNode = (TracedMergeNode)theEObject;
+				T result = caseTracedMergeNode(tracedMergeNode);
+				if (result == null) result = caseTracedControlNode(tracedMergeNode);
+				if (result == null) result = caseTracedActivityNode(tracedMergeNode);
+				if (result == null) result = caseTracedNamedElement(tracedMergeNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE: {
+				TracedActivityNode tracedActivityNode = (TracedActivityNode)theEObject;
+				T result = caseTracedActivityNode(tracedActivityNode);
+				if (result == null) result = caseTracedNamedElement(tracedActivityNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_ACTIVITY_FINAL_NODE: {
+				TracedActivityFinalNode tracedActivityFinalNode = (TracedActivityFinalNode)theEObject;
+				T result = caseTracedActivityFinalNode(tracedActivityFinalNode);
+				if (result == null) result = caseTracedFinalNode(tracedActivityFinalNode);
+				if (result == null) result = caseTracedControlNode(tracedActivityFinalNode);
+				if (result == null) result = caseTracedActivityNode(tracedActivityFinalNode);
+				if (result == null) result = caseTracedNamedElement(tracedActivityFinalNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,48 +244,43 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.TRACED_DECISION_NODE: {
-				TracedDecisionNode tracedDecisionNode = (TracedDecisionNode)theEObject;
-				T result = caseTracedDecisionNode(tracedDecisionNode);
-				if (result == null) result = caseTracedControlNode(tracedDecisionNode);
-				if (result == null) result = caseTracedActivityNode(tracedDecisionNode);
-				if (result == null) result = caseTracedNamedElement(tracedDecisionNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_ACTIVITY_FINAL_NODE: {
-				TracedActivityFinalNode tracedActivityFinalNode = (TracedActivityFinalNode)theEObject;
-				T result = caseTracedActivityFinalNode(tracedActivityFinalNode);
-				if (result == null) result = caseTracedFinalNode(tracedActivityFinalNode);
-				if (result == null) result = caseTracedControlNode(tracedActivityFinalNode);
-				if (result == null) result = caseTracedActivityNode(tracedActivityFinalNode);
-				if (result == null) result = caseTracedNamedElement(tracedActivityFinalNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_VARIABLE: {
-				TracedVariable tracedVariable = (TracedVariable)theEObject;
-				T result = caseTracedVariable(tracedVariable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_INTEGER_VALUE: {
-				TracedIntegerValue tracedIntegerValue = (TracedIntegerValue)theEObject;
-				T result = caseTracedIntegerValue(tracedIntegerValue);
-				if (result == null) result = caseTracedValue(tracedIntegerValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN: {
-				TracedForkedToken tracedForkedToken = (TracedForkedToken)theEObject;
-				T result = caseTracedForkedToken(tracedForkedToken);
-				if (result == null) result = caseTracedToken(tracedForkedToken);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.TRACED_VALUE: {
 				TracedValue tracedValue = (TracedValue)theEObject;
 				T result = caseTracedValue(tracedValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_INITIAL_NODE: {
+				TracedInitialNode tracedInitialNode = (TracedInitialNode)theEObject;
+				T result = caseTracedInitialNode(tracedInitialNode);
+				if (result == null) result = caseTracedControlNode(tracedInitialNode);
+				if (result == null) result = caseTracedActivityNode(tracedInitialNode);
+				if (result == null) result = caseTracedNamedElement(tracedInitialNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_JOIN_NODE: {
+				TracedJoinNode tracedJoinNode = (TracedJoinNode)theEObject;
+				T result = caseTracedJoinNode(tracedJoinNode);
+				if (result == null) result = caseTracedControlNode(tracedJoinNode);
+				if (result == null) result = caseTracedActivityNode(tracedJoinNode);
+				if (result == null) result = caseTracedNamedElement(tracedJoinNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION: {
+				TracedOpaqueAction tracedOpaqueAction = (TracedOpaqueAction)theEObject;
+				T result = caseTracedOpaqueAction(tracedOpaqueAction);
+				if (result == null) result = caseTracedAction(tracedOpaqueAction);
+				if (result == null) result = caseTracedExecutableNode(tracedOpaqueAction);
+				if (result == null) result = caseTracedActivityNode(tracedOpaqueAction);
+				if (result == null) result = caseTracedNamedElement(tracedOpaqueAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACED_TRACE: {
+				TracedTrace tracedTrace = (TracedTrace)theEObject;
+				T result = caseTracedTrace(tracedTrace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -289,77 +289,17 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Action</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Forked Token</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Action</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Forked Token</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTracedAction(TracedAction object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Offer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Offer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedOffer(TracedOffer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Initial Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Initial Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedInitialNode(TracedInitialNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Activity Edge</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Activity Edge</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedActivityEdge(TracedActivityEdge object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Opaque Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Opaque Action</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedOpaqueAction(TracedOpaqueAction object) {
+	public T caseTracedForkedToken(TracedForkedToken object) {
 		return null;
 	}
 
@@ -379,96 +319,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Join Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Join Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedJoinNode(TracedJoinNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Named Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Named Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedNamedElement(TracedNamedElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Activity Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Activity Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedActivityNode(TracedActivityNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Input</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Input</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedInput(TracedInput object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Control Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Control Flow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedControlFlow(TracedControlFlow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Executable Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Executable Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedExecutableNode(TracedExecutableNode object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Traced Input Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -480,21 +330,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTracedInputValue(TracedInputValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Trace</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Trace</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedTrace(TracedTrace object) {
 		return null;
 	}
 
@@ -514,17 +349,62 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Merge Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Final Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Merge Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Final Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTracedMergeNode(TracedMergeNode object) {
+	public T caseTracedFinalNode(TracedFinalNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Activity Edge</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Activity Edge</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedActivityEdge(TracedActivityEdge object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedAction(TracedAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Executable Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Executable Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedExecutableNode(TracedExecutableNode object) {
 		return null;
 	}
 
@@ -544,92 +424,17 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Fork Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Input</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Fork Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Input</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTracedForkNode(TracedForkNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedToken(TracedToken object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Final Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Final Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedFinalNode(TracedFinalNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Integer Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Integer Variable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedIntegerVariable(TracedIntegerVariable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Boolean Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Boolean Variable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedBooleanVariable(TracedBooleanVariable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Control Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Control Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedControlNode(TracedControlNode object) {
+	public T caseTracedInput(TracedInput object) {
 		return null;
 	}
 
@@ -649,17 +454,92 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Activity Final Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Offer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Activity Final Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Offer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTracedActivityFinalNode(TracedActivityFinalNode object) {
+	public T caseTracedOffer(TracedOffer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedNamedElement(TracedNamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Integer Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Integer Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedIntegerVariable(TracedIntegerVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Fork Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Fork Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedForkNode(TracedForkNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Control Flow</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Control Flow</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedControlFlow(TracedControlFlow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Token</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Token</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedToken(TracedToken object) {
 		return null;
 	}
 
@@ -694,17 +574,77 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Forked Token</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Merge Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Forked Token</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Merge Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTracedForkedToken(TracedForkedToken object) {
+	public T caseTracedMergeNode(TracedMergeNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Activity Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Activity Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedActivityNode(TracedActivityNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Activity Final Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Activity Final Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedActivityFinalNode(TracedActivityFinalNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Boolean Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Boolean Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedBooleanVariable(TracedBooleanVariable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Control Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Control Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedControlNode(TracedControlNode object) {
 		return null;
 	}
 
@@ -720,6 +660,66 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTracedValue(TracedValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Initial Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Initial Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedInitialNode(TracedInitialNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Join Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Join Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedJoinNode(TracedJoinNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Opaque Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Opaque Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedOpaqueAction(TracedOpaqueAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traced Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traced Trace</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTracedTrace(TracedTrace object) {
 		return null;
 	}
 

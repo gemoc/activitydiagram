@@ -20,7 +20,7 @@ import activitydiagram.ActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep, SmallStep, Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep {
+public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep, Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep, SmallStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->

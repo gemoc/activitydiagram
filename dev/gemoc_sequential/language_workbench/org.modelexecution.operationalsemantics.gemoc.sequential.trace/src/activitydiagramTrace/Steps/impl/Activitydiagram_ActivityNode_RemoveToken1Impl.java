@@ -7,8 +7,8 @@ import activitydiagram.ActivityNode;
 import activitydiagramTrace.States.State;
 import activitydiagramTrace.States.StatesPackage;
 
+import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep;
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1;
-import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep;
 import activitydiagramTrace.Steps.SmallStep;
 import activitydiagramTrace.Steps.Step;
 import activitydiagramTrace.Steps.StepsPackage;
@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Activitydiagram_ActivityNode_RemoveToken1Impl extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl implements Activitydiagram_ActivityNode_RemoveToken1 {
+public class Activitydiagram_ActivityNode_RemoveToken1Impl extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepImpl implements Activitydiagram_ActivityNode_RemoveToken1 {
 	/**
 	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -368,6 +368,11 @@ public class Activitydiagram_ActivityNode_RemoveToken1Impl extends Activitydiagr
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == Step.class) {
 			switch (derivedFeatureID) {
 				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1__STARTING_STATE: return StepsPackage.STEP__STARTING_STATE;
@@ -376,11 +381,6 @@ public class Activitydiagram_ActivityNode_RemoveToken1Impl extends Activitydiagr
 			}
 		}
 		if (baseClass == SmallStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -395,6 +395,11 @@ public class Activitydiagram_ActivityNode_RemoveToken1Impl extends Activitydiagr
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == Step.class) {
 			switch (baseFeatureID) {
 				case StepsPackage.STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1__STARTING_STATE;
@@ -403,11 +408,6 @@ public class Activitydiagram_ActivityNode_RemoveToken1Impl extends Activitydiagr
 			}
 		}
 		if (baseClass == SmallStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

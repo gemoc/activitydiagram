@@ -8,8 +8,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 public class ActivitydiagramTraceEngineAddon extends AbstractTraceAddon {
 
 	@Override
-	public ITraceManager constructTraceManager(Resource exeModel,
-			Resource traceResource) {
+	public ITraceManager constructTraceManager(Resource exeModel, Resource traceResource) {
 		return new ActivitydiagramTraceManager(exeModel, traceResource);
 	}
 
