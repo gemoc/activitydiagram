@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_AddTokens1 extends Activitydiagram_Activity_Execute_AbstractSubStep, BigStep {
+public interface Activitydiagram_ActivityNode_AddTokens1 extends BigStep, Activitydiagram_Activity_Execute_AbstractSubStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->

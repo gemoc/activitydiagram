@@ -85,31 +85,22 @@ public interface StatesPackage extends EPackage {
 	int STATE__ENDED_STEPS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Forked Token base Token Values</b></em>' reference list.
+	 * The feature id for the '<em><b>Offer offered Tokens Values</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__FORKED_TOKEN_BASE_TOKEN_VALUES = 2;
+	int STATE__OFFER_OFFERED_TOKENS_VALUES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list.
+	 * The feature id for the '<em><b>Integer Value value Values</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Value value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__BOOLEAN_VALUE_VALUE_VALUES = 4;
+	int STATE__INTEGER_VALUE_VALUE_VALUES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Input Value value Values</b></em>' reference list.
@@ -118,7 +109,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__INPUT_VALUE_VALUE_VALUES = 5;
+	int STATE__INPUT_VALUE_VALUE_VALUES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Input Value variable Values</b></em>' reference list.
@@ -127,16 +118,16 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__INPUT_VALUE_VARIABLE_VALUES = 6;
+	int STATE__INPUT_VALUE_VARIABLE_VALUES = 5;
 
 	/**
-	 * The feature id for the '<em><b>Activity trace Values</b></em>' reference list.
+	 * The feature id for the '<em><b>Variable current Value Values</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__ACTIVITY_TRACE_VALUES = 7;
+	int STATE__VARIABLE_CURRENT_VALUE_VALUES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Activity Edge offers Values</b></em>' reference list.
@@ -145,7 +136,16 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__ACTIVITY_EDGE_OFFERS_VALUES = 8;
+	int STATE__ACTIVITY_EDGE_OFFERS_VALUES = 7;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Value value Values</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__BOOLEAN_VALUE_VALUE_VALUES = 8;
 
 	/**
 	 * The feature id for the '<em><b>Input input Values Values</b></em>' reference list.
@@ -157,13 +157,31 @@ public interface StatesPackage extends EPackage {
 	int STATE__INPUT_INPUT_VALUES_VALUES = 9;
 
 	/**
-	 * The feature id for the '<em><b>Offer offered Tokens Values</b></em>' reference list.
+	 * The feature id for the '<em><b>Activity trace Values</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__OFFER_OFFERED_TOKENS_VALUES = 10;
+	int STATE__ACTIVITY_TRACE_VALUES = 10;
+
+	/**
+	 * The feature id for the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = 11;
+
+	/**
+	 * The feature id for the '<em><b>Forked Token base Token Values</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__FORKED_TOKEN_BASE_TOKEN_VALUES = 12;
 
 	/**
 	 * The feature id for the '<em><b>Token holder Values</b></em>' reference list.
@@ -172,34 +190,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__TOKEN_HOLDER_VALUES = 11;
-
-	/**
-	 * The feature id for the '<em><b>Variable current Value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__VARIABLE_CURRENT_VALUE_VALUES = 12;
-
-	/**
-	 * The feature id for the '<em><b>Integer Value value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INTEGER_VALUE_VALUE_VALUES = 13;
-
-	/**
-	 * The feature id for the '<em><b>Activity Node held Tokens Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES = 14;
+	int STATE__TOKEN_HOLDER_VALUES = 13;
 
 	/**
 	 * The feature id for the '<em><b>Trace executed Nodes Values</b></em>' reference list.
@@ -208,7 +199,16 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__TRACE_EXECUTED_NODES_VALUES = 15;
+	int STATE__TRACE_EXECUTED_NODES_VALUES = 14;
+
+	/**
+	 * The feature id for the '<em><b>Activity Node held Tokens Values</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES = 15;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -229,23 +229,23 @@ public interface StatesPackage extends EPackage {
 	int STATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl <em>Forked Token base Token Value</em>}' class.
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl <em>Offer offered Tokens Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_baseToken_Value()
+	 * @see activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getOffer_offeredTokens_Value()
 	 * @generated
 	 */
-	int FORKED_TOKEN_BASE_TOKEN_VALUE = 1;
+	int OFFER_OFFERED_TOKENS_VALUE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Base Token</b></em>' reference.
+	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORKED_TOKEN_BASE_TOKEN_VALUE__BASE_TOKEN = 0;
+	int OFFER_OFFERED_TOKENS_VALUE__OFFERED_TOKENS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -254,7 +254,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FORKED_TOKEN_BASE_TOKEN_VALUE__PARENT = 1;
+	int OFFER_OFFERED_TOKENS_VALUE__PARENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>States</b></em>' reference list.
@@ -263,90 +263,35 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FORKED_TOKEN_BASE_TOKEN_VALUE__STATES = 2;
+	int OFFER_OFFERED_TOKENS_VALUE__STATES = 2;
 
 	/**
-	 * The number of structural features of the '<em>Forked Token base Token Value</em>' class.
+	 * The number of structural features of the '<em>Offer offered Tokens Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORKED_TOKEN_BASE_TOKEN_VALUE_FEATURE_COUNT = 3;
+	int OFFER_OFFERED_TOKENS_VALUE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Forked Token base Token Value</em>' class.
+	 * The number of operations of the '<em>Offer offered Tokens Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORKED_TOKEN_BASE_TOKEN_VALUE_OPERATION_COUNT = 0;
+	int OFFER_OFFERED_TOKENS_VALUE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl <em>Forked Token remaining Offers Count Value</em>}' class.
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl <em>Integer Value value Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_remainingOffersCount_Value()
+	 * @see activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getIntegerValue_value_Value()
 	 * @generated
 	 */
-	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Remaining Offers Count</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Forked Token remaining Offers Count Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Forked Token remaining Offers Count Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl <em>Boolean Value value Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getBooleanValue_value_Value()
-	 * @generated
-	 */
-	int BOOLEAN_VALUE_VALUE_VALUE = 3;
+	int INTEGER_VALUE_VALUE_VALUE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -355,7 +300,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE_VALUE_VALUE__VALUE = 0;
+	int INTEGER_VALUE_VALUE_VALUE__VALUE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -364,7 +309,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE_VALUE_VALUE__PARENT = 1;
+	int INTEGER_VALUE_VALUE_VALUE__PARENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>States</b></em>' reference list.
@@ -373,25 +318,25 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE_VALUE_VALUE__STATES = 2;
+	int INTEGER_VALUE_VALUE_VALUE__STATES = 2;
 
 	/**
-	 * The number of structural features of the '<em>Boolean Value value Value</em>' class.
+	 * The number of structural features of the '<em>Integer Value value Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE_VALUE_VALUE_FEATURE_COUNT = 3;
+	int INTEGER_VALUE_VALUE_VALUE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Boolean Value value Value</em>' class.
+	 * The number of operations of the '<em>Integer Value value Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE_VALUE_VALUE_OPERATION_COUNT = 0;
+	int INTEGER_VALUE_VALUE_VALUE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl <em>Input Value value Value</em>}' class.
@@ -401,7 +346,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInputValue_value_Value()
 	 * @generated
 	 */
-	int INPUT_VALUE_VALUE_VALUE = 4;
+	int INPUT_VALUE_VALUE_VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' reference.
@@ -456,7 +401,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInputValue_variable_Value()
 	 * @generated
 	 */
-	int INPUT_VALUE_VARIABLE_VALUE = 5;
+	int INPUT_VALUE_VARIABLE_VALUE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -504,23 +449,23 @@ public interface StatesPackage extends EPackage {
 	int INPUT_VALUE_VARIABLE_VALUE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl <em>Activity trace Value</em>}' class.
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl <em>Variable current Value Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.Activity_trace_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivity_trace_Value()
+	 * @see activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getVariable_currentValue_Value()
 	 * @generated
 	 */
-	int ACTIVITY_TRACE_VALUE = 6;
+	int VARIABLE_CURRENT_VALUE_VALUE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Trace</b></em>' reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_TRACE_VALUE__TRACE = 0;
+	int VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -529,7 +474,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_TRACE_VALUE__PARENT = 1;
+	int VARIABLE_CURRENT_VALUE_VALUE__PARENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>States</b></em>' reference list.
@@ -538,25 +483,25 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_TRACE_VALUE__STATES = 2;
+	int VARIABLE_CURRENT_VALUE_VALUE__STATES = 2;
 
 	/**
-	 * The number of structural features of the '<em>Activity trace Value</em>' class.
+	 * The number of structural features of the '<em>Variable current Value Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_TRACE_VALUE_FEATURE_COUNT = 3;
+	int VARIABLE_CURRENT_VALUE_VALUE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Activity trace Value</em>' class.
+	 * The number of operations of the '<em>Variable current Value Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_TRACE_VALUE_OPERATION_COUNT = 0;
+	int VARIABLE_CURRENT_VALUE_VALUE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ActivityEdge_offers_ValueImpl <em>Activity Edge offers Value</em>}' class.
@@ -566,7 +511,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivityEdge_offers_Value()
 	 * @generated
 	 */
-	int ACTIVITY_EDGE_OFFERS_VALUE = 7;
+	int ACTIVITY_EDGE_OFFERS_VALUE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Offers</b></em>' reference list.
@@ -612,6 +557,61 @@ public interface StatesPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTIVITY_EDGE_OFFERS_VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl <em>Boolean Value value Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getBooleanValue_value_Value()
+	 * @generated
+	 */
+	int BOOLEAN_VALUE_VALUE_VALUE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VALUE_VALUE_VALUE__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VALUE_VALUE_VALUE__PARENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VALUE_VALUE_VALUE__STATES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Boolean Value value Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VALUE_VALUE_VALUE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Boolean Value value Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VALUE_VALUE_VALUE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl <em>Input input Values Value</em>}' class.
@@ -669,23 +669,23 @@ public interface StatesPackage extends EPackage {
 	int INPUT_INPUT_VALUES_VALUE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl <em>Offer offered Tokens Value</em>}' class.
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl <em>Activity trace Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getOffer_offeredTokens_Value()
+	 * @see activitydiagramTrace.States.impl.Activity_trace_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivity_trace_Value()
 	 * @generated
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE = 9;
+	int ACTIVITY_TRACE_VALUE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
+	 * The feature id for the '<em><b>Trace</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE__OFFERED_TOKENS = 0;
+	int ACTIVITY_TRACE_VALUE__TRACE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -694,7 +694,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE__PARENT = 1;
+	int ACTIVITY_TRACE_VALUE__PARENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>States</b></em>' reference list.
@@ -703,25 +703,135 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE__STATES = 2;
+	int ACTIVITY_TRACE_VALUE__STATES = 2;
 
 	/**
-	 * The number of structural features of the '<em>Offer offered Tokens Value</em>' class.
+	 * The number of structural features of the '<em>Activity trace Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE_FEATURE_COUNT = 3;
+	int ACTIVITY_TRACE_VALUE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Offer offered Tokens Value</em>' class.
+	 * The number of operations of the '<em>Activity trace Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE_OPERATION_COUNT = 0;
+	int ACTIVITY_TRACE_VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl <em>Forked Token remaining Offers Count Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_remainingOffersCount_Value()
+	 * @generated
+	 */
+	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Remaining Offers Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Forked Token remaining Offers Count Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Forked Token remaining Offers Count Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl <em>Forked Token base Token Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_baseToken_Value()
+	 * @generated
+	 */
+	int FORKED_TOKEN_BASE_TOKEN_VALUE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Base Token</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_BASE_TOKEN_VALUE__BASE_TOKEN = 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_BASE_TOKEN_VALUE__PARENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_BASE_TOKEN_VALUE__STATES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Forked Token base Token Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_BASE_TOKEN_VALUE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Forked Token base Token Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORKED_TOKEN_BASE_TOKEN_VALUE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Token_holder_ValueImpl <em>Token holder Value</em>}' class.
@@ -731,7 +841,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getToken_holder_Value()
 	 * @generated
 	 */
-	int TOKEN_HOLDER_VALUE = 10;
+	int TOKEN_HOLDER_VALUE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Holder</b></em>' reference.
@@ -779,171 +889,6 @@ public interface StatesPackage extends EPackage {
 	int TOKEN_HOLDER_VALUE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl <em>Variable current Value Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getVariable_currentValue_Value()
-	 * @generated
-	 */
-	int VARIABLE_CURRENT_VALUE_VALUE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_CURRENT_VALUE_VALUE__PARENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_CURRENT_VALUE_VALUE__STATES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Variable current Value Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_CURRENT_VALUE_VALUE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Variable current Value Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_CURRENT_VALUE_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl <em>Integer Value value Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getIntegerValue_value_Value()
-	 * @generated
-	 */
-	int INTEGER_VALUE_VALUE_VALUE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VALUE_VALUE_VALUE__VALUE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VALUE_VALUE_VALUE__PARENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VALUE_VALUE_VALUE__STATES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Integer Value value Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VALUE_VALUE_VALUE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Integer Value value Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VALUE_VALUE_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ActivityNode_heldTokens_ValueImpl <em>Activity Node held Tokens Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.ActivityNode_heldTokens_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivityNode_heldTokens_Value()
-	 * @generated
-	 */
-	int ACTIVITY_NODE_HELD_TOKENS_VALUE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE_HELD_TOKENS_VALUE__HELD_TOKENS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE_HELD_TOKENS_VALUE__PARENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE_HELD_TOKENS_VALUE__STATES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Activity Node held Tokens Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE_HELD_TOKENS_VALUE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Activity Node held Tokens Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE_HELD_TOKENS_VALUE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Trace_executedNodes_ValueImpl <em>Trace executed Nodes Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -951,7 +896,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getTrace_executedNodes_Value()
 	 * @generated
 	 */
-	int TRACE_EXECUTED_NODES_VALUE = 14;
+	int TRACE_EXECUTED_NODES_VALUE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
@@ -998,6 +943,61 @@ public interface StatesPackage extends EPackage {
 	 */
 	int TRACE_EXECUTED_NODES_VALUE_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.States.impl.ActivityNode_heldTokens_ValueImpl <em>Activity Node held Tokens Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.States.impl.ActivityNode_heldTokens_ValueImpl
+	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivityNode_heldTokens_Value()
+	 * @generated
+	 */
+	int ACTIVITY_NODE_HELD_TOKENS_VALUE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Held Tokens</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_NODE_HELD_TOKENS_VALUE__HELD_TOKENS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_NODE_HELD_TOKENS_VALUE__PARENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_NODE_HELD_TOKENS_VALUE__STATES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Activity Node held Tokens Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_NODE_HELD_TOKENS_VALUE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Activity Node held Tokens Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_NODE_HELD_TOKENS_VALUE_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.State <em>State</em>}'.
@@ -1032,37 +1032,26 @@ public interface StatesPackage extends EPackage {
 	EReference getState_EndedSteps();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Forked Token base Token Values</em>'.
-	 * @see activitydiagramTrace.States.State#getForkedToken_baseToken_Values()
+	 * @return the meta object for the reference list '<em>Offer offered Tokens Values</em>'.
+	 * @see activitydiagramTrace.States.State#getOffer_offeredTokens_Values()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_ForkedToken_baseToken_Values();
+	EReference getState_Offer_offeredTokens_Values();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Forked Token remaining Offers Count Values</em>'.
-	 * @see activitydiagramTrace.States.State#getForkedToken_remainingOffersCount_Values()
+	 * @return the meta object for the reference list '<em>Integer Value value Values</em>'.
+	 * @see activitydiagramTrace.States.State#getIntegerValue_value_Values()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_ForkedToken_remainingOffersCount_Values();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getBooleanValue_value_Values <em>Boolean Value value Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Boolean Value value Values</em>'.
-	 * @see activitydiagramTrace.States.State#getBooleanValue_value_Values()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_BooleanValue_value_Values();
+	EReference getState_IntegerValue_value_Values();
 
 	/**
 	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getInputValue_value_Values <em>Input Value value Values</em>}'.
@@ -1087,15 +1076,15 @@ public interface StatesPackage extends EPackage {
 	EReference getState_InputValue_variable_Values();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getActivity_trace_Values <em>Activity trace Values</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getVariable_currentValue_Values <em>Variable current Value Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activity trace Values</em>'.
-	 * @see activitydiagramTrace.States.State#getActivity_trace_Values()
+	 * @return the meta object for the reference list '<em>Variable current Value Values</em>'.
+	 * @see activitydiagramTrace.States.State#getVariable_currentValue_Values()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_Activity_trace_Values();
+	EReference getState_Variable_currentValue_Values();
 
 	/**
 	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getActivityEdge_offers_Values <em>Activity Edge offers Values</em>}'.
@@ -1109,6 +1098,17 @@ public interface StatesPackage extends EPackage {
 	EReference getState_ActivityEdge_offers_Values();
 
 	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getBooleanValue_value_Values <em>Boolean Value value Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Boolean Value value Values</em>'.
+	 * @see activitydiagramTrace.States.State#getBooleanValue_value_Values()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_BooleanValue_value_Values();
+
+	/**
 	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getInput_inputValues_Values <em>Input input Values Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1120,15 +1120,37 @@ public interface StatesPackage extends EPackage {
 	EReference getState_Input_inputValues_Values();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getActivity_trace_Values <em>Activity trace Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Offer offered Tokens Values</em>'.
-	 * @see activitydiagramTrace.States.State#getOffer_offeredTokens_Values()
+	 * @return the meta object for the reference list '<em>Activity trace Values</em>'.
+	 * @see activitydiagramTrace.States.State#getActivity_trace_Values()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_Offer_offeredTokens_Values();
+	EReference getState_Activity_trace_Values();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Forked Token remaining Offers Count Values</em>'.
+	 * @see activitydiagramTrace.States.State#getForkedToken_remainingOffersCount_Values()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_ForkedToken_remainingOffersCount_Values();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Forked Token base Token Values</em>'.
+	 * @see activitydiagramTrace.States.State#getForkedToken_baseToken_Values()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_ForkedToken_baseToken_Values();
 
 	/**
 	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getToken_holder_Values <em>Token holder Values</em>}'.
@@ -1142,26 +1164,15 @@ public interface StatesPackage extends EPackage {
 	EReference getState_Token_holder_Values();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getVariable_currentValue_Values <em>Variable current Value Values</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Variable current Value Values</em>'.
-	 * @see activitydiagramTrace.States.State#getVariable_currentValue_Values()
+	 * @return the meta object for the reference list '<em>Trace executed Nodes Values</em>'.
+	 * @see activitydiagramTrace.States.State#getTrace_executedNodes_Values()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_Variable_currentValue_Values();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Integer Value value Values</em>'.
-	 * @see activitydiagramTrace.States.State#getIntegerValue_value_Values()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_IntegerValue_value_Values();
+	EReference getState_Trace_executedNodes_Values();
 
 	/**
 	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getActivityNode_heldTokens_Values <em>Activity Node held Tokens Values</em>}'.
@@ -1175,144 +1186,90 @@ public interface StatesPackage extends EPackage {
 	EReference getState_ActivityNode_heldTokens_Values();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getTrace_executedNodes_Values <em>Trace executed Nodes Values</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.Offer_offeredTokens_Value <em>Offer offered Tokens Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Trace executed Nodes Values</em>'.
-	 * @see activitydiagramTrace.States.State#getTrace_executedNodes_Values()
-	 * @see #getState()
+	 * @return the meta object for class '<em>Offer offered Tokens Value</em>'.
+	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value
 	 * @generated
 	 */
-	EReference getState_Trace_executedNodes_Values();
+	EClass getOffer_offeredTokens_Value();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value <em>Forked Token base Token Value</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Offer_offeredTokens_Value#getOfferedTokens <em>Offered Tokens</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Forked Token base Token Value</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value
+	 * @return the meta object for the reference list '<em>Offered Tokens</em>'.
+	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value#getOfferedTokens()
+	 * @see #getOffer_offeredTokens_Value()
 	 * @generated
 	 */
-	EClass getForkedToken_baseToken_Value();
+	EReference getOffer_offeredTokens_Value_OfferedTokens();
 
 	/**
-	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value#getBaseToken <em>Base Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Token</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value#getBaseToken()
-	 * @see #getForkedToken_baseToken_Value()
-	 * @generated
-	 */
-	EReference getForkedToken_baseToken_Value_BaseToken();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Offer_offeredTokens_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value#getParent()
-	 * @see #getForkedToken_baseToken_Value()
+	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value#getParent()
+	 * @see #getOffer_offeredTokens_Value()
 	 * @generated
 	 */
-	EReference getForkedToken_baseToken_Value_Parent();
+	EReference getOffer_offeredTokens_Value_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value#getStates <em>States</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Offer_offeredTokens_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value#getStates()
-	 * @see #getForkedToken_baseToken_Value()
+	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value#getStates()
+	 * @see #getOffer_offeredTokens_Value()
 	 * @generated
 	 */
-	EReference getForkedToken_baseToken_Value_States();
+	EReference getOffer_offeredTokens_Value_States();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value <em>Forked Token remaining Offers Count Value</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.IntegerValue_value_Value <em>Integer Value value Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Forked Token remaining Offers Count Value</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value
+	 * @return the meta object for class '<em>Integer Value value Value</em>'.
+	 * @see activitydiagramTrace.States.IntegerValue_value_Value
 	 * @generated
 	 */
-	EClass getForkedToken_remainingOffersCount_Value();
+	EClass getIntegerValue_value_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount <em>Remaining Offers Count</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Remaining Offers Count</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount()
-	 * @see #getForkedToken_remainingOffersCount_Value()
-	 * @generated
-	 */
-	EAttribute getForkedToken_remainingOffersCount_Value_RemainingOffersCount();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getParent()
-	 * @see #getForkedToken_remainingOffersCount_Value()
-	 * @generated
-	 */
-	EReference getForkedToken_remainingOffersCount_Value_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getStates()
-	 * @see #getForkedToken_remainingOffersCount_Value()
-	 * @generated
-	 */
-	EReference getForkedToken_remainingOffersCount_Value_States();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.BooleanValue_value_Value <em>Boolean Value value Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean Value value Value</em>'.
-	 * @see activitydiagramTrace.States.BooleanValue_value_Value
-	 * @generated
-	 */
-	EClass getBooleanValue_value_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link activitydiagramTrace.States.BooleanValue_value_Value#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link activitydiagramTrace.States.IntegerValue_value_Value#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see activitydiagramTrace.States.BooleanValue_value_Value#isValue()
-	 * @see #getBooleanValue_value_Value()
+	 * @see activitydiagramTrace.States.IntegerValue_value_Value#getValue()
+	 * @see #getIntegerValue_value_Value()
 	 * @generated
 	 */
-	EAttribute getBooleanValue_value_Value_Value();
+	EAttribute getIntegerValue_value_Value_Value();
 
 	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.BooleanValue_value_Value#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.IntegerValue_value_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.BooleanValue_value_Value#getParent()
-	 * @see #getBooleanValue_value_Value()
+	 * @see activitydiagramTrace.States.IntegerValue_value_Value#getParent()
+	 * @see #getIntegerValue_value_Value()
 	 * @generated
 	 */
-	EReference getBooleanValue_value_Value_Parent();
+	EReference getIntegerValue_value_Value_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.BooleanValue_value_Value#getStates <em>States</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.IntegerValue_value_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.BooleanValue_value_Value#getStates()
-	 * @see #getBooleanValue_value_Value()
+	 * @see activitydiagramTrace.States.IntegerValue_value_Value#getStates()
+	 * @see #getIntegerValue_value_Value()
 	 * @generated
 	 */
-	EReference getBooleanValue_value_Value_States();
+	EReference getIntegerValue_value_Value_States();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.InputValue_value_Value <em>Input Value value Value</em>}'.
@@ -1401,47 +1358,47 @@ public interface StatesPackage extends EPackage {
 	EReference getInputValue_variable_Value_States();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.Activity_trace_Value <em>Activity trace Value</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.Variable_currentValue_Value <em>Variable current Value Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activity trace Value</em>'.
-	 * @see activitydiagramTrace.States.Activity_trace_Value
+	 * @return the meta object for class '<em>Variable current Value Value</em>'.
+	 * @see activitydiagramTrace.States.Variable_currentValue_Value
 	 * @generated
 	 */
-	EClass getActivity_trace_Value();
+	EClass getVariable_currentValue_Value();
 
 	/**
-	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.Activity_trace_Value#getTrace <em>Trace</em>}'.
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.Variable_currentValue_Value#getCurrentValue <em>Current Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Trace</em>'.
-	 * @see activitydiagramTrace.States.Activity_trace_Value#getTrace()
-	 * @see #getActivity_trace_Value()
+	 * @return the meta object for the reference '<em>Current Value</em>'.
+	 * @see activitydiagramTrace.States.Variable_currentValue_Value#getCurrentValue()
+	 * @see #getVariable_currentValue_Value()
 	 * @generated
 	 */
-	EReference getActivity_trace_Value_Trace();
+	EReference getVariable_currentValue_Value_CurrentValue();
 
 	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Activity_trace_Value#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Variable_currentValue_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.Activity_trace_Value#getParent()
-	 * @see #getActivity_trace_Value()
+	 * @see activitydiagramTrace.States.Variable_currentValue_Value#getParent()
+	 * @see #getVariable_currentValue_Value()
 	 * @generated
 	 */
-	EReference getActivity_trace_Value_Parent();
+	EReference getVariable_currentValue_Value_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Activity_trace_Value#getStates <em>States</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Variable_currentValue_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.Activity_trace_Value#getStates()
-	 * @see #getActivity_trace_Value()
+	 * @see activitydiagramTrace.States.Variable_currentValue_Value#getStates()
+	 * @see #getVariable_currentValue_Value()
 	 * @generated
 	 */
-	EReference getActivity_trace_Value_States();
+	EReference getVariable_currentValue_Value_States();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.ActivityEdge_offers_Value <em>Activity Edge offers Value</em>}'.
@@ -1487,6 +1444,49 @@ public interface StatesPackage extends EPackage {
 	EReference getActivityEdge_offers_Value_States();
 
 	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.BooleanValue_value_Value <em>Boolean Value value Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean Value value Value</em>'.
+	 * @see activitydiagramTrace.States.BooleanValue_value_Value
+	 * @generated
+	 */
+	EClass getBooleanValue_value_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link activitydiagramTrace.States.BooleanValue_value_Value#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see activitydiagramTrace.States.BooleanValue_value_Value#isValue()
+	 * @see #getBooleanValue_value_Value()
+	 * @generated
+	 */
+	EAttribute getBooleanValue_value_Value_Value();
+
+	/**
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.BooleanValue_value_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see activitydiagramTrace.States.BooleanValue_value_Value#getParent()
+	 * @see #getBooleanValue_value_Value()
+	 * @generated
+	 */
+	EReference getBooleanValue_value_Value_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.BooleanValue_value_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>States</em>'.
+	 * @see activitydiagramTrace.States.BooleanValue_value_Value#getStates()
+	 * @see #getBooleanValue_value_Value()
+	 * @generated
+	 */
+	EReference getBooleanValue_value_Value_States();
+
+	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.Input_inputValues_Value <em>Input input Values Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1530,47 +1530,133 @@ public interface StatesPackage extends EPackage {
 	EReference getInput_inputValues_Value_States();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.Offer_offeredTokens_Value <em>Offer offered Tokens Value</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.Activity_trace_Value <em>Activity trace Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Offer offered Tokens Value</em>'.
-	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value
+	 * @return the meta object for class '<em>Activity trace Value</em>'.
+	 * @see activitydiagramTrace.States.Activity_trace_Value
 	 * @generated
 	 */
-	EClass getOffer_offeredTokens_Value();
+	EClass getActivity_trace_Value();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Offer_offeredTokens_Value#getOfferedTokens <em>Offered Tokens</em>}'.
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.Activity_trace_Value#getTrace <em>Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Offered Tokens</em>'.
-	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value#getOfferedTokens()
-	 * @see #getOffer_offeredTokens_Value()
+	 * @return the meta object for the reference '<em>Trace</em>'.
+	 * @see activitydiagramTrace.States.Activity_trace_Value#getTrace()
+	 * @see #getActivity_trace_Value()
 	 * @generated
 	 */
-	EReference getOffer_offeredTokens_Value_OfferedTokens();
+	EReference getActivity_trace_Value_Trace();
 
 	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Offer_offeredTokens_Value#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Activity_trace_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value#getParent()
-	 * @see #getOffer_offeredTokens_Value()
+	 * @see activitydiagramTrace.States.Activity_trace_Value#getParent()
+	 * @see #getActivity_trace_Value()
 	 * @generated
 	 */
-	EReference getOffer_offeredTokens_Value_Parent();
+	EReference getActivity_trace_Value_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Offer_offeredTokens_Value#getStates <em>States</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Activity_trace_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.Offer_offeredTokens_Value#getStates()
-	 * @see #getOffer_offeredTokens_Value()
+	 * @see activitydiagramTrace.States.Activity_trace_Value#getStates()
+	 * @see #getActivity_trace_Value()
 	 * @generated
 	 */
-	EReference getOffer_offeredTokens_Value_States();
+	EReference getActivity_trace_Value_States();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value <em>Forked Token remaining Offers Count Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Forked Token remaining Offers Count Value</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value
+	 * @generated
+	 */
+	EClass getForkedToken_remainingOffersCount_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount <em>Remaining Offers Count</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Remaining Offers Count</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount()
+	 * @see #getForkedToken_remainingOffersCount_Value()
+	 * @generated
+	 */
+	EAttribute getForkedToken_remainingOffersCount_Value_RemainingOffersCount();
+
+	/**
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getParent()
+	 * @see #getForkedToken_remainingOffersCount_Value()
+	 * @generated
+	 */
+	EReference getForkedToken_remainingOffersCount_Value_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>States</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getStates()
+	 * @see #getForkedToken_remainingOffersCount_Value()
+	 * @generated
+	 */
+	EReference getForkedToken_remainingOffersCount_Value_States();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value <em>Forked Token base Token Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Forked Token base Token Value</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value
+	 * @generated
+	 */
+	EClass getForkedToken_baseToken_Value();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value#getBaseToken <em>Base Token</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Token</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value#getBaseToken()
+	 * @see #getForkedToken_baseToken_Value()
+	 * @generated
+	 */
+	EReference getForkedToken_baseToken_Value_BaseToken();
+
+	/**
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value#getParent()
+	 * @see #getForkedToken_baseToken_Value()
+	 * @generated
+	 */
+	EReference getForkedToken_baseToken_Value_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.ForkedToken_baseToken_Value#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>States</em>'.
+	 * @see activitydiagramTrace.States.ForkedToken_baseToken_Value#getStates()
+	 * @see #getForkedToken_baseToken_Value()
+	 * @generated
+	 */
+	EReference getForkedToken_baseToken_Value_States();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.Token_holder_Value <em>Token holder Value</em>}'.
@@ -1616,90 +1702,47 @@ public interface StatesPackage extends EPackage {
 	EReference getToken_holder_Value_States();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.Variable_currentValue_Value <em>Variable current Value Value</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.States.Trace_executedNodes_Value <em>Trace executed Nodes Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Variable current Value Value</em>'.
-	 * @see activitydiagramTrace.States.Variable_currentValue_Value
+	 * @return the meta object for class '<em>Trace executed Nodes Value</em>'.
+	 * @see activitydiagramTrace.States.Trace_executedNodes_Value
 	 * @generated
 	 */
-	EClass getVariable_currentValue_Value();
+	EClass getTrace_executedNodes_Value();
 
 	/**
-	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.Variable_currentValue_Value#getCurrentValue <em>Current Value</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Trace_executedNodes_Value#getExecutedNodes <em>Executed Nodes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Current Value</em>'.
-	 * @see activitydiagramTrace.States.Variable_currentValue_Value#getCurrentValue()
-	 * @see #getVariable_currentValue_Value()
+	 * @return the meta object for the reference list '<em>Executed Nodes</em>'.
+	 * @see activitydiagramTrace.States.Trace_executedNodes_Value#getExecutedNodes()
+	 * @see #getTrace_executedNodes_Value()
 	 * @generated
 	 */
-	EReference getVariable_currentValue_Value_CurrentValue();
+	EReference getTrace_executedNodes_Value_ExecutedNodes();
 
 	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Variable_currentValue_Value#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Trace_executedNodes_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.Variable_currentValue_Value#getParent()
-	 * @see #getVariable_currentValue_Value()
+	 * @see activitydiagramTrace.States.Trace_executedNodes_Value#getParent()
+	 * @see #getTrace_executedNodes_Value()
 	 * @generated
 	 */
-	EReference getVariable_currentValue_Value_Parent();
+	EReference getTrace_executedNodes_Value_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Variable_currentValue_Value#getStates <em>States</em>}'.
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Trace_executedNodes_Value#getStates <em>States</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.Variable_currentValue_Value#getStates()
-	 * @see #getVariable_currentValue_Value()
+	 * @see activitydiagramTrace.States.Trace_executedNodes_Value#getStates()
+	 * @see #getTrace_executedNodes_Value()
 	 * @generated
 	 */
-	EReference getVariable_currentValue_Value_States();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.IntegerValue_value_Value <em>Integer Value value Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Integer Value value Value</em>'.
-	 * @see activitydiagramTrace.States.IntegerValue_value_Value
-	 * @generated
-	 */
-	EClass getIntegerValue_value_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link activitydiagramTrace.States.IntegerValue_value_Value#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see activitydiagramTrace.States.IntegerValue_value_Value#getValue()
-	 * @see #getIntegerValue_value_Value()
-	 * @generated
-	 */
-	EAttribute getIntegerValue_value_Value_Value();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.IntegerValue_value_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.IntegerValue_value_Value#getParent()
-	 * @see #getIntegerValue_value_Value()
-	 * @generated
-	 */
-	EReference getIntegerValue_value_Value_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.IntegerValue_value_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.IntegerValue_value_Value#getStates()
-	 * @see #getIntegerValue_value_Value()
-	 * @generated
-	 */
-	EReference getIntegerValue_value_Value_States();
+	EReference getTrace_executedNodes_Value_States();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.ActivityNode_heldTokens_Value <em>Activity Node held Tokens Value</em>}'.
@@ -1743,49 +1786,6 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivityNode_heldTokens_Value_States();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.Trace_executedNodes_Value <em>Trace executed Nodes Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Trace executed Nodes Value</em>'.
-	 * @see activitydiagramTrace.States.Trace_executedNodes_Value
-	 * @generated
-	 */
-	EClass getTrace_executedNodes_Value();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Trace_executedNodes_Value#getExecutedNodes <em>Executed Nodes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Executed Nodes</em>'.
-	 * @see activitydiagramTrace.States.Trace_executedNodes_Value#getExecutedNodes()
-	 * @see #getTrace_executedNodes_Value()
-	 * @generated
-	 */
-	EReference getTrace_executedNodes_Value_ExecutedNodes();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Trace_executedNodes_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.Trace_executedNodes_Value#getParent()
-	 * @see #getTrace_executedNodes_Value()
-	 * @generated
-	 */
-	EReference getTrace_executedNodes_Value_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Trace_executedNodes_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.Trace_executedNodes_Value#getStates()
-	 * @see #getTrace_executedNodes_Value()
-	 * @generated
-	 */
-	EReference getTrace_executedNodes_Value_States();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1837,28 +1837,20 @@ public interface StatesPackage extends EPackage {
 		EReference STATE__ENDED_STEPS = eINSTANCE.getState_EndedSteps();
 
 		/**
-		 * The meta object literal for the '<em><b>Forked Token base Token Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Offer offered Tokens Values</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__FORKED_TOKEN_BASE_TOKEN_VALUES = eINSTANCE.getState_ForkedToken_baseToken_Values();
+		EReference STATE__OFFER_OFFERED_TOKENS_VALUES = eINSTANCE.getState_Offer_offeredTokens_Values();
 
 		/**
-		 * The meta object literal for the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Integer Value value Values</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = eINSTANCE.getState_ForkedToken_remainingOffersCount_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Boolean Value value Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__BOOLEAN_VALUE_VALUE_VALUES = eINSTANCE.getState_BooleanValue_value_Values();
+		EReference STATE__INTEGER_VALUE_VALUE_VALUES = eINSTANCE.getState_IntegerValue_value_Values();
 
 		/**
 		 * The meta object literal for the '<em><b>Input Value value Values</b></em>' reference list feature.
@@ -1877,12 +1869,12 @@ public interface StatesPackage extends EPackage {
 		EReference STATE__INPUT_VALUE_VARIABLE_VALUES = eINSTANCE.getState_InputValue_variable_Values();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity trace Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Variable current Value Values</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__ACTIVITY_TRACE_VALUES = eINSTANCE.getState_Activity_trace_Values();
+		EReference STATE__VARIABLE_CURRENT_VALUE_VALUES = eINSTANCE.getState_Variable_currentValue_Values();
 
 		/**
 		 * The meta object literal for the '<em><b>Activity Edge offers Values</b></em>' reference list feature.
@@ -1893,6 +1885,14 @@ public interface StatesPackage extends EPackage {
 		EReference STATE__ACTIVITY_EDGE_OFFERS_VALUES = eINSTANCE.getState_ActivityEdge_offers_Values();
 
 		/**
+		 * The meta object literal for the '<em><b>Boolean Value value Values</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__BOOLEAN_VALUE_VALUE_VALUES = eINSTANCE.getState_BooleanValue_value_Values();
+
+		/**
 		 * The meta object literal for the '<em><b>Input input Values Values</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1901,12 +1901,28 @@ public interface StatesPackage extends EPackage {
 		EReference STATE__INPUT_INPUT_VALUES_VALUES = eINSTANCE.getState_Input_inputValues_Values();
 
 		/**
-		 * The meta object literal for the '<em><b>Offer offered Tokens Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Activity trace Values</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__OFFER_OFFERED_TOKENS_VALUES = eINSTANCE.getState_Offer_offeredTokens_Values();
+		EReference STATE__ACTIVITY_TRACE_VALUES = eINSTANCE.getState_Activity_trace_Values();
+
+		/**
+		 * The meta object literal for the '<em><b>Forked Token remaining Offers Count Values</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = eINSTANCE.getState_ForkedToken_remainingOffersCount_Values();
+
+		/**
+		 * The meta object literal for the '<em><b>Forked Token base Token Values</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__FORKED_TOKEN_BASE_TOKEN_VALUES = eINSTANCE.getState_ForkedToken_baseToken_Values();
 
 		/**
 		 * The meta object literal for the '<em><b>Token holder Values</b></em>' reference list feature.
@@ -1917,20 +1933,12 @@ public interface StatesPackage extends EPackage {
 		EReference STATE__TOKEN_HOLDER_VALUES = eINSTANCE.getState_Token_holder_Values();
 
 		/**
-		 * The meta object literal for the '<em><b>Variable current Value Values</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Trace executed Nodes Values</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__VARIABLE_CURRENT_VALUE_VALUES = eINSTANCE.getState_Variable_currentValue_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Integer Value value Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__INTEGER_VALUE_VALUE_VALUES = eINSTANCE.getState_IntegerValue_value_Values();
+		EReference STATE__TRACE_EXECUTED_NODES_VALUES = eINSTANCE.getState_Trace_executedNodes_Values();
 
 		/**
 		 * The meta object literal for the '<em><b>Activity Node held Tokens Values</b></em>' reference list feature.
@@ -1941,30 +1949,22 @@ public interface StatesPackage extends EPackage {
 		EReference STATE__ACTIVITY_NODE_HELD_TOKENS_VALUES = eINSTANCE.getState_ActivityNode_heldTokens_Values();
 
 		/**
-		 * The meta object literal for the '<em><b>Trace executed Nodes Values</b></em>' reference list feature.
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl <em>Offer offered Tokens Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getOffer_offeredTokens_Value()
 		 * @generated
 		 */
-		EReference STATE__TRACE_EXECUTED_NODES_VALUES = eINSTANCE.getState_Trace_executedNodes_Values();
+		EClass OFFER_OFFERED_TOKENS_VALUE = eINSTANCE.getOffer_offeredTokens_Value();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl <em>Forked Token base Token Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_baseToken_Value()
-		 * @generated
-		 */
-		EClass FORKED_TOKEN_BASE_TOKEN_VALUE = eINSTANCE.getForkedToken_baseToken_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Token</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Offered Tokens</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORKED_TOKEN_BASE_TOKEN_VALUE__BASE_TOKEN = eINSTANCE.getForkedToken_baseToken_Value_BaseToken();
+		EReference OFFER_OFFERED_TOKENS_VALUE__OFFERED_TOKENS = eINSTANCE.getOffer_offeredTokens_Value_OfferedTokens();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -1972,7 +1972,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORKED_TOKEN_BASE_TOKEN_VALUE__PARENT = eINSTANCE.getForkedToken_baseToken_Value_Parent();
+		EReference OFFER_OFFERED_TOKENS_VALUE__PARENT = eINSTANCE.getOffer_offeredTokens_Value_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
@@ -1980,51 +1980,17 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORKED_TOKEN_BASE_TOKEN_VALUE__STATES = eINSTANCE.getForkedToken_baseToken_Value_States();
+		EReference OFFER_OFFERED_TOKENS_VALUE__STATES = eINSTANCE.getOffer_offeredTokens_Value_States();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl <em>Forked Token remaining Offers Count Value</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl <em>Integer Value value Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_remainingOffersCount_Value()
+		 * @see activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getIntegerValue_value_Value()
 		 * @generated
 		 */
-		EClass FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE = eINSTANCE.getForkedToken_remainingOffersCount_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Remaining Offers Count</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT = eINSTANCE.getForkedToken_remainingOffersCount_Value_RemainingOffersCount();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT = eINSTANCE.getForkedToken_remainingOffersCount_Value_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES = eINSTANCE.getForkedToken_remainingOffersCount_Value_States();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl <em>Boolean Value value Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getBooleanValue_value_Value()
-		 * @generated
-		 */
-		EClass BOOLEAN_VALUE_VALUE_VALUE = eINSTANCE.getBooleanValue_value_Value();
+		EClass INTEGER_VALUE_VALUE_VALUE = eINSTANCE.getIntegerValue_value_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2032,7 +1998,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOLEAN_VALUE_VALUE_VALUE__VALUE = eINSTANCE.getBooleanValue_value_Value_Value();
+		EAttribute INTEGER_VALUE_VALUE_VALUE__VALUE = eINSTANCE.getIntegerValue_value_Value_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -2040,7 +2006,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOLEAN_VALUE_VALUE_VALUE__PARENT = eINSTANCE.getBooleanValue_value_Value_Parent();
+		EReference INTEGER_VALUE_VALUE_VALUE__PARENT = eINSTANCE.getIntegerValue_value_Value_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
@@ -2048,7 +2014,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOOLEAN_VALUE_VALUE_VALUE__STATES = eINSTANCE.getBooleanValue_value_Value_States();
+		EReference INTEGER_VALUE_VALUE_VALUE__STATES = eINSTANCE.getIntegerValue_value_Value_States();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl <em>Input Value value Value</em>}' class.
@@ -2119,22 +2085,22 @@ public interface StatesPackage extends EPackage {
 		EReference INPUT_VALUE_VARIABLE_VALUE__STATES = eINSTANCE.getInputValue_variable_Value_States();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl <em>Activity trace Value</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl <em>Variable current Value Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.Activity_trace_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivity_trace_Value()
+		 * @see activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getVariable_currentValue_Value()
 		 * @generated
 		 */
-		EClass ACTIVITY_TRACE_VALUE = eINSTANCE.getActivity_trace_Value();
+		EClass VARIABLE_CURRENT_VALUE_VALUE = eINSTANCE.getVariable_currentValue_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Trace</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Current Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY_TRACE_VALUE__TRACE = eINSTANCE.getActivity_trace_Value_Trace();
+		EReference VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE = eINSTANCE.getVariable_currentValue_Value_CurrentValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -2142,7 +2108,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY_TRACE_VALUE__PARENT = eINSTANCE.getActivity_trace_Value_Parent();
+		EReference VARIABLE_CURRENT_VALUE_VALUE__PARENT = eINSTANCE.getVariable_currentValue_Value_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
@@ -2150,7 +2116,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY_TRACE_VALUE__STATES = eINSTANCE.getActivity_trace_Value_States();
+		EReference VARIABLE_CURRENT_VALUE_VALUE__STATES = eINSTANCE.getVariable_currentValue_Value_States();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.ActivityEdge_offers_ValueImpl <em>Activity Edge offers Value</em>}' class.
@@ -2187,6 +2153,40 @@ public interface StatesPackage extends EPackage {
 		EReference ACTIVITY_EDGE_OFFERS_VALUE__STATES = eINSTANCE.getActivityEdge_offers_Value_States();
 
 		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl <em>Boolean Value value Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getBooleanValue_value_Value()
+		 * @generated
+		 */
+		EClass BOOLEAN_VALUE_VALUE_VALUE = eINSTANCE.getBooleanValue_value_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN_VALUE_VALUE_VALUE__VALUE = eINSTANCE.getBooleanValue_value_Value_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOLEAN_VALUE_VALUE_VALUE__PARENT = eINSTANCE.getBooleanValue_value_Value_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOLEAN_VALUE_VALUE_VALUE__STATES = eINSTANCE.getBooleanValue_value_Value_States();
+
+		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl <em>Input input Values Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2221,22 +2221,22 @@ public interface StatesPackage extends EPackage {
 		EReference INPUT_INPUT_VALUES_VALUE__STATES = eINSTANCE.getInput_inputValues_Value_States();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl <em>Offer offered Tokens Value</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl <em>Activity trace Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.Offer_offeredTokens_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getOffer_offeredTokens_Value()
+		 * @see activitydiagramTrace.States.impl.Activity_trace_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getActivity_trace_Value()
 		 * @generated
 		 */
-		EClass OFFER_OFFERED_TOKENS_VALUE = eINSTANCE.getOffer_offeredTokens_Value();
+		EClass ACTIVITY_TRACE_VALUE = eINSTANCE.getActivity_trace_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Offered Tokens</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Trace</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OFFER_OFFERED_TOKENS_VALUE__OFFERED_TOKENS = eINSTANCE.getOffer_offeredTokens_Value_OfferedTokens();
+		EReference ACTIVITY_TRACE_VALUE__TRACE = eINSTANCE.getActivity_trace_Value_Trace();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -2244,7 +2244,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OFFER_OFFERED_TOKENS_VALUE__PARENT = eINSTANCE.getOffer_offeredTokens_Value_Parent();
+		EReference ACTIVITY_TRACE_VALUE__PARENT = eINSTANCE.getActivity_trace_Value_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
@@ -2252,7 +2252,75 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OFFER_OFFERED_TOKENS_VALUE__STATES = eINSTANCE.getOffer_offeredTokens_Value_States();
+		EReference ACTIVITY_TRACE_VALUE__STATES = eINSTANCE.getActivity_trace_Value_States();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl <em>Forked Token remaining Offers Count Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_remainingOffersCount_Value()
+		 * @generated
+		 */
+		EClass FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE = eINSTANCE.getForkedToken_remainingOffersCount_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Remaining Offers Count</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT = eINSTANCE.getForkedToken_remainingOffersCount_Value_RemainingOffersCount();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT = eINSTANCE.getForkedToken_remainingOffersCount_Value_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES = eINSTANCE.getForkedToken_remainingOffersCount_Value_States();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl <em>Forked Token base Token Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.States.impl.ForkedToken_baseToken_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getForkedToken_baseToken_Value()
+		 * @generated
+		 */
+		EClass FORKED_TOKEN_BASE_TOKEN_VALUE = eINSTANCE.getForkedToken_baseToken_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Token</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORKED_TOKEN_BASE_TOKEN_VALUE__BASE_TOKEN = eINSTANCE.getForkedToken_baseToken_Value_BaseToken();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORKED_TOKEN_BASE_TOKEN_VALUE__PARENT = eINSTANCE.getForkedToken_baseToken_Value_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORKED_TOKEN_BASE_TOKEN_VALUE__STATES = eINSTANCE.getForkedToken_baseToken_Value_States();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Token_holder_ValueImpl <em>Token holder Value</em>}' class.
@@ -2289,56 +2357,22 @@ public interface StatesPackage extends EPackage {
 		EReference TOKEN_HOLDER_VALUE__STATES = eINSTANCE.getToken_holder_Value_States();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl <em>Variable current Value Value</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Trace_executedNodes_ValueImpl <em>Trace executed Nodes Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.Variable_currentValue_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getVariable_currentValue_Value()
+		 * @see activitydiagramTrace.States.impl.Trace_executedNodes_ValueImpl
+		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getTrace_executedNodes_Value()
 		 * @generated
 		 */
-		EClass VARIABLE_CURRENT_VALUE_VALUE = eINSTANCE.getVariable_currentValue_Value();
+		EClass TRACE_EXECUTED_NODES_VALUE = eINSTANCE.getTrace_executedNodes_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Current Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Executed Nodes</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE = eINSTANCE.getVariable_currentValue_Value_CurrentValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VARIABLE_CURRENT_VALUE_VALUE__PARENT = eINSTANCE.getVariable_currentValue_Value_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VARIABLE_CURRENT_VALUE_VALUE__STATES = eINSTANCE.getVariable_currentValue_Value_States();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl <em>Integer Value value Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getIntegerValue_value_Value()
-		 * @generated
-		 */
-		EClass INTEGER_VALUE_VALUE_VALUE = eINSTANCE.getIntegerValue_value_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTEGER_VALUE_VALUE_VALUE__VALUE = eINSTANCE.getIntegerValue_value_Value_Value();
+		EReference TRACE_EXECUTED_NODES_VALUE__EXECUTED_NODES = eINSTANCE.getTrace_executedNodes_Value_ExecutedNodes();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -2346,7 +2380,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INTEGER_VALUE_VALUE_VALUE__PARENT = eINSTANCE.getIntegerValue_value_Value_Parent();
+		EReference TRACE_EXECUTED_NODES_VALUE__PARENT = eINSTANCE.getTrace_executedNodes_Value_Parent();
 
 		/**
 		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
@@ -2354,7 +2388,7 @@ public interface StatesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INTEGER_VALUE_VALUE_VALUE__STATES = eINSTANCE.getIntegerValue_value_Value_States();
+		EReference TRACE_EXECUTED_NODES_VALUE__STATES = eINSTANCE.getTrace_executedNodes_Value_States();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.ActivityNode_heldTokens_ValueImpl <em>Activity Node held Tokens Value</em>}' class.
@@ -2389,40 +2423,6 @@ public interface StatesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY_NODE_HELD_TOKENS_VALUE__STATES = eINSTANCE.getActivityNode_heldTokens_Value_States();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Trace_executedNodes_ValueImpl <em>Trace executed Nodes Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.Trace_executedNodes_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getTrace_executedNodes_Value()
-		 * @generated
-		 */
-		EClass TRACE_EXECUTED_NODES_VALUE = eINSTANCE.getTrace_executedNodes_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Executed Nodes</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACE_EXECUTED_NODES_VALUE__EXECUTED_NODES = eINSTANCE.getTrace_executedNodes_Value_ExecutedNodes();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACE_EXECUTED_NODES_VALUE__PARENT = eINSTANCE.getTrace_executedNodes_Value_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACE_EXECUTED_NODES_VALUE__STATES = eINSTANCE.getTrace_executedNodes_Value_States();
 
 	}
 

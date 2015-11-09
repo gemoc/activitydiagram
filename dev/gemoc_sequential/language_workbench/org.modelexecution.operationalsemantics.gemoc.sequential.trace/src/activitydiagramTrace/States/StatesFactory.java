@@ -31,31 +31,22 @@ public interface StatesFactory extends EFactory {
 	State createState();
 
 	/**
-	 * Returns a new object of class '<em>Forked Token base Token Value</em>'.
+	 * Returns a new object of class '<em>Offer offered Tokens Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Forked Token base Token Value</em>'.
+	 * @return a new object of class '<em>Offer offered Tokens Value</em>'.
 	 * @generated
 	 */
-	ForkedToken_baseToken_Value createForkedToken_baseToken_Value();
+	Offer_offeredTokens_Value createOffer_offeredTokens_Value();
 
 	/**
-	 * Returns a new object of class '<em>Forked Token remaining Offers Count Value</em>'.
+	 * Returns a new object of class '<em>Integer Value value Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Forked Token remaining Offers Count Value</em>'.
+	 * @return a new object of class '<em>Integer Value value Value</em>'.
 	 * @generated
 	 */
-	ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value();
-
-	/**
-	 * Returns a new object of class '<em>Boolean Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Value value Value</em>'.
-	 * @generated
-	 */
-	BooleanValue_value_Value createBooleanValue_value_Value();
+	IntegerValue_value_Value createIntegerValue_value_Value();
 
 	/**
 	 * Returns a new object of class '<em>Input Value value Value</em>'.
@@ -76,13 +67,13 @@ public interface StatesFactory extends EFactory {
 	InputValue_variable_Value createInputValue_variable_Value();
 
 	/**
-	 * Returns a new object of class '<em>Activity trace Value</em>'.
+	 * Returns a new object of class '<em>Variable current Value Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activity trace Value</em>'.
+	 * @return a new object of class '<em>Variable current Value Value</em>'.
 	 * @generated
 	 */
-	Activity_trace_Value createActivity_trace_Value();
+	Variable_currentValue_Value createVariable_currentValue_Value();
 
 	/**
 	 * Returns a new object of class '<em>Activity Edge offers Value</em>'.
@@ -94,6 +85,15 @@ public interface StatesFactory extends EFactory {
 	ActivityEdge_offers_Value createActivityEdge_offers_Value();
 
 	/**
+	 * Returns a new object of class '<em>Boolean Value value Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean Value value Value</em>'.
+	 * @generated
+	 */
+	BooleanValue_value_Value createBooleanValue_value_Value();
+
+	/**
 	 * Returns a new object of class '<em>Input input Values Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,13 +103,31 @@ public interface StatesFactory extends EFactory {
 	Input_inputValues_Value createInput_inputValues_Value();
 
 	/**
-	 * Returns a new object of class '<em>Offer offered Tokens Value</em>'.
+	 * Returns a new object of class '<em>Activity trace Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Offer offered Tokens Value</em>'.
+	 * @return a new object of class '<em>Activity trace Value</em>'.
 	 * @generated
 	 */
-	Offer_offeredTokens_Value createOffer_offeredTokens_Value();
+	Activity_trace_Value createActivity_trace_Value();
+
+	/**
+	 * Returns a new object of class '<em>Forked Token remaining Offers Count Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Forked Token remaining Offers Count Value</em>'.
+	 * @generated
+	 */
+	ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value();
+
+	/**
+	 * Returns a new object of class '<em>Forked Token base Token Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Forked Token base Token Value</em>'.
+	 * @generated
+	 */
+	ForkedToken_baseToken_Value createForkedToken_baseToken_Value();
 
 	/**
 	 * Returns a new object of class '<em>Token holder Value</em>'.
@@ -121,22 +139,13 @@ public interface StatesFactory extends EFactory {
 	Token_holder_Value createToken_holder_Value();
 
 	/**
-	 * Returns a new object of class '<em>Variable current Value Value</em>'.
+	 * Returns a new object of class '<em>Trace executed Nodes Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Variable current Value Value</em>'.
+	 * @return a new object of class '<em>Trace executed Nodes Value</em>'.
 	 * @generated
 	 */
-	Variable_currentValue_Value createVariable_currentValue_Value();
-
-	/**
-	 * Returns a new object of class '<em>Integer Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer Value value Value</em>'.
-	 * @generated
-	 */
-	IntegerValue_value_Value createIntegerValue_value_Value();
+	Trace_executedNodes_Value createTrace_executedNodes_Value();
 
 	/**
 	 * Returns a new object of class '<em>Activity Node held Tokens Value</em>'.
@@ -146,15 +155,6 @@ public interface StatesFactory extends EFactory {
 	 * @generated
 	 */
 	ActivityNode_heldTokens_Value createActivityNode_heldTokens_Value();
-
-	/**
-	 * Returns a new object of class '<em>Trace executed Nodes Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Trace executed Nodes Value</em>'.
-	 * @generated
-	 */
-	Trace_executedNodes_Value createTrace_executedNodes_Value();
 
 	/**
 	 * Returns the package supported by this factory.

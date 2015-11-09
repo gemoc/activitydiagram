@@ -28,24 +28,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedForkedTokenImpl#getBaseTokenSequence <em>Base Token Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedForkedTokenImpl#getRemainingOffersCountSequence <em>Remaining Offers Count Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedForkedTokenImpl#getBaseTokenSequence <em>Base Token Sequence</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedForkedToken {
-	/**
-	 * The cached value of the '{@link #getBaseTokenSequence() <em>Base Token Sequence</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBaseTokenSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ForkedToken_baseToken_Value> baseTokenSequence;
-
 	/**
 	 * The cached value of the '{@link #getRemainingOffersCountSequence() <em>Remaining Offers Count Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,6 +45,16 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	 * @ordered
 	 */
 	protected EList<ForkedToken_remainingOffersCount_Value> remainingOffersCountSequence;
+
+	/**
+	 * The cached value of the '{@link #getBaseTokenSequence() <em>Base Token Sequence</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaseTokenSequence()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ForkedToken_baseToken_Value> baseTokenSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,18 +80,6 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ForkedToken_baseToken_Value> getBaseTokenSequence() {
-		if (baseTokenSequence == null) {
-			baseTokenSequence = new EObjectContainmentWithInverseEList<ForkedToken_baseToken_Value>(ForkedToken_baseToken_Value.class, this, ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE, StatesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE__PARENT);
-		}
-		return baseTokenSequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<ForkedToken_remainingOffersCount_Value> getRemainingOffersCountSequence() {
 		if (remainingOffersCountSequence == null) {
 			remainingOffersCountSequence = new EObjectContainmentWithInverseEList<ForkedToken_remainingOffersCount_Value>(ForkedToken_remainingOffersCount_Value.class, this, ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE, StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT);
@@ -104,14 +92,26 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ForkedToken_baseToken_Value> getBaseTokenSequence() {
+		if (baseTokenSequence == null) {
+			baseTokenSequence = new EObjectContainmentWithInverseEList<ForkedToken_baseToken_Value>(ForkedToken_baseToken_Value.class, this, ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE, StatesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE__PARENT);
+		}
+		return baseTokenSequence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBaseTokenSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRemainingOffersCountSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBaseTokenSequence()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -124,10 +124,10 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
-				return ((InternalEList<?>)getBaseTokenSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE:
 				return ((InternalEList<?>)getRemainingOffersCountSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
+				return ((InternalEList<?>)getBaseTokenSequence()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,10 +140,10 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
-				return getBaseTokenSequence();
 			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE:
 				return getRemainingOffersCountSequence();
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
+				return getBaseTokenSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,13 +157,13 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
-				getBaseTokenSequence().clear();
-				getBaseTokenSequence().addAll((Collection<? extends ForkedToken_baseToken_Value>)newValue);
-				return;
 			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE:
 				getRemainingOffersCountSequence().clear();
 				getRemainingOffersCountSequence().addAll((Collection<? extends ForkedToken_remainingOffersCount_Value>)newValue);
+				return;
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
+				getBaseTokenSequence().clear();
+				getBaseTokenSequence().addAll((Collection<? extends ForkedToken_baseToken_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +177,11 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
-				getBaseTokenSequence().clear();
-				return;
 			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE:
 				getRemainingOffersCountSequence().clear();
+				return;
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
+				getBaseTokenSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +195,10 @@ public class TracedForkedTokenImpl extends TracedTokenImpl implements TracedFork
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
-				return baseTokenSequence != null && !baseTokenSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE:
 				return remainingOffersCountSequence != null && !remainingOffersCountSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE:
+				return baseTokenSequence != null && !baseTokenSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

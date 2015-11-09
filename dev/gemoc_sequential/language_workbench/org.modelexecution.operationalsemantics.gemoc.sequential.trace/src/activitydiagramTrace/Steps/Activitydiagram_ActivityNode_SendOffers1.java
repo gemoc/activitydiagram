@@ -20,7 +20,7 @@ import activitydiagram.ActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_SendOffers1 extends Activitydiagram_Activity_Execute_AbstractSubStep, SmallStep {
+public interface Activitydiagram_ActivityNode_SendOffers1 extends SmallStep, Activitydiagram_Activity_Execute_AbstractSubStep {
 	/**
 	 * Returns the value of the '<em><b>This</b></em>' reference.
 	 * <!-- begin-user-doc -->
