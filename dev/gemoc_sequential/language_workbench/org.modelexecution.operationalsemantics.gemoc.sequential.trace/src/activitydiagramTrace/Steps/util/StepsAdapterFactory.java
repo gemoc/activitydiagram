@@ -84,24 +84,8 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 				return createRootFillStepAdapter();
 			}
 			@Override
-			public Adapter caseActivitydiagram_ActivityNode_RemoveToken1(Activitydiagram_ActivityNode_RemoveToken1 object) {
-				return createActivitydiagram_ActivityNode_RemoveToken1Adapter();
-			}
-			@Override
 			public Adapter caseActivitydiagram_Activity_InitializeContext(Activitydiagram_Activity_InitializeContext object) {
 				return createActivitydiagram_Activity_InitializeContextAdapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1(Activitydiagram_ActivityNode_TakeOfferdTokens1 object) {
-				return createActivitydiagram_ActivityNode_TakeOfferdTokens1Adapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep object) {
-				return createActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepAdapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep object) {
-				return createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStepAdapter();
 			}
 			@Override
 			public Adapter caseActivitydiagram_ActivityNode_AddTokens1(Activitydiagram_ActivityNode_AddTokens1 object) {
@@ -116,12 +100,12 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 				return createActivitydiagram_ActivityNode_AddTokens1_FillStepAdapter();
 			}
 			@Override
-			public Adapter caseActivitydiagram_ActivityNode_SendOffers1(Activitydiagram_ActivityNode_SendOffers1 object) {
-				return createActivitydiagram_ActivityNode_SendOffers1Adapter();
+			public Adapter caseActivitydiagram_ActivityNode_RemoveToken1(Activitydiagram_ActivityNode_RemoveToken1 object) {
+				return createActivitydiagram_ActivityNode_RemoveToken1Adapter();
 			}
 			@Override
-			public Adapter caseActivitydiagram_Activity_Reset(Activitydiagram_Activity_Reset object) {
-				return createActivitydiagram_Activity_ResetAdapter();
+			public Adapter caseActivitydiagram_ActivityNode_SendOffers1(Activitydiagram_ActivityNode_SendOffers1 object) {
+				return createActivitydiagram_ActivityNode_SendOffers1Adapter();
 			}
 			@Override
 			public Adapter caseActivitydiagram_Activity_WriteTrace(Activitydiagram_Activity_WriteTrace object) {
@@ -134,6 +118,26 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseActivitydiagram_Activity_WriteTrace_FillStep(Activitydiagram_Activity_WriteTrace_FillStep object) {
 				return createActivitydiagram_Activity_WriteTrace_FillStepAdapter();
+			}
+			@Override
+			public Adapter caseActivitydiagram_Activity_Reset(Activitydiagram_Activity_Reset object) {
+				return createActivitydiagram_Activity_ResetAdapter();
+			}
+			@Override
+			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1(Activitydiagram_ActivityNode_TakeOfferdTokens1 object) {
+				return createActivitydiagram_ActivityNode_TakeOfferdTokens1Adapter();
+			}
+			@Override
+			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep object) {
+				return createActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepAdapter();
+			}
+			@Override
+			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep object) {
+				return createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStepAdapter();
+			}
+			@Override
+			public Adapter caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
+				return createActivitydiagram_ActivityNode_TerminateAdapter();
 			}
 			@Override
 			public Adapter caseActivitydiagram_Activity_Execute(Activitydiagram_Activity_Execute object) {
@@ -158,10 +162,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseActivitydiagram_Variable_Execute(Activitydiagram_Variable_Execute object) {
 				return createActivitydiagram_Variable_ExecuteAdapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
-				return createActivitydiagram_ActivityNode_TerminateAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -240,20 +240,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1 <em>Activitydiagram Activity Node Remove Token1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_RemoveToken1Adapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext <em>Activitydiagram Activity Initialize Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -264,48 +250,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActivitydiagram_Activity_InitializeContextAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1 <em>Activitydiagram Activity Node Take Offerd Tokens1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep <em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep <em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStepAdapter() {
 		return null;
 	}
 
@@ -352,6 +296,20 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1 <em>Activitydiagram Activity Node Remove Token1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1
+	 * @generated
+	 */
+	public Adapter createActivitydiagram_ActivityNode_RemoveToken1Adapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1 <em>Activitydiagram Activity Node Send Offers1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -362,20 +320,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActivitydiagram_ActivityNode_SendOffers1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_Reset <em>Activitydiagram Activity Reset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Activity_Reset
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_Activity_ResetAdapter() {
 		return null;
 	}
 
@@ -418,6 +362,76 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActivitydiagram_Activity_WriteTrace_FillStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_Reset <em>Activitydiagram Activity Reset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Activity_Reset
+	 * @generated
+	 */
+	public Adapter createActivitydiagram_Activity_ResetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1 <em>Activitydiagram Activity Node Take Offerd Tokens1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1
+	 * @generated
+	 */
+	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep <em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep
+	 * @generated
+	 */
+	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep <em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep
+	 * @generated
+	 */
+	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate <em>Activitydiagram Activity Node Terminate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate
+	 * @generated
+	 */
+	public Adapter createActivitydiagram_ActivityNode_TerminateAdapter() {
 		return null;
 	}
 
@@ -502,20 +516,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActivitydiagram_Variable_ExecuteAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate <em>Activitydiagram Activity Node Terminate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_TerminateAdapter() {
 		return null;
 	}
 

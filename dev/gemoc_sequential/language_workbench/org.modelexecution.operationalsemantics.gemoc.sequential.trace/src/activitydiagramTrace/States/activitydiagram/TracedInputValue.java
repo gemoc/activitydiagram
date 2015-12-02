@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getValueSequence <em>Value Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariableSequence <em>Variable Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getValueSequence <em>Value Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,24 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface TracedInputValue extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Value Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.InputValue_value_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.InputValue_value_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value Sequence</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedInputValue_ValueSequence()
-	 * @see activitydiagramTrace.States.InputValue_value_Value#getParent
-	 * @model opposite="parent" containment="true"
-	 * @generated
-	 */
-	EList<InputValue_value_Value> getValueSequence();
-
 	/**
 	 * Returns the value of the '<em><b>Variable Sequence</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.InputValue_variable_Value}.
@@ -62,5 +44,23 @@ public interface TracedInputValue extends EObject {
 	 * @generated
 	 */
 	EList<InputValue_variable_Value> getVariableSequence();
+
+	/**
+	 * Returns the value of the '<em><b>Value Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.InputValue_value_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.InputValue_value_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value Sequence</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedInputValue_ValueSequence()
+	 * @see activitydiagramTrace.States.InputValue_value_Value#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<InputValue_value_Value> getValueSequence();
 
 } // TracedInputValue

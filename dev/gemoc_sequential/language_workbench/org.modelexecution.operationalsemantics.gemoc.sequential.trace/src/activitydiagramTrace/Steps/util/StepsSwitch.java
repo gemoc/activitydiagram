@@ -94,43 +94,11 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1: {
-				Activitydiagram_ActivityNode_RemoveToken1 activitydiagram_ActivityNode_RemoveToken1 = (Activitydiagram_ActivityNode_RemoveToken1)theEObject;
-				T result = caseActivitydiagram_ActivityNode_RemoveToken1(activitydiagram_ActivityNode_RemoveToken1);
-				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_RemoveToken1);
-				if (result == null) result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(activitydiagram_ActivityNode_RemoveToken1);
-				if (result == null) result = caseActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep(activitydiagram_ActivityNode_RemoveToken1);
-				if (result == null) result = caseStep(activitydiagram_ActivityNode_RemoveToken1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT: {
 				Activitydiagram_Activity_InitializeContext activitydiagram_Activity_InitializeContext = (Activitydiagram_Activity_InitializeContext)theEObject;
 				T result = caseActivitydiagram_Activity_InitializeContext(activitydiagram_Activity_InitializeContext);
 				if (result == null) result = caseSmallStep(activitydiagram_Activity_InitializeContext);
 				if (result == null) result = caseStep(activitydiagram_Activity_InitializeContext);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1: {
-				Activitydiagram_ActivityNode_TakeOfferdTokens1 activitydiagram_ActivityNode_TakeOfferdTokens1 = (Activitydiagram_ActivityNode_TakeOfferdTokens1)theEObject;
-				T result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1(activitydiagram_ActivityNode_TakeOfferdTokens1);
-				if (result == null) result = caseBigStep(activitydiagram_ActivityNode_TakeOfferdTokens1);
-				if (result == null) result = caseActivitydiagram_Activity_Execute_AbstractSubStep(activitydiagram_ActivityNode_TakeOfferdTokens1);
-				if (result == null) result = caseStep(activitydiagram_ActivityNode_TakeOfferdTokens1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_ABSTRACT_SUB_STEP: {
-				Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep = (Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep)theEObject;
-				T result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_FILL_STEP: {
-				Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep = (Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep)theEObject;
-				T result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep(activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep);
-				if (result == null) result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -156,21 +124,22 @@ public class StepsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1: {
+				Activitydiagram_ActivityNode_RemoveToken1 activitydiagram_ActivityNode_RemoveToken1 = (Activitydiagram_ActivityNode_RemoveToken1)theEObject;
+				T result = caseActivitydiagram_ActivityNode_RemoveToken1(activitydiagram_ActivityNode_RemoveToken1);
+				if (result == null) result = caseActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep(activitydiagram_ActivityNode_RemoveToken1);
+				if (result == null) result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(activitydiagram_ActivityNode_RemoveToken1);
+				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_RemoveToken1);
+				if (result == null) result = caseStep(activitydiagram_ActivityNode_RemoveToken1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1: {
 				Activitydiagram_ActivityNode_SendOffers1 activitydiagram_ActivityNode_SendOffers1 = (Activitydiagram_ActivityNode_SendOffers1)theEObject;
 				T result = caseActivitydiagram_ActivityNode_SendOffers1(activitydiagram_ActivityNode_SendOffers1);
 				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_SendOffers1);
 				if (result == null) result = caseActivitydiagram_Activity_Execute_AbstractSubStep(activitydiagram_ActivityNode_SendOffers1);
 				if (result == null) result = caseStep(activitydiagram_ActivityNode_SendOffers1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET: {
-				Activitydiagram_Activity_Reset activitydiagram_Activity_Reset = (Activitydiagram_Activity_Reset)theEObject;
-				T result = caseActivitydiagram_Activity_Reset(activitydiagram_Activity_Reset);
-				if (result == null) result = caseSmallStep(activitydiagram_Activity_Reset);
-				if (result == null) result = caseActivitydiagram_Activity_WriteTrace_AbstractSubStep(activitydiagram_Activity_Reset);
-				if (result == null) result = caseStep(activitydiagram_Activity_Reset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -192,6 +161,45 @@ public class StepsSwitch<T> extends Switch<T> {
 				Activitydiagram_Activity_WriteTrace_FillStep activitydiagram_Activity_WriteTrace_FillStep = (Activitydiagram_Activity_WriteTrace_FillStep)theEObject;
 				T result = caseActivitydiagram_Activity_WriteTrace_FillStep(activitydiagram_Activity_WriteTrace_FillStep);
 				if (result == null) result = caseActivitydiagram_Activity_WriteTrace_AbstractSubStep(activitydiagram_Activity_WriteTrace_FillStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_RESET: {
+				Activitydiagram_Activity_Reset activitydiagram_Activity_Reset = (Activitydiagram_Activity_Reset)theEObject;
+				T result = caseActivitydiagram_Activity_Reset(activitydiagram_Activity_Reset);
+				if (result == null) result = caseActivitydiagram_Activity_WriteTrace_AbstractSubStep(activitydiagram_Activity_Reset);
+				if (result == null) result = caseSmallStep(activitydiagram_Activity_Reset);
+				if (result == null) result = caseStep(activitydiagram_Activity_Reset);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1: {
+				Activitydiagram_ActivityNode_TakeOfferdTokens1 activitydiagram_ActivityNode_TakeOfferdTokens1 = (Activitydiagram_ActivityNode_TakeOfferdTokens1)theEObject;
+				T result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1(activitydiagram_ActivityNode_TakeOfferdTokens1);
+				if (result == null) result = caseBigStep(activitydiagram_ActivityNode_TakeOfferdTokens1);
+				if (result == null) result = caseActivitydiagram_Activity_Execute_AbstractSubStep(activitydiagram_ActivityNode_TakeOfferdTokens1);
+				if (result == null) result = caseStep(activitydiagram_ActivityNode_TakeOfferdTokens1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_ABSTRACT_SUB_STEP: {
+				Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep = (Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep)theEObject;
+				T result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_FILL_STEP: {
+				Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep = (Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep)theEObject;
+				T result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep(activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep);
+				if (result == null) result = caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: {
+				Activitydiagram_ActivityNode_Terminate activitydiagram_ActivityNode_Terminate = (Activitydiagram_ActivityNode_Terminate)theEObject;
+				T result = caseActivitydiagram_ActivityNode_Terminate(activitydiagram_ActivityNode_Terminate);
+				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_Terminate);
+				if (result == null) result = caseStep(activitydiagram_ActivityNode_Terminate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,14 +247,6 @@ public class StepsSwitch<T> extends Switch<T> {
 				T result = caseActivitydiagram_Variable_Execute(activitydiagram_Variable_Execute);
 				if (result == null) result = caseSmallStep(activitydiagram_Variable_Execute);
 				if (result == null) result = caseStep(activitydiagram_Variable_Execute);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: {
-				Activitydiagram_ActivityNode_Terminate activitydiagram_ActivityNode_Terminate = (Activitydiagram_ActivityNode_Terminate)theEObject;
-				T result = caseActivitydiagram_ActivityNode_Terminate(activitydiagram_ActivityNode_Terminate);
-				if (result == null) result = caseSmallStep(activitydiagram_ActivityNode_Terminate);
-				if (result == null) result = caseStep(activitydiagram_ActivityNode_Terminate);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -315,21 +315,6 @@ public class StepsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Remove Token1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Remove Token1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_ActivityNode_RemoveToken1(Activitydiagram_ActivityNode_RemoveToken1 object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Initialize Context</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -341,51 +326,6 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseActivitydiagram_Activity_InitializeContext(Activitydiagram_Activity_InitializeContext object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_ActivityNode_TakeOfferdTokens1(Activitydiagram_ActivityNode_TakeOfferdTokens1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep object) {
 		return null;
 	}
 
@@ -435,6 +375,21 @@ public class StepsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Remove Token1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Remove Token1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_ActivityNode_RemoveToken1(Activitydiagram_ActivityNode_RemoveToken1 object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Send Offers1</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -446,21 +401,6 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseActivitydiagram_ActivityNode_SendOffers1(Activitydiagram_ActivityNode_SendOffers1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Reset</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Reset</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_Activity_Reset(Activitydiagram_Activity_Reset object) {
 		return null;
 	}
 
@@ -506,6 +446,81 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseActivitydiagram_Activity_WriteTrace_FillStep(Activitydiagram_Activity_WriteTrace_FillStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Reset</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Reset</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_Activity_Reset(Activitydiagram_Activity_Reset object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_ActivityNode_TakeOfferdTokens1(Activitydiagram_ActivityNode_TakeOfferdTokens1 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Take Offerd Tokens1 Fill Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_ActivityNode_TakeOfferdTokens1_FillStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_FillStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
 		return null;
 	}
 
@@ -596,21 +611,6 @@ public class StepsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseActivitydiagram_Variable_Execute(Activitydiagram_Variable_Execute object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activitydiagram Activity Node Terminate</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
 		return null;
 	}
 

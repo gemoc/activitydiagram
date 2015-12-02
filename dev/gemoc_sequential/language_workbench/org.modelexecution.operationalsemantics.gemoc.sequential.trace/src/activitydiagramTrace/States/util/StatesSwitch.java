@@ -78,54 +78,6 @@ public class StatesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE: {
-				IntegerValue_value_Value integerValue_value_Value = (IntegerValue_value_Value)theEObject;
-				T result = caseIntegerValue_value_Value(integerValue_value_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE: {
-				InputValue_value_Value inputValue_value_Value = (InputValue_value_Value)theEObject;
-				T result = caseInputValue_value_Value(inputValue_value_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE: {
-				InputValue_variable_Value inputValue_variable_Value = (InputValue_variable_Value)theEObject;
-				T result = caseInputValue_variable_Value(inputValue_variable_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE: {
-				Variable_currentValue_Value variable_currentValue_Value = (Variable_currentValue_Value)theEObject;
-				T result = caseVariable_currentValue_Value(variable_currentValue_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.ACTIVITY_EDGE_OFFERS_VALUE: {
-				ActivityEdge_offers_Value activityEdge_offers_Value = (ActivityEdge_offers_Value)theEObject;
-				T result = caseActivityEdge_offers_Value(activityEdge_offers_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE: {
-				BooleanValue_value_Value booleanValue_value_Value = (BooleanValue_value_Value)theEObject;
-				T result = caseBooleanValue_value_Value(booleanValue_value_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.INPUT_INPUT_VALUES_VALUE: {
-				Input_inputValues_Value input_inputValues_Value = (Input_inputValues_Value)theEObject;
-				T result = caseInput_inputValues_Value(input_inputValues_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.ACTIVITY_TRACE_VALUE: {
-				Activity_trace_Value activity_trace_Value = (Activity_trace_Value)theEObject;
-				T result = caseActivity_trace_Value(activity_trace_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE: {
 				ForkedToken_remainingOffersCount_Value forkedToken_remainingOffersCount_Value = (ForkedToken_remainingOffersCount_Value)theEObject;
 				T result = caseForkedToken_remainingOffersCount_Value(forkedToken_remainingOffersCount_Value);
@@ -138,9 +90,51 @@ public class StatesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case StatesPackage.ACTIVITY_EDGE_OFFERS_VALUE: {
+				ActivityEdge_offers_Value activityEdge_offers_Value = (ActivityEdge_offers_Value)theEObject;
+				T result = caseActivityEdge_offers_Value(activityEdge_offers_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE: {
+				Input_inputValues_Value input_inputValues_Value = (Input_inputValues_Value)theEObject;
+				T result = caseInput_inputValues_Value(input_inputValues_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE: {
+				Variable_currentValue_Value variable_currentValue_Value = (Variable_currentValue_Value)theEObject;
+				T result = caseVariable_currentValue_Value(variable_currentValue_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.ACTIVITY_TRACE_VALUE: {
+				Activity_trace_Value activity_trace_Value = (Activity_trace_Value)theEObject;
+				T result = caseActivity_trace_Value(activity_trace_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE: {
+				ActivityNode_heldTokens_Value activityNode_heldTokens_Value = (ActivityNode_heldTokens_Value)theEObject;
+				T result = caseActivityNode_heldTokens_Value(activityNode_heldTokens_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case StatesPackage.TOKEN_HOLDER_VALUE: {
 				Token_holder_Value token_holder_Value = (Token_holder_Value)theEObject;
 				T result = caseToken_holder_Value(token_holder_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE: {
+				BooleanValue_value_Value booleanValue_value_Value = (BooleanValue_value_Value)theEObject;
+				T result = caseBooleanValue_value_Value(booleanValue_value_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.INTEGER_VALUE_VALUE_VALUE: {
+				IntegerValue_value_Value integerValue_value_Value = (IntegerValue_value_Value)theEObject;
+				T result = caseIntegerValue_value_Value(integerValue_value_Value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,9 +144,15 @@ public class StatesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StatesPackage.ACTIVITY_NODE_HELD_TOKENS_VALUE: {
-				ActivityNode_heldTokens_Value activityNode_heldTokens_Value = (ActivityNode_heldTokens_Value)theEObject;
-				T result = caseActivityNode_heldTokens_Value(activityNode_heldTokens_Value);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE: {
+				InputValue_variable_Value inputValue_variable_Value = (InputValue_variable_Value)theEObject;
+				T result = caseInputValue_variable_Value(inputValue_variable_Value);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE: {
+				InputValue_value_Value inputValue_value_Value = (InputValue_value_Value)theEObject;
+				T result = caseInputValue_value_Value(inputValue_value_Value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -191,126 +191,6 @@ public class StatesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIntegerValue_value_Value(IntegerValue_value_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Value value Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputValue_value_Value(InputValue_value_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Value variable Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Value variable Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputValue_variable_Value(InputValue_variable_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Variable current Value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Variable current Value Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVariable_currentValue_Value(Variable_currentValue_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivityEdge_offers_Value(ActivityEdge_offers_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBooleanValue_value_Value(BooleanValue_value_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input input Values Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input input Values Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInput_inputValues_Value(Input_inputValues_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActivity_trace_Value(Activity_trace_Value object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Forked Token remaining Offers Count Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -341,6 +221,81 @@ public class StatesSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity Edge offers Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivityEdge_offers_Value(ActivityEdge_offers_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input input Values Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input input Values Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInput_inputValues_Value(Input_inputValues_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable current Value Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable current Value Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable_currentValue_Value(Variable_currentValue_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity trace Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivity_trace_Value(Activity_trace_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivityNode_heldTokens_Value(ActivityNode_heldTokens_Value object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Token holder Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -352,6 +307,36 @@ public class StatesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToken_holder_Value(Token_holder_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean Value value Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBooleanValue_value_Value(BooleanValue_value_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Integer Value value Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntegerValue_value_Value(IntegerValue_value_Value object) {
 		return null;
 	}
 
@@ -371,17 +356,32 @@ public class StatesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Input Value variable Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Activity Node held Tokens Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Input Value variable Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActivityNode_heldTokens_Value(ActivityNode_heldTokens_Value object) {
+	public T caseInputValue_variable_Value(InputValue_variable_Value object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Value value Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Value value Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputValue_value_Value(InputValue_value_Value object) {
 		return null;
 	}
 
