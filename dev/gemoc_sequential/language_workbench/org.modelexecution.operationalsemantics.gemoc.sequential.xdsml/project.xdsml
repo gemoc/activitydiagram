@@ -2,7 +2,9 @@
 <sequential_xdsml:SequentialLanguageDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sequential_xdsml="http://www.gemoc.org/sequential_xdsml" xmlns:xdsml_base="http://www.gemoc.org/xdsml_base" name="ad_exe">
   <domainModelProject projectName="org.modelexecution.operationalsemantics.ad" defaultRootEObjectQualifiedName="activitydiagram::Activity" genmodeluri="platform:/resource/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.genmodel"/>
   <editorProjects xsi:type="xdsml_base:SiriusEditorProject" projectName="org.modelexecution.operationalsemantics.ad.design"/>
-  <editorProjects xsi:type="xdsml_base:XTextEditorProject" projectName="org.modelexecution.operationalsemantics.ad.grammar"/>
+  <editorProjects xsi:type="xdsml_base:XTextEditorProject" projectName="org.modelexecution.operationalsemantics.ad.grammar">
+    <fileExtension>ad</fileExtension>
+  </editorProjects>
   <animatorProjects xsi:type="xdsml_base:SiriusAnimatorProject" projectName="org.modelexecution.operationalsemantics.ad.design"/>
   <dsaProject projectName="org.modelexecution.operationalsemantics.gemoc.sequential.dynamic" entryPoint="org.modelexecution.operationalsemantics.gemoc.sequential.dynamic.Main"/>
 </sequential_xdsml:SequentialLanguageDefinition>
