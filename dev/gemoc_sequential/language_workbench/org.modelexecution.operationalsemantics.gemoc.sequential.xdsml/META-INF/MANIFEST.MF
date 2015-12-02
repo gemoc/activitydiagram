@@ -7,8 +7,6 @@ Require-Bundle: org.gemoc.gemoc_language_workbench.api;bundle-version="0.0.0";vi
  
  org.gemoc.execution.engine;bundle-version="0.0.0";visibility:="reexport",
  
- org.gemoc.execution.engine.commons;bundle-version="0.0.0";visibility:="reexport",
- 
  org.modelexecution.operationalsemantics.gemoc.sequential.dynamic;bundle-version="0.0.0";visibility:=reexport,
  
  org.gemoc.gemoc_language_workbench.extensions.k3;bundle-version="0.0.0";visibility:="reexport",
