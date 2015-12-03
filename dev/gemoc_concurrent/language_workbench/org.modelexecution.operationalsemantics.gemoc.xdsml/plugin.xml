@@ -2,9 +2,6 @@
 <?eclipse version="3.4"?>
 <plugin>
   <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
-    <XDSML_Definition codeExecutor_class="xad_concurrent.xdsml.api.impl.Xad_concurrentCodeExecutor" modelLoader_class="org.gemoc.gemoc_language_workbench.extensions.sirius.modelloader.DefaultModelLoader" toCCSLQVTOFilePath="/org.modelexecution.operationalsemantics.gemoc.ecl/tunedQVTo/ActivitiyDiagramV2.qvto" solver_class="org.gemoc.gemoc_language_workbench.extensions.timesquare.moc.impl.CcslSolver" name="xad_concurrent" xdsmlFilePath="/org.modelexecution.operationalsemantics.gemoc.xdsml/project.xdsml" />
-  </extension>
-  <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
-    <XDSML_Definition codeExecutor_class="xad_concurrent.xdsml.api.impl.Xad_concurrentCodeExecutor" modelLoader_class="org.gemoc.gemoc_language_workbench.extensions.sirius.modelloader.DefaultModelLoader" toCCSLQVTOFilePath="/org.modelexecution.operationalsemantics.gemoc.ecl/tunedQVTo/ActivitiyDiagramV2.qvto" solver_class="org.gemoc.gemoc_language_workbench.extensions.timesquare.moc.impl.CcslSolver" name="xad_concurrent" xdsmlFilePath="/org.modelexecution.operationalsemantics.gemoc.xdsml/project.xdsml" />
+    <XDSML_Definition codeExecutor_class="ad_concurrent.xdsml.api.impl.Ad_concurrentCodeExecutor" modelLoader_class="org.gemoc.gemoc_language_workbench.extensions.sirius.modelloader.DefaultModelLoader" toCCSLQVTOFilePath="/org.modelexecution.operationalsemantics.gemoc.ecl/tunedQVTo/ActivitiyDiagramV2.qvto" solver_class="org.gemoc.gemoc_language_workbench.extensions.timesquare.moc.impl.CcslSolver" name="ad_concurrent" xdsmlFilePath="/org.modelexecution.operationalsemantics.gemoc.xdsml/project.xdsml" />
   </extension>
 </plugin>

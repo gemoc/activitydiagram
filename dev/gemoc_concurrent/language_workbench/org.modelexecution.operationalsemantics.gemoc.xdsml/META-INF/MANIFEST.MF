@@ -1,5 +1,5 @@
 Bundle-SymbolicName: org.modelexecution.operationalsemantics.gemoc.xdsml;singleton:=true
-Export-Package: xad_concurrent.xdsml.api.impl
+Export-Package: ad_concurrent.xdsml.api.impl
 Bundle-Name: Xdsml
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.gemoc.gemoc_language_workbench.api;bundle-version="0.0.0";visibility:="reexport",

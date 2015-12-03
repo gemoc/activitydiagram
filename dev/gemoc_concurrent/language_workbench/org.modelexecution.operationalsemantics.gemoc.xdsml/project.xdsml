@@ -7,5 +7,5 @@
   <editorProjects xsi:type="xdsml_base:SiriusEditorProject" projectName="org.modelexecution.operationalsemantics.ad.design"/>
   <animatorProjects xsi:type="xdsml_base:SiriusAnimatorProject" projectName="org.modelexecution.operationalsemantics.ad.design"/>
   <dsaProject projectName="org.modelexecution.operationalsemantics.k3.dynamic"/>
-  <dSEProject projectName="org.modelexecution.operationalsemantics.gemoc.ecl"/>
+  <dSEProject projectName="org.modelexecution.operationalsemantics.gemoc.ecl" qvtoURI="/org.modelexecution.operationalsemantics.gemoc.ecl/tunedQVTo/ActivitiyDiagramV2.qvto"/>
 </concurrent_xdsml:ConcurrentLanguageDefinition>
