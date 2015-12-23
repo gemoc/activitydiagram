@@ -257,7 +257,7 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
           eType="#//States/activitydiagram/TracedOffer">
-        <eAnnotations source="aspect"/>
+        <eAnnotations source="dynamic"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
           eType="#//States/activitydiagram/TracedActivityEdge" eOpposite="#//States/activitydiagram/TracedActivityEdge/offersSequence"/>
@@ -280,7 +280,7 @@
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="#//States/activitydiagram/TracedValue">
-        <eAnnotations source="aspect"/>
+        <eAnnotations source="dynamic"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
           eType="#//States/activitydiagram/TracedVariable" eOpposite="#//States/activitydiagram/TracedVariable/currentValueSequence"/>
@@ -292,7 +292,7 @@
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="#//States/activitydiagram/TracedTrace">
-        <eAnnotations source="aspect"/>
+        <eAnnotations source="dynamic"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
           eType="#//States/activitydiagram/TracedActivity" eOpposite="#//States/activitydiagram/TracedActivity/traceSequence"/>
@@ -305,7 +305,7 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1"
           eType="#//States/activitydiagram/TracedToken">
-        <eAnnotations source="aspect"/>
+        <eAnnotations source="dynamic"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
           eType="#//States/activitydiagram/TracedActivityNode" eOpposite="#//States/activitydiagram/TracedActivityNode/heldTokensSequence"/>
@@ -413,7 +413,7 @@
             eType="#//States/activitydiagram/TracedActivityNode"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1"
             eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Offer">
-          <eAnnotations source="aspect"/>
+          <eAnnotations source="dynamic"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="offersSequence" upperBound="-1"
             eType="#//States/ActivityEdge_offers_Value" containment="true" eOpposite="#//States/ActivityEdge_offers_Value/parent"/>
@@ -430,7 +430,7 @@
       <eClassifiers xsi:type="ecore:EClass" name="TracedVariable" abstract="true">
         <eStructuralFeatures xsi:type="ecore:EReference" name="initialValue" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value">
-          <eAnnotations source="aspect"/>
+          <eAnnotations source="dynamic"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="currentValueSequence"
             upperBound="-1" eType="#//States/Variable_currentValue_Value" containment="true"
@@ -450,7 +450,7 @@
         <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
             eType="#//States/activitydiagram/TracedVariable"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Trace">
-          <eAnnotations source="aspect"/>
+          <eAnnotations source="dynamic"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject" eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="traceSequence" upperBound="-1"
@@ -474,7 +474,7 @@
             eType="#//States/activitydiagram/TracedActivity"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1"
             eType="ecore:EClass ../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Token">
-          <eAnnotations source="aspect"/>
+          <eAnnotations source="dynamic"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokensSequence"
             upperBound="-1" eType="#//States/ActivityNode_heldTokens_Value" containment="true"
