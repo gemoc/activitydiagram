@@ -13,29 +13,20 @@ public class ActivitydiagramTraceStepFactory implements IStepFactory {
 				+ mse.getAction().getName();
 		org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence mseocc = null;
 
-		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.execute")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Activity_Execute();
-		} else
-
-		if (stepRule.equalsIgnoreCase("activitydiagram.Variable.init")
-				|| stepRule.equalsIgnoreCase("activitydiagram.IntegerVariable.init")
-				|| stepRule.equalsIgnoreCase("activitydiagram.BooleanVariable.init")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Variable_Init();
-		} else
-
-		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ControlNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ExecutableNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.Action.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.OpaqueAction.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.InitialNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.FinalNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ActivityFinalNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ForkNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.JoinNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.MergeNode.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.DecisionNode.execute")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_ActivityNode_Execute();
+		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ControlNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ExecutableNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.Action.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.OpaqueAction.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.InitialNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.FinalNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ActivityFinalNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ForkNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.JoinNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.MergeNode.takeOfferdTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.DecisionNode.takeOfferdTokens1")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
+					.createActivitydiagram_ActivityNode_TakeOfferdTokens1();
 		} else
 
 		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.sendOffers1")
@@ -53,35 +44,10 @@ public class ActivitydiagramTraceStepFactory implements IStepFactory {
 			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_ActivityNode_SendOffers1();
 		} else
 
-		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ControlNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ExecutableNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.Action.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.OpaqueAction.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.InitialNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.FinalNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ActivityFinalNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ForkNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.JoinNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.MergeNode.takeOfferdTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.DecisionNode.takeOfferdTokens1")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
-					.createActivitydiagram_ActivityNode_TakeOfferdTokens1();
-		} else
-
-		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ControlNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ExecutableNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.Action.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.OpaqueAction.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.InitialNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.FinalNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ActivityFinalNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.ForkNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.JoinNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.MergeNode.addTokens1")
-				|| stepRule.equalsIgnoreCase("activitydiagram.DecisionNode.addTokens1")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_ActivityNode_AddTokens1();
+		if (stepRule.equalsIgnoreCase("activitydiagram.Variable.init")
+				|| stepRule.equalsIgnoreCase("activitydiagram.IntegerVariable.init")
+				|| stepRule.equalsIgnoreCase("activitydiagram.BooleanVariable.init")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Variable_Init();
 		} else
 
 		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.terminate")
@@ -99,19 +65,30 @@ public class ActivitydiagramTraceStepFactory implements IStepFactory {
 			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_ActivityNode_Terminate();
 		} else
 
-		if (stepRule.equalsIgnoreCase("activitydiagram.Variable.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.IntegerVariable.execute")
-				|| stepRule.equalsIgnoreCase("activitydiagram.BooleanVariable.execute")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Variable_Execute();
-		} else
-
-		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.reset")) {
-			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Activity_Reset();
+		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ControlNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ExecutableNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.Action.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.OpaqueAction.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.InitialNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.FinalNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ActivityFinalNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ForkNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.JoinNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.MergeNode.addTokens1")
+				|| stepRule.equalsIgnoreCase("activitydiagram.DecisionNode.addTokens1")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_ActivityNode_AddTokens1();
 		} else
 
 		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.initializeContext")) {
 			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
 					.createActivitydiagram_Activity_InitializeContext();
+		} else
+
+		if (stepRule.equalsIgnoreCase("activitydiagram.Variable.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.IntegerVariable.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.BooleanVariable.execute")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Variable_Execute();
 		} else
 
 		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.removeToken1")
@@ -130,8 +107,31 @@ public class ActivitydiagramTraceStepFactory implements IStepFactory {
 					.createActivitydiagram_ActivityNode_RemoveToken1();
 		} else
 
+		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.execute")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Activity_Execute();
+		} else
+
+		if (stepRule.equalsIgnoreCase("activitydiagram.ActivityNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ControlNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ExecutableNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.Action.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.OpaqueAction.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.InitialNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.FinalNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ActivityFinalNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.ForkNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.JoinNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.MergeNode.execute")
+				|| stepRule.equalsIgnoreCase("activitydiagram.DecisionNode.execute")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_ActivityNode_Execute();
+		} else
+
 		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.writeTrace")) {
 			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Activity_WriteTrace();
+		} else
+
+		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.reset")) {
+			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Activity_Reset();
 		}
 
 		else {

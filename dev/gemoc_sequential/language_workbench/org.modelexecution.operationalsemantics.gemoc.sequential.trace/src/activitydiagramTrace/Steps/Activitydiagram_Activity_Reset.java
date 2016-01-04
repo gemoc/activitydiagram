@@ -14,7 +14,7 @@ import activitydiagram.Activity;
  * @model
  * @generated
  */
-public interface Activitydiagram_Activity_Reset extends SmallStep, Activitydiagram_Activity_WriteTrace_AbstractSubStep {
+public interface Activitydiagram_Activity_Reset extends Activitydiagram_Activity_WriteTrace_AbstractSubStep, SmallStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -14,7 +14,7 @@ import activitydiagram.ActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_SendOffers1 extends Activitydiagram_ActivityNode_Execute_AbstractSubStep, SmallStep {
+public interface Activitydiagram_ActivityNode_SendOffers1 extends SmallStep, Activitydiagram_ActivityNode_Execute_AbstractSubStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -18,11 +18,11 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getLocalsSequence <em>Locals Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getTraceSequence <em>Trace Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getEdgesSequence <em>Edges Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getInputsSequence <em>Inputs Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getNodesSequence <em>Nodes Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getTraceSequence <em>Trace Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getLocalsSequence <em>Locals Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,22 +32,22 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TracedActivity extends TracedNamedElement {
 	/**
-	 * Returns the value of the '<em><b>Locals Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.Activity_locals_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Activity_locals_Value#getParent <em>Parent</em>}'.
+	 * Returns the value of the '<em><b>Trace Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.Activity_trace_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Activity_trace_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Locals Sequence</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Trace Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Locals Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivity_LocalsSequence()
-	 * @see activitydiagramTrace.States.Activity_locals_Value#getParent
+	 * @return the value of the '<em>Trace Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivity_TraceSequence()
+	 * @see activitydiagramTrace.States.Activity_trace_Value#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<Activity_locals_Value> getLocalsSequence();
+	EList<Activity_trace_Value> getTraceSequence();
 
 	/**
 	 * Returns the value of the '<em><b>Edges Sequence</b></em>' containment reference list.
@@ -104,21 +104,21 @@ public interface TracedActivity extends TracedNamedElement {
 	EList<Activity_nodes_Value> getNodesSequence();
 
 	/**
-	 * Returns the value of the '<em><b>Trace Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.Activity_trace_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Activity_trace_Value#getParent <em>Parent</em>}'.
+	 * Returns the value of the '<em><b>Locals Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.Activity_locals_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Activity_locals_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Trace Sequence</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Locals Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trace Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivity_TraceSequence()
-	 * @see activitydiagramTrace.States.Activity_trace_Value#getParent
+	 * @return the value of the '<em>Locals Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivity_LocalsSequence()
+	 * @see activitydiagramTrace.States.Activity_locals_Value#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<Activity_trace_Value> getTraceSequence();
+	EList<Activity_locals_Value> getLocalsSequence();
 
 } // TracedActivity
