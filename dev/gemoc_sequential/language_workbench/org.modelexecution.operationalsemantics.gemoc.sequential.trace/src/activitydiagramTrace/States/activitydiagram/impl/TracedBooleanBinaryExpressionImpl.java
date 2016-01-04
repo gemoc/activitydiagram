@@ -30,8 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanBinaryExpressionImpl#getOperand1Sequence <em>Operand1 Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanBinaryExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanBinaryExpressionImpl#getOperand2Sequence <em>Operand2 Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanBinaryExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,16 +49,6 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 	protected EList<BooleanBinaryExpression_operand1_Value> operand1Sequence;
 
 	/**
-	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperatorSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BooleanBinaryExpression_operator_Value> operatorSequence;
-
-	/**
 	 * The cached value of the '{@link #getOperand2Sequence() <em>Operand2 Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +57,16 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 	 * @ordered
 	 */
 	protected EList<BooleanBinaryExpression_operand2_Value> operand2Sequence;
+
+	/**
+	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperatorSequence()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BooleanBinaryExpression_operator_Value> operatorSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +104,11 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BooleanBinaryExpression_operator_Value> getOperatorSequence() {
-		if (operatorSequence == null) {
-			operatorSequence = new EObjectContainmentWithInverseEList<BooleanBinaryExpression_operator_Value>(BooleanBinaryExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.BOOLEAN_BINARY_EXPRESSION_OPERATOR_VALUE__PARENT);
+	public EList<BooleanBinaryExpression_operand2_Value> getOperand2Sequence() {
+		if (operand2Sequence == null) {
+			operand2Sequence = new EObjectContainmentWithInverseEList<BooleanBinaryExpression_operand2_Value>(BooleanBinaryExpression_operand2_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE, StatesPackage.BOOLEAN_BINARY_EXPRESSION_OPERAND2_VALUE__PARENT);
 		}
-		return operatorSequence;
+		return operand2Sequence;
 	}
 
 	/**
@@ -116,11 +116,11 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BooleanBinaryExpression_operand2_Value> getOperand2Sequence() {
-		if (operand2Sequence == null) {
-			operand2Sequence = new EObjectContainmentWithInverseEList<BooleanBinaryExpression_operand2_Value>(BooleanBinaryExpression_operand2_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE, StatesPackage.BOOLEAN_BINARY_EXPRESSION_OPERAND2_VALUE__PARENT);
+	public EList<BooleanBinaryExpression_operator_Value> getOperatorSequence() {
+		if (operatorSequence == null) {
+			operatorSequence = new EObjectContainmentWithInverseEList<BooleanBinaryExpression_operator_Value>(BooleanBinaryExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.BOOLEAN_BINARY_EXPRESSION_OPERATOR_VALUE__PARENT);
 		}
-		return operand2Sequence;
+		return operatorSequence;
 	}
 
 	/**
@@ -134,10 +134,10 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 		switch (featureID) {
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperand1Sequence()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperand2Sequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -152,10 +152,10 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 		switch (featureID) {
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE:
 				return ((InternalEList<?>)getOperand1Sequence()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE:
 				return ((InternalEList<?>)getOperand2Sequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -170,10 +170,10 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 		switch (featureID) {
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE:
 				return getOperand1Sequence();
-			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return getOperatorSequence();
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE:
 				return getOperand2Sequence();
+			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return getOperatorSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -191,13 +191,13 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 				getOperand1Sequence().clear();
 				getOperand1Sequence().addAll((Collection<? extends BooleanBinaryExpression_operand1_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
-				getOperatorSequence().clear();
-				getOperatorSequence().addAll((Collection<? extends BooleanBinaryExpression_operator_Value>)newValue);
-				return;
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE:
 				getOperand2Sequence().clear();
 				getOperand2Sequence().addAll((Collection<? extends BooleanBinaryExpression_operand2_Value>)newValue);
+				return;
+			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
+				getOperatorSequence().clear();
+				getOperatorSequence().addAll((Collection<? extends BooleanBinaryExpression_operator_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -214,11 +214,11 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE:
 				getOperand1Sequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
-				getOperatorSequence().clear();
-				return;
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE:
 				getOperand2Sequence().clear();
+				return;
+			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
+				getOperatorSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -234,10 +234,10 @@ public class TracedBooleanBinaryExpressionImpl extends TracedBooleanExpressionIm
 		switch (featureID) {
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE:
 				return operand1Sequence != null && !operand1Sequence.isEmpty();
-			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return operatorSequence != null && !operatorSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE:
 				return operand2Sequence != null && !operand2Sequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return operatorSequence != null && !operatorSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

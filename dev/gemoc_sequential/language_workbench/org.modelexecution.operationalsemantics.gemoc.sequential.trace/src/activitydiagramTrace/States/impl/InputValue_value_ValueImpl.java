@@ -34,25 +34,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getValue <em>Value</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container implements InputValue_value_Value {
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected TracedValue value;
-
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -62,6 +52,16 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected EList<State> states;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected TracedValue value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,44 +80,6 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	protected EClass eStaticClass() {
 		return StatesPackage.Literals.INPUT_VALUE_VALUE_VALUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedValue getValue() {
-		if (value != null && value.eIsProxy()) {
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (TracedValue)eResolveProxy(oldValue);
-			if (value != oldValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE, oldValue, value));
-			}
-		}
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedValue basicGetValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(TracedValue newValue) {
-		TracedValue oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -178,6 +140,44 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TracedValue getValue() {
+		if (value != null && value.eIsProxy()) {
+			InternalEObject oldValue = (InternalEObject)value;
+			value = (TracedValue)eResolveProxy(oldValue);
+			if (value != oldValue) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE, oldValue, value));
+			}
+		}
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TracedValue basicGetValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(TracedValue newValue) {
+		TracedValue oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -230,13 +230,13 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				return getParent();
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				return getStates();
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				if (resolve) return getValue();
+				return basicGetValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,15 +250,15 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
-				setValue((TracedValue)newValue);
-				return;
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				setParent((TracedInputValue)newValue);
 				return;
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
+				return;
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				setValue((TracedValue)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -272,14 +272,14 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
-				setValue((TracedValue)null);
-				return;
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				setParent((TracedInputValue)null);
 				return;
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				getStates().clear();
+				return;
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				setValue((TracedValue)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -293,12 +293,12 @@ public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
-				return value != null;
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				return getParent() != null;
 			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				return states != null && !states.isEmpty();
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}

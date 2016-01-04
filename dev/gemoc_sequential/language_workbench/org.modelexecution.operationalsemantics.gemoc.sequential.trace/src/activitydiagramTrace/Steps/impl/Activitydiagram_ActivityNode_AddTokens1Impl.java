@@ -47,8 +47,8 @@ import org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence;
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getResult <em>Result</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getLogicalStep <em>Logical Step</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getStartingState <em>Starting State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getEndingState <em>Ending State</em>}</li>
+ *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getStartingState <em>Starting State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  * </p>
@@ -97,16 +97,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 	protected LogicalStep logicalStep;
 
 	/**
-	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStartingState()
-	 * @generated
-	 * @ordered
-	 */
-	protected State startingState;
-
-	/**
 	 * The cached value of the '{@link #getEndingState() <em>Ending State</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -115,6 +105,16 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 	 * @ordered
 	 */
 	protected State endingState;
+
+	/**
+	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartingState()
+	 * @generated
+	 * @ordered
+	 */
+	protected State startingState;
 
 	/**
 	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' containment reference list.
@@ -272,66 +272,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getStartingState() {
-		if (startingState != null && startingState.eIsProxy()) {
-			InternalEObject oldStartingState = (InternalEObject)startingState;
-			startingState = (State)eResolveProxy(oldStartingState);
-			if (startingState != oldStartingState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE, oldStartingState, startingState));
-			}
-		}
-		return startingState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State basicGetStartingState() {
-		return startingState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetStartingState(State newStartingState, NotificationChain msgs) {
-		State oldStartingState = startingState;
-		startingState = newStartingState;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE, oldStartingState, newStartingState);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStartingState(State newStartingState) {
-		if (newStartingState != startingState) {
-			NotificationChain msgs = null;
-			if (startingState != null)
-				msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
-			if (newStartingState != null)
-				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
-			msgs = basicSetStartingState(newStartingState, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE, newStartingState, newStartingState));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public State getEndingState() {
 		if (endingState != null && endingState.eIsProxy()) {
 			InternalEObject oldEndingState = (InternalEObject)endingState;
@@ -392,6 +332,66 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public State getStartingState() {
+		if (startingState != null && startingState.eIsProxy()) {
+			InternalEObject oldStartingState = (InternalEObject)startingState;
+			startingState = (State)eResolveProxy(oldStartingState);
+			if (startingState != oldStartingState) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE, oldStartingState, startingState));
+			}
+		}
+		return startingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public State basicGetStartingState() {
+		return startingState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStartingState(State newStartingState, NotificationChain msgs) {
+		State oldStartingState = startingState;
+		startingState = newStartingState;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE, oldStartingState, newStartingState);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStartingState(State newStartingState) {
+		if (newStartingState != startingState) {
+			NotificationChain msgs = null;
+			if (startingState != null)
+				msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
+			if (newStartingState != null)
+				msgs = ((InternalEObject)newStartingState).eInverseAdd(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
+			msgs = basicSetStartingState(newStartingState, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE, newStartingState, newStartingState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
 			subSteps = new EObjectContainmentEList<Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep>(Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS);
@@ -421,14 +421,14 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 				if (logicalStep != null)
 					msgs = ((InternalEObject)logicalStep).eInverseRemove(this, Engine_msePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
 				return basicSetLogicalStep((LogicalStep)otherEnd, msgs);
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
-				if (startingState != null)
-					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
-				return basicSetStartingState((State)otherEnd, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE:
 				if (endingState != null)
 					msgs = ((InternalEObject)endingState).eInverseRemove(this, StatesPackage.STATE__ENDED_STEPS, State.class, msgs);
 				return basicSetEndingState((State)otherEnd, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
+				if (startingState != null)
+					msgs = ((InternalEObject)startingState).eInverseRemove(this, StatesPackage.STATE__STARTED_STEPS, State.class, msgs);
+				return basicSetStartingState((State)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -443,10 +443,10 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP:
 				return basicSetLogicalStep(null, msgs);
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
-				return basicSetStartingState(null, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE:
 				return basicSetEndingState(null, msgs);
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
+				return basicSetStartingState(null, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
 				return ((InternalEList<?>)getSubSteps()).basicRemove(otherEnd, msgs);
 		}
@@ -471,12 +471,12 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP:
 				if (resolve) return getLogicalStep();
 				return basicGetLogicalStep();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
-				if (resolve) return getStartingState();
-				return basicGetStartingState();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE:
 				if (resolve) return getEndingState();
 				return basicGetEndingState();
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
+				if (resolve) return getStartingState();
+				return basicGetStartingState();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
 				return getSubSteps();
 		}
@@ -506,11 +506,11 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP:
 				setLogicalStep((LogicalStep)newValue);
 				return;
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
-				setStartingState((State)newValue);
-				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE:
 				setEndingState((State)newValue);
+				return;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
+				setStartingState((State)newValue);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
 				getSubSteps().clear();
@@ -540,11 +540,11 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP:
 				setLogicalStep((LogicalStep)null);
 				return;
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
-				setStartingState((State)null);
-				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE:
 				setEndingState((State)null);
+				return;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
+				setStartingState((State)null);
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
 				getSubSteps().clear();
@@ -569,10 +569,10 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 				return result != null && !result.isEmpty();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP:
 				return logicalStep != null;
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
-				return startingState != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE:
 				return endingState != null;
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
+				return startingState != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
 				return subSteps != null && !subSteps.isEmpty();
 		}
@@ -597,8 +597,8 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 		}
 		if (baseClass == Step.class) {
 			switch (derivedFeatureID) {
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE: return StepsPackage.STEP__STARTING_STATE;
 				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE: return StepsPackage.STEP__ENDING_STATE;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE: return StepsPackage.STEP__STARTING_STATE;
 				default: return -1;
 			}
 		}
@@ -628,8 +628,8 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends Activitydiagram
 		}
 		if (baseClass == Step.class) {
 			switch (baseFeatureID) {
-				case StepsPackage.STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE;
 				case StepsPackage.STEP__ENDING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE;
+				case StepsPackage.STEP__STARTING_STATE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE;
 				default: return -1;
 			}
 		}

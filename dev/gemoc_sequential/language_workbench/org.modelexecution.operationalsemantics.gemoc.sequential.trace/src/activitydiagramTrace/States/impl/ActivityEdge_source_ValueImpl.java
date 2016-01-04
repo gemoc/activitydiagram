@@ -34,8 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_source_ValueImpl#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_source_ValueImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_source_ValueImpl#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_source_ValueImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -87,44 +87,6 @@ public class ActivityEdge_source_ValueImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject)source;
-			source = (TracedActivityNode)eResolveProxy(oldSource);
-			if (source != oldSource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE, oldSource, source));
-			}
-		}
-		return source;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedActivityNode basicGetSource() {
-		return source;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSource(TracedActivityNode newSource) {
-		TracedActivityNode oldSource = source;
-		source = newSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE, oldSource, source));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TracedActivityEdge getParent() {
 		if (eContainerFeatureID() != StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT) return null;
 		return (TracedActivityEdge)eInternalContainer();
@@ -159,6 +121,44 @@ public class ActivityEdge_source_ValueImpl extends MinimalEObjectImpl.Container 
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT, newParent, newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TracedActivityNode getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject)source;
+			source = (TracedActivityNode)eResolveProxy(oldSource);
+			if (source != oldSource) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE, oldSource, source));
+			}
+		}
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TracedActivityNode basicGetSource() {
+		return source;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSource(TracedActivityNode newSource) {
+		TracedActivityNode oldSource = source;
+		source = newSource;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -230,11 +230,11 @@ public class ActivityEdge_source_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT:
+				return getParent();
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
-			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT:
-				return getParent();
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__STATES:
 				return getStates();
 		}
@@ -250,11 +250,11 @@ public class ActivityEdge_source_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
-				setSource((TracedActivityNode)newValue);
-				return;
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT:
 				setParent((TracedActivityEdge)newValue);
+				return;
+			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
+				setSource((TracedActivityNode)newValue);
 				return;
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__STATES:
 				getStates().clear();
@@ -272,11 +272,11 @@ public class ActivityEdge_source_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
-				setSource((TracedActivityNode)null);
-				return;
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT:
 				setParent((TracedActivityEdge)null);
+				return;
+			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
+				setSource((TracedActivityNode)null);
 				return;
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__STATES:
 				getStates().clear();
@@ -293,10 +293,10 @@ public class ActivityEdge_source_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
-				return source != null;
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__PARENT:
 				return getParent() != null;
+			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__SOURCE:
+				return source != null;
 			case StatesPackage.ACTIVITY_EDGE_SOURCE_VALUE__STATES:
 				return states != null && !states.isEmpty();
 		}

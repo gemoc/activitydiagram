@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.ActivityEdge_source_Value#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagramTrace.States.ActivityEdge_source_Value#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.ActivityEdge_source_Value#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagramTrace.States.ActivityEdge_source_Value#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -28,32 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ActivityEdge_source_Value extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(TracedActivityNode)
-	 * @see activitydiagramTrace.States.StatesPackage#getActivityEdge_source_Value_Source()
-	 * @model required="true"
-	 * @generated
-	 */
-	TracedActivityNode getSource();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.ActivityEdge_source_Value#getSource <em>Source</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Source</em>' reference.
-	 * @see #getSource()
-	 * @generated
-	 */
-	void setSource(TracedActivityNode value);
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge#getSourceSequence <em>Source Sequence</em>}'.
@@ -81,6 +55,32 @@ public interface ActivityEdge_source_Value extends EObject {
 	 * @generated
 	 */
 	void setParent(TracedActivityEdge value);
+
+	/**
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Source</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(TracedActivityNode)
+	 * @see activitydiagramTrace.States.StatesPackage#getActivityEdge_source_Value_Source()
+	 * @model required="true"
+	 * @generated
+	 */
+	TracedActivityNode getSource();
+
+	/**
+	 * Sets the value of the '{@link activitydiagramTrace.States.ActivityEdge_source_Value#getSource <em>Source</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Source</em>' reference.
+	 * @see #getSource()
+	 * @generated
+	 */
+	void setSource(TracedActivityNode value);
 
 	/**
 	 * Returns the value of the '<em><b>States</b></em>' reference list.

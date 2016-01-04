@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount <em>Remaining Offers Count</em>}</li>
  *   <li>{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount <em>Remaining Offers Count</em>}</li>
  *   <li>{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -27,32 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ForkedToken_remainingOffersCount_Value extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Remaining Offers Count</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Remaining Offers Count</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Remaining Offers Count</em>' attribute.
-	 * @see #setRemainingOffersCount(int)
-	 * @see activitydiagramTrace.States.StatesPackage#getForkedToken_remainingOffersCount_Value_RemainingOffersCount()
-	 * @model required="true"
-	 * @generated
-	 */
-	int getRemainingOffersCount();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount <em>Remaining Offers Count</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remaining Offers Count</em>' attribute.
-	 * @see #getRemainingOffersCount()
-	 * @generated
-	 */
-	void setRemainingOffersCount(int value);
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.activitydiagram.TracedForkedToken#getRemainingOffersCountSequence <em>Remaining Offers Count Sequence</em>}'.
@@ -80,6 +54,32 @@ public interface ForkedToken_remainingOffersCount_Value extends EObject {
 	 * @generated
 	 */
 	void setParent(TracedForkedToken value);
+
+	/**
+	 * Returns the value of the '<em><b>Remaining Offers Count</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Remaining Offers Count</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Remaining Offers Count</em>' attribute.
+	 * @see #setRemainingOffersCount(int)
+	 * @see activitydiagramTrace.States.StatesPackage#getForkedToken_remainingOffersCount_Value_RemainingOffersCount()
+	 * @model required="true"
+	 * @generated
+	 */
+	int getRemainingOffersCount();
+
+	/**
+	 * Sets the value of the '{@link activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value#getRemainingOffersCount <em>Remaining Offers Count</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Remaining Offers Count</em>' attribute.
+	 * @see #getRemainingOffersCount()
+	 * @generated
+	 */
+	void setRemainingOffersCount(int value);
 
 	/**
 	 * Returns the value of the '<em><b>States</b></em>' reference list.

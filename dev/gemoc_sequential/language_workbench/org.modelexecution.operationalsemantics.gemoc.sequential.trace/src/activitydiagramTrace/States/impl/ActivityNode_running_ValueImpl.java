@@ -33,8 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.ActivityNode_running_ValueImpl#isRunning <em>Running</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ActivityNode_running_ValueImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.ActivityNode_running_ValueImpl#isRunning <em>Running</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ActivityNode_running_ValueImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -96,27 +96,6 @@ public class ActivityNode_running_ValueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isRunning() {
-		return running;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRunning(boolean newRunning) {
-		boolean oldRunning = running;
-		running = newRunning;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING, oldRunning, running));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TracedActivityNode getParent() {
 		if (eContainerFeatureID() != StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT) return null;
 		return (TracedActivityNode)eInternalContainer();
@@ -151,6 +130,27 @@ public class ActivityNode_running_ValueImpl extends MinimalEObjectImpl.Container
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT, newParent, newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isRunning() {
+		return running;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRunning(boolean newRunning) {
+		boolean oldRunning = running;
+		running = newRunning;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING, oldRunning, running));
 	}
 
 	/**
@@ -222,10 +222,10 @@ public class ActivityNode_running_ValueImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
-				return isRunning();
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT:
 				return getParent();
+			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
+				return isRunning();
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__STATES:
 				return getStates();
 		}
@@ -241,11 +241,11 @@ public class ActivityNode_running_ValueImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
-				setRunning((Boolean)newValue);
-				return;
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT:
 				setParent((TracedActivityNode)newValue);
+				return;
+			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
+				setRunning((Boolean)newValue);
 				return;
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__STATES:
 				getStates().clear();
@@ -263,11 +263,11 @@ public class ActivityNode_running_ValueImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
-				setRunning(RUNNING_EDEFAULT);
-				return;
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT:
 				setParent((TracedActivityNode)null);
+				return;
+			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
+				setRunning(RUNNING_EDEFAULT);
 				return;
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__STATES:
 				getStates().clear();
@@ -284,10 +284,10 @@ public class ActivityNode_running_ValueImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
-				return running != RUNNING_EDEFAULT;
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT:
 				return getParent() != null;
+			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__RUNNING:
+				return running != RUNNING_EDEFAULT;
 			case StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__STATES:
 				return states != null && !states.isEmpty();
 		}

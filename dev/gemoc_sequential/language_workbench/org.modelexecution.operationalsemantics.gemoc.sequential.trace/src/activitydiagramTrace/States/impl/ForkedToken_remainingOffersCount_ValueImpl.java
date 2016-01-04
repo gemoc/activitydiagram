@@ -33,8 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl#getRemainingOffersCount <em>Remaining Offers Count</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl#getRemainingOffersCount <em>Remaining Offers Count</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ForkedToken_remainingOffersCount_ValueImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -96,27 +96,6 @@ public class ForkedToken_remainingOffersCount_ValueImpl extends MinimalEObjectIm
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getRemainingOffersCount() {
-		return remainingOffersCount;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRemainingOffersCount(int newRemainingOffersCount) {
-		int oldRemainingOffersCount = remainingOffersCount;
-		remainingOffersCount = newRemainingOffersCount;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT, oldRemainingOffersCount, remainingOffersCount));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TracedForkedToken getParent() {
 		if (eContainerFeatureID() != StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT) return null;
 		return (TracedForkedToken)eInternalContainer();
@@ -151,6 +130,27 @@ public class ForkedToken_remainingOffersCount_ValueImpl extends MinimalEObjectIm
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT, newParent, newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getRemainingOffersCount() {
+		return remainingOffersCount;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRemainingOffersCount(int newRemainingOffersCount) {
+		int oldRemainingOffersCount = remainingOffersCount;
+		remainingOffersCount = newRemainingOffersCount;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT, oldRemainingOffersCount, remainingOffersCount));
 	}
 
 	/**
@@ -222,10 +222,10 @@ public class ForkedToken_remainingOffersCount_ValueImpl extends MinimalEObjectIm
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
-				return getRemainingOffersCount();
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT:
 				return getParent();
+			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
+				return getRemainingOffersCount();
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES:
 				return getStates();
 		}
@@ -241,11 +241,11 @@ public class ForkedToken_remainingOffersCount_ValueImpl extends MinimalEObjectIm
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
-				setRemainingOffersCount((Integer)newValue);
-				return;
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT:
 				setParent((TracedForkedToken)newValue);
+				return;
+			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
+				setRemainingOffersCount((Integer)newValue);
 				return;
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES:
 				getStates().clear();
@@ -263,11 +263,11 @@ public class ForkedToken_remainingOffersCount_ValueImpl extends MinimalEObjectIm
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
-				setRemainingOffersCount(REMAINING_OFFERS_COUNT_EDEFAULT);
-				return;
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT:
 				setParent((TracedForkedToken)null);
+				return;
+			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
+				setRemainingOffersCount(REMAINING_OFFERS_COUNT_EDEFAULT);
 				return;
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES:
 				getStates().clear();
@@ -284,10 +284,10 @@ public class ForkedToken_remainingOffersCount_ValueImpl extends MinimalEObjectIm
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
-				return remainingOffersCount != REMAINING_OFFERS_COUNT_EDEFAULT;
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__PARENT:
 				return getParent() != null;
+			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__REMAINING_OFFERS_COUNT:
+				return remainingOffersCount != REMAINING_OFFERS_COUNT_EDEFAULT;
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE__STATES:
 				return states != null && !states.isEmpty();
 		}

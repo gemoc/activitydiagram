@@ -22,112 +22,22 @@ public interface ActivitydiagramFactory extends EFactory {
 	ActivitydiagramFactory eINSTANCE = activitydiagramTrace.States.activitydiagram.impl.ActivitydiagramFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Traced Join Node</em>'.
+	 * Returns a new object of class '<em>Traced Activity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Join Node</em>'.
+	 * @return a new object of class '<em>Traced Activity</em>'.
 	 * @generated
 	 */
-	TracedJoinNode createTracedJoinNode();
+	TracedActivity createTracedActivity();
 
 	/**
-	 * Returns a new object of class '<em>Traced Fork Node</em>'.
+	 * Returns a new object of class '<em>Traced Activity Final Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Fork Node</em>'.
+	 * @return a new object of class '<em>Traced Activity Final Node</em>'.
 	 * @generated
 	 */
-	TracedForkNode createTracedForkNode();
-
-	/**
-	 * Returns a new object of class '<em>Traced Boolean Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Boolean Variable</em>'.
-	 * @generated
-	 */
-	TracedBooleanVariable createTracedBooleanVariable();
-
-	/**
-	 * Returns a new object of class '<em>Traced Initial Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Initial Node</em>'.
-	 * @generated
-	 */
-	TracedInitialNode createTracedInitialNode();
-
-	/**
-	 * Returns a new object of class '<em>Traced Trace</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Trace</em>'.
-	 * @generated
-	 */
-	TracedTrace createTracedTrace();
-
-	/**
-	 * Returns a new object of class '<em>Traced Control Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Control Flow</em>'.
-	 * @generated
-	 */
-	TracedControlFlow createTracedControlFlow();
-
-	/**
-	 * Returns a new object of class '<em>Traced Merge Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Merge Node</em>'.
-	 * @generated
-	 */
-	TracedMergeNode createTracedMergeNode();
-
-	/**
-	 * Returns a new object of class '<em>Traced Decision Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Decision Node</em>'.
-	 * @generated
-	 */
-	TracedDecisionNode createTracedDecisionNode();
-
-	/**
-	 * Returns a new object of class '<em>Traced Integer Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Integer Variable</em>'.
-	 * @generated
-	 */
-	TracedIntegerVariable createTracedIntegerVariable();
-
-	/**
-	 * Returns a new object of class '<em>Traced Opaque Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Opaque Action</em>'.
-	 * @generated
-	 */
-	TracedOpaqueAction createTracedOpaqueAction();
-
-	/**
-	 * Returns a new object of class '<em>Traced Input Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Input Value</em>'.
-	 * @generated
-	 */
-	TracedInputValue createTracedInputValue();
-
-	/**
-	 * Returns a new object of class '<em>Traced Boolean Unary Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Boolean Unary Expression</em>'.
-	 * @generated
-	 */
-	TracedBooleanUnaryExpression createTracedBooleanUnaryExpression();
+	TracedActivityFinalNode createTracedActivityFinalNode();
 
 	/**
 	 * Returns a new object of class '<em>Traced Boolean Binary Expression</em>'.
@@ -139,6 +49,15 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedBooleanBinaryExpression createTracedBooleanBinaryExpression();
 
 	/**
+	 * Returns a new object of class '<em>Traced Boolean Unary Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Boolean Unary Expression</em>'.
+	 * @generated
+	 */
+	TracedBooleanUnaryExpression createTracedBooleanUnaryExpression();
+
+	/**
 	 * Returns a new object of class '<em>Traced Boolean Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,13 +67,22 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedBooleanValue createTracedBooleanValue();
 
 	/**
-	 * Returns a new object of class '<em>Traced Forked Token</em>'.
+	 * Returns a new object of class '<em>Traced Boolean Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Forked Token</em>'.
+	 * @return a new object of class '<em>Traced Boolean Variable</em>'.
 	 * @generated
 	 */
-	TracedForkedToken createTracedForkedToken();
+	TracedBooleanVariable createTracedBooleanVariable();
+
+	/**
+	 * Returns a new object of class '<em>Traced Control Flow</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Control Flow</em>'.
+	 * @generated
+	 */
+	TracedControlFlow createTracedControlFlow();
 
 	/**
 	 * Returns a new object of class '<em>Traced Control Token</em>'.
@@ -166,6 +94,42 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedControlToken createTracedControlToken();
 
 	/**
+	 * Returns a new object of class '<em>Traced Decision Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Decision Node</em>'.
+	 * @generated
+	 */
+	TracedDecisionNode createTracedDecisionNode();
+
+	/**
+	 * Returns a new object of class '<em>Traced Fork Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Fork Node</em>'.
+	 * @generated
+	 */
+	TracedForkNode createTracedForkNode();
+
+	/**
+	 * Returns a new object of class '<em>Traced Forked Token</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Forked Token</em>'.
+	 * @generated
+	 */
+	TracedForkedToken createTracedForkedToken();
+
+	/**
+	 * Returns a new object of class '<em>Traced Initial Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Initial Node</em>'.
+	 * @generated
+	 */
+	TracedInitialNode createTracedInitialNode();
+
+	/**
 	 * Returns a new object of class '<em>Traced Input</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,40 +139,13 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedInput createTracedInput();
 
 	/**
-	 * Returns a new object of class '<em>Traced Integer Comparison Expression</em>'.
+	 * Returns a new object of class '<em>Traced Input Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Integer Comparison Expression</em>'.
+	 * @return a new object of class '<em>Traced Input Value</em>'.
 	 * @generated
 	 */
-	TracedIntegerComparisonExpression createTracedIntegerComparisonExpression();
-
-	/**
-	 * Returns a new object of class '<em>Traced Activity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Activity</em>'.
-	 * @generated
-	 */
-	TracedActivity createTracedActivity();
-
-	/**
-	 * Returns a new object of class '<em>Traced Integer Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Integer Value</em>'.
-	 * @generated
-	 */
-	TracedIntegerValue createTracedIntegerValue();
-
-	/**
-	 * Returns a new object of class '<em>Traced Offer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Offer</em>'.
-	 * @generated
-	 */
-	TracedOffer createTracedOffer();
+	TracedInputValue createTracedInputValue();
 
 	/**
 	 * Returns a new object of class '<em>Traced Integer Calculation Expression</em>'.
@@ -220,13 +157,76 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedIntegerCalculationExpression createTracedIntegerCalculationExpression();
 
 	/**
-	 * Returns a new object of class '<em>Traced Activity Final Node</em>'.
+	 * Returns a new object of class '<em>Traced Integer Comparison Expression</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Activity Final Node</em>'.
+	 * @return a new object of class '<em>Traced Integer Comparison Expression</em>'.
 	 * @generated
 	 */
-	TracedActivityFinalNode createTracedActivityFinalNode();
+	TracedIntegerComparisonExpression createTracedIntegerComparisonExpression();
+
+	/**
+	 * Returns a new object of class '<em>Traced Integer Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Integer Value</em>'.
+	 * @generated
+	 */
+	TracedIntegerValue createTracedIntegerValue();
+
+	/**
+	 * Returns a new object of class '<em>Traced Integer Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Integer Variable</em>'.
+	 * @generated
+	 */
+	TracedIntegerVariable createTracedIntegerVariable();
+
+	/**
+	 * Returns a new object of class '<em>Traced Join Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Join Node</em>'.
+	 * @generated
+	 */
+	TracedJoinNode createTracedJoinNode();
+
+	/**
+	 * Returns a new object of class '<em>Traced Merge Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Merge Node</em>'.
+	 * @generated
+	 */
+	TracedMergeNode createTracedMergeNode();
+
+	/**
+	 * Returns a new object of class '<em>Traced Offer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Offer</em>'.
+	 * @generated
+	 */
+	TracedOffer createTracedOffer();
+
+	/**
+	 * Returns a new object of class '<em>Traced Opaque Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Opaque Action</em>'.
+	 * @generated
+	 */
+	TracedOpaqueAction createTracedOpaqueAction();
+
+	/**
+	 * Returns a new object of class '<em>Traced Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Traced Trace</em>'.
+	 * @generated
+	 */
+	TracedTrace createTracedTrace();
 
 	/**
 	 * Returns the package supported by this factory.

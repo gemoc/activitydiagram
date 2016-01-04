@@ -64,28 +64,49 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass smallStepEClass = null;
+	private EClass activitydiagram_ActivityNode_AddTokens1EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass bigStepEClass = null;
+	private EClass activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stepEClass = null;
+	private EClass activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rootImplicitStepEClass = null;
+	private EClass activitydiagram_ActivityNode_ExecuteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activitydiagram_ActivityNode_Execute_AbstractSubStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activitydiagram_ActivityNode_Execute_ImplicitStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activitydiagram_ActivityNode_RemoveToken1EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,42 +141,7 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass activitydiagram_ActivityNode_RemoveToken1EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_Variable_ExecuteEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_ActivityNode_ExecuteEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_ActivityNode_Execute_AbstractSubStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_ActivityNode_Execute_ImplicitStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_ActivityNode_AddTokens1EClass = null;
+	private EClass activitydiagram_ActivityNode_TerminateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -183,13 +169,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass activitydiagram_Variable_InitEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass activitydiagram_Activity_InitializeContextEClass = null;
 
 	/**
@@ -197,21 +176,7 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass activitydiagram_ActivityNode_TerminateEClass = null;
+	private EClass activitydiagram_Activity_ResetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -239,7 +204,42 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass activitydiagram_Activity_ResetEClass = null;
+	private EClass activitydiagram_Variable_ExecuteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activitydiagram_Variable_InitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass bigStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rootImplicitStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass smallStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stepEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -322,8 +322,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSmallStep() {
-		return smallStepEClass;
+	public EClass getActivitydiagram_ActivityNode_AddTokens1() {
+		return activitydiagram_ActivityNode_AddTokens1EClass;
 	}
 
 	/**
@@ -331,8 +331,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBigStep() {
-		return bigStepEClass;
+	public EReference getActivitydiagram_ActivityNode_AddTokens1_SubSteps() {
+		return (EReference)activitydiagram_ActivityNode_AddTokens1EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -340,8 +340,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStep() {
-		return stepEClass;
+	public EOperation getActivitydiagram_ActivityNode_AddTokens1__GetCaller() {
+		return activitydiagram_ActivityNode_AddTokens1EClass.getEOperations().get(0);
 	}
 
 	/**
@@ -349,8 +349,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStep_StartingState() {
-		return (EReference)stepEClass.getEStructuralFeatures().get(0);
+	public EClass getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep() {
+		return activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass;
 	}
 
 	/**
@@ -358,8 +358,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStep_EndingState() {
-		return (EReference)stepEClass.getEStructuralFeatures().get(1);
+	public EClass getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep() {
+		return activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass;
 	}
 
 	/**
@@ -367,8 +367,62 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRootImplicitStep() {
-		return rootImplicitStepEClass;
+	public EClass getActivitydiagram_ActivityNode_Execute() {
+		return activitydiagram_ActivityNode_ExecuteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivitydiagram_ActivityNode_Execute_SubSteps() {
+		return (EReference)activitydiagram_ActivityNode_ExecuteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getActivitydiagram_ActivityNode_Execute__GetCaller() {
+		return activitydiagram_ActivityNode_ExecuteEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivitydiagram_ActivityNode_Execute_AbstractSubStep() {
+		return activitydiagram_ActivityNode_Execute_AbstractSubStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivitydiagram_ActivityNode_Execute_ImplicitStep() {
+		return activitydiagram_ActivityNode_Execute_ImplicitStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivitydiagram_ActivityNode_RemoveToken1() {
+		return activitydiagram_ActivityNode_RemoveToken1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getActivitydiagram_ActivityNode_RemoveToken1__GetCaller() {
+		return activitydiagram_ActivityNode_RemoveToken1EClass.getEOperations().get(0);
 	}
 
 	/**
@@ -439,8 +493,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getActivitydiagram_ActivityNode_RemoveToken1() {
-		return activitydiagram_ActivityNode_RemoveToken1EClass;
+	public EClass getActivitydiagram_ActivityNode_Terminate() {
+		return activitydiagram_ActivityNode_TerminateEClass;
 	}
 
 	/**
@@ -448,98 +502,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getActivitydiagram_ActivityNode_RemoveToken1__GetCaller() {
-		return activitydiagram_ActivityNode_RemoveToken1EClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getActivitydiagram_Variable_Execute() {
-		return activitydiagram_Variable_ExecuteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivitydiagram_Variable_Execute__GetCaller() {
-		return activitydiagram_Variable_ExecuteEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getActivitydiagram_ActivityNode_Execute() {
-		return activitydiagram_ActivityNode_ExecuteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getActivitydiagram_ActivityNode_Execute_SubSteps() {
-		return (EReference)activitydiagram_ActivityNode_ExecuteEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivitydiagram_ActivityNode_Execute__GetCaller() {
-		return activitydiagram_ActivityNode_ExecuteEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getActivitydiagram_ActivityNode_Execute_AbstractSubStep() {
-		return activitydiagram_ActivityNode_Execute_AbstractSubStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getActivitydiagram_ActivityNode_Execute_ImplicitStep() {
-		return activitydiagram_ActivityNode_Execute_ImplicitStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getActivitydiagram_ActivityNode_AddTokens1() {
-		return activitydiagram_ActivityNode_AddTokens1EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getActivitydiagram_ActivityNode_AddTokens1_SubSteps() {
-		return (EReference)activitydiagram_ActivityNode_AddTokens1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivitydiagram_ActivityNode_AddTokens1__GetCaller() {
-		return activitydiagram_ActivityNode_AddTokens1EClass.getEOperations().get(0);
+	public EOperation getActivitydiagram_ActivityNode_Terminate__GetCaller() {
+		return activitydiagram_ActivityNode_TerminateEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -592,24 +556,6 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getActivitydiagram_Variable_Init() {
-		return activitydiagram_Variable_InitEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivitydiagram_Variable_Init__GetCaller() {
-		return activitydiagram_Variable_InitEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getActivitydiagram_Activity_InitializeContext() {
 		return activitydiagram_Activity_InitializeContextEClass;
 	}
@@ -628,8 +574,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep() {
-		return activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass;
+	public EClass getActivitydiagram_Activity_Reset() {
+		return activitydiagram_Activity_ResetEClass;
 	}
 
 	/**
@@ -637,26 +583,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep() {
-		return activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getActivitydiagram_ActivityNode_Terminate() {
-		return activitydiagram_ActivityNode_TerminateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivitydiagram_ActivityNode_Terminate__GetCaller() {
-		return activitydiagram_ActivityNode_TerminateEClass.getEOperations().get(0);
+	public EOperation getActivitydiagram_Activity_Reset__GetCaller() {
+		return activitydiagram_Activity_ResetEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -709,8 +637,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getActivitydiagram_Activity_Reset() {
-		return activitydiagram_Activity_ResetEClass;
+	public EClass getActivitydiagram_Variable_Execute() {
+		return activitydiagram_Variable_ExecuteEClass;
 	}
 
 	/**
@@ -718,8 +646,80 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getActivitydiagram_Activity_Reset__GetCaller() {
-		return activitydiagram_Activity_ResetEClass.getEOperations().get(0);
+	public EOperation getActivitydiagram_Variable_Execute__GetCaller() {
+		return activitydiagram_Variable_ExecuteEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivitydiagram_Variable_Init() {
+		return activitydiagram_Variable_InitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getActivitydiagram_Variable_Init__GetCaller() {
+		return activitydiagram_Variable_InitEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBigStep() {
+		return bigStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRootImplicitStep() {
+		return rootImplicitStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSmallStep() {
+		return smallStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStep() {
+		return stepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStep_EndingState() {
+		return (EReference)stepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStep_StartingState() {
+		return (EReference)stepEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -750,15 +750,24 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		smallStepEClass = createEClass(SMALL_STEP);
+		activitydiagram_ActivityNode_AddTokens1EClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1);
+		createEReference(activitydiagram_ActivityNode_AddTokens1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS);
+		createEOperation(activitydiagram_ActivityNode_AddTokens1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1___GET_CALLER);
 
-		bigStepEClass = createEClass(BIG_STEP);
+		activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP);
 
-		stepEClass = createEClass(STEP);
-		createEReference(stepEClass, STEP__STARTING_STATE);
-		createEReference(stepEClass, STEP__ENDING_STATE);
+		activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP);
 
-		rootImplicitStepEClass = createEClass(ROOT_IMPLICIT_STEP);
+		activitydiagram_ActivityNode_ExecuteEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE);
+		createEReference(activitydiagram_ActivityNode_ExecuteEClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS);
+		createEOperation(activitydiagram_ActivityNode_ExecuteEClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE___GET_CALLER);
+
+		activitydiagram_ActivityNode_Execute_AbstractSubStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP);
+
+		activitydiagram_ActivityNode_Execute_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP);
+
+		activitydiagram_ActivityNode_RemoveToken1EClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1);
+		createEOperation(activitydiagram_ActivityNode_RemoveToken1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1___GET_CALLER);
 
 		activitydiagram_ActivityNode_SendOffers1EClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1);
 		createEOperation(activitydiagram_ActivityNode_SendOffers1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1___GET_CALLER);
@@ -771,23 +780,8 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_IMPLICIT_STEP);
 
-		activitydiagram_ActivityNode_RemoveToken1EClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1);
-		createEOperation(activitydiagram_ActivityNode_RemoveToken1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1___GET_CALLER);
-
-		activitydiagram_Variable_ExecuteEClass = createEClass(ACTIVITYDIAGRAM_VARIABLE_EXECUTE);
-		createEOperation(activitydiagram_Variable_ExecuteEClass, ACTIVITYDIAGRAM_VARIABLE_EXECUTE___GET_CALLER);
-
-		activitydiagram_ActivityNode_ExecuteEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE);
-		createEReference(activitydiagram_ActivityNode_ExecuteEClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS);
-		createEOperation(activitydiagram_ActivityNode_ExecuteEClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE___GET_CALLER);
-
-		activitydiagram_ActivityNode_Execute_AbstractSubStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP);
-
-		activitydiagram_ActivityNode_Execute_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP);
-
-		activitydiagram_ActivityNode_AddTokens1EClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1);
-		createEReference(activitydiagram_ActivityNode_AddTokens1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS);
-		createEOperation(activitydiagram_ActivityNode_AddTokens1EClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1___GET_CALLER);
+		activitydiagram_ActivityNode_TerminateEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE);
+		createEOperation(activitydiagram_ActivityNode_TerminateEClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE___GET_CALLER);
 
 		activitydiagram_Activity_ExecuteEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_EXECUTE);
 		createEReference(activitydiagram_Activity_ExecuteEClass, ACTIVITYDIAGRAM_ACTIVITY_EXECUTE__SUB_STEPS);
@@ -797,18 +791,11 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		activitydiagram_Activity_Execute_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_IMPLICIT_STEP);
 
-		activitydiagram_Variable_InitEClass = createEClass(ACTIVITYDIAGRAM_VARIABLE_INIT);
-		createEOperation(activitydiagram_Variable_InitEClass, ACTIVITYDIAGRAM_VARIABLE_INIT___GET_CALLER);
-
 		activitydiagram_Activity_InitializeContextEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT);
 		createEOperation(activitydiagram_Activity_InitializeContextEClass, ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT___GET_CALLER);
 
-		activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP);
-
-		activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP);
-
-		activitydiagram_ActivityNode_TerminateEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE);
-		createEOperation(activitydiagram_ActivityNode_TerminateEClass, ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE___GET_CALLER);
+		activitydiagram_Activity_ResetEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_RESET);
+		createEOperation(activitydiagram_Activity_ResetEClass, ACTIVITYDIAGRAM_ACTIVITY_RESET___GET_CALLER);
 
 		activitydiagram_Activity_WriteTraceEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE);
 		createEReference(activitydiagram_Activity_WriteTraceEClass, ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__SUB_STEPS);
@@ -818,8 +805,21 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		activitydiagram_Activity_WriteTrace_ImplicitStepEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE_IMPLICIT_STEP);
 
-		activitydiagram_Activity_ResetEClass = createEClass(ACTIVITYDIAGRAM_ACTIVITY_RESET);
-		createEOperation(activitydiagram_Activity_ResetEClass, ACTIVITYDIAGRAM_ACTIVITY_RESET___GET_CALLER);
+		activitydiagram_Variable_ExecuteEClass = createEClass(ACTIVITYDIAGRAM_VARIABLE_EXECUTE);
+		createEOperation(activitydiagram_Variable_ExecuteEClass, ACTIVITYDIAGRAM_VARIABLE_EXECUTE___GET_CALLER);
+
+		activitydiagram_Variable_InitEClass = createEClass(ACTIVITYDIAGRAM_VARIABLE_INIT);
+		createEOperation(activitydiagram_Variable_InitEClass, ACTIVITYDIAGRAM_VARIABLE_INIT___GET_CALLER);
+
+		bigStepEClass = createEClass(BIG_STEP);
+
+		rootImplicitStepEClass = createEClass(ROOT_IMPLICIT_STEP);
+
+		smallStepEClass = createEClass(SMALL_STEP);
+
+		stepEClass = createEClass(STEP);
+		createEReference(stepEClass, STEP__ENDING_STATE);
+		createEReference(stepEClass, STEP__STARTING_STATE);
 	}
 
 	/**
@@ -846,60 +846,72 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		ActivitydiagramPackage theActivitydiagramPackage = (ActivitydiagramPackage)EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramPackage.eNS_URI);
 		Engine_msePackage theEngine_msePackage = (Engine_msePackage)EPackage.Registry.INSTANCE.getEPackage(Engine_msePackage.eNS_URI);
 		StatesPackage theStatesPackage = (StatesPackage)EPackage.Registry.INSTANCE.getEPackage(StatesPackage.eNS_URI);
-		ActivitydiagramPackage theActivitydiagramPackage = (ActivitydiagramPackage)EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		smallStepEClass.getESuperTypes().add(this.getStep());
-		bigStepEClass.getESuperTypes().add(this.getStep());
-		stepEClass.getESuperTypes().add(theEngine_msePackage.getMSEOccurrence());
-		rootImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_ActivityNode_SendOffers1EClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_ActivityNode_SendOffers1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
-		activitydiagram_ActivityNode_TakeOfferdTokens1EClass.getESuperTypes().add(this.getBigStep());
-		activitydiagram_ActivityNode_TakeOfferdTokens1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
-		activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep());
-		activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_ActivityNode_RemoveToken1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep());
-		activitydiagram_ActivityNode_RemoveToken1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep());
-		activitydiagram_ActivityNode_RemoveToken1EClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_Variable_ExecuteEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_ActivityNode_ExecuteEClass.getESuperTypes().add(this.getBigStep());
-		activitydiagram_ActivityNode_ExecuteEClass.getESuperTypes().add(this.getActivitydiagram_Activity_Execute_AbstractSubStep());
-		activitydiagram_ActivityNode_Execute_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
-		activitydiagram_ActivityNode_Execute_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
 		activitydiagram_ActivityNode_AddTokens1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
 		activitydiagram_ActivityNode_AddTokens1EClass.getESuperTypes().add(this.getBigStep());
+		activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep());
+		activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_ActivityNode_ExecuteEClass.getESuperTypes().add(this.getActivitydiagram_Activity_Execute_AbstractSubStep());
+		activitydiagram_ActivityNode_ExecuteEClass.getESuperTypes().add(this.getBigStep());
+		activitydiagram_ActivityNode_Execute_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
+		activitydiagram_ActivityNode_Execute_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_ActivityNode_RemoveToken1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep());
+		activitydiagram_ActivityNode_RemoveToken1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep());
+		activitydiagram_ActivityNode_RemoveToken1EClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_ActivityNode_SendOffers1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
+		activitydiagram_ActivityNode_SendOffers1EClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_ActivityNode_TakeOfferdTokens1EClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep());
+		activitydiagram_ActivityNode_TakeOfferdTokens1EClass.getESuperTypes().add(this.getBigStep());
+		activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep());
+		activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_ActivityNode_TerminateEClass.getESuperTypes().add(this.getSmallStep());
 		activitydiagram_Activity_ExecuteEClass.getESuperTypes().add(this.getBigStep());
 		activitydiagram_Activity_Execute_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_Activity_Execute_AbstractSubStep());
 		activitydiagram_Activity_Execute_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_Variable_InitEClass.getESuperTypes().add(this.getActivitydiagram_Activity_Execute_AbstractSubStep());
-		activitydiagram_Variable_InitEClass.getESuperTypes().add(this.getSmallStep());
 		activitydiagram_Activity_InitializeContextEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep());
-		activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_ActivityNode_TerminateEClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_Activity_ResetEClass.getESuperTypes().add(this.getActivitydiagram_Activity_WriteTrace_AbstractSubStep());
+		activitydiagram_Activity_ResetEClass.getESuperTypes().add(this.getSmallStep());
 		activitydiagram_Activity_WriteTraceEClass.getESuperTypes().add(this.getBigStep());
 		activitydiagram_Activity_WriteTrace_ImplicitStepEClass.getESuperTypes().add(this.getActivitydiagram_Activity_WriteTrace_AbstractSubStep());
 		activitydiagram_Activity_WriteTrace_ImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
-		activitydiagram_Activity_ResetEClass.getESuperTypes().add(this.getActivitydiagram_Activity_WriteTrace_AbstractSubStep());
-		activitydiagram_Activity_ResetEClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_Variable_ExecuteEClass.getESuperTypes().add(this.getSmallStep());
+		activitydiagram_Variable_InitEClass.getESuperTypes().add(this.getActivitydiagram_Activity_Execute_AbstractSubStep());
+		activitydiagram_Variable_InitEClass.getESuperTypes().add(this.getSmallStep());
+		bigStepEClass.getESuperTypes().add(this.getStep());
+		rootImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
+		smallStepEClass.getESuperTypes().add(this.getStep());
+		stepEClass.getESuperTypes().add(theEngine_msePackage.getMSEOccurrence());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(smallStepEClass, SmallStep.class, "SmallStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(activitydiagram_ActivityNode_AddTokens1EClass, Activitydiagram_ActivityNode_AddTokens1.class, "Activitydiagram_ActivityNode_AddTokens1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getActivitydiagram_ActivityNode_AddTokens1_SubSteps(), this.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep(), null, "subSteps", null, 0, -1, Activitydiagram_ActivityNode_AddTokens1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(bigStepEClass, BigStep.class, "BigStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEOperation(getActivitydiagram_ActivityNode_AddTokens1__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(stepEClass, Step.class, "Step", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStep_StartingState(), theStatesPackage.getState(), theStatesPackage.getState_StartedSteps(), "startingState", null, 1, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStep_EndingState(), theStatesPackage.getState(), theStatesPackage.getState_EndedSteps(), "endingState", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass, Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep.class, "Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(rootImplicitStepEClass, RootImplicitStep.class, "RootImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass, Activitydiagram_ActivityNode_AddTokens1_ImplicitStep.class, "Activitydiagram_ActivityNode_AddTokens1_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(activitydiagram_ActivityNode_ExecuteEClass, Activitydiagram_ActivityNode_Execute.class, "Activitydiagram_ActivityNode_Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getActivitydiagram_ActivityNode_Execute_SubSteps(), this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep(), null, "subSteps", null, 0, -1, Activitydiagram_ActivityNode_Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getActivitydiagram_ActivityNode_Execute__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(activitydiagram_ActivityNode_Execute_AbstractSubStepEClass, Activitydiagram_ActivityNode_Execute_AbstractSubStep.class, "Activitydiagram_ActivityNode_Execute_AbstractSubStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(activitydiagram_ActivityNode_Execute_ImplicitStepEClass, Activitydiagram_ActivityNode_Execute_ImplicitStep.class, "Activitydiagram_ActivityNode_Execute_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(activitydiagram_ActivityNode_RemoveToken1EClass, Activitydiagram_ActivityNode_RemoveToken1.class, "Activitydiagram_ActivityNode_RemoveToken1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getActivitydiagram_ActivityNode_RemoveToken1__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(activitydiagram_ActivityNode_SendOffers1EClass, Activitydiagram_ActivityNode_SendOffers1.class, "Activitydiagram_ActivityNode_SendOffers1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -914,27 +926,9 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		initEClass(activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepEClass, Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep.class, "Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(activitydiagram_ActivityNode_RemoveToken1EClass, Activitydiagram_ActivityNode_RemoveToken1.class, "Activitydiagram_ActivityNode_RemoveToken1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(activitydiagram_ActivityNode_TerminateEClass, Activitydiagram_ActivityNode_Terminate.class, "Activitydiagram_ActivityNode_Terminate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getActivitydiagram_ActivityNode_RemoveToken1__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(activitydiagram_Variable_ExecuteEClass, Activitydiagram_Variable_Execute.class, "Activitydiagram_Variable_Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getActivitydiagram_Variable_Execute__GetCaller(), theActivitydiagramPackage.getVariable(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(activitydiagram_ActivityNode_ExecuteEClass, Activitydiagram_ActivityNode_Execute.class, "Activitydiagram_ActivityNode_Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getActivitydiagram_ActivityNode_Execute_SubSteps(), this.getActivitydiagram_ActivityNode_Execute_AbstractSubStep(), null, "subSteps", null, 0, -1, Activitydiagram_ActivityNode_Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getActivitydiagram_ActivityNode_Execute__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(activitydiagram_ActivityNode_Execute_AbstractSubStepEClass, Activitydiagram_ActivityNode_Execute_AbstractSubStep.class, "Activitydiagram_ActivityNode_Execute_AbstractSubStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(activitydiagram_ActivityNode_Execute_ImplicitStepEClass, Activitydiagram_ActivityNode_Execute_ImplicitStep.class, "Activitydiagram_ActivityNode_Execute_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(activitydiagram_ActivityNode_AddTokens1EClass, Activitydiagram_ActivityNode_AddTokens1.class, "Activitydiagram_ActivityNode_AddTokens1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getActivitydiagram_ActivityNode_AddTokens1_SubSteps(), this.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep(), null, "subSteps", null, 0, -1, Activitydiagram_ActivityNode_AddTokens1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getActivitydiagram_ActivityNode_AddTokens1__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getActivitydiagram_ActivityNode_Terminate__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(activitydiagram_Activity_ExecuteEClass, Activitydiagram_Activity_Execute.class, "Activitydiagram_Activity_Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActivitydiagram_Activity_Execute_SubSteps(), this.getActivitydiagram_Activity_Execute_AbstractSubStep(), null, "subSteps", null, 0, -1, Activitydiagram_Activity_Execute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -945,21 +939,13 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		initEClass(activitydiagram_Activity_Execute_ImplicitStepEClass, Activitydiagram_Activity_Execute_ImplicitStep.class, "Activitydiagram_Activity_Execute_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(activitydiagram_Variable_InitEClass, Activitydiagram_Variable_Init.class, "Activitydiagram_Variable_Init", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getActivitydiagram_Variable_Init__GetCaller(), theActivitydiagramPackage.getVariable(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(activitydiagram_Activity_InitializeContextEClass, Activitydiagram_Activity_InitializeContext.class, "Activitydiagram_Activity_InitializeContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getActivitydiagram_Activity_InitializeContext__GetCaller(), theActivitydiagramPackage.getActivity(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(activitydiagram_ActivityNode_AddTokens1_AbstractSubStepEClass, Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep.class, "Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(activitydiagram_Activity_ResetEClass, Activitydiagram_Activity_Reset.class, "Activitydiagram_Activity_Reset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(activitydiagram_ActivityNode_AddTokens1_ImplicitStepEClass, Activitydiagram_ActivityNode_AddTokens1_ImplicitStep.class, "Activitydiagram_ActivityNode_AddTokens1_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(activitydiagram_ActivityNode_TerminateEClass, Activitydiagram_ActivityNode_Terminate.class, "Activitydiagram_ActivityNode_Terminate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getActivitydiagram_ActivityNode_Terminate__GetCaller(), theActivitydiagramPackage.getActivityNode(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getActivitydiagram_Activity_Reset__GetCaller(), theActivitydiagramPackage.getActivity(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(activitydiagram_Activity_WriteTraceEClass, Activitydiagram_Activity_WriteTrace.class, "Activitydiagram_Activity_WriteTrace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActivitydiagram_Activity_WriteTrace_SubSteps(), this.getActivitydiagram_Activity_WriteTrace_AbstractSubStep(), null, "subSteps", null, 0, -1, Activitydiagram_Activity_WriteTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -970,9 +956,23 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		initEClass(activitydiagram_Activity_WriteTrace_ImplicitStepEClass, Activitydiagram_Activity_WriteTrace_ImplicitStep.class, "Activitydiagram_Activity_WriteTrace_ImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(activitydiagram_Activity_ResetEClass, Activitydiagram_Activity_Reset.class, "Activitydiagram_Activity_Reset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(activitydiagram_Variable_ExecuteEClass, Activitydiagram_Variable_Execute.class, "Activitydiagram_Variable_Execute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getActivitydiagram_Activity_Reset__GetCaller(), theActivitydiagramPackage.getActivity(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getActivitydiagram_Variable_Execute__GetCaller(), theActivitydiagramPackage.getVariable(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(activitydiagram_Variable_InitEClass, Activitydiagram_Variable_Init.class, "Activitydiagram_Variable_Init", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getActivitydiagram_Variable_Init__GetCaller(), theActivitydiagramPackage.getVariable(), "getCaller", 1, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(bigStepEClass, BigStep.class, "BigStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(rootImplicitStepEClass, RootImplicitStep.class, "RootImplicitStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(smallStepEClass, SmallStep.class, "SmallStep", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stepEClass, Step.class, "Step", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStep_EndingState(), theStatesPackage.getState(), theStatesPackage.getState_EndedSteps(), "endingState", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStep_StartingState(), theStatesPackage.getState(), theStatesPackage.getState_StartedSteps(), "startingState", null, 1, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //StepsPackageImpl

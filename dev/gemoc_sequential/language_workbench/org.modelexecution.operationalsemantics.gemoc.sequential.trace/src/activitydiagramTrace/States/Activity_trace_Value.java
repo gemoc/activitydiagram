@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.Activity_trace_Value#getTrace <em>Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.States.Activity_trace_Value#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.Activity_trace_Value#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.Activity_trace_Value#getTrace <em>Trace</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,32 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Activity_trace_Value extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Trace</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Trace</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trace</em>' reference.
-	 * @see #setTrace(TracedTrace)
-	 * @see activitydiagramTrace.States.StatesPackage#getActivity_trace_Value_Trace()
-	 * @model
-	 * @generated
-	 */
-	TracedTrace getTrace();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.Activity_trace_Value#getTrace <em>Trace</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trace</em>' reference.
-	 * @see #getTrace()
-	 * @generated
-	 */
-	void setTrace(TracedTrace value);
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.activitydiagram.TracedActivity#getTraceSequence <em>Trace Sequence</em>}'.
@@ -99,5 +73,31 @@ public interface Activity_trace_Value extends EObject {
 	 * @generated
 	 */
 	EList<State> getStates();
+
+	/**
+	 * Returns the value of the '<em><b>Trace</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Trace</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Trace</em>' reference.
+	 * @see #setTrace(TracedTrace)
+	 * @see activitydiagramTrace.States.StatesPackage#getActivity_trace_Value_Trace()
+	 * @model
+	 * @generated
+	 */
+	TracedTrace getTrace();
+
+	/**
+	 * Sets the value of the '{@link activitydiagramTrace.States.Activity_trace_Value#getTrace <em>Trace</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Trace</em>' reference.
+	 * @see #getTrace()
+	 * @generated
+	 */
+	void setTrace(TracedTrace value);
 
 } // Activity_trace_Value

@@ -34,25 +34,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_target_ValueImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_target_ValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_target_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.ActivityEdge_target_ValueImpl#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container implements ActivityEdge_target_Value {
-	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTarget()
-	 * @generated
-	 * @ordered
-	 */
-	protected TracedActivityNode target;
-
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -62,6 +52,16 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected EList<State> states;
+
+	/**
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected TracedActivityNode target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,44 +80,6 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	protected EClass eStaticClass() {
 		return StatesPackage.Literals.ACTIVITY_EDGE_TARGET_VALUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedActivityNode getTarget() {
-		if (target != null && target.eIsProxy()) {
-			InternalEObject oldTarget = (InternalEObject)target;
-			target = (TracedActivityNode)eResolveProxy(oldTarget);
-			if (target != oldTarget) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET, oldTarget, target));
-			}
-		}
-		return target;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedActivityNode basicGetTarget() {
-		return target;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTarget(TracedActivityNode newTarget) {
-		TracedActivityNode oldTarget = target;
-		target = newTarget;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET, oldTarget, target));
 	}
 
 	/**
@@ -178,6 +140,44 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TracedActivityNode getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject)target;
+			target = (TracedActivityNode)eResolveProxy(oldTarget);
+			if (target != oldTarget) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET, oldTarget, target));
+			}
+		}
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TracedActivityNode basicGetTarget() {
+		return target;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTarget(TracedActivityNode newTarget) {
+		TracedActivityNode oldTarget = target;
+		target = newTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET, oldTarget, target));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -230,13 +230,13 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__PARENT:
 				return getParent();
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__STATES:
 				return getStates();
+			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,15 +250,15 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
-				setTarget((TracedActivityNode)newValue);
-				return;
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__PARENT:
 				setParent((TracedActivityEdge)newValue);
 				return;
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
+				return;
+			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
+				setTarget((TracedActivityNode)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -272,14 +272,14 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
-				setTarget((TracedActivityNode)null);
-				return;
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__PARENT:
 				setParent((TracedActivityEdge)null);
 				return;
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__STATES:
 				getStates().clear();
+				return;
+			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
+				setTarget((TracedActivityNode)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -293,12 +293,12 @@ public class ActivityEdge_target_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
-				return target != null;
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__PARENT:
 				return getParent() != null;
 			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__STATES:
 				return states != null && !states.isEmpty();
+			case StatesPackage.ACTIVITY_EDGE_TARGET_VALUE__TARGET:
+				return target != null;
 		}
 		return super.eIsSet(featureID);
 	}

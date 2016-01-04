@@ -33,15 +33,25 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#isValue <em>Value</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#isValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container implements BooleanValue_value_Value {
+	/**
+	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<State> states;
+
 	/**
 	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,16 +73,6 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	protected boolean value = VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStates()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<State> states;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,27 +89,6 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	protected EClass eStaticClass() {
 		return StatesPackage.Literals.BOOLEAN_VALUE_VALUE_VALUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -170,6 +149,27 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(boolean newValue) {
+		boolean oldValue = value;
+		value = newValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -222,12 +222,12 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				return isValue();
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
 				return getParent();
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
 				return getStates();
+			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
+				return isValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,15 +241,15 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				setValue((Boolean)newValue);
-				return;
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
 				setParent((TracedBooleanValue)newValue);
 				return;
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
+				return;
+			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
+				setValue((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -263,14 +263,14 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				setValue(VALUE_EDEFAULT);
-				return;
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
 				setParent((TracedBooleanValue)null);
 				return;
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
 				getStates().clear();
+				return;
+			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
+				setValue(VALUE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -284,12 +284,12 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				return value != VALUE_EDEFAULT;
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
 				return getParent() != null;
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
 				return states != null && !states.isEmpty();
+			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
+				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

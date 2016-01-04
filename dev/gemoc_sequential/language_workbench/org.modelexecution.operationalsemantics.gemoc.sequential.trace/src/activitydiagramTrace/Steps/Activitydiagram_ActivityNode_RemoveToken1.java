@@ -14,7 +14,7 @@ import activitydiagram.ActivityNode;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep, Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep, SmallStep {
+public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep, Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep, SmallStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -34,25 +34,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl#getTrace <em>Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.Activity_trace_ValueImpl#getTrace <em>Trace</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container implements Activity_trace_Value {
-	/**
-	 * The cached value of the '{@link #getTrace() <em>Trace</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTrace()
-	 * @generated
-	 * @ordered
-	 */
-	protected TracedTrace trace;
-
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -62,6 +52,16 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<State> states;
+
+	/**
+	 * The cached value of the '{@link #getTrace() <em>Trace</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrace()
+	 * @generated
+	 * @ordered
+	 */
+	protected TracedTrace trace;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,44 +80,6 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	protected EClass eStaticClass() {
 		return StatesPackage.Literals.ACTIVITY_TRACE_VALUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedTrace getTrace() {
-		if (trace != null && trace.eIsProxy()) {
-			InternalEObject oldTrace = (InternalEObject)trace;
-			trace = (TracedTrace)eResolveProxy(oldTrace);
-			if (trace != oldTrace) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.ACTIVITY_TRACE_VALUE__TRACE, oldTrace, trace));
-			}
-		}
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedTrace basicGetTrace() {
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTrace(TracedTrace newTrace) {
-		TracedTrace oldTrace = trace;
-		trace = newTrace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_TRACE_VALUE__TRACE, oldTrace, trace));
 	}
 
 	/**
@@ -178,6 +140,44 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TracedTrace getTrace() {
+		if (trace != null && trace.eIsProxy()) {
+			InternalEObject oldTrace = (InternalEObject)trace;
+			trace = (TracedTrace)eResolveProxy(oldTrace);
+			if (trace != oldTrace) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.ACTIVITY_TRACE_VALUE__TRACE, oldTrace, trace));
+			}
+		}
+		return trace;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TracedTrace basicGetTrace() {
+		return trace;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTrace(TracedTrace newTrace) {
+		TracedTrace oldTrace = trace;
+		trace = newTrace;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.ACTIVITY_TRACE_VALUE__TRACE, oldTrace, trace));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -230,13 +230,13 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
-				if (resolve) return getTrace();
-				return basicGetTrace();
 			case StatesPackage.ACTIVITY_TRACE_VALUE__PARENT:
 				return getParent();
 			case StatesPackage.ACTIVITY_TRACE_VALUE__STATES:
 				return getStates();
+			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
+				if (resolve) return getTrace();
+				return basicGetTrace();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,15 +250,15 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
-				setTrace((TracedTrace)newValue);
-				return;
 			case StatesPackage.ACTIVITY_TRACE_VALUE__PARENT:
 				setParent((TracedActivity)newValue);
 				return;
 			case StatesPackage.ACTIVITY_TRACE_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
+				return;
+			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
+				setTrace((TracedTrace)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -272,14 +272,14 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
-				setTrace((TracedTrace)null);
-				return;
 			case StatesPackage.ACTIVITY_TRACE_VALUE__PARENT:
 				setParent((TracedActivity)null);
 				return;
 			case StatesPackage.ACTIVITY_TRACE_VALUE__STATES:
 				getStates().clear();
+				return;
+			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
+				setTrace((TracedTrace)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -293,12 +293,12 @@ public class Activity_trace_ValueImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
-				return trace != null;
 			case StatesPackage.ACTIVITY_TRACE_VALUE__PARENT:
 				return getParent() != null;
 			case StatesPackage.ACTIVITY_TRACE_VALUE__STATES:
 				return states != null && !states.isEmpty();
+			case StatesPackage.ACTIVITY_TRACE_VALUE__TRACE:
+				return trace != null;
 		}
 		return super.eIsSet(featureID);
 	}

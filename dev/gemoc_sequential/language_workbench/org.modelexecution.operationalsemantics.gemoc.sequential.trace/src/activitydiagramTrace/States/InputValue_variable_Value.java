@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.InputValue_variable_Value#getVariable <em>Variable</em>}</li>
  *   <li>{@link activitydiagramTrace.States.InputValue_variable_Value#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.InputValue_variable_Value#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.InputValue_variable_Value#getVariable <em>Variable</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,32 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface InputValue_variable_Value extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Variable</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable</em>' reference.
-	 * @see #setVariable(TracedVariable)
-	 * @see activitydiagramTrace.States.StatesPackage#getInputValue_variable_Value_Variable()
-	 * @model required="true"
-	 * @generated
-	 */
-	TracedVariable getVariable();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.InputValue_variable_Value#getVariable <em>Variable</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Variable</em>' reference.
-	 * @see #getVariable()
-	 * @generated
-	 */
-	void setVariable(TracedVariable value);
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariableSequence <em>Variable Sequence</em>}'.
@@ -99,5 +73,31 @@ public interface InputValue_variable_Value extends EObject {
 	 * @generated
 	 */
 	EList<State> getStates();
+
+	/**
+	 * Returns the value of the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Variable</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variable</em>' reference.
+	 * @see #setVariable(TracedVariable)
+	 * @see activitydiagramTrace.States.StatesPackage#getInputValue_variable_Value_Variable()
+	 * @model required="true"
+	 * @generated
+	 */
+	TracedVariable getVariable();
+
+	/**
+	 * Sets the value of the '{@link activitydiagramTrace.States.InputValue_variable_Value#getVariable <em>Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variable</em>' reference.
+	 * @see #getVariable()
+	 * @generated
+	 */
+	void setVariable(TracedVariable value);
 
 } // InputValue_variable_Value

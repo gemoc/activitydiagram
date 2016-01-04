@@ -34,25 +34,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container implements InputValue_variable_Value {
-	/**
-	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVariable()
-	 * @generated
-	 * @ordered
-	 */
-	protected TracedVariable variable;
-
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -62,6 +52,16 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected EList<State> states;
+
+	/**
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected TracedVariable variable;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,44 +80,6 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	protected EClass eStaticClass() {
 		return StatesPackage.Literals.INPUT_VALUE_VARIABLE_VALUE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedVariable getVariable() {
-		if (variable != null && variable.eIsProxy()) {
-			InternalEObject oldVariable = (InternalEObject)variable;
-			variable = (TracedVariable)eResolveProxy(oldVariable);
-			if (variable != oldVariable) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE, oldVariable, variable));
-			}
-		}
-		return variable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedVariable basicGetVariable() {
-		return variable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVariable(TracedVariable newVariable) {
-		TracedVariable oldVariable = variable;
-		variable = newVariable;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -178,6 +140,44 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TracedVariable getVariable() {
+		if (variable != null && variable.eIsProxy()) {
+			InternalEObject oldVariable = (InternalEObject)variable;
+			variable = (TracedVariable)eResolveProxy(oldVariable);
+			if (variable != oldVariable) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE, oldVariable, variable));
+			}
+		}
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TracedVariable basicGetVariable() {
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVariable(TracedVariable newVariable) {
+		TracedVariable oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE, oldVariable, variable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -230,13 +230,13 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
-				if (resolve) return getVariable();
-				return basicGetVariable();
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				return getParent();
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				return getStates();
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				if (resolve) return getVariable();
+				return basicGetVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -250,15 +250,15 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
-				setVariable((TracedVariable)newValue);
-				return;
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				setParent((TracedInputValue)newValue);
 				return;
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
+				return;
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				setVariable((TracedVariable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -272,14 +272,14 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
-				setVariable((TracedVariable)null);
-				return;
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				setParent((TracedInputValue)null);
 				return;
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				getStates().clear();
+				return;
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				setVariable((TracedVariable)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -293,12 +293,12 @@ public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
-				return variable != null;
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				return getParent() != null;
 			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				return states != null && !states.isEmpty();
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}

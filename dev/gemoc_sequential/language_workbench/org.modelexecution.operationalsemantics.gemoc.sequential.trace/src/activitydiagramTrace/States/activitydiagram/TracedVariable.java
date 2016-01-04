@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedVariable#getInitialValueSequence <em>Initial Value Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedVariable#getCurrentValueSequence <em>Current Value Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedVariable#getInitialValueSequence <em>Initial Value Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedVariable#getNameSequence <em>Name Sequence</em>}</li>
  * </ul>
  * </p>
@@ -29,24 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface TracedVariable extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Initial Value Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.Variable_initialValue_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Variable_initialValue_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Initial Value Sequence</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initial Value Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedVariable_InitialValueSequence()
-	 * @see activitydiagramTrace.States.Variable_initialValue_Value#getParent
-	 * @model opposite="parent" containment="true"
-	 * @generated
-	 */
-	EList<Variable_initialValue_Value> getInitialValueSequence();
-
 	/**
 	 * Returns the value of the '<em><b>Current Value Sequence</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.Variable_currentValue_Value}.
@@ -64,6 +46,24 @@ public interface TracedVariable extends EObject {
 	 * @generated
 	 */
 	EList<Variable_currentValue_Value> getCurrentValueSequence();
+
+	/**
+	 * Returns the value of the '<em><b>Initial Value Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.Variable_initialValue_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Variable_initialValue_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Initial Value Sequence</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Initial Value Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedVariable_InitialValueSequence()
+	 * @see activitydiagramTrace.States.Variable_initialValue_Value#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<Variable_initialValue_Value> getInitialValueSequence();
 
 	/**
 	 * Returns the value of the '<em><b>Name Sequence</b></em>' containment reference list.

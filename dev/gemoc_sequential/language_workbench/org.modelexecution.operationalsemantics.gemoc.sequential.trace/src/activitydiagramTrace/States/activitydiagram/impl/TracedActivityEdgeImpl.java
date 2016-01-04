@@ -29,15 +29,25 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityEdgeImpl#getOffersSequence <em>Offers Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityEdgeImpl#getSourceSequence <em>Source Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityEdgeImpl#getTargetSequence <em>Target Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityEdgeImpl#getOffersSequence <em>Offers Sequence</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl implements TracedActivityEdge {
+	/**
+	 * The cached value of the '{@link #getOffersSequence() <em>Offers Sequence</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOffersSequence()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ActivityEdge_offers_Value> offersSequence;
+
 	/**
 	 * The cached value of the '{@link #getSourceSequence() <em>Source Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -59,16 +69,6 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	protected EList<ActivityEdge_target_Value> targetSequence;
 
 	/**
-	 * The cached value of the '{@link #getOffersSequence() <em>Offers Sequence</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffersSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ActivityEdge_offers_Value> offersSequence;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -85,6 +85,18 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	@Override
 	protected EClass eStaticClass() {
 		return ActivitydiagramPackage.Literals.TRACED_ACTIVITY_EDGE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ActivityEdge_offers_Value> getOffersSequence() {
+		if (offersSequence == null) {
+			offersSequence = new EObjectContainmentWithInverseEList<ActivityEdge_offers_Value>(ActivityEdge_offers_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE, StatesPackage.ACTIVITY_EDGE_OFFERS_VALUE__PARENT);
+		}
+		return offersSequence;
 	}
 
 	/**
@@ -116,28 +128,16 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ActivityEdge_offers_Value> getOffersSequence() {
-		if (offersSequence == null) {
-			offersSequence = new EObjectContainmentWithInverseEList<ActivityEdge_offers_Value>(ActivityEdge_offers_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE, StatesPackage.ACTIVITY_EDGE_OFFERS_VALUE__PARENT);
-		}
-		return offersSequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOffersSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSourceSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTargetSequence()).basicAdd(otherEnd, msgs);
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOffersSequence()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,12 +150,12 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
+				return ((InternalEList<?>)getOffersSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE:
 				return ((InternalEList<?>)getSourceSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE:
 				return ((InternalEList<?>)getTargetSequence()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
-				return ((InternalEList<?>)getOffersSequence()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,12 +168,12 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
+				return getOffersSequence();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE:
 				return getSourceSequence();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE:
 				return getTargetSequence();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
-				return getOffersSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -187,6 +187,10 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
+				getOffersSequence().clear();
+				getOffersSequence().addAll((Collection<? extends ActivityEdge_offers_Value>)newValue);
+				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE:
 				getSourceSequence().clear();
 				getSourceSequence().addAll((Collection<? extends ActivityEdge_source_Value>)newValue);
@@ -194,10 +198,6 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE:
 				getTargetSequence().clear();
 				getTargetSequence().addAll((Collection<? extends ActivityEdge_target_Value>)newValue);
-				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
-				getOffersSequence().clear();
-				getOffersSequence().addAll((Collection<? extends ActivityEdge_offers_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,14 +211,14 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
+				getOffersSequence().clear();
+				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE:
 				getSourceSequence().clear();
 				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE:
 				getTargetSequence().clear();
-				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
-				getOffersSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -232,12 +232,12 @@ public abstract class TracedActivityEdgeImpl extends TracedNamedElementImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
+				return offersSequence != null && !offersSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE:
 				return sourceSequence != null && !sourceSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE:
 				return targetSequence != null && !targetSequence.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE:
-				return offersSequence != null && !offersSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -73,182 +73,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedJoinNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedVariableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedForkNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedTokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedBooleanVariableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedIntegerExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedInitialNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedTraceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedControlFlowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedMergeNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedDecisionNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedIntegerVariableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedControlNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedBooleanExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedOpaqueActionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedInputValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedBooleanUnaryExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedBooleanBinaryExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedNamedElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedBooleanValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedExecutableNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedFinalNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedForkedTokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedControlTokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedInputEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tracedIntegerComparisonExpressionEClass = null;
+	private EClass tracedActionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -262,6 +87,20 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tracedActivityEdgeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedActivityFinalNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tracedActivityNodeEClass = null;
 
 	/**
@@ -269,28 +108,70 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedValueEClass = null;
+	private EClass tracedBooleanBinaryExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedIntegerValueEClass = null;
+	private EClass tracedBooleanExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedOfferEClass = null;
+	private EClass tracedBooleanUnaryExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedActivityEdgeEClass = null;
+	private EClass tracedBooleanValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedBooleanVariableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedControlFlowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedControlNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedControlTokenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedDecisionNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedExecutableNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -304,6 +185,48 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tracedFinalNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedForkNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedForkedTokenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedInitialNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedInputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedInputValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tracedIntegerCalculationExpressionEClass = null;
 
 	/**
@@ -311,14 +234,91 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedActionEClass = null;
+	private EClass tracedIntegerComparisonExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tracedActivityFinalNodeEClass = null;
+	private EClass tracedIntegerExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedIntegerValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedIntegerVariableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedJoinNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedMergeNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedNamedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedOfferEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedOpaqueActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedTokenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedTraceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tracedVariableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -401,8 +401,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedJoinNode() {
-		return tracedJoinNodeEClass;
+	public EClass getTracedAction() {
+		return tracedActionEClass;
 	}
 
 	/**
@@ -410,8 +410,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedVariable() {
-		return tracedVariableEClass;
+	public EClass getTracedActivity() {
+		return tracedActivityEClass;
 	}
 
 	/**
@@ -419,8 +419,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedVariable_InitialValueSequence() {
-		return (EReference)tracedVariableEClass.getEStructuralFeatures().get(0);
+	public EReference getTracedActivity_EdgesSequence() {
+		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -428,8 +428,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedVariable_CurrentValueSequence() {
-		return (EReference)tracedVariableEClass.getEStructuralFeatures().get(1);
+	public EReference getTracedActivity_InputsSequence() {
+		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -437,8 +437,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedVariable_NameSequence() {
-		return (EReference)tracedVariableEClass.getEStructuralFeatures().get(2);
+	public EReference getTracedActivity_LocalsSequence() {
+		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -446,8 +446,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedForkNode() {
-		return tracedForkNodeEClass;
+	public EReference getTracedActivity_NodesSequence() {
+		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -455,8 +455,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedToken() {
-		return tracedTokenEClass;
+	public EReference getTracedActivity_TraceSequence() {
+		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -464,8 +464,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedToken_HolderSequence() {
-		return (EReference)tracedTokenEClass.getEStructuralFeatures().get(0);
+	public EClass getTracedActivityEdge() {
+		return tracedActivityEdgeEClass;
 	}
 
 	/**
@@ -473,8 +473,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedBooleanVariable() {
-		return tracedBooleanVariableEClass;
+	public EReference getTracedActivityEdge_OffersSequence() {
+		return (EReference)tracedActivityEdgeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -482,8 +482,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedIntegerExpression() {
-		return tracedIntegerExpressionEClass;
+	public EReference getTracedActivityEdge_SourceSequence() {
+		return (EReference)tracedActivityEdgeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -491,8 +491,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedIntegerExpression_Operand2Sequence() {
-		return (EReference)tracedIntegerExpressionEClass.getEStructuralFeatures().get(0);
+	public EReference getTracedActivityEdge_TargetSequence() {
+		return (EReference)tracedActivityEdgeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -500,8 +500,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedIntegerExpression_Operand1Sequence() {
-		return (EReference)tracedIntegerExpressionEClass.getEStructuralFeatures().get(1);
+	public EClass getTracedActivityFinalNode() {
+		return tracedActivityFinalNodeEClass;
 	}
 
 	/**
@@ -509,8 +509,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedInitialNode() {
-		return tracedInitialNodeEClass;
+	public EClass getTracedActivityNode() {
+		return tracedActivityNodeEClass;
 	}
 
 	/**
@@ -518,8 +518,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedTrace() {
-		return tracedTraceEClass;
+	public EReference getTracedActivityNode_ActivitySequence() {
+		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -527,8 +527,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedTrace_ExecutedNodesSequence() {
-		return (EReference)tracedTraceEClass.getEStructuralFeatures().get(0);
+	public EReference getTracedActivityNode_HeldTokensSequence() {
+		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -536,8 +536,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedControlFlow() {
-		return tracedControlFlowEClass;
+	public EReference getTracedActivityNode_IncomingSequence() {
+		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -545,8 +545,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedControlFlow_GuardSequence() {
-		return (EReference)tracedControlFlowEClass.getEStructuralFeatures().get(0);
+	public EReference getTracedActivityNode_OutgoingSequence() {
+		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -554,8 +554,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedMergeNode() {
-		return tracedMergeNodeEClass;
+	public EReference getTracedActivityNode_RunningSequence() {
+		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -563,8 +563,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedDecisionNode() {
-		return tracedDecisionNodeEClass;
+	public EClass getTracedBooleanBinaryExpression() {
+		return tracedBooleanBinaryExpressionEClass;
 	}
 
 	/**
@@ -572,8 +572,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedIntegerVariable() {
-		return tracedIntegerVariableEClass;
+	public EReference getTracedBooleanBinaryExpression_Operand1Sequence() {
+		return (EReference)tracedBooleanBinaryExpressionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -581,8 +581,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedControlNode() {
-		return tracedControlNodeEClass;
+	public EReference getTracedBooleanBinaryExpression_Operand2Sequence() {
+		return (EReference)tracedBooleanBinaryExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedBooleanBinaryExpression_OperatorSequence() {
+		return (EReference)tracedBooleanBinaryExpressionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -601,51 +610,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EReference getTracedBooleanExpression_AssigneeSequence() {
 		return (EReference)tracedBooleanExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTracedOpaqueAction() {
-		return tracedOpaqueActionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedOpaqueAction_ExpressionsSequence() {
-		return (EReference)tracedOpaqueActionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTracedInputValue() {
-		return tracedInputValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedInputValue_ValueSequence() {
-		return (EReference)tracedInputValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedInputValue_VariableSequence() {
-		return (EReference)tracedInputValueEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -680,60 +644,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedBooleanBinaryExpression() {
-		return tracedBooleanBinaryExpressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedBooleanBinaryExpression_Operand1Sequence() {
-		return (EReference)tracedBooleanBinaryExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedBooleanBinaryExpression_OperatorSequence() {
-		return (EReference)tracedBooleanBinaryExpressionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedBooleanBinaryExpression_Operand2Sequence() {
-		return (EReference)tracedBooleanBinaryExpressionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTracedNamedElement() {
-		return tracedNamedElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedNamedElement_NameSequence() {
-		return (EReference)tracedNamedElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTracedBooleanValue() {
 		return tracedBooleanValueEClass;
 	}
@@ -752,6 +662,60 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTracedBooleanVariable() {
+		return tracedBooleanVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedControlFlow() {
+		return tracedControlFlowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedControlFlow_GuardSequence() {
+		return (EReference)tracedControlFlowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedControlNode() {
+		return tracedControlNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedControlToken() {
+		return tracedControlTokenEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedDecisionNode() {
+		return tracedDecisionNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTracedExecutableNode() {
 		return tracedExecutableNodeEClass;
 	}
@@ -761,8 +725,26 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTracedExpression() {
+		return tracedExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTracedFinalNode() {
 		return tracedFinalNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedForkNode() {
+		return tracedForkNodeEClass;
 	}
 
 	/**
@@ -797,8 +779,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedControlToken() {
-		return tracedControlTokenEClass;
+	public EClass getTracedInitialNode() {
+		return tracedInitialNodeEClass;
 	}
 
 	/**
@@ -824,6 +806,60 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTracedInputValue() {
+		return tracedInputValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedInputValue_ValueSequence() {
+		return (EReference)tracedInputValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedInputValue_VariableSequence() {
+		return (EReference)tracedInputValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedIntegerCalculationExpression() {
+		return tracedIntegerCalculationExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedIntegerCalculationExpression_AssigneeSequence() {
+		return (EReference)tracedIntegerCalculationExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedIntegerCalculationExpression_OperatorSequence() {
+		return (EReference)tracedIntegerCalculationExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTracedIntegerComparisonExpression() {
 		return tracedIntegerComparisonExpressionEClass;
 	}
@@ -833,7 +869,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedIntegerComparisonExpression_OperatorSequence() {
+	public EReference getTracedIntegerComparisonExpression_AssigneeSequence() {
 		return (EReference)tracedIntegerComparisonExpressionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -842,7 +878,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedIntegerComparisonExpression_AssigneeSequence() {
+	public EReference getTracedIntegerComparisonExpression_OperatorSequence() {
 		return (EReference)tracedIntegerComparisonExpressionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -851,8 +887,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedActivity() {
-		return tracedActivityEClass;
+	public EClass getTracedIntegerExpression() {
+		return tracedIntegerExpressionEClass;
 	}
 
 	/**
@@ -860,8 +896,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedActivity_EdgesSequence() {
-		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(0);
+	public EReference getTracedIntegerExpression_Operand1Sequence() {
+		return (EReference)tracedIntegerExpressionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -869,98 +905,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedActivity_NodesSequence() {
-		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivity_TraceSequence() {
-		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivity_LocalsSequence() {
-		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivity_InputsSequence() {
-		return (EReference)tracedActivityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTracedActivityNode() {
-		return tracedActivityNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivityNode_HeldTokensSequence() {
-		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivityNode_IncomingSequence() {
-		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivityNode_RunningSequence() {
-		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivityNode_ActivitySequence() {
-		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedActivityNode_OutgoingSequence() {
-		return (EReference)tracedActivityNodeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTracedValue() {
-		return tracedValueEClass;
+	public EReference getTracedIntegerExpression_Operand2Sequence() {
+		return (EReference)tracedIntegerExpressionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -986,6 +932,51 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTracedIntegerVariable() {
+		return tracedIntegerVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedJoinNode() {
+		return tracedJoinNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedMergeNode() {
+		return tracedMergeNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTracedNamedElement() {
+		return tracedNamedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedNamedElement_NameSequence() {
+		return (EReference)tracedNamedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTracedOffer() {
 		return tracedOfferEClass;
 	}
@@ -1004,8 +995,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedActivityEdge() {
-		return tracedActivityEdgeEClass;
+	public EClass getTracedOpaqueAction() {
+		return tracedOpaqueActionEClass;
 	}
 
 	/**
@@ -1013,8 +1004,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedActivityEdge_SourceSequence() {
-		return (EReference)tracedActivityEdgeEClass.getEStructuralFeatures().get(0);
+	public EReference getTracedOpaqueAction_ExpressionsSequence() {
+		return (EReference)tracedOpaqueActionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1022,8 +1013,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedActivityEdge_TargetSequence() {
-		return (EReference)tracedActivityEdgeEClass.getEStructuralFeatures().get(1);
+	public EClass getTracedToken() {
+		return tracedTokenEClass;
 	}
 
 	/**
@@ -1031,8 +1022,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedActivityEdge_OffersSequence() {
-		return (EReference)tracedActivityEdgeEClass.getEStructuralFeatures().get(2);
+	public EReference getTracedToken_HolderSequence() {
+		return (EReference)tracedTokenEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1040,8 +1031,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedExpression() {
-		return tracedExpressionEClass;
+	public EClass getTracedTrace() {
+		return tracedTraceEClass;
 	}
 
 	/**
@@ -1049,8 +1040,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedIntegerCalculationExpression() {
-		return tracedIntegerCalculationExpressionEClass;
+	public EReference getTracedTrace_ExecutedNodesSequence() {
+		return (EReference)tracedTraceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1058,8 +1049,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedIntegerCalculationExpression_OperatorSequence() {
-		return (EReference)tracedIntegerCalculationExpressionEClass.getEStructuralFeatures().get(0);
+	public EClass getTracedValue() {
+		return tracedValueEClass;
 	}
 
 	/**
@@ -1067,8 +1058,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedIntegerCalculationExpression_AssigneeSequence() {
-		return (EReference)tracedIntegerCalculationExpressionEClass.getEStructuralFeatures().get(1);
+	public EClass getTracedVariable() {
+		return tracedVariableEClass;
 	}
 
 	/**
@@ -1076,8 +1067,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedAction() {
-		return tracedActionEClass;
+	public EReference getTracedVariable_CurrentValueSequence() {
+		return (EReference)tracedVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1085,8 +1076,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTracedActivityFinalNode() {
-		return tracedActivityFinalNodeEClass;
+	public EReference getTracedVariable_InitialValueSequence() {
+		return (EReference)tracedVariableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTracedVariable_NameSequence() {
+		return (EReference)tracedVariableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1117,118 +1117,118 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		isCreated = true;
 
 		// Create classes and their features
-		tracedJoinNodeEClass = createEClass(TRACED_JOIN_NODE);
+		tracedActionEClass = createEClass(TRACED_ACTION);
 
-		tracedVariableEClass = createEClass(TRACED_VARIABLE);
-		createEReference(tracedVariableEClass, TRACED_VARIABLE__INITIAL_VALUE_SEQUENCE);
-		createEReference(tracedVariableEClass, TRACED_VARIABLE__CURRENT_VALUE_SEQUENCE);
-		createEReference(tracedVariableEClass, TRACED_VARIABLE__NAME_SEQUENCE);
+		tracedActivityEClass = createEClass(TRACED_ACTIVITY);
+		createEReference(tracedActivityEClass, TRACED_ACTIVITY__EDGES_SEQUENCE);
+		createEReference(tracedActivityEClass, TRACED_ACTIVITY__INPUTS_SEQUENCE);
+		createEReference(tracedActivityEClass, TRACED_ACTIVITY__LOCALS_SEQUENCE);
+		createEReference(tracedActivityEClass, TRACED_ACTIVITY__NODES_SEQUENCE);
+		createEReference(tracedActivityEClass, TRACED_ACTIVITY__TRACE_SEQUENCE);
 
-		tracedForkNodeEClass = createEClass(TRACED_FORK_NODE);
+		tracedActivityEdgeEClass = createEClass(TRACED_ACTIVITY_EDGE);
+		createEReference(tracedActivityEdgeEClass, TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE);
+		createEReference(tracedActivityEdgeEClass, TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE);
+		createEReference(tracedActivityEdgeEClass, TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE);
 
-		tracedTokenEClass = createEClass(TRACED_TOKEN);
-		createEReference(tracedTokenEClass, TRACED_TOKEN__HOLDER_SEQUENCE);
+		tracedActivityFinalNodeEClass = createEClass(TRACED_ACTIVITY_FINAL_NODE);
 
-		tracedBooleanVariableEClass = createEClass(TRACED_BOOLEAN_VARIABLE);
+		tracedActivityNodeEClass = createEClass(TRACED_ACTIVITY_NODE);
+		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE);
+		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE);
+		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE);
+		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE);
+		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE);
 
-		tracedIntegerExpressionEClass = createEClass(TRACED_INTEGER_EXPRESSION);
-		createEReference(tracedIntegerExpressionEClass, TRACED_INTEGER_EXPRESSION__OPERAND2_SEQUENCE);
-		createEReference(tracedIntegerExpressionEClass, TRACED_INTEGER_EXPRESSION__OPERAND1_SEQUENCE);
-
-		tracedInitialNodeEClass = createEClass(TRACED_INITIAL_NODE);
-
-		tracedTraceEClass = createEClass(TRACED_TRACE);
-		createEReference(tracedTraceEClass, TRACED_TRACE__EXECUTED_NODES_SEQUENCE);
-
-		tracedControlFlowEClass = createEClass(TRACED_CONTROL_FLOW);
-		createEReference(tracedControlFlowEClass, TRACED_CONTROL_FLOW__GUARD_SEQUENCE);
-
-		tracedMergeNodeEClass = createEClass(TRACED_MERGE_NODE);
-
-		tracedDecisionNodeEClass = createEClass(TRACED_DECISION_NODE);
-
-		tracedIntegerVariableEClass = createEClass(TRACED_INTEGER_VARIABLE);
-
-		tracedControlNodeEClass = createEClass(TRACED_CONTROL_NODE);
+		tracedBooleanBinaryExpressionEClass = createEClass(TRACED_BOOLEAN_BINARY_EXPRESSION);
+		createEReference(tracedBooleanBinaryExpressionEClass, TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE);
+		createEReference(tracedBooleanBinaryExpressionEClass, TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE);
+		createEReference(tracedBooleanBinaryExpressionEClass, TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE);
 
 		tracedBooleanExpressionEClass = createEClass(TRACED_BOOLEAN_EXPRESSION);
 		createEReference(tracedBooleanExpressionEClass, TRACED_BOOLEAN_EXPRESSION__ASSIGNEE_SEQUENCE);
-
-		tracedOpaqueActionEClass = createEClass(TRACED_OPAQUE_ACTION);
-		createEReference(tracedOpaqueActionEClass, TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE);
-
-		tracedInputValueEClass = createEClass(TRACED_INPUT_VALUE);
-		createEReference(tracedInputValueEClass, TRACED_INPUT_VALUE__VALUE_SEQUENCE);
-		createEReference(tracedInputValueEClass, TRACED_INPUT_VALUE__VARIABLE_SEQUENCE);
 
 		tracedBooleanUnaryExpressionEClass = createEClass(TRACED_BOOLEAN_UNARY_EXPRESSION);
 		createEReference(tracedBooleanUnaryExpressionEClass, TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE);
 		createEReference(tracedBooleanUnaryExpressionEClass, TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE);
 
-		tracedBooleanBinaryExpressionEClass = createEClass(TRACED_BOOLEAN_BINARY_EXPRESSION);
-		createEReference(tracedBooleanBinaryExpressionEClass, TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND1_SEQUENCE);
-		createEReference(tracedBooleanBinaryExpressionEClass, TRACED_BOOLEAN_BINARY_EXPRESSION__OPERATOR_SEQUENCE);
-		createEReference(tracedBooleanBinaryExpressionEClass, TRACED_BOOLEAN_BINARY_EXPRESSION__OPERAND2_SEQUENCE);
-
-		tracedNamedElementEClass = createEClass(TRACED_NAMED_ELEMENT);
-		createEReference(tracedNamedElementEClass, TRACED_NAMED_ELEMENT__NAME_SEQUENCE);
-
 		tracedBooleanValueEClass = createEClass(TRACED_BOOLEAN_VALUE);
 		createEReference(tracedBooleanValueEClass, TRACED_BOOLEAN_VALUE__VALUE_SEQUENCE);
 
+		tracedBooleanVariableEClass = createEClass(TRACED_BOOLEAN_VARIABLE);
+
+		tracedControlFlowEClass = createEClass(TRACED_CONTROL_FLOW);
+		createEReference(tracedControlFlowEClass, TRACED_CONTROL_FLOW__GUARD_SEQUENCE);
+
+		tracedControlNodeEClass = createEClass(TRACED_CONTROL_NODE);
+
+		tracedControlTokenEClass = createEClass(TRACED_CONTROL_TOKEN);
+
+		tracedDecisionNodeEClass = createEClass(TRACED_DECISION_NODE);
+
 		tracedExecutableNodeEClass = createEClass(TRACED_EXECUTABLE_NODE);
 
+		tracedExpressionEClass = createEClass(TRACED_EXPRESSION);
+
 		tracedFinalNodeEClass = createEClass(TRACED_FINAL_NODE);
+
+		tracedForkNodeEClass = createEClass(TRACED_FORK_NODE);
 
 		tracedForkedTokenEClass = createEClass(TRACED_FORKED_TOKEN);
 		createEReference(tracedForkedTokenEClass, TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE);
 		createEReference(tracedForkedTokenEClass, TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE);
 
-		tracedControlTokenEClass = createEClass(TRACED_CONTROL_TOKEN);
+		tracedInitialNodeEClass = createEClass(TRACED_INITIAL_NODE);
 
 		tracedInputEClass = createEClass(TRACED_INPUT);
 		createEReference(tracedInputEClass, TRACED_INPUT__INPUT_VALUES_SEQUENCE);
 
+		tracedInputValueEClass = createEClass(TRACED_INPUT_VALUE);
+		createEReference(tracedInputValueEClass, TRACED_INPUT_VALUE__VALUE_SEQUENCE);
+		createEReference(tracedInputValueEClass, TRACED_INPUT_VALUE__VARIABLE_SEQUENCE);
+
+		tracedIntegerCalculationExpressionEClass = createEClass(TRACED_INTEGER_CALCULATION_EXPRESSION);
+		createEReference(tracedIntegerCalculationExpressionEClass, TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE);
+		createEReference(tracedIntegerCalculationExpressionEClass, TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE);
+
 		tracedIntegerComparisonExpressionEClass = createEClass(TRACED_INTEGER_COMPARISON_EXPRESSION);
-		createEReference(tracedIntegerComparisonExpressionEClass, TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE);
 		createEReference(tracedIntegerComparisonExpressionEClass, TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE);
+		createEReference(tracedIntegerComparisonExpressionEClass, TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE);
 
-		tracedActivityEClass = createEClass(TRACED_ACTIVITY);
-		createEReference(tracedActivityEClass, TRACED_ACTIVITY__EDGES_SEQUENCE);
-		createEReference(tracedActivityEClass, TRACED_ACTIVITY__NODES_SEQUENCE);
-		createEReference(tracedActivityEClass, TRACED_ACTIVITY__TRACE_SEQUENCE);
-		createEReference(tracedActivityEClass, TRACED_ACTIVITY__LOCALS_SEQUENCE);
-		createEReference(tracedActivityEClass, TRACED_ACTIVITY__INPUTS_SEQUENCE);
-
-		tracedActivityNodeEClass = createEClass(TRACED_ACTIVITY_NODE);
-		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE);
-		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE);
-		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE);
-		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE);
-		createEReference(tracedActivityNodeEClass, TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE);
-
-		tracedValueEClass = createEClass(TRACED_VALUE);
+		tracedIntegerExpressionEClass = createEClass(TRACED_INTEGER_EXPRESSION);
+		createEReference(tracedIntegerExpressionEClass, TRACED_INTEGER_EXPRESSION__OPERAND1_SEQUENCE);
+		createEReference(tracedIntegerExpressionEClass, TRACED_INTEGER_EXPRESSION__OPERAND2_SEQUENCE);
 
 		tracedIntegerValueEClass = createEClass(TRACED_INTEGER_VALUE);
 		createEReference(tracedIntegerValueEClass, TRACED_INTEGER_VALUE__VALUE_SEQUENCE);
 
+		tracedIntegerVariableEClass = createEClass(TRACED_INTEGER_VARIABLE);
+
+		tracedJoinNodeEClass = createEClass(TRACED_JOIN_NODE);
+
+		tracedMergeNodeEClass = createEClass(TRACED_MERGE_NODE);
+
+		tracedNamedElementEClass = createEClass(TRACED_NAMED_ELEMENT);
+		createEReference(tracedNamedElementEClass, TRACED_NAMED_ELEMENT__NAME_SEQUENCE);
+
 		tracedOfferEClass = createEClass(TRACED_OFFER);
 		createEReference(tracedOfferEClass, TRACED_OFFER__OFFERED_TOKENS_SEQUENCE);
 
-		tracedActivityEdgeEClass = createEClass(TRACED_ACTIVITY_EDGE);
-		createEReference(tracedActivityEdgeEClass, TRACED_ACTIVITY_EDGE__SOURCE_SEQUENCE);
-		createEReference(tracedActivityEdgeEClass, TRACED_ACTIVITY_EDGE__TARGET_SEQUENCE);
-		createEReference(tracedActivityEdgeEClass, TRACED_ACTIVITY_EDGE__OFFERS_SEQUENCE);
+		tracedOpaqueActionEClass = createEClass(TRACED_OPAQUE_ACTION);
+		createEReference(tracedOpaqueActionEClass, TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE);
 
-		tracedExpressionEClass = createEClass(TRACED_EXPRESSION);
+		tracedTokenEClass = createEClass(TRACED_TOKEN);
+		createEReference(tracedTokenEClass, TRACED_TOKEN__HOLDER_SEQUENCE);
 
-		tracedIntegerCalculationExpressionEClass = createEClass(TRACED_INTEGER_CALCULATION_EXPRESSION);
-		createEReference(tracedIntegerCalculationExpressionEClass, TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE);
-		createEReference(tracedIntegerCalculationExpressionEClass, TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE);
+		tracedTraceEClass = createEClass(TRACED_TRACE);
+		createEReference(tracedTraceEClass, TRACED_TRACE__EXECUTED_NODES_SEQUENCE);
 
-		tracedActionEClass = createEClass(TRACED_ACTION);
+		tracedValueEClass = createEClass(TRACED_VALUE);
 
-		tracedActivityFinalNodeEClass = createEClass(TRACED_ACTIVITY_FINAL_NODE);
+		tracedVariableEClass = createEClass(TRACED_VARIABLE);
+		createEReference(tracedVariableEClass, TRACED_VARIABLE__CURRENT_VALUE_SEQUENCE);
+		createEReference(tracedVariableEClass, TRACED_VARIABLE__INITIAL_VALUE_SEQUENCE);
+		createEReference(tracedVariableEClass, TRACED_VARIABLE__NAME_SEQUENCE);
 	}
 
 	/**
@@ -1262,147 +1262,147 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		tracedJoinNodeEClass.getESuperTypes().add(this.getTracedControlNode());
-		tracedForkNodeEClass.getESuperTypes().add(this.getTracedControlNode());
-		tracedBooleanVariableEClass.getESuperTypes().add(this.getTracedVariable());
-		tracedIntegerExpressionEClass.getESuperTypes().add(this.getTracedExpression());
-		tracedInitialNodeEClass.getESuperTypes().add(this.getTracedControlNode());
-		tracedControlFlowEClass.getESuperTypes().add(this.getTracedActivityEdge());
-		tracedMergeNodeEClass.getESuperTypes().add(this.getTracedControlNode());
-		tracedDecisionNodeEClass.getESuperTypes().add(this.getTracedControlNode());
-		tracedIntegerVariableEClass.getESuperTypes().add(this.getTracedVariable());
-		tracedControlNodeEClass.getESuperTypes().add(this.getTracedActivityNode());
-		tracedBooleanExpressionEClass.getESuperTypes().add(this.getTracedExpression());
-		tracedOpaqueActionEClass.getESuperTypes().add(this.getTracedAction());
-		tracedBooleanUnaryExpressionEClass.getESuperTypes().add(this.getTracedBooleanExpression());
+		tracedActionEClass.getESuperTypes().add(this.getTracedExecutableNode());
+		tracedActivityEClass.getESuperTypes().add(this.getTracedNamedElement());
+		tracedActivityEdgeEClass.getESuperTypes().add(this.getTracedNamedElement());
+		tracedActivityFinalNodeEClass.getESuperTypes().add(this.getTracedFinalNode());
+		tracedActivityNodeEClass.getESuperTypes().add(this.getTracedNamedElement());
 		tracedBooleanBinaryExpressionEClass.getESuperTypes().add(this.getTracedBooleanExpression());
+		tracedBooleanExpressionEClass.getESuperTypes().add(this.getTracedExpression());
+		tracedBooleanUnaryExpressionEClass.getESuperTypes().add(this.getTracedBooleanExpression());
 		tracedBooleanValueEClass.getESuperTypes().add(this.getTracedValue());
+		tracedBooleanVariableEClass.getESuperTypes().add(this.getTracedVariable());
+		tracedControlFlowEClass.getESuperTypes().add(this.getTracedActivityEdge());
+		tracedControlNodeEClass.getESuperTypes().add(this.getTracedActivityNode());
+		tracedControlTokenEClass.getESuperTypes().add(this.getTracedToken());
+		tracedDecisionNodeEClass.getESuperTypes().add(this.getTracedControlNode());
 		tracedExecutableNodeEClass.getESuperTypes().add(this.getTracedActivityNode());
 		tracedFinalNodeEClass.getESuperTypes().add(this.getTracedControlNode());
+		tracedForkNodeEClass.getESuperTypes().add(this.getTracedControlNode());
 		tracedForkedTokenEClass.getESuperTypes().add(this.getTracedToken());
-		tracedControlTokenEClass.getESuperTypes().add(this.getTracedToken());
-		tracedIntegerComparisonExpressionEClass.getESuperTypes().add(this.getTracedIntegerExpression());
-		tracedActivityEClass.getESuperTypes().add(this.getTracedNamedElement());
-		tracedActivityNodeEClass.getESuperTypes().add(this.getTracedNamedElement());
-		tracedIntegerValueEClass.getESuperTypes().add(this.getTracedValue());
-		tracedActivityEdgeEClass.getESuperTypes().add(this.getTracedNamedElement());
+		tracedInitialNodeEClass.getESuperTypes().add(this.getTracedControlNode());
 		tracedIntegerCalculationExpressionEClass.getESuperTypes().add(this.getTracedIntegerExpression());
-		tracedActionEClass.getESuperTypes().add(this.getTracedExecutableNode());
-		tracedActivityFinalNodeEClass.getESuperTypes().add(this.getTracedFinalNode());
+		tracedIntegerComparisonExpressionEClass.getESuperTypes().add(this.getTracedIntegerExpression());
+		tracedIntegerExpressionEClass.getESuperTypes().add(this.getTracedExpression());
+		tracedIntegerValueEClass.getESuperTypes().add(this.getTracedValue());
+		tracedIntegerVariableEClass.getESuperTypes().add(this.getTracedVariable());
+		tracedJoinNodeEClass.getESuperTypes().add(this.getTracedControlNode());
+		tracedMergeNodeEClass.getESuperTypes().add(this.getTracedControlNode());
+		tracedOpaqueActionEClass.getESuperTypes().add(this.getTracedAction());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(tracedJoinNodeEClass, TracedJoinNode.class, "TracedJoinNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedActionEClass, TracedAction.class, "TracedAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(tracedVariableEClass, TracedVariable.class, "TracedVariable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedVariable_InitialValueSequence(), theStatesPackage.getVariable_initialValue_Value(), theStatesPackage.getVariable_initialValue_Value_Parent(), "initialValueSequence", null, 0, -1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedVariable_CurrentValueSequence(), theStatesPackage.getVariable_currentValue_Value(), theStatesPackage.getVariable_currentValue_Value_Parent(), "currentValueSequence", null, 0, -1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedVariable_NameSequence(), theStatesPackage.getVariable_name_Value(), theStatesPackage.getVariable_name_Value_Parent(), "nameSequence", null, 0, -1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tracedActivityEClass, TracedActivity.class, "TracedActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedActivity_EdgesSequence(), theStatesPackage.getActivity_edges_Value(), theStatesPackage.getActivity_edges_Value_Parent(), "edgesSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivity_InputsSequence(), theStatesPackage.getActivity_inputs_Value(), theStatesPackage.getActivity_inputs_Value_Parent(), "inputsSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivity_LocalsSequence(), theStatesPackage.getActivity_locals_Value(), theStatesPackage.getActivity_locals_Value_Parent(), "localsSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivity_NodesSequence(), theStatesPackage.getActivity_nodes_Value(), theStatesPackage.getActivity_nodes_Value_Parent(), "nodesSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivity_TraceSequence(), theStatesPackage.getActivity_trace_Value(), theStatesPackage.getActivity_trace_Value_Parent(), "traceSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedForkNodeEClass, TracedForkNode.class, "TracedForkNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedActivityEdgeEClass, TracedActivityEdge.class, "TracedActivityEdge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedActivityEdge_OffersSequence(), theStatesPackage.getActivityEdge_offers_Value(), theStatesPackage.getActivityEdge_offers_Value_Parent(), "offersSequence", null, 0, -1, TracedActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivityEdge_SourceSequence(), theStatesPackage.getActivityEdge_source_Value(), theStatesPackage.getActivityEdge_source_Value_Parent(), "sourceSequence", null, 0, -1, TracedActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivityEdge_TargetSequence(), theStatesPackage.getActivityEdge_target_Value(), theStatesPackage.getActivityEdge_target_Value_Parent(), "targetSequence", null, 0, -1, TracedActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedTokenEClass, TracedToken.class, "TracedToken", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedToken_HolderSequence(), theStatesPackage.getToken_holder_Value(), theStatesPackage.getToken_holder_Value_Parent(), "holderSequence", null, 0, -1, TracedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tracedActivityFinalNodeEClass, TracedActivityFinalNode.class, "TracedActivityFinalNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(tracedBooleanVariableEClass, TracedBooleanVariable.class, "TracedBooleanVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedActivityNodeEClass, TracedActivityNode.class, "TracedActivityNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedActivityNode_ActivitySequence(), theStatesPackage.getActivityNode_activity_Value(), theStatesPackage.getActivityNode_activity_Value_Parent(), "activitySequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivityNode_HeldTokensSequence(), theStatesPackage.getActivityNode_heldTokens_Value(), theStatesPackage.getActivityNode_heldTokens_Value_Parent(), "heldTokensSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivityNode_IncomingSequence(), theStatesPackage.getActivityNode_incoming_Value(), theStatesPackage.getActivityNode_incoming_Value_Parent(), "incomingSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivityNode_OutgoingSequence(), theStatesPackage.getActivityNode_outgoing_Value(), theStatesPackage.getActivityNode_outgoing_Value_Parent(), "outgoingSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedActivityNode_RunningSequence(), theStatesPackage.getActivityNode_running_Value(), theStatesPackage.getActivityNode_running_Value_Parent(), "runningSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedIntegerExpressionEClass, TracedIntegerExpression.class, "TracedIntegerExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedIntegerExpression_Operand2Sequence(), theStatesPackage.getIntegerExpression_operand2_Value(), theStatesPackage.getIntegerExpression_operand2_Value_Parent(), "operand2Sequence", null, 0, -1, TracedIntegerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedIntegerExpression_Operand1Sequence(), theStatesPackage.getIntegerExpression_operand1_Value(), theStatesPackage.getIntegerExpression_operand1_Value_Parent(), "operand1Sequence", null, 0, -1, TracedIntegerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedInitialNodeEClass, TracedInitialNode.class, "TracedInitialNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tracedTraceEClass, TracedTrace.class, "TracedTrace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedTrace_ExecutedNodesSequence(), theStatesPackage.getTrace_executedNodes_Value(), theStatesPackage.getTrace_executedNodes_Value_Parent(), "executedNodesSequence", null, 0, -1, TracedTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedControlFlowEClass, TracedControlFlow.class, "TracedControlFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedControlFlow_GuardSequence(), theStatesPackage.getControlFlow_guard_Value(), theStatesPackage.getControlFlow_guard_Value_Parent(), "guardSequence", null, 0, -1, TracedControlFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedMergeNodeEClass, TracedMergeNode.class, "TracedMergeNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tracedDecisionNodeEClass, TracedDecisionNode.class, "TracedDecisionNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tracedIntegerVariableEClass, TracedIntegerVariable.class, "TracedIntegerVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tracedControlNodeEClass, TracedControlNode.class, "TracedControlNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedBooleanBinaryExpressionEClass, TracedBooleanBinaryExpression.class, "TracedBooleanBinaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedBooleanBinaryExpression_Operand1Sequence(), theStatesPackage.getBooleanBinaryExpression_operand1_Value(), theStatesPackage.getBooleanBinaryExpression_operand1_Value_Parent(), "operand1Sequence", null, 0, -1, TracedBooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedBooleanBinaryExpression_Operand2Sequence(), theStatesPackage.getBooleanBinaryExpression_operand2_Value(), theStatesPackage.getBooleanBinaryExpression_operand2_Value_Parent(), "operand2Sequence", null, 0, -1, TracedBooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedBooleanBinaryExpression_OperatorSequence(), theStatesPackage.getBooleanBinaryExpression_operator_Value(), theStatesPackage.getBooleanBinaryExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedBooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tracedBooleanExpressionEClass, TracedBooleanExpression.class, "TracedBooleanExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedBooleanExpression_AssigneeSequence(), theStatesPackage.getBooleanExpression_assignee_Value(), theStatesPackage.getBooleanExpression_assignee_Value_Parent(), "assigneeSequence", null, 0, -1, TracedBooleanExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedOpaqueActionEClass, TracedOpaqueAction.class, "TracedOpaqueAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedOpaqueAction_ExpressionsSequence(), theStatesPackage.getOpaqueAction_expressions_Value(), theStatesPackage.getOpaqueAction_expressions_Value_Parent(), "expressionsSequence", null, 0, -1, TracedOpaqueAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedInputValueEClass, TracedInputValue.class, "TracedInputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedInputValue_ValueSequence(), theStatesPackage.getInputValue_value_Value(), theStatesPackage.getInputValue_value_Value_Parent(), "valueSequence", null, 0, -1, TracedInputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedInputValue_VariableSequence(), theStatesPackage.getInputValue_variable_Value(), theStatesPackage.getInputValue_variable_Value_Parent(), "variableSequence", null, 0, -1, TracedInputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tracedBooleanUnaryExpressionEClass, TracedBooleanUnaryExpression.class, "TracedBooleanUnaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedBooleanUnaryExpression_OperandSequence(), theStatesPackage.getBooleanUnaryExpression_operand_Value(), theStatesPackage.getBooleanUnaryExpression_operand_Value_Parent(), "operandSequence", null, 0, -1, TracedBooleanUnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTracedBooleanUnaryExpression_OperatorSequence(), theStatesPackage.getBooleanUnaryExpression_operator_Value(), theStatesPackage.getBooleanUnaryExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedBooleanUnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedBooleanBinaryExpressionEClass, TracedBooleanBinaryExpression.class, "TracedBooleanBinaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedBooleanBinaryExpression_Operand1Sequence(), theStatesPackage.getBooleanBinaryExpression_operand1_Value(), theStatesPackage.getBooleanBinaryExpression_operand1_Value_Parent(), "operand1Sequence", null, 0, -1, TracedBooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedBooleanBinaryExpression_OperatorSequence(), theStatesPackage.getBooleanBinaryExpression_operator_Value(), theStatesPackage.getBooleanBinaryExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedBooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedBooleanBinaryExpression_Operand2Sequence(), theStatesPackage.getBooleanBinaryExpression_operand2_Value(), theStatesPackage.getBooleanBinaryExpression_operand2_Value_Parent(), "operand2Sequence", null, 0, -1, TracedBooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedNamedElementEClass, TracedNamedElement.class, "TracedNamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedNamedElement_NameSequence(), theStatesPackage.getNamedElement_name_Value(), theStatesPackage.getNamedElement_name_Value_Parent(), "nameSequence", null, 0, -1, TracedNamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(tracedBooleanValueEClass, TracedBooleanValue.class, "TracedBooleanValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedBooleanValue_ValueSequence(), theStatesPackage.getBooleanValue_value_Value(), theStatesPackage.getBooleanValue_value_Value_Parent(), "valueSequence", null, 0, -1, TracedBooleanValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(tracedBooleanVariableEClass, TracedBooleanVariable.class, "TracedBooleanVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedControlFlowEClass, TracedControlFlow.class, "TracedControlFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedControlFlow_GuardSequence(), theStatesPackage.getControlFlow_guard_Value(), theStatesPackage.getControlFlow_guard_Value_Parent(), "guardSequence", null, 0, -1, TracedControlFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tracedControlNodeEClass, TracedControlNode.class, "TracedControlNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedControlTokenEClass, TracedControlToken.class, "TracedControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedDecisionNodeEClass, TracedDecisionNode.class, "TracedDecisionNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(tracedExecutableNodeEClass, TracedExecutableNode.class, "TracedExecutableNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(tracedExpressionEClass, TracedExpression.class, "TracedExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(tracedFinalNodeEClass, TracedFinalNode.class, "TracedFinalNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedForkNodeEClass, TracedForkNode.class, "TracedForkNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tracedForkedTokenEClass, TracedForkedToken.class, "TracedForkedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedForkedToken_BaseTokenSequence(), theStatesPackage.getForkedToken_baseToken_Value(), theStatesPackage.getForkedToken_baseToken_Value_Parent(), "baseTokenSequence", null, 0, -1, TracedForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTracedForkedToken_RemainingOffersCountSequence(), theStatesPackage.getForkedToken_remainingOffersCount_Value(), theStatesPackage.getForkedToken_remainingOffersCount_Value_Parent(), "remainingOffersCountSequence", null, 0, -1, TracedForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedControlTokenEClass, TracedControlToken.class, "TracedControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedInitialNodeEClass, TracedInitialNode.class, "TracedInitialNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tracedInputEClass, TracedInput.class, "TracedInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedInput_InputValuesSequence(), theStatesPackage.getInput_inputValues_Value(), theStatesPackage.getInput_inputValues_Value_Parent(), "inputValuesSequence", null, 0, -1, TracedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(tracedInputValueEClass, TracedInputValue.class, "TracedInputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedInputValue_ValueSequence(), theStatesPackage.getInputValue_value_Value(), theStatesPackage.getInputValue_value_Value_Parent(), "valueSequence", null, 0, -1, TracedInputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedInputValue_VariableSequence(), theStatesPackage.getInputValue_variable_Value(), theStatesPackage.getInputValue_variable_Value_Parent(), "variableSequence", null, 0, -1, TracedInputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tracedIntegerCalculationExpressionEClass, TracedIntegerCalculationExpression.class, "TracedIntegerCalculationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedIntegerCalculationExpression_AssigneeSequence(), theStatesPackage.getIntegerCalculationExpression_assignee_Value(), theStatesPackage.getIntegerCalculationExpression_assignee_Value_Parent(), "assigneeSequence", null, 0, -1, TracedIntegerCalculationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedIntegerCalculationExpression_OperatorSequence(), theStatesPackage.getIntegerCalculationExpression_operator_Value(), theStatesPackage.getIntegerCalculationExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedIntegerCalculationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(tracedIntegerComparisonExpressionEClass, TracedIntegerComparisonExpression.class, "TracedIntegerComparisonExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedIntegerComparisonExpression_OperatorSequence(), theStatesPackage.getIntegerComparisonExpression_operator_Value(), theStatesPackage.getIntegerComparisonExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedIntegerComparisonExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTracedIntegerComparisonExpression_AssigneeSequence(), theStatesPackage.getIntegerComparisonExpression_assignee_Value(), theStatesPackage.getIntegerComparisonExpression_assignee_Value_Parent(), "assigneeSequence", null, 0, -1, TracedIntegerComparisonExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedIntegerComparisonExpression_OperatorSequence(), theStatesPackage.getIntegerComparisonExpression_operator_Value(), theStatesPackage.getIntegerComparisonExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedIntegerComparisonExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedActivityEClass, TracedActivity.class, "TracedActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedActivity_EdgesSequence(), theStatesPackage.getActivity_edges_Value(), theStatesPackage.getActivity_edges_Value_Parent(), "edgesSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivity_NodesSequence(), theStatesPackage.getActivity_nodes_Value(), theStatesPackage.getActivity_nodes_Value_Parent(), "nodesSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivity_TraceSequence(), theStatesPackage.getActivity_trace_Value(), theStatesPackage.getActivity_trace_Value_Parent(), "traceSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivity_LocalsSequence(), theStatesPackage.getActivity_locals_Value(), theStatesPackage.getActivity_locals_Value_Parent(), "localsSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivity_InputsSequence(), theStatesPackage.getActivity_inputs_Value(), theStatesPackage.getActivity_inputs_Value_Parent(), "inputsSequence", null, 0, -1, TracedActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedActivityNodeEClass, TracedActivityNode.class, "TracedActivityNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedActivityNode_HeldTokensSequence(), theStatesPackage.getActivityNode_heldTokens_Value(), theStatesPackage.getActivityNode_heldTokens_Value_Parent(), "heldTokensSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivityNode_IncomingSequence(), theStatesPackage.getActivityNode_incoming_Value(), theStatesPackage.getActivityNode_incoming_Value_Parent(), "incomingSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivityNode_RunningSequence(), theStatesPackage.getActivityNode_running_Value(), theStatesPackage.getActivityNode_running_Value_Parent(), "runningSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivityNode_ActivitySequence(), theStatesPackage.getActivityNode_activity_Value(), theStatesPackage.getActivityNode_activity_Value_Parent(), "activitySequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivityNode_OutgoingSequence(), theStatesPackage.getActivityNode_outgoing_Value(), theStatesPackage.getActivityNode_outgoing_Value_Parent(), "outgoingSequence", null, 0, -1, TracedActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tracedValueEClass, TracedValue.class, "TracedValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedIntegerExpressionEClass, TracedIntegerExpression.class, "TracedIntegerExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedIntegerExpression_Operand1Sequence(), theStatesPackage.getIntegerExpression_operand1_Value(), theStatesPackage.getIntegerExpression_operand1_Value_Parent(), "operand1Sequence", null, 0, -1, TracedIntegerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedIntegerExpression_Operand2Sequence(), theStatesPackage.getIntegerExpression_operand2_Value(), theStatesPackage.getIntegerExpression_operand2_Value_Parent(), "operand2Sequence", null, 0, -1, TracedIntegerExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tracedIntegerValueEClass, TracedIntegerValue.class, "TracedIntegerValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedIntegerValue_ValueSequence(), theStatesPackage.getIntegerValue_value_Value(), theStatesPackage.getIntegerValue_value_Value_Parent(), "valueSequence", null, 0, -1, TracedIntegerValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(tracedIntegerVariableEClass, TracedIntegerVariable.class, "TracedIntegerVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedJoinNodeEClass, TracedJoinNode.class, "TracedJoinNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedMergeNodeEClass, TracedMergeNode.class, "TracedMergeNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tracedNamedElementEClass, TracedNamedElement.class, "TracedNamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedNamedElement_NameSequence(), theStatesPackage.getNamedElement_name_Value(), theStatesPackage.getNamedElement_name_Value_Parent(), "nameSequence", null, 0, -1, TracedNamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(tracedOfferEClass, TracedOffer.class, "TracedOffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedOffer_OfferedTokensSequence(), theStatesPackage.getOffer_offeredTokens_Value(), theStatesPackage.getOffer_offeredTokens_Value_Parent(), "offeredTokensSequence", null, 0, -1, TracedOffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedActivityEdgeEClass, TracedActivityEdge.class, "TracedActivityEdge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedActivityEdge_SourceSequence(), theStatesPackage.getActivityEdge_source_Value(), theStatesPackage.getActivityEdge_source_Value_Parent(), "sourceSequence", null, 0, -1, TracedActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivityEdge_TargetSequence(), theStatesPackage.getActivityEdge_target_Value(), theStatesPackage.getActivityEdge_target_Value_Parent(), "targetSequence", null, 0, -1, TracedActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedActivityEdge_OffersSequence(), theStatesPackage.getActivityEdge_offers_Value(), theStatesPackage.getActivityEdge_offers_Value_Parent(), "offersSequence", null, 0, -1, TracedActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tracedOpaqueActionEClass, TracedOpaqueAction.class, "TracedOpaqueAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedOpaqueAction_ExpressionsSequence(), theStatesPackage.getOpaqueAction_expressions_Value(), theStatesPackage.getOpaqueAction_expressions_Value_Parent(), "expressionsSequence", null, 0, -1, TracedOpaqueAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedExpressionEClass, TracedExpression.class, "TracedExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedTokenEClass, TracedToken.class, "TracedToken", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedToken_HolderSequence(), theStatesPackage.getToken_holder_Value(), theStatesPackage.getToken_holder_Value_Parent(), "holderSequence", null, 0, -1, TracedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedIntegerCalculationExpressionEClass, TracedIntegerCalculationExpression.class, "TracedIntegerCalculationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedIntegerCalculationExpression_OperatorSequence(), theStatesPackage.getIntegerCalculationExpression_operator_Value(), theStatesPackage.getIntegerCalculationExpression_operator_Value_Parent(), "operatorSequence", null, 0, -1, TracedIntegerCalculationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedIntegerCalculationExpression_AssigneeSequence(), theStatesPackage.getIntegerCalculationExpression_assignee_Value(), theStatesPackage.getIntegerCalculationExpression_assignee_Value_Parent(), "assigneeSequence", null, 0, -1, TracedIntegerCalculationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tracedTraceEClass, TracedTrace.class, "TracedTrace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedTrace_ExecutedNodesSequence(), theStatesPackage.getTrace_executedNodes_Value(), theStatesPackage.getTrace_executedNodes_Value_Parent(), "executedNodesSequence", null, 0, -1, TracedTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tracedActionEClass, TracedAction.class, "TracedAction", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedValueEClass, TracedValue.class, "TracedValue", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(tracedActivityFinalNodeEClass, TracedActivityFinalNode.class, "TracedActivityFinalNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tracedVariableEClass, TracedVariable.class, "TracedVariable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTracedVariable_CurrentValueSequence(), theStatesPackage.getVariable_currentValue_Value(), theStatesPackage.getVariable_currentValue_Value_Parent(), "currentValueSequence", null, 0, -1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedVariable_InitialValueSequence(), theStatesPackage.getVariable_initialValue_Value(), theStatesPackage.getVariable_initialValue_Value_Parent(), "initialValueSequence", null, 0, -1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTracedVariable_NameSequence(), theStatesPackage.getVariable_name_Value(), theStatesPackage.getVariable_name_Value_Parent(), "nameSequence", null, 0, -1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ActivitydiagramPackageImpl

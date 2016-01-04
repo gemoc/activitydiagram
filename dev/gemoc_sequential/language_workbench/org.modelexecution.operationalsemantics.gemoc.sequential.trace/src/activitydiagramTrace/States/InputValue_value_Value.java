@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.InputValue_value_Value#getValue <em>Value</em>}</li>
  *   <li>{@link activitydiagramTrace.States.InputValue_value_Value#getParent <em>Parent</em>}</li>
  *   <li>{@link activitydiagramTrace.States.InputValue_value_Value#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.InputValue_value_Value#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,32 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface InputValue_value_Value extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Value</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' reference.
-	 * @see #setValue(TracedValue)
-	 * @see activitydiagramTrace.States.StatesPackage#getInputValue_value_Value_Value()
-	 * @model required="true"
-	 * @generated
-	 */
-	TracedValue getValue();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.InputValue_value_Value#getValue <em>Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' reference.
-	 * @see #getValue()
-	 * @generated
-	 */
-	void setValue(TracedValue value);
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getValueSequence <em>Value Sequence</em>}'.
@@ -99,5 +73,31 @@ public interface InputValue_value_Value extends EObject {
 	 * @generated
 	 */
 	EList<State> getStates();
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' reference.
+	 * @see #setValue(TracedValue)
+	 * @see activitydiagramTrace.States.StatesPackage#getInputValue_value_Value_Value()
+	 * @model required="true"
+	 * @generated
+	 */
+	TracedValue getValue();
+
+	/**
+	 * Sets the value of the '{@link activitydiagramTrace.States.InputValue_value_Value#getValue <em>Value</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' reference.
+	 * @see #getValue()
+	 * @generated
+	 */
+	void setValue(TracedValue value);
 
 } // InputValue_value_Value

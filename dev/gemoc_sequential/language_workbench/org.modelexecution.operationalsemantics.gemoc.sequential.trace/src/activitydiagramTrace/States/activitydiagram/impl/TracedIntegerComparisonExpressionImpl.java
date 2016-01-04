@@ -28,24 +28,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerComparisonExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerComparisonExpressionImpl#getAssigneeSequence <em>Assignee Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerComparisonExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressionImpl implements TracedIntegerComparisonExpression {
-	/**
-	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperatorSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IntegerComparisonExpression_operator_Value> operatorSequence;
-
 	/**
 	 * The cached value of the '{@link #getAssigneeSequence() <em>Assignee Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,6 +45,16 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	 * @ordered
 	 */
 	protected EList<IntegerComparisonExpression_assignee_Value> assigneeSequence;
+
+	/**
+	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperatorSequence()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IntegerComparisonExpression_operator_Value> operatorSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,18 +80,6 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IntegerComparisonExpression_operator_Value> getOperatorSequence() {
-		if (operatorSequence == null) {
-			operatorSequence = new EObjectContainmentWithInverseEList<IntegerComparisonExpression_operator_Value>(IntegerComparisonExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.INTEGER_COMPARISON_EXPRESSION_OPERATOR_VALUE__PARENT);
-		}
-		return operatorSequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<IntegerComparisonExpression_assignee_Value> getAssigneeSequence() {
 		if (assigneeSequence == null) {
 			assigneeSequence = new EObjectContainmentWithInverseEList<IntegerComparisonExpression_assignee_Value>(IntegerComparisonExpression_assignee_Value.class, this, ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE, StatesPackage.INTEGER_COMPARISON_EXPRESSION_ASSIGNEE_VALUE__PARENT);
@@ -104,14 +92,26 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IntegerComparisonExpression_operator_Value> getOperatorSequence() {
+		if (operatorSequence == null) {
+			operatorSequence = new EObjectContainmentWithInverseEList<IntegerComparisonExpression_operator_Value>(IntegerComparisonExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.INTEGER_COMPARISON_EXPRESSION_OPERATOR_VALUE__PARENT);
+		}
+		return operatorSequence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAssigneeSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -124,10 +124,10 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
-				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE:
 				return ((InternalEList<?>)getAssigneeSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
+				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,10 +140,10 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
-				return getOperatorSequence();
 			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE:
 				return getAssigneeSequence();
+			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
+				return getOperatorSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,13 +157,13 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
-				getOperatorSequence().clear();
-				getOperatorSequence().addAll((Collection<? extends IntegerComparisonExpression_operator_Value>)newValue);
-				return;
 			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE:
 				getAssigneeSequence().clear();
 				getAssigneeSequence().addAll((Collection<? extends IntegerComparisonExpression_assignee_Value>)newValue);
+				return;
+			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
+				getOperatorSequence().clear();
+				getOperatorSequence().addAll((Collection<? extends IntegerComparisonExpression_operator_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +177,11 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
-				getOperatorSequence().clear();
-				return;
 			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE:
 				getAssigneeSequence().clear();
+				return;
+			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
+				getOperatorSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +195,10 @@ public class TracedIntegerComparisonExpressionImpl extends TracedIntegerExpressi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
-				return operatorSequence != null && !operatorSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__ASSIGNEE_SEQUENCE:
 				return assigneeSequence != null && !assigneeSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_INTEGER_COMPARISON_EXPRESSION__OPERATOR_SEQUENCE:
+				return operatorSequence != null && !operatorSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
