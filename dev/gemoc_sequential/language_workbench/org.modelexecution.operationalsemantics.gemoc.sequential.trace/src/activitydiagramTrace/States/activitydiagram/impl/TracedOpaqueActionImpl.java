@@ -2,24 +2,23 @@
  */
 package activitydiagramTrace.States.activitydiagram.impl;
 
-import activitydiagram.Expression;
-import activitydiagram.OpaqueAction;
+import activitydiagramTrace.States.OpaqueAction_expressions_Value;
+import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
 import activitydiagramTrace.States.activitydiagram.TracedOpaqueAction;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedOpaqueActionImpl#getExpressions <em>Expressions</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedOpaqueActionImpl#getOriginalObject <em>Original Object</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedOpaqueActionImpl#getExpressionsSequence <em>Expressions Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -37,24 +35,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOpaqueAction {
 	/**
-	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' reference list.
+	 * The cached value of the '{@link #getExpressionsSequence() <em>Expressions Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExpressions()
+	 * @see #getExpressionsSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Expression> expressions;
-
-	/**
-	 * The cached value of the '{@link #getOriginalObject() <em>Original Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOriginalObject()
-	 * @generated
-	 * @ordered
-	 */
-	protected OpaqueAction originalObject;
+	protected EList<OpaqueAction_expressions_Value> expressionsSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,11 +68,11 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Expression> getExpressions() {
-		if (expressions == null) {
-			expressions = new EObjectResolvingEList<Expression>(Expression.class, this, ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS);
+	public EList<OpaqueAction_expressions_Value> getExpressionsSequence() {
+		if (expressionsSequence == null) {
+			expressionsSequence = new EObjectContainmentWithInverseEList<OpaqueAction_expressions_Value>(OpaqueAction_expressions_Value.class, this, ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE, StatesPackage.OPAQUE_ACTION_EXPRESSIONS_VALUE__PARENT);
 		}
-		return expressions;
+		return expressionsSequence;
 	}
 
 	/**
@@ -92,16 +80,14 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OpaqueAction getOriginalObject() {
-		if (originalObject != null && originalObject.eIsProxy()) {
-			InternalEObject oldOriginalObject = (InternalEObject)originalObject;
-			originalObject = (OpaqueAction)eResolveProxy(oldOriginalObject);
-			if (originalObject != oldOriginalObject) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TRACED_OPAQUE_ACTION__ORIGINAL_OBJECT, oldOriginalObject, originalObject));
-			}
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExpressionsSequence()).basicAdd(otherEnd, msgs);
 		}
-		return originalObject;
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -109,20 +95,13 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OpaqueAction basicGetOriginalObject() {
-		return originalObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOriginalObject(OpaqueAction newOriginalObject) {
-		OpaqueAction oldOriginalObject = originalObject;
-		originalObject = newOriginalObject;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TRACED_OPAQUE_ACTION__ORIGINAL_OBJECT, oldOriginalObject, originalObject));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE:
+				return ((InternalEList<?>)getExpressionsSequence()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -133,11 +112,8 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS:
-				return getExpressions();
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__ORIGINAL_OBJECT:
-				if (resolve) return getOriginalObject();
-				return basicGetOriginalObject();
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE:
+				return getExpressionsSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -151,12 +127,9 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS:
-				getExpressions().clear();
-				getExpressions().addAll((Collection<? extends Expression>)newValue);
-				return;
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__ORIGINAL_OBJECT:
-				setOriginalObject((OpaqueAction)newValue);
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE:
+				getExpressionsSequence().clear();
+				getExpressionsSequence().addAll((Collection<? extends OpaqueAction_expressions_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,11 +143,8 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS:
-				getExpressions().clear();
-				return;
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__ORIGINAL_OBJECT:
-				setOriginalObject((OpaqueAction)null);
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE:
+				getExpressionsSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -188,10 +158,8 @@ public class TracedOpaqueActionImpl extends TracedActionImpl implements TracedOp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS:
-				return expressions != null && !expressions.isEmpty();
-			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__ORIGINAL_OBJECT:
-				return originalObject != null;
+			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION__EXPRESSIONS_SEQUENCE:
+				return expressionsSequence != null && !expressionsSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

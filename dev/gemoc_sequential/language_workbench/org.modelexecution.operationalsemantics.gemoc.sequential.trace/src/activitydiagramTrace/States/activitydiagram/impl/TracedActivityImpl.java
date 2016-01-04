@@ -2,21 +2,18 @@
  */
 package activitydiagramTrace.States.activitydiagram.impl;
 
-import activitydiagram.Activity;
-import activitydiagram.Trace;
-
+import activitydiagramTrace.States.Activity_edges_Value;
+import activitydiagramTrace.States.Activity_inputs_Value;
+import activitydiagramTrace.States.Activity_locals_Value;
+import activitydiagramTrace.States.Activity_nodes_Value;
 import activitydiagramTrace.States.Activity_trace_Value;
 import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
 import activitydiagramTrace.States.activitydiagram.TracedActivity;
-import activitydiagramTrace.States.activitydiagram.TracedActivityEdge;
-import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
-import activitydiagramTrace.States.activitydiagram.TracedVariable;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -24,10 +21,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -37,12 +31,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getNodes <em>Nodes</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getEdges <em>Edges</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getLocals <em>Locals</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getInputs <em>Inputs</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getTrace <em>Trace</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getOriginalObject <em>Original Object</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getLocalsSequence <em>Locals Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getEdgesSequence <em>Edges Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getInputsSequence <em>Inputs Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getNodesSequence <em>Nodes Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityImpl#getTraceSequence <em>Trace Sequence</em>}</li>
  * </ul>
  * </p>
@@ -51,64 +43,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TracedActivityImpl extends TracedNamedElementImpl implements TracedActivity {
 	/**
-	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' reference list.
+	 * The cached value of the '{@link #getLocalsSequence() <em>Locals Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNodes()
+	 * @see #getLocalsSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TracedActivityNode> nodes;
+	protected EList<Activity_locals_Value> localsSequence;
 
 	/**
-	 * The cached value of the '{@link #getEdges() <em>Edges</em>}' reference list.
+	 * The cached value of the '{@link #getEdgesSequence() <em>Edges Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEdges()
+	 * @see #getEdgesSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TracedActivityEdge> edges;
+	protected EList<Activity_edges_Value> edgesSequence;
 
 	/**
-	 * The cached value of the '{@link #getLocals() <em>Locals</em>}' reference list.
+	 * The cached value of the '{@link #getInputsSequence() <em>Inputs Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLocals()
+	 * @see #getInputsSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TracedVariable> locals;
+	protected EList<Activity_inputs_Value> inputsSequence;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
+	 * The cached value of the '{@link #getNodesSequence() <em>Nodes Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputs()
+	 * @see #getNodesSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TracedVariable> inputs;
-
-	/**
-	 * The cached value of the '{@link #getTrace() <em>Trace</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTrace()
-	 * @generated
-	 * @ordered
-	 */
-	protected Trace trace;
-
-	/**
-	 * The cached value of the '{@link #getOriginalObject() <em>Original Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOriginalObject()
-	 * @generated
-	 * @ordered
-	 */
-	protected Activity originalObject;
+	protected EList<Activity_nodes_Value> nodesSequence;
 
 	/**
 	 * The cached value of the '{@link #getTraceSequence() <em>Trace Sequence</em>}' containment reference list.
@@ -144,11 +116,11 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedActivityNode> getNodes() {
-		if (nodes == null) {
-			nodes = new EObjectResolvingEList<TracedActivityNode>(TracedActivityNode.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__NODES);
+	public EList<Activity_locals_Value> getLocalsSequence() {
+		if (localsSequence == null) {
+			localsSequence = new EObjectContainmentWithInverseEList<Activity_locals_Value>(Activity_locals_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE, StatesPackage.ACTIVITY_LOCALS_VALUE__PARENT);
 		}
-		return nodes;
+		return localsSequence;
 	}
 
 	/**
@@ -156,11 +128,11 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedActivityEdge> getEdges() {
-		if (edges == null) {
-			edges = new EObjectResolvingEList<TracedActivityEdge>(TracedActivityEdge.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__EDGES);
+	public EList<Activity_edges_Value> getEdgesSequence() {
+		if (edgesSequence == null) {
+			edgesSequence = new EObjectContainmentWithInverseEList<Activity_edges_Value>(Activity_edges_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE, StatesPackage.ACTIVITY_EDGES_VALUE__PARENT);
 		}
-		return edges;
+		return edgesSequence;
 	}
 
 	/**
@@ -168,11 +140,11 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedVariable> getLocals() {
-		if (locals == null) {
-			locals = new EObjectResolvingEList<TracedVariable>(TracedVariable.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS);
+	public EList<Activity_inputs_Value> getInputsSequence() {
+		if (inputsSequence == null) {
+			inputsSequence = new EObjectContainmentWithInverseEList<Activity_inputs_Value>(Activity_inputs_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE, StatesPackage.ACTIVITY_INPUTS_VALUE__PARENT);
 		}
-		return locals;
+		return inputsSequence;
 	}
 
 	/**
@@ -180,87 +152,11 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedVariable> getInputs() {
-		if (inputs == null) {
-			inputs = new EObjectResolvingEList<TracedVariable>(TracedVariable.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS);
+	public EList<Activity_nodes_Value> getNodesSequence() {
+		if (nodesSequence == null) {
+			nodesSequence = new EObjectContainmentWithInverseEList<Activity_nodes_Value>(Activity_nodes_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE, StatesPackage.ACTIVITY_NODES_VALUE__PARENT);
 		}
-		return inputs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Trace getTrace() {
-		if (trace != null && trace.eIsProxy()) {
-			InternalEObject oldTrace = (InternalEObject)trace;
-			trace = (Trace)eResolveProxy(oldTrace);
-			if (trace != oldTrace) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TRACED_ACTIVITY__TRACE, oldTrace, trace));
-			}
-		}
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Trace basicGetTrace() {
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTrace(Trace newTrace) {
-		Trace oldTrace = trace;
-		trace = newTrace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TRACED_ACTIVITY__TRACE, oldTrace, trace));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity getOriginalObject() {
-		if (originalObject != null && originalObject.eIsProxy()) {
-			InternalEObject oldOriginalObject = (InternalEObject)originalObject;
-			originalObject = (Activity)eResolveProxy(oldOriginalObject);
-			if (originalObject != oldOriginalObject) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TRACED_ACTIVITY__ORIGINAL_OBJECT, oldOriginalObject, originalObject));
-			}
-		}
-		return originalObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity basicGetOriginalObject() {
-		return originalObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOriginalObject(Activity newOriginalObject) {
-		Activity oldOriginalObject = originalObject;
-		originalObject = newOriginalObject;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TRACED_ACTIVITY__ORIGINAL_OBJECT, oldOriginalObject, originalObject));
+		return nodesSequence;
 	}
 
 	/**
@@ -284,6 +180,14 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLocalsSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEdgesSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputsSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getNodesSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTraceSequence()).basicAdd(otherEnd, msgs);
 		}
@@ -298,6 +202,14 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE:
+				return ((InternalEList<?>)getLocalsSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE:
+				return ((InternalEList<?>)getEdgesSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE:
+				return ((InternalEList<?>)getInputsSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE:
+				return ((InternalEList<?>)getNodesSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE_SEQUENCE:
 				return ((InternalEList<?>)getTraceSequence()).basicRemove(otherEnd, msgs);
 		}
@@ -312,20 +224,14 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES:
-				return getNodes();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES:
-				return getEdges();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS:
-				return getLocals();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS:
-				return getInputs();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE:
-				if (resolve) return getTrace();
-				return basicGetTrace();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__ORIGINAL_OBJECT:
-				if (resolve) return getOriginalObject();
-				return basicGetOriginalObject();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE:
+				return getLocalsSequence();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE:
+				return getEdgesSequence();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE:
+				return getInputsSequence();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE:
+				return getNodesSequence();
 			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE_SEQUENCE:
 				return getTraceSequence();
 		}
@@ -341,27 +247,21 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES:
-				getNodes().clear();
-				getNodes().addAll((Collection<? extends TracedActivityNode>)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE:
+				getLocalsSequence().clear();
+				getLocalsSequence().addAll((Collection<? extends Activity_locals_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES:
-				getEdges().clear();
-				getEdges().addAll((Collection<? extends TracedActivityEdge>)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE:
+				getEdgesSequence().clear();
+				getEdgesSequence().addAll((Collection<? extends Activity_edges_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS:
-				getLocals().clear();
-				getLocals().addAll((Collection<? extends TracedVariable>)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE:
+				getInputsSequence().clear();
+				getInputsSequence().addAll((Collection<? extends Activity_inputs_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS:
-				getInputs().clear();
-				getInputs().addAll((Collection<? extends TracedVariable>)newValue);
-				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE:
-				setTrace((Trace)newValue);
-				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__ORIGINAL_OBJECT:
-				setOriginalObject((Activity)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE:
+				getNodesSequence().clear();
+				getNodesSequence().addAll((Collection<? extends Activity_nodes_Value>)newValue);
 				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE_SEQUENCE:
 				getTraceSequence().clear();
@@ -379,23 +279,17 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES:
-				getNodes().clear();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE:
+				getLocalsSequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES:
-				getEdges().clear();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE:
+				getEdgesSequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS:
-				getLocals().clear();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE:
+				getInputsSequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS:
-				getInputs().clear();
-				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE:
-				setTrace((Trace)null);
-				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__ORIGINAL_OBJECT:
-				setOriginalObject((Activity)null);
+			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE:
+				getNodesSequence().clear();
 				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE_SEQUENCE:
 				getTraceSequence().clear();
@@ -412,18 +306,14 @@ public class TracedActivityImpl extends TracedNamedElementImpl implements Traced
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES:
-				return nodes != null && !nodes.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES:
-				return edges != null && !edges.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS:
-				return locals != null && !locals.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS:
-				return inputs != null && !inputs.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE:
-				return trace != null;
-			case ActivitydiagramPackage.TRACED_ACTIVITY__ORIGINAL_OBJECT:
-				return originalObject != null;
+			case ActivitydiagramPackage.TRACED_ACTIVITY__LOCALS_SEQUENCE:
+				return localsSequence != null && !localsSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__EDGES_SEQUENCE:
+				return edgesSequence != null && !edgesSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__INPUTS_SEQUENCE:
+				return inputsSequence != null && !inputsSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY__NODES_SEQUENCE:
+				return nodesSequence != null && !nodesSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_ACTIVITY__TRACE_SEQUENCE:
 				return traceSequence != null && !traceSequence.isEmpty();
 		}

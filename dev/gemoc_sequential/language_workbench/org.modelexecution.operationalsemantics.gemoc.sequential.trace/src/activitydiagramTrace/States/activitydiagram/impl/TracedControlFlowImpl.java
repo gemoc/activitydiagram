@@ -2,18 +2,23 @@
  */
 package activitydiagramTrace.States.activitydiagram.impl;
 
-import activitydiagram.ControlFlow;
+import activitydiagramTrace.States.ControlFlow_guard_Value;
+import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
-import activitydiagramTrace.States.activitydiagram.TracedBooleanVariable;
 import activitydiagramTrace.States.activitydiagram.TracedControlFlow;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,8 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedControlFlowImpl#getGuard <em>Guard</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedControlFlowImpl#getOriginalObject <em>Original Object</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedControlFlowImpl#getGuardSequence <em>Guard Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,24 +35,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements TracedControlFlow {
 	/**
-	 * The cached value of the '{@link #getGuard() <em>Guard</em>}' reference.
+	 * The cached value of the '{@link #getGuardSequence() <em>Guard Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGuard()
+	 * @see #getGuardSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedBooleanVariable guard;
-
-	/**
-	 * The cached value of the '{@link #getOriginalObject() <em>Original Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOriginalObject()
-	 * @generated
-	 * @ordered
-	 */
-	protected ControlFlow originalObject;
+	protected EList<ControlFlow_guard_Value> guardSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,16 +68,11 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedBooleanVariable getGuard() {
-		if (guard != null && guard.eIsProxy()) {
-			InternalEObject oldGuard = (InternalEObject)guard;
-			guard = (TracedBooleanVariable)eResolveProxy(oldGuard);
-			if (guard != oldGuard) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD, oldGuard, guard));
-			}
+	public EList<ControlFlow_guard_Value> getGuardSequence() {
+		if (guardSequence == null) {
+			guardSequence = new EObjectContainmentWithInverseEList<ControlFlow_guard_Value>(ControlFlow_guard_Value.class, this, ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE, StatesPackage.CONTROL_FLOW_GUARD_VALUE__PARENT);
 		}
-		return guard;
+		return guardSequence;
 	}
 
 	/**
@@ -91,37 +80,14 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedBooleanVariable basicGetGuard() {
-		return guard;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGuard(TracedBooleanVariable newGuard) {
-		TracedBooleanVariable oldGuard = guard;
-		guard = newGuard;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD, oldGuard, guard));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ControlFlow getOriginalObject() {
-		if (originalObject != null && originalObject.eIsProxy()) {
-			InternalEObject oldOriginalObject = (InternalEObject)originalObject;
-			originalObject = (ControlFlow)eResolveProxy(oldOriginalObject);
-			if (originalObject != oldOriginalObject) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TRACED_CONTROL_FLOW__ORIGINAL_OBJECT, oldOriginalObject, originalObject));
-			}
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGuardSequence()).basicAdd(otherEnd, msgs);
 		}
-		return originalObject;
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -129,20 +95,13 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ControlFlow basicGetOriginalObject() {
-		return originalObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOriginalObject(ControlFlow newOriginalObject) {
-		ControlFlow oldOriginalObject = originalObject;
-		originalObject = newOriginalObject;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TRACED_CONTROL_FLOW__ORIGINAL_OBJECT, oldOriginalObject, originalObject));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE:
+				return ((InternalEList<?>)getGuardSequence()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -153,12 +112,8 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD:
-				if (resolve) return getGuard();
-				return basicGetGuard();
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__ORIGINAL_OBJECT:
-				if (resolve) return getOriginalObject();
-				return basicGetOriginalObject();
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE:
+				return getGuardSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,14 +123,13 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD:
-				setGuard((TracedBooleanVariable)newValue);
-				return;
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__ORIGINAL_OBJECT:
-				setOriginalObject((ControlFlow)newValue);
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE:
+				getGuardSequence().clear();
+				getGuardSequence().addAll((Collection<? extends ControlFlow_guard_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,11 +143,8 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD:
-				setGuard((TracedBooleanVariable)null);
-				return;
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__ORIGINAL_OBJECT:
-				setOriginalObject((ControlFlow)null);
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE:
+				getGuardSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -207,10 +158,8 @@ public class TracedControlFlowImpl extends TracedActivityEdgeImpl implements Tra
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD:
-				return guard != null;
-			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__ORIGINAL_OBJECT:
-				return originalObject != null;
+			case ActivitydiagramPackage.TRACED_CONTROL_FLOW__GUARD_SEQUENCE:
+				return guardSequence != null && !guardSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

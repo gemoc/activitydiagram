@@ -2,8 +2,7 @@
  */
 package activitydiagramTrace.States.activitydiagram;
 
-import activitydiagram.Expression;
-import activitydiagram.OpaqueAction;
+import activitydiagramTrace.States.OpaqueAction_expressions_Value;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -15,8 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedOpaqueAction#getExpressions <em>Expressions</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedOpaqueAction#getOriginalObject <em>Original Object</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedOpaqueAction#getExpressionsSequence <em>Expressions Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,45 +24,21 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TracedOpaqueAction extends TracedAction {
 	/**
-	 * Returns the value of the '<em><b>Expressions</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagram.Expression}.
+	 * Returns the value of the '<em><b>Expressions Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.OpaqueAction_expressions_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.OpaqueAction_expressions_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Expressions</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Expressions Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expressions</em>' reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedOpaqueAction_Expressions()
-	 * @model
+	 * @return the value of the '<em>Expressions Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedOpaqueAction_ExpressionsSequence()
+	 * @see activitydiagramTrace.States.OpaqueAction_expressions_Value#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<Expression> getExpressions();
-
-	/**
-	 * Returns the value of the '<em><b>Original Object</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Original Object</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Original Object</em>' reference.
-	 * @see #setOriginalObject(OpaqueAction)
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedOpaqueAction_OriginalObject()
-	 * @model
-	 * @generated
-	 */
-	OpaqueAction getOriginalObject();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.activitydiagram.TracedOpaqueAction#getOriginalObject <em>Original Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Original Object</em>' reference.
-	 * @see #getOriginalObject()
-	 * @generated
-	 */
-	void setOriginalObject(OpaqueAction value);
+	EList<OpaqueAction_expressions_Value> getExpressionsSequence();
 
 } // TracedOpaqueAction

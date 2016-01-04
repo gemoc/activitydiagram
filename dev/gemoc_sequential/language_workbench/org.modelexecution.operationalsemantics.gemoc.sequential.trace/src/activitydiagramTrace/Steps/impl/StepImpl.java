@@ -15,7 +15,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.gemoc.execution.engine.mse.engine_mse.impl.MSEOccurrenceImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class StepImpl extends MinimalEObjectImpl.Container implements Step {
+public abstract class StepImpl extends MSEOccurrenceImpl implements Step {
 	/**
 	 * The cached value of the '{@link #getStartingState() <em>Starting State</em>}' reference.
 	 * <!-- begin-user-doc -->

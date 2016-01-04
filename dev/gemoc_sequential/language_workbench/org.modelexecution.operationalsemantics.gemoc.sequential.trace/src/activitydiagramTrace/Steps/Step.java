@@ -4,7 +4,7 @@ package activitydiagramTrace.Steps;
 
 import activitydiagramTrace.States.State;
 
-import org.eclipse.emf.ecore.EObject;
+import org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Step extends EObject {
+public interface Step extends MSEOccurrence {
 	/**
 	 * Returns the value of the '<em><b>Starting State</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.State#getStartedSteps <em>Started Steps</em>}'.

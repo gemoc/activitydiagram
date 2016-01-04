@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius;visibility:=reexport,
  org.eclipse.sirius.common.acceleo.mtl;visibility:=reexport,
  org.obeonetwork.dsl.uml2.design;bundle-version="5.0.0",
- org.gemoc.gemoc_language_workbench.extensions.sirius,
+ org.gemoc.executionframework.extensions.sirius,
  org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0",
  org.modelexecution.operationalsemantics.ad.grammar;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

@@ -2,19 +2,18 @@
  */
 package activitydiagramTrace.States.activitydiagram.impl;
 
-import activitydiagram.Token;
-
+import activitydiagramTrace.States.ActivityNode_activity_Value;
 import activitydiagramTrace.States.ActivityNode_heldTokens_Value;
+import activitydiagramTrace.States.ActivityNode_incoming_Value;
+import activitydiagramTrace.States.ActivityNode_outgoing_Value;
+import activitydiagramTrace.States.ActivityNode_running_Value;
 import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
-import activitydiagramTrace.States.activitydiagram.TracedActivity;
-import activitydiagramTrace.States.activitydiagram.TracedActivityEdge;
 import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -22,10 +21,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -35,10 +31,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getOutgoing <em>Outgoing</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getIncoming <em>Incoming</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getActivity <em>Activity</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getHeldTokens <em>Held Tokens</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getActivitySequence <em>Activity Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getRunningSequence <em>Running Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getOutgoingSequence <em>Outgoing Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getIncomingSequence <em>Incoming Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedActivityNodeImpl#getHeldTokensSequence <em>Held Tokens Sequence</em>}</li>
  * </ul>
  * </p>
@@ -47,44 +43,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl implements TracedActivityNode {
 	/**
-	 * The cached value of the '{@link #getOutgoing() <em>Outgoing</em>}' reference list.
+	 * The cached value of the '{@link #getActivitySequence() <em>Activity Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutgoing()
+	 * @see #getActivitySequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TracedActivityEdge> outgoing;
+	protected EList<ActivityNode_activity_Value> activitySequence;
 
 	/**
-	 * The cached value of the '{@link #getIncoming() <em>Incoming</em>}' reference list.
+	 * The cached value of the '{@link #getRunningSequence() <em>Running Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIncoming()
+	 * @see #getRunningSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TracedActivityEdge> incoming;
+	protected EList<ActivityNode_running_Value> runningSequence;
 
 	/**
-	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference.
+	 * The cached value of the '{@link #getOutgoingSequence() <em>Outgoing Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActivity()
+	 * @see #getOutgoingSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivity activity;
+	protected EList<ActivityNode_outgoing_Value> outgoingSequence;
 
 	/**
-	 * The cached value of the '{@link #getHeldTokens() <em>Held Tokens</em>}' reference list.
+	 * The cached value of the '{@link #getIncomingSequence() <em>Incoming Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHeldTokens()
+	 * @see #getIncomingSequence()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Token> heldTokens;
+	protected EList<ActivityNode_incoming_Value> incomingSequence;
 
 	/**
 	 * The cached value of the '{@link #getHeldTokensSequence() <em>Held Tokens Sequence</em>}' containment reference list.
@@ -120,11 +116,11 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedActivityEdge> getOutgoing() {
-		if (outgoing == null) {
-			outgoing = new EObjectResolvingEList<TracedActivityEdge>(TracedActivityEdge.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING);
+	public EList<ActivityNode_activity_Value> getActivitySequence() {
+		if (activitySequence == null) {
+			activitySequence = new EObjectContainmentWithInverseEList<ActivityNode_activity_Value>(ActivityNode_activity_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE, StatesPackage.ACTIVITY_NODE_ACTIVITY_VALUE__PARENT);
 		}
-		return outgoing;
+		return activitySequence;
 	}
 
 	/**
@@ -132,11 +128,11 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedActivityEdge> getIncoming() {
-		if (incoming == null) {
-			incoming = new EObjectResolvingEList<TracedActivityEdge>(TracedActivityEdge.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING);
+	public EList<ActivityNode_running_Value> getRunningSequence() {
+		if (runningSequence == null) {
+			runningSequence = new EObjectContainmentWithInverseEList<ActivityNode_running_Value>(ActivityNode_running_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE, StatesPackage.ACTIVITY_NODE_RUNNING_VALUE__PARENT);
 		}
-		return incoming;
+		return runningSequence;
 	}
 
 	/**
@@ -144,16 +140,11 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity getActivity() {
-		if (activity != null && activity.eIsProxy()) {
-			InternalEObject oldActivity = (InternalEObject)activity;
-			activity = (TracedActivity)eResolveProxy(oldActivity);
-			if (activity != oldActivity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY, oldActivity, activity));
-			}
+	public EList<ActivityNode_outgoing_Value> getOutgoingSequence() {
+		if (outgoingSequence == null) {
+			outgoingSequence = new EObjectContainmentWithInverseEList<ActivityNode_outgoing_Value>(ActivityNode_outgoing_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE, StatesPackage.ACTIVITY_NODE_OUTGOING_VALUE__PARENT);
 		}
-		return activity;
+		return outgoingSequence;
 	}
 
 	/**
@@ -161,32 +152,11 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivity basicGetActivity() {
-		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setActivity(TracedActivity newActivity) {
-		TracedActivity oldActivity = activity;
-		activity = newActivity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY, oldActivity, activity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Token> getHeldTokens() {
-		if (heldTokens == null) {
-			heldTokens = new EObjectResolvingEList<Token>(Token.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS);
+	public EList<ActivityNode_incoming_Value> getIncomingSequence() {
+		if (incomingSequence == null) {
+			incomingSequence = new EObjectContainmentWithInverseEList<ActivityNode_incoming_Value>(ActivityNode_incoming_Value.class, this, ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE, StatesPackage.ACTIVITY_NODE_INCOMING_VALUE__PARENT);
 		}
-		return heldTokens;
+		return incomingSequence;
 	}
 
 	/**
@@ -210,6 +180,14 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivitySequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRunningSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutgoingSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIncomingSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHeldTokensSequence()).basicAdd(otherEnd, msgs);
 		}
@@ -224,6 +202,14 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE:
+				return ((InternalEList<?>)getActivitySequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE:
+				return ((InternalEList<?>)getRunningSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE:
+				return ((InternalEList<?>)getOutgoingSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE:
+				return ((InternalEList<?>)getIncomingSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE:
 				return ((InternalEList<?>)getHeldTokensSequence()).basicRemove(otherEnd, msgs);
 		}
@@ -238,15 +224,14 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING:
-				return getOutgoing();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING:
-				return getIncoming();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY:
-				if (resolve) return getActivity();
-				return basicGetActivity();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS:
-				return getHeldTokens();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE:
+				return getActivitySequence();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE:
+				return getRunningSequence();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE:
+				return getOutgoingSequence();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE:
+				return getIncomingSequence();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE:
 				return getHeldTokensSequence();
 		}
@@ -262,20 +247,21 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING:
-				getOutgoing().clear();
-				getOutgoing().addAll((Collection<? extends TracedActivityEdge>)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE:
+				getActivitySequence().clear();
+				getActivitySequence().addAll((Collection<? extends ActivityNode_activity_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING:
-				getIncoming().clear();
-				getIncoming().addAll((Collection<? extends TracedActivityEdge>)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE:
+				getRunningSequence().clear();
+				getRunningSequence().addAll((Collection<? extends ActivityNode_running_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY:
-				setActivity((TracedActivity)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE:
+				getOutgoingSequence().clear();
+				getOutgoingSequence().addAll((Collection<? extends ActivityNode_outgoing_Value>)newValue);
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS:
-				getHeldTokens().clear();
-				getHeldTokens().addAll((Collection<? extends Token>)newValue);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE:
+				getIncomingSequence().clear();
+				getIncomingSequence().addAll((Collection<? extends ActivityNode_incoming_Value>)newValue);
 				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE:
 				getHeldTokensSequence().clear();
@@ -293,17 +279,17 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING:
-				getOutgoing().clear();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE:
+				getActivitySequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING:
-				getIncoming().clear();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE:
+				getRunningSequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY:
-				setActivity((TracedActivity)null);
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE:
+				getOutgoingSequence().clear();
 				return;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS:
-				getHeldTokens().clear();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE:
+				getIncomingSequence().clear();
 				return;
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE:
 				getHeldTokensSequence().clear();
@@ -320,14 +306,14 @@ public abstract class TracedActivityNodeImpl extends TracedNamedElementImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING:
-				return outgoing != null && !outgoing.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING:
-				return incoming != null && !incoming.isEmpty();
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY:
-				return activity != null;
-			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS:
-				return heldTokens != null && !heldTokens.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__ACTIVITY_SEQUENCE:
+				return activitySequence != null && !activitySequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__RUNNING_SEQUENCE:
+				return runningSequence != null && !runningSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__OUTGOING_SEQUENCE:
+				return outgoingSequence != null && !outgoingSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__INCOMING_SEQUENCE:
+				return incomingSequence != null && !incomingSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE__HELD_TOKENS_SEQUENCE:
 				return heldTokensSequence != null && !heldTokensSequence.isEmpty();
 		}

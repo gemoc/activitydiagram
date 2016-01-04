@@ -2,9 +2,11 @@
  */
 package activitydiagramTrace.States.activitydiagram;
 
-import activitydiagram.Token;
-
+import activitydiagramTrace.States.ActivityNode_activity_Value;
 import activitydiagramTrace.States.ActivityNode_heldTokens_Value;
+import activitydiagramTrace.States.ActivityNode_incoming_Value;
+import activitydiagramTrace.States.ActivityNode_outgoing_Value;
+import activitydiagramTrace.States.ActivityNode_running_Value;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,10 +18,10 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getOutgoing <em>Outgoing</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getIncoming <em>Incoming</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getActivity <em>Activity</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getHeldTokens <em>Held Tokens</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getActivitySequence <em>Activity Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getRunningSequence <em>Running Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getOutgoingSequence <em>Outgoing Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getIncomingSequence <em>Incoming Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getHeldTokensSequence <em>Held Tokens Sequence</em>}</li>
  * </ul>
  * </p>
@@ -30,78 +32,76 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TracedActivityNode extends TracedNamedElement {
 	/**
-	 * Returns the value of the '<em><b>Outgoing</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge}.
+	 * Returns the value of the '<em><b>Activity Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ActivityNode_activity_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityNode_activity_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Outgoing</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activity Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outgoing</em>' reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_Outgoing()
-	 * @model
+	 * @return the value of the '<em>Activity Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_ActivitySequence()
+	 * @see activitydiagramTrace.States.ActivityNode_activity_Value#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<TracedActivityEdge> getOutgoing();
+	EList<ActivityNode_activity_Value> getActivitySequence();
 
 	/**
-	 * Returns the value of the '<em><b>Incoming</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge}.
+	 * Returns the value of the '<em><b>Running Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ActivityNode_running_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityNode_running_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Incoming</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Running Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Incoming</em>' reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_Incoming()
-	 * @model
+	 * @return the value of the '<em>Running Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_RunningSequence()
+	 * @see activitydiagramTrace.States.ActivityNode_running_Value#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<TracedActivityEdge> getIncoming();
+	EList<ActivityNode_running_Value> getRunningSequence();
 
 	/**
-	 * Returns the value of the '<em><b>Activity</b></em>' reference.
+	 * Returns the value of the '<em><b>Outgoing Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ActivityNode_outgoing_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityNode_outgoing_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activity</em>' reference isn't clear,
+	 * If the meaning of the '<em>Outgoing Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activity</em>' reference.
-	 * @see #setActivity(TracedActivity)
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_Activity()
-	 * @model required="true"
+	 * @return the value of the '<em>Outgoing Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_OutgoingSequence()
+	 * @see activitydiagramTrace.States.ActivityNode_outgoing_Value#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	TracedActivity getActivity();
+	EList<ActivityNode_outgoing_Value> getOutgoingSequence();
 
 	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.activitydiagram.TracedActivityNode#getActivity <em>Activity</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Activity</em>' reference.
-	 * @see #getActivity()
-	 * @generated
-	 */
-	void setActivity(TracedActivity value);
-
-	/**
-	 * Returns the value of the '<em><b>Held Tokens</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagram.Token}.
+	 * Returns the value of the '<em><b>Incoming Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ActivityNode_incoming_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityNode_incoming_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Held Tokens</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Incoming Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Held Tokens</em>' reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_HeldTokens()
-	 * @model
+	 * @return the value of the '<em>Incoming Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityNode_IncomingSequence()
+	 * @see activitydiagramTrace.States.ActivityNode_incoming_Value#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<Token> getHeldTokens();
+	EList<ActivityNode_incoming_Value> getIncomingSequence();
 
 	/**
 	 * Returns the value of the '<em><b>Held Tokens Sequence</b></em>' containment reference list.

@@ -8,9 +8,9 @@
           <children xmi:type="notation:Node" xmi:id="_HIqEYPiLEeSHu_2FECeh8A" type="2002" element="_HINYcfiLEeSHu_2FECeh8A">
             <children xmi:type="notation:Node" xmi:id="_HI8_UPiLEeSHu_2FECeh8A" type="5006"/>
             <children xmi:type="notation:Node" xmi:id="_HI8_UfiLEeSHu_2FECeh8A" type="7001">
-              <children xmi:type="notation:Node" xmi:id="_HJGwUPiLEeSHu_2FECeh8A" type="3008" element="_HINYd_iLEeSHu_2FECeh8A">
-                <children xmi:type="notation:Node" xmi:id="_HJGwU_iLEeSHu_2FECeh8A" type="5005"/>
-                <children xmi:type="notation:Node" xmi:id="_HJGwVPiLEeSHu_2FECeh8A" type="7002">
+              <children xmi:type="notation:Node" xmi:id="_HJGwUPiLEeSHu_2FECeh8A" type="3009" element="_IOE0kJkOEeWWos_LfM5FfA">
+                <children xmi:type="notation:Node" xmi:id="_HJGwU_iLEeSHu_2FECeh8A" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_HJGwVPiLEeSHu_2FECeh8A" type="7003">
                   <styles xmi:type="notation:SortingStyle" xmi:id="_HJGwVfiLEeSHu_2FECeh8A"/>
                   <styles xmi:type="notation:FilteringStyle" xmi:id="_HJGwVviLEeSHu_2FECeh8A"/>
                 </children>
@@ -80,6 +80,41 @@
           </edges>
         </data>
       </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_IOrRgJkOEeWWos_LfM5FfA" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_IOrRgZkOEeWWos_LfM5FfA">
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_IOrRhZkOEeWWos_LfM5FfA" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_IOrRhpkOEeWWos_LfM5FfA" showIcon="false" labelExpression="edge1&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_IO9lYZkOEeWWos_LfM5FfA" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_IO9lYpkOEeWWos_LfM5FfA" showIcon="false" labelExpression="edge2&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="_IOrRgpkOEeWWos_LfM5FfA">
+            <key xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_IOrRg5kOEeWWos_LfM5FfA">
+              <key xmi:type="activitydiagram:ControlFlow" href="test1.ad#//@edges.0"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_IOrRhJkOEeWWos_LfM5FfA" key="_HINYhfiLEeSHu_2FECeh8A">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_IOrRh5kOEeWWos_LfM5FfA" value="_IOrRhZkOEeWWos_LfM5FfA">
+                  <key xmi:type="activitydiagram:Activity" href="test1.ad#/"/>
+                </value>
+              </value>
+            </value>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="_IO8-UJkOEeWWos_LfM5FfA">
+              <key xmi:type="activitydiagram:ControlFlow" href="test1.ad#//@edges.1"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="_IO9lYJkOEeWWos_LfM5FfA" key="_HINYiviLEeSHu_2FECeh8A">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="_IO9lY5kOEeWWos_LfM5FfA" value="_IO9lYZkOEeWWos_LfM5FfA">
+                  <key xmi:type="activitydiagram:Activity" href="test1.ad#/"/>
+                </value>
+              </value>
+            </value>
+          </cache>
+        </data>
+      </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_HINYcfiLEeSHu_2FECeh8A" name="test1">
         <target xmi:type="activitydiagram:Activity" href="test1.ad#/"/>
         <semanticElements xmi:type="activitydiagram:Activity" href="test1.ad#/"/>
@@ -90,19 +125,7 @@
           <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYdfiLEeSHu_2FECeh8A" red="255" green="255" blue="255"/>
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYdviLEeSHu_2FECeh8A" red="245" green="239" blue="244"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_HINYd_iLEeSHu_2FECeh8A" name="action1" outgoingEdges="_HINYiviLEeSHu_2FECeh8A" incomingEdges="_HINYhfiLEeSHu_2FECeh8A">
-          <target xmi:type="activitydiagram:OpaqueAction" href="test1.ad#//@nodes.1"/>
-          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="test1.ad#//@nodes.1"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_HINYePiLEeSHu_2FECeh8A" labelFormat="bold" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYefiLEeSHu_2FECeh8A"/>
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@conditionnalStyles.0/@style"/>
-            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYeviLEeSHu_2FECeh8A" red="224" green="133" blue="3"/>
-            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYe_iLEeSHu_2FECeh8A" red="255" green="255" blue="255"/>
-            <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYfPiLEeSHu_2FECeh8A" red="254" green="238" blue="214"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']"/>
-        </ownedDiagramElements>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']"/>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_HINYffiLEeSHu_2FECeh8A" name="initialNode1" outgoingEdges="_HINYhfiLEeSHu_2FECeh8A" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="activitydiagram:InitialNode" href="test1.ad#//@nodes.0"/>
           <semanticElements xmi:type="activitydiagram:InitialNode" href="test1.ad#//@nodes.0"/>
@@ -111,7 +134,7 @@
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.0/@style"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYgPiLEeSHu_2FECeh8A"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']"/>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_HINYgfiLEeSHu_2FECeh8A" name="finalNode1" incomingEdges="_HINYiviLEeSHu_2FECeh8A" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="activitydiagram:ActivityFinalNode" href="test1.ad#//@nodes.2"/>
@@ -121,29 +144,39 @@
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style"/>
             <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYhPiLEeSHu_2FECeh8A"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']"/>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_IOE0kJkOEeWWos_LfM5FfA" name="action1&#xA;heldTokens =0" outgoingEdges="_HINYiviLEeSHu_2FECeh8A" incomingEdges="_HINYhfiLEeSHu_2FECeh8A">
+          <target xmi:type="activitydiagram:OpaqueAction" href="test1.ad#//@nodes.1"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="test1.ad#//@nodes.1"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_IOV6UJkOEeWWos_LfM5FfA" labelFormat="bold" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_IOV6UZkOEeWWos_LfM5FfA"/>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_IOV6UpkOEeWWos_LfM5FfA" red="224" green="133" blue="3"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_IOV6U5kOEeWWos_LfM5FfA" red="255" green="255" blue="255"/>
+            <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_IOV6VJkOEeWWos_LfM5FfA" red="254" green="238" blue="214"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_HINYhfiLEeSHu_2FECeh8A" name="edge1" sourceNode="_HINYffiLEeSHu_2FECeh8A" targetNode="_HINYd_iLEeSHu_2FECeh8A">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_HINYhfiLEeSHu_2FECeh8A" name="edge1&#xA;tokenOfferCount=0" sourceNode="_HINYffiLEeSHu_2FECeh8A" targetNode="_IOE0kJkOEeWWos_LfM5FfA">
         <target xmi:type="activitydiagram:ControlFlow" href="test1.ad#//@edges.0"/>
         <semanticElements xmi:type="activitydiagram:ControlFlow" href="test1.ad#//@edges.0"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_HINYhviLEeSHu_2FECeh8A" routingStyle="manhattan">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']/@style"/>
-          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYh_iLEeSHu_2FECeh8A" red="136" green="136" blue="136"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_HINYiPiLEeSHu_2FECeh8A" showIcon="false">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYifiLEeSHu_2FECeh8A"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_IOrRiJkOEeWWos_LfM5FfA" description="_IOrRhZkOEeWWos_LfM5FfA" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_IOrRiZkOEeWWos_LfM5FfA" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_IOrRipkOEeWWos_LfM5FfA" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_IOrRi5kOEeWWos_LfM5FfA"/>
           </centerLabelStyle>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_HINYiviLEeSHu_2FECeh8A" name="edge2" sourceNode="_HINYd_iLEeSHu_2FECeh8A" targetNode="_HINYgfiLEeSHu_2FECeh8A">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_HINYiviLEeSHu_2FECeh8A" name="edge2&#xA;tokenOfferCount=0" sourceNode="_IOE0kJkOEeWWos_LfM5FfA" targetNode="_HINYgfiLEeSHu_2FECeh8A">
         <target xmi:type="activitydiagram:ControlFlow" href="test1.ad#//@edges.1"/>
         <semanticElements xmi:type="activitydiagram:ControlFlow" href="test1.ad#//@edges.1"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_HINYi_iLEeSHu_2FECeh8A" routingStyle="manhattan">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']/@style"/>
-          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYjPiLEeSHu_2FECeh8A" red="136" green="136" blue="136"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_HINYjfiLEeSHu_2FECeh8A" showIcon="false">
-            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_HINYjviLEeSHu_2FECeh8A"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_IO9lZJkOEeWWos_LfM5FfA" description="_IO9lYZkOEeWWos_LfM5FfA" routingStyle="manhattan">
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_IO9lZZkOEeWWos_LfM5FfA" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_IO9lZpkOEeWWos_LfM5FfA" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_IO9lZ5kOEeWWos_LfM5FfA"/>
           </centerLabelStyle>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
@@ -152,6 +185,7 @@
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_HINYj_iLEeSHu_2FECeh8A"/>
       <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Debug']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']"/>
       <target xmi:type="activitydiagram:Activity" href="test1.ad#/"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.modelexecution.operationalsemantics.ad.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']"/>

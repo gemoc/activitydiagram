@@ -8,17 +8,16 @@ import activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace;
 import activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace_AbstractSubStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
+import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -30,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_WriteTraceImpl#getThis <em>This</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_WriteTraceImpl#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  * </p>
@@ -38,16 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class Activitydiagram_Activity_WriteTraceImpl extends BigStepImpl implements Activitydiagram_Activity_WriteTrace {
-	/**
-	 * The cached value of the '{@link #getThis() <em>This</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getThis()
-	 * @generated
-	 * @ordered
-	 */
-	protected Activity this_;
-
 	/**
 	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -82,49 +70,21 @@ public class Activitydiagram_Activity_WriteTraceImpl extends BigStepImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity getThis() {
-		if (this_ != null && this_.eIsProxy()) {
-			InternalEObject oldThis = (InternalEObject)this_;
-			this_ = (Activity)eResolveProxy(oldThis);
-			if (this_ != oldThis) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__THIS, oldThis, this_));
-			}
-		}
-		return this_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity basicGetThis() {
-		return this_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setThis(Activity newThis) {
-		Activity oldThis = this_;
-		this_ = newThis;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__THIS, oldThis, this_));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Activitydiagram_Activity_WriteTrace_AbstractSubStep> getSubSteps() {
 		if (subSteps == null) {
 			subSteps = new EObjectContainmentEList<Activitydiagram_Activity_WriteTrace_AbstractSubStep>(Activitydiagram_Activity_WriteTrace_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__SUB_STEPS);
 		}
 		return subSteps;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activity getCaller() {
+		return (Activity) this.getMse().getCaller();
+		
 	}
 
 	/**
@@ -149,9 +109,6 @@ public class Activitydiagram_Activity_WriteTraceImpl extends BigStepImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__THIS:
-				if (resolve) return getThis();
-				return basicGetThis();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__SUB_STEPS:
 				return getSubSteps();
 		}
@@ -167,9 +124,6 @@ public class Activitydiagram_Activity_WriteTraceImpl extends BigStepImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__THIS:
-				setThis((Activity)newValue);
-				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__SUB_STEPS:
 				getSubSteps().clear();
 				getSubSteps().addAll((Collection<? extends Activitydiagram_Activity_WriteTrace_AbstractSubStep>)newValue);
@@ -186,9 +140,6 @@ public class Activitydiagram_Activity_WriteTraceImpl extends BigStepImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__THIS:
-				setThis((Activity)null);
-				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__SUB_STEPS:
 				getSubSteps().clear();
 				return;
@@ -204,12 +155,24 @@ public class Activitydiagram_Activity_WriteTraceImpl extends BigStepImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__THIS:
-				return this_ != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE__SUB_STEPS:
 				return subSteps != null && !subSteps.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_WRITE_TRACE___GET_CALLER:
+				return getCaller();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //Activitydiagram_Activity_WriteTraceImpl

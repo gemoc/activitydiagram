@@ -2,7 +2,9 @@
  */
 package activitydiagramTrace.States.activitydiagram;
 
-import activitydiagram.ControlFlow;
+import activitydiagramTrace.States.ControlFlow_guard_Value;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,8 +14,7 @@ import activitydiagram.ControlFlow;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedControlFlow#getGuard <em>Guard</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedControlFlow#getOriginalObject <em>Original Object</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedControlFlow#getGuardSequence <em>Guard Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,55 +24,21 @@ import activitydiagram.ControlFlow;
  */
 public interface TracedControlFlow extends TracedActivityEdge {
 	/**
-	 * Returns the value of the '<em><b>Guard</b></em>' reference.
+	 * Returns the value of the '<em><b>Guard Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ControlFlow_guard_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ControlFlow_guard_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Guard</em>' reference isn't clear,
+	 * If the meaning of the '<em>Guard Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Guard</em>' reference.
-	 * @see #setGuard(TracedBooleanVariable)
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedControlFlow_Guard()
-	 * @model
+	 * @return the value of the '<em>Guard Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedControlFlow_GuardSequence()
+	 * @see activitydiagramTrace.States.ControlFlow_guard_Value#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	TracedBooleanVariable getGuard();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.activitydiagram.TracedControlFlow#getGuard <em>Guard</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Guard</em>' reference.
-	 * @see #getGuard()
-	 * @generated
-	 */
-	void setGuard(TracedBooleanVariable value);
-
-	/**
-	 * Returns the value of the '<em><b>Original Object</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Original Object</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Original Object</em>' reference.
-	 * @see #setOriginalObject(ControlFlow)
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedControlFlow_OriginalObject()
-	 * @model
-	 * @generated
-	 */
-	ControlFlow getOriginalObject();
-
-	/**
-	 * Sets the value of the '{@link activitydiagramTrace.States.activitydiagram.TracedControlFlow#getOriginalObject <em>Original Object</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Original Object</em>' reference.
-	 * @see #getOriginalObject()
-	 * @generated
-	 */
-	void setOriginalObject(ControlFlow value);
+	EList<ControlFlow_guard_Value> getGuardSequence();
 
 } // TracedControlFlow

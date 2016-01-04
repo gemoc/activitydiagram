@@ -2,27 +2,27 @@
  */
 package activitydiagramTrace.Steps.impl;
 
-import activitydiagramTrace.Steps.RootFillStep;
+import activitydiagramTrace.Steps.RootImplicitStep;
 import activitydiagramTrace.Steps.StepsPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Root Fill Step</b></em>'.
+ * An implementation of the model object '<em><b>Root Implicit Step</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class RootFillStepImpl extends SmallStepImpl implements RootFillStep {
+public class RootImplicitStepImpl extends SmallStepImpl implements RootImplicitStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RootFillStepImpl() {
+	protected RootImplicitStepImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class RootFillStepImpl extends SmallStepImpl implements RootFillStep {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StepsPackage.Literals.ROOT_FILL_STEP;
+		return StepsPackage.Literals.ROOT_IMPLICIT_STEP;
 	}
 
-} //RootFillStepImpl
+} //RootImplicitStepImpl
