@@ -16,9 +16,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge#getOffersSequence <em>Offers Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge#getTargetSequence <em>Target Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge#getSourceSequence <em>Source Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge#getTargetSequence <em>Target Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedActivityEdge#getOffersSequence <em>Offers Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,22 +28,22 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface TracedActivityEdge extends TracedNamedElement {
 	/**
-	 * Returns the value of the '<em><b>Offers Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.ActivityEdge_offers_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityEdge_offers_Value#getParent <em>Parent</em>}'.
+	 * Returns the value of the '<em><b>Source Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ActivityEdge_source_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityEdge_source_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Offers Sequence</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Source Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offers Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityEdge_OffersSequence()
-	 * @see activitydiagramTrace.States.ActivityEdge_offers_Value#getParent
+	 * @return the value of the '<em>Source Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityEdge_SourceSequence()
+	 * @see activitydiagramTrace.States.ActivityEdge_source_Value#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<ActivityEdge_offers_Value> getOffersSequence();
+	EList<ActivityEdge_source_Value> getSourceSequence();
 
 	/**
 	 * Returns the value of the '<em><b>Target Sequence</b></em>' containment reference list.
@@ -64,21 +64,21 @@ public interface TracedActivityEdge extends TracedNamedElement {
 	EList<ActivityEdge_target_Value> getTargetSequence();
 
 	/**
-	 * Returns the value of the '<em><b>Source Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.ActivityEdge_source_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityEdge_source_Value#getParent <em>Parent</em>}'.
+	 * Returns the value of the '<em><b>Offers Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.ActivityEdge_offers_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.ActivityEdge_offers_Value#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Source Sequence</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Offers Sequence</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Source Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityEdge_SourceSequence()
-	 * @see activitydiagramTrace.States.ActivityEdge_source_Value#getParent
+	 * @return the value of the '<em>Offers Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedActivityEdge_OffersSequence()
+	 * @see activitydiagramTrace.States.ActivityEdge_offers_Value#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<ActivityEdge_source_Value> getSourceSequence();
+	EList<ActivityEdge_offers_Value> getOffersSequence();
 
 } // TracedActivityEdge

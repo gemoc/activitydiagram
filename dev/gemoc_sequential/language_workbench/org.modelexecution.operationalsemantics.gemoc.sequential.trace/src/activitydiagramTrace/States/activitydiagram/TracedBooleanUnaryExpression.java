@@ -15,8 +15,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedBooleanUnaryExpression#getOperatorSequence <em>Operator Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedBooleanUnaryExpression#getOperandSequence <em>Operand Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedBooleanUnaryExpression#getOperatorSequence <em>Operator Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,24 +25,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface TracedBooleanUnaryExpression extends TracedBooleanExpression {
-	/**
-	 * Returns the value of the '<em><b>Operator Sequence</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.BooleanUnaryExpression_operator_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.BooleanUnaryExpression_operator_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Operator Sequence</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operator Sequence</em>' containment reference list.
-	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedBooleanUnaryExpression_OperatorSequence()
-	 * @see activitydiagramTrace.States.BooleanUnaryExpression_operator_Value#getParent
-	 * @model opposite="parent" containment="true"
-	 * @generated
-	 */
-	EList<BooleanUnaryExpression_operator_Value> getOperatorSequence();
-
 	/**
 	 * Returns the value of the '<em><b>Operand Sequence</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.BooleanUnaryExpression_operand_Value}.
@@ -60,5 +42,23 @@ public interface TracedBooleanUnaryExpression extends TracedBooleanExpression {
 	 * @generated
 	 */
 	EList<BooleanUnaryExpression_operand_Value> getOperandSequence();
+
+	/**
+	 * Returns the value of the '<em><b>Operator Sequence</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.BooleanUnaryExpression_operator_Value}.
+	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.BooleanUnaryExpression_operator_Value#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Operator Sequence</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operator Sequence</em>' containment reference list.
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedBooleanUnaryExpression_OperatorSequence()
+	 * @see activitydiagramTrace.States.BooleanUnaryExpression_operator_Value#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<BooleanUnaryExpression_operator_Value> getOperatorSequence();
 
 } // TracedBooleanUnaryExpression

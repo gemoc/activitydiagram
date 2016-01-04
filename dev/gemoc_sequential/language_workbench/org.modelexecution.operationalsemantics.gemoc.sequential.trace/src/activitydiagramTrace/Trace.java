@@ -56,41 +56,41 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link activitydiagramTrace.Trace#getStatesTrace <em>States Trace</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getRootSteps <em>Root Steps</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedForkedTokens <em>Activitydiagram traced Forked Tokens</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedControlFlows <em>Activitydiagram traced Control Flows</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerValues <em>Activitydiagram traced Integer Values</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanVariables <em>Activitydiagram traced Boolean Variables</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedOffers <em>Activitydiagram traced Offers</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerCalculationExpressions <em>Activitydiagram traced Integer Calculation Expressions</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedForkNodes <em>Activitydiagram traced Fork Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedJoinNodes <em>Activitydiagram traced Join Nodes</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedMergeNodes <em>Activitydiagram traced Merge Nodes</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerComparisonExpressions <em>Activitydiagram traced Integer Comparison Expressions</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedForkNodes <em>Activitydiagram traced Fork Nodes</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanVariables <em>Activitydiagram traced Boolean Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInitialNodes <em>Activitydiagram traced Initial Nodes</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedActivitys <em>Activitydiagram traced Activitys</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanUnaryExpressions <em>Activitydiagram traced Boolean Unary Expressions</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInputValues <em>Activitydiagram traced Input Values</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedActivityFinalNodes <em>Activitydiagram traced Activity Final Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedTraces <em>Activitydiagram traced Traces</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanValues <em>Activitydiagram traced Boolean Values</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedControlTokens <em>Activitydiagram traced Control Tokens</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedControlFlows <em>Activitydiagram traced Control Flows</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedMergeNodes <em>Activitydiagram traced Merge Nodes</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedDecisionNodes <em>Activitydiagram traced Decision Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerVariables <em>Activitydiagram traced Integer Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedOpaqueActions <em>Activitydiagram traced Opaque Actions</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInputs <em>Activitydiagram traced Inputs</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInputValues <em>Activitydiagram traced Input Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanUnaryExpressions <em>Activitydiagram traced Boolean Unary Expressions</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanBinaryExpressions <em>Activitydiagram traced Boolean Binary Expressions</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedDecisionNodes <em>Activitydiagram traced Decision Nodes</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_TakeOfferdTokens1_Sequence <em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedBooleanValues <em>Activitydiagram traced Boolean Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedForkedTokens <em>Activitydiagram traced Forked Tokens</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedControlTokens <em>Activitydiagram traced Control Tokens</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedInputs <em>Activitydiagram traced Inputs</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerComparisonExpressions <em>Activitydiagram traced Integer Comparison Expressions</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedActivitys <em>Activitydiagram traced Activitys</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerValues <em>Activitydiagram traced Integer Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedOffers <em>Activitydiagram traced Offers</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedIntegerCalculationExpressions <em>Activitydiagram traced Integer Calculation Expressions</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_tracedActivityFinalNodes <em>Activitydiagram traced Activity Final Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_SendOffers1_Sequence <em>Activitydiagram Activity Node Send Offers1 Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Variable_Init_Sequence <em>Activitydiagram Variable Init Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Terminate_Sequence <em>Activitydiagram Activity Node Terminate Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_AddTokens1_Sequence <em>Activitydiagram Activity Node Add Tokens1 Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_InitializeContext_Sequence <em>Activitydiagram Activity Initialize Context Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_TakeOfferdTokens1_Sequence <em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Variable_Execute_Sequence <em>Activitydiagram Variable Execute Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_RemoveToken1_Sequence <em>Activitydiagram Activity Node Remove Token1 Sequence</em>}</li>
- *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_Execute_Sequence <em>Activitydiagram Activity Execute Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Execute_Sequence <em>Activitydiagram Activity Node Execute Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_Execute_Sequence <em>Activitydiagram Activity Execute Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Variable_Init_Sequence <em>Activitydiagram Variable Init Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_InitializeContext_Sequence <em>Activitydiagram Activity Initialize Context Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_AddTokens1_Sequence <em>Activitydiagram Activity Node Add Tokens1 Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_Terminate_Sequence <em>Activitydiagram Activity Node Terminate Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_WriteTrace_Sequence <em>Activitydiagram Activity Write Trace Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_Activity_Reset_Sequence <em>Activitydiagram Activity Reset Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.Trace#getActivitydiagram_ActivityNode_RemoveToken1_Sequence <em>Activitydiagram Activity Node Remove Token1 Sequence</em>}</li>
  * </ul>
  * </p>
  *
@@ -132,100 +132,20 @@ public interface Trace extends EObject {
 	EList<Step> getRootSteps();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Forked Tokens</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedForkedToken}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Join Nodes</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedJoinNode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Forked Tokens</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Join Nodes</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Forked Tokens</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedForkedTokens()
+	 * @return the value of the '<em>Activitydiagram traced Join Nodes</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedJoinNodes()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<TracedForkedToken> getActivitydiagram_tracedForkedTokens();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Control Flows</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedControlFlow}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Control Flows</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Control Flows</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedControlFlows()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedControlFlow> getActivitydiagram_tracedControlFlows();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Integer Values</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Integer Values</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedIntegerValues()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedIntegerValue> getActivitydiagram_tracedIntegerValues();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanVariable}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Boolean Variables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Boolean Variables</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedBooleanVariables()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedBooleanVariable> getActivitydiagram_tracedBooleanVariables();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Offers</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedOffer}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Offers</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Offers</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedOffers()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedOffer> getActivitydiagram_tracedOffers();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Integer Calculation Expressions</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerCalculationExpression}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Integer Calculation Expressions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Integer Calculation Expressions</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedIntegerCalculationExpressions()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedIntegerCalculationExpression> getActivitydiagram_tracedIntegerCalculationExpressions();
+	EList<TracedJoinNode> getActivitydiagram_tracedJoinNodes();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Fork Nodes</b></em>' containment reference list.
@@ -244,52 +164,20 @@ public interface Trace extends EObject {
 	EList<TracedForkNode> getActivitydiagram_tracedForkNodes();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Join Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedJoinNode}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Join Nodes</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Boolean Variables</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Join Nodes</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedJoinNodes()
+	 * @return the value of the '<em>Activitydiagram traced Boolean Variables</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedBooleanVariables()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<TracedJoinNode> getActivitydiagram_tracedJoinNodes();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Merge Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedMergeNode}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Merge Nodes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Merge Nodes</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedMergeNodes()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedMergeNode> getActivitydiagram_tracedMergeNodes();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Integer Comparison Expressions</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerComparisonExpression}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Integer Comparison Expressions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Integer Comparison Expressions</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedIntegerComparisonExpressions()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedIntegerComparisonExpression> getActivitydiagram_tracedIntegerComparisonExpressions();
+	EList<TracedBooleanVariable> getActivitydiagram_tracedBooleanVariables();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Initial Nodes</b></em>' containment reference list.
@@ -308,70 +196,6 @@ public interface Trace extends EObject {
 	EList<TracedInitialNode> getActivitydiagram_tracedInitialNodes();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Activitys</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedActivity}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Activitys</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Activitys</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedActivitys()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedActivity> getActivitydiagram_tracedActivitys();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Unary Expressions</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanUnaryExpression}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Boolean Unary Expressions</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Boolean Unary Expressions</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedBooleanUnaryExpressions()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedBooleanUnaryExpression> getActivitydiagram_tracedBooleanUnaryExpressions();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Input Values</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedInputValue}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Input Values</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Input Values</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedInputValues()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedInputValue> getActivitydiagram_tracedInputValues();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Activity Final Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Activity Final Nodes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Activity Final Nodes</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedActivityFinalNodes()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedActivityFinalNode> getActivitydiagram_tracedActivityFinalNodes();
-
-	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Traces</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedTrace}.
 	 * <!-- begin-user-doc -->
@@ -388,36 +212,52 @@ public interface Trace extends EObject {
 	EList<TracedTrace> getActivitydiagram_tracedTraces();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanValue}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Control Flows</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedControlFlow}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Boolean Values</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Control Flows</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Boolean Values</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedBooleanValues()
+	 * @return the value of the '<em>Activitydiagram traced Control Flows</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedControlFlows()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<TracedBooleanValue> getActivitydiagram_tracedBooleanValues();
+	EList<TracedControlFlow> getActivitydiagram_tracedControlFlows();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Control Tokens</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedControlToken}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Merge Nodes</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedMergeNode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Control Tokens</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Merge Nodes</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Control Tokens</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedControlTokens()
+	 * @return the value of the '<em>Activitydiagram traced Merge Nodes</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedMergeNodes()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<TracedControlToken> getActivitydiagram_tracedControlTokens();
+	EList<TracedMergeNode> getActivitydiagram_tracedMergeNodes();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Decision Nodes</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedDecisionNode}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Decision Nodes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Decision Nodes</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedDecisionNodes()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedDecisionNode> getActivitydiagram_tracedDecisionNodes();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Integer Variables</b></em>' containment reference list.
@@ -452,20 +292,36 @@ public interface Trace extends EObject {
 	EList<TracedOpaqueAction> getActivitydiagram_tracedOpaqueActions();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedInput}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Input Values</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedInputValue}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Inputs</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Input Values</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Inputs</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedInputs()
+	 * @return the value of the '<em>Activitydiagram traced Input Values</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedInputValues()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<TracedInput> getActivitydiagram_tracedInputs();
+	EList<TracedInputValue> getActivitydiagram_tracedInputValues();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Unary Expressions</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanUnaryExpression}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Boolean Unary Expressions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Boolean Unary Expressions</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedBooleanUnaryExpressions()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedBooleanUnaryExpression> getActivitydiagram_tracedBooleanUnaryExpressions();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Binary Expressions</b></em>' containment reference list.
@@ -484,36 +340,164 @@ public interface Trace extends EObject {
 	EList<TracedBooleanBinaryExpression> getActivitydiagram_tracedBooleanBinaryExpressions();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Decision Nodes</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedDecisionNode}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanValue}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Decision Nodes</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Boolean Values</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Decision Nodes</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedDecisionNodes()
+	 * @return the value of the '<em>Activitydiagram traced Boolean Values</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedBooleanValues()
 	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<TracedDecisionNode> getActivitydiagram_tracedDecisionNodes();
+	EList<TracedBooleanValue> getActivitydiagram_tracedBooleanValues();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1}.
+	 * Returns the value of the '<em><b>Activitydiagram traced Forked Tokens</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedForkedToken}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram traced Forked Tokens</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence()
-	 * @model
+	 * @return the value of the '<em>Activitydiagram traced Forked Tokens</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedForkedTokens()
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_TakeOfferdTokens1> getActivitydiagram_ActivityNode_TakeOfferdTokens1_Sequence();
+	EList<TracedForkedToken> getActivitydiagram_tracedForkedTokens();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Control Tokens</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedControlToken}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Control Tokens</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Control Tokens</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedControlTokens()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedControlToken> getActivitydiagram_tracedControlTokens();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Inputs</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedInput}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Inputs</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Inputs</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedInputs()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedInput> getActivitydiagram_tracedInputs();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Integer Comparison Expressions</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerComparisonExpression}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Integer Comparison Expressions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Integer Comparison Expressions</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedIntegerComparisonExpressions()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedIntegerComparisonExpression> getActivitydiagram_tracedIntegerComparisonExpressions();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Activitys</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedActivity}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Activitys</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Activitys</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedActivitys()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedActivity> getActivitydiagram_tracedActivitys();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Integer Values</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Integer Values</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedIntegerValues()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedIntegerValue> getActivitydiagram_tracedIntegerValues();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Offers</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedOffer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Offers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Offers</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedOffers()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedOffer> getActivitydiagram_tracedOffers();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Integer Calculation Expressions</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerCalculationExpression}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Integer Calculation Expressions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Integer Calculation Expressions</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedIntegerCalculationExpressions()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedIntegerCalculationExpression> getActivitydiagram_tracedIntegerCalculationExpressions();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram traced Activity Final Nodes</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram traced Activity Final Nodes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram traced Activity Final Nodes</em>' containment reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_tracedActivityFinalNodes()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<TracedActivityFinalNode> getActivitydiagram_tracedActivityFinalNodes();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Node Send Offers1 Sequence</b></em>' reference list.
@@ -532,68 +516,20 @@ public interface Trace extends EObject {
 	EList<Activitydiagram_ActivityNode_SendOffers1> getActivitydiagram_ActivityNode_SendOffers1_Sequence();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Variable Init Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Variable Init Sequence</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Variable Init Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_Variable_Init_Sequence()
+	 * @return the value of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence()
 	 * @model
 	 * @generated
 	 */
-	EList<Activitydiagram_Variable_Init> getActivitydiagram_Variable_Init_Sequence();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Terminate Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Terminate Sequence</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Terminate Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_Terminate_Sequence()
-	 * @model
-	 * @generated
-	 */
-	EList<Activitydiagram_ActivityNode_Terminate> getActivitydiagram_ActivityNode_Terminate_Sequence();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Add Tokens1 Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Add Tokens1 Sequence</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Add Tokens1 Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_AddTokens1_Sequence()
-	 * @model
-	 * @generated
-	 */
-	EList<Activitydiagram_ActivityNode_AddTokens1> getActivitydiagram_ActivityNode_AddTokens1_Sequence();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Initialize Context Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Initialize Context Sequence</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Initialize Context Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_Activity_InitializeContext_Sequence()
-	 * @model
-	 * @generated
-	 */
-	EList<Activitydiagram_Activity_InitializeContext> getActivitydiagram_Activity_InitializeContext_Sequence();
+	EList<Activitydiagram_ActivityNode_TakeOfferdTokens1> getActivitydiagram_ActivityNode_TakeOfferdTokens1_Sequence();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Variable Execute Sequence</b></em>' reference list.
@@ -612,20 +548,20 @@ public interface Trace extends EObject {
 	EList<Activitydiagram_Variable_Execute> getActivitydiagram_Variable_Execute_Sequence();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Remove Token1 Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1}.
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Execute Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Remove Token1 Sequence</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Activity Node Execute Sequence</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Remove Token1 Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_RemoveToken1_Sequence()
+	 * @return the value of the '<em>Activitydiagram Activity Node Execute Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_Execute_Sequence()
 	 * @model
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_RemoveToken1> getActivitydiagram_ActivityNode_RemoveToken1_Sequence();
+	EList<Activitydiagram_ActivityNode_Execute> getActivitydiagram_ActivityNode_Execute_Sequence();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Execute Sequence</b></em>' reference list.
@@ -644,20 +580,68 @@ public interface Trace extends EObject {
 	EList<Activitydiagram_Activity_Execute> getActivitydiagram_Activity_Execute_Sequence();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram Activity Node Execute Sequence</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute}.
+	 * Returns the value of the '<em><b>Activitydiagram Variable Init Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activitydiagram Activity Node Execute Sequence</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Activitydiagram Variable Init Sequence</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram Activity Node Execute Sequence</em>' reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_Execute_Sequence()
+	 * @return the value of the '<em>Activitydiagram Variable Init Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_Variable_Init_Sequence()
 	 * @model
 	 * @generated
 	 */
-	EList<Activitydiagram_ActivityNode_Execute> getActivitydiagram_ActivityNode_Execute_Sequence();
+	EList<Activitydiagram_Variable_Init> getActivitydiagram_Variable_Init_Sequence();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Initialize Context Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Initialize Context Sequence</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Initialize Context Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_Activity_InitializeContext_Sequence()
+	 * @model
+	 * @generated
+	 */
+	EList<Activitydiagram_Activity_InitializeContext> getActivitydiagram_Activity_InitializeContext_Sequence();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Add Tokens1 Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Node Add Tokens1 Sequence</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Node Add Tokens1 Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_AddTokens1_Sequence()
+	 * @model
+	 * @generated
+	 */
+	EList<Activitydiagram_ActivityNode_AddTokens1> getActivitydiagram_ActivityNode_AddTokens1_Sequence();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Terminate Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Node Terminate Sequence</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Node Terminate Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_Terminate_Sequence()
+	 * @model
+	 * @generated
+	 */
+	EList<Activitydiagram_ActivityNode_Terminate> getActivitydiagram_ActivityNode_Terminate_Sequence();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram Activity Write Trace Sequence</b></em>' reference list.
@@ -690,5 +674,21 @@ public interface Trace extends EObject {
 	 * @generated
 	 */
 	EList<Activitydiagram_Activity_Reset> getActivitydiagram_Activity_Reset_Sequence();
+
+	/**
+	 * Returns the value of the '<em><b>Activitydiagram Activity Node Remove Token1 Sequence</b></em>' reference list.
+	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_RemoveToken1}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activitydiagram Activity Node Remove Token1 Sequence</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activitydiagram Activity Node Remove Token1 Sequence</em>' reference list.
+	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getTrace_Activitydiagram_ActivityNode_RemoveToken1_Sequence()
+	 * @model
+	 * @generated
+	 */
+	EList<Activitydiagram_ActivityNode_RemoveToken1> getActivitydiagram_ActivityNode_RemoveToken1_Sequence();
 
 } // Trace

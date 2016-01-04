@@ -387,6 +387,97 @@ public interface StepsPackage extends EPackage {
 	int ROOT_IMPLICIT_STEP_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl <em>Activitydiagram Activity Node Send Offers1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_SendOffers1()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1 = 4;
+
+	/**
+	 * The feature id for the '<em><b>Mse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__MSE = SMALL_STEP__MSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__PARAMETERS = SMALL_STEP__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__RESULT = SMALL_STEP__RESULT;
+
+	/**
+	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
+
+	/**
+	 * The feature id for the '<em><b>Starting State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__STARTING_STATE = SMALL_STEP__STARTING_STATE;
+
+	/**
+	 * The feature id for the '<em><b>Ending State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__ENDING_STATE = SMALL_STEP__ENDING_STATE;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Send Offers1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Caller</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Send Offers1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TakeOfferdTokens1Impl <em>Activitydiagram Activity Node Take Offerd Tokens1</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -394,7 +485,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_TakeOfferdTokens1()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1 = 4;
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1 = 5;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -494,7 +585,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_ABSTRACT_SUB_STEP = 5;
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_ABSTRACT_SUB_STEP = 6;
 
 	/**
 	 * The number of structural features of the '<em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>' class.
@@ -522,7 +613,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_IMPLICIT_STEP = 6;
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_IMPLICIT_STEP = 7;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -604,7 +695,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_RemoveToken1()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1 = 7;
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1 = 8;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -688,580 +779,6 @@ public interface StepsPackage extends EPackage {
 	int ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_ABSTRACT_SUB_STEP_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl <em>Activitydiagram Activity Node Send Offers1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_SendOffers1()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1 = 8;
-
-	/**
-	 * The feature id for the '<em><b>Mse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__MSE = SMALL_STEP__MSE;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__PARAMETERS = SMALL_STEP__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__RESULT = SMALL_STEP__RESULT;
-
-	/**
-	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__STARTING_STATE = SMALL_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1__ENDING_STATE = SMALL_STEP__ENDING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Send Offers1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Caller</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Send Offers1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl <em>Activitydiagram Variable Init</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Init()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT = 9;
-
-	/**
-	 * The feature id for the '<em><b>Mse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT__MSE = SMALL_STEP__MSE;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT__PARAMETERS = SMALL_STEP__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT__RESULT = SMALL_STEP__RESULT;
-
-	/**
-	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE = SMALL_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE = SMALL_STEP__ENDING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Variable Init</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Caller</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Variable Init</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_VARIABLE_INIT_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl <em>Activitydiagram Activity Node Terminate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Terminate()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Mse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__MSE = SMALL_STEP__MSE;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__PARAMETERS = SMALL_STEP__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__RESULT = SMALL_STEP__RESULT;
-
-	/**
-	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__STARTING_STATE = SMALL_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__ENDING_STATE = SMALL_STEP__ENDING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Terminate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Caller</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Terminate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl <em>Activitydiagram Activity Node Add Tokens1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1 = 11;
-
-	/**
-	 * The feature id for the '<em><b>Mse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__MSE = BIG_STEP__MSE;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__PARAMETERS = BIG_STEP__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__RESULT = BIG_STEP__RESULT;
-
-	/**
-	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP = BIG_STEP__LOGICAL_STEP;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE = BIG_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE = BIG_STEP__ENDING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Sub Steps</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS = BIG_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Add Tokens1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_FEATURE_COUNT = BIG_STEP_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Caller</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1___GET_CALLER = BIG_STEP_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Add Tokens1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_OPERATION_COUNT = BIG_STEP_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP = 12;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP = 13;
-
-	/**
-	 * The feature id for the '<em><b>Mse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__MSE = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__RESULT = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl <em>Activitydiagram Activity Initialize Context</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_InitializeContext()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT = 14;
-
-	/**
-	 * The feature id for the '<em><b>Mse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__MSE = SMALL_STEP__MSE;
-
-	/**
-	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__PARAMETERS = SMALL_STEP__PARAMETERS;
-
-	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__RESULT = SMALL_STEP__RESULT;
-
-	/**
-	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
-
-	/**
-	 * The feature id for the '<em><b>Starting State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__STARTING_STATE = SMALL_STEP__STARTING_STATE;
-
-	/**
-	 * The feature id for the '<em><b>Ending State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__ENDING_STATE = SMALL_STEP__ENDING_STATE;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Initialize Context</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Caller</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Initialize Context</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_ExecuteImpl <em>Activitydiagram Variable Execute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1269,7 +786,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Execute()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_VARIABLE_EXECUTE = 15;
+	int ACTIVITYDIAGRAM_VARIABLE_EXECUTE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -1353,6 +870,316 @@ public interface StepsPackage extends EPackage {
 	int ACTIVITYDIAGRAM_VARIABLE_EXECUTE_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl <em>Activitydiagram Activity Node Execute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Mse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__MSE = BIG_STEP__MSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__PARAMETERS = BIG_STEP__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__RESULT = BIG_STEP__RESULT;
+
+	/**
+	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__LOGICAL_STEP = BIG_STEP__LOGICAL_STEP;
+
+	/**
+	 * The feature id for the '<em><b>Starting State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE = BIG_STEP__STARTING_STATE;
+
+	/**
+	 * The feature id for the '<em><b>Ending State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE = BIG_STEP__ENDING_STATE;
+
+	/**
+	 * The feature id for the '<em><b>Sub Steps</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS = BIG_STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Execute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_FEATURE_COUNT = BIG_STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Caller</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE___GET_CALLER = BIG_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Execute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_OPERATION_COUNT = BIG_STEP_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl <em>Activitydiagram Activity Node Execute Abstract Sub Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_AbstractSubStep()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP = 11;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Execute Abstract Sub Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Execute Abstract Sub Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl <em>Activitydiagram Activity Node Execute Implicit Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_ImplicitStep()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP = 12;
+
+	/**
+	 * The feature id for the '<em><b>Mse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__MSE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__RESULT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Starting State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Ending State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Execute Implicit Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Execute Implicit Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl <em>Activitydiagram Activity Node Add Tokens1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1 = 13;
+
+	/**
+	 * The feature id for the '<em><b>Mse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__MSE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__RESULT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Starting State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Ending State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Sub Steps</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Add Tokens1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Get Caller</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1___GET_CALLER = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Add Tokens1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_ExecuteImpl <em>Activitydiagram Activity Execute</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1360,7 +1187,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_Execute()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE = 16;
+	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -1460,7 +1287,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_Execute_AbstractSubStep()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP = 17;
+	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP = 15;
 
 	/**
 	 * The number of structural features of the '<em>Activitydiagram Activity Execute Abstract Sub Step</em>' class.
@@ -1488,7 +1315,7 @@ public interface StepsPackage extends EPackage {
 	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_Execute_ImplicitStep()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_IMPLICIT_STEP = 18;
+	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_IMPLICIT_STEP = 16;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -1563,14 +1390,14 @@ public interface StepsPackage extends EPackage {
 	int ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_IMPLICIT_STEP_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl <em>Activitydiagram Activity Node Execute</em>}' class.
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl <em>Activitydiagram Variable Init</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute()
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Init()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE = 19;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -1579,7 +1406,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__MSE = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT__MSE = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
@@ -1588,7 +1415,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' attribute list.
@@ -1597,7 +1424,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__RESULT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT__RESULT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
@@ -1606,7 +1433,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Starting State</b></em>' reference.
@@ -1615,7 +1442,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Ending State</b></em>' reference.
@@ -1624,25 +1451,16 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Sub Steps</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Activitydiagram Variable Init</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Execute</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 7;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Get Caller</em>' operation.
@@ -1651,54 +1469,26 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE___GET_CALLER = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT___GET_CALLER = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Execute</em>' class.
+	 * The number of operations of the '<em>Activitydiagram Variable Init</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 1;
+	int ACTIVITYDIAGRAM_VARIABLE_INIT_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl <em>Activitydiagram Activity Node Execute Abstract Sub Step</em>}' class.
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl <em>Activitydiagram Activity Initialize Context</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_AbstractSubStep()
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_InitializeContext()
 	 * @generated
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP = 20;
-
-	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Execute Abstract Sub Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Execute Abstract Sub Step</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl <em>Activitydiagram Activity Node Execute Implicit Step</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl
-	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_ImplicitStep()
-	 * @generated
-	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP = 21;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Mse</b></em>' reference.
@@ -1707,7 +1497,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__MSE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__MSE = SMALL_STEP__MSE;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
@@ -1716,7 +1506,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__PARAMETERS = SMALL_STEP__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' attribute list.
@@ -1725,7 +1515,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__RESULT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__RESULT = SMALL_STEP__RESULT;
 
 	/**
 	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
@@ -1734,7 +1524,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Starting State</b></em>' reference.
@@ -1743,7 +1533,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__STARTING_STATE = SMALL_STEP__STARTING_STATE;
 
 	/**
 	 * The feature id for the '<em><b>Ending State</b></em>' reference.
@@ -1752,25 +1542,235 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT__ENDING_STATE = SMALL_STEP__ENDING_STATE;
 
 	/**
-	 * The number of structural features of the '<em>Activitydiagram Activity Node Execute Implicit Step</em>' class.
+	 * The number of structural features of the '<em>Activitydiagram Activity Initialize Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Activitydiagram Activity Node Execute Implicit Step</em>' class.
+	 * The operation id for the '<em>Get Caller</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Initialize Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP = 19;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP = 20;
+
+	/**
+	 * The feature id for the '<em><b>Mse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__MSE = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__PARAMETERS = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__RESULT = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Starting State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__STARTING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Ending State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__ENDING_STATE = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP_FEATURE_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP_OPERATION_COUNT = ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl <em>Activitydiagram Activity Node Terminate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl
+	 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Terminate()
+	 * @generated
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Mse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__MSE = SMALL_STEP__MSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__PARAMETERS = SMALL_STEP__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__RESULT = SMALL_STEP__RESULT;
+
+	/**
+	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__LOGICAL_STEP = SMALL_STEP__LOGICAL_STEP;
+
+	/**
+	 * The feature id for the '<em><b>Starting State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__STARTING_STATE = SMALL_STEP__STARTING_STATE;
+
+	/**
+	 * The feature id for the '<em><b>Ending State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE__ENDING_STATE = SMALL_STEP__ENDING_STATE;
+
+	/**
+	 * The number of structural features of the '<em>Activitydiagram Activity Node Terminate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE_FEATURE_COUNT = SMALL_STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Caller</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE___GET_CALLER = SMALL_STEP_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Activitydiagram Activity Node Terminate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE_OPERATION_COUNT = SMALL_STEP_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_WriteTraceImpl <em>Activitydiagram Activity Write Trace</em>}' class.
@@ -2137,6 +2137,26 @@ public interface StepsPackage extends EPackage {
 	EClass getRootImplicitStep();
 
 	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1 <em>Activitydiagram Activity Node Send Offers1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Send Offers1</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1
+	 * @generated
+	 */
+	EClass getActivitydiagram_ActivityNode_SendOffers1();
+
+	/**
+	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1#getCaller() <em>Get Caller</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Caller</em>' operation.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1#getCaller()
+	 * @generated
+	 */
+	EOperation getActivitydiagram_ActivityNode_SendOffers1__GetCaller();
+
+	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1 <em>Activitydiagram Activity Node Take Offerd Tokens1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2208,64 +2228,75 @@ public interface StepsPackage extends EPackage {
 	EOperation getActivitydiagram_ActivityNode_RemoveToken1__GetCaller();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1 <em>Activitydiagram Activity Node Send Offers1</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute <em>Activitydiagram Variable Execute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Send Offers1</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1
+	 * @return the meta object for class '<em>Activitydiagram Variable Execute</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Execute
 	 * @generated
 	 */
-	EClass getActivitydiagram_ActivityNode_SendOffers1();
+	EClass getActivitydiagram_Variable_Execute();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1#getCaller() <em>Get Caller</em>}' operation.
+	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute#getCaller() <em>Get Caller</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Caller</em>' operation.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_SendOffers1#getCaller()
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Execute#getCaller()
 	 * @generated
 	 */
-	EOperation getActivitydiagram_ActivityNode_SendOffers1__GetCaller();
+	EOperation getActivitydiagram_Variable_Execute__GetCaller();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init <em>Activitydiagram Variable Init</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute <em>Activitydiagram Activity Node Execute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Variable Init</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Init
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Execute</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute
 	 * @generated
 	 */
-	EClass getActivitydiagram_Variable_Init();
+	EClass getActivitydiagram_ActivityNode_Execute();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init#getCaller() <em>Get Caller</em>}' operation.
+	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getSubSteps <em>Sub Steps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Caller</em>' operation.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Init#getCaller()
+	 * @return the meta object for the containment reference list '<em>Sub Steps</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getSubSteps()
+	 * @see #getActivitydiagram_ActivityNode_Execute()
 	 * @generated
 	 */
-	EOperation getActivitydiagram_Variable_Init__GetCaller();
+	EReference getActivitydiagram_ActivityNode_Execute_SubSteps();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate <em>Activitydiagram Activity Node Terminate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Terminate</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate
-	 * @generated
-	 */
-	EClass getActivitydiagram_ActivityNode_Terminate();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate#getCaller() <em>Get Caller</em>}' operation.
+	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getCaller() <em>Get Caller</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Caller</em>' operation.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate#getCaller()
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getCaller()
 	 * @generated
 	 */
-	EOperation getActivitydiagram_ActivityNode_Terminate__GetCaller();
+	EOperation getActivitydiagram_ActivityNode_Execute__GetCaller();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep <em>Activitydiagram Activity Node Execute Abstract Sub Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Execute Abstract Sub Step</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep
+	 * @generated
+	 */
+	EClass getActivitydiagram_ActivityNode_Execute_AbstractSubStep();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_ImplicitStep <em>Activitydiagram Activity Node Execute Implicit Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Execute Implicit Step</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_ImplicitStep
+	 * @generated
+	 */
+	EClass getActivitydiagram_ActivityNode_Execute_ImplicitStep();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1 <em>Activitydiagram Activity Node Add Tokens1</em>}'.
@@ -2297,66 +2328,6 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getActivitydiagram_ActivityNode_AddTokens1__GetCaller();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep
-	 * @generated
-	 */
-	EClass getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep
-	 * @generated
-	 */
-	EClass getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext <em>Activitydiagram Activity Initialize Context</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Initialize Context</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext
-	 * @generated
-	 */
-	EClass getActivitydiagram_Activity_InitializeContext();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext#getCaller() <em>Get Caller</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Caller</em>' operation.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext#getCaller()
-	 * @generated
-	 */
-	EOperation getActivitydiagram_Activity_InitializeContext__GetCaller();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute <em>Activitydiagram Variable Execute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Variable Execute</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Execute
-	 * @generated
-	 */
-	EClass getActivitydiagram_Variable_Execute();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Execute#getCaller() <em>Get Caller</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Caller</em>' operation.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Execute#getCaller()
-	 * @generated
-	 */
-	EOperation getActivitydiagram_Variable_Execute__GetCaller();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_Execute <em>Activitydiagram Activity Execute</em>}'.
@@ -2410,55 +2381,84 @@ public interface StepsPackage extends EPackage {
 	EClass getActivitydiagram_Activity_Execute_ImplicitStep();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute <em>Activitydiagram Activity Node Execute</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init <em>Activitydiagram Variable Init</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Execute</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute
+	 * @return the meta object for class '<em>Activitydiagram Variable Init</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Init
 	 * @generated
 	 */
-	EClass getActivitydiagram_ActivityNode_Execute();
+	EClass getActivitydiagram_Variable_Init();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getSubSteps <em>Sub Steps</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Steps</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getSubSteps()
-	 * @see #getActivitydiagram_ActivityNode_Execute()
-	 * @generated
-	 */
-	EReference getActivitydiagram_ActivityNode_Execute_SubSteps();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getCaller() <em>Get Caller</em>}' operation.
+	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_Variable_Init#getCaller() <em>Get Caller</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Caller</em>' operation.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute#getCaller()
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Variable_Init#getCaller()
 	 * @generated
 	 */
-	EOperation getActivitydiagram_ActivityNode_Execute__GetCaller();
+	EOperation getActivitydiagram_Variable_Init__GetCaller();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep <em>Activitydiagram Activity Node Execute Abstract Sub Step</em>}'.
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext <em>Activitydiagram Activity Initialize Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Execute Abstract Sub Step</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep
+	 * @return the meta object for class '<em>Activitydiagram Activity Initialize Context</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext
 	 * @generated
 	 */
-	EClass getActivitydiagram_ActivityNode_Execute_AbstractSubStep();
+	EClass getActivitydiagram_Activity_InitializeContext();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_ImplicitStep <em>Activitydiagram Activity Node Execute Implicit Step</em>}'.
+	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext#getCaller() <em>Get Caller</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Activitydiagram Activity Node Execute Implicit Step</em>'.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_ImplicitStep
+	 * @return the meta object for the '<em>Get Caller</em>' operation.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_Activity_InitializeContext#getCaller()
 	 * @generated
 	 */
-	EClass getActivitydiagram_ActivityNode_Execute_ImplicitStep();
+	EOperation getActivitydiagram_Activity_InitializeContext__GetCaller();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep
+	 * @generated
+	 */
+	EClass getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep
+	 * @generated
+	 */
+	EClass getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate <em>Activitydiagram Activity Node Terminate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activitydiagram Activity Node Terminate</em>'.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate
+	 * @generated
+	 */
+	EClass getActivitydiagram_ActivityNode_Terminate();
+
+	/**
+	 * Returns the meta object for the '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate#getCaller() <em>Get Caller</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Caller</em>' operation.
+	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Terminate#getCaller()
+	 * @generated
+	 */
+	EOperation getActivitydiagram_ActivityNode_Terminate__GetCaller();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.Steps.Activitydiagram_Activity_WriteTrace <em>Activitydiagram Activity Write Trace</em>}'.
@@ -2611,6 +2611,24 @@ public interface StepsPackage extends EPackage {
 		EClass ROOT_IMPLICIT_STEP = eINSTANCE.getRootImplicitStep();
 
 		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl <em>Activitydiagram Activity Node Send Offers1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_SendOffers1()
+		 * @generated
+		 */
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1 = eINSTANCE.getActivitydiagram_ActivityNode_SendOffers1();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_SendOffers1__GetCaller();
+
+		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TakeOfferdTokens1Impl <em>Activitydiagram Activity Node Take Offerd Tokens1</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2675,14 +2693,14 @@ public interface StepsPackage extends EPackage {
 		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_RemoveToken1__GetCaller();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl <em>Activitydiagram Activity Node Send Offers1</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_ExecuteImpl <em>Activitydiagram Variable Execute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_SendOffers1Impl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_SendOffers1()
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Variable_ExecuteImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Execute()
 		 * @generated
 		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1 = eINSTANCE.getActivitydiagram_ActivityNode_SendOffers1();
+		EClass ACTIVITYDIAGRAM_VARIABLE_EXECUTE = eINSTANCE.getActivitydiagram_Variable_Execute();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
@@ -2690,35 +2708,25 @@ public interface StepsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_SendOffers1__GetCaller();
+		EOperation ACTIVITYDIAGRAM_VARIABLE_EXECUTE___GET_CALLER = eINSTANCE.getActivitydiagram_Variable_Execute__GetCaller();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl <em>Activitydiagram Variable Init</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl <em>Activitydiagram Activity Node Execute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Init()
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute()
 		 * @generated
 		 */
-		EClass ACTIVITYDIAGRAM_VARIABLE_INIT = eINSTANCE.getActivitydiagram_Variable_Init();
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE = eINSTANCE.getActivitydiagram_ActivityNode_Execute();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
+		 * The meta object literal for the '<em><b>Sub Steps</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ACTIVITYDIAGRAM_VARIABLE_INIT___GET_CALLER = eINSTANCE.getActivitydiagram_Variable_Init__GetCaller();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl <em>Activitydiagram Activity Node Terminate</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Terminate()
-		 * @generated
-		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE = eINSTANCE.getActivitydiagram_ActivityNode_Terminate();
+		EReference ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS = eINSTANCE.getActivitydiagram_ActivityNode_Execute_SubSteps();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
@@ -2726,7 +2734,27 @@ public interface StepsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_Terminate__GetCaller();
+		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_Execute__GetCaller();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl <em>Activitydiagram Activity Node Execute Abstract Sub Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_AbstractSubStep()
+		 * @generated
+		 */
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP = eINSTANCE.getActivitydiagram_ActivityNode_Execute_AbstractSubStep();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl <em>Activitydiagram Activity Node Execute Implicit Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_ImplicitStep()
+		 * @generated
+		 */
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP = eINSTANCE.getActivitydiagram_ActivityNode_Execute_ImplicitStep();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl <em>Activitydiagram Activity Node Add Tokens1</em>}' class.
@@ -2753,62 +2781,6 @@ public interface StepsPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_AddTokens1__GetCaller();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep()
-		 * @generated
-		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP = eINSTANCE.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep()
-		 * @generated
-		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP = eINSTANCE.getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl <em>Activitydiagram Activity Initialize Context</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_InitializeContext()
-		 * @generated
-		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT = eINSTANCE.getActivitydiagram_Activity_InitializeContext();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT___GET_CALLER = eINSTANCE.getActivitydiagram_Activity_InitializeContext__GetCaller();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_ExecuteImpl <em>Activitydiagram Variable Execute</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Variable_ExecuteImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Execute()
-		 * @generated
-		 */
-		EClass ACTIVITYDIAGRAM_VARIABLE_EXECUTE = eINSTANCE.getActivitydiagram_Variable_Execute();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITYDIAGRAM_VARIABLE_EXECUTE___GET_CALLER = eINSTANCE.getActivitydiagram_Variable_Execute__GetCaller();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_ExecuteImpl <em>Activitydiagram Activity Execute</em>}' class.
@@ -2857,22 +2829,14 @@ public interface StepsPackage extends EPackage {
 		EClass ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_IMPLICIT_STEP = eINSTANCE.getActivitydiagram_Activity_Execute_ImplicitStep();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl <em>Activitydiagram Activity Node Execute</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl <em>Activitydiagram Variable Init</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_ExecuteImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute()
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Variable_InitImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Variable_Init()
 		 * @generated
 		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE = eINSTANCE.getActivitydiagram_ActivityNode_Execute();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Steps</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE__SUB_STEPS = eINSTANCE.getActivitydiagram_ActivityNode_Execute_SubSteps();
+		EClass ACTIVITYDIAGRAM_VARIABLE_INIT = eINSTANCE.getActivitydiagram_Variable_Init();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
@@ -2880,27 +2844,63 @@ public interface StepsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_Execute__GetCaller();
+		EOperation ACTIVITYDIAGRAM_VARIABLE_INIT___GET_CALLER = eINSTANCE.getActivitydiagram_Variable_Init__GetCaller();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl <em>Activitydiagram Activity Node Execute Abstract Sub Step</em>}' class.
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl <em>Activitydiagram Activity Initialize Context</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_AbstractSubStepImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_AbstractSubStep()
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_Activity_InitializeContextImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_Activity_InitializeContext()
 		 * @generated
 		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_ABSTRACT_SUB_STEP = eINSTANCE.getActivitydiagram_ActivityNode_Execute_AbstractSubStep();
+		EClass ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT = eINSTANCE.getActivitydiagram_Activity_InitializeContext();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl <em>Activitydiagram Activity Node Execute Implicit Step</em>}' class.
+		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_Execute_ImplicitStepImpl
-		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Execute_ImplicitStep()
 		 * @generated
 		 */
-		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP = eINSTANCE.getActivitydiagram_ActivityNode_Execute_ImplicitStep();
+		EOperation ACTIVITYDIAGRAM_ACTIVITY_INITIALIZE_CONTEXT___GET_CALLER = eINSTANCE.getActivitydiagram_Activity_InitializeContext__GetCaller();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStepImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep()
+		 * @generated
+		 */
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_ABSTRACT_SUB_STEP = eINSTANCE.getActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep()
+		 * @generated
+		 */
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP = eINSTANCE.getActivitydiagram_ActivityNode_AddTokens1_ImplicitStep();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl <em>Activitydiagram Activity Node Terminate</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_TerminateImpl
+		 * @see activitydiagramTrace.Steps.impl.StepsPackageImpl#getActivitydiagram_ActivityNode_Terminate()
+		 * @generated
+		 */
+		EClass ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE = eINSTANCE.getActivitydiagram_ActivityNode_Terminate();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Caller</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE___GET_CALLER = eINSTANCE.getActivitydiagram_ActivityNode_Terminate__GetCaller();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.Steps.impl.Activitydiagram_Activity_WriteTraceImpl <em>Activitydiagram Activity Write Trace</em>}' class.

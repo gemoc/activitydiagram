@@ -14,7 +14,7 @@ import activitydiagram.Variable;
  * @model
  * @generated
  */
-public interface Activitydiagram_Variable_Init extends SmallStep, Activitydiagram_Activity_Execute_AbstractSubStep {
+public interface Activitydiagram_Variable_Init extends Activitydiagram_Activity_Execute_AbstractSubStep, SmallStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

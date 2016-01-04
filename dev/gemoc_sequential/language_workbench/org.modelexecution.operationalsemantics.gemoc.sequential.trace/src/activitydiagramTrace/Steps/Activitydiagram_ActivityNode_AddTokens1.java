@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_AddTokens1 extends BigStep, Activitydiagram_ActivityNode_Execute_AbstractSubStep {
+public interface Activitydiagram_ActivityNode_AddTokens1 extends Activitydiagram_ActivityNode_Execute_AbstractSubStep, BigStep {
 	/**
 	 * Returns the value of the '<em><b>Sub Steps</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep}.

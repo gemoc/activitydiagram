@@ -28,24 +28,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerCalculationExpressionImpl#getAssigneeSequence <em>Assignee Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerCalculationExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerCalculationExpressionImpl#getAssigneeSequence <em>Assignee Sequence</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpressionImpl implements TracedIntegerCalculationExpression {
-	/**
-	 * The cached value of the '{@link #getAssigneeSequence() <em>Assignee Sequence</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssigneeSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IntegerCalculationExpression_assignee_Value> assigneeSequence;
-
 	/**
 	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,6 +45,16 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	 * @ordered
 	 */
 	protected EList<IntegerCalculationExpression_operator_Value> operatorSequence;
+
+	/**
+	 * The cached value of the '{@link #getAssigneeSequence() <em>Assignee Sequence</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssigneeSequence()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IntegerCalculationExpression_assignee_Value> assigneeSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,18 +80,6 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IntegerCalculationExpression_assignee_Value> getAssigneeSequence() {
-		if (assigneeSequence == null) {
-			assigneeSequence = new EObjectContainmentWithInverseEList<IntegerCalculationExpression_assignee_Value>(IntegerCalculationExpression_assignee_Value.class, this, ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE, StatesPackage.INTEGER_CALCULATION_EXPRESSION_ASSIGNEE_VALUE__PARENT);
-		}
-		return assigneeSequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<IntegerCalculationExpression_operator_Value> getOperatorSequence() {
 		if (operatorSequence == null) {
 			operatorSequence = new EObjectContainmentWithInverseEList<IntegerCalculationExpression_operator_Value>(IntegerCalculationExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.INTEGER_CALCULATION_EXPRESSION_OPERATOR_VALUE__PARENT);
@@ -104,14 +92,26 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IntegerCalculationExpression_assignee_Value> getAssigneeSequence() {
+		if (assigneeSequence == null) {
+			assigneeSequence = new EObjectContainmentWithInverseEList<IntegerCalculationExpression_assignee_Value>(IntegerCalculationExpression_assignee_Value.class, this, ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE, StatesPackage.INTEGER_CALCULATION_EXPRESSION_ASSIGNEE_VALUE__PARENT);
+		}
+		return assigneeSequence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAssigneeSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAssigneeSequence()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -124,10 +124,10 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
-				return ((InternalEList<?>)getAssigneeSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE:
 				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
+				return ((InternalEList<?>)getAssigneeSequence()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,10 +140,10 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
-				return getAssigneeSequence();
 			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE:
 				return getOperatorSequence();
+			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
+				return getAssigneeSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,13 +157,13 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
-				getAssigneeSequence().clear();
-				getAssigneeSequence().addAll((Collection<? extends IntegerCalculationExpression_assignee_Value>)newValue);
-				return;
 			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE:
 				getOperatorSequence().clear();
 				getOperatorSequence().addAll((Collection<? extends IntegerCalculationExpression_operator_Value>)newValue);
+				return;
+			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
+				getAssigneeSequence().clear();
+				getAssigneeSequence().addAll((Collection<? extends IntegerCalculationExpression_assignee_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +177,11 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
-				getAssigneeSequence().clear();
-				return;
 			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE:
 				getOperatorSequence().clear();
+				return;
+			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
+				getAssigneeSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +195,10 @@ public class TracedIntegerCalculationExpressionImpl extends TracedIntegerExpress
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
-				return assigneeSequence != null && !assigneeSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__OPERATOR_SEQUENCE:
 				return operatorSequence != null && !operatorSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_INTEGER_CALCULATION_EXPRESSION__ASSIGNEE_SEQUENCE:
+				return assigneeSequence != null && !assigneeSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

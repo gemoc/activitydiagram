@@ -28,24 +28,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanUnaryExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanUnaryExpressionImpl#getOperandSequence <em>Operand Sequence</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.impl.TracedBooleanUnaryExpressionImpl#getOperatorSequence <em>Operator Sequence</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImpl implements TracedBooleanUnaryExpression {
-	/**
-	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperatorSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<BooleanUnaryExpression_operator_Value> operatorSequence;
-
 	/**
 	 * The cached value of the '{@link #getOperandSequence() <em>Operand Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,6 +45,16 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	 * @ordered
 	 */
 	protected EList<BooleanUnaryExpression_operand_Value> operandSequence;
+
+	/**
+	 * The cached value of the '{@link #getOperatorSequence() <em>Operator Sequence</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperatorSequence()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BooleanUnaryExpression_operator_Value> operatorSequence;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,18 +80,6 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BooleanUnaryExpression_operator_Value> getOperatorSequence() {
-		if (operatorSequence == null) {
-			operatorSequence = new EObjectContainmentWithInverseEList<BooleanUnaryExpression_operator_Value>(BooleanUnaryExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.BOOLEAN_UNARY_EXPRESSION_OPERATOR_VALUE__PARENT);
-		}
-		return operatorSequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<BooleanUnaryExpression_operand_Value> getOperandSequence() {
 		if (operandSequence == null) {
 			operandSequence = new EObjectContainmentWithInverseEList<BooleanUnaryExpression_operand_Value>(BooleanUnaryExpression_operand_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE, StatesPackage.BOOLEAN_UNARY_EXPRESSION_OPERAND_VALUE__PARENT);
@@ -104,14 +92,26 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<BooleanUnaryExpression_operator_Value> getOperatorSequence() {
+		if (operatorSequence == null) {
+			operatorSequence = new EObjectContainmentWithInverseEList<BooleanUnaryExpression_operator_Value>(BooleanUnaryExpression_operator_Value.class, this, ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE, StatesPackage.BOOLEAN_UNARY_EXPRESSION_OPERATOR_VALUE__PARENT);
+		}
+		return operatorSequence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperandSequence()).basicAdd(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatorSequence()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -124,10 +124,10 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE:
 				return ((InternalEList<?>)getOperandSequence()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return ((InternalEList<?>)getOperatorSequence()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,10 +140,10 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return getOperatorSequence();
 			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE:
 				return getOperandSequence();
+			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return getOperatorSequence();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,13 +157,13 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
-				getOperatorSequence().clear();
-				getOperatorSequence().addAll((Collection<? extends BooleanUnaryExpression_operator_Value>)newValue);
-				return;
 			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE:
 				getOperandSequence().clear();
 				getOperandSequence().addAll((Collection<? extends BooleanUnaryExpression_operand_Value>)newValue);
+				return;
+			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
+				getOperatorSequence().clear();
+				getOperatorSequence().addAll((Collection<? extends BooleanUnaryExpression_operator_Value>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +177,11 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
-				getOperatorSequence().clear();
-				return;
 			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE:
 				getOperandSequence().clear();
+				return;
+			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
+				getOperatorSequence().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +195,10 @@ public class TracedBooleanUnaryExpressionImpl extends TracedBooleanExpressionImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
-				return operatorSequence != null && !operatorSequence.isEmpty();
 			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERAND_SEQUENCE:
 				return operandSequence != null && !operandSequence.isEmpty();
+			case ActivitydiagramPackage.TRACED_BOOLEAN_UNARY_EXPRESSION__OPERATOR_SEQUENCE:
+				return operatorSequence != null && !operatorSequence.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
