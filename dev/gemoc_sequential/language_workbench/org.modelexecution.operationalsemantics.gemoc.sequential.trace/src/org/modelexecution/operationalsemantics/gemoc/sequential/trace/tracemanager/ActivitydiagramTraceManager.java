@@ -1871,51 +1871,23 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value> localTrace44 = tracedObject
-							.getRemainingOffersCountSequence();
-					activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value previousValue44 = null;
+					List<activitydiagramTrace.States.Token_holder_Value> localTrace44 = tracedObject
+							.getHolderSequence();
+					activitydiagramTrace.States.Token_holder_Value previousValue44 = null;
 					if (!localTrace44.isEmpty())
 						previousValue44 = localTrace44.get(localTrace44.size() - 1);
 
-					int content28 = o_cast.getRemainingOffersCount();
-
-					boolean noChange44 = previousValue44 != null
-							&& previousValue44.getRemainingOffersCount() == content28;
-
-					if (noChange44) {
-						newState.getForkedToken_remainingOffersCount_Values().add(previousValue44);
-
-					} // Else we create one
-					else {
-						changed = true;
-						activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-								.createForkedToken_remainingOffersCount_Value();
-
-						newValue.setRemainingOffersCount(content28);
-
-						tracedObject.getRemainingOffersCountSequence().add(newValue);
-						newState.getForkedToken_remainingOffersCount_Values().add(newValue);
-					}
-
-					// Then we compare the value of the field with the last stored value
-					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Token_holder_Value> localTrace45 = tracedObject
-							.getHolderSequence();
-					activitydiagramTrace.States.Token_holder_Value previousValue45 = null;
-					if (!localTrace45.isEmpty())
-						previousValue45 = localTrace45.get(localTrace45.size() - 1);
-
 					storeAsTracedObject(o_cast.getHolder());
 
-					activitydiagramTrace.States.activitydiagram.TracedActivityNode content29 = null;
+					activitydiagramTrace.States.activitydiagram.TracedActivityNode content28 = null;
 					if (o_cast.getHolder() != null)
-						content29 = ((activitydiagramTrace.States.activitydiagram.TracedActivityNode) exeToTraced
+						content28 = ((activitydiagramTrace.States.activitydiagram.TracedActivityNode) exeToTraced
 								.get(o_cast.getHolder()));
 
-					boolean noChange45 = previousValue45 != null && previousValue45.getHolder() == content29;
+					boolean noChange44 = previousValue44 != null && previousValue44.getHolder() == content28;
 
-					if (noChange45) {
-						newState.getToken_holder_Values().add(previousValue45);
+					if (noChange44) {
+						newState.getToken_holder_Values().add(previousValue44);
 
 					} // Else we create one
 					else {
@@ -1923,10 +1895,38 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 						activitydiagramTrace.States.Token_holder_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
 								.createToken_holder_Value();
 
-						newValue.setHolder(content29);
+						newValue.setHolder(content28);
 
 						tracedObject.getHolderSequence().add(newValue);
 						newState.getToken_holder_Values().add(newValue);
+					}
+
+					// Then we compare the value of the field with the last stored value
+					// If same value, we create no local state and we refer to the previous
+					List<activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value> localTrace45 = tracedObject
+							.getRemainingOffersCountSequence();
+					activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value previousValue45 = null;
+					if (!localTrace45.isEmpty())
+						previousValue45 = localTrace45.get(localTrace45.size() - 1);
+
+					int content29 = o_cast.getRemainingOffersCount();
+
+					boolean noChange45 = previousValue45 != null
+							&& previousValue45.getRemainingOffersCount() == content29;
+
+					if (noChange45) {
+						newState.getForkedToken_remainingOffersCount_Values().add(previousValue45);
+
+					} // Else we create one
+					else {
+						changed = true;
+						activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+								.createForkedToken_remainingOffersCount_Value();
+
+						newValue.setRemainingOffersCount(content29);
+
+						tracedObject.getRemainingOffersCountSequence().add(newValue);
+						newState.getForkedToken_remainingOffersCount_Values().add(newValue);
 					}
 
 				} else
@@ -3609,6 +3609,16 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			newState.getStartedSteps().clear();
 			newState.getEndedSteps().clear();
 
+			newState.getForkedToken_baseToken_Values().clear();
+			newState.getTrace_executedNodes_Values().clear();
+			newState.getToken_holder_Values().clear();
+			newState.getInput_inputValues_Values().clear();
+			newState.getOffer_offeredTokens_Values().clear();
+			newState.getForkedToken_remainingOffersCount_Values().clear();
+			newState.getInputValue_value_Values().clear();
+			newState.getBooleanValue_value_Values().clear();
+			newState.getIntegerValue_value_Values().clear();
+			newState.getInputValue_variable_Values().clear();
 			newState.getActivity_edges_Values().clear();
 			newState.getActivity_inputs_Values().clear();
 			newState.getActivity_locals_Values().clear();
@@ -3628,25 +3638,15 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			newState.getBooleanExpression_assignee_Values().clear();
 			newState.getBooleanUnaryExpression_operand_Values().clear();
 			newState.getBooleanUnaryExpression_operator_Values().clear();
-			newState.getBooleanValue_value_Values().clear();
 			newState.getControlFlow_guard_Values().clear();
-			newState.getForkedToken_baseToken_Values().clear();
-			newState.getForkedToken_remainingOffersCount_Values().clear();
-			newState.getInput_inputValues_Values().clear();
-			newState.getInputValue_value_Values().clear();
-			newState.getInputValue_variable_Values().clear();
 			newState.getIntegerCalculationExpression_assignee_Values().clear();
 			newState.getIntegerCalculationExpression_operator_Values().clear();
 			newState.getIntegerComparisonExpression_assignee_Values().clear();
 			newState.getIntegerComparisonExpression_operator_Values().clear();
 			newState.getIntegerExpression_operand1_Values().clear();
 			newState.getIntegerExpression_operand2_Values().clear();
-			newState.getIntegerValue_value_Values().clear();
 			newState.getNamedElement_name_Values().clear();
-			newState.getOffer_offeredTokens_Values().clear();
 			newState.getOpaqueAction_expressions_Values().clear();
-			newState.getToken_holder_Values().clear();
-			newState.getTrace_executedNodes_Values().clear();
 			newState.getVariable_currentValue_Values().clear();
 			newState.getVariable_initialValue_Values().clear();
 			newState.getVariable_name_Values().clear();
@@ -4071,6 +4071,174 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (state instanceof activitydiagramTrace.States.State) {
 			activitydiagramTrace.States.State stateToGo = (activitydiagramTrace.States.State) state;
 
+			for (activitydiagramTrace.States.ForkedToken_baseToken_Value value : stateToGo
+					.getForkedToken_baseToken_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedForkedToken) {
+					activitydiagramTrace.States.activitydiagram.TracedForkedToken parent_cast = (activitydiagramTrace.States.activitydiagram.TracedForkedToken) value
+							.getParent();
+					activitydiagram.Token toset = ((activitydiagram.Token) getTracedToExe(value.getBaseToken()));
+					activitydiagram.Token current = ((activitydiagram.ForkedToken) parent_cast.getOriginalObject())
+							.getBaseToken();
+					if (current != toset)
+						((activitydiagram.ForkedToken) parent_cast.getOriginalObject()).setBaseToken(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.Trace_executedNodes_Value value : stateToGo
+					.getTrace_executedNodes_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedTrace) {
+					activitydiagramTrace.States.activitydiagram.TracedTrace parent_cast = (activitydiagramTrace.States.activitydiagram.TracedTrace) value
+							.getParent();
+					parent_cast.getOriginalObject().getExecutedNodes().clear();
+					parent_cast
+							.getOriginalObject()
+							.getExecutedNodes()
+							.addAll((Collection<? extends activitydiagram.ActivityNode>) getTracedToExe(value
+									.getExecutedNodes()));
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.Token_holder_Value value : stateToGo.getToken_holder_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedControlToken) {
+					activitydiagramTrace.States.activitydiagram.TracedControlToken parent_cast = (activitydiagramTrace.States.activitydiagram.TracedControlToken) value
+							.getParent();
+					activitydiagram.ActivityNode toset = ((activitydiagram.ActivityNode) getTracedToExe(value
+							.getHolder()));
+					activitydiagram.ActivityNode current = ((activitydiagram.Token) parent_cast.getOriginalObject())
+							.getHolder();
+					if (current != toset)
+						((activitydiagram.Token) parent_cast.getOriginalObject()).setHolder(toset);
+
+				}
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedForkedToken) {
+					activitydiagramTrace.States.activitydiagram.TracedForkedToken parent_cast = (activitydiagramTrace.States.activitydiagram.TracedForkedToken) value
+							.getParent();
+					activitydiagram.ActivityNode toset = ((activitydiagram.ActivityNode) getTracedToExe(value
+							.getHolder()));
+					activitydiagram.ActivityNode current = ((activitydiagram.Token) parent_cast.getOriginalObject())
+							.getHolder();
+					if (current != toset)
+						((activitydiagram.Token) parent_cast.getOriginalObject()).setHolder(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.Input_inputValues_Value value : stateToGo.getInput_inputValues_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedInput) {
+					activitydiagramTrace.States.activitydiagram.TracedInput parent_cast = (activitydiagramTrace.States.activitydiagram.TracedInput) value
+							.getParent();
+					parent_cast.getOriginalObject().getInputValues().clear();
+					parent_cast
+							.getOriginalObject()
+							.getInputValues()
+							.addAll((Collection<? extends activitydiagram.InputValue>) getTracedToExe(value
+									.getInputValues()));
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.Offer_offeredTokens_Value value : stateToGo
+					.getOffer_offeredTokens_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedOffer) {
+					activitydiagramTrace.States.activitydiagram.TracedOffer parent_cast = (activitydiagramTrace.States.activitydiagram.TracedOffer) value
+							.getParent();
+					parent_cast.getOriginalObject().getOfferedTokens().clear();
+					parent_cast
+							.getOriginalObject()
+							.getOfferedTokens()
+							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value
+									.getOfferedTokens()));
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value value : stateToGo
+					.getForkedToken_remainingOffersCount_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedForkedToken) {
+					activitydiagramTrace.States.activitydiagram.TracedForkedToken parent_cast = (activitydiagramTrace.States.activitydiagram.TracedForkedToken) value
+							.getParent();
+					int toset = value.getRemainingOffersCount();
+					int current = ((activitydiagram.ForkedToken) parent_cast.getOriginalObject())
+							.getRemainingOffersCount();
+					if (current != toset)
+						((activitydiagram.ForkedToken) parent_cast.getOriginalObject()).setRemainingOffersCount(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.InputValue_value_Value value : stateToGo.getInputValue_value_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedInputValue) {
+					activitydiagramTrace.States.activitydiagram.TracedInputValue parent_cast = (activitydiagramTrace.States.activitydiagram.TracedInputValue) value
+							.getParent();
+					activitydiagram.Value toset = ((activitydiagram.Value) getTracedToExe(value.getValue()));
+					activitydiagram.Value current = ((activitydiagram.InputValue) parent_cast.getOriginalObject())
+							.getValue();
+					if (current != toset)
+						((activitydiagram.InputValue) parent_cast.getOriginalObject()).setValue(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.BooleanValue_value_Value value : stateToGo.getBooleanValue_value_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedBooleanValue) {
+					activitydiagramTrace.States.activitydiagram.TracedBooleanValue parent_cast = (activitydiagramTrace.States.activitydiagram.TracedBooleanValue) value
+							.getParent();
+					boolean toset = value.isValue();
+					boolean current = ((activitydiagram.BooleanValue) parent_cast.getOriginalObject()).isValue();
+					if (current != toset)
+						((activitydiagram.BooleanValue) parent_cast.getOriginalObject()).setValue(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.IntegerValue_value_Value value : stateToGo.getIntegerValue_value_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedIntegerValue) {
+					activitydiagramTrace.States.activitydiagram.TracedIntegerValue parent_cast = (activitydiagramTrace.States.activitydiagram.TracedIntegerValue) value
+							.getParent();
+					int toset = value.getValue();
+					int current = ((activitydiagram.IntegerValue) parent_cast.getOriginalObject()).getValue();
+					if (current != toset)
+						((activitydiagram.IntegerValue) parent_cast.getOriginalObject()).setValue(toset);
+
+				}
+
+			}
+
+			for (activitydiagramTrace.States.InputValue_variable_Value value : stateToGo
+					.getInputValue_variable_Values()) {
+
+				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedInputValue) {
+					activitydiagramTrace.States.activitydiagram.TracedInputValue parent_cast = (activitydiagramTrace.States.activitydiagram.TracedInputValue) value
+							.getParent();
+					activitydiagram.Variable toset = ((activitydiagram.Variable) getTracedToExe(value.getVariable()));
+					activitydiagram.Variable current = ((activitydiagram.InputValue) parent_cast.getOriginalObject())
+							.getVariable();
+					if (current != toset)
+						((activitydiagram.InputValue) parent_cast.getOriginalObject()).setVariable(toset);
+
+				}
+
+			}
+
 			for (activitydiagramTrace.States.Activity_edges_Value value : stateToGo.getActivity_edges_Values()) {
 
 				activitydiagram.Activity exeObject = (activitydiagram.Activity) getTracedToExe(value.getParent());
@@ -4248,58 +4416,10 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 			}
 
-			for (activitydiagramTrace.States.BooleanValue_value_Value value : stateToGo.getBooleanValue_value_Values()) {
-
-				activitydiagram.BooleanValue exeObject = (activitydiagram.BooleanValue) getTracedToExe(value
-						.getParent());
-				exeObject.setValue(value.isValue());
-
-			}
-
 			for (activitydiagramTrace.States.ControlFlow_guard_Value value : stateToGo.getControlFlow_guard_Values()) {
 
 				activitydiagram.ControlFlow exeObject = (activitydiagram.ControlFlow) getTracedToExe(value.getParent());
 				exeObject.setGuard(((activitydiagram.BooleanVariable) getTracedToExe(value.getGuard())));
-
-			}
-
-			for (activitydiagramTrace.States.ForkedToken_baseToken_Value value : stateToGo
-					.getForkedToken_baseToken_Values()) {
-
-				activitydiagram.ForkedToken exeObject = (activitydiagram.ForkedToken) getTracedToExe(value.getParent());
-				exeObject.setBaseToken(((activitydiagram.Token) getTracedToExe(value.getBaseToken())));
-
-			}
-
-			for (activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value value : stateToGo
-					.getForkedToken_remainingOffersCount_Values()) {
-
-				activitydiagram.ForkedToken exeObject = (activitydiagram.ForkedToken) getTracedToExe(value.getParent());
-				exeObject.setRemainingOffersCount(value.getRemainingOffersCount());
-
-			}
-
-			for (activitydiagramTrace.States.Input_inputValues_Value value : stateToGo.getInput_inputValues_Values()) {
-
-				activitydiagram.Input exeObject = (activitydiagram.Input) getTracedToExe(value.getParent());
-				exeObject.getInputValues().clear();
-				exeObject.getInputValues().addAll(
-						(Collection<? extends activitydiagram.InputValue>) getTracedToExe(value.getInputValues()));
-
-			}
-
-			for (activitydiagramTrace.States.InputValue_value_Value value : stateToGo.getInputValue_value_Values()) {
-
-				activitydiagram.InputValue exeObject = (activitydiagram.InputValue) getTracedToExe(value.getParent());
-				exeObject.setValue(((activitydiagram.Value) getTracedToExe(value.getValue())));
-
-			}
-
-			for (activitydiagramTrace.States.InputValue_variable_Value value : stateToGo
-					.getInputValue_variable_Values()) {
-
-				activitydiagram.InputValue exeObject = (activitydiagram.InputValue) getTracedToExe(value.getParent());
-				exeObject.setVariable(((activitydiagram.Variable) getTracedToExe(value.getVariable())));
 
 			}
 
@@ -4357,29 +4477,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 			}
 
-			for (activitydiagramTrace.States.IntegerValue_value_Value value : stateToGo.getIntegerValue_value_Values()) {
-
-				activitydiagram.IntegerValue exeObject = (activitydiagram.IntegerValue) getTracedToExe(value
-						.getParent());
-				exeObject.setValue(value.getValue());
-
-			}
-
 			for (activitydiagramTrace.States.NamedElement_name_Value value : stateToGo.getNamedElement_name_Values()) {
 
 				activitydiagram.NamedElement exeObject = (activitydiagram.NamedElement) getTracedToExe(value
 						.getParent());
 				exeObject.setName(value.getName());
-
-			}
-
-			for (activitydiagramTrace.States.Offer_offeredTokens_Value value : stateToGo
-					.getOffer_offeredTokens_Values()) {
-
-				activitydiagram.Offer exeObject = (activitydiagram.Offer) getTracedToExe(value.getParent());
-				exeObject.getOfferedTokens().clear();
-				exeObject.getOfferedTokens().addAll(
-						(Collection<? extends activitydiagram.Token>) getTracedToExe(value.getOfferedTokens()));
 
 			}
 
@@ -4391,23 +4493,6 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 				exeObject.getExpressions().clear();
 				exeObject.getExpressions().addAll(
 						(Collection<? extends activitydiagram.Expression>) getTracedToExe(value.getExpressions()));
-
-			}
-
-			for (activitydiagramTrace.States.Token_holder_Value value : stateToGo.getToken_holder_Values()) {
-
-				activitydiagram.Token exeObject = (activitydiagram.Token) getTracedToExe(value.getParent());
-				exeObject.setHolder(((activitydiagram.ActivityNode) getTracedToExe(value.getHolder())));
-
-			}
-
-			for (activitydiagramTrace.States.Trace_executedNodes_Value value : stateToGo
-					.getTrace_executedNodes_Values()) {
-
-				activitydiagram.Trace exeObject = (activitydiagram.Trace) getTracedToExe(value.getParent());
-				exeObject.getExecutedNodes().clear();
-				exeObject.getExecutedNodes().addAll(
-						(Collection<? extends activitydiagram.ActivityNode>) getTracedToExe(value.getExecutedNodes()));
 
 			}
 
@@ -4483,6 +4568,67 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 	public String getDescriptionOfExecutionState(int index) {
 		StringBuilder result = new StringBuilder();
 		activitydiagramTrace.States.State gs = traceRoot.getStatesTrace().get(index);
+
+		if (!gs.getForkedToken_baseToken_Values().isEmpty())
+			result.append("\nBaseToken values:");
+		for (activitydiagramTrace.States.ForkedToken_baseToken_Value currenState : gs.getForkedToken_baseToken_Values()) {
+			result.append("\n\t" + currenState.getBaseToken());
+		}
+
+		if (!gs.getTrace_executedNodes_Values().isEmpty())
+			result.append("\nExecutedNodes values:");
+		for (activitydiagramTrace.States.Trace_executedNodes_Value currenState : gs.getTrace_executedNodes_Values()) {
+			result.append("\n\t" + currenState.getExecutedNodes());
+		}
+
+		if (!gs.getToken_holder_Values().isEmpty())
+			result.append("\nHolder values:");
+		for (activitydiagramTrace.States.Token_holder_Value currenState : gs.getToken_holder_Values()) {
+			result.append("\n\t" + currenState.getHolder());
+		}
+
+		if (!gs.getInput_inputValues_Values().isEmpty())
+			result.append("\nInputValues values:");
+		for (activitydiagramTrace.States.Input_inputValues_Value currenState : gs.getInput_inputValues_Values()) {
+			result.append("\n\t" + currenState.getInputValues());
+		}
+
+		if (!gs.getOffer_offeredTokens_Values().isEmpty())
+			result.append("\nOfferedTokens values:");
+		for (activitydiagramTrace.States.Offer_offeredTokens_Value currenState : gs.getOffer_offeredTokens_Values()) {
+			result.append("\n\t" + currenState.getOfferedTokens());
+		}
+
+		if (!gs.getForkedToken_remainingOffersCount_Values().isEmpty())
+			result.append("\nRemainingOffersCount values:");
+		for (activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value currenState : gs
+				.getForkedToken_remainingOffersCount_Values()) {
+			result.append("\n\t" + currenState.getRemainingOffersCount());
+		}
+
+		if (!gs.getInputValue_value_Values().isEmpty())
+			result.append("\nValue values:");
+		for (activitydiagramTrace.States.InputValue_value_Value currenState : gs.getInputValue_value_Values()) {
+			result.append("\n\t" + currenState.getValue());
+		}
+
+		if (!gs.getBooleanValue_value_Values().isEmpty())
+			result.append("\nValue values:");
+		for (activitydiagramTrace.States.BooleanValue_value_Value currenState : gs.getBooleanValue_value_Values()) {
+			result.append("\n\t" + currenState.isValue());
+		}
+
+		if (!gs.getIntegerValue_value_Values().isEmpty())
+			result.append("\nValue values:");
+		for (activitydiagramTrace.States.IntegerValue_value_Value currenState : gs.getIntegerValue_value_Values()) {
+			result.append("\n\t" + currenState.getValue());
+		}
+
+		if (!gs.getInputValue_variable_Values().isEmpty())
+			result.append("\nVariable values:");
+		for (activitydiagramTrace.States.InputValue_variable_Value currenState : gs.getInputValue_variable_Values()) {
+			result.append("\n\t" + currenState.getVariable());
+		}
 
 		if (!gs.getActivity_edges_Values().isEmpty())
 			result.append("\nEdges values:");
@@ -4605,47 +4751,10 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			result.append("\n\t" + currenState.getOperator());
 		}
 
-		if (!gs.getBooleanValue_value_Values().isEmpty())
-			result.append("\nValue values:");
-		for (activitydiagramTrace.States.BooleanValue_value_Value currenState : gs.getBooleanValue_value_Values()) {
-			result.append("\n\t" + currenState.isValue());
-		}
-
 		if (!gs.getControlFlow_guard_Values().isEmpty())
 			result.append("\nGuard values:");
 		for (activitydiagramTrace.States.ControlFlow_guard_Value currenState : gs.getControlFlow_guard_Values()) {
 			result.append("\n\t" + currenState.getGuard());
-		}
-
-		if (!gs.getForkedToken_baseToken_Values().isEmpty())
-			result.append("\nBaseToken values:");
-		for (activitydiagramTrace.States.ForkedToken_baseToken_Value currenState : gs.getForkedToken_baseToken_Values()) {
-			result.append("\n\t" + currenState.getBaseToken());
-		}
-
-		if (!gs.getForkedToken_remainingOffersCount_Values().isEmpty())
-			result.append("\nRemainingOffersCount values:");
-		for (activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value currenState : gs
-				.getForkedToken_remainingOffersCount_Values()) {
-			result.append("\n\t" + currenState.getRemainingOffersCount());
-		}
-
-		if (!gs.getInput_inputValues_Values().isEmpty())
-			result.append("\nInputValues values:");
-		for (activitydiagramTrace.States.Input_inputValues_Value currenState : gs.getInput_inputValues_Values()) {
-			result.append("\n\t" + currenState.getInputValues());
-		}
-
-		if (!gs.getInputValue_value_Values().isEmpty())
-			result.append("\nValue values:");
-		for (activitydiagramTrace.States.InputValue_value_Value currenState : gs.getInputValue_value_Values()) {
-			result.append("\n\t" + currenState.getValue());
-		}
-
-		if (!gs.getInputValue_variable_Values().isEmpty())
-			result.append("\nVariable values:");
-		for (activitydiagramTrace.States.InputValue_variable_Value currenState : gs.getInputValue_variable_Values()) {
-			result.append("\n\t" + currenState.getVariable());
 		}
 
 		if (!gs.getIntegerCalculationExpression_assignee_Values().isEmpty())
@@ -4690,22 +4799,10 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			result.append("\n\t" + currenState.getOperand2());
 		}
 
-		if (!gs.getIntegerValue_value_Values().isEmpty())
-			result.append("\nValue values:");
-		for (activitydiagramTrace.States.IntegerValue_value_Value currenState : gs.getIntegerValue_value_Values()) {
-			result.append("\n\t" + currenState.getValue());
-		}
-
 		if (!gs.getNamedElement_name_Values().isEmpty())
 			result.append("\nName values:");
 		for (activitydiagramTrace.States.NamedElement_name_Value currenState : gs.getNamedElement_name_Values()) {
 			result.append("\n\t" + currenState.getName());
-		}
-
-		if (!gs.getOffer_offeredTokens_Values().isEmpty())
-			result.append("\nOfferedTokens values:");
-		for (activitydiagramTrace.States.Offer_offeredTokens_Value currenState : gs.getOffer_offeredTokens_Values()) {
-			result.append("\n\t" + currenState.getOfferedTokens());
 		}
 
 		if (!gs.getOpaqueAction_expressions_Values().isEmpty())
@@ -4713,18 +4810,6 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		for (activitydiagramTrace.States.OpaqueAction_expressions_Value currenState : gs
 				.getOpaqueAction_expressions_Values()) {
 			result.append("\n\t" + currenState.getExpressions());
-		}
-
-		if (!gs.getToken_holder_Values().isEmpty())
-			result.append("\nHolder values:");
-		for (activitydiagramTrace.States.Token_holder_Value currenState : gs.getToken_holder_Values()) {
-			result.append("\n\t" + currenState.getHolder());
-		}
-
-		if (!gs.getTrace_executedNodes_Values().isEmpty())
-			result.append("\nExecutedNodes values:");
-		for (activitydiagramTrace.States.Trace_executedNodes_Value currenState : gs.getTrace_executedNodes_Values()) {
-			result.append("\n\t" + currenState.getExecutedNodes());
 		}
 
 		if (!gs.getVariable_currentValue_Values().isEmpty())
@@ -4761,7 +4846,38 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 	@Override
 	public String getDescriptionOfValue(EObject eObject) {
-		if (eObject instanceof activitydiagramTrace.States.Activity_edges_Value) {
+		if (eObject instanceof activitydiagramTrace.States.ForkedToken_baseToken_Value) {
+			return "activitydiagramTrace.States.ForkedToken_baseToken_Value: "
+					+ ((activitydiagramTrace.States.ForkedToken_baseToken_Value) eObject).getBaseToken();
+		} else if (eObject instanceof activitydiagramTrace.States.Trace_executedNodes_Value) {
+			return "activitydiagramTrace.States.Trace_executedNodes_Value: "
+					+ ((activitydiagramTrace.States.Trace_executedNodes_Value) eObject).getExecutedNodes();
+		} else if (eObject instanceof activitydiagramTrace.States.Token_holder_Value) {
+			return "activitydiagramTrace.States.Token_holder_Value: "
+					+ ((activitydiagramTrace.States.Token_holder_Value) eObject).getHolder();
+		} else if (eObject instanceof activitydiagramTrace.States.Input_inputValues_Value) {
+			return "activitydiagramTrace.States.Input_inputValues_Value: "
+					+ ((activitydiagramTrace.States.Input_inputValues_Value) eObject).getInputValues();
+		} else if (eObject instanceof activitydiagramTrace.States.Offer_offeredTokens_Value) {
+			return "activitydiagramTrace.States.Offer_offeredTokens_Value: "
+					+ ((activitydiagramTrace.States.Offer_offeredTokens_Value) eObject).getOfferedTokens();
+		} else if (eObject instanceof activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) {
+			return "activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value: "
+					+ ((activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) eObject)
+							.getRemainingOffersCount();
+		} else if (eObject instanceof activitydiagramTrace.States.InputValue_value_Value) {
+			return "activitydiagramTrace.States.InputValue_value_Value: "
+					+ ((activitydiagramTrace.States.InputValue_value_Value) eObject).getValue();
+		} else if (eObject instanceof activitydiagramTrace.States.BooleanValue_value_Value) {
+			return "activitydiagramTrace.States.BooleanValue_value_Value: "
+					+ ((activitydiagramTrace.States.BooleanValue_value_Value) eObject).isValue();
+		} else if (eObject instanceof activitydiagramTrace.States.IntegerValue_value_Value) {
+			return "activitydiagramTrace.States.IntegerValue_value_Value: "
+					+ ((activitydiagramTrace.States.IntegerValue_value_Value) eObject).getValue();
+		} else if (eObject instanceof activitydiagramTrace.States.InputValue_variable_Value) {
+			return "activitydiagramTrace.States.InputValue_variable_Value: "
+					+ ((activitydiagramTrace.States.InputValue_variable_Value) eObject).getVariable();
+		} else if (eObject instanceof activitydiagramTrace.States.Activity_edges_Value) {
 			return "activitydiagramTrace.States.Activity_edges_Value: "
 					+ ((activitydiagramTrace.States.Activity_edges_Value) eObject).getEdges();
 		} else if (eObject instanceof activitydiagramTrace.States.Activity_inputs_Value) {
@@ -4818,28 +4934,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		} else if (eObject instanceof activitydiagramTrace.States.BooleanUnaryExpression_operator_Value) {
 			return "activitydiagramTrace.States.BooleanUnaryExpression_operator_Value: "
 					+ ((activitydiagramTrace.States.BooleanUnaryExpression_operator_Value) eObject).getOperator();
-		} else if (eObject instanceof activitydiagramTrace.States.BooleanValue_value_Value) {
-			return "activitydiagramTrace.States.BooleanValue_value_Value: "
-					+ ((activitydiagramTrace.States.BooleanValue_value_Value) eObject).isValue();
 		} else if (eObject instanceof activitydiagramTrace.States.ControlFlow_guard_Value) {
 			return "activitydiagramTrace.States.ControlFlow_guard_Value: "
 					+ ((activitydiagramTrace.States.ControlFlow_guard_Value) eObject).getGuard();
-		} else if (eObject instanceof activitydiagramTrace.States.ForkedToken_baseToken_Value) {
-			return "activitydiagramTrace.States.ForkedToken_baseToken_Value: "
-					+ ((activitydiagramTrace.States.ForkedToken_baseToken_Value) eObject).getBaseToken();
-		} else if (eObject instanceof activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) {
-			return "activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value: "
-					+ ((activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) eObject)
-							.getRemainingOffersCount();
-		} else if (eObject instanceof activitydiagramTrace.States.Input_inputValues_Value) {
-			return "activitydiagramTrace.States.Input_inputValues_Value: "
-					+ ((activitydiagramTrace.States.Input_inputValues_Value) eObject).getInputValues();
-		} else if (eObject instanceof activitydiagramTrace.States.InputValue_value_Value) {
-			return "activitydiagramTrace.States.InputValue_value_Value: "
-					+ ((activitydiagramTrace.States.InputValue_value_Value) eObject).getValue();
-		} else if (eObject instanceof activitydiagramTrace.States.InputValue_variable_Value) {
-			return "activitydiagramTrace.States.InputValue_variable_Value: "
-					+ ((activitydiagramTrace.States.InputValue_variable_Value) eObject).getVariable();
 		} else if (eObject instanceof activitydiagramTrace.States.IntegerCalculationExpression_assignee_Value) {
 			return "activitydiagramTrace.States.IntegerCalculationExpression_assignee_Value: "
 					+ ((activitydiagramTrace.States.IntegerCalculationExpression_assignee_Value) eObject).getAssignee();
@@ -4858,24 +4955,12 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		} else if (eObject instanceof activitydiagramTrace.States.IntegerExpression_operand2_Value) {
 			return "activitydiagramTrace.States.IntegerExpression_operand2_Value: "
 					+ ((activitydiagramTrace.States.IntegerExpression_operand2_Value) eObject).getOperand2();
-		} else if (eObject instanceof activitydiagramTrace.States.IntegerValue_value_Value) {
-			return "activitydiagramTrace.States.IntegerValue_value_Value: "
-					+ ((activitydiagramTrace.States.IntegerValue_value_Value) eObject).getValue();
 		} else if (eObject instanceof activitydiagramTrace.States.NamedElement_name_Value) {
 			return "activitydiagramTrace.States.NamedElement_name_Value: "
 					+ ((activitydiagramTrace.States.NamedElement_name_Value) eObject).getName();
-		} else if (eObject instanceof activitydiagramTrace.States.Offer_offeredTokens_Value) {
-			return "activitydiagramTrace.States.Offer_offeredTokens_Value: "
-					+ ((activitydiagramTrace.States.Offer_offeredTokens_Value) eObject).getOfferedTokens();
 		} else if (eObject instanceof activitydiagramTrace.States.OpaqueAction_expressions_Value) {
 			return "activitydiagramTrace.States.OpaqueAction_expressions_Value: "
 					+ ((activitydiagramTrace.States.OpaqueAction_expressions_Value) eObject).getExpressions();
-		} else if (eObject instanceof activitydiagramTrace.States.Token_holder_Value) {
-			return "activitydiagramTrace.States.Token_holder_Value: "
-					+ ((activitydiagramTrace.States.Token_holder_Value) eObject).getHolder();
-		} else if (eObject instanceof activitydiagramTrace.States.Trace_executedNodes_Value) {
-			return "activitydiagramTrace.States.Trace_executedNodes_Value: "
-					+ ((activitydiagramTrace.States.Trace_executedNodes_Value) eObject).getExecutedNodes();
 		} else if (eObject instanceof activitydiagramTrace.States.Variable_currentValue_Value) {
 			return "activitydiagramTrace.States.Variable_currentValue_Value: "
 					+ ((activitydiagramTrace.States.Variable_currentValue_Value) eObject).getCurrentValue();
@@ -4967,6 +5052,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedBooleanValue();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedBooleanValues().add(tracedObject);
 
@@ -5015,6 +5101,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedControlToken();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedControlTokens().add(tracedObject);
 
@@ -5067,12 +5154,13 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedForkedToken();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedForkedTokens().add(tracedObject);
 
 			traces.add(new GenericValueTrace(tracedObject.getBaseTokenSequence(), this));
-			traces.add(new GenericValueTrace(tracedObject.getRemainingOffersCountSequence(), this));
 			traces.add(new GenericValueTrace(tracedObject.getHolderSequence(), this));
+			traces.add(new GenericValueTrace(tracedObject.getRemainingOffersCountSequence(), this));
 		}
 	}
 
@@ -5102,6 +5190,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedInput();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedInputs().add(tracedObject);
 
@@ -5116,6 +5205,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedInputValue();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedInputValues().add(tracedObject);
 
@@ -5165,6 +5255,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedIntegerValue();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedIntegerValues().add(tracedObject);
 
@@ -5233,6 +5324,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedOffer();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedOffers().add(tracedObject);
 
@@ -5267,6 +5359,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		if (!exeToTraced.containsKey(o)) {
 			tracedObject = activitydiagramTrace.States.activitydiagram.ActivitydiagramFactory.eINSTANCE
 					.createTracedTrace();
+			tracedObject.setOriginalObject(o);
 			exeToTraced.put(o, tracedObject);
 			traceRoot.getActivitydiagram_tracedTraces().add(tracedObject);
 
@@ -5392,6 +5485,16 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		// We find all current values
 		Set<EObject> currentValues = new HashSet<EObject>();
 		if (currentState != null) {
+			currentValues.addAll(currentState.getForkedToken_baseToken_Values());
+			currentValues.addAll(currentState.getTrace_executedNodes_Values());
+			currentValues.addAll(currentState.getToken_holder_Values());
+			currentValues.addAll(currentState.getInput_inputValues_Values());
+			currentValues.addAll(currentState.getOffer_offeredTokens_Values());
+			currentValues.addAll(currentState.getForkedToken_remainingOffersCount_Values());
+			currentValues.addAll(currentState.getInputValue_value_Values());
+			currentValues.addAll(currentState.getBooleanValue_value_Values());
+			currentValues.addAll(currentState.getIntegerValue_value_Values());
+			currentValues.addAll(currentState.getInputValue_variable_Values());
 			currentValues.addAll(currentState.getActivity_edges_Values());
 			currentValues.addAll(currentState.getActivity_inputs_Values());
 			currentValues.addAll(currentState.getActivity_locals_Values());
@@ -5411,25 +5514,15 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			currentValues.addAll(currentState.getBooleanExpression_assignee_Values());
 			currentValues.addAll(currentState.getBooleanUnaryExpression_operand_Values());
 			currentValues.addAll(currentState.getBooleanUnaryExpression_operator_Values());
-			currentValues.addAll(currentState.getBooleanValue_value_Values());
 			currentValues.addAll(currentState.getControlFlow_guard_Values());
-			currentValues.addAll(currentState.getForkedToken_baseToken_Values());
-			currentValues.addAll(currentState.getForkedToken_remainingOffersCount_Values());
-			currentValues.addAll(currentState.getInput_inputValues_Values());
-			currentValues.addAll(currentState.getInputValue_value_Values());
-			currentValues.addAll(currentState.getInputValue_variable_Values());
 			currentValues.addAll(currentState.getIntegerCalculationExpression_assignee_Values());
 			currentValues.addAll(currentState.getIntegerCalculationExpression_operator_Values());
 			currentValues.addAll(currentState.getIntegerComparisonExpression_assignee_Values());
 			currentValues.addAll(currentState.getIntegerComparisonExpression_operator_Values());
 			currentValues.addAll(currentState.getIntegerExpression_operand1_Values());
 			currentValues.addAll(currentState.getIntegerExpression_operand2_Values());
-			currentValues.addAll(currentState.getIntegerValue_value_Values());
 			currentValues.addAll(currentState.getNamedElement_name_Values());
-			currentValues.addAll(currentState.getOffer_offeredTokens_Values());
 			currentValues.addAll(currentState.getOpaqueAction_expressions_Values());
-			currentValues.addAll(currentState.getToken_holder_Values());
-			currentValues.addAll(currentState.getTrace_executedNodes_Values());
 			currentValues.addAll(currentState.getVariable_currentValue_Values());
 			currentValues.addAll(currentState.getVariable_initialValue_Values());
 			currentValues.addAll(currentState.getVariable_name_Values());

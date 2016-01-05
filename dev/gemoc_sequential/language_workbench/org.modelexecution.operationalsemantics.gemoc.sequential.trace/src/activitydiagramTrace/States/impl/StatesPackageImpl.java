@@ -2887,8 +2887,8 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage {
 		// Create annotations
 		// http://www.modelexecution.org/trace/XMOF
 		createXMOFAnnotations();
-		// aspect
-		createAspectAnnotations();
+		// dynamic
+		createDynamicAnnotations();
 	}
 
 	/**
@@ -3148,13 +3148,13 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage {
 	}
 
 	/**
-	 * Initializes the annotations for <b>aspect</b>.
+	 * Initializes the annotations for <b>dynamic</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createAspectAnnotations() {
-		String source = "aspect";	
+	protected void createDynamicAnnotations() {
+		String source = "dynamic";	
 		addAnnotation
 		  (getActivityEdge_offers_Value_Offers(), 
 		   source, 

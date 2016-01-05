@@ -953,13 +953,22 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_BOOLEAN_VALUE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_BOOLEAN_VALUE__ORIGINAL_OBJECT = TRACED_VALUE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Value Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_BOOLEAN_VALUE__VALUE_SEQUENCE = TRACED_VALUE_FEATURE_COUNT + 0;
+	int TRACED_BOOLEAN_VALUE__VALUE_SEQUENCE = TRACED_VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Traced Boolean Value</em>' class.
@@ -968,7 +977,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_BOOLEAN_VALUE_FEATURE_COUNT = TRACED_VALUE_FEATURE_COUNT + 1;
+	int TRACED_BOOLEAN_VALUE_FEATURE_COUNT = TRACED_VALUE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Traced Boolean Value</em>' class.
@@ -1173,13 +1182,22 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_TOKEN = 32;
 
 	/**
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_TOKEN__HOLDER = 0;
+
+	/**
 	 * The feature id for the '<em><b>Holder Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_TOKEN__HOLDER_SEQUENCE = 0;
+	int TRACED_TOKEN__HOLDER_SEQUENCE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Traced Token</em>' class.
@@ -1188,7 +1206,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_TOKEN_FEATURE_COUNT = 1;
+	int TRACED_TOKEN_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Traced Token</em>' class.
@@ -1210,6 +1228,15 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_CONTROL_TOKEN = 12;
 
 	/**
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_CONTROL_TOKEN__HOLDER = TRACED_TOKEN__HOLDER;
+
+	/**
 	 * The feature id for the '<em><b>Holder Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1219,13 +1246,22 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_CONTROL_TOKEN__HOLDER_SEQUENCE = TRACED_TOKEN__HOLDER_SEQUENCE;
 
 	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_CONTROL_TOKEN__ORIGINAL_OBJECT = TRACED_TOKEN_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Traced Control Token</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_CONTROL_TOKEN_FEATURE_COUNT = TRACED_TOKEN_FEATURE_COUNT + 0;
+	int TRACED_CONTROL_TOKEN_FEATURE_COUNT = TRACED_TOKEN_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Traced Control Token</em>' class.
@@ -1411,6 +1447,15 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_FORKED_TOKEN = 18;
 
 	/**
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_FORKED_TOKEN__HOLDER = TRACED_TOKEN__HOLDER;
+
+	/**
 	 * The feature id for the '<em><b>Holder Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1420,13 +1465,31 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_FORKED_TOKEN__HOLDER_SEQUENCE = TRACED_TOKEN__HOLDER_SEQUENCE;
 
 	/**
+	 * The feature id for the '<em><b>Base Token</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_FORKED_TOKEN__BASE_TOKEN = TRACED_TOKEN_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Base Token Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE = TRACED_TOKEN_FEATURE_COUNT + 0;
+	int TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE = TRACED_TOKEN_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_FORKED_TOKEN__ORIGINAL_OBJECT = TRACED_TOKEN_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Remaining Offers Count Sequence</b></em>' containment reference list.
@@ -1435,7 +1498,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE = TRACED_TOKEN_FEATURE_COUNT + 1;
+	int TRACED_FORKED_TOKEN__REMAINING_OFFERS_COUNT_SEQUENCE = TRACED_TOKEN_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Traced Forked Token</em>' class.
@@ -1444,7 +1507,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_FORKED_TOKEN_FEATURE_COUNT = TRACED_TOKEN_FEATURE_COUNT + 2;
+	int TRACED_FORKED_TOKEN_FEATURE_COUNT = TRACED_TOKEN_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Traced Forked Token</em>' class.
@@ -1548,13 +1611,31 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_INPUT = 20;
 
 	/**
+	 * The feature id for the '<em><b>Input Values</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_INPUT__INPUT_VALUES = 0;
+
+	/**
 	 * The feature id for the '<em><b>Input Values Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT__INPUT_VALUES_SEQUENCE = 0;
+	int TRACED_INPUT__INPUT_VALUES_SEQUENCE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_INPUT__ORIGINAL_OBJECT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Traced Input</em>' class.
@@ -1563,7 +1644,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT_FEATURE_COUNT = 1;
+	int TRACED_INPUT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Traced Input</em>' class.
@@ -1585,13 +1666,40 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_INPUT_VALUE = 21;
 
 	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_INPUT_VALUE__ORIGINAL_OBJECT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_INPUT_VALUE__VALUE = 1;
+
+	/**
 	 * The feature id for the '<em><b>Value Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT_VALUE__VALUE_SEQUENCE = 0;
+	int TRACED_INPUT_VALUE__VALUE_SEQUENCE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_INPUT_VALUE__VARIABLE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Variable Sequence</b></em>' containment reference list.
@@ -1600,7 +1708,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT_VALUE__VARIABLE_SEQUENCE = 1;
+	int TRACED_INPUT_VALUE__VARIABLE_SEQUENCE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Traced Input Value</em>' class.
@@ -1609,7 +1717,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT_VALUE_FEATURE_COUNT = 2;
+	int TRACED_INPUT_VALUE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Traced Input Value</em>' class.
@@ -1805,13 +1913,22 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_INTEGER_VALUE = 25;
 
 	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_INTEGER_VALUE__ORIGINAL_OBJECT = TRACED_VALUE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Value Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INTEGER_VALUE__VALUE_SEQUENCE = TRACED_VALUE_FEATURE_COUNT + 0;
+	int TRACED_INTEGER_VALUE__VALUE_SEQUENCE = TRACED_VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Traced Integer Value</em>' class.
@@ -1820,7 +1937,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INTEGER_VALUE_FEATURE_COUNT = TRACED_VALUE_FEATURE_COUNT + 1;
+	int TRACED_INTEGER_VALUE_FEATURE_COUNT = TRACED_VALUE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Traced Integer Value</em>' class.
@@ -2061,13 +2178,31 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_OFFER = 30;
 
 	/**
+	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_OFFER__OFFERED_TOKENS = 0;
+
+	/**
 	 * The feature id for the '<em><b>Offered Tokens Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_OFFER__OFFERED_TOKENS_SEQUENCE = 0;
+	int TRACED_OFFER__OFFERED_TOKENS_SEQUENCE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_OFFER__ORIGINAL_OBJECT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Traced Offer</em>' class.
@@ -2076,7 +2211,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_OFFER_FEATURE_COUNT = 1;
+	int TRACED_OFFER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Traced Offer</em>' class.
@@ -2189,13 +2324,31 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_TRACE = 33;
 
 	/**
+	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_TRACE__EXECUTED_NODES = 0;
+
+	/**
 	 * The feature id for the '<em><b>Executed Nodes Sequence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_TRACE__EXECUTED_NODES_SEQUENCE = 0;
+	int TRACED_TRACE__EXECUTED_NODES_SEQUENCE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACED_TRACE__ORIGINAL_OBJECT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Traced Trace</em>' class.
@@ -2204,7 +2357,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_TRACE_FEATURE_COUNT = 1;
+	int TRACED_TRACE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Traced Trace</em>' class.
@@ -2516,6 +2669,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedBooleanValue();
 
 	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedBooleanValue#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedBooleanValue#getOriginalObject()
+	 * @see #getTracedBooleanValue()
+	 * @generated
+	 */
+	EReference getTracedBooleanValue_OriginalObject();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedBooleanValue#getValueSequence <em>Value Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2578,6 +2742,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedControlToken();
 
 	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedControlToken#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedControlToken#getOriginalObject()
+	 * @see #getTracedControlToken()
+	 * @generated
+	 */
+	EReference getTracedControlToken_OriginalObject();
+
+	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.activitydiagram.TracedDecisionNode <em>Traced Decision Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2638,6 +2813,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedForkedToken();
 
 	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedForkedToken#getBaseToken <em>Base Token</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Token</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedForkedToken#getBaseToken()
+	 * @see #getTracedForkedToken()
+	 * @generated
+	 */
+	EReference getTracedForkedToken_BaseToken();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedForkedToken#getBaseTokenSequence <em>Base Token Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2647,6 +2833,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTracedForkedToken_BaseTokenSequence();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedForkedToken#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedForkedToken#getOriginalObject()
+	 * @see #getTracedForkedToken()
+	 * @generated
+	 */
+	EReference getTracedForkedToken_OriginalObject();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedForkedToken#getRemainingOffersCountSequence <em>Remaining Offers Count Sequence</em>}'.
@@ -2680,6 +2877,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedInput();
 
 	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInput#getInputValues <em>Input Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Input Values</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedInput#getInputValues()
+	 * @see #getTracedInput()
+	 * @generated
+	 */
+	EReference getTracedInput_InputValues();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInput#getInputValuesSequence <em>Input Values Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2689,6 +2897,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTracedInput_InputValuesSequence();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedInput#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedInput#getOriginalObject()
+	 * @see #getTracedInput()
+	 * @generated
+	 */
+	EReference getTracedInput_OriginalObject();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue <em>Traced Input Value</em>}'.
@@ -2701,6 +2920,28 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedInputValue();
 
 	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedInputValue#getOriginalObject()
+	 * @see #getTracedInputValue()
+	 * @generated
+	 */
+	EReference getTracedInputValue_OriginalObject();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedInputValue#getValue()
+	 * @see #getTracedInputValue()
+	 * @generated
+	 */
+	EReference getTracedInputValue_Value();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getValueSequence <em>Value Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2710,6 +2951,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTracedInputValue_ValueSequence();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariable()
+	 * @see #getTracedInputValue()
+	 * @generated
+	 */
+	EReference getTracedInputValue_Variable();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariableSequence <em>Variable Sequence</em>}'.
@@ -2829,6 +3081,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedIntegerValue();
 
 	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedIntegerValue#getOriginalObject()
+	 * @see #getTracedIntegerValue()
+	 * @generated
+	 */
+	EReference getTracedIntegerValue_OriginalObject();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue#getValueSequence <em>Value Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2901,6 +3164,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedOffer();
 
 	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.activitydiagram.TracedOffer#getOfferedTokens <em>Offered Tokens</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Offered Tokens</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedOffer#getOfferedTokens()
+	 * @see #getTracedOffer()
+	 * @generated
+	 */
+	EReference getTracedOffer_OfferedTokens();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedOffer#getOfferedTokensSequence <em>Offered Tokens Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2910,6 +3184,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTracedOffer_OfferedTokensSequence();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedOffer#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedOffer#getOriginalObject()
+	 * @see #getTracedOffer()
+	 * @generated
+	 */
+	EReference getTracedOffer_OriginalObject();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.activitydiagram.TracedOpaqueAction <em>Traced Opaque Action</em>}'.
@@ -2943,6 +3228,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedToken();
 
 	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedToken#getHolder <em>Holder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Holder</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedToken#getHolder()
+	 * @see #getTracedToken()
+	 * @generated
+	 */
+	EReference getTracedToken_Holder();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedToken#getHolderSequence <em>Holder Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2964,6 +3260,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedTrace();
 
 	/**
+	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.activitydiagram.TracedTrace#getExecutedNodes <em>Executed Nodes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Executed Nodes</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedTrace#getExecutedNodes()
+	 * @see #getTracedTrace()
+	 * @generated
+	 */
+	EReference getTracedTrace_ExecutedNodes();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedTrace#getExecutedNodesSequence <em>Executed Nodes Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2973,6 +3280,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTracedTrace_ExecutedNodesSequence();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.activitydiagram.TracedTrace#getOriginalObject <em>Original Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Original Object</em>'.
+	 * @see activitydiagramTrace.States.activitydiagram.TracedTrace#getOriginalObject()
+	 * @see #getTracedTrace()
+	 * @generated
+	 */
+	EReference getTracedTrace_OriginalObject();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.activitydiagram.TracedValue <em>Traced Value</em>}'.
@@ -3293,6 +3611,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_BOOLEAN_VALUE = eINSTANCE.getTracedBooleanValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_BOOLEAN_VALUE__ORIGINAL_OBJECT = eINSTANCE.getTracedBooleanValue_OriginalObject();
+
+		/**
 		 * The meta object literal for the '<em><b>Value Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3347,6 +3673,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRACED_CONTROL_TOKEN = eINSTANCE.getTracedControlToken();
+
+		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_CONTROL_TOKEN__ORIGINAL_OBJECT = eINSTANCE.getTracedControlToken_OriginalObject();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.activitydiagram.impl.TracedDecisionNodeImpl <em>Traced Decision Node</em>}' class.
@@ -3409,12 +3743,28 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_FORKED_TOKEN = eINSTANCE.getTracedForkedToken();
 
 		/**
+		 * The meta object literal for the '<em><b>Base Token</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_FORKED_TOKEN__BASE_TOKEN = eINSTANCE.getTracedForkedToken_BaseToken();
+
+		/**
 		 * The meta object literal for the '<em><b>Base Token Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TRACED_FORKED_TOKEN__BASE_TOKEN_SEQUENCE = eINSTANCE.getTracedForkedToken_BaseTokenSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_FORKED_TOKEN__ORIGINAL_OBJECT = eINSTANCE.getTracedForkedToken_OriginalObject();
 
 		/**
 		 * The meta object literal for the '<em><b>Remaining Offers Count Sequence</b></em>' containment reference list feature.
@@ -3445,12 +3795,28 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_INPUT = eINSTANCE.getTracedInput();
 
 		/**
+		 * The meta object literal for the '<em><b>Input Values</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_INPUT__INPUT_VALUES = eINSTANCE.getTracedInput_InputValues();
+
+		/**
 		 * The meta object literal for the '<em><b>Input Values Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TRACED_INPUT__INPUT_VALUES_SEQUENCE = eINSTANCE.getTracedInput_InputValuesSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_INPUT__ORIGINAL_OBJECT = eINSTANCE.getTracedInput_OriginalObject();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.activitydiagram.impl.TracedInputValueImpl <em>Traced Input Value</em>}' class.
@@ -3463,12 +3829,36 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_INPUT_VALUE = eINSTANCE.getTracedInputValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_INPUT_VALUE__ORIGINAL_OBJECT = eINSTANCE.getTracedInputValue_OriginalObject();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_INPUT_VALUE__VALUE = eINSTANCE.getTracedInputValue_Value();
+
+		/**
 		 * The meta object literal for the '<em><b>Value Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TRACED_INPUT_VALUE__VALUE_SEQUENCE = eINSTANCE.getTracedInputValue_ValueSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_INPUT_VALUE__VARIABLE = eINSTANCE.getTracedInputValue_Variable();
 
 		/**
 		 * The meta object literal for the '<em><b>Variable Sequence</b></em>' containment reference list feature.
@@ -3567,6 +3957,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_INTEGER_VALUE = eINSTANCE.getTracedIntegerValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_INTEGER_VALUE__ORIGINAL_OBJECT = eINSTANCE.getTracedIntegerValue_OriginalObject();
+
+		/**
 		 * The meta object literal for the '<em><b>Value Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3633,12 +4031,28 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_OFFER = eINSTANCE.getTracedOffer();
 
 		/**
+		 * The meta object literal for the '<em><b>Offered Tokens</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_OFFER__OFFERED_TOKENS = eINSTANCE.getTracedOffer_OfferedTokens();
+
+		/**
 		 * The meta object literal for the '<em><b>Offered Tokens Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TRACED_OFFER__OFFERED_TOKENS_SEQUENCE = eINSTANCE.getTracedOffer_OfferedTokensSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_OFFER__ORIGINAL_OBJECT = eINSTANCE.getTracedOffer_OriginalObject();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.activitydiagram.impl.TracedOpaqueActionImpl <em>Traced Opaque Action</em>}' class.
@@ -3669,6 +4083,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_TOKEN = eINSTANCE.getTracedToken();
 
 		/**
+		 * The meta object literal for the '<em><b>Holder</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_TOKEN__HOLDER = eINSTANCE.getTracedToken_Holder();
+
+		/**
 		 * The meta object literal for the '<em><b>Holder Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3687,12 +4109,28 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_TRACE = eINSTANCE.getTracedTrace();
 
 		/**
+		 * The meta object literal for the '<em><b>Executed Nodes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_TRACE__EXECUTED_NODES = eINSTANCE.getTracedTrace_ExecutedNodes();
+
+		/**
 		 * The meta object literal for the '<em><b>Executed Nodes Sequence</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TRACED_TRACE__EXECUTED_NODES_SEQUENCE = eINSTANCE.getTracedTrace_ExecutedNodesSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Original Object</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACED_TRACE__ORIGINAL_OBJECT = eINSTANCE.getTracedTrace_OriginalObject();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.activitydiagram.impl.TracedValueImpl <em>Traced Value</em>}' class.

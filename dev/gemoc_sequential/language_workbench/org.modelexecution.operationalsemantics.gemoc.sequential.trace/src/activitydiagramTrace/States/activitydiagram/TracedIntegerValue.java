@@ -2,6 +2,8 @@
  */
 package activitydiagramTrace.States.activitydiagram;
 
+import activitydiagram.IntegerValue;
+
 import activitydiagramTrace.States.IntegerValue_value_Value;
 
 import org.eclipse.emf.common.util.EList;
@@ -14,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue#getOriginalObject <em>Original Object</em>}</li>
  *   <li>{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue#getValueSequence <em>Value Sequence</em>}</li>
  * </ul>
  * </p>
@@ -23,6 +26,32 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface TracedIntegerValue extends TracedValue {
+	/**
+	 * Returns the value of the '<em><b>Original Object</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Original Object</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Original Object</em>' reference.
+	 * @see #setOriginalObject(IntegerValue)
+	 * @see activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage#getTracedIntegerValue_OriginalObject()
+	 * @model
+	 * @generated
+	 */
+	IntegerValue getOriginalObject();
+
+	/**
+	 * Sets the value of the '{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue#getOriginalObject <em>Original Object</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Original Object</em>' reference.
+	 * @see #getOriginalObject()
+	 * @generated
+	 */
+	void setOriginalObject(IntegerValue value);
+
 	/**
 	 * Returns the value of the '<em><b>Value Sequence</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.IntegerValue_value_Value}.
