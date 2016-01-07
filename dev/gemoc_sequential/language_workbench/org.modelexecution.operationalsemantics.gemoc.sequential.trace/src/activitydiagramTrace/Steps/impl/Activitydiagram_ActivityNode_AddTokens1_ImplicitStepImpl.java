@@ -24,10 +24,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
-import org.gemoc.execution.engine.mse.engine_mse.Engine_msePackage;
-import org.gemoc.execution.engine.mse.engine_mse.LogicalStep;
-import org.gemoc.execution.engine.mse.engine_mse.MSE;
-import org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence;
+import org.gemoc.executionframework.engine.mse.LogicalStep;
+import org.gemoc.executionframework.engine.mse.MSE;
+import org.gemoc.executionframework.engine.mse.MSEOccurrence;
+import org.gemoc.executionframework.engine.mse.MsePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -239,9 +239,9 @@ public class Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl extends Ac
 		if (newLogicalStep != logicalStep) {
 			NotificationChain msgs = null;
 			if (logicalStep != null)
-				msgs = ((InternalEObject)logicalStep).eInverseRemove(this, Engine_msePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
+				msgs = ((InternalEObject)logicalStep).eInverseRemove(this, MsePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
 			if (newLogicalStep != null)
-				msgs = ((InternalEObject)newLogicalStep).eInverseAdd(this, Engine_msePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
+				msgs = ((InternalEObject)newLogicalStep).eInverseAdd(this, MsePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
 			msgs = basicSetLogicalStep(newLogicalStep, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -379,7 +379,7 @@ public class Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl extends Ac
 		switch (featureID) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP:
 				if (logicalStep != null)
-					msgs = ((InternalEObject)logicalStep).eInverseRemove(this, Engine_msePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
+					msgs = ((InternalEObject)logicalStep).eInverseRemove(this, MsePackage.LOGICAL_STEP__MSE_OCCURRENCES, LogicalStep.class, msgs);
 				return basicSetLogicalStep((LogicalStep)otherEnd, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__ENDING_STATE:
 				if (endingState != null)
@@ -535,10 +535,10 @@ public class Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl extends Ac
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == MSEOccurrence.class) {
 			switch (derivedFeatureID) {
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__MSE: return Engine_msePackage.MSE_OCCURRENCE__MSE;
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__PARAMETERS: return Engine_msePackage.MSE_OCCURRENCE__PARAMETERS;
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__RESULT: return Engine_msePackage.MSE_OCCURRENCE__RESULT;
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP: return Engine_msePackage.MSE_OCCURRENCE__LOGICAL_STEP;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__MSE: return MsePackage.MSE_OCCURRENCE__MSE;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__PARAMETERS: return MsePackage.MSE_OCCURRENCE__PARAMETERS;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__RESULT: return MsePackage.MSE_OCCURRENCE__RESULT;
+				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP: return MsePackage.MSE_OCCURRENCE__LOGICAL_STEP;
 				default: return -1;
 			}
 		}
@@ -566,10 +566,10 @@ public class Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl extends Ac
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == MSEOccurrence.class) {
 			switch (baseFeatureID) {
-				case Engine_msePackage.MSE_OCCURRENCE__MSE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__MSE;
-				case Engine_msePackage.MSE_OCCURRENCE__PARAMETERS: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__PARAMETERS;
-				case Engine_msePackage.MSE_OCCURRENCE__RESULT: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__RESULT;
-				case Engine_msePackage.MSE_OCCURRENCE__LOGICAL_STEP: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP;
+				case MsePackage.MSE_OCCURRENCE__MSE: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__MSE;
+				case MsePackage.MSE_OCCURRENCE__PARAMETERS: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__PARAMETERS;
+				case MsePackage.MSE_OCCURRENCE__RESULT: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__RESULT;
+				case MsePackage.MSE_OCCURRENCE__LOGICAL_STEP: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP__LOGICAL_STEP;
 				default: return -1;
 			}
 		}

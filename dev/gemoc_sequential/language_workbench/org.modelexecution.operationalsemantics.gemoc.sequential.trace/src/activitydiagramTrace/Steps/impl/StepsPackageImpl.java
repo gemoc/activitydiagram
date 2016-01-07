@@ -50,7 +50,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.gemoc.execution.engine.mse.engine_mse.Engine_msePackage;
+import org.gemoc.executionframework.engine.mse.MsePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -289,7 +289,7 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		// Initialize simple dependencies
 		ActivitydiagramPackage.eINSTANCE.eClass();
-		Engine_msePackage.eINSTANCE.eClass();
+		MsePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		ActivitydiagramTracePackageImpl theActivitydiagramTracePackage = (ActivitydiagramTracePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramTracePackage.eNS_URI) instanceof ActivitydiagramTracePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramTracePackage.eNS_URI) : ActivitydiagramTracePackage.eINSTANCE);
@@ -847,7 +847,7 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 
 		// Obtain other dependent packages
 		ActivitydiagramPackage theActivitydiagramPackage = (ActivitydiagramPackage)EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramPackage.eNS_URI);
-		Engine_msePackage theEngine_msePackage = (Engine_msePackage)EPackage.Registry.INSTANCE.getEPackage(Engine_msePackage.eNS_URI);
+		MsePackage theMsePackage = (MsePackage)EPackage.Registry.INSTANCE.getEPackage(MsePackage.eNS_URI);
 		StatesPackage theStatesPackage = (StatesPackage)EPackage.Registry.INSTANCE.getEPackage(StatesPackage.eNS_URI);
 
 		// Create type parameters
@@ -888,7 +888,7 @@ public class StepsPackageImpl extends EPackageImpl implements StepsPackage {
 		bigStepEClass.getESuperTypes().add(this.getStep());
 		rootImplicitStepEClass.getESuperTypes().add(this.getSmallStep());
 		smallStepEClass.getESuperTypes().add(this.getStep());
-		stepEClass.getESuperTypes().add(theEngine_msePackage.getMSEOccurrence());
+		stepEClass.getESuperTypes().add(theMsePackage.getMSEOccurrence());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(activitydiagram_ActivityNode_AddTokens1EClass, Activitydiagram_ActivityNode_AddTokens1.class, "Activitydiagram_ActivityNode_AddTokens1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

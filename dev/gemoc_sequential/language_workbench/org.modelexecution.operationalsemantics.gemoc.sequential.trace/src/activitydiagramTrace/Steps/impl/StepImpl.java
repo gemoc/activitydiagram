@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.gemoc.execution.engine.mse.engine_mse.impl.MSEOccurrenceImpl;
+import org.gemoc.executionframework.engine.mse.impl.MSEOccurrenceImpl;
 
 /**
  * <!-- begin-user-doc -->

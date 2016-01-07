@@ -6,12 +6,12 @@ import fr.inria.diverse.trace.gemoc.api.IStepFactory;
 public class ActivitydiagramTraceStepFactory implements IStepFactory {
 
 	@Override
-	public org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence createMSEOccurrence(
-			org.gemoc.execution.engine.mse.engine_mse.MSE mse, List<Object> parameters, List<Object> result) {
+	public org.gemoc.executionframework.engine.mse.MSEOccurrence createMSEOccurrence(
+			org.gemoc.executionframework.engine.mse.MSE mse, List<Object> parameters, List<Object> result) {
 
 		String stepRule = fr.inria.diverse.trace.commons.EcoreCraftingUtil.getFQN(mse.getCaller().eClass(), ".") + "."
 				+ mse.getAction().getName();
-		org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence mseocc = null;
+		org.gemoc.executionframework.engine.mse.MSEOccurrence mseocc = null;
 
 		if (stepRule.equalsIgnoreCase("activitydiagram.Activity.execute")) {
 			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Activity_Execute();
@@ -135,7 +135,7 @@ public class ActivitydiagramTraceStepFactory implements IStepFactory {
 		}
 
 		else {
-			mseocc = org.gemoc.execution.engine.mse.engine_mse.Engine_mseFactory.eINSTANCE.createMSEOccurrence();
+			mseocc = org.gemoc.executionframework.engine.mse.MseFactory.eINSTANCE.createMSEOccurrence();
 		}
 
 		if (mseocc != null) {

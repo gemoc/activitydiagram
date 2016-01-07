@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.gemoc.execution.engine.mse.engine_mse.Engine_msePackage;
+import org.gemoc.executionframework.engine.mse.MsePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -915,7 +915,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__MSE = Engine_msePackage.MSE_OCCURRENCE__MSE;
+	int STEP__MSE = MsePackage.MSE_OCCURRENCE__MSE;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' attribute list.
@@ -924,7 +924,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__PARAMETERS = Engine_msePackage.MSE_OCCURRENCE__PARAMETERS;
+	int STEP__PARAMETERS = MsePackage.MSE_OCCURRENCE__PARAMETERS;
 
 	/**
 	 * The feature id for the '<em><b>Result</b></em>' attribute list.
@@ -933,7 +933,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__RESULT = Engine_msePackage.MSE_OCCURRENCE__RESULT;
+	int STEP__RESULT = MsePackage.MSE_OCCURRENCE__RESULT;
 
 	/**
 	 * The feature id for the '<em><b>Logical Step</b></em>' reference.
@@ -942,7 +942,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__LOGICAL_STEP = Engine_msePackage.MSE_OCCURRENCE__LOGICAL_STEP;
+	int STEP__LOGICAL_STEP = MsePackage.MSE_OCCURRENCE__LOGICAL_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Ending State</b></em>' reference.
@@ -951,7 +951,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__ENDING_STATE = Engine_msePackage.MSE_OCCURRENCE_FEATURE_COUNT + 0;
+	int STEP__ENDING_STATE = MsePackage.MSE_OCCURRENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Starting State</b></em>' reference.
@@ -960,7 +960,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__STARTING_STATE = Engine_msePackage.MSE_OCCURRENCE_FEATURE_COUNT + 1;
+	int STEP__STARTING_STATE = MsePackage.MSE_OCCURRENCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Step</em>' class.
@@ -969,7 +969,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP_FEATURE_COUNT = Engine_msePackage.MSE_OCCURRENCE_FEATURE_COUNT + 2;
+	int STEP_FEATURE_COUNT = MsePackage.MSE_OCCURRENCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Step</em>' class.
@@ -978,7 +978,7 @@ public interface StepsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STEP_OPERATION_COUNT = Engine_msePackage.MSE_OCCURRENCE_OPERATION_COUNT + 0;
+	int STEP_OPERATION_COUNT = MsePackage.MSE_OCCURRENCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagramTrace.Steps.impl.SmallStepImpl <em>Small Step</em>}' class.

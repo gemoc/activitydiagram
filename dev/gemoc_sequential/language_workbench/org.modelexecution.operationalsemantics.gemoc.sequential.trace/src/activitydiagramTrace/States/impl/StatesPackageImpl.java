@@ -66,7 +66,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.gemoc.execution.engine.mse.engine_mse.Engine_msePackage;
+import org.gemoc.executionframework.engine.mse.MsePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -417,7 +417,7 @@ public class StatesPackageImpl extends EPackageImpl implements StatesPackage {
 
 		// Initialize simple dependencies
 		ActivitydiagramPackage.eINSTANCE.eClass();
-		Engine_msePackage.eINSTANCE.eClass();
+		MsePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		ActivitydiagramTracePackageImpl theActivitydiagramTracePackage = (ActivitydiagramTracePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramTracePackage.eNS_URI) instanceof ActivitydiagramTracePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramTracePackage.eNS_URI) : ActivitydiagramTracePackage.eINSTANCE);

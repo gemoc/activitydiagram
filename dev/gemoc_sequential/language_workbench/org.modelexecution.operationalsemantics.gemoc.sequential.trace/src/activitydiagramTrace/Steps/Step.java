@@ -4,7 +4,7 @@ package activitydiagramTrace.Steps;
 
 import activitydiagramTrace.States.State;
 
-import org.gemoc.execution.engine.mse.engine_mse.MSEOccurrence;
+import org.gemoc.executionframework.engine.mse.MSEOccurrence;
 
 /**
  * <!-- begin-user-doc -->
