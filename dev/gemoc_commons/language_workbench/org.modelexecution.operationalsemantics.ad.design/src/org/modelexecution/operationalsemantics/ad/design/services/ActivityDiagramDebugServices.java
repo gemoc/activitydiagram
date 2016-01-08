@@ -3,7 +3,7 @@ package org.modelexecution.operationalsemantics.ad.design.services;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.gemoc.gemoc_language_workbench.extensions.sirius.services.AbstractGemocDebuggerServices;
+import org.gemoc.executionframework.extensions.sirius.services.AbstractGemocDebuggerServices;
 
 public class ActivityDiagramDebugServices extends AbstractGemocDebuggerServices {
 
