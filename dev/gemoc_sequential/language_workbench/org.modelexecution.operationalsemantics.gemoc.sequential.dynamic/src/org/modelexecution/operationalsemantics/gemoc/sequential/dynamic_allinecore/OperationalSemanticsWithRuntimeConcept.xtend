@@ -61,6 +61,9 @@ import activitydiagram.Token
 import activitydiagram.Trace
 import activitydiagram.ForkedToken
 import fr.inria.diverse.k3.al.annotationprocessor.Step
+import java.util.Collections
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
+import fr.inria.diverse.k3.al.annotationprocessor.Main
 
 class Context {
 	public Trace output;
@@ -89,6 +92,22 @@ class Util {
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
 
+	private Context context
+
+	@InitializeModel
+	def public void initializeModel(List<String> args){
+		_self.context = new Context
+		_self.initializeContext(Collections.EMPTY_LIST,_self.context)
+	}
+	
+	@Main
+	def void main() {
+		val start = System.nanoTime
+		_self.execute(_self.context)
+		val stop = System.nanoTime
+		println("time to execute " + (stop - start))
+	}
+
 	@Step
 	def void initializeContext(List<InputValue> value, Context context) {
 		context.inputValues = value
@@ -98,8 +117,6 @@ class ActivityAspect extends NamedElementAspect {
 		value?.forEach[v|v.getVariable().setCurrentValue(v.getValue());]
 		_self.nodes.forEach[n|n.running = true]
 	}
-
-	//Trace trace
 
 	@OverrideAspectMethod
 	@Step

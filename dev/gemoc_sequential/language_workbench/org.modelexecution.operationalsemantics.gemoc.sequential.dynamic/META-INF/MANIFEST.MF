@@ -1,5 +1,5 @@
 Bundle-SymbolicName: org.modelexecution.operationalsemantics.gemoc.sequential.dynamic;singleton:=true
-Export-Package: org.modelexecution.operationalsemantics.gemoc.sequential.dynamic,org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore
+Export-Package: org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore
 Bundle-Name: org.modelexecution.operationalsemantics.gemoc.sequential.dynamic
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
