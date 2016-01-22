@@ -1,0 +1,41 @@
+package org.modelexecution.operationalsemantics.gemoc.sequential.xdsml
+
+import org.modelexecution.operationalsemantics.gemoc.sequential.dynamic_allinecore.*
+
+language ActivityDiagram {
+	
+	/*
+	 * Declare abstract syntax
+	 */
+	syntax "platform:/resource/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore"
+	
+	/*
+	 * Declare DSE
+	 */
+	with ActivityAspect
+	with ActivityEdgeAspect
+	with ActivityFinalNodeAspect
+	with ActivityNodeAspect
+	with BooleanBinaryExpressionAspect
+	with BooleanUnaryExpressionAspect
+	with BooleanVariableAspect
+	with ControlFlowAspect
+	with DecisionNodeAspect
+	with ExpressionAspect
+	with ForkNodeAspect
+	with InitialNodeAspect
+	with IntegerCalculationExpressionAspect
+	with IntegerComparisonExpressionAspect
+	with IntegerVariableAspect
+	with JoinNodeAspect
+	with MergeNodeAspect
+	with NamedElementAspect
+	with OfferAspect
+	with OpaqueActionAspect
+	with TokenAspect
+	
+	/*
+	 * Set name of the ModelType (ie: the type of this language)
+	 */
+	exactType ActivityDiagramMT
+}
