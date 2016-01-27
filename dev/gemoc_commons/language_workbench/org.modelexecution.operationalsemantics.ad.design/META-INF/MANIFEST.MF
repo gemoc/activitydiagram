@@ -11,7 +11,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.sirius.common.acceleo.mtl;visibility:=reexport,
  org.gemoc.executionframework.extensions.sirius,
  org.modelexecution.operationalsemantics.ad;bundle-version="0.1.0",
- org.modelexecution.operationalsemantics.ad.grammar;bundle-version="1.0.0"
+ org.modelexecution.operationalsemantics.ad.grammar;bundle-version="1.0.0",
+ org.gemoc.execution.concurrent.ccsljavaengine.ui;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.modelexecution.operationalsemantics.ad.design,
