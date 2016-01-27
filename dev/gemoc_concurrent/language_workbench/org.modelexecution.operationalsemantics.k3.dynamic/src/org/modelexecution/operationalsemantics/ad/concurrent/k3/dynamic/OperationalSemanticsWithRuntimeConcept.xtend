@@ -1,4 +1,4 @@
-package org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic
+package org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic
 
 import activitydiagram.Activity
 import activitydiagram.ActivityNode
@@ -23,21 +23,21 @@ import org.eclipse.emf.ecore.EPackage
 import org.eclipse.xtext.resource.XtextResourceSet
 import org.modelexecution.operationalsemantics.ActivityDiagramInputStandaloneSetup
 import org.modelexecution.operationalsemantics.ActivityDiagramStandaloneSetup
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ControlFlowAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.OpaqueActionAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.InitialNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ActivityFinalNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ForkNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.JoinNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.MergeNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.DecisionNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.IntegerVariableAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.BooleanVariableAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.IntegerCalculationExpressionAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.IntegerComparisonExpressionAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.BooleanUnaryExpressionAspect.*
-import static extension org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.BooleanBinaryExpressionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ActivityAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ControlFlowAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.OpaqueActionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.InitialNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ActivityFinalNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ForkNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.JoinNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.MergeNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.DecisionNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.IntegerVariableAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.BooleanVariableAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.IntegerCalculationExpressionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.IntegerComparisonExpressionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.BooleanUnaryExpressionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.BooleanBinaryExpressionAspect.*
 
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
 import activitydiagram.OpaqueAction
@@ -325,7 +325,7 @@ class NamedElementAspect {
 }
 
 @Aspect(className=ActivityNode)
-class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.NamedElementAspect {
+class ActivityNodeAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.NamedElementAspect {
 //	public List<Token> heldTokens = new ArrayList<Token>
 
 	public def void execute() {
@@ -553,7 +553,7 @@ class VariableAspect {
 }
 
 @Aspect(className=IntegerVariable)
-class IntegerVariableAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.VariableAspect {
+class IntegerVariableAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.VariableAspect {
 	@OverrideAspectMethod
 	public def void execute() {
 	}
@@ -570,7 +570,7 @@ class IntegerVariableAspect extends org.modelexecution.operationalsemantics.gemo
 
 @Aspect(className=BooleanVariable)
 @OverrideAspectMethod
-class BooleanVariableAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.VariableAspect {
+class BooleanVariableAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.VariableAspect {
 	public def void execute() {
 	}
 
@@ -588,7 +588,7 @@ class BooleanVariableAspect extends org.modelexecution.operationalsemantics.gemo
 
 
 @Aspect(className=IntegerCalculationExpression)
-class IntegerCalculationExpressionAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ExpressionAspect {
+class IntegerCalculationExpressionAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ExpressionAspect {
 	@OverrideAspectMethod
 	public def void execute() {
 		if (_self.operator.value == IntegerCalculationOperator.ADD_VALUE) {
@@ -603,7 +603,7 @@ class IntegerCalculationExpressionAspect extends org.modelexecution.operationals
 }
 
 @Aspect(className=IntegerComparisonExpression)
-class IntegerComparisonExpressionAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ExpressionAspect {
+class IntegerComparisonExpressionAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ExpressionAspect {
 	@OverrideAspectMethod
 	public def void execute() {
 		if (_self.operator.value == IntegerComparisonOperator.EQUALS_VALUE) {
@@ -627,7 +627,7 @@ class IntegerComparisonExpressionAspect extends org.modelexecution.operationalse
 }
 
 @Aspect(className=BooleanUnaryExpression)
-class BooleanUnaryExpressionAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ExpressionAspect {
+class BooleanUnaryExpressionAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ExpressionAspect {
 	@OverrideAspectMethod
 	public def void execute() {
 		if (_self.operator.value == BooleanUnaryOperator.NOT_VALUE) {
@@ -638,7 +638,7 @@ class BooleanUnaryExpressionAspect extends org.modelexecution.operationalsemanti
 }
  
 @Aspect(className=BooleanBinaryExpression)
-class BooleanBinaryExpressionAspect extends org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic.ExpressionAspect {
+class BooleanBinaryExpressionAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ExpressionAspect {
 	@OverrideAspectMethod
 	public def void execute() {
 		if (_self.operator.value == BooleanBinaryOperator.AND_VALUE) {

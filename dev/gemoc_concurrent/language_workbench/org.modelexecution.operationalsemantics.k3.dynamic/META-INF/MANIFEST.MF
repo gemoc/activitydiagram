@@ -1,5 +1,5 @@
-Bundle-SymbolicName: org.modelexecution.operationalsemantics.k3.dynamic;singleton:=true
-Export-Package: org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic
+Bundle-SymbolicName: org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic;singleton:=true
+Export-Package: org.modelexecution.operationalsemantics.gemoc.concurrent.dynamic,org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic
 Bundle-Name: %pluginName
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
