@@ -1639,18 +1639,18 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createResource(eNS_URI);
 
 		// Create annotations
-		// aspect
-		createAspectAnnotations();
+		// dynamic
+		createDynamicAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>aspect</b>.
+	 * Initializes the annotations for <b>dynamic</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createAspectAnnotations() {
-		String source = "aspect";	
+	protected void createDynamicAnnotations() {
+		String source = "dynamic";	
 		addAnnotation
 		  (getActivity__Initialize(), 
 		   source, 
@@ -1658,6 +1658,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (getActivity__Finish(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getActivity_Trace(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1672,7 +1677,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
+		  (getActivityNode_HeldTokens(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getActivityEdge__EvaluateGuard(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getActivityEdge_Offers(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1708,6 +1723,46 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (getDecisionNode__Execute(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getVariable_CurrentValue(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (valueEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (tokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (traceEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (inputValueEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (inputEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (controlTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (forkedTokenEClass, 
 		   source, 
 		   new String[] {
 		   });
