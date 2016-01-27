@@ -74,6 +74,7 @@ import activitydiagram.Token
 import activitydiagram.Offer
 import activitydiagram.ActivitydiagramFactory
 import activitydiagram.ForkedToken
+import fr.inria.diverse.k3.al.annotationprocessor.Containment
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -356,6 +357,7 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.gemoc.c
 
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
+	@Containment
 	public List<Offer> offers = new ArrayList<Offer>
 
 	//write
