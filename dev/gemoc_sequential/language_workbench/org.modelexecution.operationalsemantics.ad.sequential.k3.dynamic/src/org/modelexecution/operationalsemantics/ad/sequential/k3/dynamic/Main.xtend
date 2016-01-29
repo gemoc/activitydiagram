@@ -14,41 +14,41 @@ import org.eclipse.xtext.resource.XtextResourceSet
 
 import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityAspect.*
 
-class Main {
+class Main_deprecated {
 	protected XtextResourceSet resourceSet ;
 	protected ResourceSet resourceSetxmi ;
 
 	/**
 	 * main used by Gemoc plain K3
 	 */
-	def static void main(Activity activity) {
-		val inputValues = new ArrayList<InputValue>();
-		// search input variables in companion file if it exists
-		// ignore if not found or invalid
-		val resSet = activity.eResource.resourceSet
-		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
-		val command = new XtendRecordingCommand(editingDomain){
-			override def void doExecute() {
-    			try{
-					val inputResource = resSet.getResource(URI.createURI(activity.eResource.getURI.toString+"input"), true)
-					val input = inputResource.contents.get(0) as Input
-					inputValues.addAll(input.inputValues)
-				}
-				catch(Exception e){
-					println("not able to find companion input variable file : Ignoring")
-				}
-    		}
-		}
-	    editingDomain.getCommandStack().execute(command);
-
-		var start = System.nanoTime;
-		val context = new Context
-		activity.initializeContext(inputValues, context)
-    	activity.execute(context)
-		var stop = System.nanoTime;
-		println("time to execute " + ( stop - start))
-		println(activity.printTrace())
-	}
+//	def static void main(Activity activity) {
+//		val inputValues = new ArrayList<InputValue>();
+//		// search input variables in companion file if it exists
+//		// ignore if not found or invalid
+//		val resSet = activity.eResource.resourceSet
+//		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
+//		val command = new XtendRecordingCommand(editingDomain){
+//			override def void doExecute() {
+//    			try{
+//					val inputResource = resSet.getResource(URI.createURI(activity.eResource.getURI.toString+"input"), true)
+//					val input = inputResource.contents.get(0) as Input
+//					inputValues.addAll(input.inputValues)
+//				}
+//				catch(Exception e){
+//					println("not able to find companion input variable file : Ignoring")
+//				}
+//    		}
+//		}
+//	    editingDomain.getCommandStack().execute(command);
+//
+//		var start = System.nanoTime;
+//		val context = new Context
+//		activity.initializeContext(inputValues, context)
+//    	activity.execute(context)
+//		var stop = System.nanoTime;
+//		println("time to execute " + ( stop - start))
+//		println(activity.printTrace())
+//	}
 
 	def Activity getActivity(String modelPath) {
 		var resource = resourceSet.getResource(createFileURI(modelPath), true);
@@ -101,12 +101,5 @@ class Main {
 
 }
 
-abstract class XtendRecordingCommand extends RecordingCommand {
-	
-	new(TransactionalEditingDomain domain) {
-		super(domain)
-	}
-	
-	
-}
+
 

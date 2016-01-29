@@ -61,6 +61,10 @@ import activitydiagram.Token
 import activitydiagram.Trace
 import activitydiagram.ForkedToken
 import fr.inria.diverse.k3.al.annotationprocessor.Step
+import org.eclipse.emf.transaction.TransactionalEditingDomain
+import activitydiagram.Input
+import org.eclipse.emf.common.util.URI
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 
 class Context {
 	public Trace output;
@@ -88,6 +92,46 @@ class Util {
 
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
+
+	val Context context = new Context
+	 
+	@InitializeModel
+	def void initializeModel(List<String> args) {
+		val inputValues = new ArrayList<InputValue>();
+		val resSet = _self.eResource.resourceSet
+		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
+		
+		val command = new LoadInputValuesRecordingCommand(editingDomain, _self, inputValues)
+		editingDomain.getCommandStack().execute(command);
+		// search input variables in companion file if it exists
+		// ignore if not found or invalid
+
+		_self.initializeContext(inputValues, _self.context)
+		println("context initialized " )
+	}
+
+	@fr.inria.diverse.k3.al.annotationprocessor.Main
+	def void main(){
+//		val inputValues = new ArrayList<InputValue>();
+//		val resSet = _self.eResource.resourceSet
+//		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
+//		
+//		val command = new LoadInputValues(editingDomain, _self, inputValues)
+//		editingDomain.getCommandStack().execute(command);
+//		// search input variables in companion file if it exists
+//		// ignore if not found or invalid
+//
+//		var start = System.nanoTime;
+//		val context = new Context
+//		_self.initializeContext(inputValues, context)
+
+		val start = System.nanoTime;
+    	_self.execute(_self.context)
+		val stop = System.nanoTime;
+		println("time to execute " + ( stop - start))
+		println(_self.printTrace())
+	}
+
 
 	@Step
 	def void initializeContext(List<InputValue> value, Context context) {
