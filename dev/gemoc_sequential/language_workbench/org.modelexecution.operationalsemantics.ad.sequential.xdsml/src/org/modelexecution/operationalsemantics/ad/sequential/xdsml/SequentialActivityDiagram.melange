@@ -1,0 +1,30 @@
+package org.modelexecution.operationalsemantics.ad.sequential.xdsml
+
+language SequentialActivityDiagram {
+	syntax "platform:/resource//org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore"
+	
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.InitialNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityFinalNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.BooleanVariableAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ExpressionAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityEdgeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.VariableAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.BooleanUnaryExpressionAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ForkNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ControlFlowAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerVariableAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.NamedElementAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.OfferAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerComparisonExpressionAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.DecisionNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.MergeNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.BooleanBinaryExpressionAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.OpaqueActionAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.TokenAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.JoinNodeAspect
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerCalculationExpressionAspect
+
+	exactType SequentialActivityDiagramMT
+}
