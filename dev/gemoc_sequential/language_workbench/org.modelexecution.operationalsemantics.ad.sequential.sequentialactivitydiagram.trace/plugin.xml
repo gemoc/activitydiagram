@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+-->
+<plugin>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated activitydiagramTrace -->
+    <package uri="activitydiagramTrace" class="activitydiagramTrace.ActivitydiagramTracePackage" genModel="model/activitydiagramTrace.genmodel" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated activitydiagramTrace -->
+    <package uri="activitydiagramTrace_Steps" class="activitydiagramTrace.Steps.StepsPackage" genModel="model/activitydiagramTrace.genmodel" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated activitydiagramTrace -->
+    <package uri="activitydiagramTrace_States" class="activitydiagramTrace.States.StatesPackage" genModel="model/activitydiagramTrace.genmodel" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated activitydiagramTrace -->
+    <package uri="activitydiagramTrace_activitydiagram" class="activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage" genModel="model/activitydiagramTrace.genmodel" />
+  </extension>
+  <extension point="org.gemoc.gemoc_language_workbench.engine_addon">
+    <Addon Class="org.modelexecution.operationalsemantics.ad.sequential.sequentialactivitydiagram.trace.tracemanager.ActivitydiagramTraceEngineAddon" Default="false" id="org.modelexecution.operationalsemantics.ad.sequential.sequentialactivitydiagram.trace" Name="activitydiagramTrace Addon" />
+  </extension>
+</plugin>
