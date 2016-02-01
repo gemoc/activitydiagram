@@ -2218,6 +2218,79 @@ public interface ActivitydiagramPackage extends EPackage {
 	int FORKED_TOKEN_OPERATION_COUNT = TOKEN_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link activitydiagram.impl.ContextImpl <em>Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagram.impl.ContextImpl
+	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getContext()
+	 * @generated
+	 */
+	int CONTEXT = 36;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__OUTPUT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__ACTIVITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__PARENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Input Values</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__INPUT_VALUES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Node</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT__NODE = 4;
+
+	/**
+	 * The number of structural features of the '<em>Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2225,7 +2298,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationOperator()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_OPERATOR = 36;
+	int INTEGER_CALCULATION_OPERATOR = 37;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.IntegerComparisonOperator <em>Integer Comparison Operator</em>}' enum.
@@ -2235,7 +2308,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonOperator()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_OPERATOR = 37;
+	int INTEGER_COMPARISON_OPERATOR = 38;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanUnaryOperator <em>Boolean Unary Operator</em>}' enum.
@@ -2245,7 +2318,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_OPERATOR = 38;
+	int BOOLEAN_UNARY_OPERATOR = 39;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanBinaryOperator <em>Boolean Binary Operator</em>}' enum.
@@ -2255,7 +2328,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_OPERATOR = 39;
+	int BOOLEAN_BINARY_OPERATOR = 40;
 
 
 	/**
@@ -3070,6 +3143,71 @@ public interface ActivitydiagramPackage extends EPackage {
 	EAttribute getForkedToken_RemainingOffersCount();
 
 	/**
+	 * Returns the meta object for class '{@link activitydiagram.Context <em>Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Context</em>'.
+	 * @see activitydiagram.Context
+	 * @generated
+	 */
+	EClass getContext();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagram.Context#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Output</em>'.
+	 * @see activitydiagram.Context#getOutput()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EReference getContext_Output();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagram.Context#getActivity <em>Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @see activitydiagram.Context#getActivity()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EReference getContext_Activity();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagram.Context#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see activitydiagram.Context#getParent()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EReference getContext_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link activitydiagram.Context#getInputValues <em>Input Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Input Values</em>'.
+	 * @see activitydiagram.Context#getInputValues()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EReference getContext_InputValues();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagram.Context#getNode <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Node</em>'.
+	 * @see activitydiagram.Context#getNode()
+	 * @see #getContext()
+	 * @generated
+	 */
+	EReference getContext_Node();
+
+	/**
 	 * Returns the meta object for enum '{@link activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3819,6 +3957,56 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FORKED_TOKEN__REMAINING_OFFERS_COUNT = eINSTANCE.getForkedToken_RemainingOffersCount();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagram.impl.ContextImpl <em>Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagram.impl.ContextImpl
+		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getContext()
+		 * @generated
+		 */
+		EClass CONTEXT = eINSTANCE.getContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEXT__OUTPUT = eINSTANCE.getContext_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEXT__ACTIVITY = eINSTANCE.getContext_Activity();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEXT__PARENT = eINSTANCE.getContext_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Values</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEXT__INPUT_VALUES = eINSTANCE.getContext_InputValues();
+
+		/**
+		 * The meta object literal for the '<em><b>Node</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTEXT__NODE = eINSTANCE.getContext_Node();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.

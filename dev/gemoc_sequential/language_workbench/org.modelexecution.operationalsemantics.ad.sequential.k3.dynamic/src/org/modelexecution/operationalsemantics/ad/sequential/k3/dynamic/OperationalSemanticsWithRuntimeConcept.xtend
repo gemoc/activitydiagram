@@ -4,6 +4,7 @@ import activitydiagram.Activity
 import activitydiagram.ActivityNode
 import activitydiagram.BooleanValue
 import activitydiagram.BooleanVariable
+import activitydiagram.Context
 import activitydiagram.InputValue
 import activitydiagram.IntegerValue
 import activitydiagram.IntegerVariable
@@ -66,34 +67,36 @@ import activitydiagram.Input
 import org.eclipse.emf.common.util.URI
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 
-class Context {
-	public Trace output;
-	public Activity activity;
-	public Context parent;
-	public List<InputValue> inputValues ;
-	public JoinNode node ;
+//class Context {
+//	public Trace output;
+//	public Activity activity;
+//	public Context parent;
+//	public List<InputValue> inputValues ;
+//	public JoinNode node ;
+//
+//	new() {
+//	}
+//
+//	new(Trace c, Activity a, List<InputValue> inputValues, Context parent) {
+//		this.output = c
+//		this.activity = a
+//		this.inputValues = inputValues
+//		this.parent = parent
+//	}
+//
+//}
 
-	new() {
-	}
-
-	new(Trace c, Activity a, List<InputValue> inputValues, Context parent) {
-		this.output = c
-		this.activity = a
-		this.inputValues = inputValues
-		this.parent = parent
-	}
-
-}
-
-class Util {
-	public static final Object LINE_BREAK = System.getProperty("line.separator");
-
-}
+//class Util {
+//	public static final Object LINE_BREAK = System.getProperty("line.separator");
+//
+//}
 
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
+	
+	public static final Object LINE_BREAK = System.getProperty("line.separator");
 
-	val Context context = new Context
+	private val Context context = ActivitydiagramFactory.eINSTANCE.createContext
 	 
 	@InitializeModel
 	def void initializeModel(List<String> args) {
@@ -135,7 +138,7 @@ class ActivityAspect extends NamedElementAspect {
 
 	@Step
 	def void initializeContext(List<InputValue> value, Context context) {
-		context.inputValues = value
+		context.inputValues.addAll(value);
 		context.activity = _self
 		_self.trace = ActivitydiagramFactory.eINSTANCE.createTrace;
 		context.output = _self.trace
@@ -178,11 +181,11 @@ class ActivityAspect extends NamedElementAspect {
 
 	def String printTrace() {
 		val text = new StringBuffer();
-		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(Util.LINE_BREAK);]
+		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(LINE_BREAK);]
 
 		_self.getLocals().forEach [ v |
 			text.append(v.print);
-			text.append(Util.LINE_BREAK);
+			text.append(LINE_BREAK);
 		]
 		return text.toString();
 	}

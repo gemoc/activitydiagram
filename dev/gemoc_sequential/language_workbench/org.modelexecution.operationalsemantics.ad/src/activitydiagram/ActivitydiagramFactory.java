@@ -229,6 +229,15 @@ public interface ActivitydiagramFactory extends EFactory {
 	ForkedToken createForkedToken();
 
 	/**
+	 * Returns a new object of class '<em>Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Context</em>'.
+	 * @generated
+	 */
+	Context createContext();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

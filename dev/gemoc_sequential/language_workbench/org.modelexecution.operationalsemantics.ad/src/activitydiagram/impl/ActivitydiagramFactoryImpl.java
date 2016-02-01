@@ -80,6 +80,7 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.INPUT: return createInput();
 			case ActivitydiagramPackage.CONTROL_TOKEN: return createControlToken();
 			case ActivitydiagramPackage.FORKED_TOKEN: return createForkedToken();
+			case ActivitydiagramPackage.CONTEXT: return createContext();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -355,6 +356,16 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	public ForkedToken createForkedToken() {
 		ForkedTokenImpl forkedToken = new ForkedTokenImpl();
 		return forkedToken;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Context createContext() {
+		ContextImpl context = new ContextImpl();
+		return context;
 	}
 
 	/**

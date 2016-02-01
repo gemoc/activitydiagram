@@ -14,8 +14,9 @@ Workflow {
 	bean = StandaloneSetup {
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
-		registerGeneratedEPackage = "activitydiagram.ActivitydiagramPackage"
-		registerGenModelFile = "platform:/resource/org.modelexecution.operationalsemantics.ad/ad/activitydiagram.genmodel"
+		registerGeneratedEPackage = "org.modelexecution.operationalsemantics.ad.sequential.xdsml.sequentialactivitydiagramextended.activitydiagram.ActivitydiagramPackage"
+//		registerGeneratedEPackage = "activitydiagram.ActivitydiagramPackage"
+		registerGenModelFile = "platform:/resource/org.modelexecution.operationalsemantics.ad.sequential.xdsml.sequentialactivitydiagramextended/model/SequentialActivityDiagramExtended.genmodel"
 	}
 
 	component = DirectoryCleaner {

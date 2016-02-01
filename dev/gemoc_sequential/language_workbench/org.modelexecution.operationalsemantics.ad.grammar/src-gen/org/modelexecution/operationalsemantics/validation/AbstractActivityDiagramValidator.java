@@ -12,7 +12,7 @@ public class AbstractActivityDiagramValidator extends org.eclipse.xtext.validati
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://activitydiagram/1.0"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://sequentialactivitydiagramextended/"));
 		return result;
 	}
 }

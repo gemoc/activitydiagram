@@ -2,6 +2,11 @@ package org.modelexecution.operationalsemantics.ad.sequential.xdsml
 
 language SequentialActivityDiagram {
 	syntax "platform:/resource//org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore"
+
+	exactType SequentialActivityDiagramMT
+}
+
+language SequentialActivityDiagramExtended inherits SequentialActivityDiagram{
 	
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.InitialNodeAspect
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityNodeAspect
@@ -25,6 +30,9 @@ language SequentialActivityDiagram {
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.TokenAspect
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.JoinNodeAspect
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerCalculationExpressionAspect
-
-	exactType SequentialActivityDiagramMT
+	
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.XtendRecordingCommand
+	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.LoadInputValuesRecordingCommand
+	
+	exactType SequentialActivityDiagramExtendedMT
 }
