@@ -92,6 +92,7 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__LOCALS);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__INPUTS);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__TRACE);
+			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__SIGNALS);
 		}
 		return childrenFeatures;
 	}
@@ -155,6 +156,7 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			case ActivitydiagramPackage.ACTIVITY__LOCALS:
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 			case ActivitydiagramPackage.ACTIVITY__TRACE:
+			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,6 +211,16 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ActivitydiagramPackage.Literals.ACTIVITY__NODES,
+				 ActivitydiagramFactory.eINSTANCE.createSendSignalAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ActivitydiagramPackage.Literals.ACTIVITY__NODES,
+				 ActivitydiagramFactory.eINSTANCE.createAcceptEventAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ActivitydiagramPackage.Literals.ACTIVITY__EDGES,
 				 ActivitydiagramFactory.eINSTANCE.createControlFlow()));
 
@@ -236,6 +248,16 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(ActivitydiagramPackage.Literals.ACTIVITY__TRACE,
 				 ActivitydiagramFactory.eINSTANCE.createTrace()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ActivitydiagramPackage.Literals.ACTIVITY__SIGNALS,
+				 ActivitydiagramFactory.eINSTANCE.createSignal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ActivitydiagramPackage.Literals.ACTIVITY__SIGNALS,
+				 ActivitydiagramFactory.eINSTANCE.createSignalEvent()));
 	}
 
 	/**

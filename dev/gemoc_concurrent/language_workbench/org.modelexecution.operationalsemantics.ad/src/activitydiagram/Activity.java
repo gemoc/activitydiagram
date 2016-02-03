@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagram.Activity#getInputs <em>Inputs</em>}</li>
  *   <li>{@link activitydiagram.Activity#getTrace <em>Trace</em>}</li>
  *   <li>{@link activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}</li>
+ *   <li>{@link activitydiagram.Activity#getSignals <em>Signals</em>}</li>
  * </ul>
  * </p>
  *
@@ -143,6 +144,22 @@ public interface Activity extends NamedElement {
 	 * @generated
 	 */
 	void setInputValuePath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Signals</b></em>' containment reference list.
+	 * The list contents are of type {@link activitydiagram.Signal}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Signals</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Signals</em>' containment reference list.
+	 * @see activitydiagram.ActivitydiagramPackage#getActivity_Signals()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Signal> getSignals();
 
 	/**
 	 * <!-- begin-user-doc -->

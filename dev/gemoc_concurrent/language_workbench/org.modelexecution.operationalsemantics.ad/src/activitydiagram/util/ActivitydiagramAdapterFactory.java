@@ -212,6 +212,22 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createForkedTokenAdapter();
 			}
 			@Override
+			public Adapter caseSendSignalAction(SendSignalAction object) {
+				return createSendSignalActionAdapter();
+			}
+			@Override
+			public Adapter caseAcceptEventAction(AcceptEventAction object) {
+				return createAcceptEventActionAdapter();
+			}
+			@Override
+			public Adapter caseSignal(Signal object) {
+				return createSignalAdapter();
+			}
+			@Override
+			public Adapter caseSignalEvent(SignalEvent object) {
+				return createSignalEventAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -732,6 +748,62 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createForkedTokenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagram.SendSignalAction <em>Send Signal Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagram.SendSignalAction
+	 * @generated
+	 */
+	public Adapter createSendSignalActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagram.AcceptEventAction <em>Accept Event Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagram.AcceptEventAction
+	 * @generated
+	 */
+	public Adapter createAcceptEventActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagram.Signal <em>Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagram.Signal
+	 * @generated
+	 */
+	public Adapter createSignalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagram.SignalEvent <em>Signal Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagram.SignalEvent
+	 * @generated
+	 */
+	public Adapter createSignalEventAdapter() {
 		return null;
 	}
 

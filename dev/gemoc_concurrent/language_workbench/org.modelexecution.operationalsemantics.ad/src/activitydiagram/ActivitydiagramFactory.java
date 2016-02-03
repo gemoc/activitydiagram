@@ -229,6 +229,42 @@ public interface ActivitydiagramFactory extends EFactory {
 	ForkedToken createForkedToken();
 
 	/**
+	 * Returns a new object of class '<em>Send Signal Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Send Signal Action</em>'.
+	 * @generated
+	 */
+	SendSignalAction createSendSignalAction();
+
+	/**
+	 * Returns a new object of class '<em>Accept Event Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accept Event Action</em>'.
+	 * @generated
+	 */
+	AcceptEventAction createAcceptEventAction();
+
+	/**
+	 * Returns a new object of class '<em>Signal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Signal</em>'.
+	 * @generated
+	 */
+	Signal createSignal();
+
+	/**
+	 * Returns a new object of class '<em>Signal Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Signal Event</em>'.
+	 * @generated
+	 */
+	SignalEvent createSignalEvent();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

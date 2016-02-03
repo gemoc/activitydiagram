@@ -60,6 +60,12 @@
               </style>
             </conditionnalStyles>
           </subNodeMappings>
+          <subNodeMappings name="AD_Signal" semanticCandidatesExpression="feature:signals" domainClass="Signal">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/Signal.png">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
           <subContainerMappings name="AD_ExecutableNode" detailDescriptions="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='navigate']/@ownedTools[name='CR_ActivityDiagramFromCallBehaviorAction']" navigationDescriptions="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='navigate']/@ownedTools[name='Open%20Activity%20Diagram']" semanticCandidatesExpression="feature:nodes" domainClass="ExecutableNode">
             <borderedNodeMappings name="AD_InputPin" domainClass="Input">
               <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="['nbInputValues='+self.inputValues->size()/]" sizeComputationExpression="2">
@@ -78,6 +84,18 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[self.oclIsTypeOf(SendSignalAction)/]">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/SendSignalAction.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[self.oclIsTypeOf(AcceptEventAction)/]">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/acceptEventAction.svg">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
           </subContainerMappings>
@@ -151,7 +169,7 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="InitialNode" referenceName="ownedNode">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="InitialNode" referenceName="nodes">
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool_1:If" conditionExpression="[container->filter(uml::ActivityPartition)->size()>0/]">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -170,7 +188,7 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ActivityFinalNode" referenceName="ownedNode">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ActivityFinalNode" referenceName="nodes">
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool_1:If" conditionExpression="[container->filter(uml::ActivityPartition)->size()>0/]">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -189,7 +207,7 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="DecisionNode" referenceName="ownedNode">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="DecisionNode" referenceName="nodes">
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool_1:If" conditionExpression="[container->filter(uml::ActivityPartition)->size()>0/]">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -208,7 +226,7 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MergeNode" referenceName="ownedNode">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MergeNode" referenceName="nodes">
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool_1:If" conditionExpression="[container->filter(uml::ActivityPartition)->size()>0/]">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -227,7 +245,7 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                   <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ForkNode" referenceName="ownedNode">
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ForkNode" referenceName="nodes">
                       <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool_1:If" conditionExpression="[container->filter(uml::ActivityPartition)->size()>0/]">
                         <subModelOperations xsi:type="tool_1:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -245,7 +263,7 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="JoinNode" referenceName="ownedNode" variableName="joinNode">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="JoinNode" referenceName="nodes" variableName="joinNode">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                   </subModelOperations>
                 </firstModelOperations>
@@ -258,9 +276,31 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpaqueAction" referenceName="ownedNode">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpaqueAction" referenceName="nodes">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="body" valueExpression="['// TODO body of '+instance.name/]"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:ContainerCreationDescription" name="SendSignalAction" containerMappings="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/OpaqueAction.gif">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="SendSignalAction" referenceName="nodes">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:ContainerCreationDescription" name="AcceptEventAction" containerMappings="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/OpaqueAction.gif">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="AcceptEventAction" referenceName="nodes">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -285,13 +325,26 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
                 <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ControlFlow" referenceName="edge">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ControlFlow" referenceName="edges">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="Signal">
+            <tools xsi:type="tool:NodeCreationDescription" name="AD_Signal" nodeMappings="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_Signal']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="SignalEvent" referenceName="signals">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['signal'+self.eContainer().signals->size()+1/]"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
           <subSections name="edit"/>
           <subSections name="reconnect">
@@ -464,11 +517,29 @@
                 </style>
               </conditionnalStyles>
             </borderedNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
             <conditionnalStyles predicateExpression="[self.oclIsTypeOf(OpaqueAction)/]">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" labelExpression="[self.name + '\nheldTokens =' +self.oclAsType(ActivityNode).heldTokens->size()/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20orange']">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[self.oclIsTypeOf(SendSignalAction)/]">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/SendSignalAction.png">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="[self.oclIsTypeOf(AcceptEventAction)/]">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/acceptEventAction.svg">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
           </subContainerMappings>
@@ -478,7 +549,7 @@
             <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@conditionnalStyles.0/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_LocalVariable']/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_InputVariable']/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style" referenceName="backgroundColor">
               <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
             </featureCustomizations>
-            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.0/@style" referenceName="labelColor">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.0/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@conditionnalStyles.2/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.2/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@conditionnalStyles.1/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.1/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_Signal']/@style" referenceName="labelColor">
               <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
             </featureCustomizations>
             <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.5/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.4/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.1/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@borderedNodeMappings[name='AD_InputPin']/@style //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.2/@style" referenceName="color">

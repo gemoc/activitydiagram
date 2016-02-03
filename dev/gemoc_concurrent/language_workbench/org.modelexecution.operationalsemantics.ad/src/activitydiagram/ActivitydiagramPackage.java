@@ -169,13 +169,22 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY__INPUT_VALUE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Initialize</em>' operation.
@@ -2498,6 +2507,298 @@ public interface ActivitydiagramPackage extends EPackage {
 	int FORKED_TOKEN_OPERATION_COUNT = TOKEN_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link activitydiagram.impl.SendSignalActionImpl <em>Send Signal Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagram.impl.SendSignalActionImpl
+	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSendSignalAction()
+	 * @generated
+	 */
+	int SEND_SIGNAL_ACTION = 36;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__OUTGOING = ACTION__OUTGOING;
+
+	/**
+	 * The feature id for the '<em><b>Incoming</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__INCOMING = ACTION__INCOMING;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__ACTIVITY = ACTION__ACTIVITY;
+
+	/**
+	 * The feature id for the '<em><b>Running</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__RUNNING = ACTION__RUNNING;
+
+	/**
+	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__HELD_TOKENS = ACTION__HELD_TOKENS;
+
+	/**
+	 * The feature id for the '<em><b>Signal</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION__SIGNAL = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Send Signal Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Terminate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION___TERMINATE = ACTION___TERMINATE;
+
+	/**
+	 * The operation id for the '<em>Execute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION___EXECUTE = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Send Signal Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEND_SIGNAL_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link activitydiagram.impl.AcceptEventActionImpl <em>Accept Event Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagram.impl.AcceptEventActionImpl
+	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getAcceptEventAction()
+	 * @generated
+	 */
+	int ACCEPT_EVENT_ACTION = 37;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__OUTGOING = ACTION__OUTGOING;
+
+	/**
+	 * The feature id for the '<em><b>Incoming</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__INCOMING = ACTION__INCOMING;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__ACTIVITY = ACTION__ACTIVITY;
+
+	/**
+	 * The feature id for the '<em><b>Running</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__RUNNING = ACTION__RUNNING;
+
+	/**
+	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__HELD_TOKENS = ACTION__HELD_TOKENS;
+
+	/**
+	 * The feature id for the '<em><b>Trigger</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION__TRIGGER = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Accept Event Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Terminate</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION___TERMINATE = ACTION___TERMINATE;
+
+	/**
+	 * The operation id for the '<em>Execute</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION___EXECUTE = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Accept Event Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCEPT_EVENT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link activitydiagram.impl.SignalImpl <em>Signal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagram.impl.SignalImpl
+	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignal()
+	 * @generated
+	 */
+	int SIGNAL = 38;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Signal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Signal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagram.impl.SignalEventImpl <em>Signal Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagram.impl.SignalEventImpl
+	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignalEvent()
+	 * @generated
+	 */
+	int SIGNAL_EVENT = 39;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_EVENT__NAME = SIGNAL__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Signal Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_EVENT_FEATURE_COUNT = SIGNAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Signal Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_EVENT_OPERATION_COUNT = SIGNAL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2505,7 +2806,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationOperator()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_OPERATOR = 36;
+	int INTEGER_CALCULATION_OPERATOR = 40;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.IntegerComparisonOperator <em>Integer Comparison Operator</em>}' enum.
@@ -2515,7 +2816,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonOperator()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_OPERATOR = 37;
+	int INTEGER_COMPARISON_OPERATOR = 41;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanUnaryOperator <em>Boolean Unary Operator</em>}' enum.
@@ -2525,7 +2826,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_OPERATOR = 38;
+	int BOOLEAN_UNARY_OPERATOR = 42;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanBinaryOperator <em>Boolean Binary Operator</em>}' enum.
@@ -2535,7 +2836,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_OPERATOR = 39;
+	int BOOLEAN_BINARY_OPERATOR = 43;
 
 
 	/**
@@ -2613,6 +2914,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getActivity_InputValuePath();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link activitydiagram.Activity#getSignals <em>Signals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Signals</em>'.
+	 * @see activitydiagram.Activity#getSignals()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Signals();
 
 	/**
 	 * Returns the meta object for the '{@link activitydiagram.Activity#initialize() <em>Initialize</em>}' operation.
@@ -3491,6 +3803,88 @@ public interface ActivitydiagramPackage extends EPackage {
 	EAttribute getForkedToken_RemainingOffersCount();
 
 	/**
+	 * Returns the meta object for class '{@link activitydiagram.SendSignalAction <em>Send Signal Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Send Signal Action</em>'.
+	 * @see activitydiagram.SendSignalAction
+	 * @generated
+	 */
+	EClass getSendSignalAction();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagram.SendSignalAction#getSignal <em>Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Signal</em>'.
+	 * @see activitydiagram.SendSignalAction#getSignal()
+	 * @see #getSendSignalAction()
+	 * @generated
+	 */
+	EReference getSendSignalAction_Signal();
+
+	/**
+	 * Returns the meta object for the '{@link activitydiagram.SendSignalAction#execute() <em>Execute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Execute</em>' operation.
+	 * @see activitydiagram.SendSignalAction#execute()
+	 * @generated
+	 */
+	EOperation getSendSignalAction__Execute();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagram.AcceptEventAction <em>Accept Event Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Accept Event Action</em>'.
+	 * @see activitydiagram.AcceptEventAction
+	 * @generated
+	 */
+	EClass getAcceptEventAction();
+
+	/**
+	 * Returns the meta object for the reference '{@link activitydiagram.AcceptEventAction#getTrigger <em>Trigger</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Trigger</em>'.
+	 * @see activitydiagram.AcceptEventAction#getTrigger()
+	 * @see #getAcceptEventAction()
+	 * @generated
+	 */
+	EReference getAcceptEventAction_Trigger();
+
+	/**
+	 * Returns the meta object for the '{@link activitydiagram.AcceptEventAction#execute() <em>Execute</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Execute</em>' operation.
+	 * @see activitydiagram.AcceptEventAction#execute()
+	 * @generated
+	 */
+	EOperation getAcceptEventAction__Execute();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagram.Signal <em>Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signal</em>'.
+	 * @see activitydiagram.Signal
+	 * @generated
+	 */
+	EClass getSignal();
+
+	/**
+	 * Returns the meta object for class '{@link activitydiagram.SignalEvent <em>Signal Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signal Event</em>'.
+	 * @see activitydiagram.SignalEvent
+	 * @generated
+	 */
+	EClass getSignalEvent();
+
+	/**
 	 * Returns the meta object for enum '{@link activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3610,6 +4004,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTIVITY__INPUT_VALUE_PATH = eINSTANCE.getActivity_InputValuePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Signals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__SIGNALS = eINSTANCE.getActivity_Signals();
 
 		/**
 		 * The meta object literal for the '<em><b>Initialize</b></em>' operation.
@@ -4352,6 +4754,78 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FORKED_TOKEN__REMAINING_OFFERS_COUNT = eINSTANCE.getForkedToken_RemainingOffersCount();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagram.impl.SendSignalActionImpl <em>Send Signal Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagram.impl.SendSignalActionImpl
+		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSendSignalAction()
+		 * @generated
+		 */
+		EClass SEND_SIGNAL_ACTION = eINSTANCE.getSendSignalAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEND_SIGNAL_ACTION__SIGNAL = eINSTANCE.getSendSignalAction_Signal();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SEND_SIGNAL_ACTION___EXECUTE = eINSTANCE.getSendSignalAction__Execute();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagram.impl.AcceptEventActionImpl <em>Accept Event Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagram.impl.AcceptEventActionImpl
+		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getAcceptEventAction()
+		 * @generated
+		 */
+		EClass ACCEPT_EVENT_ACTION = eINSTANCE.getAcceptEventAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Trigger</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACCEPT_EVENT_ACTION__TRIGGER = eINSTANCE.getAcceptEventAction_Trigger();
+
+		/**
+		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ACCEPT_EVENT_ACTION___EXECUTE = eINSTANCE.getAcceptEventAction__Execute();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagram.impl.SignalImpl <em>Signal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagram.impl.SignalImpl
+		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignal()
+		 * @generated
+		 */
+		EClass SIGNAL = eINSTANCE.getSignal();
+
+		/**
+		 * The meta object literal for the '{@link activitydiagram.impl.SignalEventImpl <em>Signal Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagram.impl.SignalEventImpl
+		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignalEvent()
+		 * @generated
+		 */
+		EClass SIGNAL_EVENT = eINSTANCE.getSignalEvent();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.

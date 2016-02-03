@@ -336,6 +336,41 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ActivitydiagramPackage.SEND_SIGNAL_ACTION: {
+				SendSignalAction sendSignalAction = (SendSignalAction)theEObject;
+				T result = caseSendSignalAction(sendSignalAction);
+				if (result == null) result = caseAction(sendSignalAction);
+				if (result == null) result = caseExecutableNode(sendSignalAction);
+				if (result == null) result = caseActivityNode(sendSignalAction);
+				if (result == null) result = caseNamedElement(sendSignalAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.ACCEPT_EVENT_ACTION: {
+				AcceptEventAction acceptEventAction = (AcceptEventAction)theEObject;
+				T result = caseAcceptEventAction(acceptEventAction);
+				if (result == null) result = caseAction(acceptEventAction);
+				if (result == null) result = caseExecutableNode(acceptEventAction);
+				if (result == null) result = caseActivityNode(acceptEventAction);
+				if (result == null) result = caseNamedElement(acceptEventAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.SIGNAL: {
+				Signal signal = (Signal)theEObject;
+				T result = caseSignal(signal);
+				if (result == null) result = caseNamedElement(signal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.SIGNAL_EVENT: {
+				SignalEvent signalEvent = (SignalEvent)theEObject;
+				T result = caseSignalEvent(signalEvent);
+				if (result == null) result = caseSignal(signalEvent);
+				if (result == null) result = caseNamedElement(signalEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -877,6 +912,66 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseForkedToken(ForkedToken object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Send Signal Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Send Signal Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSendSignalAction(SendSignalAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accept Event Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accept Event Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAcceptEventAction(AcceptEventAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Signal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Signal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignal(Signal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Signal Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Signal Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignalEvent(SignalEvent object) {
 		return null;
 	}
 
