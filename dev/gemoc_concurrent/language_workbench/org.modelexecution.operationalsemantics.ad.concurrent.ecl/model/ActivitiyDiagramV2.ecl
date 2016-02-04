@@ -47,8 +47,11 @@ package activitydiagram
 		inv waitControlToExecute:
 		((not ((self).oclIsKindOf(MergeNode)))
 		and
-		(self.incoming->size() > 1)
-		and (self.incoming.oclAsType(ControlFlow).guard->first() = null)
+			(not ((self).incoming->first().source.oclIsKindOf(DecisionNode)))  --TODO: what if severalNode whose a decision ?
+		and
+		   (self.incoming->size() > 1)
+		and 
+		   (self.incoming.oclAsType(ControlFlow).guard->first() = null)
 		)implies
 			let incomingFinished : Event = Expression Sup(self.incoming.source.executeIt) in
 			(Relation Precedes(incomingFinished, self.executeIt)) 
@@ -56,8 +59,11 @@ package activitydiagram
 		inv waitControlToExecute2:
 		((not ((self).oclIsKindOf(MergeNode)))
 		and
-		(self.incoming->size() = 1)
-		and (self.incoming->first().oclAsType(ControlFlow).guard = null)
+			(not ((self).incoming->first().source.oclIsKindOf(DecisionNode)))
+		and
+		   (self.incoming->size() = 1)
+		and 
+		   (self.incoming->first().oclAsType(ControlFlow).guard = null)
 		)implies
 			(Relation Precedes(self.incoming->first().source.executeIt, self.executeIt)) 
 		
@@ -85,5 +91,11 @@ package activitydiagram
 	context ActivityFinalNode
 		inv finishWhenActivityFinished:
 			Relation Coincides(self.executeIt , self.activity.finishActivity)
+			
+	context Activity
+		inv onlyOneEnterIfNoFinal:
+			(self.nodes->select(n |(n).oclIsKindOf(ActivityFinalNode))->size() = 0) implies
+			let noFinishActivity : Event = Expression Minus(self.finishActivity,self.finishActivity) in
+			Relation Coincides(self.finishActivity, noFinishActivity)
 
 endpackage
