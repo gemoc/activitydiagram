@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.gemoc.activitydiagram.feature_1.0.0.qualifier.jar" id="org.gemoc.activitydiagram.feature" version="1.0.0.qualifier">
+      <category name="gemoc.activitydiagram"/>
+   </feature>
+   
+   <category-def name="gemoc.activitydiagram" label="GEMOC ActivityDiagram Language"/>
+</site>
