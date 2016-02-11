@@ -75,6 +75,8 @@ import activitydiagram.Offer
 import activitydiagram.ActivitydiagramFactory
 import activitydiagram.ForkedToken
 import fr.inria.diverse.k3.al.annotationprocessor.Containment
+import activitydiagram.SendSignalAction
+import activitydiagram.AcceptEventAction
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -423,6 +425,26 @@ class OpaqueActionAspect extends ActivityNodeAspect {
 		_self.incoming.forEach[ i | i.takeOfferedTokens()]
 		(_self.eContainer() as Activity).context.output.executedNodes.add(_self)
 		_self.expressions.forEach[e|e.execute()]
+		_self.outgoing.forEach[o | o.sendOffer()]
+	}
+}
+
+@Aspect(className=SendSignalAction)
+class SendSignalActionAspect extends ActivityNodeAspect {
+	@OverrideAspectMethod
+	public def void execute() {
+		_self.incoming.forEach[ i | i.takeOfferedTokens()]
+		(_self.eContainer() as Activity).context.output.executedNodes.add(_self)
+		_self.outgoing.forEach[o | o.sendOffer()]
+	}
+}
+
+@Aspect(className=AcceptEventAction)
+class AcceptEventActionAspect extends ActivityNodeAspect {
+	@OverrideAspectMethod
+	public def void execute() {
+		_self.incoming.forEach[ i | i.takeOfferedTokens()]
+		(_self.eContainer() as Activity).context.output.executedNodes.add(_self)
 		_self.outgoing.forEach[o | o.sendOffer()]
 	}
 }

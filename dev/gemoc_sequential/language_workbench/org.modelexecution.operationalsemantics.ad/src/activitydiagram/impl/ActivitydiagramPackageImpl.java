@@ -1471,18 +1471,20 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createResource(eNS_URI);
 
 		// Create annotations
-		// dynamic
-		createDynamicAnnotations();
+		// aspect
+		createAspectAnnotations();
+		// metaclass
+		createMetaclassAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>dynamic</b>.
+	 * Initializes the annotations for <b>aspect</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createDynamicAnnotations() {
-		String source = "dynamic";	
+	protected void createAspectAnnotations() {
+		String source = "aspect";	
 		addAnnotation
 		  (getActivity_Trace(), 
 		   source, 
@@ -1502,7 +1504,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		  (getVariable_CurrentValue(), 
 		   source, 
 		   new String[] {
-		   });	
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>metaclass</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createMetaclassAnnotations() {
+		String source = "metaclass";	
 		addAnnotation
 		  (valueEClass, 
 		   source, 

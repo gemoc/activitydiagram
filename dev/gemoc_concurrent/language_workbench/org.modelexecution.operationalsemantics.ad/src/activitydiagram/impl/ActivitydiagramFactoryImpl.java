@@ -80,6 +80,10 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.INPUT: return createInput();
 			case ActivitydiagramPackage.CONTROL_TOKEN: return createControlToken();
 			case ActivitydiagramPackage.FORKED_TOKEN: return createForkedToken();
+			case ActivitydiagramPackage.SEND_SIGNAL_ACTION: return createSendSignalAction();
+			case ActivitydiagramPackage.ACCEPT_EVENT_ACTION: return createAcceptEventAction();
+			case ActivitydiagramPackage.SIGNAL: return createSignal();
+			case ActivitydiagramPackage.SIGNAL_EVENT: return createSignalEvent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -355,6 +359,46 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	public ForkedToken createForkedToken() {
 		ForkedTokenImpl forkedToken = new ForkedTokenImpl();
 		return forkedToken;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SendSignalAction createSendSignalAction() {
+		SendSignalActionImpl sendSignalAction = new SendSignalActionImpl();
+		return sendSignalAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AcceptEventAction createAcceptEventAction() {
+		AcceptEventActionImpl acceptEventAction = new AcceptEventActionImpl();
+		return acceptEventAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Signal createSignal() {
+		SignalImpl signal = new SignalImpl();
+		return signal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignalEvent createSignalEvent() {
+		SignalEventImpl signalEvent = new SignalEventImpl();
+		return signalEvent;
 	}
 
 	/**

@@ -6,6 +6,7 @@ import activitydiagram.Activity;
 import activitydiagram.ActivityEdge;
 import activitydiagram.ActivityNode;
 import activitydiagram.ActivitydiagramPackage;
+import activitydiagram.Signal;
 import activitydiagram.Trace;
 import activitydiagram.Variable;
 
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagram.impl.ActivityImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getTrace <em>Trace</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getInputValuePath <em>Input Value Path</em>}</li>
+ *   <li>{@link activitydiagram.impl.ActivityImpl#getSignals <em>Signals</em>}</li>
  * </ul>
  * </p>
  *
@@ -115,6 +117,16 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * @ordered
 	 */
 	protected String inputValuePath = INPUT_VALUE_PATH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSignals() <em>Signals</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSignals()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Signal> signals;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -252,6 +264,18 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Signal> getSignals() {
+		if (signals == null) {
+			signals = new EObjectContainmentEList<Signal>(Signal.class, this, ActivitydiagramPackage.ACTIVITY__SIGNALS);
+		}
+		return signals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void initialize() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -302,6 +326,8 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.ACTIVITY__TRACE:
 				return basicSetTrace(null, msgs);
+			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
+				return ((InternalEList<?>)getSignals()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -326,6 +352,8 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return getTrace();
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				return getInputValuePath();
+			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
+				return getSignals();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -361,6 +389,10 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				setInputValuePath((String)newValue);
 				return;
+			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
+				getSignals().clear();
+				getSignals().addAll((Collection<? extends Signal>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -391,6 +423,9 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				setInputValuePath(INPUT_VALUE_PATH_EDEFAULT);
 				return;
+			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
+				getSignals().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -415,6 +450,8 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return trace != null;
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				return INPUT_VALUE_PATH_EDEFAULT == null ? inputValuePath != null : !INPUT_VALUE_PATH_EDEFAULT.equals(inputValuePath);
+			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
+				return signals != null && !signals.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

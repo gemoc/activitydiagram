@@ -2,6 +2,7 @@
  */
 package activitydiagram.impl;
 
+import activitydiagram.AcceptEventAction;
 import activitydiagram.Action;
 import activitydiagram.Activity;
 import activitydiagram.ActivityEdge;
@@ -40,6 +41,9 @@ import activitydiagram.MergeNode;
 import activitydiagram.NamedElement;
 import activitydiagram.Offer;
 import activitydiagram.OpaqueAction;
+import activitydiagram.SendSignalAction;
+import activitydiagram.Signal;
+import activitydiagram.SignalEvent;
 import activitydiagram.Token;
 import activitydiagram.Trace;
 import activitydiagram.Value;
@@ -318,6 +322,34 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass sendSignalActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass acceptEventActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass signalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass signalEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum integerCalculationOperatorEEnum = null;
 
 	/**
@@ -463,6 +495,15 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EAttribute getActivity_InputValuePath() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Signals() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1226,6 +1267,78 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSendSignalAction() {
+		return sendSignalActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSendSignalAction_Signal() {
+		return (EReference)sendSignalActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSendSignalAction__Execute() {
+		return sendSignalActionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAcceptEventAction() {
+		return acceptEventActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAcceptEventAction_Trigger() {
+		return (EReference)acceptEventActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAcceptEventAction__Execute() {
+		return acceptEventActionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSignal() {
+		return signalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSignalEvent() {
+		return signalEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getIntegerCalculationOperator() {
 		return integerCalculationOperatorEEnum;
 	}
@@ -1292,6 +1405,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(activityEClass, ACTIVITY__INPUTS);
 		createEReference(activityEClass, ACTIVITY__TRACE);
 		createEAttribute(activityEClass, ACTIVITY__INPUT_VALUE_PATH);
+		createEReference(activityEClass, ACTIVITY__SIGNALS);
 		createEOperation(activityEClass, ACTIVITY___INITIALIZE);
 		createEOperation(activityEClass, ACTIVITY___FINISH);
 
@@ -1412,6 +1526,18 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(forkedTokenEClass, FORKED_TOKEN__BASE_TOKEN);
 		createEAttribute(forkedTokenEClass, FORKED_TOKEN__REMAINING_OFFERS_COUNT);
 
+		sendSignalActionEClass = createEClass(SEND_SIGNAL_ACTION);
+		createEReference(sendSignalActionEClass, SEND_SIGNAL_ACTION__SIGNAL);
+		createEOperation(sendSignalActionEClass, SEND_SIGNAL_ACTION___EXECUTE);
+
+		acceptEventActionEClass = createEClass(ACCEPT_EVENT_ACTION);
+		createEReference(acceptEventActionEClass, ACCEPT_EVENT_ACTION__TRIGGER);
+		createEOperation(acceptEventActionEClass, ACCEPT_EVENT_ACTION___EXECUTE);
+
+		signalEClass = createEClass(SIGNAL);
+
+		signalEventEClass = createEClass(SIGNAL_EVENT);
+
 		// Create enums
 		integerCalculationOperatorEEnum = createEEnum(INTEGER_CALCULATION_OPERATOR);
 		integerComparisonOperatorEEnum = createEEnum(INTEGER_COMPARISON_OPERATOR);
@@ -1474,6 +1600,10 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		booleanBinaryExpressionEClass.getESuperTypes().add(this.getBooleanExpression());
 		controlTokenEClass.getESuperTypes().add(this.getToken());
 		forkedTokenEClass.getESuperTypes().add(this.getToken());
+		sendSignalActionEClass.getESuperTypes().add(this.getAction());
+		acceptEventActionEClass.getESuperTypes().add(this.getAction());
+		signalEClass.getESuperTypes().add(this.getNamedElement());
+		signalEventEClass.getESuperTypes().add(this.getSignal());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1483,6 +1613,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivity_Inputs(), this.getVariable(), null, "inputs", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Trace(), this.getTrace(), null, "trace", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_InputValuePath(), ecorePackage.getEString(), "inputValuePath", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Signals(), this.getSignal(), null, "signals", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getActivity__Initialize(), null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1616,6 +1747,20 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getForkedToken_BaseToken(), this.getToken(), null, "baseToken", null, 1, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForkedToken_RemainingOffersCount(), ecorePackage.getEInt(), "remainingOffersCount", null, 1, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(sendSignalActionEClass, SendSignalAction.class, "SendSignalAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSendSignalAction_Signal(), this.getSignal(), null, "signal", null, 0, 1, SendSignalAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getSendSignalAction__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(acceptEventActionEClass, AcceptEventAction.class, "AcceptEventAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAcceptEventAction_Trigger(), this.getSignalEvent(), null, "trigger", null, 0, 1, AcceptEventAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getAcceptEventAction__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(signalEClass, Signal.class, "Signal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(signalEventEClass, SignalEvent.class, "SignalEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(integerCalculationOperatorEEnum, IntegerCalculationOperator.class, "IntegerCalculationOperator");
 		addEEnumLiteral(integerCalculationOperatorEEnum, IntegerCalculationOperator.ADD);
@@ -1639,18 +1784,18 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createResource(eNS_URI);
 
 		// Create annotations
-		// dynamic
-		createDynamicAnnotations();
+		// aspect
+		createAspectAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>dynamic</b>.
+	 * Initializes the annotations for <b>aspect</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createDynamicAnnotations() {
-		String source = "dynamic";	
+	protected void createAspectAnnotations() {
+		String source = "aspect";	
 		addAnnotation
 		  (getActivity__Initialize(), 
 		   source, 
@@ -1763,6 +1908,16 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (forkedTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getSendSignalAction__Execute(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getAcceptEventAction__Execute(), 
 		   source, 
 		   new String[] {
 		   });

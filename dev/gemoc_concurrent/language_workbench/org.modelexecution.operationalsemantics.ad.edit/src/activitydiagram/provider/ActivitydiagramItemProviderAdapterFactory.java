@@ -601,6 +601,98 @@ public class ActivitydiagramItemProviderAdapterFactory extends ActivitydiagramAd
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link activitydiagram.SendSignalAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SendSignalActionItemProvider sendSignalActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link activitydiagram.SendSignalAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSendSignalActionAdapter() {
+		if (sendSignalActionItemProvider == null) {
+			sendSignalActionItemProvider = new SendSignalActionItemProvider(this);
+		}
+
+		return sendSignalActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link activitydiagram.AcceptEventAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AcceptEventActionItemProvider acceptEventActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link activitydiagram.AcceptEventAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAcceptEventActionAdapter() {
+		if (acceptEventActionItemProvider == null) {
+			acceptEventActionItemProvider = new AcceptEventActionItemProvider(this);
+		}
+
+		return acceptEventActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link activitydiagram.Signal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SignalItemProvider signalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link activitydiagram.Signal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSignalAdapter() {
+		if (signalItemProvider == null) {
+			signalItemProvider = new SignalItemProvider(this);
+		}
+
+		return signalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link activitydiagram.SignalEvent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SignalEventItemProvider signalEventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link activitydiagram.SignalEvent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSignalEventAdapter() {
+		if (signalEventItemProvider == null) {
+			signalEventItemProvider = new SignalEventItemProvider(this);
+		}
+
+		return signalEventItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,6 +814,10 @@ public class ActivitydiagramItemProviderAdapterFactory extends ActivitydiagramAd
 		if (inputItemProvider != null) inputItemProvider.dispose();
 		if (controlTokenItemProvider != null) controlTokenItemProvider.dispose();
 		if (forkedTokenItemProvider != null) forkedTokenItemProvider.dispose();
+		if (sendSignalActionItemProvider != null) sendSignalActionItemProvider.dispose();
+		if (acceptEventActionItemProvider != null) acceptEventActionItemProvider.dispose();
+		if (signalItemProvider != null) signalItemProvider.dispose();
+		if (signalEventItemProvider != null) signalEventItemProvider.dispose();
 	}
 
 }

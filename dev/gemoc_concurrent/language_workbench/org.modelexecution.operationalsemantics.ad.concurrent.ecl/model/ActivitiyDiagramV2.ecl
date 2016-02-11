@@ -7,8 +7,10 @@ package activitydiagram
  
 	context ActivityNode
 		def : executeIt : Event = self.execute() 
---		def : finishIt : Event = self
-		
+	
+	context Signal
+		def : occurs : Event = self 
+	
 	context Activity
 		def : startActivity : Event = self.initialize() 
 		def : finishActivity : Event = self.finish() 
@@ -19,6 +21,15 @@ package activitydiagram
 		def if (self.guard <> null): evaluate : Event = self.evaluateGuard()[res] switch
 														case false force evalFalse;
 														case true force evalTrue;
+	
+	context SendSignalAction
+		inv sendWhenStart:
+			Relation Coincides(self.executeIt, self.signal.occurs)
+			
+	context AcceptEventAction
+		inv receiveAndExecuteAfterSending:
+			Relation Precedes(self.trigger.occurs, self.executeIt) 
+	
 	context ControlFlow
 		inv trueOrFalse:
 			(self.guard <> null) implies
@@ -36,8 +47,11 @@ package activitydiagram
 		inv waitControlToExecute:
 		((not ((self).oclIsKindOf(MergeNode)))
 		and
-		(self.incoming->size() > 1)
-		and (self.incoming.oclAsType(ControlFlow).guard->first() = null)
+			(not ((self).incoming->first().source.oclIsKindOf(DecisionNode)))  --TODO: what if severalNode whose a decision ?
+		and
+		   (self.incoming->size() > 1)
+		and 
+		   (self.incoming.oclAsType(ControlFlow).guard->first() = null)
 		)implies
 			let incomingFinished : Event = Expression Sup(self.incoming.source.executeIt) in
 			(Relation Precedes(incomingFinished, self.executeIt)) 
@@ -45,29 +59,15 @@ package activitydiagram
 		inv waitControlToExecute2:
 		((not ((self).oclIsKindOf(MergeNode)))
 		and
-		(self.incoming->size() = 1)
-		and (self.incoming->first().oclAsType(ControlFlow).guard = null)
+			(not ((self).incoming->first().source.oclIsKindOf(DecisionNode)))
+		and
+		   (self.incoming->size() = 1)
+		and 
+		   (self.incoming->first().oclAsType(ControlFlow).guard = null)
 		)implies
 			(Relation Precedes(self.incoming->first().source.executeIt, self.executeIt)) 
-	
---		inv waitControlToExecute3:
---		((not ((self).oclIsKindOf(MergeNode)))
---		and
---		(self.incoming->size() = 1)
---	    and (self.incoming->first().oclAsType(ControlFlow).guard <> null)
---		)implies
---		(Relation Precedes(self.incoming->first().oclAsType(ControlFlow).evalTrue, self.executeIt)) 
-	
---	context ExecutableNode
---		inv startBeforeFinish4ExecutableNode:
---			Relation Precedes(startIt,finishIt) 
-	 
---	context ControlNode	
---		inv startBeforeFinish4nonExecutableNode:
---			Relation Precedes(startIt,finishIt)
 		
 	context Activity
-		--def : referenceClock : Event = undefined
 		inv NonReentrant:
 			Relation Alternates(self.startActivity, self.finishActivity)
 	
@@ -91,12 +91,11 @@ package activitydiagram
 	context ActivityFinalNode
 		inv finishWhenActivityFinished:
 			Relation Coincides(self.executeIt , self.activity.finishActivity)
---
---		inv startBeforeFinishFinalNode:
---			Relation Precedes(startIt,finishIt)
---	context Activity
---		inv runOnlyOnce:
---			let firstStart : Event = Expression OneTickAndNoMore(self.start) in
---			Relation Coincides(self.start, firstStart)
+			
+	context Activity
+		inv onlyOneEnterIfNoFinal:
+			(self.nodes->select(n |(n).oclIsKindOf(ActivityFinalNode))->size() = 0) implies
+			let noFinishActivity : Event = Expression Minus(self.finishActivity,self.finishActivity) in
+			Relation Coincides(self.finishActivity, noFinishActivity)
 
 endpackage
