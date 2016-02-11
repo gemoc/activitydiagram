@@ -17,13 +17,9 @@
         <!-- plugins -->
         <module>releng/org.gemoc.activitydiagram.sampledeployer</module>
         
-        
-        
         <!-- feature and update site -->
-        <!-- <module>releng/org.gemoc.execution.sequential.javaxdsml.feature</module>
-        <module>releng/org.gemoc.execution.sequential.javaengine.feature</module>
-        <module>releng/org.gemoc.execution.sequential.javaengine.ui.feature</module>
-        <module>releng/org.gemoc.execution.sequential.java.repository</module>-->
+        <module>releng/org.gemoc.activitydiagram.feature</module>
+        <module>releng/org.gemoc.activitydiagram.repository</module>
         
         
     </modules>

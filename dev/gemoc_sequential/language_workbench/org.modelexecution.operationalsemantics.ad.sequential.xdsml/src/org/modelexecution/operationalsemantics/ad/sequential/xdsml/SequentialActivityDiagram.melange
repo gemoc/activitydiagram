@@ -25,6 +25,7 @@ language SequentialActivityDiagram {
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.TokenAspect
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.JoinNodeAspect
 	with org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerCalculationExpressionAspect
+	
 
 	exactType SequentialActivityDiagramMT
 }
