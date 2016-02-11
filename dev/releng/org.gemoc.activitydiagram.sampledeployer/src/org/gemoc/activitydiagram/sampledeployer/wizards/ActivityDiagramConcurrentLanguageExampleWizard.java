@@ -26,8 +26,19 @@ public class ActivityDiagramConcurrentLanguageExampleWizard
 		// We need the statements example to be unzipped along with the
 		// EMF library example model, edit and editor examples
 		List<ProjectDescriptor> projects = new ArrayList<ProjectDescriptor>(1);
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.sample.sigpml.simple_example.zip", "org.gemoc.sample.sigpml.simple_example"));
-		//projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.sample.sigpml.simple_example_with_melange.zip", "org.gemoc.sample.sigpml.simple_example_with_melange"));
+		
+		// commons projects
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.design.zip", "org.modelexecution.operationalsemantics.ad.design"));
+		
+		// concurrent projects
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.zip", "org.modelexecution.operationalsemantics.ad"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.concurrent.ecl.zip", "org.modelexecution.operationalsemantics.ad.concurrent.ecl"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.zip", "org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.concurrent.xdsml.zip", "org.modelexecution.operationalsemantics.ad.concurrent.xdsml"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.zip", "org.modelexecution.operationalsemantics.ad.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.ui.zip", "org.modelexecution.operationalsemantics.ad.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.zip", "org.modelexecution.operationalsemantics.ad.input.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.ui.zip", "org.modelexecution.operationalsemantics.ad.input.grammar.ui"));
 		return projects;
 	}
 

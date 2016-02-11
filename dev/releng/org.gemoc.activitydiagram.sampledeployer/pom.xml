@@ -3,20 +3,23 @@
 	<modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <sample_root>${basedir}/../../sample</sample_root>
-        <tfsm_sample_modeling_root>${basedir}/../../../TFSM/modeling_workbench</tfsm_sample_modeling_root>
-        <tfsm_plaink3_sample_modeling_root>${basedir}/../../../TFSM_PlainK3/modeling_workbench</tfsm_plaink3_sample_modeling_root>
-        <sigpml_sample_modeling_root>${basedir}/../../../SigPML/modeling_workbench</sigpml_sample_modeling_root>
+        <sample_root>${basedir}/../..</sample_root>
+        <gemoc_commons_root>${sample_root}/gemoc_commons</gemoc_commons_root>
+        <gemoc_commons_lw_root>${gemoc_commons_root}/language_workbench</gemoc_commons_lw_root>
+        <gemoc_concurrent_root>${sample_root}/gemoc_concurrent</gemoc_concurrent_root>
+        <gemoc_concurrent_lw_root>${gemoc_concurrent_root}/language_workbench</gemoc_concurrent_lw_root>
+        <gemoc_sequential_root>${sample_root}/gemoc_sequential</gemoc_sequential_root>
+        <gemoc_sequential_lw_root>${gemoc_sequential_root}/language_workbench</gemoc_sequential_lw_root>
     </properties>
     
 	<parent>
 		<relativePath>../..</relativePath>
-		<groupId>org.gemoc.official_samples.deployers</groupId>
-		<artifactId>org.gemoc.official_samples.deployers.root</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
+		<groupId>org.gemoc.activitydiagram</groupId>
+		<artifactId>org.gemoc.activitydiagram.root</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>org.gemoc.gemoc_modeling_workbench.sample.deployer</artifactId>
+	<artifactId>org.gemoc.activitydiagram.sampledeployer</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	<build>
 		<plugins>
@@ -34,26 +37,67 @@
 							<tasks>
 								<mkdir dir="${basedir}/zips" />
 								
-								<zip destfile="${basedir}/zips/org.gemoc.sample.tfsm.simple_example.zip">
-									<fileset dir="${tfsm_sample_modeling_root}/org.gemoc.sample.tfsm.simple_example/" />
-								</zip>
-								<!-- <zip destfile="${basedir}/zips/org.gemoc.sample.tfsm.daynight_single_traffic_light_sample.zip">
-									<fileset dir="${tfsm_sample_modeling_root}/org.gemoc.sample.tfsm.daynight_single_traffic_light_sample/" />
-								</zip> 
-								<zip destfile="${basedir}/zips/org.gemoc.sample.tfsm.daynight_traffic_light_with_groovygui_sample.zip">
-									<fileset dir="${tfsm_sample_modeling_root}/org.gemoc.sample.tfsm.daynight_traffic_light_with_groovygui_sample/" />
-								</zip> -->
-
-								<zip destfile="${basedir}/zips/org.gemoc.sample.tfsm.plaink3.single_traffic_light_sample.zip">
-									<fileset dir="${tfsm_plaink3_sample_modeling_root}/org.gemoc.sample.tfsm.plaink3.single_traffic_light_sample/" />
-								</zip>
-
-								<zip destfile="${basedir}/zips/org.gemoc.sample.sigpml.simple_example.zip">
-									<fileset dir="${sigpml_sample_modeling_root}/org.gemoc.sample.sigpml.simple_example/" />
+								<!-- Activity diagram commons Language Workbench  -->
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.design.zip">
+									<fileset dir="${gemoc_commons_lw_root}/org.modelexecution.operationalsemantics.ad.design/" />
 								</zip>
 								
+								<!-- Activity diagram Concurrent Language Workbench  -->
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.concurrent.ecl.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.concurrent.ecl/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.concurrent.xdsml.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.concurrent.xdsml/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.ui.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.grammar.ui/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.ui.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar.ui/" />
+								</zip>
 								
+								<!-- Activity diagram Sequential Language Workbench  -->
+								
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.sequential.xdsml.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.sequential.xdsml/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.grammar.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.grammar.ui.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.grammar.ui/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.input.grammar.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.input.grammar.ui.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar.ui/" />
+								</zip>
 
+
+								<!-- Activity diagram commons Modeling Workbench  -->
+								
+								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.samplemodels.zip">
+									<fileset dir="${gemoc_commons_root}/modeling_workbench/org.modelexecution.operationalsemantics.ad.samplemodels/" />
+								</zip>
 							</tasks>
 						</configuration>
 					</execution>

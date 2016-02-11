@@ -18,7 +18,7 @@
             hasPages="false"
             icon="icons/IconeGemocModel-16.png"
             id="org.gemoc.activitydiagram.sampledeployer.wizards.ActivityDiagramModelExampleWizard"
-            name="ActivityDiagram Model examples (for concurrent and sequential ActivityDiagram languages)"
+            name="ActivityDiagram Model examples (concurrent / sequential)"
             preferredPerspectives="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling">
          <description>
             T⁮his project contains some ActivityDiagram models that can be executed if you have installed the one or both ActivityDiagram languages (Sequential and/or Concurrent).
@@ -49,7 +49,7 @@
             hasPages="false"
             icon="icons/IconeGemocLanguage-16.png"
             id="org.gemoc.activitydiagram.sampledeployer.wizards.ActivityDiagramSequentialLanguageExampleWizard"
-            name="ActivityDiagram Concurrent Language"
+            name="ActivityDiagram Sequential Language"
             preferredPerspectives="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling,fr.obeo.dsl.viewpoint.ui.tools.perspective.design">
          <description>
             T⁮his set of projects feature an ActivityDiagram sequential language which is made executable using Gemoc.
