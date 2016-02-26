@@ -9,7 +9,7 @@ package activitydiagram
 		def : executeIt : Event = self.execute() 
 	
 	context Signal
-		def : occurs : Event = self 
+		def : signalOccurs : Event = self 
 	
 	context Activity
 		def : startActivity : Event = self.initialize() 
@@ -24,11 +24,11 @@ package activitydiagram
 	
 	context SendSignalAction
 		inv sendWhenStart:
-			Relation Coincides(self.executeIt, self.signal.occurs)
+			Relation Coincides(self.executeIt, self.signal.signalOccurs)
 			
 	context AcceptEventAction
 		inv receiveAndExecuteAfterSending:
-			Relation Precedes(self.trigger.occurs, self.executeIt) 
+			Relation Precedes(self.trigger.signalOccurs, self.executeIt) 
 	
 	context ControlFlow
 		inv trueOrFalse:
