@@ -19,7 +19,7 @@ public interface Activitydiagram_ActivityNode_Terminate extends SmallStep {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return (ActivityNode) this.getMse().getCaller();\r\n'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return (ActivityNode) this.getMse().getCaller();\n'"
 	 * @generated
 	 */
 	ActivityNode getCaller();
