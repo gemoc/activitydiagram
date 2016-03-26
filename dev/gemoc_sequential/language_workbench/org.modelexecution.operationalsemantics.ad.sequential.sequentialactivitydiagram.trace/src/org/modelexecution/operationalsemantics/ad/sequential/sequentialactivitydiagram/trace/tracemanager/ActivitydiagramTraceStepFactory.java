@@ -134,9 +134,8 @@ public class ActivitydiagramTraceStepFactory implements IStepFactory {
 			mseocc = activitydiagramTrace.Steps.StepsFactory.eINSTANCE.createActivitydiagram_Variable_Init();
 		}
 
-		else {
+		else
 			mseocc = org.gemoc.executionframework.engine.mse.MseFactory.eINSTANCE.createMSEOccurrence();
-		}
 
 		if (mseocc != null) {
 			mseocc.setMse(mse);

@@ -1253,18 +1253,18 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getTracedVariable_InitialValue(), theActivitydiagramPackage_1.getValue(), null, "initialValue", null, 0, 1, TracedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create annotations
-		// dynamic
-		createDynamicAnnotations();
+		// aspect
+		createAspectAnnotations();
 	}
 
 	/**
-	 * Initializes the annotations for <b>dynamic</b>.
+	 * Initializes the annotations for <b>aspect</b>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void createDynamicAnnotations() {
-		String source = "dynamic";	
+	protected void createAspectAnnotations() {
+		String source = "aspect";	
 		addAnnotation
 		  (getTracedActivity_Trace(), 
 		   source, 
