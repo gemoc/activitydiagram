@@ -359,16 +359,10 @@
       <additionalLayers name="Debug" activeByDefault="true">
         <toolSections name="Debug">
           <ownedTools xsi:type="tool_1:PopupMenu" name="Gemoc">
-            <menuItemDescription xsi:type="tool_1:OperationAction" name="Debug" icon="/org.gemoc.gemoc_modeling_workbench.ui/icons/debug_exc.gif">
-              <view name="views"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Debug" icon="/org.gemoc.executionframework.extensions.sirius/icons/debug_exc.gif" id="org.gemoc.execution.concurrent.ccsljavaengine.ui.debug.sirius.action.gemocDebugAs"/>
-              </initialOperation>
-            </menuItemDescription>
             <menuItemDescription xsi:type="tool_1:OperationAction" name="Toggle breakpoint" icon="/org.gemoc.gemoc_modeling_workbench.ui/icons/debug_exc.gif">
               <view name="views"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Toggle Gemoc breakpoint" icon="/org.gemoc.executionframework.extensions.sirius/icons/breakpoint.gif" id="org.gemoc.executionframework.engine.ui.debug.sirius.action.GemocToggleBreakpointAction"/>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Toggle Gemoc breakpoint" icon="/org.gemoc.executionframework.extensions.sirius/icons/breakpoint.gif" id="org.gemoc.execution.sequential.javaengine.ui.debug.sirius.action.GemocSequentialToggleBreakpointAction"/>
               </initialOperation>
             </menuItemDescription>
           </ownedTools>

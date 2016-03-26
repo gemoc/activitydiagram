@@ -3,9 +3,8 @@ package org.modelexecution.operationalsemantics.ad.sequential.sequentialactivity
 import fr.inria.diverse.trace.api.IValueTrace;
 import fr.inria.diverse.trace.api.impl.GenericValueTrace;
 
-import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedList;
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Deque;
@@ -34,10 +33,6 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 	private Resource traceResource;
 	private Deque<activitydiagramTrace.Steps.Step> context = new LinkedList<activitydiagramTrace.Steps.Step>();
-	private static final List<String> bigSteps = Arrays.asList("Activitydiagram_ActivityNode_AddTokens1",
-			"Activitydiagram_ActivityNode_Execute", "Activitydiagram_ActivityNode_SendOffers1",
-			"Activitydiagram_ActivityNode_TakeOfferdTokens1", "Activitydiagram_Activity_Execute",
-			"Activitydiagram_Activity_WriteTrace", "Activitydiagram_Variable_Execute", "Activitydiagram_Variable_Init");
 
 	public ActivitydiagramTraceManager(Resource exeModel, Resource traceResource) {
 		this.traceResource = traceResource;
@@ -61,12 +56,10 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		activitydiagramTrace.States.State newState = activitydiagramTrace.States.StatesFactory.eINSTANCE.createState();
 		boolean changed = false;
 
+		Set<Resource> allResources = getAllExecutedModelResources();
+
 		// We look at each object instance of a class with mutable properties 
 		// Each of these objects should eventually become a traced object
-
-		Set<Resource> allResources = new HashSet<>();
-		allResources.add(executedModel);
-		allResources.addAll(org.gemoc.commons.eclipse.emf.EMFResource.getRelatedResources(executedModel));
 		for (Resource r : allResources)
 			for (TreeIterator<EObject> i = r.getAllContents(); i.hasNext();) {
 				EObject o = i.next();
@@ -85,11 +78,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Trace_executedNodes_Value> localTrace1 = tracedObject
+					List<activitydiagramTrace.States.Trace_executedNodes_Value> valueSequence1 = tracedObject
 							.getExecutedNodesSequence();
 					activitydiagramTrace.States.Trace_executedNodes_Value previousValue1 = null;
-					if (!localTrace1.isEmpty())
-						previousValue1 = localTrace1.get(localTrace1.size() - 1);
+					if (!valueSequence1.isEmpty())
+						previousValue1 = valueSequence1.get(valueSequence1.size() - 1);
 
 					for (activitydiagram.ActivityNode aValue : o_cast.getExecutedNodes()) {
 						storeAsTracedObject(aValue);
@@ -150,11 +143,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace2 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence2 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue2 = null;
-					if (!localTrace2.isEmpty())
-						previousValue2 = localTrace2.get(localTrace2.size() - 1);
+					if (!valueSequence2.isEmpty())
+						previousValue2 = valueSequence2.get(valueSequence2.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -215,11 +208,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Offer_offeredTokens_Value> localTrace3 = tracedObject
+					List<activitydiagramTrace.States.Offer_offeredTokens_Value> valueSequence3 = tracedObject
 							.getOfferedTokensSequence();
 					activitydiagramTrace.States.Offer_offeredTokens_Value previousValue3 = null;
-					if (!localTrace3.isEmpty())
-						previousValue3 = localTrace3.get(localTrace3.size() - 1);
+					if (!valueSequence3.isEmpty())
+						previousValue3 = valueSequence3.get(valueSequence3.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getOfferedTokens()) {
 						storeAsTracedObject(aValue);
@@ -280,11 +273,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace4 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence4 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue4 = null;
-					if (!localTrace4.isEmpty())
-						previousValue4 = localTrace4.get(localTrace4.size() - 1);
+					if (!valueSequence4.isEmpty())
+						previousValue4 = valueSequence4.get(valueSequence4.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -345,11 +338,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace5 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence5 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue5 = null;
-					if (!localTrace5.isEmpty())
-						previousValue5 = localTrace5.get(localTrace5.size() - 1);
+					if (!valueSequence5.isEmpty())
+						previousValue5 = valueSequence5.get(valueSequence5.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -410,11 +403,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Variable_currentValue_Value> localTrace6 = tracedObject
+					List<activitydiagramTrace.States.Variable_currentValue_Value> valueSequence6 = tracedObject
 							.getCurrentValueSequence();
 					activitydiagramTrace.States.Variable_currentValue_Value previousValue6 = null;
-					if (!localTrace6.isEmpty())
-						previousValue6 = localTrace6.get(localTrace6.size() - 1);
+					if (!valueSequence6.isEmpty())
+						previousValue6 = valueSequence6.get(valueSequence6.size() - 1);
 
 					storeAsTracedObject(o_cast.getCurrentValue());
 
@@ -456,11 +449,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.IntegerValue_value_Value> localTrace7 = tracedObject
+					List<activitydiagramTrace.States.IntegerValue_value_Value> valueSequence7 = tracedObject
 							.getValueSequence();
 					activitydiagramTrace.States.IntegerValue_value_Value previousValue7 = null;
-					if (!localTrace7.isEmpty())
-						previousValue7 = localTrace7.get(localTrace7.size() - 1);
+					if (!valueSequence7.isEmpty())
+						previousValue7 = valueSequence7.get(valueSequence7.size() - 1);
 
 					int content2 = o_cast.getValue();
 
@@ -497,11 +490,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.InputValue_value_Value> localTrace8 = tracedObject
+					List<activitydiagramTrace.States.InputValue_value_Value> valueSequence8 = tracedObject
 							.getValueSequence();
 					activitydiagramTrace.States.InputValue_value_Value previousValue8 = null;
-					if (!localTrace8.isEmpty())
-						previousValue8 = localTrace8.get(localTrace8.size() - 1);
+					if (!valueSequence8.isEmpty())
+						previousValue8 = valueSequence8.get(valueSequence8.size() - 1);
 
 					storeAsTracedObject(o_cast.getValue());
 
@@ -529,11 +522,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.InputValue_variable_Value> localTrace9 = tracedObject
+					List<activitydiagramTrace.States.InputValue_variable_Value> valueSequence9 = tracedObject
 							.getVariableSequence();
 					activitydiagramTrace.States.InputValue_variable_Value previousValue9 = null;
-					if (!localTrace9.isEmpty())
-						previousValue9 = localTrace9.get(localTrace9.size() - 1);
+					if (!valueSequence9.isEmpty())
+						previousValue9 = valueSequence9.get(valueSequence9.size() - 1);
 
 					storeAsTracedObject(o_cast.getVariable());
 
@@ -575,11 +568,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Input_inputValues_Value> localTrace10 = tracedObject
+					List<activitydiagramTrace.States.Input_inputValues_Value> valueSequence10 = tracedObject
 							.getInputValuesSequence();
 					activitydiagramTrace.States.Input_inputValues_Value previousValue10 = null;
-					if (!localTrace10.isEmpty())
-						previousValue10 = localTrace10.get(localTrace10.size() - 1);
+					if (!valueSequence10.isEmpty())
+						previousValue10 = valueSequence10.get(valueSequence10.size() - 1);
 
 					for (activitydiagram.InputValue aValue : o_cast.getInputValues()) {
 						storeAsTracedObject(aValue);
@@ -640,11 +633,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace11 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence11 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue11 = null;
-					if (!localTrace11.isEmpty())
-						previousValue11 = localTrace11.get(localTrace11.size() - 1);
+					if (!valueSequence11.isEmpty())
+						previousValue11 = valueSequence11.get(valueSequence11.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -705,11 +698,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ForkedToken_baseToken_Value> localTrace12 = tracedObject
+					List<activitydiagramTrace.States.ForkedToken_baseToken_Value> valueSequence12 = tracedObject
 							.getBaseTokenSequence();
 					activitydiagramTrace.States.ForkedToken_baseToken_Value previousValue12 = null;
-					if (!localTrace12.isEmpty())
-						previousValue12 = localTrace12.get(localTrace12.size() - 1);
+					if (!valueSequence12.isEmpty())
+						previousValue12 = valueSequence12.get(valueSequence12.size() - 1);
 
 					storeAsTracedObject(o_cast.getBaseToken());
 
@@ -737,11 +730,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value> localTrace13 = tracedObject
+					List<activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value> valueSequence13 = tracedObject
 							.getRemainingOffersCountSequence();
 					activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value previousValue13 = null;
-					if (!localTrace13.isEmpty())
-						previousValue13 = localTrace13.get(localTrace13.size() - 1);
+					if (!valueSequence13.isEmpty())
+						previousValue13 = valueSequence13.get(valueSequence13.size() - 1);
 
 					int content6 = o_cast.getRemainingOffersCount();
 
@@ -765,11 +758,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Token_holder_Value> localTrace14 = tracedObject
+					List<activitydiagramTrace.States.Token_holder_Value> valueSequence14 = tracedObject
 							.getHolderSequence();
 					activitydiagramTrace.States.Token_holder_Value previousValue14 = null;
-					if (!localTrace14.isEmpty())
-						previousValue14 = localTrace14.get(localTrace14.size() - 1);
+					if (!valueSequence14.isEmpty())
+						previousValue14 = valueSequence14.get(valueSequence14.size() - 1);
 
 					storeAsTracedObject(o_cast.getHolder());
 
@@ -811,11 +804,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace15 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence15 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue15 = null;
-					if (!localTrace15.isEmpty())
-						previousValue15 = localTrace15.get(localTrace15.size() - 1);
+					if (!valueSequence15.isEmpty())
+						previousValue15 = valueSequence15.get(valueSequence15.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -876,11 +869,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace16 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence16 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue16 = null;
-					if (!localTrace16.isEmpty())
-						previousValue16 = localTrace16.get(localTrace16.size() - 1);
+					if (!valueSequence16.isEmpty())
+						previousValue16 = valueSequence16.get(valueSequence16.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -941,11 +934,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Token_holder_Value> localTrace17 = tracedObject
+					List<activitydiagramTrace.States.Token_holder_Value> valueSequence17 = tracedObject
 							.getHolderSequence();
 					activitydiagramTrace.States.Token_holder_Value previousValue17 = null;
-					if (!localTrace17.isEmpty())
-						previousValue17 = localTrace17.get(localTrace17.size() - 1);
+					if (!valueSequence17.isEmpty())
+						previousValue17 = valueSequence17.get(valueSequence17.size() - 1);
 
 					storeAsTracedObject(o_cast.getHolder());
 
@@ -987,11 +980,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityEdge_offers_Value> localTrace18 = tracedObject
+					List<activitydiagramTrace.States.ActivityEdge_offers_Value> valueSequence18 = tracedObject
 							.getOffersSequence();
 					activitydiagramTrace.States.ActivityEdge_offers_Value previousValue18 = null;
-					if (!localTrace18.isEmpty())
-						previousValue18 = localTrace18.get(localTrace18.size() - 1);
+					if (!valueSequence18.isEmpty())
+						previousValue18 = valueSequence18.get(valueSequence18.size() - 1);
 
 					for (activitydiagram.Offer aValue : o_cast.getOffers()) {
 						storeAsTracedObject(aValue);
@@ -1052,11 +1045,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Variable_currentValue_Value> localTrace19 = tracedObject
+					List<activitydiagramTrace.States.Variable_currentValue_Value> valueSequence19 = tracedObject
 							.getCurrentValueSequence();
 					activitydiagramTrace.States.Variable_currentValue_Value previousValue19 = null;
-					if (!localTrace19.isEmpty())
-						previousValue19 = localTrace19.get(localTrace19.size() - 1);
+					if (!valueSequence19.isEmpty())
+						previousValue19 = valueSequence19.get(valueSequence19.size() - 1);
 
 					storeAsTracedObject(o_cast.getCurrentValue());
 
@@ -1098,11 +1091,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.BooleanValue_value_Value> localTrace20 = tracedObject
+					List<activitydiagramTrace.States.BooleanValue_value_Value> valueSequence20 = tracedObject
 							.getValueSequence();
 					activitydiagramTrace.States.BooleanValue_value_Value previousValue20 = null;
-					if (!localTrace20.isEmpty())
-						previousValue20 = localTrace20.get(localTrace20.size() - 1);
+					if (!valueSequence20.isEmpty())
+						previousValue20 = valueSequence20.get(valueSequence20.size() - 1);
 
 					boolean content10 = o_cast.isValue();
 
@@ -1139,11 +1132,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> localTrace21 = tracedObject
+					List<activitydiagramTrace.States.ActivityNode_heldTokens_Value> valueSequence21 = tracedObject
 							.getHeldTokensSequence();
 					activitydiagramTrace.States.ActivityNode_heldTokens_Value previousValue21 = null;
-					if (!localTrace21.isEmpty())
-						previousValue21 = localTrace21.get(localTrace21.size() - 1);
+					if (!valueSequence21.isEmpty())
+						previousValue21 = valueSequence21.get(valueSequence21.size() - 1);
 
 					for (activitydiagram.Token aValue : o_cast.getHeldTokens()) {
 						storeAsTracedObject(aValue);
@@ -1204,11 +1197,11 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 					// Then we compare the value of the field with the last stored value
 					// If same value, we create no local state and we refer to the previous
-					List<activitydiagramTrace.States.Activity_trace_Value> localTrace22 = tracedObject
+					List<activitydiagramTrace.States.Activity_trace_Value> valueSequence22 = tracedObject
 							.getTraceSequence();
 					activitydiagramTrace.States.Activity_trace_Value previousValue22 = null;
-					if (!localTrace22.isEmpty())
-						previousValue22 = localTrace22.get(localTrace22.size() - 1);
+					if (!valueSequence22.isEmpty())
+						previousValue22 = valueSequence22.get(valueSequence22.size() - 1);
 
 					storeAsTracedObject(o_cast.getTrace());
 
@@ -1582,6 +1575,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 	private void addImplicitStep(activitydiagramTrace.Steps.Step currentStep,
 			activitydiagramTrace.States.State startingState, activitydiagramTrace.States.State endingState) {
+
 		activitydiagramTrace.Steps.Step implicitStep = null;
 		if (currentStep instanceof activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1) {
 			implicitStep = activitydiagramTrace.Steps.StepsFactory.eINSTANCE
@@ -1707,7 +1701,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedBooleanVariable) {
 					activitydiagramTrace.States.activitydiagram.TracedBooleanVariable parent_cast = (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable) value
 							.getParent();
-					activitydiagram.Value toset = ((activitydiagram.Value) getTracedToExe(value.getCurrentValue()));
+					activitydiagram.Value toset = (activitydiagram.Value)
+
+					getTracedToExe(value.getCurrentValue());
 					activitydiagram.Value current = ((activitydiagram.Variable) parent_cast.getOriginalObject())
 							.getCurrentValue();
 					if (current != toset)
@@ -1717,7 +1713,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedIntegerVariable) {
 					activitydiagramTrace.States.activitydiagram.TracedIntegerVariable parent_cast = (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable) value
 							.getParent();
-					activitydiagram.Value toset = ((activitydiagram.Value) getTracedToExe(value.getCurrentValue()));
+					activitydiagram.Value toset = (activitydiagram.Value)
+
+					getTracedToExe(value.getCurrentValue());
 					activitydiagram.Value current = ((activitydiagram.Variable) parent_cast.getOriginalObject())
 							.getCurrentValue();
 					if (current != toset)
@@ -1734,70 +1732,70 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 					activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode parent_cast = (activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedDecisionNode) {
 					activitydiagramTrace.States.activitydiagram.TracedDecisionNode parent_cast = (activitydiagramTrace.States.activitydiagram.TracedDecisionNode) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedForkNode) {
 					activitydiagramTrace.States.activitydiagram.TracedForkNode parent_cast = (activitydiagramTrace.States.activitydiagram.TracedForkNode) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedInitialNode) {
 					activitydiagramTrace.States.activitydiagram.TracedInitialNode parent_cast = (activitydiagramTrace.States.activitydiagram.TracedInitialNode) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedJoinNode) {
 					activitydiagramTrace.States.activitydiagram.TracedJoinNode parent_cast = (activitydiagramTrace.States.activitydiagram.TracedJoinNode) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedMergeNode) {
 					activitydiagramTrace.States.activitydiagram.TracedMergeNode parent_cast = (activitydiagramTrace.States.activitydiagram.TracedMergeNode) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedOpaqueAction) {
 					activitydiagramTrace.States.activitydiagram.TracedOpaqueAction parent_cast = (activitydiagramTrace.States.activitydiagram.TracedOpaqueAction) value
 							.getParent();
 					parent_cast.getOriginalObject().getHeldTokens().clear();
-					parent_cast
-							.getOriginalObject()
-							.getHeldTokens()
-							.addAll((Collection<? extends activitydiagram.Token>) getTracedToExe(value.getHeldTokens()));
+					parent_cast.getOriginalObject().getHeldTokens()
+							.addAll((Collection<? extends activitydiagram.Token>)
+
+							getTracedToExe(value.getHeldTokens()));
 
 				}
 
@@ -1810,8 +1808,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 					activitydiagramTrace.States.activitydiagram.TracedControlFlow parent_cast = (activitydiagramTrace.States.activitydiagram.TracedControlFlow) value
 							.getParent();
 					parent_cast.getOriginalObject().getOffers().clear();
-					parent_cast.getOriginalObject().getOffers()
-							.addAll((Collection<? extends activitydiagram.Offer>) getTracedToExe(value.getOffers()));
+					parent_cast.getOriginalObject().getOffers().addAll((Collection<? extends activitydiagram.Offer>)
+
+					getTracedToExe(value.getOffers()));
 
 				}
 
@@ -1822,7 +1821,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedActivity) {
 					activitydiagramTrace.States.activitydiagram.TracedActivity parent_cast = (activitydiagramTrace.States.activitydiagram.TracedActivity) value
 							.getParent();
-					activitydiagram.Trace toset = ((activitydiagram.Trace) getTracedToExe(value.getTrace()));
+					activitydiagram.Trace toset = (activitydiagram.Trace)
+
+					getTracedToExe(value.getTrace());
 					activitydiagram.Trace current = ((activitydiagram.Activity) parent_cast.getOriginalObject())
 							.getTrace();
 					if (current != toset)
@@ -1844,7 +1845,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 					.getForkedToken_baseToken_Values()) {
 
 				activitydiagram.ForkedToken exeObject = (activitydiagram.ForkedToken) getTracedToExe(value.getParent());
-				exeObject.setBaseToken(((activitydiagram.Token) getTracedToExe(value.getBaseToken())));
+				exeObject.setBaseToken((activitydiagram.Token)
+
+				getTracedToExe(value.getBaseToken()));
 
 			}
 
@@ -1860,6 +1863,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 				activitydiagram.Input exeObject = (activitydiagram.Input) getTracedToExe(value.getParent());
 				exeObject.getInputValues().clear();
+
 				exeObject.getInputValues().addAll(
 						(Collection<? extends activitydiagram.InputValue>) getTracedToExe(value.getInputValues()));
 
@@ -1868,7 +1872,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			for (activitydiagramTrace.States.InputValue_value_Value value : stateToGo.getInputValue_value_Values()) {
 
 				activitydiagram.InputValue exeObject = (activitydiagram.InputValue) getTracedToExe(value.getParent());
-				exeObject.setValue(((activitydiagram.Value) getTracedToExe(value.getValue())));
+				exeObject.setValue((activitydiagram.Value)
+
+				getTracedToExe(value.getValue()));
 
 			}
 
@@ -1876,7 +1882,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 					.getInputValue_variable_Values()) {
 
 				activitydiagram.InputValue exeObject = (activitydiagram.InputValue) getTracedToExe(value.getParent());
-				exeObject.setVariable(((activitydiagram.Variable) getTracedToExe(value.getVariable())));
+				exeObject.setVariable((activitydiagram.Variable)
+
+				getTracedToExe(value.getVariable()));
 
 			}
 
@@ -1893,6 +1901,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 				activitydiagram.Offer exeObject = (activitydiagram.Offer) getTracedToExe(value.getParent());
 				exeObject.getOfferedTokens().clear();
+
 				exeObject.getOfferedTokens().addAll(
 						(Collection<? extends activitydiagram.Token>) getTracedToExe(value.getOfferedTokens()));
 
@@ -1901,7 +1910,9 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			for (activitydiagramTrace.States.Token_holder_Value value : stateToGo.getToken_holder_Values()) {
 
 				activitydiagram.Token exeObject = (activitydiagram.Token) getTracedToExe(value.getParent());
-				exeObject.setHolder(((activitydiagram.ActivityNode) getTracedToExe(value.getHolder())));
+				exeObject.setHolder((activitydiagram.ActivityNode)
+
+				getTracedToExe(value.getHolder()));
 
 			}
 
@@ -1910,6 +1921,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 
 				activitydiagram.Trace exeObject = (activitydiagram.Trace) getTracedToExe(value.getParent());
 				exeObject.getExecutedNodes().clear();
+
 				exeObject.getExecutedNodes().addAll(
 						(Collection<? extends activitydiagram.ActivityNode>) getTracedToExe(value.getExecutedNodes()));
 
@@ -1955,7 +1967,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 	public void save() {
 		//try {
 		//	traceResource.save(null);
-		//} catch (IOException e) {
+		//} catch (java.io.IOException e) {
 		//	e.printStackTrace();
 		//}
 	}
@@ -1977,7 +1989,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		for (activitydiagramTrace.States.ActivityNode_heldTokens_Value currentState : gs
 				.getActivityNode_heldTokens_Values()) {
 			String d = "";
-			List l = currentState.getHeldTokens();
+			List<activitydiagramTrace.States.activitydiagram.TracedToken> l = currentState.getHeldTokens();
 			int s = l.size();
 			for (int i = 0; i < s - 1; i++) {
 				d += l.get(i).toString() + ",\n\t\t";
@@ -1992,7 +2004,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			result.append("\nOffers values:");
 		for (activitydiagramTrace.States.ActivityEdge_offers_Value currentState : gs.getActivityEdge_offers_Values()) {
 			String d = "";
-			List l = currentState.getOffers();
+			List<activitydiagramTrace.States.activitydiagram.TracedOffer> l = currentState.getOffers();
 			int s = l.size();
 			for (int i = 0; i < s - 1; i++) {
 				d += l.get(i).toString() + ",\n\t\t";
@@ -2033,7 +2045,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			result.append("\nInputValues values:");
 		for (activitydiagramTrace.States.Input_inputValues_Value currentState : gs.getInput_inputValues_Values()) {
 			String d = "";
-			List l = currentState.getInputValues();
+			List<activitydiagramTrace.States.activitydiagram.TracedInputValue> l = currentState.getInputValues();
 			int s = l.size();
 			for (int i = 0; i < s - 1; i++) {
 				d += l.get(i).toString() + ",\n\t\t";
@@ -2066,7 +2078,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			result.append("\nOfferedTokens values:");
 		for (activitydiagramTrace.States.Offer_offeredTokens_Value currentState : gs.getOffer_offeredTokens_Values()) {
 			String d = "";
-			List l = currentState.getOfferedTokens();
+			List<activitydiagramTrace.States.activitydiagram.TracedToken> l = currentState.getOfferedTokens();
 			int s = l.size();
 			for (int i = 0; i < s - 1; i++) {
 				d += l.get(i).toString() + ",\n\t\t";
@@ -2087,7 +2099,7 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 			result.append("\nExecutedNodes values:");
 		for (activitydiagramTrace.States.Trace_executedNodes_Value currentState : gs.getTrace_executedNodes_Values()) {
 			String d = "";
-			List l = currentState.getExecutedNodes();
+			List<activitydiagramTrace.States.activitydiagram.TracedActivityNode> l = currentState.getExecutedNodes();
 			int s = l.size();
 			for (int i = 0; i < s - 1; i++) {
 				d += l.get(i).toString() + ",\n\t\t";
@@ -2113,52 +2125,87 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 	}
 
 	@Override
-	public String getDescriptionOfValue(EObject eObject) {
-		if (eObject instanceof activitydiagramTrace.States.Variable_currentValue_Value) {
+	public String getDescriptionOfValue(EObject value) {
+		if (value instanceof activitydiagramTrace.States.Variable_currentValue_Value) {
 			return "activitydiagramTrace.States.Variable_currentValue_Value: "
-					+ ((activitydiagramTrace.States.Variable_currentValue_Value) eObject).getCurrentValue();
-		} else if (eObject instanceof activitydiagramTrace.States.ActivityNode_heldTokens_Value) {
+					+ ((activitydiagramTrace.States.Variable_currentValue_Value) value).getCurrentValue();
+		} else if (value instanceof activitydiagramTrace.States.ActivityNode_heldTokens_Value) {
 			return "activitydiagramTrace.States.ActivityNode_heldTokens_Value: "
-					+ ((activitydiagramTrace.States.ActivityNode_heldTokens_Value) eObject).getHeldTokens();
-		} else if (eObject instanceof activitydiagramTrace.States.ActivityEdge_offers_Value) {
+					+ ((activitydiagramTrace.States.ActivityNode_heldTokens_Value) value).getHeldTokens();
+		} else if (value instanceof activitydiagramTrace.States.ActivityEdge_offers_Value) {
 			return "activitydiagramTrace.States.ActivityEdge_offers_Value: "
-					+ ((activitydiagramTrace.States.ActivityEdge_offers_Value) eObject).getOffers();
-		} else if (eObject instanceof activitydiagramTrace.States.Activity_trace_Value) {
+					+ ((activitydiagramTrace.States.ActivityEdge_offers_Value) value).getOffers();
+		} else if (value instanceof activitydiagramTrace.States.Activity_trace_Value) {
 			return "activitydiagramTrace.States.Activity_trace_Value: "
-					+ ((activitydiagramTrace.States.Activity_trace_Value) eObject).getTrace();
-		} else if (eObject instanceof activitydiagramTrace.States.BooleanValue_value_Value) {
+					+ ((activitydiagramTrace.States.Activity_trace_Value) value).getTrace();
+		} else if (value instanceof activitydiagramTrace.States.BooleanValue_value_Value) {
 			return "activitydiagramTrace.States.BooleanValue_value_Value: "
-					+ ((activitydiagramTrace.States.BooleanValue_value_Value) eObject).isValue();
-		} else if (eObject instanceof activitydiagramTrace.States.ForkedToken_baseToken_Value) {
+					+ ((activitydiagramTrace.States.BooleanValue_value_Value) value).isValue();
+		} else if (value instanceof activitydiagramTrace.States.ForkedToken_baseToken_Value) {
 			return "activitydiagramTrace.States.ForkedToken_baseToken_Value: "
-					+ ((activitydiagramTrace.States.ForkedToken_baseToken_Value) eObject).getBaseToken();
-		} else if (eObject instanceof activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) {
+					+ ((activitydiagramTrace.States.ForkedToken_baseToken_Value) value).getBaseToken();
+		} else if (value instanceof activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) {
 			return "activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value: "
-					+ ((activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) eObject)
+					+ ((activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) value)
 							.getRemainingOffersCount();
-		} else if (eObject instanceof activitydiagramTrace.States.Input_inputValues_Value) {
+		} else if (value instanceof activitydiagramTrace.States.Input_inputValues_Value) {
 			return "activitydiagramTrace.States.Input_inputValues_Value: "
-					+ ((activitydiagramTrace.States.Input_inputValues_Value) eObject).getInputValues();
-		} else if (eObject instanceof activitydiagramTrace.States.InputValue_value_Value) {
+					+ ((activitydiagramTrace.States.Input_inputValues_Value) value).getInputValues();
+		} else if (value instanceof activitydiagramTrace.States.InputValue_value_Value) {
 			return "activitydiagramTrace.States.InputValue_value_Value: "
-					+ ((activitydiagramTrace.States.InputValue_value_Value) eObject).getValue();
-		} else if (eObject instanceof activitydiagramTrace.States.InputValue_variable_Value) {
+					+ ((activitydiagramTrace.States.InputValue_value_Value) value).getValue();
+		} else if (value instanceof activitydiagramTrace.States.InputValue_variable_Value) {
 			return "activitydiagramTrace.States.InputValue_variable_Value: "
-					+ ((activitydiagramTrace.States.InputValue_variable_Value) eObject).getVariable();
-		} else if (eObject instanceof activitydiagramTrace.States.IntegerValue_value_Value) {
+					+ ((activitydiagramTrace.States.InputValue_variable_Value) value).getVariable();
+		} else if (value instanceof activitydiagramTrace.States.IntegerValue_value_Value) {
 			return "activitydiagramTrace.States.IntegerValue_value_Value: "
-					+ ((activitydiagramTrace.States.IntegerValue_value_Value) eObject).getValue();
-		} else if (eObject instanceof activitydiagramTrace.States.Offer_offeredTokens_Value) {
+					+ ((activitydiagramTrace.States.IntegerValue_value_Value) value).getValue();
+		} else if (value instanceof activitydiagramTrace.States.Offer_offeredTokens_Value) {
 			return "activitydiagramTrace.States.Offer_offeredTokens_Value: "
-					+ ((activitydiagramTrace.States.Offer_offeredTokens_Value) eObject).getOfferedTokens();
-		} else if (eObject instanceof activitydiagramTrace.States.Token_holder_Value) {
+					+ ((activitydiagramTrace.States.Offer_offeredTokens_Value) value).getOfferedTokens();
+		} else if (value instanceof activitydiagramTrace.States.Token_holder_Value) {
 			return "activitydiagramTrace.States.Token_holder_Value: "
-					+ ((activitydiagramTrace.States.Token_holder_Value) eObject).getHolder();
-		} else if (eObject instanceof activitydiagramTrace.States.Trace_executedNodes_Value) {
+					+ ((activitydiagramTrace.States.Token_holder_Value) value).getHolder();
+		} else if (value instanceof activitydiagramTrace.States.Trace_executedNodes_Value) {
 			return "activitydiagramTrace.States.Trace_executedNodes_Value: "
-					+ ((activitydiagramTrace.States.Trace_executedNodes_Value) eObject).getExecutedNodes();
+					+ ((activitydiagramTrace.States.Trace_executedNodes_Value) value).getExecutedNodes();
 		} else
 			return "ERROR";
+	}
+
+	@Override
+	public Object getContainedValue(EObject value) {
+		if (value instanceof activitydiagramTrace.States.Variable_currentValue_Value) {
+			return ((activitydiagramTrace.States.Variable_currentValue_Value) value).getCurrentValue();
+		} else if (value instanceof activitydiagramTrace.States.ActivityNode_heldTokens_Value) {
+			return ((activitydiagramTrace.States.ActivityNode_heldTokens_Value) value).getHeldTokens();
+		} else if (value instanceof activitydiagramTrace.States.ActivityEdge_offers_Value) {
+			return ((activitydiagramTrace.States.ActivityEdge_offers_Value) value).getOffers();
+		} else if (value instanceof activitydiagramTrace.States.Activity_trace_Value) {
+			return ((activitydiagramTrace.States.Activity_trace_Value) value).getTrace();
+		} else if (value instanceof activitydiagramTrace.States.BooleanValue_value_Value) {
+			return ((activitydiagramTrace.States.BooleanValue_value_Value) value).isValue();
+		} else if (value instanceof activitydiagramTrace.States.ForkedToken_baseToken_Value) {
+			return ((activitydiagramTrace.States.ForkedToken_baseToken_Value) value).getBaseToken();
+		} else if (value instanceof activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) {
+			return ((activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value) value)
+					.getRemainingOffersCount();
+		} else if (value instanceof activitydiagramTrace.States.Input_inputValues_Value) {
+			return ((activitydiagramTrace.States.Input_inputValues_Value) value).getInputValues();
+		} else if (value instanceof activitydiagramTrace.States.InputValue_value_Value) {
+			return ((activitydiagramTrace.States.InputValue_value_Value) value).getValue();
+		} else if (value instanceof activitydiagramTrace.States.InputValue_variable_Value) {
+			return ((activitydiagramTrace.States.InputValue_variable_Value) value).getVariable();
+		} else if (value instanceof activitydiagramTrace.States.IntegerValue_value_Value) {
+			return ((activitydiagramTrace.States.IntegerValue_value_Value) value).getValue();
+		} else if (value instanceof activitydiagramTrace.States.Offer_offeredTokens_Value) {
+			return ((activitydiagramTrace.States.Offer_offeredTokens_Value) value).getOfferedTokens();
+		} else if (value instanceof activitydiagramTrace.States.Token_holder_Value) {
+			return ((activitydiagramTrace.States.Token_holder_Value) value).getHolder();
+		} else if (value instanceof activitydiagramTrace.States.Trace_executedNodes_Value) {
+			return ((activitydiagramTrace.States.Trace_executedNodes_Value) value).getExecutedNodes();
+		} else
+			return null;
 	}
 
 	private void storeAsTracedObject(activitydiagram.Activity o) {
@@ -2678,6 +2725,55 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		return result;
 	}
 
+	@SuppressWarnings("unchecked")
+	private Map<fr.inria.diverse.trace.api.IStep,List<fr.inria.diverse.trace.api.IStep>> getStepSubGraph(
+			activitydiagramTrace.Steps.Step step, int startingState, int endingState,
+			Map<fr.inria.diverse.trace.api.IStep,List<fr.inria.diverse.trace.api.IStep>> accumulator,
+			Map<activitydiagramTrace.Steps.Step, fr.inria.diverse.trace.api.IStep> step2IStep) {
+		
+		final List<activitydiagramTrace.Steps.Step> steps = (List<activitydiagramTrace.Steps.Step>) emfGet(step, "subSteps");
+		final List<activitydiagramTrace.States.State> states = this.traceRoot.getStatesTrace();
+		final fr.inria.diverse.trace.api.IStep iStep = step2IStep.computeIfAbsent(step, (s)->createGenericStep(s));
+		
+		if (steps != null && !steps.isEmpty()) {
+			final List<activitydiagramTrace.Steps.Step> eligibleSteps = steps.stream().filter(s->{
+				final int stepStartingState = states.indexOf(s.getStartingState());
+				final int stepEndingState = states.indexOf(s.getEndingState());
+				return (stepEndingState == -1 || stepEndingState > startingState) && stepStartingState < endingState;
+			}).collect(Collectors.toList());
+			
+			accumulator.put(iStep, eligibleSteps.stream().map(s->step2IStep.computeIfAbsent(s, (k)->createGenericStep(k))).collect(Collectors.toList()));
+			
+			for (activitydiagramTrace.Steps.Step subStep : eligibleSteps) {
+				getStepSubGraph(subStep, startingState, endingState, accumulator, step2IStep);
+			}
+		} else {
+			accumulator.put(iStep, Collections.EMPTY_LIST);
+		}
+		
+		return accumulator;
+	}
+
+	@Override
+	public Map<fr.inria.diverse.trace.api.IStep, List<fr.inria.diverse.trace.api.IStep>> getStepsForStates(
+			int startingState, int endingState) {
+
+		final List<activitydiagramTrace.Steps.Step> rootSteps = this.traceRoot.getRootSteps();
+		final List<activitydiagramTrace.States.State> states = this.traceRoot.getStatesTrace();
+		final Map<activitydiagramTrace.Steps.Step, fr.inria.diverse.trace.api.IStep> step2IStep = new HashMap<>();
+		final Map<fr.inria.diverse.trace.api.IStep, List<fr.inria.diverse.trace.api.IStep>> result = new HashMap<>();
+
+		for (activitydiagramTrace.Steps.Step step : rootSteps) {
+			final int stepStartingState = states.indexOf(step.getStartingState());
+			final int stepEndingState = states.indexOf(step.getEndingState());
+			if ((stepEndingState == -1 || stepEndingState > startingState) && stepStartingState < endingState) {
+				getStepSubGraph(step, startingState, endingState, result, step2IStep);
+			}
+		}
+
+		return result;
+	}
+
 	@Override
 	public List<fr.inria.diverse.trace.api.IStep.StepEvent> getEventsForState(int stateIndex) {
 		final Map<activitydiagramTrace.Steps.Step, fr.inria.diverse.trace.api.IStep> step2IStep = new HashMap<>();
@@ -2932,4 +3028,12 @@ public class ActivitydiagramTraceManager implements fr.inria.diverse.trace.gemoc
 		});
 		
 	}
+
+	private Set<Resource> getAllExecutedModelResources() {
+		Set<Resource> allResources = new HashSet<>();
+		allResources.add(executedModel);
+		allResources.addAll(org.gemoc.commons.eclipse.emf.EMFResource.getRelatedResources(executedModel));
+		return allResources;
+	}
+
 }

@@ -39,7 +39,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1" eSuperTypes="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep //Steps/Activitydiagram_Activity_Execute_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       </eOperations>
@@ -50,7 +50,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute" eSuperTypes="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep //Steps/Activitydiagram_Activity_Execute_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       </eOperations>
@@ -61,7 +61,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_RemoveToken1" eSuperTypes="//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep //Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep //Steps/SmallStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       </eOperations>
@@ -69,7 +69,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_SendOffers1" eSuperTypes="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep //Steps/Activitydiagram_ActivityNode_SendOffers1_AbstractSubStep //Steps/Activitydiagram_Activity_Execute_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       </eOperations>
@@ -80,7 +80,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1" eSuperTypes="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep //Steps/Activitydiagram_Activity_Execute_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       </eOperations>
@@ -91,7 +91,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Terminate" eSuperTypes="//Steps/SmallStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (ActivityNode) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityNode"/>
       </eOperations>
@@ -99,7 +99,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute" eSuperTypes="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep //Steps/Activitydiagram_Activity_Execute_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (Activity) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (Activity) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
       </eOperations>
@@ -110,7 +110,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_InitializeContext" eSuperTypes="//Steps/SmallStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (Activity) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (Activity) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
       </eOperations>
@@ -118,7 +118,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Reset" eSuperTypes="//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep //Steps/SmallStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (Activity) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (Activity) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
       </eOperations>
@@ -126,7 +126,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace" eSuperTypes="//Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (Activity) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (Activity) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
       </eOperations>
@@ -137,7 +137,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Execute" eSuperTypes="//Steps/Activitydiagram_Variable_Execute_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (Variable) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (Variable) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Variable"/>
       </eOperations>
@@ -148,7 +148,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Variable_Init" eSuperTypes="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep //Steps/Activitydiagram_Activity_Execute_AbstractSubStep //Steps/Activitydiagram_Variable_Init_AbstractSubStep //Steps/BigStep">
       <eOperations name="getCaller" lowerBound="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="return (Variable) this.getMse().getCaller();&#xD;&#xA;"/>
+          <details key="body" value="return (Variable) this.getMse().getCaller();&#xA;"/>
         </eAnnotations>
         <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Variable"/>
       </eOperations>
@@ -171,7 +171,7 @@
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1" eType="//States/activitydiagram/TracedOffer">
-        <eAnnotations source="dynamic"/>
+        <eAnnotations source="aspect"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedActivityEdge" eOpposite="//States/activitydiagram/TracedActivityEdge/offersSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/activityEdge_offers_Values"/>
@@ -181,7 +181,7 @@
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1" eType="//States/activitydiagram/TracedToken">
-        <eAnnotations source="dynamic"/>
+        <eAnnotations source="aspect"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode" eOpposite="//States/activitydiagram/TracedActivityNode/heldTokensSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/activityNode_heldTokens_Values"/>
@@ -193,7 +193,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedActivity" eOpposite="//States/activitydiagram/TracedActivity/traceSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/activity_trace_Values"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="//States/activitydiagram/TracedTrace">
-        <eAnnotations source="dynamic"/>
+        <eAnnotations source="aspect"/>
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BooleanValue_value_Value">
@@ -305,7 +305,7 @@
         <details key="executionMetamodelElement"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="//States/activitydiagram/TracedValue">
-        <eAnnotations source="dynamic"/>
+        <eAnnotations source="aspect"/>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedVariable" eOpposite="//States/activitydiagram/TracedVariable/currentValueSequence"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/variable_currentValue_Values"/>
@@ -321,14 +321,14 @@
           <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="trace">
-          <eAnnotations source="dynamic"/>
+          <eAnnotations source="aspect"/>
           <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Trace"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="traceSequence" upperBound="-1" eType="//States/Activity_trace_Value" containment="true" eOpposite="//States/Activity_trace_Value/parent"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="TracedActivityEdge" abstract="true" eSuperTypes="//States/activitydiagram/TracedNamedElement">
         <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1">
-          <eAnnotations source="dynamic"/>
+          <eAnnotations source="aspect"/>
           <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Offer"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="offersSequence" upperBound="-1" eType="//States/ActivityEdge_offers_Value" containment="true" eOpposite="//States/ActivityEdge_offers_Value/parent"/>
@@ -343,7 +343,7 @@
       <eClassifiers xsi:type="ecore:EClass" name="TracedActivityNode" abstract="true" eSuperTypes="//States/activitydiagram/TracedNamedElement">
         <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1" eType="//States/activitydiagram/TracedActivity"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1">
-          <eAnnotations source="dynamic"/>
+          <eAnnotations source="aspect"/>
           <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Token"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokensSequence" upperBound="-1" eType="//States/ActivityNode_heldTokens_Value" containment="true" eOpposite="//States/ActivityNode_heldTokens_Value/parent"/>
@@ -433,7 +433,7 @@
       <eClassifiers xsi:type="ecore:EClass" name="TracedValue" abstract="true"/>
       <eClassifiers xsi:type="ecore:EClass" name="TracedVariable" abstract="true">
         <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue">
-          <eAnnotations source="dynamic"/>
+          <eAnnotations source="aspect"/>
           <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Value"/>
         </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="currentValueSequence" upperBound="-1" eType="//States/Variable_currentValue_Value" containment="true" eOpposite="//States/Variable_currentValue_Value/parent"/>

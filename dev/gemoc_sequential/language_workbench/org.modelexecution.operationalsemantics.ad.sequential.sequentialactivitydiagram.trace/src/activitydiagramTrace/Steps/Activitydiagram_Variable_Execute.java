@@ -43,7 +43,7 @@ public interface Activitydiagram_Variable_Execute extends Activitydiagram_Variab
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return (Variable) this.getMse().getCaller();\r\n'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return (Variable) this.getMse().getCaller();\n'"
 	 * @generated
 	 */
 	Variable getCaller();
