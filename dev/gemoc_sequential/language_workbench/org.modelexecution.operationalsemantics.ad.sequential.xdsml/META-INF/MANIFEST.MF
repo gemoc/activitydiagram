@@ -32,7 +32,14 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="privat
  
  org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic;bundle-version="0.0.0";visibility:="private",
  
- org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport
+ org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
+ 
+ org.modelexecution.operationalsemantics.ad.context;bundle-version="0.0.0";visibility:="reexport",
+ 
+ org.modelexecution.operationalsemantics.ad.sequential.xdsml.xactivitydiagram
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Manifest-Version: 1.0
+Export-Package: org.modelexecution.operationalsemantics.ad.sequential.xdsml,
+ org.modelexecution.operationalsemantics.ad.sequential.xdsml.activitydiagrammt.activitydiagram,
+ org.modelexecution.operationalsemantics.ad.sequential.xdsml.xactivitydiagrammt.activitydiagram

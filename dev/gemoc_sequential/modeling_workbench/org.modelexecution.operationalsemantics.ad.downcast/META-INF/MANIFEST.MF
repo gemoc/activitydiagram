@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.modelexecution.operationalsemantics.ad.downcast
+Bundle-SymbolicName: org.modelexecution.operationalsemantics.ad.downcast; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.transaction,
+ org.modelexecution.operationalsemantics.ad.sequential.xdsml,
+ org.modelexecution.operationalsemantics.ad.sequential.xdsml.xactivitydiagram,
+ org.modelexecution.operationalsemantics.ad.grammar,
+ org.modelexecution.operationalsemantics.ad.grammar.ui,
+ org.apache.log4j,
+ org.eclipse.core.runtime
+Export-Package: loadmodel

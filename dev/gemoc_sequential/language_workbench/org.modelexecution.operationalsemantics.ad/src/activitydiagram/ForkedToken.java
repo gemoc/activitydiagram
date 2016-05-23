@@ -10,11 +10,11 @@ package activitydiagram;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.ForkedToken#getBaseToken <em>Base Token</em>}</li>
  *   <li>{@link activitydiagram.ForkedToken#getRemainingOffersCount <em>Remaining Offers Count</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getForkedToken()
  * @model

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagram" nsURI="http://activitydiagram/context/" nsPrefix="activitydiagram">
+  <eClassifiers xsi:type="ecore:EClass" name="Context">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output">
+      <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Trace"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity">
+      <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="//Context"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1">
+      <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//InputValue"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node">
+      <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//JoinNode"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

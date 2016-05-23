@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.ActivityNode#getOutgoing <em>Outgoing</em>}</li>
  *   <li>{@link activitydiagram.ActivityNode#getIncoming <em>Incoming</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagram.ActivityNode#isRunning <em>Running</em>}</li>
  *   <li>{@link activitydiagram.ActivityNode#getHeldTokens <em>Held Tokens</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getActivityNode()
  * @model abstract="true"

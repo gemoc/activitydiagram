@@ -28,12 +28,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.ActivityEdgeImpl#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityEdgeImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityEdgeImpl#getOffers <em>Offers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

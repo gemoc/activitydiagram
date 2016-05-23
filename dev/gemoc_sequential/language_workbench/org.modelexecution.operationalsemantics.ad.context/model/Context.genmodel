@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelexecution.operationalsemantics.ad.context/src" modelPluginID="org.modelexecution.operationalsemantics.ad.context" modelName="Context" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Context.ecore</foreignModel>
+  <genPackages prefix="Activitydiagram" basePackage="context" disposableProviderFactory="true">
+    <ecorePackage href="Context.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="Context.ecore#//Context"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="Context.ecore#//Context/output"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="Context.ecore#//Context/activity"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="Context.ecore#//Context/parent"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="Context.ecore#//Context/inputValues"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="Context.ecore#//Context/node"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.genmodel#//activitydiagram"/>
+</genmodel:GenModel>

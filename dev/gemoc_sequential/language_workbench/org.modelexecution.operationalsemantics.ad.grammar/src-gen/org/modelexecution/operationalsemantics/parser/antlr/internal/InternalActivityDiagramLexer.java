@@ -70,15 +70,15 @@ public class InternalActivityDiagramLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g"; }
+    public String getGrammarFileName() { return "InternalActivityDiagram.g"; }
 
     // $ANTLR start "T__11"
     public final void mT__11() throws RecognitionException {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:11:7: ( 'activity' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:11:9: 'activity'
+            // InternalActivityDiagram.g:11:7: ( 'activity' )
+            // InternalActivityDiagram.g:11:9: 'activity'
             {
             match("activity"); 
 
@@ -98,8 +98,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:12:7: ( '(' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:12:9: '('
+            // InternalActivityDiagram.g:12:7: ( '(' )
+            // InternalActivityDiagram.g:12:9: '('
             {
             match('('); 
 
@@ -118,8 +118,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:13:7: ( ',' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:13:9: ','
+            // InternalActivityDiagram.g:13:7: ( ',' )
+            // InternalActivityDiagram.g:13:9: ','
             {
             match(','); 
 
@@ -138,8 +138,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:14:7: ( ')' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:14:9: ')'
+            // InternalActivityDiagram.g:14:7: ( ')' )
+            // InternalActivityDiagram.g:14:9: ')'
             {
             match(')'); 
 
@@ -158,8 +158,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:15:7: ( '{' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:15:9: '{'
+            // InternalActivityDiagram.g:15:7: ( '{' )
+            // InternalActivityDiagram.g:15:9: '{'
             {
             match('{'); 
 
@@ -178,8 +178,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:16:7: ( 'nodes' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:16:9: 'nodes'
+            // InternalActivityDiagram.g:16:7: ( 'nodes' )
+            // InternalActivityDiagram.g:16:9: 'nodes'
             {
             match("nodes"); 
 
@@ -199,8 +199,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:17:7: ( '}' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:17:9: '}'
+            // InternalActivityDiagram.g:17:7: ( '}' )
+            // InternalActivityDiagram.g:17:9: '}'
             {
             match('}'); 
 
@@ -219,8 +219,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:18:7: ( 'edges' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:18:9: 'edges'
+            // InternalActivityDiagram.g:18:7: ( 'edges' )
+            // InternalActivityDiagram.g:18:9: 'edges'
             {
             match("edges"); 
 
@@ -240,8 +240,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:19:7: ( 'action' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:19:9: 'action'
+            // InternalActivityDiagram.g:19:7: ( 'action' )
+            // InternalActivityDiagram.g:19:9: 'action'
             {
             match("action"); 
 
@@ -261,8 +261,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:20:7: ( 'comp' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:20:9: 'comp'
+            // InternalActivityDiagram.g:20:7: ( 'comp' )
+            // InternalActivityDiagram.g:20:9: 'comp'
             {
             match("comp"); 
 
@@ -282,8 +282,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:21:7: ( 'in' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:21:9: 'in'
+            // InternalActivityDiagram.g:21:7: ( 'in' )
+            // InternalActivityDiagram.g:21:9: 'in'
             {
             match("in"); 
 
@@ -303,8 +303,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:22:7: ( 'out' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:22:9: 'out'
+            // InternalActivityDiagram.g:22:7: ( 'out' )
+            // InternalActivityDiagram.g:22:9: 'out'
             {
             match("out"); 
 
@@ -324,8 +324,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:23:7: ( 'initial' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:23:9: 'initial'
+            // InternalActivityDiagram.g:23:7: ( 'initial' )
+            // InternalActivityDiagram.g:23:9: 'initial'
             {
             match("initial"); 
 
@@ -345,8 +345,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:24:7: ( 'final' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:24:9: 'final'
+            // InternalActivityDiagram.g:24:7: ( 'final' )
+            // InternalActivityDiagram.g:24:9: 'final'
             {
             match("final"); 
 
@@ -366,8 +366,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:25:7: ( 'fork' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:25:9: 'fork'
+            // InternalActivityDiagram.g:25:7: ( 'fork' )
+            // InternalActivityDiagram.g:25:9: 'fork'
             {
             match("fork"); 
 
@@ -387,8 +387,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:26:7: ( 'join' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:26:9: 'join'
+            // InternalActivityDiagram.g:26:7: ( 'join' )
+            // InternalActivityDiagram.g:26:9: 'join'
             {
             match("join"); 
 
@@ -408,8 +408,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:27:7: ( 'merge' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:27:9: 'merge'
+            // InternalActivityDiagram.g:27:7: ( 'merge' )
+            // InternalActivityDiagram.g:27:9: 'merge'
             {
             match("merge"); 
 
@@ -429,8 +429,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:28:7: ( 'decision' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:28:9: 'decision'
+            // InternalActivityDiagram.g:28:7: ( 'decision' )
+            // InternalActivityDiagram.g:28:9: 'decision'
             {
             match("decision"); 
 
@@ -450,8 +450,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:29:7: ( '=' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:29:9: '='
+            // InternalActivityDiagram.g:29:7: ( '=' )
+            // InternalActivityDiagram.g:29:9: '='
             {
             match('='); 
 
@@ -470,8 +470,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:30:7: ( 'int' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:30:9: 'int'
+            // InternalActivityDiagram.g:30:7: ( 'int' )
+            // InternalActivityDiagram.g:30:9: 'int'
             {
             match("int"); 
 
@@ -491,8 +491,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:31:7: ( 'bool' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:31:9: 'bool'
+            // InternalActivityDiagram.g:31:7: ( 'bool' )
+            // InternalActivityDiagram.g:31:9: 'bool'
             {
             match("bool"); 
 
@@ -512,8 +512,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:32:7: ( 'true' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:32:9: 'true'
+            // InternalActivityDiagram.g:32:7: ( 'true' )
+            // InternalActivityDiagram.g:32:9: 'true'
             {
             match("true"); 
 
@@ -533,8 +533,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:33:7: ( 'false' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:33:9: 'false'
+            // InternalActivityDiagram.g:33:7: ( 'false' )
+            // InternalActivityDiagram.g:33:9: 'false'
             {
             match("false"); 
 
@@ -554,8 +554,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:34:7: ( '-' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:34:9: '-'
+            // InternalActivityDiagram.g:34:7: ( '-' )
+            // InternalActivityDiagram.g:34:9: '-'
             {
             match('-'); 
 
@@ -574,8 +574,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:35:7: ( 'flow' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:35:9: 'flow'
+            // InternalActivityDiagram.g:35:7: ( 'flow' )
+            // InternalActivityDiagram.g:35:9: 'flow'
             {
             match("flow"); 
 
@@ -595,8 +595,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:36:7: ( 'from' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:36:9: 'from'
+            // InternalActivityDiagram.g:36:7: ( 'from' )
+            // InternalActivityDiagram.g:36:9: 'from'
             {
             match("from"); 
 
@@ -616,8 +616,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:37:7: ( 'to' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:37:9: 'to'
+            // InternalActivityDiagram.g:37:7: ( 'to' )
+            // InternalActivityDiagram.g:37:9: 'to'
             {
             match("to"); 
 
@@ -637,8 +637,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:38:7: ( '[' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:38:9: '['
+            // InternalActivityDiagram.g:38:7: ( '[' )
+            // InternalActivityDiagram.g:38:9: '['
             {
             match('['); 
 
@@ -657,8 +657,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:39:7: ( ']' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:39:9: ']'
+            // InternalActivityDiagram.g:39:7: ( ']' )
+            // InternalActivityDiagram.g:39:9: ']'
             {
             match(']'); 
 
@@ -677,8 +677,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:40:7: ( '+' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:40:9: '+'
+            // InternalActivityDiagram.g:40:7: ( '+' )
+            // InternalActivityDiagram.g:40:9: '+'
             {
             match('+'); 
 
@@ -697,8 +697,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:41:7: ( '<' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:41:9: '<'
+            // InternalActivityDiagram.g:41:7: ( '<' )
+            // InternalActivityDiagram.g:41:9: '<'
             {
             match('<'); 
 
@@ -717,8 +717,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:42:7: ( '<=' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:42:9: '<='
+            // InternalActivityDiagram.g:42:7: ( '<=' )
+            // InternalActivityDiagram.g:42:9: '<='
             {
             match("<="); 
 
@@ -738,8 +738,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:43:7: ( '==' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:43:9: '=='
+            // InternalActivityDiagram.g:43:7: ( '==' )
+            // InternalActivityDiagram.g:43:9: '=='
             {
             match("=="); 
 
@@ -759,8 +759,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:44:7: ( '>=' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:44:9: '>='
+            // InternalActivityDiagram.g:44:7: ( '>=' )
+            // InternalActivityDiagram.g:44:9: '>='
             {
             match(">="); 
 
@@ -780,8 +780,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:45:7: ( '>' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:45:9: '>'
+            // InternalActivityDiagram.g:45:7: ( '>' )
+            // InternalActivityDiagram.g:45:9: '>'
             {
             match('>'); 
 
@@ -800,8 +800,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:46:7: ( '!' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:46:9: '!'
+            // InternalActivityDiagram.g:46:7: ( '!' )
+            // InternalActivityDiagram.g:46:9: '!'
             {
             match('!'); 
 
@@ -820,8 +820,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:47:7: ( '&' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:47:9: '&'
+            // InternalActivityDiagram.g:47:7: ( '&' )
+            // InternalActivityDiagram.g:47:9: '&'
             {
             match('&'); 
 
@@ -840,8 +840,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:48:7: ( '|' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:48:9: '|'
+            // InternalActivityDiagram.g:48:7: ( '|' )
+            // InternalActivityDiagram.g:48:9: '|'
             {
             match('|'); 
 
@@ -860,10 +860,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2232:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2232:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalActivityDiagram.g:2232:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalActivityDiagram.g:2232:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2232:11: ( '^' )?
+            // InternalActivityDiagram.g:2232:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -872,7 +872,7 @@ public class InternalActivityDiagramLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2232:11: '^'
+                    // InternalActivityDiagram.g:2232:11: '^'
                     {
                     match('^'); 
 
@@ -890,7 +890,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2232:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalActivityDiagram.g:2232:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -903,7 +903,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:
+            	    // InternalActivityDiagram.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -939,10 +939,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2234:10: ( ( '0' .. '9' )+ )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2234:12: ( '0' .. '9' )+
+            // InternalActivityDiagram.g:2234:10: ( ( '0' .. '9' )+ )
+            // InternalActivityDiagram.g:2234:12: ( '0' .. '9' )+
             {
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2234:12: ( '0' .. '9' )+
+            // InternalActivityDiagram.g:2234:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -956,7 +956,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2234:13: '0' .. '9'
+            	    // InternalActivityDiagram.g:2234:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -988,10 +988,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalActivityDiagram.g:2236:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalActivityDiagram.g:2236:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalActivityDiagram.g:2236:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1009,10 +1009,10 @@ public class InternalActivityDiagramLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalActivityDiagram.g:2236:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalActivityDiagram.g:2236:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1028,7 +1028,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:21: '\\\\' .
+                    	    // InternalActivityDiagram.g:2236:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1036,7 +1036,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalActivityDiagram.g:2236:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1061,10 +1061,10 @@ public class InternalActivityDiagramLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalActivityDiagram.g:2236:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalActivityDiagram.g:2236:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1080,7 +1080,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:54: '\\\\' .
+                    	    // InternalActivityDiagram.g:2236:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1088,7 +1088,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2236:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalActivityDiagram.g:2236:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1131,12 +1131,12 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2238:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2238:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalActivityDiagram.g:2238:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalActivityDiagram.g:2238:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2238:24: ( options {greedy=false; } : . )*
+            // InternalActivityDiagram.g:2238:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1161,7 +1161,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2238:52: .
+            	    // InternalActivityDiagram.g:2238:52: .
             	    {
             	    matchAny(); 
 
@@ -1191,12 +1191,12 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalActivityDiagram.g:2240:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalActivityDiagram.g:2240:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalActivityDiagram.g:2240:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1209,7 +1209,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalActivityDiagram.g:2240:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1229,7 +1229,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:40: ( ( '\\r' )? '\\n' )?
+            // InternalActivityDiagram.g:2240:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1238,9 +1238,9 @@ public class InternalActivityDiagramLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:41: ( '\\r' )? '\\n'
+                    // InternalActivityDiagram.g:2240:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:41: ( '\\r' )?
+                    // InternalActivityDiagram.g:2240:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1249,7 +1249,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2240:41: '\\r'
+                            // InternalActivityDiagram.g:2240:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1281,10 +1281,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2242:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2242:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalActivityDiagram.g:2242:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalActivityDiagram.g:2242:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2242:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalActivityDiagram.g:2242:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1298,7 +1298,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:
+            	    // InternalActivityDiagram.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1338,8 +1338,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2244:16: ( . )
-            // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:2244:18: .
+            // InternalActivityDiagram.g:2244:16: ( . )
+            // InternalActivityDiagram.g:2244:18: .
             {
             matchAny(); 
 
@@ -1354,320 +1354,320 @@ public class InternalActivityDiagramLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // InternalActivityDiagram.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt12=45;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:10: T__11
+                // InternalActivityDiagram.g:1:10: T__11
                 {
                 mT__11(); 
 
                 }
                 break;
             case 2 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:16: T__12
+                // InternalActivityDiagram.g:1:16: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
             case 3 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:22: T__13
+                // InternalActivityDiagram.g:1:22: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 4 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:28: T__14
+                // InternalActivityDiagram.g:1:28: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 5 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:34: T__15
+                // InternalActivityDiagram.g:1:34: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 6 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:40: T__16
+                // InternalActivityDiagram.g:1:40: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 7 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:46: T__17
+                // InternalActivityDiagram.g:1:46: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 8 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:52: T__18
+                // InternalActivityDiagram.g:1:52: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 9 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:58: T__19
+                // InternalActivityDiagram.g:1:58: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 10 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:64: T__20
+                // InternalActivityDiagram.g:1:64: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 11 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:70: T__21
+                // InternalActivityDiagram.g:1:70: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 12 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:76: T__22
+                // InternalActivityDiagram.g:1:76: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 13 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:82: T__23
+                // InternalActivityDiagram.g:1:82: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 14 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:88: T__24
+                // InternalActivityDiagram.g:1:88: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 15 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:94: T__25
+                // InternalActivityDiagram.g:1:94: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 16 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:100: T__26
+                // InternalActivityDiagram.g:1:100: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 17 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:106: T__27
+                // InternalActivityDiagram.g:1:106: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 18 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:112: T__28
+                // InternalActivityDiagram.g:1:112: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 19 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:118: T__29
+                // InternalActivityDiagram.g:1:118: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 20 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:124: T__30
+                // InternalActivityDiagram.g:1:124: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 21 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:130: T__31
+                // InternalActivityDiagram.g:1:130: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 22 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:136: T__32
+                // InternalActivityDiagram.g:1:136: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 23 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:142: T__33
+                // InternalActivityDiagram.g:1:142: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 24 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:148: T__34
+                // InternalActivityDiagram.g:1:148: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 25 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:154: T__35
+                // InternalActivityDiagram.g:1:154: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 26 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:160: T__36
+                // InternalActivityDiagram.g:1:160: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 27 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:166: T__37
+                // InternalActivityDiagram.g:1:166: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 28 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:172: T__38
+                // InternalActivityDiagram.g:1:172: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 29 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:178: T__39
+                // InternalActivityDiagram.g:1:178: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 30 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:184: T__40
+                // InternalActivityDiagram.g:1:184: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 31 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:190: T__41
+                // InternalActivityDiagram.g:1:190: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 32 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:196: T__42
+                // InternalActivityDiagram.g:1:196: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 33 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:202: T__43
+                // InternalActivityDiagram.g:1:202: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 34 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:208: T__44
+                // InternalActivityDiagram.g:1:208: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 35 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:214: T__45
+                // InternalActivityDiagram.g:1:214: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 36 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:220: T__46
+                // InternalActivityDiagram.g:1:220: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 37 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:226: T__47
+                // InternalActivityDiagram.g:1:226: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 38 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:232: T__48
+                // InternalActivityDiagram.g:1:232: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 39 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:238: RULE_ID
+                // InternalActivityDiagram.g:1:238: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 40 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:246: RULE_INT
+                // InternalActivityDiagram.g:1:246: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 41 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:255: RULE_STRING
+                // InternalActivityDiagram.g:1:255: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 42 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:267: RULE_ML_COMMENT
+                // InternalActivityDiagram.g:1:267: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 43 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:283: RULE_SL_COMMENT
+                // InternalActivityDiagram.g:1:283: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 44 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:299: RULE_WS
+                // InternalActivityDiagram.g:1:299: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 45 :
-                // ../org.modelexecution.operationalsemantics.ad.grammar/src-gen/org/modelexecution/operationalsemantics/parser/antlr/internal/InternalActivityDiagram.g:1:307: RULE_ANY_OTHER
+                // InternalActivityDiagram.g:1:307: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1681,55 +1681,19 @@ public class InternalActivityDiagramLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\45\4\uffff\1\45\1\uffff\10\45\1\71\2\45\4\uffff\1\102"+
-        "\1\104\3\uffff\1\43\2\uffff\3\43\2\uffff\1\45\5\uffff\1\45\1\uffff"+
-        "\2\45\1\123\11\45\2\uffff\2\45\1\137\20\uffff\5\45\1\145\1\uffff"+
-        "\1\146\12\45\1\uffff\3\45\1\165\1\45\2\uffff\1\45\1\170\1\45\1\172"+
-        "\1\173\1\174\2\45\1\177\1\u0080\2\45\1\u0083\1\u0084\1\uffff\1\45"+
-        "\1\u0086\1\uffff\1\u0087\3\uffff\1\u0088\1\45\2\uffff\1\45\1\u008b"+
-        "\2\uffff\1\45\3\uffff\2\45\1\uffff\1\u008f\1\45\1\u0091\1\uffff"+
-        "\1\u0092\2\uffff";
+        "\1\uffff\1\45\4\uffff\1\45\1\uffff\10\45\1\71\2\45\4\uffff\1\102\1\104\3\uffff\1\43\2\uffff\3\43\2\uffff\1\45\5\uffff\1\45\1\uffff\2\45\1\123\11\45\2\uffff\2\45\1\137\20\uffff\5\45\1\145\1\uffff\1\146\12\45\1\uffff\3\45\1\165\1\45\2\uffff\1\45\1\170\1\45\1\172\1\173\1\174\2\45\1\177\1\u0080\2\45\1\u0083\1\u0084\1\uffff\1\45\1\u0086\1\uffff\1\u0087\3\uffff\1\u0088\1\45\2\uffff\1\45\1\u008b\2\uffff\1\45\3\uffff\2\45\1\uffff\1\u008f\1\45\1\u0091\1\uffff\1\u0092\2\uffff";
     static final String DFA12_eofS =
         "\u0093\uffff";
     static final String DFA12_minS =
-        "\1\0\1\143\4\uffff\1\157\1\uffff\1\144\1\157\1\156\1\165\1\141"+
-        "\1\157\2\145\1\75\2\157\4\uffff\2\75\3\uffff\1\101\2\uffff\2\0\1"+
-        "\52\2\uffff\1\164\5\uffff\1\144\1\uffff\1\147\1\155\1\60\1\164\1"+
-        "\156\1\162\1\154\2\157\1\151\1\162\1\143\2\uffff\1\157\1\165\1\60"+
-        "\20\uffff\1\151\2\145\1\160\1\164\1\60\1\uffff\1\60\1\141\1\153"+
-        "\1\163\1\167\1\155\1\156\1\147\1\151\1\154\1\145\1\uffff\1\157\2"+
-        "\163\1\60\1\151\2\uffff\1\154\1\60\1\145\3\60\1\145\1\163\2\60\1"+
-        "\151\1\156\2\60\1\uffff\1\141\1\60\1\uffff\1\60\3\uffff\1\60\1\151"+
-        "\2\uffff\1\164\1\60\2\uffff\1\154\3\uffff\1\157\1\171\1\uffff\1"+
-        "\60\1\156\1\60\1\uffff\1\60\2\uffff";
+        "\1\0\1\143\4\uffff\1\157\1\uffff\1\144\1\157\1\156\1\165\1\141\1\157\2\145\1\75\2\157\4\uffff\2\75\3\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\164\5\uffff\1\144\1\uffff\1\147\1\155\1\60\1\164\1\156\1\162\1\154\2\157\1\151\1\162\1\143\2\uffff\1\157\1\165\1\60\20\uffff\1\151\2\145\1\160\1\164\1\60\1\uffff\1\60\1\141\1\153\1\163\1\167\1\155\1\156\1\147\1\151\1\154\1\145\1\uffff\1\157\2\163\1\60\1\151\2\uffff\1\154\1\60\1\145\3\60\1\145\1\163\2\60\1\151\1\156\2\60\1\uffff\1\141\1\60\1\uffff\1\60\3\uffff\1\60\1\151\2\uffff\1\164\1\60\2\uffff\1\154\3\uffff\1\157\1\171\1\uffff\1\60\1\156\1\60\1\uffff\1\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\143\4\uffff\1\157\1\uffff\1\144\1\157\1\156\1\165\1"+
-        "\162\1\157\2\145\1\75\1\157\1\162\4\uffff\2\75\3\uffff\1\172\2\uffff"+
-        "\2\uffff\1\57\2\uffff\1\164\5\uffff\1\144\1\uffff\1\147\1\155\1"+
-        "\172\1\164\1\156\1\162\1\154\2\157\1\151\1\162\1\143\2\uffff\1\157"+
-        "\1\165\1\172\20\uffff\1\151\2\145\1\160\1\164\1\172\1\uffff\1\172"+
-        "\1\141\1\153\1\163\1\167\1\155\1\156\1\147\1\151\1\154\1\145\1\uffff"+
-        "\1\166\2\163\1\172\1\151\2\uffff\1\154\1\172\1\145\3\172\1\145\1"+
-        "\163\2\172\1\151\1\156\2\172\1\uffff\1\141\1\172\1\uffff\1\172\3"+
-        "\uffff\1\172\1\151\2\uffff\1\164\1\172\2\uffff\1\154\3\uffff\1\157"+
-        "\1\171\1\uffff\1\172\1\156\1\172\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\143\4\uffff\1\157\1\uffff\1\144\1\157\1\156\1\165\1\162\1\157\2\145\1\75\1\157\1\162\4\uffff\2\75\3\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\164\5\uffff\1\144\1\uffff\1\147\1\155\1\172\1\164\1\156\1\162\1\154\2\157\1\151\1\162\1\143\2\uffff\1\157\1\165\1\172\20\uffff\1\151\2\145\1\160\1\164\1\172\1\uffff\1\172\1\141\1\153\1\163\1\167\1\155\1\156\1\147\1\151\1\154\1\145\1\uffff\1\166\2\163\1\172\1\151\2\uffff\1\154\1\172\1\145\3\172\1\145\1\163\2\172\1\151\1\156\2\172\1\uffff\1\141\1\172\1\uffff\1\172\3\uffff\1\172\1\151\2\uffff\1\164\1\172\2\uffff\1\154\3\uffff\1\157\1\171\1\uffff\1\172\1\156\1\172\1\uffff\1\172\2\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\3\1\4\1\5\1\uffff\1\7\13\uffff\1\30\1\34\1\35\1"+
-        "\36\2\uffff\1\44\1\45\1\46\1\uffff\1\47\1\50\3\uffff\1\54\1\55\1"+
-        "\uffff\1\47\1\2\1\3\1\4\1\5\1\uffff\1\7\14\uffff\1\41\1\23\3\uffff"+
-        "\1\30\1\34\1\35\1\36\1\40\1\37\1\42\1\43\1\44\1\45\1\46\1\50\1\51"+
-        "\1\52\1\53\1\54\6\uffff\1\13\13\uffff\1\33\5\uffff\1\24\1\14\16"+
-        "\uffff\1\12\2\uffff\1\17\1\uffff\1\31\1\32\1\20\2\uffff\1\25\1\26"+
-        "\2\uffff\1\6\1\10\1\uffff\1\16\1\27\1\21\2\uffff\1\11\3\uffff\1"+
-        "\15\1\uffff\1\1\1\22";
+        "\2\uffff\1\2\1\3\1\4\1\5\1\uffff\1\7\13\uffff\1\30\1\34\1\35\1\36\2\uffff\1\44\1\45\1\46\1\uffff\1\47\1\50\3\uffff\1\54\1\55\1\uffff\1\47\1\2\1\3\1\4\1\5\1\uffff\1\7\14\uffff\1\41\1\23\3\uffff\1\30\1\34\1\35\1\36\1\40\1\37\1\42\1\43\1\44\1\45\1\46\1\50\1\51\1\52\1\53\1\54\6\uffff\1\13\13\uffff\1\33\5\uffff\1\24\1\14\16\uffff\1\12\2\uffff\1\17\1\uffff\1\31\1\32\1\20\2\uffff\1\25\1\26\2\uffff\1\6\1\10\1\uffff\1\16\1\27\1\21\2\uffff\1\11\3\uffff\1\15\1\uffff\1\1\1\22";
     static final String DFA12_specialS =
         "\1\0\36\uffff\1\2\1\1\162\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\43\2\42\2\43\1\42\22\43\1\42\1\31\1\37\3\43\1\32\1\40\1"+
-            "\2\1\4\1\43\1\26\1\3\1\23\1\43\1\41\12\36\2\43\1\27\1\20\1\30"+
-            "\2\43\32\35\1\24\1\43\1\25\1\34\1\35\1\43\1\1\1\21\1\11\1\17"+
-            "\1\10\1\14\2\35\1\12\1\15\2\35\1\16\1\6\1\13\4\35\1\22\6\35"+
-            "\1\5\1\33\1\7\uff82\43",
+            "\11\43\2\42\2\43\1\42\22\43\1\42\1\31\1\37\3\43\1\32\1\40\1\2\1\4\1\43\1\26\1\3\1\23\1\43\1\41\12\36\2\43\1\27\1\20\1\30\2\43\32\35\1\24\1\43\1\25\1\34\1\35\1\43\1\1\1\21\1\11\1\17\1\10\1\14\2\35\1\12\1\15\2\35\1\16\1\6\1\13\4\35\1\22\6\35\1\5\1\33\1\7\uff82\43",
             "\1\44",
             "",
             "",
@@ -1775,8 +1739,7 @@ public class InternalActivityDiagramLexer extends Lexer {
             "",
             "\1\117",
             "\1\120",
-            "\12\45\7\uffff\32\45\4\uffff\1\45\1\uffff\10\45\1\121\12\45"+
-            "\1\122\6\45",
+            "\12\45\7\uffff\32\45\4\uffff\1\45\1\uffff\10\45\1\121\12\45\1\122\6\45",
             "\1\124",
             "\1\125",
             "\1\126",

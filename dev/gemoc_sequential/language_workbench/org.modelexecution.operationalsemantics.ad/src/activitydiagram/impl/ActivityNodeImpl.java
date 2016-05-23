@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getOutgoing <em>Outgoing</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getIncoming <em>Incoming</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#isRunning <em>Running</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getHeldTokens <em>Held Tokens</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

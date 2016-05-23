@@ -65,44 +65,24 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain
 import activitydiagram.Input
 import org.eclipse.emf.common.util.URI
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
-
-class Context {
-	public Trace output;
-	public Activity activity;
-	public Context parent;
-	public List<InputValue> inputValues ;
-	public JoinNode node ;
-
-	new() {
-	}
-
-	new(Trace c, Activity a, List<InputValue> inputValues, Context parent) {
-		this.output = c
-		this.activity = a
-		this.inputValues = inputValues
-		this.parent = parent
-	}
-
-}
-
-class Util {
-	public static final Object LINE_BREAK = System.getProperty("line.separator");
-
-}
+import context.activitydiagram.Context
+import context.activitydiagram.ActivitydiagramPackage
+import org.eclipse.emf.common.util.BasicEList
+import org.eclipse.emf.common.util.EList
 
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
 
-	val Context context = new Context
+	val Context context = ActivitydiagramPackage.eINSTANCE.activitydiagramFactory.createContext
 	 
 	@InitializeModel
-	def void initializeModel(List<String> args) {
-		val inputValues = new ArrayList<InputValue>();
+	def void initializeModel(EList<String> args) {
+		val inputValues = new BasicEList<InputValue>();
 		val resSet = _self.eResource.resourceSet
-		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
-		
-		val command = new LoadInputValuesRecordingCommand(editingDomain, _self, inputValues)
-		editingDomain.getCommandStack().execute(command);
+//		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
+//		
+//		val command = new LoadInputValuesRecordingCommand(editingDomain, _self, inputValues)
+//		editingDomain.getCommandStack().execute(command);
 		// search input variables in companion file if it exists
 		// ignore if not found or invalid
 
@@ -134,8 +114,8 @@ class ActivityAspect extends NamedElementAspect {
 
 
 	@Step
-	def void initializeContext(List<InputValue> value, Context context) {
-		context.inputValues = value
+	def void initializeContext(EList<InputValue> value, Context context) {
+		context.inputValues.addAll(value)
 		context.activity = _self
 		_self.trace = ActivitydiagramFactory.eINSTANCE.createTrace;
 		context.output = _self.trace
@@ -178,11 +158,11 @@ class ActivityAspect extends NamedElementAspect {
 
 	def String printTrace() {
 		val text = new StringBuffer();
-		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(Util.LINE_BREAK);]
+		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(System.getProperty("line.separator"));]
 
 		_self.getLocals().forEach [ v |
 			text.append(v.print);
-			text.append(Util.LINE_BREAK);
+			text.append(System.getProperty("line.separator"));
 		]
 		return text.toString();
 	}
@@ -257,15 +237,15 @@ class ActivityNodeAspect extends NamedElementAspect {
 	}
 
 	@Step
-	def void sendOffers1(List<Token> tokens) {
+	def void sendOffers1(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
 			edge.sendOffer1(tokens);
 		}
 	}
 
 	@Step
-	def List<Token> takeOfferdTokens1() {
-		val allTokens = new ArrayList<Token>();
+	def EList<Token> takeOfferdTokens1() {
+		val allTokens = new BasicEList<Token>();
 		for (ActivityEdge edge : _self.getIncoming()) {
 			val tokens = edge.takeOfferedTokens1();
 			for (Token token : tokens) {
@@ -278,7 +258,7 @@ class ActivityNodeAspect extends NamedElementAspect {
 	}
 
 	@Step
-	def void addTokens1(List<Token> tokens) {
+	def void addTokens1(EList<Token> tokens) {
 		for (Token token : tokens) {
 			var transferredToken = token.transfer1(_self);
 			_self.heldTokens.add(transferredToken);
@@ -305,14 +285,14 @@ class ActivityNodeAspect extends NamedElementAspect {
 class ActivityEdgeAspect extends NamedElementAspect {
 	//public List<Offer> offers = new ArrayList<Offer>
 
-	def void sendOffer1(List<Token> tokens) {
+	def void sendOffer1(EList<Token> tokens) {
 		val offer = ActivitydiagramFactory.eINSTANCE.createOffer;
 		tokens.forEach[token|offer.offeredTokens.add(token)];
 		_self.offers.add(offer);
 	}
 
-	def List<Token> takeOfferedTokens1() {
-		val tokens = new ArrayList<Token>()
+	def EList<Token> takeOfferedTokens1() {
+		val tokens = new BasicEList<Token>()
 		_self.offers.forEach[o|tokens.addAll(o.offeredTokens)]
 		_self.offers.clear();
 		return tokens;
@@ -345,7 +325,7 @@ class InitialNodeAspect extends ActivityNodeAspect {
 	def void execute(Context c) {
 		var r = ActivitydiagramFactory.eINSTANCE.createControlToken
 		r.holder = _self
-		var list = new ArrayList<Token>
+		var list = new BasicEList<Token>
 		list.add(r)
 		_self.sendOffers1(list)
 		c.output.executedNodes.add(_self)
@@ -381,7 +361,7 @@ class ForkNodeAspect extends ActivityNodeAspect {
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		var tokens = _self.takeOfferdTokens1
-		var forkedTokens = new ArrayList<Token>();
+		var forkedTokens = new BasicEList<Token>();
 		for (Token token : tokens) {
 			var forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken;
 			forkedToken.baseToken = token;
@@ -403,7 +383,7 @@ class JoinNodeAspect extends ActivityNodeAspect {
 			if((t as ForkedToken).remainingOffersCount > 1) {
 				(t as ForkedToken).remainingOffersCount = (t as ForkedToken).remainingOffersCount - 1
 			} else {
-				var list = new ArrayList<Token>
+				var list = new BasicEList<Token>
 				list.add(t)
 				_self.sendOffers1(list)
 			}
@@ -437,7 +417,7 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 	}
 
 	@OverrideAspectMethod
-	def void sendOffers1(List<Token> tokens) {
+	def void sendOffers1(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
 			if(edge instanceof ControlFlow && ( edge as ControlFlow).guard != null) {
 				if((( edge as ControlFlow).guard.currentValue as BooleanValue).value) {

@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.Activity#getNodes <em>Nodes</em>}</li>
  *   <li>{@link activitydiagram.Activity#getEdges <em>Edges</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagram.Activity#getInputs <em>Inputs</em>}</li>
  *   <li>{@link activitydiagram.Activity#getTrace <em>Trace</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getActivity()
  * @model

@@ -22,10 +22,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.OfferImpl#getOfferedTokens <em>Offered Tokens</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

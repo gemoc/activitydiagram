@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.Token#getHolder <em>Holder</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getToken()
  * @model abstract="true"

@@ -21,5 +21,6 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.modelexecution.operationalsemantics.ui.quickfix,
  org.modelexecution.operationalsemantics.ui.contentassist,
- org.modelexecution.operationalsemantics.ui.contentassist.antlr
+ org.modelexecution.operationalsemantics.ui.contentassist.antlr,
+ org.modelexecution.operationalsemantics.ui.contentassist.antlr.internal
 Bundle-Activator: org.modelexecution.operationalsemantics.ui.internal.ActivityDiagramInputActivator

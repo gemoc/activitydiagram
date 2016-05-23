@@ -23,10 +23,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.TokenImpl#getHolder <em>Holder</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

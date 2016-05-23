@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getEdges <em>Edges</em>}</li>
@@ -38,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagram.impl.ActivityImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getTrace <em>Trace</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
