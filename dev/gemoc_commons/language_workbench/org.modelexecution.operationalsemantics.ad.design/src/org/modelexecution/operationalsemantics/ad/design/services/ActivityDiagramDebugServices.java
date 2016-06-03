@@ -18,6 +18,6 @@ public class ActivityDiagramDebugServices extends AbstractGemocDebuggerServices 
 
 	@Override
 	public String getModelIdentifier() {
-		return org.gemoc.execution.concurrent.ccsljavaengine.ui.Activator.PLUGIN_ID+".debugModel";
+		return org.gemoc.execution.sequential.javaengine.ui.Activator.PLUGIN_ID+".debugModel";
 	}
 }
