@@ -1,14 +1,43 @@
 package org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic
 
 import activitydiagram.Activity
+import activitydiagram.ActivityEdge
+import activitydiagram.ActivityFinalNode
 import activitydiagram.ActivityNode
+import activitydiagram.ActivitydiagramFactory
+import activitydiagram.BooleanBinaryExpression
+import activitydiagram.BooleanBinaryOperator
+import activitydiagram.BooleanUnaryExpression
+import activitydiagram.BooleanUnaryOperator
 import activitydiagram.BooleanValue
 import activitydiagram.BooleanVariable
+import activitydiagram.ControlFlow
+import activitydiagram.DecisionNode
+import activitydiagram.Expression
+import activitydiagram.ForkNode
+import activitydiagram.ForkedToken
+import activitydiagram.InitialNode
 import activitydiagram.InputValue
+import activitydiagram.IntegerCalculationExpression
+import activitydiagram.IntegerCalculationOperator
+import activitydiagram.IntegerComparisonExpression
+import activitydiagram.IntegerComparisonOperator
 import activitydiagram.IntegerValue
 import activitydiagram.IntegerVariable
+import activitydiagram.JoinNode
+import activitydiagram.MergeNode
+import activitydiagram.NamedElement
+import activitydiagram.Offer
+import activitydiagram.OpaqueAction
+import activitydiagram.Token
+import activitydiagram.Trace
 import activitydiagram.Value
 import activitydiagram.Variable
+import fr.inria.diverse.k3.al.annotationprocessor.Aspect
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
+import fr.inria.diverse.k3.al.annotationprocessor.Main
+import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
+import fr.inria.diverse.k3.al.annotationprocessor.Step
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileOutputStream
@@ -16,55 +45,14 @@ import java.io.IOException
 import java.io.OutputStreamWriter
 import java.util.ArrayList
 import java.util.List
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ControlFlowAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.TokenAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.OfferAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.OpaqueActionAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.InitialNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityFinalNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ForkNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.JoinNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.MergeNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.DecisionNodeAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerVariableAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.BooleanVariableAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerCalculationExpressionAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.IntegerComparisonExpressionAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.BooleanUnaryExpressionAspect.*
-import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.BooleanBinaryExpressionAspect.*
-
-import fr.inria.diverse.k3.al.annotationprocessor.Aspect
-import activitydiagram.ActivitydiagramFactory
-import activitydiagram.OpaqueAction
-import activitydiagram.InitialNode
-import activitydiagram.ActivityFinalNode
-import activitydiagram.ForkNode
-import activitydiagram.JoinNode
-import activitydiagram.MergeNode
-import activitydiagram.DecisionNode
-import activitydiagram.IntegerCalculationExpression
-import activitydiagram.IntegerComparisonExpression
-import activitydiagram.BooleanUnaryExpression
-import activitydiagram.BooleanBinaryExpression
-import activitydiagram.ControlFlow
-import activitydiagram.NamedElement
-import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
-import activitydiagram.ActivityEdge
-import activitydiagram.Expression
-import activitydiagram.IntegerCalculationOperator
-import activitydiagram.IntegerComparisonOperator
-import activitydiagram.BooleanUnaryOperator
-import activitydiagram.BooleanBinaryOperator
-import activitydiagram.Offer
-import activitydiagram.Token
-import activitydiagram.Trace
-import activitydiagram.ForkedToken
-import fr.inria.diverse.k3.al.annotationprocessor.Step
 import org.eclipse.emf.transaction.TransactionalEditingDomain
-import activitydiagram.Input
-import org.eclipse.emf.common.util.URI
-import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
+
+import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityEdgeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ActivityNodeAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.ExpressionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.OfferAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.TokenAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.VariableAspect.*
 
 class Context {
 	public Trace output;
@@ -107,31 +95,18 @@ class ActivityAspect extends NamedElementAspect {
 		// ignore if not found or invalid
 
 		_self.initializeContext(inputValues, _self.context)
-		println("context initialized " )
+		println("context initialized ")
 	}
 
-	@fr.inria.diverse.k3.al.annotationprocessor.Main
+	@Main
 	def void main(){
-//		val inputValues = new ArrayList<InputValue>();
-//		val resSet = _self.eResource.resourceSet
-//		val TransactionalEditingDomain editingDomain = TransactionalEditingDomain.Factory.INSTANCE.getEditingDomain(resSet); 
-//		
-//		val command = new LoadInputValues(editingDomain, _self, inputValues)
-//		editingDomain.getCommandStack().execute(command);
-//		// search input variables in companion file if it exists
-//		// ignore if not found or invalid
-//
-//		var start = System.nanoTime;
-//		val context = new Context
-//		_self.initializeContext(inputValues, context)
 
 		val start = System.nanoTime;
-    	_self.execute(_self.context)
+		_self.execute(_self.context)
 		val stop = System.nanoTime;
 		println("time to execute " + ( stop - start))
 		println(_self.printTrace())
 	}
-
 
 	@Step
 	def void initializeContext(List<InputValue> value, Context context) {
@@ -142,8 +117,6 @@ class ActivityAspect extends NamedElementAspect {
 		value?.forEach[v|v.getVariable().setCurrentValue(v.getValue());]
 		_self.nodes.forEach[n|n.running = true]
 	}
-
-	//Trace trace
 
 	@OverrideAspectMethod
 	@Step
@@ -233,18 +206,17 @@ class ActivityAspect extends NamedElementAspect {
 
 @Aspect(className=NamedElement)
 class NamedElementAspect {
+	@Step
 	def void execute(Context c) {
 	}
 }
 
 @Aspect(className=ActivityNode)
 class ActivityNodeAspect extends NamedElementAspect {
-	//List<Token> heldTokens = new ArrayList<Token>
 
 	@OverrideAspectMethod
 	@Step
 	def void execute(Context c) {
-		//_self.sendOffers1(_self.takeOfferdTokens1)
 	}
 
 	@Step
@@ -303,7 +275,6 @@ class ActivityNodeAspect extends NamedElementAspect {
 
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
-	//public List<Offer> offers = new ArrayList<Offer>
 
 	def void sendOffer1(List<Token> tokens) {
 		val offer = ActivitydiagramFactory.eINSTANCE.createOffer;
@@ -330,18 +301,18 @@ class ControlFlowAspect extends ActivityEdgeAspect {
 @Aspect(className=OpaqueAction)
 class OpaqueActionAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		_self.expressions.forEach[e|e.execute(c)]
 		_self.sendOffers1(_self.takeOfferdTokens1)
-
-	//		_self.outgoing.forEach[e|e.execute(c)]
 	}
 }
 
 @Aspect(className=InitialNode)
 class InitialNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		var r = ActivitydiagramFactory.eINSTANCE.createControlToken
 		r.holder = _self
@@ -349,8 +320,6 @@ class InitialNodeAspect extends ActivityNodeAspect {
 		list.add(r)
 		_self.sendOffers1(list)
 		c.output.executedNodes.add(_self)
-
-	//		_self.outgoing.forEach[e|e.execute(c)]
 	}
 
 	@OverrideAspectMethod
@@ -362,6 +331,7 @@ class InitialNodeAspect extends ActivityNodeAspect {
 
 @Aspect(className=Expression)
 class ExpressionAspect {
+	@Step
 	def void execute(Context c) {
 	}
 }
@@ -369,6 +339,7 @@ class ExpressionAspect {
 @Aspect(className=ActivityFinalNode)
 class ActivityFinalNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		_self.sendOffers1(_self.takeOfferdTokens1)
@@ -378,6 +349,7 @@ class ActivityFinalNodeAspect extends ActivityNodeAspect {
 @Aspect(className=ForkNode)
 class ForkNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		var tokens = _self.takeOfferdTokens1
@@ -396,6 +368,7 @@ class ForkNodeAspect extends ActivityNodeAspect {
 @Aspect(className=JoinNode)
 class JoinNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		var tokens = _self.takeOfferdTokens1
@@ -414,13 +387,13 @@ class JoinNodeAspect extends ActivityNodeAspect {
 @Aspect(className=MergeNode)
 class MergeNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		_self.sendOffers1(_self.takeOfferdTokens1)
-
-	//	_self.outgoing.forEach[e|e.execute(c)]
 	}
 
+	@OverrideAspectMethod
 	def boolean hasOffers1() {
 		return _self.incoming.exists[edge|edge.hasOffer1()]
 	}
@@ -429,18 +402,18 @@ class MergeNodeAspect extends ActivityNodeAspect {
 @Aspect(className=DecisionNode)
 class DecisionNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		c.output.executedNodes.add(_self)
 		_self.sendOffers1(_self.takeOfferdTokens1)
-
-	//		_self.outgoing.forEach[e|e.execute(c)]
 	}
 
 	@OverrideAspectMethod
+	@Step
 	def void sendOffers1(List<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
-			if(edge instanceof ControlFlow && ( edge as ControlFlow).guard != null) {
-				if((( edge as ControlFlow).guard.currentValue as BooleanValue).value) {
+			if(edge instanceof ControlFlow && (edge as ControlFlow).guard != null) {
+				if(((edge as ControlFlow).guard.currentValue as BooleanValue).value) {
 					edge.sendOffer1(tokens);
 				}
 			}
@@ -450,11 +423,9 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 
 @Aspect(className=Variable)
 class VariableAspect {
-	@Step
 	def void execute(Context c) {
 	}
 
-	@Step
 	def void init(Context c) {
 	}
 
@@ -465,10 +436,12 @@ class VariableAspect {
 @Aspect(className=IntegerVariable)
 class IntegerVariableAspect extends VariableAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 	}
 
 	@OverrideAspectMethod
+	@Step
 	def void init(Context c) {
 		if(_self.currentValue == null) {
 			if(_self.initialValue != null)
@@ -492,12 +465,15 @@ class IntegerVariableAspect extends VariableAspect {
 }
 
 @Aspect(className=BooleanVariable)
-@OverrideAspectMethod
 class BooleanVariableAspect extends VariableAspect {
+	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
+		_self.super_execute(c)
 	}
 
 	@OverrideAspectMethod
+	@Step
 	def void init(Context c) {
 		if(_self.currentValue == null) {
 			if(_self.initialValue != null)
@@ -524,6 +500,7 @@ class BooleanVariableAspect extends VariableAspect {
 @Aspect(className=IntegerCalculationExpression)
 class IntegerCalculationExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		if(_self.operator.value == IntegerCalculationOperator.ADD_VALUE) {
 			(_self.assignee.currentValue as IntegerValue).value = (_self.operand1.currentValue as IntegerValue).value +
@@ -539,6 +516,7 @@ class IntegerCalculationExpressionAspect extends ExpressionAspect {
 @Aspect(className=IntegerComparisonExpression)
 class IntegerComparisonExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		if(_self.operator.value == IntegerComparisonOperator.EQUALS_VALUE) {
 			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as IntegerValue).value ==
@@ -562,6 +540,7 @@ class IntegerComparisonExpressionAspect extends ExpressionAspect {
 @Aspect(className=BooleanUnaryExpression)
 class BooleanUnaryExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		if(_self.operator.value == BooleanUnaryOperator.NOT_VALUE) {
 			(_self.assignee.currentValue as BooleanValue).value = !(_self.operand.currentValue as BooleanValue).value
@@ -573,6 +552,7 @@ class BooleanUnaryExpressionAspect extends ExpressionAspect {
 @Aspect(className=BooleanBinaryExpression)
 class BooleanBinaryExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
+	@Step
 	def void execute(Context c) {
 		if(_self.operator.value == BooleanBinaryOperator.AND_VALUE) {
 			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as BooleanValue).value &&
