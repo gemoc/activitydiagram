@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagramTrace" nsURI="activitydiagramTrace" nsPrefix="activitydiagramTrace">
+  <eClassifiers xsi:type="ecore:EClass" name="SpecificTrace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityFinalNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityFinalNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_AddTokens1_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityNode_AddTokens1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_RemoveToken1_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityNode_RemoveToken1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_SendOffers1_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityNode_SendOffers1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ActivityNode_Terminate_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ActivityNode_Terminate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_Activity_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_InitializeContext_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_Activity_InitializeContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_Reset_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_Activity_Reset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Activity_WriteTrace_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_Activity_WriteTrace"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_BooleanBinaryExpression_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_BooleanBinaryExpression_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_BooleanUnaryExpression_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_BooleanUnaryExpression_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_BooleanVariable_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_BooleanVariable_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_BooleanVariable_Init_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_BooleanVariable_Init"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_DecisionNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_DecisionNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_DecisionNode_SendOffers1_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_DecisionNode_SendOffers1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_Expression_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_Expression_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_ForkNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_ForkNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_InitialNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_InitialNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_IntegerCalculationExpression_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_IntegerCalculationExpression_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_IntegerComparisonExpression_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_IntegerComparisonExpression_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_IntegerVariable_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_IntegerVariable_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_IntegerVariable_Init_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_IntegerVariable_Init"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_JoinNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_JoinNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_MergeNode_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_MergeNode_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_NamedElement_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_NamedElement_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Activitydiagram_OpaqueAction_Execute_Sequence" upperBound="-1" eType="//Steps/Activitydiagram_OpaqueAction_Execute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedActivityFinalNodes" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedActivityFinalNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedActivitys" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedActivity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedBooleanValues" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedBooleanValue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedBooleanVariables" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedBooleanVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedControlFlows" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedControlFlow" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedControlTokens" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedControlToken" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedDecisionNodes" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedDecisionNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedForkNodes" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedForkNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedForkedTokens" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedForkedToken" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInitialNodes" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedInitialNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInputValues" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedInputValue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedInputs" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedInput" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedIntegerValues" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedIntegerValue" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedIntegerVariables" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedIntegerVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedJoinNodes" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedJoinNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedMergeNodes" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedMergeNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedOffers" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedOffer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedOpaqueActions" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedOpaqueAction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activitydiagram_tracedTraces" ordered="false" upperBound="-1" eType="//States/activitydiagram/TracedTrace" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statesTrace" upperBound="-1" eType="//States/State" containment="true"/>
+    <eGenericSuperTypes>
+      <eTypeArguments>
+        <eTypeArguments eClassifier="//Steps/SpecificStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eTypeArguments>
+      <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//Trace"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eSubpackages name="Steps" nsURI="activitydiagramTrace_Steps" nsPrefix="events">
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityFinalNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityFinalNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityFinalNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_AddTokens1_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_RemoveToken1">
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_SendOffers1">
+      <eSuperTypes href="#//Steps/Activitydiagram_MergeNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_InitialNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_JoinNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_MergeNode_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_JoinNode_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_DecisionNode_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ActivityNode_Terminate">
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivity">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivity) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_InitializeContext">
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivity">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivity) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_Reset">
+      <eSuperTypes href="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivity">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivity) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedActivity">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedActivity) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Activity_WriteTrace_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_BooleanBinaryExpression_Execute">
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagram.BooleanBinaryExpression) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanBinaryExpression"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_BooleanUnaryExpression_Execute">
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagram.BooleanUnaryExpression) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanUnaryExpression"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_BooleanVariable_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedBooleanVariable">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_BooleanVariable_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_BooleanVariable_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_BooleanVariable_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_BooleanVariable_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_BooleanVariable_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_BooleanVariable_Init">
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedBooleanVariable">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_DecisionNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedDecisionNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedDecisionNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_DecisionNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_DecisionNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_DecisionNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_DecisionNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_DecisionNode_SendOffers1">
+      <eSuperTypes href="#//Steps/Activitydiagram_MergeNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_InitialNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_JoinNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_DecisionNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedDecisionNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedDecisionNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_Expression_Execute">
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagram.Expression) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Expression"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ForkNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedForkNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedForkNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ForkNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_ForkNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_InitialNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedInitialNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedInitialNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_InitialNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_InitialNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_InitialNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_InitialNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_IntegerCalculationExpression_Execute">
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagram.IntegerCalculationExpression) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerCalculationExpression"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_IntegerComparisonExpression_Execute">
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagram.IntegerComparisonExpression) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerComparisonExpression"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_IntegerVariable_Execute">
+      <eSuperTypes href="#//Steps/Activitydiagram_BooleanVariable_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedIntegerVariable">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_IntegerVariable_Init">
+      <eSuperTypes href="#//Steps/SpecificStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedIntegerVariable">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_JoinNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedJoinNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedJoinNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_JoinNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_JoinNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_JoinNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_JoinNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_MergeNode_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedMergeNode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedMergeNode) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_MergeNode_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_MergeNode_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_MergeNode_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_MergeNode_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_NamedElement_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedNamedElement">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedNamedElement) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_NamedElement_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_NamedElement_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_OpaqueAction_Execute">
+      <eOperations name="getCaller" lowerBound="1" eType="//States/activitydiagram/TracedOpaqueAction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return (activitydiagramTrace.States.activitydiagram.TracedOpaqueAction) this.getMseoccurrence().getMse().getCaller();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      <eGenericSuperTypes eClassifier="//Steps/SpecificStep"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+        <eClassifier xsi:type="ecore:EClass" href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SequentialStep"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_OpaqueAction_Execute_AbstractSubStep" abstract="true" interface="true" eSuperTypes="//Steps/SpecificStep"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activitydiagram_OpaqueAction_Execute_ImplicitStep">
+      <eSuperTypes href="#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RootImplicitStep">
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//SmallStep"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecificStep" abstract="true" interface="true">
+      <eSuperTypes href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.ecore#//Step"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endingState" eType="//States/State" eOpposite="//States/State/endedSteps"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startingState" lowerBound="1" eType="//States/State" eOpposite="//States/State/startedSteps"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="States" nsURI="activitydiagramTrace_States" nsPrefix="tracedclasses">
+    <eClassifiers xsi:type="ecore:EClass" name="ActivityEdge_offers_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="offers" upperBound="-1" eType="//States/activitydiagram/TracedOffer">
+        <eAnnotations source="aspect"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedActivityEdge" eOpposite="//States/activitydiagram/TracedActivityEdge/offersSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/activityEdge_offers_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActivityNode_heldTokens_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1" eType="//States/activitydiagram/TracedToken">
+        <eAnnotations source="aspect"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode" eOpposite="//States/activitydiagram/TracedActivityNode/heldTokensSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/activityNode_heldTokens_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Activity_trace_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedActivity" eOpposite="//States/activitydiagram/TracedActivity/traceSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/activity_trace_Values"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="//States/activitydiagram/TracedTrace">
+        <eAnnotations source="aspect"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BooleanValue_value_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedBooleanValue" eOpposite="//States/activitydiagram/TracedBooleanValue/valueSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/booleanValue_value_Values"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ForkedToken_baseToken_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseToken" lowerBound="1" eType="//States/activitydiagram/TracedToken"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedForkedToken" eOpposite="//States/activitydiagram/TracedForkedToken/baseTokenSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/forkedToken_baseToken_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ForkedToken_remainingOffersCount_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedForkedToken" eOpposite="//States/activitydiagram/TracedForkedToken/remainingOffersCountSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/forkedToken_remainingOffersCount_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InputValue_value_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedInputValue" eOpposite="//States/activitydiagram/TracedInputValue/valueSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/inputValue_value_Values"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="//States/activitydiagram/TracedValue"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InputValue_variable_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedInputValue" eOpposite="//States/activitydiagram/TracedInputValue/variableSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/inputValue_variable_Values"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1" eType="//States/activitydiagram/TracedVariable"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Input_inputValues_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1" eType="//States/activitydiagram/TracedInputValue"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedInput" eOpposite="//States/activitydiagram/TracedInput/inputValuesSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/input_inputValues_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IntegerValue_value_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedIntegerValue" eOpposite="//States/activitydiagram/TracedIntegerValue/valueSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/integerValue_value_Values"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Offer_offeredTokens_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokens" upperBound="-1" eType="//States/activitydiagram/TracedToken"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedOffer" eOpposite="//States/activitydiagram/TracedOffer/offeredTokensSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/offer_offeredTokens_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="State">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activityEdge_offers_Values" ordered="false" upperBound="-1" eType="//States/ActivityEdge_offers_Value" eOpposite="//States/ActivityEdge_offers_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activityNode_heldTokens_Values" ordered="false" upperBound="-1" eType="//States/ActivityNode_heldTokens_Value" eOpposite="//States/ActivityNode_heldTokens_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity_trace_Values" ordered="false" upperBound="-1" eType="//States/Activity_trace_Value" eOpposite="//States/Activity_trace_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanValue_value_Values" ordered="false" upperBound="-1" eType="//States/BooleanValue_value_Value" eOpposite="//States/BooleanValue_value_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endedSteps" upperBound="-1" eType="//Steps/SpecificStep" eOpposite="//Steps/SpecificStep/endingState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="forkedToken_baseToken_Values" ordered="false" upperBound="-1" eType="//States/ForkedToken_baseToken_Value" eOpposite="//States/ForkedToken_baseToken_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="forkedToken_remainingOffersCount_Values" ordered="false" upperBound="-1" eType="//States/ForkedToken_remainingOffersCount_Value" eOpposite="//States/ForkedToken_remainingOffersCount_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValue_value_Values" ordered="false" upperBound="-1" eType="//States/InputValue_value_Value" eOpposite="//States/InputValue_value_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputValue_variable_Values" ordered="false" upperBound="-1" eType="//States/InputValue_variable_Value" eOpposite="//States/InputValue_variable_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="input_inputValues_Values" ordered="false" upperBound="-1" eType="//States/Input_inputValues_Value" eOpposite="//States/Input_inputValues_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="integerValue_value_Values" ordered="false" upperBound="-1" eType="//States/IntegerValue_value_Value" eOpposite="//States/IntegerValue_value_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="offer_offeredTokens_Values" ordered="false" upperBound="-1" eType="//States/Offer_offeredTokens_Value" eOpposite="//States/Offer_offeredTokens_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startedSteps" upperBound="-1" eType="//Steps/SpecificStep" eOpposite="//Steps/SpecificStep/startingState"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="token_holder_Values" ordered="false" upperBound="-1" eType="//States/Token_holder_Value" eOpposite="//States/Token_holder_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="trace_executedNodes_Values" ordered="false" upperBound="-1" eType="//States/Trace_executedNodes_Value" eOpposite="//States/Trace_executedNodes_Value/states"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variable_currentValue_Values" ordered="false" upperBound="-1" eType="//States/Variable_currentValue_Value" eOpposite="//States/Variable_currentValue_Value/states"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Token_holder_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="holder" lowerBound="1" eType="//States/activitydiagram/TracedActivityNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedToken" eOpposite="//States/activitydiagram/TracedToken/holderSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/token_holder_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Trace_executedNodes_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false" upperBound="-1" eType="//States/activitydiagram/TracedActivityNode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedTrace" eOpposite="//States/activitydiagram/TracedTrace/executedNodesSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/trace_executedNodes_Values"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true" interface="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="statesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State" changeable="false" volatile="true" transient="true" derived="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Variable_currentValue_Value" eSuperTypes="//States/Value">
+      <eAnnotations source="http://www.modelexecution.org/trace/XMOF">
+        <details key="executionMetamodelElement"/>
+      </eAnnotations>
+      <eOperations name="getStatesNoOpposite" lowerBound="1" upperBound="-1" eType="//States/State">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return this.getStates();"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="//States/activitydiagram/TracedValue">
+        <eAnnotations source="aspect"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1" eType="//States/activitydiagram/TracedVariable" eOpposite="//States/activitydiagram/TracedVariable/currentValueSequence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1" upperBound="-1" eType="//States/State" eOpposite="//States/State/variable_currentValue_Values"/>
+    </eClassifiers>
+    <eSubpackages name="activitydiagram" nsURI="activitydiagramTrace_activitydiagram" nsPrefix="">
+      <eClassifiers xsi:type="ecore:EClass" name="TracedAction" abstract="true" eSuperTypes="//States/activitydiagram/TracedExecutableNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivity" eSuperTypes="//States/activitydiagram/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//Activity"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="traceSequence" upperBound="-1" eType="//States/Activity_trace_Value" containment="true" eOpposite="//States/Activity_trace_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityEdge" abstract="true" eSuperTypes="//States/activitydiagram/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="offersSequence" upperBound="-1" eType="//States/ActivityEdge_offers_Value" containment="true" eOpposite="//States/ActivityEdge_offers_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityFinalNode" eSuperTypes="//States/activitydiagram/TracedFinalNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ActivityFinalNode"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedActivityNode" abstract="true" eSuperTypes="//States/activitydiagram/TracedNamedElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokensSequence" upperBound="-1" eType="//States/ActivityNode_heldTokens_Value" containment="true" eOpposite="//States/ActivityNode_heldTokens_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedBooleanValue" eSuperTypes="//States/activitydiagram/TracedValue">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="valueSequence" upperBound="-1" eType="//States/BooleanValue_value_Value" containment="true" eOpposite="//States/BooleanValue_value_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedBooleanVariable" eSuperTypes="//States/activitydiagram/TracedVariable">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//BooleanVariable"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedControlFlow" eSuperTypes="//States/activitydiagram/TracedActivityEdge">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ControlFlow"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedControlNode" abstract="true" eSuperTypes="//States/activitydiagram/TracedActivityNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedControlToken" eSuperTypes="//States/activitydiagram/TracedToken"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedDecisionNode" eSuperTypes="//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//DecisionNode"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedExecutableNode" abstract="true" eSuperTypes="//States/activitydiagram/TracedActivityNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedFinalNode" abstract="true" eSuperTypes="//States/activitydiagram/TracedControlNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedForkNode" eSuperTypes="//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//ForkNode"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedForkedToken" eSuperTypes="//States/activitydiagram/TracedToken">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="baseTokenSequence" upperBound="-1" eType="//States/ForkedToken_baseToken_Value" containment="true" eOpposite="//States/ForkedToken_baseToken_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="remainingOffersCountSequence" upperBound="-1" eType="//States/ForkedToken_remainingOffersCount_Value" containment="true" eOpposite="//States/ForkedToken_remainingOffersCount_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedInitialNode" eSuperTypes="//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//InitialNode"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedInput">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputValuesSequence" upperBound="-1" eType="//States/Input_inputValues_Value" containment="true" eOpposite="//States/Input_inputValues_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedInputValue">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="valueSequence" upperBound="-1" eType="//States/InputValue_value_Value" containment="true" eOpposite="//States/InputValue_value_Value/parent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="variableSequence" upperBound="-1" eType="//States/InputValue_variable_Value" containment="true" eOpposite="//States/InputValue_variable_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedIntegerValue" eSuperTypes="//States/activitydiagram/TracedValue">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="valueSequence" upperBound="-1" eType="//States/IntegerValue_value_Value" containment="true" eOpposite="//States/IntegerValue_value_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedIntegerVariable" eSuperTypes="//States/activitydiagram/TracedVariable">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//IntegerVariable"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedJoinNode" eSuperTypes="//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//JoinNode"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedMergeNode" eSuperTypes="//States/activitydiagram/TracedControlNode">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//MergeNode"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedNamedElement" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedOffer">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokensSequence" upperBound="-1" eType="//States/Offer_offeredTokens_Value" containment="true" eOpposite="//States/Offer_offeredTokens_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedOpaqueAction" eSuperTypes="//States/activitydiagram/TracedAction">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="originalObject">
+          <eType xsi:type="ecore:EClass" href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#//OpaqueAction"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedToken" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="holderSequence" upperBound="-1" eType="//States/Token_holder_Value" containment="true" eOpposite="//States/Token_holder_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedTrace">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodesSequence" upperBound="-1" eType="//States/Trace_executedNodes_Value" containment="true" eOpposite="//States/Trace_executedNodes_Value/parent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedValue" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TracedVariable" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="currentValueSequence" upperBound="-1" eType="//States/Variable_currentValue_Value" containment="true" eOpposite="//States/Variable_currentValue_Value/parent"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

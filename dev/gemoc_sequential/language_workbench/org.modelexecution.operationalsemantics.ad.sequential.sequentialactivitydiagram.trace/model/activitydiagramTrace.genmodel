@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.modelexecution.operationalsemantics.ad.sequential.sequentialactivitydiagram.trace/src" modelPluginID="org.modelexecution.operationalsemantics.ad.sequential.sequentialactivitydiagram.trace" modelName="ActivitydiagramTrace" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>file:/tmp/diverse7473995314473051645tracemmgeneration/activitydiagramTrace.ecore</foreignModel>
+  <genPackages prefix="ActivitydiagramTrace" disposableProviderFactory="true">
+    <ecorePackage href="activitydiagramTrace.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="activitydiagramTrace.ecore#//SpecificTrace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityFinalNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityNode_AddTokens1_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityNode_RemoveToken1_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityNode_SendOffers1_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityNode_TakeOfferdTokens1_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ActivityNode_Terminate_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_Activity_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_Activity_InitializeContext_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_Activity_Reset_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_Activity_WriteTrace_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_BooleanBinaryExpression_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_BooleanUnaryExpression_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_BooleanVariable_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_BooleanVariable_Init_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_DecisionNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_DecisionNode_SendOffers1_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_Expression_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_ForkNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_InitialNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_IntegerCalculationExpression_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_IntegerComparisonExpression_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_IntegerVariable_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_IntegerVariable_Init_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_JoinNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_MergeNode_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_NamedElement_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/Activitydiagram_OpaqueAction_Execute_Sequence"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedActivityFinalNodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedActivitys"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedBooleanValues"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedBooleanVariables"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedControlFlows"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedControlTokens"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedDecisionNodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedForkNodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedForkedTokens"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedInitialNodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedInputValues"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedInputs"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedIntegerValues"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedIntegerVariables"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedJoinNodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedMergeNodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedOffers"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedOpaqueActions"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/activitydiagram_tracedTraces"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//SpecificTrace/statesTrace"/>
+      </genFeatures>
+    </genClasses>
+    <nestedGenPackages prefix="Steps" disposableProviderFactory="true">
+      <ecorePackage href="activitydiagramTrace.ecore#//Steps"/>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityFinalNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityFinalNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityFinalNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityFinalNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_AddTokens1"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_AddTokens1/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_AddTokens1_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_RemoveToken1"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_RemoveToken1/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_SendOffers1"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_SendOffers1/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_Terminate"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ActivityNode_Terminate/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_InitializeContext"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_InitializeContext/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_Reset"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_Reset/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_WriteTrace"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_WriteTrace/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_WriteTrace_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Activity_WriteTrace_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanBinaryExpression_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanBinaryExpression_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanUnaryExpression_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanUnaryExpression_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanVariable_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanVariable_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanVariable_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanVariable_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanVariable_Init"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_BooleanVariable_Init/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_DecisionNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_DecisionNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_DecisionNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_DecisionNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_DecisionNode_SendOffers1"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_DecisionNode_SendOffers1/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Expression_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_Expression_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ForkNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ForkNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ForkNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_ForkNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_InitialNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_InitialNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_InitialNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_InitialNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerCalculationExpression_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerCalculationExpression_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerComparisonExpression_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerComparisonExpression_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerVariable_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerVariable_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerVariable_Init"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_IntegerVariable_Init/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_JoinNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_JoinNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_JoinNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_JoinNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_MergeNode_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_MergeNode_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_MergeNode_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_MergeNode_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_NamedElement_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_NamedElement_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_NamedElement_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_NamedElement_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_OpaqueAction_Execute"/>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//Steps/Activitydiagram_OpaqueAction_Execute/getCaller"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_OpaqueAction_Execute_AbstractSubStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/Activitydiagram_OpaqueAction_Execute_ImplicitStep"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/RootImplicitStep"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//Steps/SpecificStep"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//Steps/SpecificStep/endingState"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//Steps/SpecificStep/startingState"/>
+        </genFeatures>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="States" disposableProviderFactory="true">
+      <ecorePackage href="activitydiagramTrace.ecore#//States"/>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/ActivityEdge_offers_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ActivityEdge_offers_Value/offers"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ActivityEdge_offers_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ActivityEdge_offers_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/ActivityEdge_offers_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/ActivityNode_heldTokens_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ActivityNode_heldTokens_Value/heldTokens"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ActivityNode_heldTokens_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ActivityNode_heldTokens_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/ActivityNode_heldTokens_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Activity_trace_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Activity_trace_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Activity_trace_Value/states"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Activity_trace_Value/trace"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/Activity_trace_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/BooleanValue_value_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/BooleanValue_value_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/BooleanValue_value_Value/states"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="activitydiagramTrace.ecore#//States/BooleanValue_value_Value/value"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/BooleanValue_value_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/ForkedToken_baseToken_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ForkedToken_baseToken_Value/baseToken"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ForkedToken_baseToken_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ForkedToken_baseToken_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/ForkedToken_baseToken_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/ForkedToken_remainingOffersCount_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ForkedToken_remainingOffersCount_Value/parent"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="activitydiagramTrace.ecore#//States/ForkedToken_remainingOffersCount_Value/remainingOffersCount"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/ForkedToken_remainingOffersCount_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/ForkedToken_remainingOffersCount_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/InputValue_value_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_value_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_value_Value/states"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_value_Value/value"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/InputValue_value_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/InputValue_variable_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/states"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/variable"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Input_inputValues_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/inputValues"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value/states"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value/value"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Offer_offeredTokens_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Offer_offeredTokens_Value/offeredTokens"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Offer_offeredTokens_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Offer_offeredTokens_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/Offer_offeredTokens_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/State"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/activityEdge_offers_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/activityNode_heldTokens_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/activity_trace_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/booleanValue_value_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/endedSteps"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/forkedToken_baseToken_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/forkedToken_remainingOffersCount_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/inputValue_value_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/inputValue_variable_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/input_inputValues_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/integerValue_value_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/offer_offeredTokens_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/startedSteps"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/token_holder_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/trace_executedNodes_Values"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/variable_currentValue_Values"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Token_holder_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Token_holder_Value/holder"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Token_holder_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Token_holder_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/Token_holder_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Trace_executedNodes_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Trace_executedNodes_Value/executedNodes"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Trace_executedNodes_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Trace_executedNodes_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/Trace_executedNodes_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Value"/>
+        <genFeatures property="Readonly" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Value/statesNoOpposite"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="activitydiagramTrace.ecore#//States/Variable_currentValue_Value"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Variable_currentValue_Value/currentValue"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Variable_currentValue_Value/parent"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Variable_currentValue_Value/states"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="activitydiagramTrace.ecore#//States/Variable_currentValue_Value/getStatesNoOpposite"/>
+        </genOperations>
+      </genClasses>
+      <nestedGenPackages prefix="Activitydiagram" disposableProviderFactory="true">
+        <ecorePackage href="activitydiagramTrace.ecore#//States/activitydiagram"/>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedAction"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivity"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivity/originalObject"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivity/traceSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivityEdge"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivityEdge/offersSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivityFinalNode"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivityFinalNode/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivityNode"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedActivityNode/heldTokensSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedBooleanValue"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedBooleanValue/valueSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedBooleanVariable"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedBooleanVariable/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedControlFlow"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedControlFlow/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedControlNode"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedControlToken"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedDecisionNode"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedDecisionNode/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedExecutableNode"/>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedFinalNode"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedForkNode"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedForkNode/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedForkedToken"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedForkedToken/baseTokenSequence"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedForkedToken/remainingOffersCountSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInitialNode"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInitialNode/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInput"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInput/inputValuesSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInputValue"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInputValue/valueSequence"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInputValue/variableSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedIntegerValue"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedIntegerValue/valueSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedIntegerVariable"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedIntegerVariable/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedJoinNode"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedJoinNode/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedMergeNode"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedMergeNode/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedNamedElement"/>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedOffer"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedOffer/offeredTokensSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedOpaqueAction"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedOpaqueAction/originalObject"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedToken"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedToken/holderSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedTrace"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedTrace/executedNodesSequence"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedValue"/>
+        </genClasses>
+        <genClasses image="false">
+          <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedVariable"/>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedVariable/currentValueSequence"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+  <usedGenPackages href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.genmodel#//activitydiagram"/>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+  <usedGenPackages href="../../org.gemoc.executionframework.engine.mse.model/model/GemocExecutionEngineMSE.genmodel#//mse"/>
+</genmodel:GenModel>
