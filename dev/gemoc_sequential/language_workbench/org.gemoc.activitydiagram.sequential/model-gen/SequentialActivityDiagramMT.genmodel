@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.gemoc.activitydiagram.sequential/src-gen" modelName="SequentialActivityDiagramMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/org.gemoc.activitydiagram.sequential/model-gen/SequentialActivityDiagramMT.ecore</foreignModel>
+  <genPackages prefix="Activitydiagram" basePackage="org.gemoc.activitydiagram.sequential.sequentialactivitydiagrammt" disposableProviderFactory="true">
+    <ecorePackage href="SequentialActivityDiagramMT.ecore#/"/>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="SequentialActivityDiagramMT.ecore#//IntegerCalculationOperator"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerCalculationOperator/ADD"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerCalculationOperator/SUBRACT"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="SequentialActivityDiagramMT.ecore#//IntegerComparisonOperator"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerComparisonOperator/SMALLER"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerComparisonOperator/SMALLER_EQUALS"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerComparisonOperator/EQUALS"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerComparisonOperator/GREATER_EQUALS"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//IntegerComparisonOperator/GREATER"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="SequentialActivityDiagramMT.ecore#//BooleanUnaryOperator"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//BooleanUnaryOperator/NOT"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="SequentialActivityDiagramMT.ecore#//BooleanBinaryOperator"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//BooleanBinaryOperator/AND"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="SequentialActivityDiagramMT.ecore#//BooleanBinaryOperator/OR"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Activity"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Activity/nodes"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Activity/edges"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Activity/locals"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Activity/inputs"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Activity/trace"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/initializeModel"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//Activity/initializeModel/args"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/main"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/reset"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/getIntegerVariableValue"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//Activity/getIntegerVariableValue/variableName"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/getBooleanVariableValue"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//Activity/getBooleanVariableValue/variableName"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/getVariableValue"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//Activity/getVariableValue/variableName"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Activity/getVariable"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//Activity/getVariable/variableName"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ActivityNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityNode/outgoing"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityNode/incoming"/>
+      </genFeatures>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityNode/activity"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//ActivityNode/running"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityNode/heldTokens"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/terminate"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/isReady"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/sendOffers1"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//ActivityNode/sendOffers1/tokens"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/takeOfferdTokens1"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/addTokens1"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//ActivityNode/addTokens1/tokens"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/hasOffers1"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityNode/removeToken1"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//ActivityNode/removeToken1/token"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ActivityEdge"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityEdge/source"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityEdge/target"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ActivityEdge/offers"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityEdge/sendOffer1"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//ActivityEdge/sendOffer1/tokens"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityEdge/takeOfferedTokens1"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityEdge/hasOffer1"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ControlFlow"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ControlFlow/guard"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ControlNode"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ExecutableNode"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Action"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//OpaqueAction"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//OpaqueAction/expressions"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//OpaqueAction/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//NamedElement"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//NamedElement/name"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//NamedElement/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//InitialNode"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//InitialNode/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//InitialNode/hasOffers1"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//FinalNode"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ActivityFinalNode"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ActivityFinalNode/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ForkNode"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//ForkNode/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//JoinNode"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//JoinNode/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//MergeNode"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//MergeNode/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//MergeNode/hasOffers1"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//DecisionNode"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//DecisionNode/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//DecisionNode/sendOffers1"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//DecisionNode/sendOffers1/tokens"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Variable"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Variable/initialValue"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//Variable/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Variable/currentValue"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Variable/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Variable/init"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Variable/print"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//IntegerVariable"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//IntegerVariable/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//IntegerVariable/init"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//IntegerVariable/print"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//BooleanVariable"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//BooleanVariable/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//BooleanVariable/init"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//BooleanVariable/print"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Value"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//BooleanValue"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//BooleanValue/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//IntegerValue"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//IntegerValue/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Expression"/>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Expression/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//IntegerExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//IntegerExpression/operand2"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//IntegerExpression/operand1"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//BooleanExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//BooleanExpression/assignee"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//IntegerCalculationExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//IntegerCalculationExpression/assignee"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//IntegerCalculationExpression/operator"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//IntegerCalculationExpression/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//IntegerComparisonExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//IntegerComparisonExpression/assignee"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//IntegerComparisonExpression/operator"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//IntegerComparisonExpression/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//BooleanUnaryExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//BooleanUnaryExpression/operand"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//BooleanUnaryExpression/operator"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//BooleanUnaryExpression/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//BooleanBinaryExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//BooleanBinaryExpression/operand1"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//BooleanBinaryExpression/operand2"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//BooleanBinaryExpression/operator"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//BooleanBinaryExpression/execute"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Offer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Offer/offeredTokens"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Offer/hasTokens1"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Offer/removeWithdrawnTokens1"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Token"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Token/holder"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Token/transfer1"/>
+        <genParameters>
+          <ecoreParameter href="SequentialActivityDiagramMT.ecore#//Token/transfer1/holder"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Token/withdraw1"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="SequentialActivityDiagramMT.ecore#//Token/isWithdrawn"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Trace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Trace/executedNodes"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//InputValue"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//InputValue/value"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//InputValue/variable"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//Input"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//Input/inputValues"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ControlToken"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="SequentialActivityDiagramMT.ecore#//ForkedToken"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="SequentialActivityDiagramMT.ecore#//ForkedToken/baseToken"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="SequentialActivityDiagramMT.ecore#//ForkedToken/remainingOffersCount"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>

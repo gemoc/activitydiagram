@@ -1,4 +1,0 @@
-#ignore all
-*
-# but me
-!.gitignore

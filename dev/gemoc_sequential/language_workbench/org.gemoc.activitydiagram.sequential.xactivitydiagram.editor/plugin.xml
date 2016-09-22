@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated XActivityDiagram -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.presentation.ActivitydiagramModelWizardID"
+            name="%_UI_ActivitydiagramModelWizard_label"
+            class="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.presentation.ActivitydiagramModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ActivitydiagramModelFile.gif">
+         <description>%_UI_ActivitydiagramModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated XActivityDiagram -->
+      <editor
+            id="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.presentation.ActivitydiagramEditorID"
+            name="%_UI_ActivitydiagramEditor_label"
+            icon="icons/full/obj16/ActivitydiagramModelFile.gif"
+            extensions="xactivitydiagram"
+            class="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.presentation.ActivitydiagramEditor"
+            contributorClass="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.presentation.ActivitydiagramActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

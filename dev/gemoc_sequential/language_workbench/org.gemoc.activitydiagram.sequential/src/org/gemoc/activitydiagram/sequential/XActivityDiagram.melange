@@ -1,0 +1,31 @@
+package org.gemoc.activitydiagram.sequential
+
+language XActivityDiagram {
+	syntax "platform:/resource//org.gemoc.activitydiagram.sequential.model/ad/activitydiagram.ecore"
+	
+	with org.gemoc.activitydiagram.sequential.k3dsa.InitialNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityFinalNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanVariableAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityEdgeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanUnaryExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ForkNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ControlFlowAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerVariableAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.NamedElementAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.OfferAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerComparisonExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.DecisionNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.MergeNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanBinaryExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.OpaqueActionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.TokenAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.JoinNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerCalculationExpressionAspect
+	
+
+	exactType SequentialActivityDiagramMT
+}
