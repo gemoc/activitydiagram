@@ -20,6 +20,6 @@
     <package uri="activitydiagramTrace_activitydiagram" class="activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage" genModel="model/activitydiagramTrace.genmodel" />
   </extension>
   <extension point="org.gemoc.gemoc_language_workbench.engine_addon">
-    <Addon Class="org.gemoc.activitydiagram.sequential.xactivitydiagram.trace.tracemanager.ActivitydiagramTraceEngineAddon" Default="false" id="org.gemoc.activitydiagram.sequential.xactivitydiagram.trace" Name="activitydiagram MultiDimensional Trace" ShortDescription="MultiDimensional Trace support dedicated to activitydiagram language" openViewIds="org.gemoc.sequential_addons.multidimensional.timeline.views.timeline.MultidimensionalTimeLineView" />
+    <Addon Class="org.gemoc.activitydiagram.sequential.xactivitydiagram.trace.tracemanager.ActivitydiagramTraceEngineAddon" Default="false" id="org.gemoc.activitydiagram.sequential.xactivitydiagram.trace" Name="activitydiagram MultiDimensional Trace" ShortDescription="MultiDimensional Trace support dedicated to activitydiagram language" openViewIds="org.gemoc.sequential_addons.multidimensional.timeline.views.timeline.MultidimensionalTimeLineView" AddonGroupId="Sequential.AddonGroup" />
   </extension>
 </plugin>

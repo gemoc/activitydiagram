@@ -46,18 +46,8 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 				for (TreeIterator<EObject> i = r.getAllContents(); i.hasNext();) {
 					EObject o = i.next();
 
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o;
-						addNewObjectToState(o_cast, lastState);
-					} else
-
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement) o;
-						addNewObjectToState(o_cast, lastState);
-					} else
-
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) o;
 						addNewObjectToState(o_cast, lastState);
 					} else
 
@@ -66,8 +56,18 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 						addNewObjectToState(o_cast, lastState);
 					} else
 
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o;
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) o;
+						addNewObjectToState(o_cast, lastState);
+					} else
+
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o;
+						addNewObjectToState(o_cast, lastState);
+					} else
+
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) o;
 						addNewObjectToState(o_cast, lastState);
 					} else
 
@@ -76,8 +76,8 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 						addNewObjectToState(o_cast, lastState);
 					} else
 
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) o;
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o;
 						addNewObjectToState(o_cast, lastState);
 					} else
 
@@ -194,14 +194,14 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 			org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode o_cast,
 			activitydiagramTrace.States.State newState) {
 		boolean added = false;
-		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ExecutableNode) {
-			added = addNewObjectToState(
-					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ExecutableNode) o_cast,
-					newState);
-		} else
-			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlNode) {
+		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlNode) {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlNode) o_cast,
+					newState);
+		} else
+			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ExecutableNode) {
+			added = addNewObjectToState(
+					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ExecutableNode) o_cast,
 					newState);
 		}
 
@@ -331,7 +331,11 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 			org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlNode o_cast,
 			activitydiagramTrace.States.State newState) {
 		boolean added = false;
-		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode) {
+		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.FinalNode) {
+			added = addNewObjectToState(
+					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.FinalNode) o_cast, newState);
+		} else
+			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode) {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode) o_cast,
 					newState);
@@ -346,9 +350,6 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode) o_cast,
 					newState);
-		} else if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.FinalNode) {
-			added = addNewObjectToState(
-					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.FinalNode) o_cast, newState);
 		} else if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode) {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode) o_cast, newState);
@@ -803,14 +804,14 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode) o_cast,
 					newState);
+		} else if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) {
+			added = addNewObjectToState(
+					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) o_cast, newState);
 		} else
 			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge) {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge) o_cast,
 					newState);
-		} else if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) {
-			added = addNewObjectToState(
-					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) o_cast, newState);
 		}
 
 		return added;
@@ -888,14 +889,14 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 			org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast,
 			activitydiagramTrace.States.State newState) {
 		boolean added = false;
-		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) {
-			added = addNewObjectToState(
-					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) o_cast,
-					newState);
-		} else
-			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken) {
+		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken) {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken) o_cast,
+					newState);
+		} else
+			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) {
+			added = addNewObjectToState(
+					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) o_cast,
 					newState);
 		}
 
@@ -991,14 +992,14 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 			org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable o_cast,
 			activitydiagramTrace.States.State newState) {
 		boolean added = false;
-		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable) {
-			added = addNewObjectToState(
-					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable) o_cast,
-					newState);
-		} else
-			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable) {
+		if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable) {
 			added = addNewObjectToState(
 					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable) o_cast,
+					newState);
+		} else
+			if (o_cast instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable) {
+			added = addNewObjectToState(
+					(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable) o_cast,
 					newState);
 		}
 
@@ -1071,28 +1072,28 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 				// Here we have nothing to rollback, just a new object to add
 				if (modelChange instanceof org.gemoc.xdsmlframework.api.engine_addon.modelchangelistener.NewObjectModelChange) {
 					stateChanged = true;
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o;
-						addNewObjectToState(o_cast, newState);
-					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) o;
-						addNewObjectToState(o_cast, newState);
-					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o;
-						addNewObjectToState(o_cast, newState);
-					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) o;
 						addNewObjectToState(o_cast, newState);
 					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) o;
 						addNewObjectToState(o_cast, newState);
 					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o;
+						addNewObjectToState(o_cast, newState);
+					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) o;
+						addNewObjectToState(o_cast, newState);
+					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) o;
+						addNewObjectToState(o_cast, newState);
+					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o;
 						addNewObjectToState(o_cast, newState);
 					}
 				}
@@ -1107,13 +1108,6 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 						newState.getBooleanValue_value_Values()
 								.remove(traced.getValueSequence().get(traced.getValueSequence().size() - 1));
 					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) o;
-						activitydiagramTrace.States.activitydiagram.TracedOffer traced = (activitydiagramTrace.States.activitydiagram.TracedOffer) exeToTraced
-								.get(o_cast);
-						newState.getOffer_offeredTokens_Values().remove(
-								traced.getOfferedTokensSequence().get(traced.getOfferedTokensSequence().size() - 1));
-					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) o;
 						activitydiagramTrace.States.activitydiagram.TracedForkedToken traced = (activitydiagramTrace.States.activitydiagram.TracedForkedToken) exeToTraced
@@ -1124,26 +1118,12 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 								.remove(traced.getRemainingOffersCountSequence()
 										.get(traced.getRemainingOffersCountSequence().size() - 1));
 					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o;
-						activitydiagramTrace.States.activitydiagram.TracedToken traced = (activitydiagramTrace.States.activitydiagram.TracedToken) exeToTraced
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) o;
+						activitydiagramTrace.States.activitydiagram.TracedOffer traced = (activitydiagramTrace.States.activitydiagram.TracedOffer) exeToTraced
 								.get(o_cast);
-						newState.getToken_holder_Values()
-								.remove(traced.getHolderSequence().get(traced.getHolderSequence().size() - 1));
-					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o;
-						activitydiagramTrace.States.activitydiagram.TracedTrace traced = (activitydiagramTrace.States.activitydiagram.TracedTrace) exeToTraced
-								.get(o_cast);
-						newState.getTrace_executedNodes_Values().remove(
-								traced.getExecutedNodesSequence().get(traced.getExecutedNodesSequence().size() - 1));
-					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) o;
-						activitydiagramTrace.States.activitydiagram.TracedInput traced = (activitydiagramTrace.States.activitydiagram.TracedInput) exeToTraced
-								.get(o_cast);
-						newState.getInput_inputValues_Values().remove(
-								traced.getInputValuesSequence().get(traced.getInputValuesSequence().size() - 1));
+						newState.getOffer_offeredTokens_Values().remove(
+								traced.getOfferedTokensSequence().get(traced.getOfferedTokensSequence().size() - 1));
 					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue) o;
@@ -1151,6 +1131,20 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 								.get(o_cast);
 						newState.getIntegerValue_value_Values()
 								.remove(traced.getValueSequence().get(traced.getValueSequence().size() - 1));
+					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o;
+						activitydiagramTrace.States.activitydiagram.TracedToken traced = (activitydiagramTrace.States.activitydiagram.TracedToken) exeToTraced
+								.get(o_cast);
+						newState.getToken_holder_Values()
+								.remove(traced.getHolderSequence().get(traced.getHolderSequence().size() - 1));
+					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) o;
+						activitydiagramTrace.States.activitydiagram.TracedInput traced = (activitydiagramTrace.States.activitydiagram.TracedInput) exeToTraced
+								.get(o_cast);
+						newState.getInput_inputValues_Values().remove(
+								traced.getInputValuesSequence().get(traced.getInputValuesSequence().size() - 1));
 					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) o;
@@ -1160,6 +1154,13 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 								.remove(traced.getValueSequence().get(traced.getValueSequence().size() - 1));
 						newState.getInputValue_variable_Values()
 								.remove(traced.getVariableSequence().get(traced.getVariableSequence().size() - 1));
+					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o;
+						activitydiagramTrace.States.activitydiagram.TracedTrace traced = (activitydiagramTrace.States.activitydiagram.TracedTrace) exeToTraced
+								.get(o_cast);
+						newState.getTrace_executedNodes_Values().remove(
+								traced.getExecutedNodesSequence().get(traced.getExecutedNodesSequence().size() - 1));
 					}
 				}
 				// Here we must look at non-collection mutable fields
@@ -1171,8 +1172,57 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 					org.gemoc.xdsmlframework.api.engine_addon.modelchangelistener.NonCollectionFieldModelChange modelChange_cast = (org.gemoc.xdsmlframework.api.engine_addon.modelchangelistener.NonCollectionFieldModelChange) modelChange;
 					org.eclipse.emf.ecore.EStructuralFeature p = modelChange_cast.getChangedField();
 
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue) o;
+
+						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
+								.getBooleanValue_Value().getFeatureID()) {
+
+							// Rollback: we remove the last value of this field from the new state
+							activitydiagramTrace.States.activitydiagram.TracedBooleanValue traced = (activitydiagramTrace.States.activitydiagram.TracedBooleanValue) exeToTraced
+									.get(o);
+							activitydiagramTrace.States.BooleanValue_value_Value lastValue = traced.getValueSequence()
+									.get(traced.getValueSequence().size() - 1);
+							newState.getBooleanValue_value_Values().remove(lastValue);
+
+							// And we create a proper new value
+							activitydiagramTrace.States.BooleanValue_value_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+									.createBooleanValue_value_Value();
+
+							boolean value = o_cast.isValue();
+
+							newValue.setValue((boolean) value);
+
+							traced.getValueSequence().add(newValue);
+							newState.getBooleanValue_value_Values().add(newValue);
+						}
+					}
+
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) o;
+
+						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
+								.getForkedToken_RemainingOffersCount().getFeatureID()) {
+
+							// Rollback: we remove the last value of this field from the new state
+							activitydiagramTrace.States.activitydiagram.TracedForkedToken traced = (activitydiagramTrace.States.activitydiagram.TracedForkedToken) exeToTraced
+									.get(o);
+							activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value lastValue = traced
+									.getRemainingOffersCountSequence()
+									.get(traced.getRemainingOffersCountSequence().size() - 1);
+							newState.getForkedToken_remainingOffersCount_Values().remove(lastValue);
+
+							// And we create a proper new value
+							activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+									.createForkedToken_remainingOffersCount_Value();
+
+							int value = o_cast.getRemainingOffersCount();
+
+							newValue.setRemainingOffersCount((int) value);
+
+							traced.getRemainingOffersCountSequence().add(newValue);
+							newState.getForkedToken_remainingOffersCount_Values().add(newValue);
+						} else
 
 						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
 								.getForkedToken_BaseToken().getFeatureID()) {
@@ -1198,29 +1248,36 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 
 							traced.getBaseTokenSequence().add(newValue);
 							newState.getForkedToken_baseToken_Values().add(newValue);
-						} else
+						}
+					}
+
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) o;
 
 						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
-								.getForkedToken_RemainingOffersCount().getFeatureID()) {
+								.getActivity_Trace().getFeatureID()) {
 
 							// Rollback: we remove the last value of this field from the new state
-							activitydiagramTrace.States.activitydiagram.TracedForkedToken traced = (activitydiagramTrace.States.activitydiagram.TracedForkedToken) exeToTraced
+							activitydiagramTrace.States.activitydiagram.TracedActivity traced = (activitydiagramTrace.States.activitydiagram.TracedActivity) exeToTraced
 									.get(o);
-							activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value lastValue = traced
-									.getRemainingOffersCountSequence()
-									.get(traced.getRemainingOffersCountSequence().size() - 1);
-							newState.getForkedToken_remainingOffersCount_Values().remove(lastValue);
+							activitydiagramTrace.States.Activity_trace_Value lastValue = traced.getTraceSequence()
+									.get(traced.getTraceSequence().size() - 1);
+							newState.getActivity_trace_Values().remove(lastValue);
 
 							// And we create a proper new value
-							activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-									.createForkedToken_remainingOffersCount_Value();
+							activitydiagramTrace.States.Activity_trace_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+									.createActivity_trace_Value();
 
-							int value = o_cast.getRemainingOffersCount();
+							activitydiagramTrace.States.activitydiagram.TracedTrace value = null;
+							if (o_cast.getTrace() != null) {
+								value = ((activitydiagramTrace.States.activitydiagram.TracedTrace) exeToTraced
+										.get(o_cast.getTrace()));
+							}
 
-							newValue.setRemainingOffersCount((int) value);
+							newValue.setTrace((activitydiagramTrace.States.activitydiagram.TracedTrace) value);
 
-							traced.getRemainingOffersCountSequence().add(newValue);
-							newState.getForkedToken_remainingOffersCount_Values().add(newValue);
+							traced.getTraceSequence().add(newValue);
+							newState.getActivity_trace_Values().add(newValue);
 						}
 					}
 
@@ -1284,29 +1341,59 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 						}
 					}
 
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue) o;
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) o;
 
 						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
-								.getBooleanValue_Value().getFeatureID()) {
+								.getInputValue_Variable().getFeatureID()) {
 
 							// Rollback: we remove the last value of this field from the new state
-							activitydiagramTrace.States.activitydiagram.TracedBooleanValue traced = (activitydiagramTrace.States.activitydiagram.TracedBooleanValue) exeToTraced
+							activitydiagramTrace.States.activitydiagram.TracedInputValue traced = (activitydiagramTrace.States.activitydiagram.TracedInputValue) exeToTraced
 									.get(o);
-							activitydiagramTrace.States.BooleanValue_value_Value lastValue = traced.getValueSequence()
-									.get(traced.getValueSequence().size() - 1);
-							newState.getBooleanValue_value_Values().remove(lastValue);
+							activitydiagramTrace.States.InputValue_variable_Value lastValue = traced
+									.getVariableSequence().get(traced.getVariableSequence().size() - 1);
+							newState.getInputValue_variable_Values().remove(lastValue);
 
 							// And we create a proper new value
-							activitydiagramTrace.States.BooleanValue_value_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-									.createBooleanValue_value_Value();
+							activitydiagramTrace.States.InputValue_variable_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+									.createInputValue_variable_Value();
 
-							boolean value = o_cast.isValue();
+							activitydiagramTrace.States.activitydiagram.TracedVariable value = null;
+							if (o_cast.getVariable() != null) {
+								value = ((activitydiagramTrace.States.activitydiagram.TracedVariable) exeToTraced
+										.get(o_cast.getVariable()));
+							}
 
-							newValue.setValue((boolean) value);
+							newValue.setVariable((activitydiagramTrace.States.activitydiagram.TracedVariable) value);
+
+							traced.getVariableSequence().add(newValue);
+							newState.getInputValue_variable_Values().add(newValue);
+						} else
+
+						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
+								.getInputValue_Value().getFeatureID()) {
+
+							// Rollback: we remove the last value of this field from the new state
+							activitydiagramTrace.States.activitydiagram.TracedInputValue traced = (activitydiagramTrace.States.activitydiagram.TracedInputValue) exeToTraced
+									.get(o);
+							activitydiagramTrace.States.InputValue_value_Value lastValue = traced.getValueSequence()
+									.get(traced.getValueSequence().size() - 1);
+							newState.getInputValue_value_Values().remove(lastValue);
+
+							// And we create a proper new value
+							activitydiagramTrace.States.InputValue_value_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+									.createInputValue_value_Value();
+
+							activitydiagramTrace.States.activitydiagram.TracedValue value = null;
+							if (o_cast.getValue() != null) {
+								value = ((activitydiagramTrace.States.activitydiagram.TracedValue) exeToTraced
+										.get(o_cast.getValue()));
+							}
+
+							newValue.setValue((activitydiagramTrace.States.activitydiagram.TracedValue) value);
 
 							traced.getValueSequence().add(newValue);
-							newState.getBooleanValue_value_Values().add(newValue);
+							newState.getInputValue_value_Values().add(newValue);
 						}
 					}
 
@@ -1333,92 +1420,6 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 
 							traced.getValueSequence().add(newValue);
 							newState.getIntegerValue_value_Values().add(newValue);
-						}
-					}
-
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity) o;
-
-						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
-								.getActivity_Trace().getFeatureID()) {
-
-							// Rollback: we remove the last value of this field from the new state
-							activitydiagramTrace.States.activitydiagram.TracedActivity traced = (activitydiagramTrace.States.activitydiagram.TracedActivity) exeToTraced
-									.get(o);
-							activitydiagramTrace.States.Activity_trace_Value lastValue = traced.getTraceSequence()
-									.get(traced.getTraceSequence().size() - 1);
-							newState.getActivity_trace_Values().remove(lastValue);
-
-							// And we create a proper new value
-							activitydiagramTrace.States.Activity_trace_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-									.createActivity_trace_Value();
-
-							activitydiagramTrace.States.activitydiagram.TracedTrace value = null;
-							if (o_cast.getTrace() != null) {
-								value = ((activitydiagramTrace.States.activitydiagram.TracedTrace) exeToTraced
-										.get(o_cast.getTrace()));
-							}
-
-							newValue.setTrace((activitydiagramTrace.States.activitydiagram.TracedTrace) value);
-
-							traced.getTraceSequence().add(newValue);
-							newState.getActivity_trace_Values().add(newValue);
-						}
-					}
-
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) o;
-
-						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
-								.getInputValue_Value().getFeatureID()) {
-
-							// Rollback: we remove the last value of this field from the new state
-							activitydiagramTrace.States.activitydiagram.TracedInputValue traced = (activitydiagramTrace.States.activitydiagram.TracedInputValue) exeToTraced
-									.get(o);
-							activitydiagramTrace.States.InputValue_value_Value lastValue = traced.getValueSequence()
-									.get(traced.getValueSequence().size() - 1);
-							newState.getInputValue_value_Values().remove(lastValue);
-
-							// And we create a proper new value
-							activitydiagramTrace.States.InputValue_value_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-									.createInputValue_value_Value();
-
-							activitydiagramTrace.States.activitydiagram.TracedValue value = null;
-							if (o_cast.getValue() != null) {
-								value = ((activitydiagramTrace.States.activitydiagram.TracedValue) exeToTraced
-										.get(o_cast.getValue()));
-							}
-
-							newValue.setValue((activitydiagramTrace.States.activitydiagram.TracedValue) value);
-
-							traced.getValueSequence().add(newValue);
-							newState.getInputValue_value_Values().add(newValue);
-						} else
-
-						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
-								.getInputValue_Variable().getFeatureID()) {
-
-							// Rollback: we remove the last value of this field from the new state
-							activitydiagramTrace.States.activitydiagram.TracedInputValue traced = (activitydiagramTrace.States.activitydiagram.TracedInputValue) exeToTraced
-									.get(o);
-							activitydiagramTrace.States.InputValue_variable_Value lastValue = traced
-									.getVariableSequence().get(traced.getVariableSequence().size() - 1);
-							newState.getInputValue_variable_Values().remove(lastValue);
-
-							// And we create a proper new value
-							activitydiagramTrace.States.InputValue_variable_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-									.createInputValue_variable_Value();
-
-							activitydiagramTrace.States.activitydiagram.TracedVariable value = null;
-							if (o_cast.getVariable() != null) {
-								value = ((activitydiagramTrace.States.activitydiagram.TracedVariable) exeToTraced
-										.get(o_cast.getVariable()));
-							}
-
-							newValue.setVariable((activitydiagramTrace.States.activitydiagram.TracedVariable) value);
-
-							traced.getVariableSequence().add(newValue);
-							newState.getInputValue_variable_Values().add(newValue);
 						}
 					}
 				}
@@ -1541,62 +1542,6 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 							}
 						}
 					}
-					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) {
-						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) o;
-						activitydiagramTrace.States.activitydiagram.TracedInput tracedObject = (activitydiagramTrace.States.activitydiagram.TracedInput) exeToTraced
-								.get(o_cast);
-						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
-								.getInput_InputValues().getFeatureID()) {
-							// We compare the last collection in the value sequence, and the current one in the potentially changed object
-							List<activitydiagramTrace.States.Input_inputValues_Value> valueSequence = tracedObject
-									.getInputValuesSequence();
-							activitydiagramTrace.States.Input_inputValues_Value previousValue = null;
-							if (!valueSequence.isEmpty()) {
-								previousValue = valueSequence.get(valueSequence.size() - 1);
-							}
-							for (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue aValue : o_cast
-									.getInputValues()) {
-								addNewObjectToState(
-										(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) aValue,
-										newState);
-							}
-							boolean change = false;
-							if (previousValue != null) {
-								if (previousValue.getInputValues().size() == o_cast.getInputValues().size()) {
-									java.util.Iterator<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue> it = o_cast
-											.getInputValues().iterator();
-									for (activitydiagramTrace.States.activitydiagram.TracedInputValue aPreviousValue : previousValue
-											.getInputValues()) {
-										org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue aCurrentValue = it
-												.next();
-										if (aPreviousValue != exeToTraced.get(aCurrentValue)) {
-											change = true;
-											break;
-										}
-									}
-								} else {
-									change = true;
-								}
-							} else {
-								change = true;
-							}
-							if (change) {
-								stateChanged = true;
-								// Rollback: we remove the last value of this field from the new state
-								activitydiagramTrace.States.Input_inputValues_Value lastValue = tracedObject
-										.getInputValuesSequence().get(tracedObject.getInputValuesSequence().size() - 1);
-								newState.getInput_inputValues_Values().remove(lastValue);
-								// And we create a proper new value							
-								activitydiagramTrace.States.Input_inputValues_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
-										.createInput_inputValues_Value();
-								newValue.getInputValues()
-										.addAll((Collection<? extends activitydiagramTrace.States.activitydiagram.TracedInputValue>) getExeToTraced(
-												o_cast.getInputValues(), newState));
-								tracedObject.getInputValuesSequence().add(newValue);
-								newState.getInput_inputValues_Values().add(newValue);
-							}
-						}
-					}
 					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge) {
 						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge) o;
 						activitydiagramTrace.States.activitydiagram.TracedActivityEdge tracedObject = (activitydiagramTrace.States.activitydiagram.TracedActivityEdge) exeToTraced
@@ -1650,6 +1595,62 @@ public class ActivitydiagramTraceConstructor implements ITraceConstructor {
 												o_cast.getOffers(), newState));
 								tracedObject.getOffersSequence().add(newValue);
 								newState.getActivityEdge_offers_Values().add(newValue);
+							}
+						}
+					}
+					if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) {
+						org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input o_cast = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) o;
+						activitydiagramTrace.States.activitydiagram.TracedInput tracedObject = (activitydiagramTrace.States.activitydiagram.TracedInput) exeToTraced
+								.get(o_cast);
+						if (p.getFeatureID() == org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
+								.getInput_InputValues().getFeatureID()) {
+							// We compare the last collection in the value sequence, and the current one in the potentially changed object
+							List<activitydiagramTrace.States.Input_inputValues_Value> valueSequence = tracedObject
+									.getInputValuesSequence();
+							activitydiagramTrace.States.Input_inputValues_Value previousValue = null;
+							if (!valueSequence.isEmpty()) {
+								previousValue = valueSequence.get(valueSequence.size() - 1);
+							}
+							for (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue aValue : o_cast
+									.getInputValues()) {
+								addNewObjectToState(
+										(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) aValue,
+										newState);
+							}
+							boolean change = false;
+							if (previousValue != null) {
+								if (previousValue.getInputValues().size() == o_cast.getInputValues().size()) {
+									java.util.Iterator<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue> it = o_cast
+											.getInputValues().iterator();
+									for (activitydiagramTrace.States.activitydiagram.TracedInputValue aPreviousValue : previousValue
+											.getInputValues()) {
+										org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue aCurrentValue = it
+												.next();
+										if (aPreviousValue != exeToTraced.get(aCurrentValue)) {
+											change = true;
+											break;
+										}
+									}
+								} else {
+									change = true;
+								}
+							} else {
+								change = true;
+							}
+							if (change) {
+								stateChanged = true;
+								// Rollback: we remove the last value of this field from the new state
+								activitydiagramTrace.States.Input_inputValues_Value lastValue = tracedObject
+										.getInputValuesSequence().get(tracedObject.getInputValuesSequence().size() - 1);
+								newState.getInput_inputValues_Values().remove(lastValue);
+								// And we create a proper new value							
+								activitydiagramTrace.States.Input_inputValues_Value newValue = activitydiagramTrace.States.StatesFactory.eINSTANCE
+										.createInput_inputValues_Value();
+								newValue.getInputValues()
+										.addAll((Collection<? extends activitydiagramTrace.States.activitydiagram.TracedInputValue>) getExeToTraced(
+												o_cast.getInputValues(), newState));
+								tracedObject.getInputValuesSequence().add(newValue);
+								newState.getInput_inputValues_Values().add(newValue);
 							}
 						}
 					}

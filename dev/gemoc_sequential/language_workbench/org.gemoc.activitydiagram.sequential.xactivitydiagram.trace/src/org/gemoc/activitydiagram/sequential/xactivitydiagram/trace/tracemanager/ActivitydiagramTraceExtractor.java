@@ -805,7 +805,7 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 				attributeName = attributes.get(0);
 			}
 			final Optional<EReference> originalObject = container.eClass().getEAllReferences().stream()
-					.filter(r -> r.getName().equals("originalObject")).findFirst();
+					.filter(r -> r.getName().startsWith("originalObject")).findFirst();
 			if (originalObject.isPresent()) {
 				final Object o = container.eGet(originalObject.get());
 				if (o instanceof EObject) {
