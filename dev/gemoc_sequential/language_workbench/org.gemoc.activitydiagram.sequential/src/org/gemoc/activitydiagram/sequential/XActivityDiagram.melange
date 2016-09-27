@@ -27,5 +27,5 @@ language XActivityDiagram {
 	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerCalculationExpressionAspect
 	
 
-	exactType SequentialActivityDiagramMT
+	exactType XActivityDiagramMT
 }

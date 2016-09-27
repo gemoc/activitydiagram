@@ -20,20 +20,20 @@ public class ActivityNodeAspect extends NamedElementAspect {
   @Step
   public static void execute(final ActivityNode _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
     					fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
     						@Override
@@ -142,10 +142,10 @@ public class ActivityNodeAspect extends NamedElementAspect {
   public static boolean hasOffers1(final ActivityNode _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
     Object result = null;
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.hasOffers1((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
     					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.hasOffers1((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
+    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.hasOffers1((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
     					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect._privk3_hasOffers1(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };

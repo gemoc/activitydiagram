@@ -15,5 +15,5 @@ Export-Package: org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.util
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 
