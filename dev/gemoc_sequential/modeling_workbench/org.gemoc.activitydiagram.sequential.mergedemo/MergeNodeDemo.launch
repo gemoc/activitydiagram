@@ -8,8 +8,9 @@
 <stringAttribute key="LAUNCH_METHOD_ENTRY_POINT" value="public static void org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.main(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity)"/>
 <stringAttribute key="LAUNCH_MODEL_ENTRY_POINT" value="test3"/>
 <booleanAttribute key="MultiBranch Reflective Trace" value="false"/>
-<stringAttribute key="Resource" value="/org.gemoc.sample.activitydiagram.sequential.mergedemo/test3.xmi"/>
+<stringAttribute key="Resource" value="/org.gemoc.sample.activitydiagram.sequential.mergedemo/test3.ad"/>
 <booleanAttribute key="VCD visualization" value="false"/>
 <booleanAttribute key="activitydiagram MultiDimensional Trace" value="true"/>
 <stringAttribute key="airdResource" value="/org.gemoc.sample.activitydiagram.sequential.mergedemo/test3.aird"/>
+<booleanAttribute key="arduino MultiDimensional Trace" value="false"/>
 </launchConfiguration>
