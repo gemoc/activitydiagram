@@ -1,4 +1,4 @@
-module org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.GenerateXActivityDiagram
+module org.gemoc.activitydiagram.sequential.xactivitydiagram.GenerateXActivityDiagram
 
 import org.eclipse.xtext.xtext.generator.*
 import org.eclipse.xtext.xtext.generator.model.project.*
@@ -23,7 +23,7 @@ Workflow {
 			}
 		}
 		language = StandardLanguage {
-			name = "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.XActivityDiagram"
+			name = "org.gemoc.activitydiagram.sequential.xactivitydiagram.XActivityDiagram"
 			fileExtensions = "ad"
 			referencedResource = "platform:/resource/org.gemoc.activitydiagram.sequential.xactivitydiagram/model/XActivityDiagram.genmodel"
 			
