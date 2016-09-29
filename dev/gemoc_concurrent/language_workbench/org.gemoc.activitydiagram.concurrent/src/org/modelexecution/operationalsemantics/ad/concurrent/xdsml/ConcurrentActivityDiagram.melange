@@ -1,7 +1,7 @@
 package org.modelexecution.operationalsemantics.ad.concurrent.xdsml
 
 language ConcurrentActivityDiagram {
-	syntax "platform:/resource//org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore"
+	syntax "platform:/resource//org.gemoc.activitydiagram.concurrent.model/ad/activitydiagram.ecore"
 
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ActivityAspect
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.OpaqueActionAspect

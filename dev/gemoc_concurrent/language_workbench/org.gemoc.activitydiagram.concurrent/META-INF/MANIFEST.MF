@@ -1,4 +1,4 @@
-Bundle-SymbolicName: org.modelexecution.operationalsemantics.ad.concurrent.xdsml; singleton:=true
+Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent;singleton:=true
 Export-Package: concurrentactivitydiagram.xdsml.api.impl
 Bundle-Name: org.modelexecution.operationalsemantics.ad.concurrent.xdsml
 Bundle-Version: 1.0.0
@@ -35,9 +35,9 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="privat
  
  org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare;bundle-version="0.0.0";visibility:="reexport",
  
- org.modelexecution.operationalsemantics.ad;bundle-version="0.0.0";visibility:="private",
+ org.gemoc.activitydiagram.concurrent.model;bundle-version="0.0.0";visibility:="private",
  
- org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic;bundle-version="0.0.0";visibility:="private",
+ org.gemoc.activitydiagram.concurrent.k3dsa;bundle-version="0.0.0";visibility:="private",
  
  org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport
 Bundle-ManifestVersion: 2

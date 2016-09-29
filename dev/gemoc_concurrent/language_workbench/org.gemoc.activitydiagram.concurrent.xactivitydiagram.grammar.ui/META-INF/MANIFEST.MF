@@ -3,9 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: org.modelexecution.operationalsemantics.ad.grammar.ui
 Bundle-Vendor: Business Informatics Group
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: org.modelexecution.operationalsemantics.ad.grammar.ui; singleton:=true
+Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.modelexecution.operationalsemantics.ad.grammar;visibility:=reexport,
+Require-Bundle: org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar;visibility:=reexport,
  org.eclipse.xtext.ui,
  org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.ui.ide;bundle-version="3.5.0",

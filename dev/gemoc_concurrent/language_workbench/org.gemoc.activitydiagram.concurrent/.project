@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.modelexecution.operationalsemantics.ad.concurrent.xdsml</name>
+	<name>org.gemoc.activitydiagram.concurrent</name>
 	<comment></comment>
 	<projects>
 	</projects>

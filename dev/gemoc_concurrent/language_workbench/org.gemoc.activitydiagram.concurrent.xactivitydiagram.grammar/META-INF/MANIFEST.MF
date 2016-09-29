@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: org.modelexecution.operationalsemantics.ad.grammar
 Bundle-Vendor: Business Informatics Group
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: org.modelexecution.operationalsemantics.ad.grammar; singleton:=true
+Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
@@ -12,7 +12,7 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
- org.modelexecution.operationalsemantics.ad,
+ org.gemoc.activitydiagram.concurrent.model,
  org.eclipse.xtext.util,
  org.eclipse.xtext.xbase.lib,
  org.antlr.runtime,
