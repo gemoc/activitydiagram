@@ -24,18 +24,18 @@ public class ActivityNodeAspect extends NamedElementAspect {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
      if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
     					fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
     						@Override

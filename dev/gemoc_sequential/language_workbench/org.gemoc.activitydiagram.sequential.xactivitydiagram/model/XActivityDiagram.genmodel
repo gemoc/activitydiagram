@@ -431,9 +431,18 @@
     </genClasses>
     <genClasses>
       <ecoreClass href="XActivityDiagram.ecore#//InputValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//InputValue/variable"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//InputValue/value"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="XActivityDiagram.ecore#//Input"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//Input/inputValues"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="XActivityDiagram.ecore#//ControlToken"/>

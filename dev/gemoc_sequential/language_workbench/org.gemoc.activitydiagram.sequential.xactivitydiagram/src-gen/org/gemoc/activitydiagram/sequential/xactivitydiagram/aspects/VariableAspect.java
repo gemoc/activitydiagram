@@ -12,10 +12,10 @@ public class VariableAspect {
   @Step
   public static void execute(final Variable _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
     					fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
     						@Override
@@ -36,10 +36,10 @@ public class VariableAspect {
   @Step
   public static void init(final Variable _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.init((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect.init((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.init((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
     					fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
     						@Override
@@ -60,10 +60,10 @@ public class VariableAspect {
   public static String print(final Variable _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectContext.getSelf(_self);
     Object result = null;
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.print((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
     					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect.print((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
+    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.print((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
     					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect._privk3_print(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };

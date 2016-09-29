@@ -5,10 +5,10 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext,
+Require-Bundle: org.gemoc.activitydiagram.sequential.xactivitydiagram,
+ org.eclipse.xtext,
  org.eclipse.xtext.xbase,
  org.eclipse.equinox.common;bundle-version="3.5.0",
- org.gemoc.activitydiagram.sequential.xactivitydiagram;bundle-version="0.1.0",
  org.eclipse.xtext.xbase.lib,
  org.antlr.runtime,
  org.eclipse.xtext.util,
@@ -16,6 +16,7 @@ Require-Bundle: org.eclipse.xtext,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.gemoc.activitydiagram.sequential.xactivitydiagram.input,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.input.services,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.input.formatting,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.input.parser.antlr.internal,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.input.parser.antlr,
  org.gemoc.activitydiagram.sequential.xactivitydiagram.input.validation,

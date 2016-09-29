@@ -13,8 +13,8 @@ import org.apache.log4j.Logger;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.shared.SharedStateModule;
 import org.eclipse.xtext.util.Modules2;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInputRuntimeModule;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputUiModule;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInputRuntimeModule;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputUiModule;
 import org.osgi.framework.BundleContext;
 
 /**
@@ -23,7 +23,7 @@ import org.osgi.framework.BundleContext;
  */
 public class GrammarActivator extends AbstractUIPlugin {
 
-	public static final String ORG_GEMOC_ACTIVITYDIAGRAM_SEQUENTIAL_XACTIVITYDIAGRAM_INPUT_XACTIVITYDIAGRAMINPUT = "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput";
+	public static final String ORG_GEMOC_ACTIVITYDIAGRAM_SEQUENTIAL_XACTIVITYDIAGRAM_INPUT_ACTIVITYDIAGRAMINPUT = "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput";
 	
 	private static final Logger logger = Logger.getLogger(GrammarActivator.class);
 	
@@ -73,15 +73,15 @@ public class GrammarActivator extends AbstractUIPlugin {
 	}
 	
 	protected Module getRuntimeModule(String grammar) {
-		if (ORG_GEMOC_ACTIVITYDIAGRAM_SEQUENTIAL_XACTIVITYDIAGRAM_INPUT_XACTIVITYDIAGRAMINPUT.equals(grammar)) {
-			return new XActivityDiagramInputRuntimeModule();
+		if (ORG_GEMOC_ACTIVITYDIAGRAM_SEQUENTIAL_XACTIVITYDIAGRAM_INPUT_ACTIVITYDIAGRAMINPUT.equals(grammar)) {
+			return new ActivityDiagramInputRuntimeModule();
 		}
 		throw new IllegalArgumentException(grammar);
 	}
 	
 	protected Module getUiModule(String grammar) {
-		if (ORG_GEMOC_ACTIVITYDIAGRAM_SEQUENTIAL_XACTIVITYDIAGRAM_INPUT_XACTIVITYDIAGRAMINPUT.equals(grammar)) {
-			return new XActivityDiagramInputUiModule(this);
+		if (ORG_GEMOC_ACTIVITYDIAGRAM_SEQUENTIAL_XACTIVITYDIAGRAM_INPUT_ACTIVITYDIAGRAMINPUT.equals(grammar)) {
+			return new ActivityDiagramInputUiModule(this);
 		}
 		throw new IllegalArgumentException(grammar);
 	}

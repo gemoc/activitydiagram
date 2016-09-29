@@ -326,9 +326,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputValue">
     <eAnnotations source="aspect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" unique="false" eType="//Variable">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" unique="false" eType="//Value" containment="true">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input">
     <eAnnotations source="aspect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1" eType="//InputValue" containment="true">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ControlToken" eSuperTypes="//Token">
     <eAnnotations source="aspect"/>

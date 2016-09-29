@@ -28,5 +28,7 @@ language XActivityDiagram {
 	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerVariableAspect
 	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerComparisonExpressionAspect
 	with org.gemoc.activitydiagram.sequential.k3dsa.ForkNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.InputAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.InputValueAspect
 }
 

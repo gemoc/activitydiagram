@@ -1764,13 +1764,31 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INPUT_VALUE = 32;
 
 	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_VALUE__VARIABLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_VALUE__VALUE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Input Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_VALUE_FEATURE_COUNT = 0;
+	int INPUT_VALUE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.InputImpl <em>Input</em>}' class.
@@ -1783,13 +1801,22 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INPUT = 33;
 
 	/**
+	 * The feature id for the '<em><b>Input Values</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__INPUT_VALUES = 0;
+
+	/**
 	 * The number of structural features of the '<em>Input</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 0;
+	int INPUT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.
@@ -2633,6 +2660,28 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getInputValue();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getVariable()
+	 * @see #getInputValue()
+	 * @generated
+	 */
+	EReference getInputValue_Variable();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getValue()
+	 * @see #getInputValue()
+	 * @generated
+	 */
+	EReference getInputValue_Value();
+
+	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2641,6 +2690,17 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInput();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input#getInputValues <em>Input Values</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Input Values</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input#getInputValues()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_InputValues();
 
 	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken <em>Control Token</em>}'.
@@ -3365,6 +3425,22 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass INPUT_VALUE = eINSTANCE.getInputValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT_VALUE__VARIABLE = eINSTANCE.getInputValue_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT_VALUE__VALUE = eINSTANCE.getInputValue_Value();
+
+		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.InputImpl <em>Input</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3373,6 +3449,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT = eINSTANCE.getInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Values</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__INPUT_VALUES = eINSTANCE.getInput_InputValues();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.

@@ -4,48 +4,48 @@
 	<extension
 		point="org.eclipse.ui.editors">
 		<editor
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
 			extensions="adinput"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			name="XActivityDiagramInput Editor">
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			name="ActivityDiagramInput Editor">
 		</editor>
 	</extension>
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
 			commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
 			<activeWhen>
 				<reference
-					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
 		<handler
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-			commandId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.validate">
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+			commandId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.validate">
 		<activeWhen>
 			<reference
-					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 			</reference>
 		</activeWhen>
 		</handler>
 		<!-- copy qualified name -->
 		<handler
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
 			<activeWhen>
-				<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened" />
+				<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened" />
 			</activeWhen>
 		</handler>
 		<handler
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
 			<activeWhen>
 				<and>
-					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.XtextEditor.opened" />
+					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.XtextEditor.opened" />
 					<iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -54,22 +54,22 @@
 		</handler>
 	</extension>
 	<extension point="org.eclipse.core.expressions.definitions">
-		<definition id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+		<definition id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 			<and>
 				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-						value="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput" 
+						value="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput" 
 						forcePluginActivation="true"/>
 				</with>		
 			</and>
 		</definition>
-		<definition id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.XtextEditor.opened">
+		<definition id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.XtextEditor.opened">
 			<and>
 				<reference definitionId="isXtextEditorActive"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-						value="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput" 
+						value="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput" 
 						forcePluginActivation="true"/>
 				</with>		
 			</and>
@@ -78,33 +78,33 @@
 	<extension
 			point="org.eclipse.ui.preferencePages">
 		<page
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			name="XActivityDiagramInput">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			name="ActivityDiagramInput">
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 		</page>
 		<page
-			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.coloring"
+			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.coloring"
 			name="Syntax Coloring">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 		</page>
 		<page
-			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.templates"
+			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.templates"
 			name="Templates">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 		</page>
 	</extension>
 	<extension
 			point="org.eclipse.ui.propertyPages">
 		<page
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			name="XActivityDiagramInput">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			name="ActivityDiagramInput">
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -114,14 +114,14 @@
 	<extension
 		point="org.eclipse.ui.keywords">
 		<keyword
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"
-			label="XActivityDiagramInput"/>
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"
+			label="ActivityDiagramInput"/>
 	</extension>
 	<extension
 		point="org.eclipse.ui.commands">
 	<command
 			description="Trigger expensive validation"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.validate"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.validate"
 			name="Validate">
 	</command>
 	<!-- copy qualified name -->
@@ -142,12 +142,12 @@
 		<menuContribution
 			locationURI="popup:#TextEditorContext?after=group.edit">
 			 <command
-				 commandId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.validate"
+				 commandId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.validate"
 				 style="push"
 				 tooltip="Trigger expensive validation">
 			<visibleWhen checkEnabled="false">
 				<reference
-					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 				</reference>
 			</visibleWhen>
 		</command>  
@@ -157,7 +157,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened" />
+					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened" />
 				</visibleWhen>
 			</command>  
 		</menuContribution>
@@ -165,7 +165,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened" />
+					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened" />
 				</visibleWhen>
 			</command>  
 		</menuContribution>
@@ -174,7 +174,7 @@
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
 					<and>
-						<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.XtextEditor.opened" />
+						<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -187,7 +187,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -195,11 +195,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
 			commandId="org.eclipse.xtext.ui.editor.FindReferences">
 			<activeWhen>
 				<reference
-					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -208,59 +208,59 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="adinput">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 	    <resourceServiceProvider
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
 	        uriExtension="adinput">
 	    </resourceServiceProvider>
 	</extension>
-	<!-- marker definitions for org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput -->
+	<!-- marker definitions for org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput -->
 	<extension
-			id="xactivitydiagraminput.check.fast"
-			name="XActivityDiagramInput Problem"
+			id="activitydiagraminput.check.fast"
+			name="ActivityDiagramInput Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.fast"/>
 		<persistent value="true"/>
 	</extension>
 	<extension
-			id="xactivitydiagraminput.check.normal"
-			name="XActivityDiagramInput Problem"
+			id="activitydiagraminput.check.normal"
+			name="ActivityDiagramInput Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.normal"/>
 		<persistent value="true"/>
 	</extension>
 	<extension
-			id="xactivitydiagraminput.check.expensive"
-			name="XActivityDiagramInput Problem"
+			id="activitydiagraminput.check.expensive"
+			name="ActivityDiagramInput Problem"
 			point="org.eclipse.core.resources.markers">
 		<super type="org.eclipse.xtext.ui.check.expensive"/>
 		<persistent value="true"/>
 	</extension>
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
 			fileExtensions="adinput"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.compiler.preferencePage"
+			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.compiler.preferencePage"
 			name="Compiler">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.ui.propertyPages">
 		<page
-			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.compiler.propertyPage"
+			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.compiler.propertyPage"
 			name="Compiler">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -271,20 +271,20 @@
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
-				id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.OpenGeneratedCode"
+				id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.OpenGeneratedCode"
 				style="push">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened" />
+					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
 			<activeWhen>
-				<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened" />
+				<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened" />
 			</activeWhen>
 		</handler>
 	</extension>
@@ -292,11 +292,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -316,33 +316,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened"/>
+					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-	<!-- quickfix marker resolution generator for org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput -->
+	<!-- quickfix marker resolution generator for org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput -->
 	<extension
 	        point="org.eclipse.ui.ide.markerResolution">
 	    <markerResolutionGenerator
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.xactivitydiagraminput.check.fast">
+	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.activitydiagraminput.check.fast">
 	        <attribute
 	            name="FIXABLE_KEY"
 	            value="true">
 	        </attribute>
 	    </markerResolutionGenerator>
 	    <markerResolutionGenerator
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.xactivitydiagraminput.check.normal">
+	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.activitydiagraminput.check.normal">
 	        <attribute
 	            name="FIXABLE_KEY"
 	            value="true">
 	        </attribute>
 	    </markerResolutionGenerator>
 	    <markerResolutionGenerator
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.xactivitydiagraminput.check.expensive">
+	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.activitydiagraminput.check.expensive">
 	        <attribute
 	            name="FIXABLE_KEY"
 	            value="true">
@@ -352,11 +352,11 @@
 	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -368,7 +368,7 @@
 				style="push">
 				<visibleWhen checkEnabled="false">
 					<reference
-						definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.Editor.opened">
+						definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -376,28 +376,28 @@
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.refactoring"
+			category="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+			id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.refactoring"
 			name="Refactoring">
-			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_XActivityDiagramInput"/>
+			<keywordReference id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.keyword_ActivityDiagramInput"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.compare.contentViewers">
-		<viewer id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.compare.contentViewers"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+		<viewer id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.compare.contentViewers"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="adinput">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
-		<viewer id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.compare.contentMergeViewers"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-			extensions="adinput" label="XActivityDiagramInput Compare">
+		<viewer id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.compare.contentMergeViewers"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+			extensions="adinput" label="ActivityDiagramInput Compare">
 		</viewer>
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
-		<provider id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.XActivityDiagramInput.editors.documentProviders"
-			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.XActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+		<provider id="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ActivityDiagramInput.editors.documentProviders"
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
 			extensions="adinput">
 		</provider>
 	</extension>

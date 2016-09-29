@@ -1032,8 +1032,35 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInputValue_Variable() {
+		return (EReference)inputValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInputValue_Value() {
+		return (EReference)inputValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInput() {
 		return inputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInput_InputValues() {
+		return (EReference)inputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1237,8 +1264,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(traceEClass, TRACE__EXECUTED_NODES);
 
 		inputValueEClass = createEClass(INPUT_VALUE);
+		createEReference(inputValueEClass, INPUT_VALUE__VARIABLE);
+		createEReference(inputValueEClass, INPUT_VALUE__VALUE);
 
 		inputEClass = createEClass(INPUT);
+		createEReference(inputEClass, INPUT__INPUT_VALUES);
 
 		controlTokenEClass = createEClass(CONTROL_TOKEN);
 
@@ -1520,8 +1550,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getTrace_ExecutedNodes(), this.getActivityNode(), null, "executedNodes", null, 0, -1, Trace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInputValue_Variable(), this.getVariable(), null, "variable", null, 0, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInputValue_Value(), this.getValue(), null, "value", null, 0, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInput_InputValues(), this.getInputValue(), null, "inputValues", null, 0, -1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controlTokenEClass, ControlToken.class, "ControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1880,7 +1913,22 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
+		  (getInputValue_Variable(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getInputValue_Value(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (inputEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getInput_InputValues(), 
 		   source, 
 		   new String[] {
 		   });	

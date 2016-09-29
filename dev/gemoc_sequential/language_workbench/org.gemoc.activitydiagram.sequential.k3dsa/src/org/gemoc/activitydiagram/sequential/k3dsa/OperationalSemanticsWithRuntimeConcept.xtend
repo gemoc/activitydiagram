@@ -49,7 +49,8 @@ import static extension org.gemoc.activitydiagram.sequential.k3dsa.OfferAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TokenAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TraceAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect.*
-import fr.inria.diverse.k3.al.annotationprocessor.Opposite
+import dynamic.activitydiagram.Input
+import dynamic.activitydiagram.InputValue
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -539,3 +540,20 @@ class TraceAspect {
 	
 }
 
+@Aspect(className=Input)
+class InputAspect {
+	
+	@Containment
+	public UniqueEList<InputValue> inputValues
+	
+}
+
+@Aspect(className=InputValue)
+class InputValueAspect {
+	
+	public Variable variable
+	
+	@Containment
+	public Value value
+	
+}

@@ -6,6 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
