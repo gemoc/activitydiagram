@@ -77,6 +77,7 @@ import activitydiagram.ForkedToken
 import fr.inria.diverse.k3.al.annotationprocessor.Containment
 import activitydiagram.SendSignalAction
 import activitydiagram.AcceptEventAction
+import org.eclipse.emf.common.util.EList
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -156,9 +157,9 @@ class Util {
 //	}
 //}
 
-
-class RuntimeTrace {
-	public List<ActivityNode> executedNodes = new ArrayList<ActivityNode>();
+@Aspect(className=RuntimeTrace)
+class RuntimeTraceAspect {
+	public EList<ActivityNode> executedNodes;
 }
 //
 //class ControlToken extends Token {
