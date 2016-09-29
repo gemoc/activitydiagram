@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagram" nsURI="http://xactivitydiagrammt/activitydiagram/" nsPrefix="activitydiagram">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagram" nsURI="http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/activitydiagram/" nsPrefix="activitydiagram">
   <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="//NamedElement">
     <eOperations name="initializeModel">
       <eAnnotations source="aspect"/>
@@ -46,7 +46,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1" eType="//ActivityEdge" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locals" upperBound="-1" eType="//Variable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1" eType="//Variable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="//Trace" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trace" unique="false" eType="//Trace">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -86,7 +86,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="running" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1" eType="//Token" containment="true" eOpposite="//Token/holder">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="heldTokens" upperBound="-1" eType="//Token" containment="true">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -186,7 +186,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" eType="//Value" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" unique="false" eType="//Value">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -288,17 +288,6 @@
     <eLiterals name="AND" literal="&amp;&amp;"/>
     <eLiterals name="OR" value="1" literal="||"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Offer">
-    <eAnnotations source="aspect"/>
-    <eOperations name="hasTokens1">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    </eOperations>
-    <eOperations name="removeWithdrawnTokens1">
-      <eAnnotations source="aspect"/>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokens" upperBound="-1" eType="//Token"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Token">
     <eAnnotations source="aspect"/>
     <eOperations name="transfer1" eType="//Token">
@@ -312,28 +301,45 @@
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="holder" lowerBound="1" eType="//ActivityNode" eOpposite="//ActivityNode/heldTokens"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="holder" unique="false" eType="//ActivityNode">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Offer">
+    <eAnnotations source="aspect"/>
+    <eOperations name="hasTokens1">
+      <eAnnotations source="aspect"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eOperations>
+    <eOperations name="removeWithdrawnTokens1">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokens" unique="false" upperBound="-1" eType="//Token">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trace">
     <eAnnotations source="aspect"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false" upperBound="-1" eType="//ActivityNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false" upperBound="-1" eType="//ActivityNode">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputValue">
     <eAnnotations source="aspect"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="//Value" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1" eType="//Variable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input">
     <eAnnotations source="aspect"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" upperBound="-1" eType="//InputValue" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ControlToken" eSuperTypes="//Token">
     <eAnnotations source="aspect"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ForkedToken" eSuperTypes="//Token">
     <eAnnotations source="aspect"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="baseToken" lowerBound="1" eType="//Token"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount" lowerBound="1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseToken" unique="false" eType="//Token">
+      <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount" unique="false">
+      <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eStructuralFeatures>
   </eClassifiers>

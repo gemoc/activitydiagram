@@ -11,6 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -46,8 +47,31 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTracePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Trace feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTracePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_trace_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_trace_feature", "_UI_Activity_type"),
+				 ActivitydiagramPackage.Literals.ACTIVITY__TRACE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -66,7 +90,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__EDGES);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__LOCALS);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__INPUTS);
-			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__TRACE);
 		}
 		return childrenFeatures;
 	}
@@ -126,7 +149,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			case ActivitydiagramPackage.ACTIVITY__EDGES:
 			case ActivitydiagramPackage.ACTIVITY__LOCALS:
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -218,11 +240,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(ActivitydiagramPackage.Literals.ACTIVITY__INPUTS,
 				 ActivitydiagramFactory.eINSTANCE.createBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ActivitydiagramPackage.Literals.ACTIVITY__TRACE,
-				 ActivitydiagramFactory.eINSTANCE.createTrace()));
 	}
 
 	/**

@@ -54,18 +54,18 @@ public class BooleanVariableAspect extends VariableAspect {
   }
   
   protected static void _privk3_init(final BooleanVariableAspectBooleanVariableAspectProperties _self_, final BooleanVariable _self) {
-    Value _currentValue = _self.getCurrentValue();
+    Value _currentValue = VariableAspect.currentValue(_self);
     boolean _equals = Objects.equal(_currentValue, null);
     if (_equals) {
       Value _initialValue = _self.getInitialValue();
       boolean _notEquals = (!Objects.equal(_initialValue, null));
       if (_notEquals) {
         Value _initialValue_1 = _self.getInitialValue();
-        _self.setCurrentValue(_initialValue_1);
+        VariableAspect.currentValue(_self, _initialValue_1);
       } else {
         final BooleanValue defaultValue = ActivitydiagramFactory.eINSTANCE.createBooleanValue();
         defaultValue.setValue(false);
-        _self.setCurrentValue(defaultValue);
+        VariableAspect.currentValue(_self, defaultValue);
       }
     }
   }
@@ -80,7 +80,7 @@ public class BooleanVariableAspect extends VariableAspect {
     String _name = _self.getName();
     text.append(_name);
     text.append(" = ");
-    Value _currentValue = _self.getCurrentValue();
+    Value _currentValue = VariableAspect.currentValue(_self);
     boolean _isValue = ((BooleanValue) _currentValue).isValue();
     text.append(_isValue);
     return text.toString();

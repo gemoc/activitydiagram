@@ -15,7 +15,6 @@ import activitydiagram.ControlFlow
 import activitydiagram.DecisionNode
 import activitydiagram.Expression
 import activitydiagram.ForkNode
-import activitydiagram.ForkedToken
 import activitydiagram.InitialNode
 import activitydiagram.IntegerCalculationExpression
 import activitydiagram.IntegerCalculationOperator
@@ -26,24 +25,31 @@ import activitydiagram.IntegerVariable
 import activitydiagram.JoinNode
 import activitydiagram.MergeNode
 import activitydiagram.NamedElement
-import activitydiagram.Offer
 import activitydiagram.OpaqueAction
-import activitydiagram.Token
 import activitydiagram.Value
 import activitydiagram.Variable
+import dynamic.activitydiagram.ForkedToken
+import dynamic.activitydiagram.Offer
+import dynamic.activitydiagram.Token
+import dynamic.activitydiagram.Trace
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
+import fr.inria.diverse.k3.al.annotationprocessor.Containment
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 import fr.inria.diverse.k3.al.annotationprocessor.Main
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import fr.inria.diverse.k3.al.annotationprocessor.Step
 import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.common.util.UniqueEList
 
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ActivityEdgeAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ActivityNodeAspect.*
+import static extension org.gemoc.activitydiagram.sequential.k3dsa.ForkedTokenAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.OfferAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TokenAspect.*
+import static extension org.gemoc.activitydiagram.sequential.k3dsa.TraceAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect.*
+import fr.inria.diverse.k3.al.annotationprocessor.Opposite
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -53,12 +59,15 @@ class Util {
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
 
+	public Trace trace
+
 	@InitializeModel
 	def void initializeModel(EList<String> args) {
 	}
 
 	@Main
 	def void main() {
+		_self.trace = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createTrace
 		_self.execute
 	}
 
@@ -67,18 +76,22 @@ class ActivityAspect extends NamedElementAspect {
 	def void execute() {
 		_self.locals.forEach[v|v.init()]
 		_self.inputs.forEach[v|v.init()]
-		_self.nodes.filter[node|node instanceof InitialNode].get(0).execute()
+		var toExecute = _self.nodes.filter[node|node instanceof InitialNode].get(0)
+		_self.trace.executedNodes.add(toExecute)
+		toExecute.execute
 
 		var list = _self.nodes.filter[node|node.hasOffers1]
 		while (list != null && list.size > 0) {
-			list.get(0).execute()
+			toExecute = list.get(0)
+			_self.trace.executedNodes.add(toExecute)
+			toExecute.execute
 			list = _self.nodes.filter[node|node.hasOffers1]
 		}
 	}
 
 	@Step
 	def void reset() {
-		_self.trace = null;
+		_self.trace = null
 	}
 	
 	def int getIntegerVariableValue(String variableName) {
@@ -91,17 +104,17 @@ class ActivityAspect extends NamedElementAspect {
 	}
 
 	def boolean getBooleanVariableValue(String variableName) {
-		var currentValue = _self.getVariableValue(variableName);
+		var currentValue = _self.getVariableValue(variableName)
 		if (currentValue instanceof BooleanValue) {
-			var booleanValue = currentValue as BooleanValue;
-			return booleanValue.isValue();
+			var booleanValue = currentValue as BooleanValue
+			return booleanValue.isValue()
 		}
 		return false;
 	}
 
 	def Value getVariableValue(String variableName) {
-		var variable = _self.getVariable(variableName);
-		var currentValue = variable.getCurrentValue();
+		var variable = _self.getVariable(variableName)
+		var currentValue = variable.currentValue
 		return currentValue;
 	}
 
@@ -126,6 +139,10 @@ class NamedElementAspect {
 
 @Aspect(className=ActivityNode)
 class ActivityNodeAspect extends NamedElementAspect {
+	
+	@Containment
+	public UniqueEList<Token> heldTokens = new UniqueEList
+	
 	@OverrideAspectMethod
 	@Step
 	def void execute() {
@@ -133,75 +150,80 @@ class ActivityNodeAspect extends NamedElementAspect {
 
 	@Step
 	def void terminate() {
-		_self.running = false;
+		_self.running = false
 	}
 
 	def boolean isReady() {
-		return _self.isRunning();
+		return _self.isRunning()
 	}
 
 	@Step
 	def void sendOffers1(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
-			edge.sendOffer1(tokens);
+			edge.sendOffer1(tokens)
 		}
 	}
 
 	@Step
 	def EList<Token> takeOfferdTokens1() {
-		val allTokens = new BasicEList<Token>();
+		val allTokens = new BasicEList<Token>()
 		for (ActivityEdge edge : _self.getIncoming()) {
-			val tokens = edge.takeOfferedTokens1();
+			val tokens = edge.takeOfferedTokens1()
 			for (Token token : tokens) {
-				token.withdraw1();
+				token.withdraw1
 				token.holder = _self
+				_self.heldTokens.add(token)
 			}
-			allTokens.addAll(tokens);
+			allTokens.addAll(tokens)
 		}
-		return allTokens;
+		return allTokens
 	}
 
 	@Step
 	def void addTokens1(EList<Token> tokens) {
 		for (Token token : tokens) {
-			var transferredToken = token.transfer1(_self);
-			_self.heldTokens.add(transferredToken);
+			var transferredToken = token.transfer1(_self)
+			_self.heldTokens.add(transferredToken)
 		}
 	}
 
 	def boolean hasOffers1() {
-		var hasOffer = true;
+		var hasOffer = true
 		for (ActivityEdge edge : _self.getIncoming()) {
 			if (!edge.hasOffer1()) {
-				hasOffer = false;
+				hasOffer = false
 			}
 		}
-		return hasOffer;
+		return hasOffer
 	}
 
 	@Step
 	def void removeToken1(Token token) {
-		_self.heldTokens.remove(token);
+		_self.heldTokens.remove(token)
 	}
 }
 
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
+	
+	@Containment
+	public UniqueEList<Offer> offers = new UniqueEList
+	
 	def void sendOffer1(EList<Token> tokens) {
-		val offer = ActivitydiagramFactory.eINSTANCE.createOffer;
-		tokens.forEach[token|offer.offeredTokens.add(token)];
-		_self.offers.add(offer);
+		val offer = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer
+		_self.offers.add(offer)
+		tokens.forEach[token|offer.offeredTokens.add(token)]
 	}
 
 	def EList<Token> takeOfferedTokens1() {
-		val tokens = new BasicEList<Token>()
+		val tokens = new BasicEList<Token>
 		_self.offers.forEach[o|tokens.addAll(o.offeredTokens)]
-		_self.offers.clear();
-		return tokens;
+		_self.offers.clear
+		return tokens
 	}
 
 	def boolean hasOffer1() {
-		return _self.offers.exists[o1|o1.hasTokens1()]
+		return _self.offers.exists[o1|o1.hasTokens1]
 	}
 }
 
@@ -221,8 +243,9 @@ class OpaqueActionAspect extends ActivityNodeAspect {
 class InitialNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		var r = ActivitydiagramFactory.eINSTANCE.createControlToken
+		var r = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createControlToken
 		r.holder = _self
+		_self.heldTokens.add(r)
 		var list = new BasicEList<Token>
 		list.add(r)
 		_self.sendOffers1(list)
@@ -254,15 +277,15 @@ class ForkNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
 		var tokens = _self.takeOfferdTokens1
-		var forkedTokens = new BasicEList<Token>();
+		var forkedTokens = new BasicEList<Token>()
 		for (Token token : tokens) {
-			var forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken;
-			forkedToken.baseToken = token;
-			forkedToken.remainingOffersCount = _self.outgoing.size();
-			forkedTokens.add(forkedToken);
+			var forkedToken = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createForkedToken
+			forkedToken.baseToken = token
+			forkedToken.remainingOffersCount = _self.outgoing.size()
+			forkedTokens.add(forkedToken)
 		}
-		_self.addTokens1(forkedTokens);
-		_self.sendOffers1(forkedTokens);
+		_self.addTokens1(forkedTokens)
+		_self.sendOffers1(forkedTokens)
 	}
 }
 
@@ -316,6 +339,9 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 
 @Aspect(className=Variable)
 class VariableAspect {
+	
+	public Value currentValue
+	
 	@Step
 	def void execute() {
 	}
@@ -330,6 +356,7 @@ class VariableAspect {
 
 @Aspect(className=IntegerVariable)
 class IntegerVariableAspect extends VariableAspect {
+	
 	@OverrideAspectMethod
 	def void execute() {
 	}
@@ -352,7 +379,7 @@ class IntegerVariableAspect extends VariableAspect {
 		var text = new StringBuffer();
 		text.append(_self.getName());
 		text.append(" = ");
-		text.append((_self.getCurrentValue() as IntegerValue).getValue());
+		text.append((_self.currentValue as IntegerValue).getValue());
 		return text.toString();
 	}
 }
@@ -381,7 +408,7 @@ class BooleanVariableAspect extends VariableAspect {
 		var text = new StringBuffer();
 		text.append(_self.getName());
 		text.append(" = ");
-		text.append((_self.getCurrentValue() as BooleanValue).isValue());
+		text.append((_self.currentValue as BooleanValue).isValue());
 		return text.toString();
 	}
 
@@ -452,6 +479,8 @@ class BooleanBinaryExpressionAspect extends ExpressionAspect {
 
 @Aspect(className=Offer)
 class OfferAspect {
+	
+	public EList<Token> offeredTokens = new BasicEList
 
 	def boolean hasTokens1() {
 		_self.removeWithdrawnTokens1();
@@ -467,11 +496,12 @@ class OfferAspect {
 		]
 		_self.offeredTokens.removeAll(tokensToBeRemoved);
 	}
-
 }
 
 @Aspect(className=Token)
 class TokenAspect {
+	
+	public ActivityNode holder
 
 	def Token transfer1(ActivityNode holder) {
 		if (_self.holder != null) {
@@ -482,7 +512,7 @@ class TokenAspect {
 	}
 
 	def void withdraw1() {
-		if (!_self.isWithdrawn()) {
+		if (!_self.isWithdrawn) {
 			_self.holder.removeToken1(_self);
 			_self.holder = null;
 		}
@@ -492,3 +522,20 @@ class TokenAspect {
 		return _self.holder == null;
 	}
 }
+
+@Aspect(className=ForkedToken)
+class ForkedTokenAspect {
+	
+	public Token baseToken
+	
+	public int remainingOffersCount
+	
+}
+
+@Aspect(className=Trace)
+class TraceAspect {
+	
+	public EList<ActivityNode> executedNodes = new BasicEList
+	
+}
+

@@ -7,7 +7,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated XActivityDiagram -->
       <package
-            uri="http://xactivitydiagram/activitydiagram/"
+            uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/"
             class="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage"
             genModel="model/XActivityDiagram.genmodel"/>
    </extension>

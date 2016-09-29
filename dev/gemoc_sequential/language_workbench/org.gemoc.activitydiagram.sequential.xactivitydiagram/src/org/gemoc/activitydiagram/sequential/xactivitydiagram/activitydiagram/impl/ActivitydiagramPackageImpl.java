@@ -269,14 +269,14 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass offerEClass = null;
+	private EClass tokenEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tokenEClass = null;
+	private EClass offerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -965,24 +965,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOffer() {
-		return offerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getOffer_OfferedTokens() {
-		return (EReference)offerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getToken() {
 		return tokenEClass;
 	}
@@ -994,6 +976,24 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EReference getToken_Holder() {
 		return (EReference)tokenEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOffer() {
+		return offerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOffer_OfferedTokens() {
+		return (EReference)offerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1028,35 +1028,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInputValue_Value() {
-		return (EReference)inputValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInputValue_Variable() {
-		return (EReference)inputValueEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getInput() {
 		return inputEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInput_InputValues() {
-		return (EReference)inputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1250,21 +1223,18 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(booleanBinaryExpressionEClass, BOOLEAN_BINARY_EXPRESSION__OPERAND2);
 		createEAttribute(booleanBinaryExpressionEClass, BOOLEAN_BINARY_EXPRESSION__OPERATOR);
 
-		offerEClass = createEClass(OFFER);
-		createEReference(offerEClass, OFFER__OFFERED_TOKENS);
-
 		tokenEClass = createEClass(TOKEN);
 		createEReference(tokenEClass, TOKEN__HOLDER);
+
+		offerEClass = createEClass(OFFER);
+		createEReference(offerEClass, OFFER__OFFERED_TOKENS);
 
 		traceEClass = createEClass(TRACE);
 		createEReference(traceEClass, TRACE__EXECUTED_NODES);
 
 		inputValueEClass = createEClass(INPUT_VALUE);
-		createEReference(inputValueEClass, INPUT_VALUE__VALUE);
-		createEReference(inputValueEClass, INPUT_VALUE__VARIABLE);
 
 		inputEClass = createEClass(INPUT);
-		createEReference(inputEClass, INPUT__INPUT_VALUES);
 
 		controlTokenEClass = createEClass(CONTROL_TOKEN);
 
@@ -1341,7 +1311,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivity_Edges(), this.getActivityEdge(), null, "edges", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Locals(), this.getVariable(), null, "locals", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Inputs(), this.getVariable(), null, "inputs", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivity_Trace(), this.getTrace(), null, "trace", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Trace(), this.getTrace(), null, "trace", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(activityEClass, null, "initializeModel", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "args", 0, -1, IS_UNIQUE, IS_ORDERED);
@@ -1369,7 +1339,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivityNode_Incoming(), this.getActivityEdge(), this.getActivityEdge_Target(), "incoming", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityNode_Activity(), this.getActivity(), this.getActivity_Nodes(), "activity", null, 1, 1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivityNode_Running(), ecorePackage.getEBoolean(), "running", null, 1, 1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivityNode_HeldTokens(), this.getToken(), this.getToken_Holder(), "heldTokens", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityNode_HeldTokens(), this.getToken(), null, "heldTokens", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(activityNodeEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1457,7 +1427,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_InitialValue(), this.getValue(), null, "initialValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariable_CurrentValue(), this.getValue(), null, "currentValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_CurrentValue(), this.getValue(), null, "currentValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(variableEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1525,15 +1495,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(booleanBinaryExpressionEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(offerEClass, Offer.class, "Offer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOffer_OfferedTokens(), this.getToken(), null, "offeredTokens", null, 0, -1, Offer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		addEOperation(offerEClass, ecorePackage.getEBoolean(), "hasTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(offerEClass, null, "removeWithdrawnTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToken_Holder(), this.getActivityNode(), this.getActivityNode_HeldTokens(), "holder", null, 1, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToken_Holder(), this.getActivityNode(), null, "holder", null, 0, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(tokenEClass, this.getToken(), "transfer1", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getActivityNode(), "holder", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1542,21 +1505,25 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(tokenEClass, ecorePackage.getEBoolean(), "isWithdrawn", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEClass(offerEClass, Offer.class, "Offer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOffer_OfferedTokens(), this.getToken(), null, "offeredTokens", null, 0, -1, Offer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(offerEClass, ecorePackage.getEBoolean(), "hasTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(offerEClass, null, "removeWithdrawnTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(traceEClass, Trace.class, "Trace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTrace_ExecutedNodes(), this.getActivityNode(), null, "executedNodes", null, 0, -1, Trace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInputValue_Value(), this.getValue(), null, "value", null, 1, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInputValue_Variable(), this.getVariable(), null, "variable", null, 1, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInput_InputValues(), this.getInputValue(), null, "inputValues", null, 0, -1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controlTokenEClass, ControlToken.class, "ControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(forkedTokenEClass, ForkedToken.class, "ForkedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getForkedToken_BaseToken(), this.getToken(), null, "baseToken", null, 1, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getForkedToken_RemainingOffersCount(), ecorePackage.getEInt(), "remainingOffersCount", null, 1, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getForkedToken_BaseToken(), this.getToken(), null, "baseToken", null, 0, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getForkedToken_RemainingOffersCount(), ecorePackage.getEInt(), "remainingOffersCount", null, 0, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(integerCalculationOperatorEEnum, IntegerCalculationOperator.class, "IntegerCalculationOperator");
@@ -1849,21 +1816,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
-		  (offerEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (offerEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (offerEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (tokenEClass, 
 		   source, 
 		   new String[] {
@@ -1884,7 +1836,37 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
+		  (getToken_Holder(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (offerEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (offerEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (offerEClass.getEOperations().get(1), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getOffer_OfferedTokens(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (traceEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getTrace_ExecutedNodes(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1905,6 +1887,16 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (forkedTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getForkedToken_BaseToken(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getForkedToken_RemainingOffersCount(), 
 		   source, 
 		   new String[] {
 		   });

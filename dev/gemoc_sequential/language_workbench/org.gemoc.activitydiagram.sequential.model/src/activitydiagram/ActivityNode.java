@@ -11,14 +11,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.ActivityNode#getOutgoing <em>Outgoing</em>}</li>
  *   <li>{@link activitydiagram.ActivityNode#getIncoming <em>Incoming</em>}</li>
  *   <li>{@link activitydiagram.ActivityNode#getActivity <em>Activity</em>}</li>
  *   <li>{@link activitydiagram.ActivityNode#isRunning <em>Running</em>}</li>
- *   <li>{@link activitydiagram.ActivityNode#getHeldTokens <em>Held Tokens</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getActivityNode()
  * @model abstract="true"
@@ -114,23 +113,5 @@ public interface ActivityNode extends NamedElement {
 	 * @generated
 	 */
 	void setRunning(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagram.Token}.
-	 * It is bidirectional and its opposite is '{@link activitydiagram.Token#getHolder <em>Holder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Held Tokens</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Held Tokens</em>' containment reference list.
-	 * @see activitydiagram.ActivitydiagramPackage#getActivityNode_HeldTokens()
-	 * @see activitydiagram.Token#getHolder
-	 * @model opposite="holder" containment="true"
-	 * @generated
-	 */
-	EList<Token> getHeldTokens();
 
 } // ActivityNode

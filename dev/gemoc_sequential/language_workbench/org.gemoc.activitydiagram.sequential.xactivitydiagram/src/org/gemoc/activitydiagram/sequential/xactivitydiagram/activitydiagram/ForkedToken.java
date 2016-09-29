@@ -32,7 +32,7 @@ public interface ForkedToken extends Token {
 	 * @return the value of the '<em>Base Token</em>' reference.
 	 * @see #setBaseToken(Token)
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage#getForkedToken_BaseToken()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	Token getBaseToken();
@@ -58,7 +58,7 @@ public interface ForkedToken extends Token {
 	 * @return the value of the '<em>Remaining Offers Count</em>' attribute.
 	 * @see #setRemainingOffersCount(int)
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage#getForkedToken_RemainingOffersCount()
-	 * @model required="true"
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getRemainingOffersCount();

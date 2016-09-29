@@ -8,9 +8,6 @@ import activitydiagramTrace.States.Activity_trace_Value;
 import activitydiagramTrace.States.BooleanValue_value_Value;
 import activitydiagramTrace.States.ForkedToken_baseToken_Value;
 import activitydiagramTrace.States.ForkedToken_remainingOffersCount_Value;
-import activitydiagramTrace.States.InputValue_value_Value;
-import activitydiagramTrace.States.InputValue_variable_Value;
-import activitydiagramTrace.States.Input_inputValues_Value;
 import activitydiagramTrace.States.IntegerValue_value_Value;
 import activitydiagramTrace.States.Offer_offeredTokens_Value;
 import activitydiagramTrace.States.State;
@@ -51,9 +48,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getEndedSteps <em>Ended Steps</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getInputValue_value_Values <em>Input Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getInputValue_variable_Values <em>Input Value variable Values</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getInput_inputValues_Values <em>Input input Values Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getIntegerValue_value_Values <em>Integer Value value Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.impl.StateImpl#getStartedSteps <em>Started Steps</em>}</li>
@@ -134,36 +128,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * @ordered
 	 */
 	protected EList<ForkedToken_remainingOffersCount_Value> forkedToken_remainingOffersCount_Values;
-
-	/**
-	 * The cached value of the '{@link #getInputValue_value_Values() <em>Input Value value Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputValue_value_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputValue_value_Value> inputValue_value_Values;
-
-	/**
-	 * The cached value of the '{@link #getInputValue_variable_Values() <em>Input Value variable Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputValue_variable_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputValue_variable_Value> inputValue_variable_Values;
-
-	/**
-	 * The cached value of the '{@link #getInput_inputValues_Values() <em>Input input Values Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInput_inputValues_Values()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Input_inputValues_Value> input_inputValues_Values;
 
 	/**
 	 * The cached value of the '{@link #getIntegerValue_value_Values() <em>Integer Value value Values</em>}' reference list.
@@ -333,42 +297,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InputValue_value_Value> getInputValue_value_Values() {
-		if (inputValue_value_Values == null) {
-			inputValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<InputValue_value_Value>(InputValue_value_Value.class, this, StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES, StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES);
-		}
-		return inputValue_value_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<InputValue_variable_Value> getInputValue_variable_Values() {
-		if (inputValue_variable_Values == null) {
-			inputValue_variable_Values = new EObjectWithInverseResolvingEList.ManyInverse<InputValue_variable_Value>(InputValue_variable_Value.class, this, StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES);
-		}
-		return inputValue_variable_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Input_inputValues_Value> getInput_inputValues_Values() {
-		if (input_inputValues_Values == null) {
-			input_inputValues_Values = new EObjectWithInverseResolvingEList.ManyInverse<Input_inputValues_Value>(Input_inputValues_Value.class, this, StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES, StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES);
-		}
-		return input_inputValues_Values;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<IntegerValue_value_Value> getIntegerValue_value_Values() {
 		if (integerValue_value_Values == null) {
 			integerValue_value_Values = new EObjectWithInverseResolvingEList.ManyInverse<IntegerValue_value_Value>(IntegerValue_value_Value.class, this, StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES, StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES);
@@ -459,12 +387,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getForkedToken_baseToken_Values()).basicAdd(otherEnd, msgs);
 			case StatesPackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getForkedToken_remainingOffersCount_Values()).basicAdd(otherEnd, msgs);
-			case StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputValue_value_Values()).basicAdd(otherEnd, msgs);
-			case StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputValue_variable_Values()).basicAdd(otherEnd, msgs);
-			case StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInput_inputValues_Values()).basicAdd(otherEnd, msgs);
 			case StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIntegerValue_value_Values()).basicAdd(otherEnd, msgs);
 			case StatesPackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
@@ -503,12 +425,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return ((InternalEList<?>)getForkedToken_baseToken_Values()).basicRemove(otherEnd, msgs);
 			case StatesPackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				return ((InternalEList<?>)getForkedToken_remainingOffersCount_Values()).basicRemove(otherEnd, msgs);
-			case StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return ((InternalEList<?>)getInputValue_value_Values()).basicRemove(otherEnd, msgs);
-			case StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return ((InternalEList<?>)getInputValue_variable_Values()).basicRemove(otherEnd, msgs);
-			case StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return ((InternalEList<?>)getInput_inputValues_Values()).basicRemove(otherEnd, msgs);
 			case StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES:
 				return ((InternalEList<?>)getIntegerValue_value_Values()).basicRemove(otherEnd, msgs);
 			case StatesPackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
@@ -547,12 +463,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return getForkedToken_baseToken_Values();
 			case StatesPackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				return getForkedToken_remainingOffersCount_Values();
-			case StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return getInputValue_value_Values();
-			case StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return getInputValue_variable_Values();
-			case StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return getInput_inputValues_Values();
 			case StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES:
 				return getIntegerValue_value_Values();
 			case StatesPackage.STATE__OFFER_OFFERED_TOKENS_VALUES:
@@ -605,18 +515,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			case StatesPackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				getForkedToken_remainingOffersCount_Values().clear();
 				getForkedToken_remainingOffersCount_Values().addAll((Collection<? extends ForkedToken_remainingOffersCount_Value>)newValue);
-				return;
-			case StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				getInputValue_value_Values().clear();
-				getInputValue_value_Values().addAll((Collection<? extends InputValue_value_Value>)newValue);
-				return;
-			case StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				getInputValue_variable_Values().clear();
-				getInputValue_variable_Values().addAll((Collection<? extends InputValue_variable_Value>)newValue);
-				return;
-			case StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				getInput_inputValues_Values().clear();
-				getInput_inputValues_Values().addAll((Collection<? extends Input_inputValues_Value>)newValue);
 				return;
 			case StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES:
 				getIntegerValue_value_Values().clear();
@@ -675,15 +573,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			case StatesPackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				getForkedToken_remainingOffersCount_Values().clear();
 				return;
-			case StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				getInputValue_value_Values().clear();
-				return;
-			case StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				getInputValue_variable_Values().clear();
-				return;
-			case StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				getInput_inputValues_Values().clear();
-				return;
 			case StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES:
 				getIntegerValue_value_Values().clear();
 				return;
@@ -728,12 +617,6 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 				return forkedToken_baseToken_Values != null && !forkedToken_baseToken_Values.isEmpty();
 			case StatesPackage.STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES:
 				return forkedToken_remainingOffersCount_Values != null && !forkedToken_remainingOffersCount_Values.isEmpty();
-			case StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES:
-				return inputValue_value_Values != null && !inputValue_value_Values.isEmpty();
-			case StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES:
-				return inputValue_variable_Values != null && !inputValue_variable_Values.isEmpty();
-			case StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES:
-				return input_inputValues_Values != null && !input_inputValues_Values.isEmpty();
 			case StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES:
 				return integerValue_value_Values != null && !integerValue_value_Values.isEmpty();
 			case StatesPackage.STATE__OFFER_OFFERED_TOKENS_VALUES:

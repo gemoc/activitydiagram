@@ -4,10 +4,12 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Act
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
+import fr.inria.diverse.k3.al.annotationprocessor.Containment;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.UniqueEList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect;
@@ -20,13 +22,7 @@ public class ActivityNodeAspect extends NamedElementAspect {
   @Step
   public static void execute(final ActivityNode _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode){
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
@@ -34,6 +30,12 @@ public class ActivityNodeAspect extends NamedElementAspect {
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
     					fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
     						@Override
@@ -142,10 +144,10 @@ public class ActivityNodeAspect extends NamedElementAspect {
   public static boolean hasOffers1(final ActivityNode _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
     Object result = null;
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.hasOffers1((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
+     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
     					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.hasOffers1((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
+    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.hasOffers1((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
     					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect._privk3_hasOffers1(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
@@ -168,6 +170,20 @@ public class ActivityNodeAspect extends NamedElementAspect {
     	command.execute();
     }
     ;;
+  }
+  
+  @Containment
+  public static UniqueEList<Token> heldTokens(final ActivityNode _self) {
+    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
+    Object result = null;
+    result = _privk3_heldTokens(_self_, _self);;
+    return (org.eclipse.emf.common.util.UniqueEList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token>)result;
+  }
+  
+  @Containment
+  public static void heldTokens(final ActivityNode _self, final UniqueEList<Token> heldTokens) {
+    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
+    _privk3_heldTokens(_self_, _self,heldTokens);;
   }
   
   private static void super_execute(final ActivityNode _self) {
@@ -202,7 +218,9 @@ public class ActivityNodeAspect extends NamedElementAspect {
         for (final Token token : tokens) {
           {
             TokenAspect.withdraw1(token);
-            token.setHolder(_self);
+            TokenAspect.holder(token, _self);
+            UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
+            _heldTokens.add(token);
           }
         }
         allTokens.addAll(tokens);
@@ -215,7 +233,7 @@ public class ActivityNodeAspect extends NamedElementAspect {
     for (final Token token : tokens) {
       {
         Token transferredToken = TokenAspect.transfer1(token, _self);
-        EList<Token> _heldTokens = _self.getHeldTokens();
+        UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
         _heldTokens.add(transferredToken);
       }
     }
@@ -235,7 +253,37 @@ public class ActivityNodeAspect extends NamedElementAspect {
   }
   
   protected static void _privk3_removeToken1(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self, final Token token) {
-    EList<Token> _heldTokens = _self.getHeldTokens();
+    UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
     _heldTokens.remove(token);
+  }
+  
+  protected static UniqueEList<Token> _privk3_heldTokens(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self) {
+    try {
+    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
+    		if (m.getName().equals("getHeldTokens") &&
+    			m.getParameterTypes().length == 0) {
+    				Object ret = m.invoke(_self);
+    				if (ret != null) {
+    					return (org.eclipse.emf.common.util.UniqueEList) ret;
+    				}
+    		}
+    	}
+    } catch (Exception e) {
+    	// Chut !
+    }
+    return _self_.heldTokens;
+  }
+  
+  protected static void _privk3_heldTokens(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self, final UniqueEList<Token> heldTokens) {
+    _self_.heldTokens = heldTokens; try {
+    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
+    		if (m.getName().equals("setHeldTokens")
+    				&& m.getParameterTypes().length == 1) {
+    			m.invoke(_self, heldTokens);
+    		}
+    	}
+    } catch (Exception e) {
+    	// Chut !
+    }
   }
 }

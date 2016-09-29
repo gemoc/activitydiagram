@@ -38,7 +38,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://xactivitydiagram/activitydiagram/";
+	String eNS_URI = "http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/";
 
 	/**
 	 * The package namespace name.
@@ -140,7 +140,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY__INPUTS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Trace</b></em>' containment reference.
+	 * The feature id for the '<em><b>Trace</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1190,7 +1190,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int VARIABLE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1236,7 +1236,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INTEGER_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1282,7 +1282,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int BOOLEAN_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1670,6 +1670,34 @@ public interface ActivitydiagramPackage extends EPackage {
 	int BOOLEAN_BINARY_EXPRESSION_FEATURE_COUNT = BOOLEAN_EXPRESSION_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl <em>Token</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
+	 * @generated
+	 */
+	int TOKEN = 29;
+
+	/**
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN__HOLDER = 0;
+
+	/**
+	 * The number of structural features of the '<em>Token</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.OfferImpl <em>Offer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1677,7 +1705,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getOffer()
 	 * @generated
 	 */
-	int OFFER = 29;
+	int OFFER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
@@ -1696,34 +1724,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int OFFER_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl <em>Token</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
-	 * @generated
-	 */
-	int TOKEN = 30;
-
-	/**
-	 * The feature id for the '<em><b>Holder</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN__HOLDER = 0;
-
-	/**
-	 * The number of structural features of the '<em>Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
@@ -1764,31 +1764,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INPUT_VALUE = 32;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE__VALUE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE__VARIABLE = 1;
-
-	/**
 	 * The number of structural features of the '<em>Input Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_VALUE_FEATURE_COUNT = 2;
+	int INPUT_VALUE_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.InputImpl <em>Input</em>}' class.
@@ -1801,22 +1783,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INPUT = 33;
 
 	/**
-	 * The feature id for the '<em><b>Input Values</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__INPUT_VALUES = 0;
-
-	/**
 	 * The number of structural features of the '<em>Input</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 1;
+	int INPUT_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.
@@ -1829,7 +1802,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int CONTROL_TOKEN = 34;
 
 	/**
-	 * The feature id for the '<em><b>Holder</b></em>' container reference.
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1857,7 +1830,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int FORKED_TOKEN = 35;
 
 	/**
-	 * The feature id for the '<em><b>Holder</b></em>' container reference.
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1988,10 +1961,10 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getActivity_Inputs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity#getTrace <em>Trace</em>}'.
+	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity#getTrace <em>Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Trace</em>'.
+	 * @return the meta object for the reference '<em>Trace</em>'.
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity#getTrace()
 	 * @see #getActivity()
 	 * @generated
@@ -2302,10 +2275,10 @@ public interface ActivitydiagramPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue <em>Current Value</em>}'.
+	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue <em>Current Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Current Value</em>'.
+	 * @return the meta object for the reference '<em>Current Value</em>'.
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue()
 	 * @see #getVariable()
 	 * @generated
@@ -2587,6 +2560,27 @@ public interface ActivitydiagramPackage extends EPackage {
 	EAttribute getBooleanBinaryExpression_Operator();
 
 	/**
+	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token <em>Token</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Token</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token
+	 * @generated
+	 */
+	EClass getToken();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token#getHolder <em>Holder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Holder</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token#getHolder()
+	 * @see #getToken()
+	 * @generated
+	 */
+	EReference getToken_Holder();
+
+	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer <em>Offer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2606,27 +2600,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOffer_OfferedTokens();
-
-	/**
-	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token <em>Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Token</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token
-	 * @generated
-	 */
-	EClass getToken();
-
-	/**
-	 * Returns the meta object for the container reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token#getHolder <em>Holder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Holder</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token#getHolder()
-	 * @see #getToken()
-	 * @generated
-	 */
-	EReference getToken_Holder();
 
 	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace <em>Trace</em>}'.
@@ -2660,28 +2633,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getInputValue();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getValue()
-	 * @see #getInputValue()
-	 * @generated
-	 */
-	EReference getInputValue_Value();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getVariable()
-	 * @see #getInputValue()
-	 * @generated
-	 */
-	EReference getInputValue_Variable();
-
-	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2690,17 +2641,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInput();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input#getInputValues <em>Input Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input Values</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input#getInputValues()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EReference getInput_InputValues();
 
 	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken <em>Control Token</em>}'.
@@ -2849,7 +2789,7 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference ACTIVITY__INPUTS = eINSTANCE.getActivity_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Trace</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Trace</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3121,7 +3061,7 @@ public interface ActivitydiagramPackage extends EPackage {
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Current Value</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Current Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3361,6 +3301,24 @@ public interface ActivitydiagramPackage extends EPackage {
 		EAttribute BOOLEAN_BINARY_EXPRESSION__OPERATOR = eINSTANCE.getBooleanBinaryExpression_Operator();
 
 		/**
+		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl <em>Token</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
+		 * @generated
+		 */
+		EClass TOKEN = eINSTANCE.getToken();
+
+		/**
+		 * The meta object literal for the '<em><b>Holder</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TOKEN__HOLDER = eINSTANCE.getToken_Holder();
+
+		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.OfferImpl <em>Offer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3377,24 +3335,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OFFER__OFFERED_TOKENS = eINSTANCE.getOffer_OfferedTokens();
-
-		/**
-		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl <em>Token</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TokenImpl
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
-		 * @generated
-		 */
-		EClass TOKEN = eINSTANCE.getToken();
-
-		/**
-		 * The meta object literal for the '<em><b>Holder</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TOKEN__HOLDER = eINSTANCE.getToken_Holder();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
@@ -3425,22 +3365,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass INPUT_VALUE = eINSTANCE.getInputValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE__VALUE = eINSTANCE.getInputValue_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE__VARIABLE = eINSTANCE.getInputValue_Variable();
-
-		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.InputImpl <em>Input</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3449,14 +3373,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT = eINSTANCE.getInput();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Values</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT__INPUT_VALUES = eINSTANCE.getInput_InputValues();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.

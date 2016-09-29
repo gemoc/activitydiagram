@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ide.contentassist.antlr.internal,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.input.ide.contentassist.antlr
+

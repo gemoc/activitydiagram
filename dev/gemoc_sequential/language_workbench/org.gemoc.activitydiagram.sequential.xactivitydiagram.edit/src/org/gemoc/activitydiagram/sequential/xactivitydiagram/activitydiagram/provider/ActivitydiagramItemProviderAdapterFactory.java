@@ -811,8 +811,8 @@ public class ActivitydiagramItemProviderAdapterFactory extends ActivitydiagramAd
 		if (integerComparisonExpressionItemProvider != null) integerComparisonExpressionItemProvider.dispose();
 		if (booleanUnaryExpressionItemProvider != null) booleanUnaryExpressionItemProvider.dispose();
 		if (booleanBinaryExpressionItemProvider != null) booleanBinaryExpressionItemProvider.dispose();
-		if (offerItemProvider != null) offerItemProvider.dispose();
 		if (tokenItemProvider != null) tokenItemProvider.dispose();
+		if (offerItemProvider != null) offerItemProvider.dispose();
 		if (traceItemProvider != null) traceItemProvider.dispose();
 		if (inputValueItemProvider != null) inputValueItemProvider.dispose();
 		if (inputItemProvider != null) inputItemProvider.dispose();

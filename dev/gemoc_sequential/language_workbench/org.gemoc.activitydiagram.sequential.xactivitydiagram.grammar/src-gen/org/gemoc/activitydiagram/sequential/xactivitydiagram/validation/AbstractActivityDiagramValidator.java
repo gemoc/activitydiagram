@@ -13,7 +13,7 @@ public abstract class AbstractActivityDiagramValidator extends AbstractDeclarati
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://xactivitydiagram/activitydiagram/"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/"));
 		return result;
 	}
 	

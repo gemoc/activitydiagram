@@ -37,7 +37,7 @@ public interface ForkedToken_baseToken_Value extends Value {
 	 * @return the value of the '<em>Base Token</em>' reference.
 	 * @see #setBaseToken(TracedToken)
 	 * @see activitydiagramTrace.States.StatesPackage#getForkedToken_baseToken_Value_BaseToken()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	TracedToken getBaseToken();

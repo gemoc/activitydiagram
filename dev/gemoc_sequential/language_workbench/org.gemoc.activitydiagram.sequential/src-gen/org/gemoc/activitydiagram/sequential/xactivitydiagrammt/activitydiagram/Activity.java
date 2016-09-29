@@ -92,26 +92,26 @@ public interface Activity extends NamedElement {
 	EList<Variable> getInputs();
 
 	/**
-	 * Returns the value of the '<em><b>Trace</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Trace</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Trace</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Trace</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trace</em>' containment reference.
+	 * @return the value of the '<em>Trace</em>' reference.
 	 * @see #setTrace(Trace)
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage#getActivity_Trace()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	Trace getTrace();
 
 	/**
-	 * Sets the value of the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Activity#getTrace <em>Trace</em>}' containment reference.
+	 * Sets the value of the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Activity#getTrace <em>Trace</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trace</em>' containment reference.
+	 * @param value the new value of the '<em>Trace</em>' reference.
 	 * @see #getTrace()
 	 * @generated
 	 */

@@ -1,7 +1,7 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects;
 
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspectJoinNodeAspectProperties;
 
 @Aspect(className = JoinNode.class)
@@ -34,12 +35,12 @@ public class JoinNodeAspect extends ActivityNodeAspect {
   protected static void _privk3_execute(final JoinNodeAspectJoinNodeAspectProperties _self_, final JoinNode _self) {
     EList<Token> tokens = ActivityNodeAspect.takeOfferdTokens1(_self);
     final Consumer<Token> _function = (Token t) -> {
-      int _remainingOffersCount = ((ForkedToken) t).getRemainingOffersCount();
+      int _remainingOffersCount = ForkedTokenAspect.remainingOffersCount(((ForkedToken) t));
       boolean _greaterThan = (_remainingOffersCount > 1);
       if (_greaterThan) {
-        int _remainingOffersCount_1 = ((ForkedToken) t).getRemainingOffersCount();
+        int _remainingOffersCount_1 = ForkedTokenAspect.remainingOffersCount(((ForkedToken) t));
         int _minus = (_remainingOffersCount_1 - 1);
-        ((ForkedToken) t).setRemainingOffersCount(_minus);
+        ForkedTokenAspect.remainingOffersCount(((ForkedToken) t), _minus);
       } else {
         BasicEList<Token> list = new BasicEList<Token>();
         list.add(t);

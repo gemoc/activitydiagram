@@ -35,6 +35,12 @@ public class ActivityDiagramSequentialLanguageExampleWizard
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.design.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.design"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.edit.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.edit"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.editor.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.editor"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.trace.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.trace"));
 
 		return projects;

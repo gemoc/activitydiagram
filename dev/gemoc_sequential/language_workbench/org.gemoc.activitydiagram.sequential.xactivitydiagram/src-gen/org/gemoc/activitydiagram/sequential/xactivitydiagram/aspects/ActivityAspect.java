@@ -8,6 +8,8 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Int
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable;
 import com.google.common.base.Objects;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramFactory;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel;
 import fr.inria.diverse.k3.al.annotationprocessor.Main;
@@ -22,6 +24,7 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect;
 
 @Aspect(className = Activity.class)
@@ -108,10 +111,24 @@ public class ActivityAspect extends NamedElementAspect {
     return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)result;
   }
   
+  public static Trace trace(final Activity _self) {
+    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectContext.getSelf(_self);
+    Object result = null;
+    result = _privk3_trace(_self_, _self);;
+    return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace)result;
+  }
+  
+  public static void trace(final Activity _self, final Trace trace) {
+    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectContext.getSelf(_self);
+    _privk3_trace(_self_, _self,trace);;
+  }
+  
   protected static void _privk3_initializeModel(final ActivityAspectActivityAspectProperties _self_, final Activity _self, final EList<String> args) {
   }
   
   protected static void _privk3_main(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
+    Trace _createTrace = ActivitydiagramFactory.eINSTANCE.createTrace();
+    ActivityAspect.trace(_self, _createTrace);
     ActivityAspect.execute(_self);
   }
   
@@ -136,8 +153,11 @@ public class ActivityAspect extends NamedElementAspect {
       return Boolean.valueOf((node instanceof InitialNode));
     };
     Iterable<ActivityNode> _filter = IterableExtensions.<ActivityNode>filter(_nodes, _function_2);
-    ActivityNode _get = ((ActivityNode[])Conversions.unwrapArray(_filter, ActivityNode.class))[0];
-    ActivityNodeAspect.execute(_get);
+    ActivityNode toExecute = ((ActivityNode[])Conversions.unwrapArray(_filter, ActivityNode.class))[0];
+    Trace _trace = ActivityAspect.trace(_self);
+    EList<ActivityNode> _executedNodes = TraceAspect.executedNodes(_trace);
+    _executedNodes.add(toExecute);
+    ActivityNodeAspect.execute(toExecute);
     EList<ActivityNode> _nodes_1 = _self.getNodes();
     final Function1<ActivityNode, Boolean> _function_3 = (ActivityNode node) -> {
       return Boolean.valueOf(ActivityNodeAspect.hasOffers1(node));
@@ -146,8 +166,12 @@ public class ActivityAspect extends NamedElementAspect {
     while (((!Objects.equal(list, null)) && (IterableExtensions.size(list) > 0))) {
       {
         final Iterable<ActivityNode> _converted_list = (Iterable<ActivityNode>)list;
-        ActivityNode _get_1 = ((ActivityNode[])Conversions.unwrapArray(_converted_list, ActivityNode.class))[0];
-        ActivityNodeAspect.execute(_get_1);
+        ActivityNode _get = ((ActivityNode[])Conversions.unwrapArray(_converted_list, ActivityNode.class))[0];
+        toExecute = _get;
+        Trace _trace_1 = ActivityAspect.trace(_self);
+        EList<ActivityNode> _executedNodes_1 = TraceAspect.executedNodes(_trace_1);
+        _executedNodes_1.add(toExecute);
+        ActivityNodeAspect.execute(toExecute);
         EList<ActivityNode> _nodes_2 = _self.getNodes();
         final Function1<ActivityNode, Boolean> _function_4 = (ActivityNode node) -> {
           return Boolean.valueOf(ActivityNodeAspect.hasOffers1(node));
@@ -159,7 +183,7 @@ public class ActivityAspect extends NamedElementAspect {
   }
   
   protected static void _privk3_reset(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
-    _self.setTrace(null);
+    ActivityAspect.trace(_self, null);
   }
   
   protected static int _privk3_getIntegerVariableValue(final ActivityAspectActivityAspectProperties _self_, final Activity _self, final String variableName) {
@@ -182,7 +206,7 @@ public class ActivityAspect extends NamedElementAspect {
   
   protected static Value _privk3_getVariableValue(final ActivityAspectActivityAspectProperties _self_, final Activity _self, final String variableName) {
     Variable variable = ActivityAspect.getVariable(_self, variableName);
-    Value currentValue = variable.getCurrentValue();
+    Value currentValue = VariableAspect.currentValue(variable);
     return currentValue;
   }
   
@@ -200,5 +224,35 @@ public class ActivityAspect extends NamedElementAspect {
       }
     }
     return null;
+  }
+  
+  protected static Trace _privk3_trace(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
+    try {
+    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
+    		if (m.getName().equals("getTrace") &&
+    			m.getParameterTypes().length == 0) {
+    				Object ret = m.invoke(_self);
+    				if (ret != null) {
+    					return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) ret;
+    				}
+    		}
+    	}
+    } catch (Exception e) {
+    	// Chut !
+    }
+    return _self_.trace;
+  }
+  
+  protected static void _privk3_trace(final ActivityAspectActivityAspectProperties _self_, final Activity _self, final Trace trace) {
+    _self_.trace = trace; try {
+    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
+    		if (m.getName().equals("setTrace")
+    				&& m.getParameterTypes().length == 1) {
+    			m.invoke(_self, trace);
+    		}
+    	}
+    } catch (Exception e) {
+    	// Chut !
+    }
   }
 }

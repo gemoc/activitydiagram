@@ -33,6 +33,7 @@ import org.eclipse.emf.compare.scope.IComparisonScope;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreEList;
 import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
 
@@ -126,15 +127,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		for (activitydiagramTrace.States.activitydiagram.TracedInitialNode tracedObject : traceRoot
 				.getActivitydiagram_tracedInitialNodes()) {
 			result.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : traceRoot
-				.getActivitydiagram_tracedInputs()) {
-			result.add(tracedObject.getInputValuesSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : traceRoot
-				.getActivitydiagram_tracedInputValues()) {
-			result.add(tracedObject.getValueSequence());
-			result.add(tracedObject.getVariableSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedIntegerValue tracedObject : traceRoot
 				.getActivitydiagram_tracedIntegerValues()) {
@@ -597,15 +589,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 				.eContainer()).getActivitydiagram_tracedInitialNodes()) {
 			traces.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedInputs()) {
-			traces.add(tracedObject.getInputValuesSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedInputValues()) {
-			traces.add(tracedObject.getValueSequence());
-			traces.add(tracedObject.getVariableSequence());
-		}
 		for (activitydiagramTrace.States.activitydiagram.TracedIntegerValue tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedIntegerValues()) {
 			traces.add(tracedObject.getValueSequence());
@@ -813,7 +796,17 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		if (object instanceof EObject) {
 			final Object originalObject = getOriginalObject((EObject) object);
 			if (originalObject != null) {
+				if (originalObject instanceof EObject) {
+					final QualifiedName qname = nameProvider.getFullyQualifiedName((EObject) originalObject);
+					if (qname != null) {
+						return qname.getLastSegment();
+					}
+				}
 				return originalObject.toString();
+			}
+			QualifiedName qname = nameProvider.getFullyQualifiedName((EObject) object);
+			if (qname != null) {
+				return qname.getLastSegment();
 			}
 		}
 		if (object instanceof Collection) {
@@ -835,17 +828,32 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 			if (valueTrace.isEmpty()) {
 				return "";
 			}
-			final activitydiagramTrace.States.Value value = valueTrace.get(0);
-			final EObject container = value.eContainer();
-			attributeName = getValueName(value);
-			final Object originalObject = getOriginalObject(container);
-			if (originalObject instanceof EObject) {
-				final EObject eObject = (EObject) originalObject;
-				final QualifiedName qname = nameProvider.getFullyQualifiedName(eObject);
-				if (qname == null) {
-					return attributeName + " (" + eObject.toString() + ")";
-				} else {
-					return attributeName + " (" + qname.toString() + " :" + eObject.eClass().getName() + ")";
+			if (valueTrace instanceof EcoreEList) {
+				final EcoreEList<?> eList = (EcoreEList<?>) valueTrace;
+				final EObject owner = eList.getEObject();
+				final List<String> attributes = owner.eClass().getEAllReferences().stream()
+						.filter(r -> r.getName().endsWith("Sequence"))
+						.map(r -> r.getName().substring(0, r.getName().length() - 8)).collect(Collectors.toList());
+				final Object originalObject = getOriginalObject(owner);
+				if (!attributes.isEmpty()) {
+					String n = eList.data().getClass().getComponentType().getName();
+					attributeName = attributes.stream().filter(s -> n.contains("_" + s + "_")).findFirst().orElse("");
+				}
+				if (originalObject != null) {
+					if (originalObject instanceof EObject) {
+						final EObject eObject = (EObject) originalObject;
+						if (eObject.eIsProxy()) {
+							final String proxyToString = eObject.toString();
+							final int idx = proxyToString.indexOf("eProxyURI: ") + 11;
+							final String s = proxyToString.substring(idx, proxyToString.length() - 1);
+							return attributeName + " (" + s + ")";
+						}
+						final QualifiedName qname = nameProvider.getFullyQualifiedName(eObject);
+						if (qname != null) {
+							return attributeName + " (" + qname.toString() + " :" + eObject.eClass().getName() + ")";
+						}
+					}
+					return attributeName + " (" + originalObject.toString() + ")";
 				}
 			}
 		}
@@ -857,7 +865,8 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		String result = "";
 		for (int i = 0; i < valueTraces.size(); i++) {
 			if (!isValueTraceIgnored(i)) {
-				result += (result.length() == 0 ? "" : "\n") + getValueDescription(i, stateIndex);
+				String description = getValueDescription(i, stateIndex);
+				result += (description == null ? "" : (result.length() == 0 ? "" : "\n") + description);
 			}
 		}
 		return result;
@@ -865,16 +874,15 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 
 	@Override
 	public String getValueDescription(int traceIndex, int stateIndex) {
-		String description = getValueLabel(traceIndex) + " : ";
 		final EObject value = getValueAt(traceIndex, stateIndex);
 		if (value == null) {
 			return null;
 		}
+		String description = getValueLabel(traceIndex) + " : ";
 		final String attributeName = getValueName(value);
 		if (attributeName.length() > 0) {
-			final String featureName = attributeName;
 			final Optional<EStructuralFeature> attribute = value.eClass().getEAllStructuralFeatures().stream()
-					.filter(r -> r.getName().equals(featureName)).findFirst();
+					.filter(r -> r.getName().equals(attributeName)).findFirst();
 			if (attribute.isPresent()) {
 				final Object o = value.eGet(attribute.get());
 				return description + getObjectDescription(o);

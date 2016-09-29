@@ -65,7 +65,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 14;
+	int VALUE = 11;
 
 	/**
 	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
@@ -533,225 +533,6 @@ public interface StatesPackage extends EPackage {
 	int FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl <em>Input Value value Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.InputValue_value_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInputValue_value_Value()
-	 * @generated
-	 */
-	int INPUT_VALUE_VALUE_VALUE = 6;
-
-	/**
-	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE = VALUE__STATES_NO_OPPOSITE;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE__PARENT = VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE__STATES = VALUE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE__VALUE = VALUE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Input Value value Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get States No Opposite</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE___GET_STATES_NO_OPPOSITE = VALUE_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Value value Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VALUE_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl <em>Input Value variable Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.InputValue_variable_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInputValue_variable_Value()
-	 * @generated
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE = 7;
-
-	/**
-	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE__STATES_NO_OPPOSITE = VALUE__STATES_NO_OPPOSITE;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE__PARENT = VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE__STATES = VALUE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE__VARIABLE = VALUE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Input Value variable Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get States No Opposite</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE___GET_STATES_NO_OPPOSITE = VALUE_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Value variable Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_VARIABLE_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl <em>Input input Values Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagramTrace.States.impl.Input_inputValues_ValueImpl
-	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInput_inputValues_Value()
-	 * @generated
-	 */
-	int INPUT_INPUT_VALUES_VALUE = 8;
-
-	/**
-	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE__STATES_NO_OPPOSITE = VALUE__STATES_NO_OPPOSITE;
-
-	/**
-	 * The feature id for the '<em><b>Input Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE__INPUT_VALUES = VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE__PARENT = VALUE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>States</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE__STATES = VALUE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Input input Values Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get States No Opposite</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE___GET_STATES_NO_OPPOSITE = VALUE_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input input Values Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_INPUT_VALUES_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl <em>Integer Value value Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -759,7 +540,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getIntegerValue_value_Value()
 	 * @generated
 	 */
-	int INTEGER_VALUE_VALUE_VALUE = 9;
+	int INTEGER_VALUE_VALUE_VALUE = 6;
 
 	/**
 	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
@@ -832,7 +613,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getOffer_offeredTokens_Value()
 	 * @generated
 	 */
-	int OFFER_OFFERED_TOKENS_VALUE = 10;
+	int OFFER_OFFERED_TOKENS_VALUE = 7;
 
 	/**
 	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
@@ -905,7 +686,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getState()
 	 * @generated
 	 */
-	int STATE = 11;
+	int STATE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Activity Edge offers Values</b></em>' reference list.
@@ -971,40 +752,13 @@ public interface StatesPackage extends EPackage {
 	int STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = 6;
 
 	/**
-	 * The feature id for the '<em><b>Input Value value Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INPUT_VALUE_VALUE_VALUES = 7;
-
-	/**
-	 * The feature id for the '<em><b>Input Value variable Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INPUT_VALUE_VARIABLE_VALUES = 8;
-
-	/**
-	 * The feature id for the '<em><b>Input input Values Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__INPUT_INPUT_VALUES_VALUES = 9;
-
-	/**
 	 * The feature id for the '<em><b>Integer Value value Values</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__INTEGER_VALUE_VALUE_VALUES = 10;
+	int STATE__INTEGER_VALUE_VALUE_VALUES = 7;
 
 	/**
 	 * The feature id for the '<em><b>Offer offered Tokens Values</b></em>' reference list.
@@ -1013,7 +767,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__OFFER_OFFERED_TOKENS_VALUES = 11;
+	int STATE__OFFER_OFFERED_TOKENS_VALUES = 8;
 
 	/**
 	 * The feature id for the '<em><b>Started Steps</b></em>' reference list.
@@ -1022,7 +776,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__STARTED_STEPS = 12;
+	int STATE__STARTED_STEPS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Token holder Values</b></em>' reference list.
@@ -1031,7 +785,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__TOKEN_HOLDER_VALUES = 13;
+	int STATE__TOKEN_HOLDER_VALUES = 10;
 
 	/**
 	 * The feature id for the '<em><b>Trace executed Nodes Values</b></em>' reference list.
@@ -1040,7 +794,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__TRACE_EXECUTED_NODES_VALUES = 14;
+	int STATE__TRACE_EXECUTED_NODES_VALUES = 11;
 
 	/**
 	 * The feature id for the '<em><b>Variable current Value Values</b></em>' reference list.
@@ -1049,7 +803,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__VARIABLE_CURRENT_VALUE_VALUES = 15;
+	int STATE__VARIABLE_CURRENT_VALUE_VALUES = 12;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -1058,7 +812,7 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 16;
+	int STATE_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -1077,7 +831,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getToken_holder_Value()
 	 * @generated
 	 */
-	int TOKEN_HOLDER_VALUE = 12;
+	int TOKEN_HOLDER_VALUE = 9;
 
 	/**
 	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
@@ -1150,7 +904,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getTrace_executedNodes_Value()
 	 * @generated
 	 */
-	int TRACE_EXECUTED_NODES_VALUE = 13;
+	int TRACE_EXECUTED_NODES_VALUE = 10;
 
 	/**
 	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
@@ -1223,7 +977,7 @@ public interface StatesPackage extends EPackage {
 	 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getVariable_currentValue_Value()
 	 * @generated
 	 */
-	int VARIABLE_CURRENT_VALUE_VALUE = 15;
+	int VARIABLE_CURRENT_VALUE_VALUE = 12;
 
 	/**
 	 * The feature id for the '<em><b>States No Opposite</b></em>' reference list.
@@ -1608,165 +1362,6 @@ public interface StatesPackage extends EPackage {
 	EOperation getForkedToken_remainingOffersCount_Value__GetStatesNoOpposite();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.InputValue_value_Value <em>Input Value value Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Value value Value</em>'.
-	 * @see activitydiagramTrace.States.InputValue_value_Value
-	 * @generated
-	 */
-	EClass getInputValue_value_Value();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.InputValue_value_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.InputValue_value_Value#getParent()
-	 * @see #getInputValue_value_Value()
-	 * @generated
-	 */
-	EReference getInputValue_value_Value_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.InputValue_value_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.InputValue_value_Value#getStates()
-	 * @see #getInputValue_value_Value()
-	 * @generated
-	 */
-	EReference getInputValue_value_Value_States();
-
-	/**
-	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.InputValue_value_Value#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Value</em>'.
-	 * @see activitydiagramTrace.States.InputValue_value_Value#getValue()
-	 * @see #getInputValue_value_Value()
-	 * @generated
-	 */
-	EReference getInputValue_value_Value_Value();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.States.InputValue_value_Value#getStatesNoOpposite() <em>Get States No Opposite</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get States No Opposite</em>' operation.
-	 * @see activitydiagramTrace.States.InputValue_value_Value#getStatesNoOpposite()
-	 * @generated
-	 */
-	EOperation getInputValue_value_Value__GetStatesNoOpposite();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.InputValue_variable_Value <em>Input Value variable Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Value variable Value</em>'.
-	 * @see activitydiagramTrace.States.InputValue_variable_Value
-	 * @generated
-	 */
-	EClass getInputValue_variable_Value();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.InputValue_variable_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.InputValue_variable_Value#getParent()
-	 * @see #getInputValue_variable_Value()
-	 * @generated
-	 */
-	EReference getInputValue_variable_Value_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.InputValue_variable_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.InputValue_variable_Value#getStates()
-	 * @see #getInputValue_variable_Value()
-	 * @generated
-	 */
-	EReference getInputValue_variable_Value_States();
-
-	/**
-	 * Returns the meta object for the reference '{@link activitydiagramTrace.States.InputValue_variable_Value#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see activitydiagramTrace.States.InputValue_variable_Value#getVariable()
-	 * @see #getInputValue_variable_Value()
-	 * @generated
-	 */
-	EReference getInputValue_variable_Value_Variable();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.States.InputValue_variable_Value#getStatesNoOpposite() <em>Get States No Opposite</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get States No Opposite</em>' operation.
-	 * @see activitydiagramTrace.States.InputValue_variable_Value#getStatesNoOpposite()
-	 * @generated
-	 */
-	EOperation getInputValue_variable_Value__GetStatesNoOpposite();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagramTrace.States.Input_inputValues_Value <em>Input input Values Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input input Values Value</em>'.
-	 * @see activitydiagramTrace.States.Input_inputValues_Value
-	 * @generated
-	 */
-	EClass getInput_inputValues_Value();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Input_inputValues_Value#getInputValues <em>Input Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input Values</em>'.
-	 * @see activitydiagramTrace.States.Input_inputValues_Value#getInputValues()
-	 * @see #getInput_inputValues_Value()
-	 * @generated
-	 */
-	EReference getInput_inputValues_Value_InputValues();
-
-	/**
-	 * Returns the meta object for the container reference '{@link activitydiagramTrace.States.Input_inputValues_Value#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see activitydiagramTrace.States.Input_inputValues_Value#getParent()
-	 * @see #getInput_inputValues_Value()
-	 * @generated
-	 */
-	EReference getInput_inputValues_Value_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.Input_inputValues_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>States</em>'.
-	 * @see activitydiagramTrace.States.Input_inputValues_Value#getStates()
-	 * @see #getInput_inputValues_Value()
-	 * @generated
-	 */
-	EReference getInput_inputValues_Value_States();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagramTrace.States.Input_inputValues_Value#getStatesNoOpposite() <em>Get States No Opposite</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get States No Opposite</em>' operation.
-	 * @see activitydiagramTrace.States.Input_inputValues_Value#getStatesNoOpposite()
-	 * @generated
-	 */
-	EOperation getInput_inputValues_Value__GetStatesNoOpposite();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.IntegerValue_value_Value <em>Integer Value value Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1958,39 +1553,6 @@ public interface StatesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getState_ForkedToken_remainingOffersCount_Values();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getInputValue_value_Values <em>Input Value value Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input Value value Values</em>'.
-	 * @see activitydiagramTrace.States.State#getInputValue_value_Values()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_InputValue_value_Values();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getInputValue_variable_Values <em>Input Value variable Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input Value variable Values</em>'.
-	 * @see activitydiagramTrace.States.State#getInputValue_variable_Values()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_InputValue_variable_Values();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getInput_inputValues_Values <em>Input input Values Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input input Values Values</em>'.
-	 * @see activitydiagramTrace.States.State#getInput_inputValues_Values()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_Input_inputValues_Values();
 
 	/**
 	 * Returns the meta object for the reference list '{@link activitydiagramTrace.States.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}'.
@@ -2514,132 +2076,6 @@ public interface StatesPackage extends EPackage {
 		EOperation FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE___GET_STATES_NO_OPPOSITE = eINSTANCE.getForkedToken_remainingOffersCount_Value__GetStatesNoOpposite();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl <em>Input Value value Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.InputValue_value_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInputValue_value_Value()
-		 * @generated
-		 */
-		EClass INPUT_VALUE_VALUE_VALUE = eINSTANCE.getInputValue_value_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE_VALUE_VALUE__PARENT = eINSTANCE.getInputValue_value_Value_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE_VALUE_VALUE__STATES = eINSTANCE.getInputValue_value_Value_States();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE_VALUE_VALUE__VALUE = eINSTANCE.getInputValue_value_Value_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Get States No Opposite</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation INPUT_VALUE_VALUE_VALUE___GET_STATES_NO_OPPOSITE = eINSTANCE.getInputValue_value_Value__GetStatesNoOpposite();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl <em>Input Value variable Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.InputValue_variable_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInputValue_variable_Value()
-		 * @generated
-		 */
-		EClass INPUT_VALUE_VARIABLE_VALUE = eINSTANCE.getInputValue_variable_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE_VARIABLE_VALUE__PARENT = eINSTANCE.getInputValue_variable_Value_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE_VARIABLE_VALUE__STATES = eINSTANCE.getInputValue_variable_Value_States();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE_VARIABLE_VALUE__VARIABLE = eINSTANCE.getInputValue_variable_Value_Variable();
-
-		/**
-		 * The meta object literal for the '<em><b>Get States No Opposite</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation INPUT_VALUE_VARIABLE_VALUE___GET_STATES_NO_OPPOSITE = eINSTANCE.getInputValue_variable_Value__GetStatesNoOpposite();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl <em>Input input Values Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagramTrace.States.impl.Input_inputValues_ValueImpl
-		 * @see activitydiagramTrace.States.impl.StatesPackageImpl#getInput_inputValues_Value()
-		 * @generated
-		 */
-		EClass INPUT_INPUT_VALUES_VALUE = eINSTANCE.getInput_inputValues_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_INPUT_VALUES_VALUE__INPUT_VALUES = eINSTANCE.getInput_inputValues_Value_InputValues();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_INPUT_VALUES_VALUE__PARENT = eINSTANCE.getInput_inputValues_Value_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_INPUT_VALUES_VALUE__STATES = eINSTANCE.getInput_inputValues_Value_States();
-
-		/**
-		 * The meta object literal for the '<em><b>Get States No Opposite</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation INPUT_INPUT_VALUES_VALUE___GET_STATES_NO_OPPOSITE = eINSTANCE.getInput_inputValues_Value__GetStatesNoOpposite();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl <em>Integer Value value Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2788,30 +2224,6 @@ public interface StatesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STATE__FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUES = eINSTANCE.getState_ForkedToken_remainingOffersCount_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Value value Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__INPUT_VALUE_VALUE_VALUES = eINSTANCE.getState_InputValue_value_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Value variable Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__INPUT_VALUE_VARIABLE_VALUES = eINSTANCE.getState_InputValue_variable_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Input input Values Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__INPUT_INPUT_VALUES_VALUES = eINSTANCE.getState_Input_inputValues_Values();
 
 		/**
 		 * The meta object literal for the '<em><b>Integer Value value Values</b></em>' reference list feature.

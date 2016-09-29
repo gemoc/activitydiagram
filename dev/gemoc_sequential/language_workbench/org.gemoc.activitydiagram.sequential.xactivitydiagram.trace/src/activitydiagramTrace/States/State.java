@@ -24,9 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link activitydiagramTrace.States.State#getEndedSteps <em>Ended Steps</em>}</li>
  *   <li>{@link activitydiagramTrace.States.State#getForkedToken_baseToken_Values <em>Forked Token base Token Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.State#getForkedToken_remainingOffersCount_Values <em>Forked Token remaining Offers Count Values</em>}</li>
- *   <li>{@link activitydiagramTrace.States.State#getInputValue_value_Values <em>Input Value value Values</em>}</li>
- *   <li>{@link activitydiagramTrace.States.State#getInputValue_variable_Values <em>Input Value variable Values</em>}</li>
- *   <li>{@link activitydiagramTrace.States.State#getInput_inputValues_Values <em>Input input Values Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.State#getIntegerValue_value_Values <em>Integer Value value Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.State#getOffer_offeredTokens_Values <em>Offer offered Tokens Values</em>}</li>
  *   <li>{@link activitydiagramTrace.States.State#getStartedSteps <em>Started Steps</em>}</li>
@@ -165,60 +162,6 @@ public interface State extends EObject {
 	 * @generated
 	 */
 	EList<ForkedToken_remainingOffersCount_Value> getForkedToken_remainingOffersCount_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Input Value value Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.InputValue_value_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.InputValue_value_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Value value Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Value value Values</em>' reference list.
-	 * @see activitydiagramTrace.States.StatesPackage#getState_InputValue_value_Values()
-	 * @see activitydiagramTrace.States.InputValue_value_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<InputValue_value_Value> getInputValue_value_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Input Value variable Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.InputValue_variable_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.InputValue_variable_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Value variable Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Value variable Values</em>' reference list.
-	 * @see activitydiagramTrace.States.StatesPackage#getState_InputValue_variable_Values()
-	 * @see activitydiagramTrace.States.InputValue_variable_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<InputValue_variable_Value> getInputValue_variable_Values();
-
-	/**
-	 * Returns the value of the '<em><b>Input input Values Values</b></em>' reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.Input_inputValues_Value}.
-	 * It is bidirectional and its opposite is '{@link activitydiagramTrace.States.Input_inputValues_Value#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input input Values Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input input Values Values</em>' reference list.
-	 * @see activitydiagramTrace.States.StatesPackage#getState_Input_inputValues_Values()
-	 * @see activitydiagramTrace.States.Input_inputValues_Value#getStates
-	 * @model opposite="states" ordered="false"
-	 * @generated
-	 */
-	EList<Input_inputValues_Value> getInput_inputValues_Values();
 
 	/**
 	 * Returns the value of the '<em><b>Integer Value value Values</b></em>' reference list.

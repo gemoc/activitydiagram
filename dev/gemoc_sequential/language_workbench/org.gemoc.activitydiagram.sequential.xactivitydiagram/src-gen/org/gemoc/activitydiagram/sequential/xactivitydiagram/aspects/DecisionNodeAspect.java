@@ -5,15 +5,16 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Boo
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlFlow;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
 import com.google.common.base.Objects;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import org.eclipse.emf.common.util.EList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspectDecisionNodeAspectProperties;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect;
 
 @Aspect(className = DecisionNode.class)
 @SuppressWarnings("all")
@@ -68,7 +69,7 @@ public class DecisionNodeAspect extends ActivityNodeAspect {
       }
       if (_and) {
         BooleanVariable _guard_1 = ((ControlFlow) edge).getGuard();
-        Value _currentValue = _guard_1.getCurrentValue();
+        Value _currentValue = VariableAspect.currentValue(_guard_1);
         boolean _isValue = ((BooleanValue) _currentValue).isValue();
         if (_isValue) {
           ActivityEdgeAspect.sendOffer1(edge, tokens);

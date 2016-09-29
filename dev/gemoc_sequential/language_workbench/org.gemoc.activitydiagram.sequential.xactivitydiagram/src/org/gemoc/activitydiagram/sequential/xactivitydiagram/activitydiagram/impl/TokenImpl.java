@@ -3,15 +3,12 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage;
@@ -31,6 +28,16 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Tok
  * @generated
  */
 public class TokenImpl extends EObjectImpl implements Token {
+	/**
+	 * The cached value of the '{@link #getHolder() <em>Holder</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHolder()
+	 * @generated
+	 * @ordered
+	 */
+	protected ActivityNode holder;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,8 +63,15 @@ public class TokenImpl extends EObjectImpl implements Token {
 	 * @generated
 	 */
 	public ActivityNode getHolder() {
-		if (eContainerFeatureID() != ActivitydiagramPackage.TOKEN__HOLDER) return null;
-		return (ActivityNode)eInternalContainer();
+		if (holder != null && holder.eIsProxy()) {
+			InternalEObject oldHolder = (InternalEObject)holder;
+			holder = (ActivityNode)eResolveProxy(oldHolder);
+			if (holder != oldHolder) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.TOKEN__HOLDER, oldHolder, holder));
+			}
+		}
+		return holder;
 	}
 
 	/**
@@ -65,9 +79,8 @@ public class TokenImpl extends EObjectImpl implements Token {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetHolder(ActivityNode newHolder, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newHolder, ActivitydiagramPackage.TOKEN__HOLDER, msgs);
-		return msgs;
+	public ActivityNode basicGetHolder() {
+		return holder;
 	}
 
 	/**
@@ -76,19 +89,10 @@ public class TokenImpl extends EObjectImpl implements Token {
 	 * @generated
 	 */
 	public void setHolder(ActivityNode newHolder) {
-		if (newHolder != eInternalContainer() || (eContainerFeatureID() != ActivitydiagramPackage.TOKEN__HOLDER && newHolder != null)) {
-			if (EcoreUtil.isAncestor(this, newHolder))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newHolder != null)
-				msgs = ((InternalEObject)newHolder).eInverseAdd(this, ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS, ActivityNode.class, msgs);
-			msgs = basicSetHolder(newHolder, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TOKEN__HOLDER, newHolder, newHolder));
+		ActivityNode oldHolder = holder;
+		holder = newHolder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.TOKEN__HOLDER, oldHolder, holder));
 	}
 
 	/**
@@ -130,54 +134,11 @@ public class TokenImpl extends EObjectImpl implements Token {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ActivitydiagramPackage.TOKEN__HOLDER:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetHolder((ActivityNode)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ActivitydiagramPackage.TOKEN__HOLDER:
-				return basicSetHolder(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case ActivitydiagramPackage.TOKEN__HOLDER:
-				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS, ActivityNode.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ActivitydiagramPackage.TOKEN__HOLDER:
-				return getHolder();
+				if (resolve) return getHolder();
+				return basicGetHolder();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,7 +182,7 @@ public class TokenImpl extends EObjectImpl implements Token {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ActivitydiagramPackage.TOKEN__HOLDER:
-				return getHolder() != null;
+				return holder != null;
 		}
 		return super.eIsSet(featureID);
 	}

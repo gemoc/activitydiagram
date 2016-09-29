@@ -26,7 +26,7 @@ public class ActivityDiagramSequentialModelExampleWizard
 		// We need the statements example to be unzipped along with the
 		// EMF library example model, edit and editor examples
 		List<ProjectDescriptor> projects = new ArrayList<ProjectDescriptor>(1);
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.mergedemo.zip", "org.gemoc.activitydiagram.sequential.mergedemo"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.examples.zip", "org.gemoc.activitydiagram.sequential.examples"));
 		return projects;
 	}
 

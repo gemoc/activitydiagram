@@ -62,7 +62,7 @@ public class VariableImpl extends EObjectImpl implements Variable {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCurrentValue() <em>Current Value</em>}' containment reference.
+	 * The cached value of the '{@link #getCurrentValue() <em>Current Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCurrentValue()
@@ -160,6 +160,14 @@ public class VariableImpl extends EObjectImpl implements Variable {
 	 * @generated
 	 */
 	public Value getCurrentValue() {
+		if (currentValue != null && currentValue.eIsProxy()) {
+			InternalEObject oldCurrentValue = (InternalEObject)currentValue;
+			currentValue = (Value)eResolveProxy(oldCurrentValue);
+			if (currentValue != oldCurrentValue) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, oldCurrentValue, currentValue));
+			}
+		}
 		return currentValue;
 	}
 
@@ -168,14 +176,8 @@ public class VariableImpl extends EObjectImpl implements Variable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCurrentValue(Value newCurrentValue, NotificationChain msgs) {
-		Value oldCurrentValue = currentValue;
-		currentValue = newCurrentValue;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, oldCurrentValue, newCurrentValue);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public Value basicGetCurrentValue() {
+		return currentValue;
 	}
 
 	/**
@@ -184,17 +186,10 @@ public class VariableImpl extends EObjectImpl implements Variable {
 	 * @generated
 	 */
 	public void setCurrentValue(Value newCurrentValue) {
-		if (newCurrentValue != currentValue) {
-			NotificationChain msgs = null;
-			if (currentValue != null)
-				msgs = ((InternalEObject)currentValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, null, msgs);
-			if (newCurrentValue != null)
-				msgs = ((InternalEObject)newCurrentValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, null, msgs);
-			msgs = basicSetCurrentValue(newCurrentValue, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, newCurrentValue, newCurrentValue));
+		Value oldCurrentValue = currentValue;
+		currentValue = newCurrentValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
 	/**
@@ -240,8 +235,6 @@ public class VariableImpl extends EObjectImpl implements Variable {
 		switch (featureID) {
 			case ActivitydiagramPackage.VARIABLE__INITIAL_VALUE:
 				return basicSetInitialValue(null, msgs);
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				return basicSetCurrentValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -259,7 +252,8 @@ public class VariableImpl extends EObjectImpl implements Variable {
 			case ActivitydiagramPackage.VARIABLE__NAME:
 				return getName();
 			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				return getCurrentValue();
+				if (resolve) return getCurrentValue();
+				return basicGetCurrentValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

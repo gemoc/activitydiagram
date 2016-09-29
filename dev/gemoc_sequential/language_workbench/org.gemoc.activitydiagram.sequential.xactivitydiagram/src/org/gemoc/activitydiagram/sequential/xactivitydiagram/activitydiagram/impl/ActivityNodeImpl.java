@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -205,7 +205,7 @@ public class ActivityNodeImpl extends NamedElementImpl implements ActivityNode {
 	 */
 	public EList<Token> getHeldTokens() {
 		if (heldTokens == null) {
-			heldTokens = new EObjectContainmentWithInverseEList<Token>(Token.class, this, ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS, ActivitydiagramPackage.TOKEN__HOLDER);
+			heldTokens = new EObjectContainmentEList<Token>(Token.class, this, ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS);
 		}
 		return heldTokens;
 	}
@@ -304,8 +304,6 @@ public class ActivityNodeImpl extends NamedElementImpl implements ActivityNode {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetActivity((Activity)otherEnd, msgs);
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHeldTokens()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

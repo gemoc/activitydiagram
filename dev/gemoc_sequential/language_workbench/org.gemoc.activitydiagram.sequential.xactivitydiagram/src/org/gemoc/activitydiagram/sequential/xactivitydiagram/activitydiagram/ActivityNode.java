@@ -118,7 +118,6 @@ public interface ActivityNode extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Held Tokens</b></em>' containment reference list.
 	 * The list contents are of type {@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token}.
-	 * It is bidirectional and its opposite is '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token#getHolder <em>Holder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Held Tokens</em>' containment reference list isn't clear,
@@ -127,8 +126,7 @@ public interface ActivityNode extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Held Tokens</em>' containment reference list.
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage#getActivityNode_HeldTokens()
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token#getHolder
-	 * @model opposite="holder" containment="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Token> getHeldTokens();

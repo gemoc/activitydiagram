@@ -62,9 +62,6 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE: return createBooleanValue_value_Value();
 			case StatesPackage.FORKED_TOKEN_BASE_TOKEN_VALUE: return createForkedToken_baseToken_Value();
 			case StatesPackage.FORKED_TOKEN_REMAINING_OFFERS_COUNT_VALUE: return createForkedToken_remainingOffersCount_Value();
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE: return createInputValue_value_Value();
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE: return createInputValue_variable_Value();
-			case StatesPackage.INPUT_INPUT_VALUES_VALUE: return createInput_inputValues_Value();
 			case StatesPackage.INTEGER_VALUE_VALUE_VALUE: return createIntegerValue_value_Value();
 			case StatesPackage.OFFER_OFFERED_TOKENS_VALUE: return createOffer_offeredTokens_Value();
 			case StatesPackage.STATE: return createState();
@@ -134,36 +131,6 @@ public class StatesFactoryImpl extends EFactoryImpl implements StatesFactory {
 	public ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value() {
 		ForkedToken_remainingOffersCount_ValueImpl forkedToken_remainingOffersCount_Value = new ForkedToken_remainingOffersCount_ValueImpl();
 		return forkedToken_remainingOffersCount_Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputValue_value_Value createInputValue_value_Value() {
-		InputValue_value_ValueImpl inputValue_value_Value = new InputValue_value_ValueImpl();
-		return inputValue_value_Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputValue_variable_Value createInputValue_variable_Value() {
-		InputValue_variable_ValueImpl inputValue_variable_Value = new InputValue_variable_ValueImpl();
-		return inputValue_variable_Value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Input_inputValues_Value createInput_inputValues_Value() {
-		Input_inputValues_ValueImpl input_inputValues_Value = new Input_inputValues_ValueImpl();
-		return input_inputValues_Value;
 	}
 
 	/**

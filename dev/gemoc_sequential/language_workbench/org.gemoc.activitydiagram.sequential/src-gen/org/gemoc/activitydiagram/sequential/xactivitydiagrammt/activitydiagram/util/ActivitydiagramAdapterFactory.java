@@ -184,12 +184,12 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createBooleanBinaryExpressionAdapter();
 			}
 			@Override
-			public Adapter caseOffer(Offer object) {
-				return createOfferAdapter();
-			}
-			@Override
 			public Adapter caseToken(Token object) {
 				return createTokenAdapter();
+			}
+			@Override
+			public Adapter caseOffer(Offer object) {
+				return createOfferAdapter();
 			}
 			@Override
 			public Adapter caseTrace(Trace object) {
@@ -638,20 +638,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Offer <em>Offer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Offer
-	 * @generated
-	 */
-	public Adapter createOfferAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Token <em>Token</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -662,6 +648,20 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTokenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Offer <em>Offer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Offer
+	 * @generated
+	 */
+	public Adapter createOfferAdapter() {
 		return null;
 	}
 

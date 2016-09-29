@@ -64,7 +64,7 @@ public interface ForkedToken_remainingOffersCount_Value extends Value {
 	 * @return the value of the '<em>Remaining Offers Count</em>' attribute.
 	 * @see #setRemainingOffersCount(int)
 	 * @see activitydiagramTrace.States.StatesPackage#getForkedToken_remainingOffersCount_Value_RemainingOffersCount()
-	 * @model required="true"
+	 * @model unique="false"
 	 * @generated
 	 */
 	int getRemainingOffersCount();

@@ -9,6 +9,7 @@ import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanUnaryExpressionAspectBooleanUnaryExpressionAspectProperties;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ExpressionAspect;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect;
 
 @Aspect(className = BooleanUnaryExpression.class)
 @SuppressWarnings("all")
@@ -34,9 +35,9 @@ public class BooleanUnaryExpressionAspect extends ExpressionAspect {
     boolean _equals = (_value == BooleanUnaryOperator.NOT_VALUE);
     if (_equals) {
       BooleanVariable _assignee = _self.getAssignee();
-      Value _currentValue = _assignee.getCurrentValue();
+      Value _currentValue = VariableAspect.currentValue(_assignee);
       BooleanVariable _operand = _self.getOperand();
-      Value _currentValue_1 = _operand.getCurrentValue();
+      Value _currentValue_1 = VariableAspect.currentValue(_operand);
       boolean _isValue = ((BooleanValue) _currentValue_1).isValue();
       boolean _not = (!_isValue);
       ((BooleanValue) _currentValue).setValue(_not);

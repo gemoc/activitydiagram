@@ -92,18 +92,6 @@ public class StatesAdapterFactory extends AdapterFactoryImpl {
 				return createForkedToken_remainingOffersCount_ValueAdapter();
 			}
 			@Override
-			public Adapter caseInputValue_value_Value(InputValue_value_Value object) {
-				return createInputValue_value_ValueAdapter();
-			}
-			@Override
-			public Adapter caseInputValue_variable_Value(InputValue_variable_Value object) {
-				return createInputValue_variable_ValueAdapter();
-			}
-			@Override
-			public Adapter caseInput_inputValues_Value(Input_inputValues_Value object) {
-				return createInput_inputValues_ValueAdapter();
-			}
-			@Override
 			public Adapter caseIntegerValue_value_Value(IntegerValue_value_Value object) {
 				return createIntegerValue_value_ValueAdapter();
 			}
@@ -232,48 +220,6 @@ public class StatesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createForkedToken_remainingOffersCount_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.InputValue_value_Value <em>Input Value value Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.States.InputValue_value_Value
-	 * @generated
-	 */
-	public Adapter createInputValue_value_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.InputValue_variable_Value <em>Input Value variable Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.States.InputValue_variable_Value
-	 * @generated
-	 */
-	public Adapter createInputValue_variable_ValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.Input_inputValues_Value <em>Input input Values Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.States.Input_inputValues_Value
-	 * @generated
-	 */
-	public Adapter createInput_inputValues_ValueAdapter() {
 		return null;
 	}
 

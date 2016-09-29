@@ -1,14 +1,16 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects;
 
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramFactory;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.UniqueEList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspectInitialNodeAspectProperties;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspect;
 
 @Aspect(className = InitialNode.class)
 @SuppressWarnings("all")
@@ -44,7 +46,9 @@ public class InitialNodeAspect extends ActivityNodeAspect {
   
   protected static void _privk3_execute(final InitialNodeAspectInitialNodeAspectProperties _self_, final InitialNode _self) {
     ControlToken r = ActivitydiagramFactory.eINSTANCE.createControlToken();
-    r.setHolder(_self);
+    TokenAspect.holder(r, _self);
+    UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
+    _heldTokens.add(r);
     BasicEList<Token> list = new BasicEList<Token>();
     list.add(r);
     ActivityNodeAspect.sendOffers1(_self, list);

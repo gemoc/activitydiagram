@@ -11,12 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.Variable#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link activitydiagram.Variable#getName <em>Name</em>}</li>
- *   <li>{@link activitydiagram.Variable#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getVariable()
  * @model abstract="true"
@@ -74,31 +73,5 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Current Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Current Value</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Value</em>' containment reference.
-	 * @see #setCurrentValue(Value)
-	 * @see activitydiagram.ActivitydiagramPackage#getVariable_CurrentValue()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Value getCurrentValue();
-
-	/**
-	 * Sets the value of the '{@link activitydiagram.Variable#getCurrentValue <em>Current Value</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Value</em>' containment reference.
-	 * @see #getCurrentValue()
-	 * @generated
-	 */
-	void setCurrentValue(Value value);
 
 } // Variable

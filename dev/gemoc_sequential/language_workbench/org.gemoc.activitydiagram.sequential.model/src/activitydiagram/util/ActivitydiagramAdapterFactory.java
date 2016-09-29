@@ -184,34 +184,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createBooleanBinaryExpressionAdapter();
 			}
 			@Override
-			public Adapter caseOffer(Offer object) {
-				return createOfferAdapter();
-			}
-			@Override
-			public Adapter caseToken(Token object) {
-				return createTokenAdapter();
-			}
-			@Override
-			public Adapter caseTrace(Trace object) {
-				return createTraceAdapter();
-			}
-			@Override
-			public Adapter caseInputValue(InputValue object) {
-				return createInputValueAdapter();
-			}
-			@Override
-			public Adapter caseInput(Input object) {
-				return createInputAdapter();
-			}
-			@Override
-			public Adapter caseControlToken(ControlToken object) {
-				return createControlTokenAdapter();
-			}
-			@Override
-			public Adapter caseForkedToken(ForkedToken object) {
-				return createForkedTokenAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -634,104 +606,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBooleanBinaryExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.Offer <em>Offer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.Offer
-	 * @generated
-	 */
-	public Adapter createOfferAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.Token <em>Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.Token
-	 * @generated
-	 */
-	public Adapter createTokenAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.Trace
-	 * @generated
-	 */
-	public Adapter createTraceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.InputValue <em>Input Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.InputValue
-	 * @generated
-	 */
-	public Adapter createInputValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.Input <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.Input
-	 * @generated
-	 */
-	public Adapter createInputAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.ControlToken <em>Control Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.ControlToken
-	 * @generated
-	 */
-	public Adapter createControlTokenAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.ForkedToken <em>Forked Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.ForkedToken
-	 * @generated
-	 */
-	public Adapter createForkedTokenAdapter() {
 		return null;
 	}
 

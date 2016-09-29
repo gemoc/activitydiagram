@@ -1,8 +1,8 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects;
 
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramFactory;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramFactory;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspectForkNodeAspectProperties;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspect;
 
 @Aspect(className = ForkNode.class)
 @SuppressWarnings("all")
@@ -38,10 +39,10 @@ public class ForkNodeAspect extends ActivityNodeAspect {
     for (final Token token : tokens) {
       {
         ForkedToken forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken();
-        forkedToken.setBaseToken(token);
+        ForkedTokenAspect.baseToken(forkedToken, token);
         EList<ActivityEdge> _outgoing = _self.getOutgoing();
         int _size = _outgoing.size();
-        forkedToken.setRemainingOffersCount(_size);
+        ForkedTokenAspect.remainingOffersCount(forkedToken, _size);
         forkedTokens.add(forkedToken);
       }
     }

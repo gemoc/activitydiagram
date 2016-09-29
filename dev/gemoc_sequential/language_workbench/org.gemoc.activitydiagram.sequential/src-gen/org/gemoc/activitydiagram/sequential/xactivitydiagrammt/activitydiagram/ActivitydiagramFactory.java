@@ -202,15 +202,6 @@ public interface ActivitydiagramFactory extends EFactory {
 	BooleanBinaryExpression createBooleanBinaryExpression();
 
 	/**
-	 * Returns a new object of class '<em>Offer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Offer</em>'.
-	 * @generated
-	 */
-	Offer createOffer();
-
-	/**
 	 * Returns a new object of class '<em>Token</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,6 +209,15 @@ public interface ActivitydiagramFactory extends EFactory {
 	 * @generated
 	 */
 	Token createToken();
+
+	/**
+	 * Returns a new object of class '<em>Offer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Offer</em>'.
+	 * @generated
+	 */
+	Offer createOffer();
 
 	/**
 	 * Returns a new object of class '<em>Trace</em>'.

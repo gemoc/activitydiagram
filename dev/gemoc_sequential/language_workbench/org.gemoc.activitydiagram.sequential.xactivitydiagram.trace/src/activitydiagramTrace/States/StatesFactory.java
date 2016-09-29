@@ -76,33 +76,6 @@ public interface StatesFactory extends EFactory {
 	ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value();
 
 	/**
-	 * Returns a new object of class '<em>Input Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Value value Value</em>'.
-	 * @generated
-	 */
-	InputValue_value_Value createInputValue_value_Value();
-
-	/**
-	 * Returns a new object of class '<em>Input Value variable Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Value variable Value</em>'.
-	 * @generated
-	 */
-	InputValue_variable_Value createInputValue_variable_Value();
-
-	/**
-	 * Returns a new object of class '<em>Input input Values Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input input Values Value</em>'.
-	 * @generated
-	 */
-	Input_inputValues_Value createInput_inputValues_Value();
-
-	/**
 	 * Returns a new object of class '<em>Integer Value value Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

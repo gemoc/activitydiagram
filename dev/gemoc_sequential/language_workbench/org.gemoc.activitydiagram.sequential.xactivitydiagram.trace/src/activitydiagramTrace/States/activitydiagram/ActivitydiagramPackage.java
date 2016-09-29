@@ -923,22 +923,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_INPUT = 16;
 
 	/**
-	 * The feature id for the '<em><b>Input Values Sequence</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACED_INPUT__INPUT_VALUES_SEQUENCE = 0;
-
-	/**
 	 * The number of structural features of the '<em>Traced Input</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT_FEATURE_COUNT = 1;
+	int TRACED_INPUT_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Traced Input</em>' class.
@@ -960,31 +951,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TRACED_INPUT_VALUE = 17;
 
 	/**
-	 * The feature id for the '<em><b>Value Sequence</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACED_INPUT_VALUE__VALUE_SEQUENCE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Variable Sequence</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACED_INPUT_VALUE__VARIABLE_SEQUENCE = 1;
-
-	/**
 	 * The number of structural features of the '<em>Traced Input Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRACED_INPUT_VALUE_FEATURE_COUNT = 2;
+	int TRACED_INPUT_VALUE_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Traced Input Value</em>' class.
@@ -1561,17 +1534,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getTracedInput();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInput#getInputValuesSequence <em>Input Values Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input Values Sequence</em>'.
-	 * @see activitydiagramTrace.States.activitydiagram.TracedInput#getInputValuesSequence()
-	 * @see #getTracedInput()
-	 * @generated
-	 */
-	EReference getTracedInput_InputValuesSequence();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue <em>Traced Input Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1580,28 +1542,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTracedInputValue();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getValueSequence <em>Value Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Value Sequence</em>'.
-	 * @see activitydiagramTrace.States.activitydiagram.TracedInputValue#getValueSequence()
-	 * @see #getTracedInputValue()
-	 * @generated
-	 */
-	EReference getTracedInputValue_ValueSequence();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariableSequence <em>Variable Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable Sequence</em>'.
-	 * @see activitydiagramTrace.States.activitydiagram.TracedInputValue#getVariableSequence()
-	 * @see #getTracedInputValue()
-	 * @generated
-	 */
-	EReference getTracedInputValue_VariableSequence();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue <em>Traced Integer Value</em>}'.
@@ -2045,14 +1985,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TRACED_INPUT = eINSTANCE.getTracedInput();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Values Sequence</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACED_INPUT__INPUT_VALUES_SEQUENCE = eINSTANCE.getTracedInput_InputValuesSequence();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.activitydiagram.impl.TracedInputValueImpl <em>Traced Input Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2061,22 +1993,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRACED_INPUT_VALUE = eINSTANCE.getTracedInputValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Value Sequence</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACED_INPUT_VALUE__VALUE_SEQUENCE = eINSTANCE.getTracedInputValue_ValueSequence();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable Sequence</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACED_INPUT_VALUE__VARIABLE_SEQUENCE = eINSTANCE.getTracedInputValue_VariableSequence();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagramTrace.States.activitydiagram.impl.TracedIntegerValueImpl <em>Traced Integer Value</em>}' class.

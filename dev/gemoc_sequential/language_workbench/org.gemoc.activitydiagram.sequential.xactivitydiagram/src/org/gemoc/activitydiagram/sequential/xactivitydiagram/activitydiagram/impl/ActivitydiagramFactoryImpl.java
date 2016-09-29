@@ -77,8 +77,8 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION: return createIntegerComparisonExpression();
 			case ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION: return createBooleanUnaryExpression();
 			case ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION: return createBooleanBinaryExpression();
-			case ActivitydiagramPackage.OFFER: return createOffer();
 			case ActivitydiagramPackage.TOKEN: return createToken();
+			case ActivitydiagramPackage.OFFER: return createOffer();
 			case ActivitydiagramPackage.TRACE: return createTrace();
 			case ActivitydiagramPackage.INPUT_VALUE: return createInputValue();
 			case ActivitydiagramPackage.INPUT: return createInput();
@@ -336,9 +336,9 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Offer createOffer() {
-		OfferImpl offer = new OfferImpl();
-		return offer;
+	public Token createToken() {
+		TokenImpl token = new TokenImpl();
+		return token;
 	}
 
 	/**
@@ -346,9 +346,9 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Token createToken() {
-		TokenImpl token = new TokenImpl();
-		return token;
+	public Offer createOffer() {
+		OfferImpl offer = new OfferImpl();
+		return offer;
 	}
 
 	/**

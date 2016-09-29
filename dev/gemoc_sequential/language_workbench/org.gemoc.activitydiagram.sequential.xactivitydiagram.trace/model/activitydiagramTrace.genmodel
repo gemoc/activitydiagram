@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.gemoc.activitydiagram.sequential.xactivitydiagram.trace/src" modelPluginID="org.gemoc.activitydiagram.sequential.xactivitydiagram.trace" modelName="ActivitydiagramTrace" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
-  <foreignModel>file:/tmp/diverse3620431721486250699tracemmgeneration/activitydiagramTrace.ecore</foreignModel>
+  <foreignModel>file:/tmp/diverse8516338060306194756tracemmgeneration/activitydiagramTrace.ecore</foreignModel>
   <genPackages prefix="ActivitydiagramTrace" disposableProviderFactory="true">
     <ecorePackage href="activitydiagramTrace.ecore#/"/>
     <genClasses>
@@ -345,51 +345,6 @@
         </genOperations>
       </genClasses>
       <genClasses>
-        <ecoreClass href="activitydiagramTrace.ecore#//States/InputValue_value_Value"/>
-        <genFeatures property="None" notify="false" createChild="false">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_value_Value/parent"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_value_Value/states"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_value_Value/value"/>
-        </genFeatures>
-        <genOperations>
-          <ecoreOperation href="activitydiagramTrace.ecore#//States/InputValue_value_Value/getStatesNoOpposite"/>
-        </genOperations>
-      </genClasses>
-      <genClasses>
-        <ecoreClass href="activitydiagramTrace.ecore#//States/InputValue_variable_Value"/>
-        <genFeatures property="None" notify="false" createChild="false">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/parent"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/states"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/variable"/>
-        </genFeatures>
-        <genOperations>
-          <ecoreOperation href="activitydiagramTrace.ecore#//States/InputValue_variable_Value/getStatesNoOpposite"/>
-        </genOperations>
-      </genClasses>
-      <genClasses>
-        <ecoreClass href="activitydiagramTrace.ecore#//States/Input_inputValues_Value"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/inputValues"/>
-        </genFeatures>
-        <genFeatures property="None" notify="false" createChild="false">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/parent"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/states"/>
-        </genFeatures>
-        <genOperations>
-          <ecoreOperation href="activitydiagramTrace.ecore#//States/Input_inputValues_Value/getStatesNoOpposite"/>
-        </genOperations>
-      </genClasses>
-      <genClasses>
         <ecoreClass href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value"/>
         <genFeatures property="None" notify="false" createChild="false">
           <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/IntegerValue_value_Value/parent"/>
@@ -441,15 +396,6 @@
         </genFeatures>
         <genFeatures notify="false" createChild="false" propertySortChoices="true">
           <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/forkedToken_remainingOffersCount_Values"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/inputValue_value_Values"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/inputValue_variable_Values"/>
-        </genFeatures>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/input_inputValues_Values"/>
         </genFeatures>
         <genFeatures notify="false" createChild="false" propertySortChoices="true">
           <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/State/integerValue_value_Values"/>
@@ -600,18 +546,9 @@
         </genClasses>
         <genClasses>
           <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInput"/>
-          <genFeatures property="None" children="true" createChild="true">
-            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInput/inputValuesSequence"/>
-          </genFeatures>
         </genClasses>
         <genClasses>
           <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInputValue"/>
-          <genFeatures property="None" children="true" createChild="true">
-            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInputValue/valueSequence"/>
-          </genFeatures>
-          <genFeatures property="None" children="true" createChild="true">
-            <ecoreFeature xsi:type="ecore:EReference" href="activitydiagramTrace.ecore#//States/activitydiagram/TracedInputValue/variableSequence"/>
-          </genFeatures>
         </genClasses>
         <genClasses>
           <ecoreClass href="activitydiagramTrace.ecore#//States/activitydiagram/TracedIntegerValue"/>

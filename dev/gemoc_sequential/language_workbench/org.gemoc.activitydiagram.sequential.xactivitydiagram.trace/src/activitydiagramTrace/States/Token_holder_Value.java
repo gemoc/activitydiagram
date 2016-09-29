@@ -37,7 +37,7 @@ public interface Token_holder_Value extends Value {
 	 * @return the value of the '<em>Holder</em>' reference.
 	 * @see #setHolder(TracedActivityNode)
 	 * @see activitydiagramTrace.States.StatesPackage#getToken_holder_Value_Holder()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	TracedActivityNode getHolder();

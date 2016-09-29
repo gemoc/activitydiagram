@@ -108,27 +108,6 @@ public class StatesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StatesPackage.INPUT_VALUE_VALUE_VALUE: {
-				InputValue_value_Value inputValue_value_Value = (InputValue_value_Value)theEObject;
-				T result = caseInputValue_value_Value(inputValue_value_Value);
-				if (result == null) result = caseValue(inputValue_value_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE: {
-				InputValue_variable_Value inputValue_variable_Value = (InputValue_variable_Value)theEObject;
-				T result = caseInputValue_variable_Value(inputValue_variable_Value);
-				if (result == null) result = caseValue(inputValue_variable_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StatesPackage.INPUT_INPUT_VALUES_VALUE: {
-				Input_inputValues_Value input_inputValues_Value = (Input_inputValues_Value)theEObject;
-				T result = caseInput_inputValues_Value(input_inputValues_Value);
-				if (result == null) result = caseValue(input_inputValues_Value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case StatesPackage.INTEGER_VALUE_VALUE_VALUE: {
 				IntegerValue_value_Value integerValue_value_Value = (IntegerValue_value_Value)theEObject;
 				T result = caseIntegerValue_value_Value(integerValue_value_Value);
@@ -267,51 +246,6 @@ public class StatesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseForkedToken_remainingOffersCount_Value(ForkedToken_remainingOffersCount_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Value value Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputValue_value_Value(InputValue_value_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Value variable Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Value variable Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputValue_variable_Value(InputValue_variable_Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input input Values Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input input Values Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInput_inputValues_Value(Input_inputValues_Value object) {
 		return null;
 	}
 

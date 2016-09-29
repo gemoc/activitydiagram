@@ -579,35 +579,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTracedInput_InputValuesSequence() {
-		return (EReference)tracedInputEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTracedInputValue() {
 		return tracedInputValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedInputValue_ValueSequence() {
-		return (EReference)tracedInputValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTracedInputValue_VariableSequence() {
-		return (EReference)tracedInputValueEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -833,11 +806,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		tracedInitialNodeEClass = createEClass(TRACED_INITIAL_NODE);
 
 		tracedInputEClass = createEClass(TRACED_INPUT);
-		createEReference(tracedInputEClass, TRACED_INPUT__INPUT_VALUES_SEQUENCE);
 
 		tracedInputValueEClass = createEClass(TRACED_INPUT_VALUE);
-		createEReference(tracedInputValueEClass, TRACED_INPUT_VALUE__VALUE_SEQUENCE);
-		createEReference(tracedInputValueEClass, TRACED_INPUT_VALUE__VARIABLE_SEQUENCE);
 
 		tracedIntegerValueEClass = createEClass(TRACED_INTEGER_VALUE);
 		createEReference(tracedIntegerValueEClass, TRACED_INTEGER_VALUE__VALUE_SEQUENCE);
@@ -965,11 +935,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEClass(tracedInitialNodeEClass, TracedInitialNode.class, "TracedInitialNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(tracedInputEClass, TracedInput.class, "TracedInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedInput_InputValuesSequence(), theStatesPackage.getInput_inputValues_Value(), theStatesPackage.getInput_inputValues_Value_Parent(), "inputValuesSequence", null, 0, -1, TracedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tracedInputValueEClass, TracedInputValue.class, "TracedInputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTracedInputValue_ValueSequence(), theStatesPackage.getInputValue_value_Value(), theStatesPackage.getInputValue_value_Value_Parent(), "valueSequence", null, 0, -1, TracedInputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTracedInputValue_VariableSequence(), theStatesPackage.getInputValue_variable_Value(), theStatesPackage.getInputValue_variable_Value_Parent(), "variableSequence", null, 0, -1, TracedInputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tracedIntegerValueEClass, TracedIntegerValue.class, "TracedIntegerValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTracedIntegerValue_ValueSequence(), theStatesPackage.getIntegerValue_value_Value(), theStatesPackage.getIntegerValue_value_Value_Parent(), "valueSequence", null, 0, -1, TracedIntegerValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -105,15 +105,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				.getActivitydiagram_tracedInitialNodes()) {
 			result.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : traceRoot
-				.getActivitydiagram_tracedInputs()) {
-			result.add(tracedObject.getInputValuesSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : traceRoot
-				.getActivitydiagram_tracedInputValues()) {
-			result.add(tracedObject.getValueSequence());
-			result.add(tracedObject.getVariableSequence());
-		}
 		for (activitydiagramTrace.States.activitydiagram.TracedIntegerValue tracedObject : traceRoot
 				.getActivitydiagram_tracedIntegerValues()) {
 			result.add(tracedObject.getValueSequence());
@@ -588,29 +579,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) getTracedToExe(
 						value.getParent());
 				exeObject.setRemainingOffersCount((int) value.getRemainingOffersCount());
-			}
-			for (activitydiagramTrace.States.Input_inputValues_Value value : stateToGo.getInput_inputValues_Values()) {
-				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) getTracedToExe(
-						value.getParent());
-				exeObject.getInputValues().clear();
-				exeObject.getInputValues()
-						.addAll((Collection<? extends org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue>) getTracedToExe(
-								value.getInputValues()));
-			}
-			for (activitydiagramTrace.States.InputValue_value_Value value : stateToGo.getInputValue_value_Values()) {
-				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) getTracedToExe(
-						value.getParent());
-				exeObject.setValue(
-						(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) getTracedToExe(
-								value.getValue()));
-			}
-			for (activitydiagramTrace.States.InputValue_variable_Value value : stateToGo
-					.getInputValue_variable_Values()) {
-				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) getTracedToExe(
-						value.getParent());
-				exeObject.setVariable(
-						(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) getTracedToExe(
-								value.getVariable()));
 			}
 			for (activitydiagramTrace.States.IntegerValue_value_Value value : stateToGo
 					.getIntegerValue_value_Values()) {
