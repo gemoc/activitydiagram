@@ -11,10 +11,10 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.OpaqueAction#getExpressions <em>Expressions</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getOpaqueAction()
  * @model
@@ -36,13 +36,5 @@ public interface OpaqueAction extends Action {
 	 * @generated
 	 */
 	EList<Expression> getExpressions();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // OpaqueAction

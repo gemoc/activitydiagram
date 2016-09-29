@@ -21,12 +21,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.VariableImpl#getInitialValue <em>Initial Value</em>}</li>
  *   <li>{@link activitydiagram.impl.VariableImpl#getName <em>Name</em>}</li>
- *   <li>{@link activitydiagram.impl.VariableImpl#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,16 +59,6 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getCurrentValue() <em>Current Value</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Value currentValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,56 +148,11 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value getCurrentValue() {
-		return currentValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCurrentValue(Value newCurrentValue, NotificationChain msgs) {
-		Value oldCurrentValue = currentValue;
-		currentValue = newCurrentValue;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, oldCurrentValue, newCurrentValue);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurrentValue(Value newCurrentValue) {
-		if (newCurrentValue != currentValue) {
-			NotificationChain msgs = null;
-			if (currentValue != null)
-				msgs = ((InternalEObject)currentValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, null, msgs);
-			if (newCurrentValue != null)
-				msgs = ((InternalEObject)newCurrentValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, null, msgs);
-			msgs = basicSetCurrentValue(newCurrentValue, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.VARIABLE__CURRENT_VALUE, newCurrentValue, newCurrentValue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ActivitydiagramPackage.VARIABLE__INITIAL_VALUE:
 				return basicSetInitialValue(null, msgs);
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				return basicSetCurrentValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,8 +169,6 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 				return getInitialValue();
 			case ActivitydiagramPackage.VARIABLE__NAME:
 				return getName();
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				return getCurrentValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,9 +186,6 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 				return;
 			case ActivitydiagramPackage.VARIABLE__NAME:
 				setName((String)newValue);
-				return;
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				setCurrentValue((Value)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -266,9 +205,6 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 			case ActivitydiagramPackage.VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				setCurrentValue((Value)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -285,8 +221,6 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 				return initialValue != null;
 			case ActivitydiagramPackage.VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
-				return currentValue != null;
 		}
 		return super.eIsSet(featureID);
 	}

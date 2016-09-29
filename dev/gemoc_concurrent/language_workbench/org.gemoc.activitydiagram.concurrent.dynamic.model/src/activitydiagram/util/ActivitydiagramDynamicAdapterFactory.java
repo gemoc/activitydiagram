@@ -16,17 +16,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see activitydiagram.DynamicPackage
+ * @see activitydiagram.ActivitydiagramDynamicPackage
  * @generated
  */
-public class DynamicAdapterFactory extends AdapterFactoryImpl {
+public class ActivitydiagramDynamicAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static DynamicPackage modelPackage;
+	protected static ActivitydiagramDynamicPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DynamicAdapterFactory() {
+	public ActivitydiagramDynamicAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = DynamicPackage.eINSTANCE;
+			modelPackage = ActivitydiagramDynamicPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DynamicSwitch<Adapter> modelSwitch =
-		new DynamicSwitch<Adapter>() {
+	protected ActivitydiagramDynamicSwitch<Adapter> modelSwitch =
+		new ActivitydiagramDynamicSwitch<Adapter>() {
 			@Override
 			public Adapter caseToken(Token object) {
 				return createTokenAdapter();
@@ -76,8 +76,8 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 				return createOfferAdapter();
 			}
 			@Override
-			public Adapter caseRuntimeTrace(RuntimeTrace object) {
-				return createRuntimeTraceAdapter();
+			public Adapter caseTrace(Trace object) {
+				return createTraceAdapter();
 			}
 			@Override
 			public Adapter caseInputValue(InputValue object) {
@@ -94,6 +94,10 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseForkedToken(ForkedToken object) {
 				return createForkedTokenAdapter();
+			}
+			@Override
+			public Adapter caseContext(Context object) {
+				return createContextAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -144,16 +148,16 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.RuntimeTrace <em>Runtime Trace</em>}'.
+	 * Creates a new adapter for an object of class '{@link activitydiagram.Trace <em>Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see activitydiagram.RuntimeTrace
+	 * @see activitydiagram.Trace
 	 * @generated
 	 */
-	public Adapter createRuntimeTraceAdapter() {
+	public Adapter createTraceAdapter() {
 		return null;
 	}
 
@@ -214,6 +218,20 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link activitydiagram.Context <em>Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see activitydiagram.Context
+	 * @generated
+	 */
+	public Adapter createContextAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for the default case.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null.
@@ -225,4 +243,4 @@ public class DynamicAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //DynamicAdapterFactory
+} //ActivitydiagramDynamicAdapterFactory

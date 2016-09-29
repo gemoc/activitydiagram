@@ -2,7 +2,7 @@
  */
 package activitydiagram.impl;
 
-import activitydiagram.DynamicPackage;
+import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.Offer;
 
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +33,7 @@ public class OfferImpl extends MinimalEObjectImpl.Container implements Offer {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DynamicPackage.Literals.OFFER;
+		return ActivitydiagramDynamicPackage.Literals.OFFER;
 	}
 
 } //OfferImpl

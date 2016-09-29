@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see activitydiagram.DynamicPackage#getToken()
+ * @see activitydiagram.ActivitydiagramDynamicPackage#getToken()
  * @model abstract="true"
  * @generated
  */

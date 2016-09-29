@@ -2,15 +2,16 @@
  */
 package activitydiagram.impl;
 
+import activitydiagram.ActivitydiagramDynamicFactory;
+import activitydiagram.ActivitydiagramDynamicPackage;
+import activitydiagram.Context;
 import activitydiagram.ControlToken;
-import activitydiagram.DynamicFactory;
-import activitydiagram.DynamicPackage;
 import activitydiagram.ForkedToken;
 import activitydiagram.Input;
 import activitydiagram.InputValue;
 import activitydiagram.Offer;
-import activitydiagram.RuntimeTrace;
 import activitydiagram.Token;
+import activitydiagram.Trace;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -23,7 +24,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
+public class ActivitydiagramDynamicPackageImpl extends EPackageImpl implements ActivitydiagramDynamicPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -43,7 +44,7 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass runtimeTraceEClass = null;
+	private EClass traceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,6 +75,13 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	private EClass forkedTokenEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass contextEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -84,12 +92,12 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see activitydiagram.DynamicPackage#eNS_URI
+	 * @see activitydiagram.ActivitydiagramDynamicPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private DynamicPackageImpl() {
-		super(eNS_URI, DynamicFactory.eINSTANCE);
+	private ActivitydiagramDynamicPackageImpl() {
+		super(eNS_URI, ActivitydiagramDynamicFactory.eINSTANCE);
 	}
 
 	/**
@@ -102,7 +110,7 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link DynamicPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link ActivitydiagramDynamicPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,27 +119,27 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static DynamicPackage init() {
-		if (isInited) return (DynamicPackage)EPackage.Registry.INSTANCE.getEPackage(DynamicPackage.eNS_URI);
+	public static ActivitydiagramDynamicPackage init() {
+		if (isInited) return (ActivitydiagramDynamicPackage)EPackage.Registry.INSTANCE.getEPackage(ActivitydiagramDynamicPackage.eNS_URI);
 
 		// Obtain or create and register package
-		DynamicPackageImpl theDynamicPackage = (DynamicPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DynamicPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DynamicPackageImpl());
+		ActivitydiagramDynamicPackageImpl theActivitydiagramDynamicPackage = (ActivitydiagramDynamicPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ActivitydiagramDynamicPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ActivitydiagramDynamicPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theDynamicPackage.createPackageContents();
+		theActivitydiagramDynamicPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theDynamicPackage.initializePackageContents();
+		theActivitydiagramDynamicPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theDynamicPackage.freeze();
+		theActivitydiagramDynamicPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(DynamicPackage.eNS_URI, theDynamicPackage);
-		return theDynamicPackage;
+		EPackage.Registry.INSTANCE.put(ActivitydiagramDynamicPackage.eNS_URI, theActivitydiagramDynamicPackage);
+		return theActivitydiagramDynamicPackage;
 	}
 
 	/**
@@ -157,8 +165,8 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRuntimeTrace() {
-		return runtimeTraceEClass;
+	public EClass getTrace() {
+		return traceEClass;
 	}
 
 	/**
@@ -202,8 +210,17 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DynamicFactory getDynamicFactory() {
-		return (DynamicFactory)getEFactoryInstance();
+	public EClass getContext() {
+		return contextEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActivitydiagramDynamicFactory getActivitydiagramDynamicFactory() {
+		return (ActivitydiagramDynamicFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -229,7 +246,7 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 
 		offerEClass = createEClass(OFFER);
 
-		runtimeTraceEClass = createEClass(RUNTIME_TRACE);
+		traceEClass = createEClass(TRACE);
 
 		inputValueEClass = createEClass(INPUT_VALUE);
 
@@ -238,6 +255,8 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 		controlTokenEClass = createEClass(CONTROL_TOKEN);
 
 		forkedTokenEClass = createEClass(FORKED_TOKEN);
+
+		contextEClass = createEClass(CONTEXT);
 	}
 
 	/**
@@ -276,7 +295,7 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 
 		initEClass(offerEClass, Offer.class, "Offer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(runtimeTraceEClass, RuntimeTrace.class, "RuntimeTrace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(traceEClass, Trace.class, "Trace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -285,6 +304,8 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 		initEClass(controlTokenEClass, ControlToken.class, "ControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(forkedTokenEClass, ForkedToken.class, "ForkedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -313,7 +334,7 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (runtimeTraceEClass, 
+		  (traceEClass, 
 		   source, 
 		   new String[] {
 		   });	
@@ -339,4 +360,4 @@ public class DynamicPackageImpl extends EPackageImpl implements DynamicPackage {
 		   });
 	}
 
-} //DynamicPackageImpl
+} //ActivitydiagramDynamicPackageImpl

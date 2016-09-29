@@ -4,15 +4,12 @@ package activitydiagram.impl;
 
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.DecisionNode;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Decision Node</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

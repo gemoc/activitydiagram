@@ -19,13 +19,11 @@ import activitydiagram.BooleanValue;
 import activitydiagram.BooleanVariable;
 import activitydiagram.ControlFlow;
 import activitydiagram.ControlNode;
-import activitydiagram.ControlToken;
 import activitydiagram.DecisionNode;
 import activitydiagram.ExecutableNode;
 import activitydiagram.Expression;
 import activitydiagram.FinalNode;
 import activitydiagram.ForkNode;
-import activitydiagram.ForkedToken;
 import activitydiagram.InitialNode;
 import activitydiagram.Input;
 import activitydiagram.InputValue;
@@ -39,20 +37,17 @@ import activitydiagram.IntegerVariable;
 import activitydiagram.JoinNode;
 import activitydiagram.MergeNode;
 import activitydiagram.NamedElement;
-import activitydiagram.Offer;
 import activitydiagram.OpaqueAction;
 import activitydiagram.SendSignalAction;
 import activitydiagram.Signal;
 import activitydiagram.SignalEvent;
 import activitydiagram.Token;
-import activitydiagram.Trace;
 import activitydiagram.Value;
 import activitydiagram.Variable;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -273,21 +268,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass offerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass tokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass traceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -302,20 +283,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	private EClass inputEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass controlTokenEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass forkedTokenEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -484,17 +451,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivity_Trace() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getActivity_InputValuePath() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -503,25 +461,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	public EReference getActivity_Signals() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivity__Initialize() {
-		return activityEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivity__Finish() {
-		return activityEClass.getEOperations().get(1);
+		return (EReference)activityEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -565,42 +505,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getActivityNode_Running() {
-		return (EAttribute)activityNodeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getActivityNode_HeldTokens() {
-		return (EReference)activityNodeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivityNode__Execute() {
-		return activityNodeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivityNode__Terminate() {
-		return activityNodeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getActivityEdge() {
 		return activityEdgeEClass;
 	}
@@ -621,33 +525,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EReference getActivityEdge_Target() {
 		return (EReference)activityEdgeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getActivityEdge_Offers() {
-		return (EReference)activityEdgeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivityEdge__EvaluateGuard() {
-		return activityEdgeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getActivityEdge__ClearOffer() {
-		return activityEdgeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -718,15 +595,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOpaqueAction__Execute() {
-		return opaqueActionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -754,15 +622,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getInitialNode__Execute() {
-		return initialNodeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getFinalNode() {
 		return finalNodeEClass;
 	}
@@ -781,26 +640,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getActivityFinalNode__Execute() {
-		return activityFinalNodeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getForkNode() {
 		return forkNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getForkNode__Execute() {
-		return forkNodeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -817,15 +658,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getJoinNode__Execute() {
-		return joinNodeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMergeNode() {
 		return mergeNodeEClass;
 	}
@@ -835,26 +667,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMergeNode__Execute() {
-		return mergeNodeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDecisionNode() {
 		return decisionNodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDecisionNode__Execute() {
-		return decisionNodeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -882,15 +696,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EAttribute getVariable_Name() {
 		return (EAttribute)variableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVariable_CurrentValue() {
-		return (EReference)variableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1132,24 +937,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOffer() {
-		return offerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getOffer_OfferedTokens() {
-		return (EReference)offerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getToken() {
 		return tokenEClass;
 	}
@@ -1161,24 +948,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EReference getToken_Holder() {
 		return (EReference)tokenEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTrace() {
-		return traceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTrace_ExecutedNodes() {
-		return (EReference)traceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1231,42 +1000,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getControlToken() {
-		return controlTokenEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getForkedToken() {
-		return forkedTokenEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getForkedToken_BaseToken() {
-		return (EReference)forkedTokenEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getForkedToken_RemainingOffersCount() {
-		return (EAttribute)forkedTokenEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSendSignalAction() {
 		return sendSignalActionEClass;
 	}
@@ -1285,15 +1018,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSendSignalAction__Execute() {
-		return sendSignalActionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAcceptEventAction() {
 		return acceptEventActionEClass;
 	}
@@ -1305,15 +1029,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EReference getAcceptEventAction_Trigger() {
 		return (EReference)acceptEventActionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAcceptEventAction__Execute() {
-		return acceptEventActionEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1403,27 +1118,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(activityEClass, ACTIVITY__EDGES);
 		createEReference(activityEClass, ACTIVITY__LOCALS);
 		createEReference(activityEClass, ACTIVITY__INPUTS);
-		createEReference(activityEClass, ACTIVITY__TRACE);
 		createEAttribute(activityEClass, ACTIVITY__INPUT_VALUE_PATH);
 		createEReference(activityEClass, ACTIVITY__SIGNALS);
-		createEOperation(activityEClass, ACTIVITY___INITIALIZE);
-		createEOperation(activityEClass, ACTIVITY___FINISH);
 
 		activityNodeEClass = createEClass(ACTIVITY_NODE);
 		createEReference(activityNodeEClass, ACTIVITY_NODE__OUTGOING);
 		createEReference(activityNodeEClass, ACTIVITY_NODE__INCOMING);
 		createEReference(activityNodeEClass, ACTIVITY_NODE__ACTIVITY);
-		createEAttribute(activityNodeEClass, ACTIVITY_NODE__RUNNING);
-		createEReference(activityNodeEClass, ACTIVITY_NODE__HELD_TOKENS);
-		createEOperation(activityNodeEClass, ACTIVITY_NODE___EXECUTE);
-		createEOperation(activityNodeEClass, ACTIVITY_NODE___TERMINATE);
 
 		activityEdgeEClass = createEClass(ACTIVITY_EDGE);
 		createEReference(activityEdgeEClass, ACTIVITY_EDGE__SOURCE);
 		createEReference(activityEdgeEClass, ACTIVITY_EDGE__TARGET);
-		createEReference(activityEdgeEClass, ACTIVITY_EDGE__OFFERS);
-		createEOperation(activityEdgeEClass, ACTIVITY_EDGE___EVALUATE_GUARD);
-		createEOperation(activityEdgeEClass, ACTIVITY_EDGE___CLEAR_OFFER);
 
 		controlFlowEClass = createEClass(CONTROL_FLOW);
 		createEReference(controlFlowEClass, CONTROL_FLOW__GUARD);
@@ -1436,35 +1141,27 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		opaqueActionEClass = createEClass(OPAQUE_ACTION);
 		createEReference(opaqueActionEClass, OPAQUE_ACTION__EXPRESSIONS);
-		createEOperation(opaqueActionEClass, OPAQUE_ACTION___EXECUTE);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		initialNodeEClass = createEClass(INITIAL_NODE);
-		createEOperation(initialNodeEClass, INITIAL_NODE___EXECUTE);
 
 		finalNodeEClass = createEClass(FINAL_NODE);
 
 		activityFinalNodeEClass = createEClass(ACTIVITY_FINAL_NODE);
-		createEOperation(activityFinalNodeEClass, ACTIVITY_FINAL_NODE___EXECUTE);
 
 		forkNodeEClass = createEClass(FORK_NODE);
-		createEOperation(forkNodeEClass, FORK_NODE___EXECUTE);
 
 		joinNodeEClass = createEClass(JOIN_NODE);
-		createEOperation(joinNodeEClass, JOIN_NODE___EXECUTE);
 
 		mergeNodeEClass = createEClass(MERGE_NODE);
-		createEOperation(mergeNodeEClass, MERGE_NODE___EXECUTE);
 
 		decisionNodeEClass = createEClass(DECISION_NODE);
-		createEOperation(decisionNodeEClass, DECISION_NODE___EXECUTE);
 
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__INITIAL_VALUE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
-		createEReference(variableEClass, VARIABLE__CURRENT_VALUE);
 
 		integerVariableEClass = createEClass(INTEGER_VARIABLE);
 
@@ -1504,14 +1201,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(booleanBinaryExpressionEClass, BOOLEAN_BINARY_EXPRESSION__OPERAND2);
 		createEAttribute(booleanBinaryExpressionEClass, BOOLEAN_BINARY_EXPRESSION__OPERATOR);
 
-		offerEClass = createEClass(OFFER);
-		createEReference(offerEClass, OFFER__OFFERED_TOKENS);
-
 		tokenEClass = createEClass(TOKEN);
 		createEReference(tokenEClass, TOKEN__HOLDER);
-
-		traceEClass = createEClass(TRACE);
-		createEReference(traceEClass, TRACE__EXECUTED_NODES);
 
 		inputValueEClass = createEClass(INPUT_VALUE);
 		createEReference(inputValueEClass, INPUT_VALUE__VALUE);
@@ -1520,19 +1211,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		inputEClass = createEClass(INPUT);
 		createEReference(inputEClass, INPUT__INPUT_VALUES);
 
-		controlTokenEClass = createEClass(CONTROL_TOKEN);
-
-		forkedTokenEClass = createEClass(FORKED_TOKEN);
-		createEReference(forkedTokenEClass, FORKED_TOKEN__BASE_TOKEN);
-		createEAttribute(forkedTokenEClass, FORKED_TOKEN__REMAINING_OFFERS_COUNT);
-
 		sendSignalActionEClass = createEClass(SEND_SIGNAL_ACTION);
 		createEReference(sendSignalActionEClass, SEND_SIGNAL_ACTION__SIGNAL);
-		createEOperation(sendSignalActionEClass, SEND_SIGNAL_ACTION___EXECUTE);
 
 		acceptEventActionEClass = createEClass(ACCEPT_EVENT_ACTION);
 		createEReference(acceptEventActionEClass, ACCEPT_EVENT_ACTION__TRIGGER);
-		createEOperation(acceptEventActionEClass, ACCEPT_EVENT_ACTION___EXECUTE);
 
 		signalEClass = createEClass(SIGNAL);
 
@@ -1598,8 +1281,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		integerComparisonExpressionEClass.getESuperTypes().add(this.getIntegerExpression());
 		booleanUnaryExpressionEClass.getESuperTypes().add(this.getBooleanExpression());
 		booleanBinaryExpressionEClass.getESuperTypes().add(this.getBooleanExpression());
-		controlTokenEClass.getESuperTypes().add(this.getToken());
-		forkedTokenEClass.getESuperTypes().add(this.getToken());
 		sendSignalActionEClass.getESuperTypes().add(this.getAction());
 		acceptEventActionEClass.getESuperTypes().add(this.getAction());
 		signalEClass.getESuperTypes().add(this.getNamedElement());
@@ -1611,33 +1292,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivity_Edges(), this.getActivityEdge(), null, "edges", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Locals(), this.getVariable(), null, "locals", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Inputs(), this.getVariable(), null, "inputs", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivity_Trace(), this.getTrace(), null, "trace", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_InputValuePath(), ecorePackage.getEString(), "inputValuePath", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Signals(), this.getSignal(), null, "signals", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getActivity__Initialize(), null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getActivity__Finish(), null, "finish", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(activityNodeEClass, ActivityNode.class, "ActivityNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActivityNode_Outgoing(), this.getActivityEdge(), this.getActivityEdge_Source(), "outgoing", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityNode_Incoming(), this.getActivityEdge(), this.getActivityEdge_Target(), "incoming", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityNode_Activity(), this.getActivity(), this.getActivity_Nodes(), "activity", null, 1, 1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivityNode_Running(), ecorePackage.getEBoolean(), "running", null, 1, 1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivityNode_HeldTokens(), this.getToken(), this.getToken_Holder(), "heldTokens", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getActivityNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getActivityNode__Terminate(), null, "terminate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(activityEdgeEClass, ActivityEdge.class, "ActivityEdge", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActivityEdge_Source(), this.getActivityNode(), this.getActivityNode_Outgoing(), "source", null, 1, 1, ActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityEdge_Target(), this.getActivityNode(), this.getActivityNode_Incoming(), "target", null, 1, 1, ActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivityEdge_Offers(), this.getOffer(), null, "offers", null, 0, -1, ActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getActivityEdge__EvaluateGuard(), ecorePackage.getEBoolean(), "evaluateGuard", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getActivityEdge__ClearOffer(), null, "clearOffer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(controlFlowEClass, ControlFlow.class, "ControlFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getControlFlow_Guard(), this.getBooleanVariable(), null, "guard", null, 0, 1, ControlFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1651,41 +1316,26 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEClass(opaqueActionEClass, OpaqueAction.class, "OpaqueAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOpaqueAction_Expressions(), this.getExpression(), null, "expressions", null, 0, -1, OpaqueAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getOpaqueAction__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(initialNodeEClass, InitialNode.class, "InitialNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getInitialNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(finalNodeEClass, FinalNode.class, "FinalNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(activityFinalNodeEClass, ActivityFinalNode.class, "ActivityFinalNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getActivityFinalNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(forkNodeEClass, ForkNode.class, "ForkNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getForkNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(joinNodeEClass, JoinNode.class, "JoinNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getJoinNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(mergeNodeEClass, MergeNode.class, "MergeNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getMergeNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(decisionNodeEClass, DecisionNode.class, "DecisionNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getDecisionNode__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_InitialValue(), this.getValue(), null, "initialValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariable_CurrentValue(), this.getValue(), null, "currentValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(integerVariableEClass, IntegerVariable.class, "IntegerVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1725,14 +1375,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getBooleanBinaryExpression_Operand2(), this.getBooleanVariable(), null, "operand2", null, 1, 1, BooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBooleanBinaryExpression_Operator(), this.getBooleanBinaryOperator(), "operator", null, 1, 1, BooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(offerEClass, Offer.class, "Offer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOffer_OfferedTokens(), this.getToken(), null, "offeredTokens", null, 0, -1, Offer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(tokenEClass, Token.class, "Token", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToken_Holder(), this.getActivityNode(), this.getActivityNode_HeldTokens(), "holder", null, 1, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(traceEClass, Trace.class, "Trace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTrace_ExecutedNodes(), this.getActivityNode(), null, "executedNodes", null, 0, -1, Trace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getToken_Holder(), this.getActivityNode(), null, "holder", null, 1, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputValue_Value(), this.getValue(), null, "value", null, 1, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1741,21 +1385,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInput_InputValues(), this.getInputValue(), null, "inputValues", null, 0, -1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(controlTokenEClass, ControlToken.class, "ControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(forkedTokenEClass, ForkedToken.class, "ForkedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getForkedToken_BaseToken(), this.getToken(), null, "baseToken", null, 1, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getForkedToken_RemainingOffersCount(), ecorePackage.getEInt(), "remainingOffersCount", null, 1, 1, ForkedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(sendSignalActionEClass, SendSignalAction.class, "SendSignalAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSendSignalAction_Signal(), this.getSignal(), null, "signal", null, 0, 1, SendSignalAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSendSignalAction__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(acceptEventActionEClass, AcceptEventAction.class, "AcceptEventAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAcceptEventAction_Trigger(), this.getSignalEvent(), null, "trigger", null, 0, 1, AcceptEventAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getAcceptEventAction__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(signalEClass, Signal.class, "Signal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1797,86 +1431,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	protected void createAspectAnnotations() {
 		String source = "aspect";	
 		addAnnotation
-		  (getActivity__Initialize(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivity__Finish(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivity_Trace(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivityNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivityNode__Terminate(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivityNode_HeldTokens(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivityEdge__EvaluateGuard(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivityEdge_Offers(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getOpaqueAction__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getInitialNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getActivityFinalNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getForkNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getJoinNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getMergeNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getDecisionNode__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getVariable_CurrentValue(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (valueEClass, 
 		   source, 
 		   new String[] {
@@ -1887,37 +1441,12 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
-		  (traceEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (inputValueEClass, 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
 		  (inputEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (controlTokenEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (forkedTokenEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getSendSignalAction__Execute(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getAcceptEventAction__Execute(), 
 		   source, 
 		   new String[] {
 		   });

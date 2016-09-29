@@ -1,5 +1,5 @@
 Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent;singleton:=true
-Export-Package: concurrentactivitydiagram.xdsml.api.impl
+Export-Package: concurrentactivitydiagram.xdsml.api.impl,xactivitydiagram.xdsml.api.impl
 Bundle-Name: org.modelexecution.operationalsemantics.ad.concurrent.xdsml
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
@@ -39,7 +39,9 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="privat
  
  org.gemoc.activitydiagram.concurrent.k3dsa;bundle-version="0.0.0";visibility:="private",
  
- org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport
+ org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
+ 
+ org.gemoc.activitydiagram.concurrent.dynamic.model;bundle-version="0.1.0"
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Manifest-Version: 1.0

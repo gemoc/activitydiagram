@@ -5,24 +5,12 @@ package activitydiagram.impl;
 import activitydiagram.ActivityEdge;
 import activitydiagram.ActivityNode;
 import activitydiagram.ActivitydiagramPackage;
-import activitydiagram.Offer;
-
-import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,12 +18,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.ActivityEdgeImpl#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityEdgeImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link activitydiagram.impl.ActivityEdgeImpl#getOffers <em>Offers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,16 +46,6 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 	 * @ordered
 	 */
 	protected ActivityNode target;
-
-	/**
-	 * The cached value of the '{@link #getOffers() <em>Offers</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOffers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Offer> offers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,40 +191,6 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Offer> getOffers() {
-		if (offers == null) {
-			offers = new EObjectContainmentEList<Offer>(Offer.class, this, ActivitydiagramPackage.ACTIVITY_EDGE__OFFERS);
-		}
-		return offers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean evaluateGuard() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void clearOffer() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -275,8 +218,6 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 				return basicSetSource(null, msgs);
 			case ActivitydiagramPackage.ACTIVITY_EDGE__TARGET:
 				return basicSetTarget(null, msgs);
-			case ActivitydiagramPackage.ACTIVITY_EDGE__OFFERS:
-				return ((InternalEList<?>)getOffers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -295,8 +236,6 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 			case ActivitydiagramPackage.ACTIVITY_EDGE__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case ActivitydiagramPackage.ACTIVITY_EDGE__OFFERS:
-				return getOffers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -316,10 +255,6 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 			case ActivitydiagramPackage.ACTIVITY_EDGE__TARGET:
 				setTarget((ActivityNode)newValue);
 				return;
-			case ActivitydiagramPackage.ACTIVITY_EDGE__OFFERS:
-				getOffers().clear();
-				getOffers().addAll((Collection<? extends Offer>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -338,9 +273,6 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 			case ActivitydiagramPackage.ACTIVITY_EDGE__TARGET:
 				setTarget((ActivityNode)null);
 				return;
-			case ActivitydiagramPackage.ACTIVITY_EDGE__OFFERS:
-				getOffers().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -357,27 +289,8 @@ public abstract class ActivityEdgeImpl extends NamedElementImpl implements Activ
 				return source != null;
 			case ActivitydiagramPackage.ACTIVITY_EDGE__TARGET:
 				return target != null;
-			case ActivitydiagramPackage.ACTIVITY_EDGE__OFFERS:
-				return offers != null && !offers.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ActivitydiagramPackage.ACTIVITY_EDGE___EVALUATE_GUARD:
-				return evaluateGuard();
-			case ActivitydiagramPackage.ACTIVITY_EDGE___CLEAR_OFFER:
-				clearOffer();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //ActivityEdgeImpl

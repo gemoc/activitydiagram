@@ -2,7 +2,7 @@
  */
 package activitydiagram.impl;
 
-import activitydiagram.DynamicPackage;
+import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.InputValue;
 
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +33,7 @@ public class InputValueImpl extends MinimalEObjectImpl.Container implements Inpu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DynamicPackage.Literals.INPUT_VALUE;
+		return ActivitydiagramDynamicPackage.Literals.INPUT_VALUE;
 	}
 
 } //InputValueImpl

@@ -5,7 +5,6 @@ package activitydiagram;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -151,22 +150,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY__INPUTS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Trace</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__TRACE = NAMED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Input Value Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__INPUT_VALUE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int ACTIVITY__INPUT_VALUE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
@@ -175,7 +165,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -184,25 +174,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>Initialize</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY___INITIALIZE = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Finish</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY___FINISH = NAMED_ELEMENT_OPERATION_COUNT + 1;
+	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -211,7 +183,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 2;
+	int ACTIVITY_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.ActivityNodeImpl <em>Activity Node</em>}' class.
@@ -260,49 +232,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY_NODE__ACTIVITY = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE__RUNNING = NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE__HELD_TOKENS = NAMED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>Activity Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_NODE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE___EXECUTE = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_NODE___TERMINATE = NAMED_ELEMENT_OPERATION_COUNT + 1;
+	int ACTIVITY_NODE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Activity Node</em>' class.
@@ -311,7 +247,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_NODE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 2;
+	int ACTIVITY_NODE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.ActivityEdgeImpl <em>Activity Edge</em>}' class.
@@ -351,40 +287,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY_EDGE__TARGET = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Offers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_EDGE__OFFERS = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Activity Edge</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_EDGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Evaluate Guard</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_EDGE___EVALUATE_GUARD = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Clear Offer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_EDGE___CLEAR_OFFER = NAMED_ELEMENT_OPERATION_COUNT + 1;
+	int ACTIVITY_EDGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Activity Edge</em>' class.
@@ -393,7 +302,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_EDGE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 2;
+	int ACTIVITY_EDGE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.ControlFlowImpl <em>Control Flow</em>}' class.
@@ -433,15 +342,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int CONTROL_FLOW__TARGET = ACTIVITY_EDGE__TARGET;
 
 	/**
-	 * The feature id for the '<em><b>Offers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_FLOW__OFFERS = ACTIVITY_EDGE__OFFERS;
-
-	/**
 	 * The feature id for the '<em><b>Guard</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,24 +358,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_FLOW_FEATURE_COUNT = ACTIVITY_EDGE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Evaluate Guard</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_FLOW___EVALUATE_GUARD = ACTIVITY_EDGE___EVALUATE_GUARD;
-
-	/**
-	 * The operation id for the '<em>Clear Offer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_FLOW___CLEAR_OFFER = ACTIVITY_EDGE___CLEAR_OFFER;
 
 	/**
 	 * The number of operations of the '<em>Control Flow</em>' class.
@@ -533,24 +415,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int CONTROL_NODE__ACTIVITY = ACTIVITY_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_NODE__RUNNING = ACTIVITY_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_NODE__HELD_TOKENS = ACTIVITY_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Control Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -558,24 +422,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_NODE_FEATURE_COUNT = ACTIVITY_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_NODE___EXECUTE = ACTIVITY_NODE___EXECUTE;
-
-	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_NODE___TERMINATE = ACTIVITY_NODE___TERMINATE;
 
 	/**
 	 * The number of operations of the '<em>Control Node</em>' class.
@@ -633,24 +479,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int EXECUTABLE_NODE__ACTIVITY = ACTIVITY_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTABLE_NODE__RUNNING = ACTIVITY_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTABLE_NODE__HELD_TOKENS = ACTIVITY_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Executable Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -658,24 +486,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXECUTABLE_NODE_FEATURE_COUNT = ACTIVITY_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTABLE_NODE___EXECUTE = ACTIVITY_NODE___EXECUTE;
-
-	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTABLE_NODE___TERMINATE = ACTIVITY_NODE___TERMINATE;
 
 	/**
 	 * The number of operations of the '<em>Executable Node</em>' class.
@@ -733,24 +543,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTION__ACTIVITY = EXECUTABLE_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__RUNNING = EXECUTABLE_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__HELD_TOKENS = EXECUTABLE_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -758,24 +550,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTION_FEATURE_COUNT = EXECUTABLE_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION___EXECUTE = EXECUTABLE_NODE___EXECUTE;
-
-	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION___TERMINATE = EXECUTABLE_NODE___TERMINATE;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -833,24 +607,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int OPAQUE_ACTION__ACTIVITY = ACTION__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_ACTION__RUNNING = ACTION__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_ACTION__HELD_TOKENS = ACTION__HELD_TOKENS;
-
-	/**
 	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -869,31 +625,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int OPAQUE_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_ACTION___TERMINATE = ACTION___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPAQUE_ACTION___EXECUTE = ACTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Opaque Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPAQUE_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
+	int OPAQUE_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.InitialNodeImpl <em>Initial Node</em>}' class.
@@ -942,24 +680,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INITIAL_NODE__ACTIVITY = CONTROL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_NODE__RUNNING = CONTROL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_NODE__HELD_TOKENS = CONTROL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Initial Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -969,31 +689,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INITIAL_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_NODE___TERMINATE = CONTROL_NODE___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INITIAL_NODE___EXECUTE = CONTROL_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Initial Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 1;
+	int INITIAL_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.FinalNodeImpl <em>Final Node</em>}' class.
@@ -1042,24 +744,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int FINAL_NODE__ACTIVITY = CONTROL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINAL_NODE__RUNNING = CONTROL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINAL_NODE__HELD_TOKENS = CONTROL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Final Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1067,24 +751,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int FINAL_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINAL_NODE___EXECUTE = CONTROL_NODE___EXECUTE;
-
-	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINAL_NODE___TERMINATE = CONTROL_NODE___TERMINATE;
 
 	/**
 	 * The number of operations of the '<em>Final Node</em>' class.
@@ -1142,24 +808,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY_FINAL_NODE__ACTIVITY = FINAL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_FINAL_NODE__RUNNING = FINAL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_FINAL_NODE__HELD_TOKENS = FINAL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Activity Final Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1169,31 +817,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY_FINAL_NODE_FEATURE_COUNT = FINAL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_FINAL_NODE___TERMINATE = FINAL_NODE___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_FINAL_NODE___EXECUTE = FINAL_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Activity Final Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FINAL_NODE_OPERATION_COUNT = FINAL_NODE_OPERATION_COUNT + 1;
+	int ACTIVITY_FINAL_NODE_OPERATION_COUNT = FINAL_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.ForkNodeImpl <em>Fork Node</em>}' class.
@@ -1242,24 +872,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int FORK_NODE__ACTIVITY = CONTROL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORK_NODE__RUNNING = CONTROL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORK_NODE__HELD_TOKENS = CONTROL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Fork Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1269,31 +881,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int FORK_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORK_NODE___TERMINATE = CONTROL_NODE___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORK_NODE___EXECUTE = CONTROL_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Fork Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORK_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 1;
+	int FORK_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.JoinNodeImpl <em>Join Node</em>}' class.
@@ -1342,24 +936,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int JOIN_NODE__ACTIVITY = CONTROL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JOIN_NODE__RUNNING = CONTROL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JOIN_NODE__HELD_TOKENS = CONTROL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Join Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1369,31 +945,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int JOIN_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JOIN_NODE___TERMINATE = CONTROL_NODE___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JOIN_NODE___EXECUTE = CONTROL_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Join Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JOIN_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 1;
+	int JOIN_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.MergeNodeImpl <em>Merge Node</em>}' class.
@@ -1442,24 +1000,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int MERGE_NODE__ACTIVITY = CONTROL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MERGE_NODE__RUNNING = CONTROL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MERGE_NODE__HELD_TOKENS = CONTROL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Merge Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1469,31 +1009,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int MERGE_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MERGE_NODE___TERMINATE = CONTROL_NODE___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MERGE_NODE___EXECUTE = CONTROL_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Merge Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MERGE_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 1;
+	int MERGE_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.DecisionNodeImpl <em>Decision Node</em>}' class.
@@ -1542,24 +1064,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int DECISION_NODE__ACTIVITY = CONTROL_NODE__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_NODE__RUNNING = CONTROL_NODE__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_NODE__HELD_TOKENS = CONTROL_NODE__HELD_TOKENS;
-
-	/**
 	 * The number of structural features of the '<em>Decision Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1569,31 +1073,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int DECISION_NODE_FEATURE_COUNT = CONTROL_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_NODE___TERMINATE = CONTROL_NODE___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION_NODE___EXECUTE = CONTROL_NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Decision Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DECISION_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 1;
+	int DECISION_NODE_OPERATION_COUNT = CONTROL_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.VariableImpl <em>Variable</em>}' class.
@@ -1624,22 +1110,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int VARIABLE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__CURRENT_VALUE = 2;
-
-	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 3;
+	int VARIABLE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -1677,15 +1154,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTEGER_VARIABLE__NAME = VARIABLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VARIABLE__CURRENT_VALUE = VARIABLE__CURRENT_VALUE;
 
 	/**
 	 * The number of structural features of the '<em>Integer Variable</em>' class.
@@ -1732,15 +1200,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_VARIABLE__NAME = VARIABLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_VARIABLE__CURRENT_VALUE = VARIABLE__CURRENT_VALUE;
 
 	/**
 	 * The number of structural features of the '<em>Boolean Variable</em>' class.
@@ -2221,43 +1680,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int BOOLEAN_BINARY_EXPRESSION_OPERATION_COUNT = BOOLEAN_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagram.impl.OfferImpl <em>Offer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.OfferImpl
-	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getOffer()
-	 * @generated
-	 */
-	int OFFER = 29;
-
-	/**
-	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER__OFFERED_TOKENS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Offer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Offer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OFFER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link activitydiagram.impl.TokenImpl <em>Token</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2265,10 +1687,10 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
 	 * @generated
 	 */
-	int TOKEN = 30;
+	int TOKEN = 29;
 
 	/**
-	 * The feature id for the '<em><b>Holder</b></em>' container reference.
+	 * The feature id for the '<em><b>Holder</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2295,43 +1717,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TOKEN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.TraceImpl
-	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-	 * @generated
-	 */
-	int TRACE = 31;
-
-	/**
-	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__EXECUTED_NODES = 0;
-
-	/**
-	 * The number of structural features of the '<em>Trace</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Trace</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2339,7 +1724,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getInputValue()
 	 * @generated
 	 */
-	int INPUT_VALUE = 32;
+	int INPUT_VALUE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2385,7 +1770,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 33;
+	int INPUT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Input Values</b></em>' containment reference list.
@@ -2415,98 +1800,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INPUT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.ControlTokenImpl
-	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getControlToken()
-	 * @generated
-	 */
-	int CONTROL_TOKEN = 34;
-
-	/**
-	 * The feature id for the '<em><b>Holder</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_TOKEN__HOLDER = TOKEN__HOLDER;
-
-	/**
-	 * The number of structural features of the '<em>Control Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_TOKEN_FEATURE_COUNT = TOKEN_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Control Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_TOKEN_OPERATION_COUNT = TOKEN_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagram.impl.ForkedTokenImpl <em>Forked Token</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.ForkedTokenImpl
-	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getForkedToken()
-	 * @generated
-	 */
-	int FORKED_TOKEN = 35;
-
-	/**
-	 * The feature id for the '<em><b>Holder</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN__HOLDER = TOKEN__HOLDER;
-
-	/**
-	 * The feature id for the '<em><b>Base Token</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN__BASE_TOKEN = TOKEN_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Remaining Offers Count</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN__REMAINING_OFFERS_COUNT = TOKEN_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Forked Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_FEATURE_COUNT = TOKEN_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Forked Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN_OPERATION_COUNT = TOKEN_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link activitydiagram.impl.SendSignalActionImpl <em>Send Signal Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2514,7 +1807,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSendSignalAction()
 	 * @generated
 	 */
-	int SEND_SIGNAL_ACTION = 36;
+	int SEND_SIGNAL_ACTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2553,24 +1846,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int SEND_SIGNAL_ACTION__ACTIVITY = ACTION__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEND_SIGNAL_ACTION__RUNNING = ACTION__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEND_SIGNAL_ACTION__HELD_TOKENS = ACTION__HELD_TOKENS;
-
-	/**
 	 * The feature id for the '<em><b>Signal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2589,31 +1864,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int SEND_SIGNAL_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEND_SIGNAL_ACTION___TERMINATE = ACTION___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEND_SIGNAL_ACTION___EXECUTE = ACTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Send Signal Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEND_SIGNAL_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
+	int SEND_SIGNAL_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.AcceptEventActionImpl <em>Accept Event Action</em>}' class.
@@ -2623,7 +1880,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getAcceptEventAction()
 	 * @generated
 	 */
-	int ACCEPT_EVENT_ACTION = 37;
+	int ACCEPT_EVENT_ACTION = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2662,24 +1919,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACCEPT_EVENT_ACTION__ACTIVITY = ACTION__ACTIVITY;
 
 	/**
-	 * The feature id for the '<em><b>Running</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCEPT_EVENT_ACTION__RUNNING = ACTION__RUNNING;
-
-	/**
-	 * The feature id for the '<em><b>Held Tokens</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCEPT_EVENT_ACTION__HELD_TOKENS = ACTION__HELD_TOKENS;
-
-	/**
 	 * The feature id for the '<em><b>Trigger</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2698,31 +1937,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACCEPT_EVENT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Terminate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCEPT_EVENT_ACTION___TERMINATE = ACTION___TERMINATE;
-
-	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCEPT_EVENT_ACTION___EXECUTE = ACTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Accept Event Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCEPT_EVENT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
+	int ACCEPT_EVENT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.SignalImpl <em>Signal</em>}' class.
@@ -2732,7 +1953,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignal()
 	 * @generated
 	 */
-	int SIGNAL = 38;
+	int SIGNAL = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2769,7 +1990,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignalEvent()
 	 * @generated
 	 */
-	int SIGNAL_EVENT = 39;
+	int SIGNAL_EVENT = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2806,7 +2027,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationOperator()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_OPERATOR = 40;
+	int INTEGER_CALCULATION_OPERATOR = 36;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.IntegerComparisonOperator <em>Integer Comparison Operator</em>}' enum.
@@ -2816,7 +2037,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonOperator()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_OPERATOR = 41;
+	int INTEGER_COMPARISON_OPERATOR = 37;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanUnaryOperator <em>Boolean Unary Operator</em>}' enum.
@@ -2826,7 +2047,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_OPERATOR = 42;
+	int BOOLEAN_UNARY_OPERATOR = 38;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanBinaryOperator <em>Boolean Binary Operator</em>}' enum.
@@ -2836,7 +2057,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_OPERATOR = 43;
+	int BOOLEAN_BINARY_OPERATOR = 39;
 
 
 	/**
@@ -2894,17 +2115,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getActivity_Inputs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link activitydiagram.Activity#getTrace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Trace</em>'.
-	 * @see activitydiagram.Activity#getTrace()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EReference getActivity_Trace();
-
-	/**
 	 * Returns the meta object for the attribute '{@link activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2925,26 +2135,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivity_Signals();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.Activity#initialize() <em>Initialize</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Initialize</em>' operation.
-	 * @see activitydiagram.Activity#initialize()
-	 * @generated
-	 */
-	EOperation getActivity__Initialize();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.Activity#finish() <em>Finish</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Finish</em>' operation.
-	 * @see activitydiagram.Activity#finish()
-	 * @generated
-	 */
-	EOperation getActivity__Finish();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.ActivityNode <em>Activity Node</em>}'.
@@ -2990,48 +2180,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getActivityNode_Activity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link activitydiagram.ActivityNode#isRunning <em>Running</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Running</em>'.
-	 * @see activitydiagram.ActivityNode#isRunning()
-	 * @see #getActivityNode()
-	 * @generated
-	 */
-	EAttribute getActivityNode_Running();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagram.ActivityNode#getHeldTokens <em>Held Tokens</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Held Tokens</em>'.
-	 * @see activitydiagram.ActivityNode#getHeldTokens()
-	 * @see #getActivityNode()
-	 * @generated
-	 */
-	EReference getActivityNode_HeldTokens();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.ActivityNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.ActivityNode#execute()
-	 * @generated
-	 */
-	EOperation getActivityNode__Execute();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.ActivityNode#terminate() <em>Terminate</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Terminate</em>' operation.
-	 * @see activitydiagram.ActivityNode#terminate()
-	 * @generated
-	 */
-	EOperation getActivityNode__Terminate();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.ActivityEdge <em>Activity Edge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3062,37 +2210,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivityEdge_Target();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagram.ActivityEdge#getOffers <em>Offers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Offers</em>'.
-	 * @see activitydiagram.ActivityEdge#getOffers()
-	 * @see #getActivityEdge()
-	 * @generated
-	 */
-	EReference getActivityEdge_Offers();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.ActivityEdge#evaluateGuard() <em>Evaluate Guard</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Evaluate Guard</em>' operation.
-	 * @see activitydiagram.ActivityEdge#evaluateGuard()
-	 * @generated
-	 */
-	EOperation getActivityEdge__EvaluateGuard();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.ActivityEdge#clearOffer() <em>Clear Offer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Clear Offer</em>' operation.
-	 * @see activitydiagram.ActivityEdge#clearOffer()
-	 * @generated
-	 */
-	EOperation getActivityEdge__ClearOffer();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.ControlFlow <em>Control Flow</em>}'.
@@ -3167,16 +2284,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getOpaqueAction_Expressions();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagram.OpaqueAction#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.OpaqueAction#execute()
-	 * @generated
-	 */
-	EOperation getOpaqueAction__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3208,16 +2315,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getInitialNode();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagram.InitialNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.InitialNode#execute()
-	 * @generated
-	 */
-	EOperation getInitialNode__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.FinalNode <em>Final Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3238,16 +2335,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getActivityFinalNode();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagram.ActivityFinalNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.ActivityFinalNode#execute()
-	 * @generated
-	 */
-	EOperation getActivityFinalNode__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.ForkNode <em>Fork Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3256,16 +2343,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getForkNode();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.ForkNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.ForkNode#execute()
-	 * @generated
-	 */
-	EOperation getForkNode__Execute();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.JoinNode <em>Join Node</em>}'.
@@ -3278,16 +2355,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getJoinNode();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagram.JoinNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.JoinNode#execute()
-	 * @generated
-	 */
-	EOperation getJoinNode__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.MergeNode <em>Merge Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3298,16 +2365,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getMergeNode();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagram.MergeNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.MergeNode#execute()
-	 * @generated
-	 */
-	EOperation getMergeNode__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.DecisionNode <em>Decision Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3316,16 +2373,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDecisionNode();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.DecisionNode#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.DecisionNode#execute()
-	 * @generated
-	 */
-	EOperation getDecisionNode__Execute();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.Variable <em>Variable</em>}'.
@@ -3358,17 +2405,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVariable_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link activitydiagram.Variable#getCurrentValue <em>Current Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Current Value</em>'.
-	 * @see activitydiagram.Variable#getCurrentValue()
-	 * @see #getVariable()
-	 * @generated
-	 */
-	EReference getVariable_CurrentValue();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.IntegerVariable <em>Integer Variable</em>}'.
@@ -3645,27 +2681,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EAttribute getBooleanBinaryExpression_Operator();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagram.Offer <em>Offer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Offer</em>'.
-	 * @see activitydiagram.Offer
-	 * @generated
-	 */
-	EClass getOffer();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagram.Offer#getOfferedTokens <em>Offered Tokens</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Offered Tokens</em>'.
-	 * @see activitydiagram.Offer#getOfferedTokens()
-	 * @see #getOffer()
-	 * @generated
-	 */
-	EReference getOffer_OfferedTokens();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.Token <em>Token</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3676,36 +2691,15 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getToken();
 
 	/**
-	 * Returns the meta object for the container reference '{@link activitydiagram.Token#getHolder <em>Holder</em>}'.
+	 * Returns the meta object for the reference '{@link activitydiagram.Token#getHolder <em>Holder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Holder</em>'.
+	 * @return the meta object for the reference '<em>Holder</em>'.
 	 * @see activitydiagram.Token#getHolder()
 	 * @see #getToken()
 	 * @generated
 	 */
 	EReference getToken_Holder();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Trace</em>'.
-	 * @see activitydiagram.Trace
-	 * @generated
-	 */
-	EClass getTrace();
-
-	/**
-	 * Returns the meta object for the reference list '{@link activitydiagram.Trace#getExecutedNodes <em>Executed Nodes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Executed Nodes</em>'.
-	 * @see activitydiagram.Trace#getExecutedNodes()
-	 * @see #getTrace()
-	 * @generated
-	 */
-	EReference getTrace_ExecutedNodes();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.InputValue <em>Input Value</em>}'.
@@ -3761,48 +2755,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getInput_InputValues();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagram.ControlToken <em>Control Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Control Token</em>'.
-	 * @see activitydiagram.ControlToken
-	 * @generated
-	 */
-	EClass getControlToken();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagram.ForkedToken <em>Forked Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Forked Token</em>'.
-	 * @see activitydiagram.ForkedToken
-	 * @generated
-	 */
-	EClass getForkedToken();
-
-	/**
-	 * Returns the meta object for the reference '{@link activitydiagram.ForkedToken#getBaseToken <em>Base Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Token</em>'.
-	 * @see activitydiagram.ForkedToken#getBaseToken()
-	 * @see #getForkedToken()
-	 * @generated
-	 */
-	EReference getForkedToken_BaseToken();
-
-	/**
-	 * Returns the meta object for the attribute '{@link activitydiagram.ForkedToken#getRemainingOffersCount <em>Remaining Offers Count</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Remaining Offers Count</em>'.
-	 * @see activitydiagram.ForkedToken#getRemainingOffersCount()
-	 * @see #getForkedToken()
-	 * @generated
-	 */
-	EAttribute getForkedToken_RemainingOffersCount();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.SendSignalAction <em>Send Signal Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3824,16 +2776,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getSendSignalAction_Signal();
 
 	/**
-	 * Returns the meta object for the '{@link activitydiagram.SendSignalAction#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.SendSignalAction#execute()
-	 * @generated
-	 */
-	EOperation getSendSignalAction__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link activitydiagram.AcceptEventAction <em>Accept Event Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3853,16 +2795,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAcceptEventAction_Trigger();
-
-	/**
-	 * Returns the meta object for the '{@link activitydiagram.AcceptEventAction#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see activitydiagram.AcceptEventAction#execute()
-	 * @generated
-	 */
-	EOperation getAcceptEventAction__Execute();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.Signal <em>Signal</em>}'.
@@ -3990,14 +2922,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference ACTIVITY__INPUTS = eINSTANCE.getActivity_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Trace</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITY__TRACE = eINSTANCE.getActivity_Trace();
-
-		/**
 		 * The meta object literal for the '<em><b>Input Value Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4012,22 +2936,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__SIGNALS = eINSTANCE.getActivity_Signals();
-
-		/**
-		 * The meta object literal for the '<em><b>Initialize</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY___INITIALIZE = eINSTANCE.getActivity__Initialize();
-
-		/**
-		 * The meta object literal for the '<em><b>Finish</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY___FINISH = eINSTANCE.getActivity__Finish();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.ActivityNodeImpl <em>Activity Node</em>}' class.
@@ -4064,38 +2972,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference ACTIVITY_NODE__ACTIVITY = eINSTANCE.getActivityNode_Activity();
 
 		/**
-		 * The meta object literal for the '<em><b>Running</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY_NODE__RUNNING = eINSTANCE.getActivityNode_Running();
-
-		/**
-		 * The meta object literal for the '<em><b>Held Tokens</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITY_NODE__HELD_TOKENS = eINSTANCE.getActivityNode_HeldTokens();
-
-		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY_NODE___EXECUTE = eINSTANCE.getActivityNode__Execute();
-
-		/**
-		 * The meta object literal for the '<em><b>Terminate</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY_NODE___TERMINATE = eINSTANCE.getActivityNode__Terminate();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.ActivityEdgeImpl <em>Activity Edge</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4120,30 +2996,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY_EDGE__TARGET = eINSTANCE.getActivityEdge_Target();
-
-		/**
-		 * The meta object literal for the '<em><b>Offers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITY_EDGE__OFFERS = eINSTANCE.getActivityEdge_Offers();
-
-		/**
-		 * The meta object literal for the '<em><b>Evaluate Guard</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY_EDGE___EVALUATE_GUARD = eINSTANCE.getActivityEdge__EvaluateGuard();
-
-		/**
-		 * The meta object literal for the '<em><b>Clear Offer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY_EDGE___CLEAR_OFFER = eINSTANCE.getActivityEdge__ClearOffer();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.ControlFlowImpl <em>Control Flow</em>}' class.
@@ -4212,14 +3064,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference OPAQUE_ACTION__EXPRESSIONS = eINSTANCE.getOpaqueAction_Expressions();
 
 		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation OPAQUE_ACTION___EXECUTE = eINSTANCE.getOpaqueAction__Execute();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.NamedElementImpl <em>Named Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4248,14 +3092,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass INITIAL_NODE = eINSTANCE.getInitialNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation INITIAL_NODE___EXECUTE = eINSTANCE.getInitialNode__Execute();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.FinalNodeImpl <em>Final Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4276,14 +3112,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass ACTIVITY_FINAL_NODE = eINSTANCE.getActivityFinalNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACTIVITY_FINAL_NODE___EXECUTE = eINSTANCE.getActivityFinalNode__Execute();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.ForkNodeImpl <em>Fork Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4292,14 +3120,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FORK_NODE = eINSTANCE.getForkNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation FORK_NODE___EXECUTE = eINSTANCE.getForkNode__Execute();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.JoinNodeImpl <em>Join Node</em>}' class.
@@ -4312,14 +3132,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass JOIN_NODE = eINSTANCE.getJoinNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation JOIN_NODE___EXECUTE = eINSTANCE.getJoinNode__Execute();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.MergeNodeImpl <em>Merge Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4330,14 +3142,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass MERGE_NODE = eINSTANCE.getMergeNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MERGE_NODE___EXECUTE = eINSTANCE.getMergeNode__Execute();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.DecisionNodeImpl <em>Decision Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4346,14 +3150,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DECISION_NODE = eINSTANCE.getDecisionNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation DECISION_NODE___EXECUTE = eINSTANCE.getDecisionNode__Execute();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.VariableImpl <em>Variable</em>}' class.
@@ -4380,14 +3176,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Current Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VARIABLE__CURRENT_VALUE = eINSTANCE.getVariable_CurrentValue();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -4622,24 +3410,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EAttribute BOOLEAN_BINARY_EXPRESSION__OPERATOR = eINSTANCE.getBooleanBinaryExpression_Operator();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.OfferImpl <em>Offer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.OfferImpl
-		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getOffer()
-		 * @generated
-		 */
-		EClass OFFER = eINSTANCE.getOffer();
-
-		/**
-		 * The meta object literal for the '<em><b>Offered Tokens</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OFFER__OFFERED_TOKENS = eINSTANCE.getOffer_OfferedTokens();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.TokenImpl <em>Token</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4650,30 +3420,12 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass TOKEN = eINSTANCE.getToken();
 
 		/**
-		 * The meta object literal for the '<em><b>Holder</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Holder</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TOKEN__HOLDER = eINSTANCE.getToken_Holder();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.TraceImpl
-		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-		 * @generated
-		 */
-		EClass TRACE = eINSTANCE.getTrace();
-
-		/**
-		 * The meta object literal for the '<em><b>Executed Nodes</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACE__EXECUTED_NODES = eINSTANCE.getTrace_ExecutedNodes();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
@@ -4720,42 +3472,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference INPUT__INPUT_VALUES = eINSTANCE.getInput_InputValues();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.ControlTokenImpl
-		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getControlToken()
-		 * @generated
-		 */
-		EClass CONTROL_TOKEN = eINSTANCE.getControlToken();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.ForkedTokenImpl <em>Forked Token</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.ForkedTokenImpl
-		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getForkedToken()
-		 * @generated
-		 */
-		EClass FORKED_TOKEN = eINSTANCE.getForkedToken();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Token</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORKED_TOKEN__BASE_TOKEN = eINSTANCE.getForkedToken_BaseToken();
-
-		/**
-		 * The meta object literal for the '<em><b>Remaining Offers Count</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FORKED_TOKEN__REMAINING_OFFERS_COUNT = eINSTANCE.getForkedToken_RemainingOffersCount();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.SendSignalActionImpl <em>Send Signal Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4774,14 +3490,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference SEND_SIGNAL_ACTION__SIGNAL = eINSTANCE.getSendSignalAction_Signal();
 
 		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SEND_SIGNAL_ACTION___EXECUTE = eINSTANCE.getSendSignalAction__Execute();
-
-		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.AcceptEventActionImpl <em>Accept Event Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4798,14 +3506,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACCEPT_EVENT_ACTION__TRIGGER = eINSTANCE.getAcceptEventAction_Trigger();
-
-		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ACCEPT_EVENT_ACTION___EXECUTE = eINSTANCE.getAcceptEventAction__Execute();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.SignalImpl <em>Signal</em>}' class.

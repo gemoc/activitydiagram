@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see activitydiagram.DynamicFactory
+ * @see activitydiagram.ActivitydiagramDynamicFactory
  * @model kind="package"
  * @generated
  */
-public interface DynamicPackage extends EPackage {
+public interface ActivitydiagramDynamicPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -52,14 +52,14 @@ public interface DynamicPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	DynamicPackage eINSTANCE = activitydiagram.impl.DynamicPackageImpl.init();
+	ActivitydiagramDynamicPackage eINSTANCE = activitydiagram.impl.ActivitydiagramDynamicPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.TokenImpl <em>Token</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see activitydiagram.impl.TokenImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getToken()
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getToken()
 	 * @generated
 	 */
 	int TOKEN = 0;
@@ -87,7 +87,7 @@ public interface DynamicPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see activitydiagram.impl.OfferImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getOffer()
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getOffer()
 	 * @generated
 	 */
 	int OFFER = 1;
@@ -111,39 +111,39 @@ public interface DynamicPackage extends EPackage {
 	int OFFER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagram.impl.RuntimeTraceImpl <em>Runtime Trace</em>}' class.
+	 * The meta object id for the '{@link activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.RuntimeTraceImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getRuntimeTrace()
+	 * @see activitydiagram.impl.TraceImpl
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getTrace()
 	 * @generated
 	 */
-	int RUNTIME_TRACE = 2;
+	int TRACE = 2;
 
 	/**
-	 * The number of structural features of the '<em>Runtime Trace</em>' class.
+	 * The number of structural features of the '<em>Trace</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RUNTIME_TRACE_FEATURE_COUNT = 0;
+	int TRACE_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Runtime Trace</em>' class.
+	 * The number of operations of the '<em>Trace</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RUNTIME_TRACE_OPERATION_COUNT = 0;
+	int TRACE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see activitydiagram.impl.InputValueImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getInputValue()
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInputValue()
 	 * @generated
 	 */
 	int INPUT_VALUE = 3;
@@ -171,7 +171,7 @@ public interface DynamicPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see activitydiagram.impl.InputImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getInput()
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInput()
 	 * @generated
 	 */
 	int INPUT = 4;
@@ -199,7 +199,7 @@ public interface DynamicPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see activitydiagram.impl.ControlTokenImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getControlToken()
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getControlToken()
 	 * @generated
 	 */
 	int CONTROL_TOKEN = 5;
@@ -227,7 +227,7 @@ public interface DynamicPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see activitydiagram.impl.ForkedTokenImpl
-	 * @see activitydiagram.impl.DynamicPackageImpl#getForkedToken()
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getForkedToken()
 	 * @generated
 	 */
 	int FORKED_TOKEN = 6;
@@ -249,6 +249,34 @@ public interface DynamicPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORKED_TOKEN_OPERATION_COUNT = TOKEN_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link activitydiagram.impl.ContextImpl <em>Context</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see activitydiagram.impl.ContextImpl
+	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getContext()
+	 * @generated
+	 */
+	int CONTEXT = 7;
+
+	/**
+	 * The number of structural features of the '<em>Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Context</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTEXT_OPERATION_COUNT = 0;
 
 
 	/**
@@ -272,14 +300,14 @@ public interface DynamicPackage extends EPackage {
 	EClass getOffer();
 
 	/**
-	 * Returns the meta object for class '{@link activitydiagram.RuntimeTrace <em>Runtime Trace</em>}'.
+	 * Returns the meta object for class '{@link activitydiagram.Trace <em>Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Runtime Trace</em>'.
-	 * @see activitydiagram.RuntimeTrace
+	 * @return the meta object for class '<em>Trace</em>'.
+	 * @see activitydiagram.Trace
 	 * @generated
 	 */
-	EClass getRuntimeTrace();
+	EClass getTrace();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.InputValue <em>Input Value</em>}'.
@@ -322,13 +350,23 @@ public interface DynamicPackage extends EPackage {
 	EClass getForkedToken();
 
 	/**
+	 * Returns the meta object for class '{@link activitydiagram.Context <em>Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Context</em>'.
+	 * @see activitydiagram.Context
+	 * @generated
+	 */
+	EClass getContext();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	DynamicFactory getDynamicFactory();
+	ActivitydiagramDynamicFactory getActivitydiagramDynamicFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,7 +387,7 @@ public interface DynamicPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see activitydiagram.impl.TokenImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getToken()
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getToken()
 		 * @generated
 		 */
 		EClass TOKEN = eINSTANCE.getToken();
@@ -359,27 +397,27 @@ public interface DynamicPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see activitydiagram.impl.OfferImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getOffer()
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getOffer()
 		 * @generated
 		 */
 		EClass OFFER = eINSTANCE.getOffer();
 
 		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.RuntimeTraceImpl <em>Runtime Trace</em>}' class.
+		 * The meta object literal for the '{@link activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.RuntimeTraceImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getRuntimeTrace()
+		 * @see activitydiagram.impl.TraceImpl
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getTrace()
 		 * @generated
 		 */
-		EClass RUNTIME_TRACE = eINSTANCE.getRuntimeTrace();
+		EClass TRACE = eINSTANCE.getTrace();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see activitydiagram.impl.InputValueImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getInputValue()
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInputValue()
 		 * @generated
 		 */
 		EClass INPUT_VALUE = eINSTANCE.getInputValue();
@@ -389,7 +427,7 @@ public interface DynamicPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see activitydiagram.impl.InputImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getInput()
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInput()
 		 * @generated
 		 */
 		EClass INPUT = eINSTANCE.getInput();
@@ -399,7 +437,7 @@ public interface DynamicPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see activitydiagram.impl.ControlTokenImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getControlToken()
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getControlToken()
 		 * @generated
 		 */
 		EClass CONTROL_TOKEN = eINSTANCE.getControlToken();
@@ -409,11 +447,21 @@ public interface DynamicPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see activitydiagram.impl.ForkedTokenImpl
-		 * @see activitydiagram.impl.DynamicPackageImpl#getForkedToken()
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getForkedToken()
 		 * @generated
 		 */
 		EClass FORKED_TOKEN = eINSTANCE.getForkedToken();
 
+		/**
+		 * The meta object literal for the '{@link activitydiagram.impl.ContextImpl <em>Context</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see activitydiagram.impl.ContextImpl
+		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getContext()
+		 * @generated
+		 */
+		EClass CONTEXT = eINSTANCE.getContext();
+
 	}
 
-} //DynamicPackage
+} //ActivitydiagramDynamicPackage

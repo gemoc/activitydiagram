@@ -1,8 +1,11 @@
-package org.modelexecution.operationalsemantics.ad.concurrent.xdsml
+package org.gemoc.activitydiagram.concurrent
 
-language ConcurrentActivityDiagram {
+language XActivityDiagram {
 	syntax "platform:/resource//org.gemoc.activitydiagram.concurrent.model/ad/activitydiagram.ecore"
+	syntax "platform:/resource//org.gemoc.activitydiagram.concurrent.dynamic.model/model/dynamic.ecore"
 
+	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.*
+/*	
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ActivityAspect
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.OpaqueActionAspect
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.IntegerVariableAspect
@@ -43,8 +46,7 @@ language ConcurrentActivityDiagram {
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.BooleanUnaryExpressionAspect
 	with org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.InitialNodeAspect
 	with  org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.OpaqueActionAspect
-
-	ecl "/org.modelexecution.operationalsemantics.ad.concurrent.ecl/model/ActivitiyDiagramV2.ecl"
+*/
+	ecl "/org.gemoc.activitydiagram.concurrent.moc.dse/model/ActivitiyDiagramV2.ecl"
 	
-	exactType ConcurrentActivityDiagramMT
 }

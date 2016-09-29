@@ -14,12 +14,5 @@ package activitydiagram;
  * @generated
  */
 public interface MergeNode extends ControlNode {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // MergeNode

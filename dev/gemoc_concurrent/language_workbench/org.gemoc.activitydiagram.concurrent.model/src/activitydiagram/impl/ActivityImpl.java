@@ -7,11 +7,7 @@ import activitydiagram.ActivityEdge;
 import activitydiagram.ActivityNode;
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.Signal;
-import activitydiagram.Trace;
 import activitydiagram.Variable;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -34,16 +30,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getEdges <em>Edges</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getLocals <em>Locals</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getInputs <em>Inputs</em>}</li>
- *   <li>{@link activitydiagram.impl.ActivityImpl#getTrace <em>Trace</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getInputValuePath <em>Input Value Path</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityImpl#getSignals <em>Signals</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,16 +82,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * @ordered
 	 */
 	protected EList<Variable> inputs;
-
-	/**
-	 * The cached value of the '{@link #getTrace() <em>Trace</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTrace()
-	 * @generated
-	 * @ordered
-	 */
-	protected Trace trace;
 
 	/**
 	 * The default value of the '{@link #getInputValuePath() <em>Input Value Path</em>}' attribute.
@@ -200,49 +185,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trace getTrace() {
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTrace(Trace newTrace, NotificationChain msgs) {
-		Trace oldTrace = trace;
-		trace = newTrace;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__TRACE, oldTrace, newTrace);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTrace(Trace newTrace) {
-		if (newTrace != trace) {
-			NotificationChain msgs = null;
-			if (trace != null)
-				msgs = ((InternalEObject)trace).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.ACTIVITY__TRACE, null, msgs);
-			if (newTrace != null)
-				msgs = ((InternalEObject)newTrace).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.ACTIVITY__TRACE, null, msgs);
-			msgs = basicSetTrace(newTrace, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__TRACE, newTrace, newTrace));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getInputValuePath() {
 		return inputValuePath;
 	}
@@ -276,28 +218,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initialize() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void finish() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -324,8 +244,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return ((InternalEList<?>)getLocals()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
-				return basicSetTrace(null, msgs);
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				return ((InternalEList<?>)getSignals()).basicRemove(otherEnd, msgs);
 		}
@@ -348,8 +266,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return getLocals();
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return getInputs();
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
-				return getTrace();
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				return getInputValuePath();
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
@@ -383,9 +299,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				getInputs().clear();
 				getInputs().addAll((Collection<? extends Variable>)newValue);
 				return;
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
-				setTrace((Trace)newValue);
-				return;
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				setInputValuePath((String)newValue);
 				return;
@@ -417,9 +330,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				getInputs().clear();
 				return;
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
-				setTrace((Trace)null);
-				return;
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				setInputValuePath(INPUT_VALUE_PATH_EDEFAULT);
 				return;
@@ -446,32 +356,12 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return locals != null && !locals.isEmpty();
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return inputs != null && !inputs.isEmpty();
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
-				return trace != null;
 			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
 				return INPUT_VALUE_PATH_EDEFAULT == null ? inputValuePath != null : !INPUT_VALUE_PATH_EDEFAULT.equals(inputValuePath);
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				return signals != null && !signals.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ActivitydiagramPackage.ACTIVITY___INITIALIZE:
-				initialize();
-				return null;
-			case ActivitydiagramPackage.ACTIVITY___FINISH:
-				finish();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

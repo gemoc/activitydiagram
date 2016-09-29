@@ -6,10 +6,6 @@ import activitydiagram.Activity;
 import activitydiagram.ActivityEdge;
 import activitydiagram.ActivityNode;
 import activitydiagram.ActivitydiagramPackage;
-import activitydiagram.Token;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,8 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -33,14 +27,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getOutgoing <em>Outgoing</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getIncoming <em>Incoming</em>}</li>
  *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getActivity <em>Activity</em>}</li>
- *   <li>{@link activitydiagram.impl.ActivityNodeImpl#isRunning <em>Running</em>}</li>
- *   <li>{@link activitydiagram.impl.ActivityNodeImpl#getHeldTokens <em>Held Tokens</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,36 +56,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 	 * @ordered
 	 */
 	protected EList<ActivityEdge> incoming;
-
-	/**
-	 * The default value of the '{@link #isRunning() <em>Running</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isRunning()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean RUNNING_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isRunning() <em>Running</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isRunning()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean running = RUNNING_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getHeldTokens() <em>Held Tokens</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeldTokens()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Token> heldTokens;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,61 +146,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isRunning() {
-		return running;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRunning(boolean newRunning) {
-		boolean oldRunning = running;
-		running = newRunning;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY_NODE__RUNNING, oldRunning, running));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Token> getHeldTokens() {
-		if (heldTokens == null) {
-			heldTokens = new EObjectContainmentWithInverseEList<Token>(Token.class, this, ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS, ActivitydiagramPackage.TOKEN__HOLDER);
-		}
-		return heldTokens;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void execute() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void terminate() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -251,8 +158,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetActivity((Activity)otherEnd, msgs);
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHeldTokens()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -271,8 +176,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 				return ((InternalEList<?>)getIncoming()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.ACTIVITY_NODE__ACTIVITY:
 				return basicSetActivity(null, msgs);
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				return ((InternalEList<?>)getHeldTokens()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -305,10 +208,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 				return getIncoming();
 			case ActivitydiagramPackage.ACTIVITY_NODE__ACTIVITY:
 				return getActivity();
-			case ActivitydiagramPackage.ACTIVITY_NODE__RUNNING:
-				return isRunning();
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				return getHeldTokens();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -333,13 +232,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 			case ActivitydiagramPackage.ACTIVITY_NODE__ACTIVITY:
 				setActivity((Activity)newValue);
 				return;
-			case ActivitydiagramPackage.ACTIVITY_NODE__RUNNING:
-				setRunning((Boolean)newValue);
-				return;
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				getHeldTokens().clear();
-				getHeldTokens().addAll((Collection<? extends Token>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -361,12 +253,6 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 			case ActivitydiagramPackage.ACTIVITY_NODE__ACTIVITY:
 				setActivity((Activity)null);
 				return;
-			case ActivitydiagramPackage.ACTIVITY_NODE__RUNNING:
-				setRunning(RUNNING_EDEFAULT);
-				return;
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				getHeldTokens().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -385,46 +271,8 @@ public abstract class ActivityNodeImpl extends NamedElementImpl implements Activ
 				return incoming != null && !incoming.isEmpty();
 			case ActivitydiagramPackage.ACTIVITY_NODE__ACTIVITY:
 				return getActivity() != null;
-			case ActivitydiagramPackage.ACTIVITY_NODE__RUNNING:
-				return running != RUNNING_EDEFAULT;
-			case ActivitydiagramPackage.ACTIVITY_NODE__HELD_TOKENS:
-				return heldTokens != null && !heldTokens.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ActivitydiagramPackage.ACTIVITY_NODE___EXECUTE:
-				execute();
-				return null;
-			case ActivitydiagramPackage.ACTIVITY_NODE___TERMINATE:
-				terminate();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (running: ");
-		result.append(running);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ActivityNodeImpl

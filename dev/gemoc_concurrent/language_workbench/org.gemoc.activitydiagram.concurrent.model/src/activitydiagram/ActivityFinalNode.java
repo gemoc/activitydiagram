@@ -14,12 +14,5 @@ package activitydiagram;
  * @generated
  */
 public interface ActivityFinalNode extends FinalNode {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // ActivityFinalNode

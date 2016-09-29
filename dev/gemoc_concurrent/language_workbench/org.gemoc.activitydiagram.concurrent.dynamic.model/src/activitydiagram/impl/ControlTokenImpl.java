@@ -2,9 +2,8 @@
  */
 package activitydiagram.impl;
 
+import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.ControlToken;
-import activitydiagram.DynamicPackage;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class ControlTokenImpl extends TokenImpl implements ControlToken {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DynamicPackage.Literals.CONTROL_TOKEN;
+		return ActivitydiagramDynamicPackage.Literals.CONTROL_TOKEN;
 	}
 
 } //ControlTokenImpl

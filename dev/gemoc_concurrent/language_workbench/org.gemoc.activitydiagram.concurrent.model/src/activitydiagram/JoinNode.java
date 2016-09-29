@@ -14,12 +14,5 @@ package activitydiagram;
  * @generated
  */
 public interface JoinNode extends ControlNode {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // JoinNode

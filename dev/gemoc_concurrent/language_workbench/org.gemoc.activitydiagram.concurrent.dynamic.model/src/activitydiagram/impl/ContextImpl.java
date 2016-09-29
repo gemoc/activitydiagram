@@ -2,27 +2,26 @@
  */
 package activitydiagram.impl;
 
-import activitydiagram.DynamicPackage;
-import activitydiagram.RuntimeTrace;
-
+import activitydiagram.ActivitydiagramDynamicPackage;
+import activitydiagram.Context;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Runtime Trace</b></em>'.
+ * An implementation of the model object '<em><b>Context</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class RuntimeTraceImpl extends MinimalEObjectImpl.Container implements RuntimeTrace {
+public class ContextImpl extends MinimalEObjectImpl.Container implements Context {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RuntimeTraceImpl() {
+	protected ContextImpl() {
 		super();
 	}
 
@@ -33,7 +32,7 @@ public class RuntimeTraceImpl extends MinimalEObjectImpl.Container implements Ru
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DynamicPackage.Literals.RUNTIME_TRACE;
+		return ActivitydiagramDynamicPackage.Literals.CONTEXT;
 	}
 
-} //RuntimeTraceImpl
+} //ContextImpl

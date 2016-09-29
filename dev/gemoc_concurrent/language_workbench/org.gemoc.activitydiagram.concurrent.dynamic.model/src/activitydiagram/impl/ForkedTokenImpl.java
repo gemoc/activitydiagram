@@ -2,7 +2,7 @@
  */
 package activitydiagram.impl;
 
-import activitydiagram.DynamicPackage;
+import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.ForkedToken;
 
 import org.eclipse.emf.ecore.EClass;
@@ -31,7 +31,7 @@ public class ForkedTokenImpl extends TokenImpl implements ForkedToken {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DynamicPackage.Literals.FORKED_TOKEN;
+		return ActivitydiagramDynamicPackage.Literals.FORKED_TOKEN;
 	}
 
 } //ForkedTokenImpl

@@ -47,7 +47,7 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -292,21 +292,9 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.OFFER: {
-				Offer offer = (Offer)theEObject;
-				T result = caseOffer(offer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.TOKEN: {
 				Token token = (Token)theEObject;
 				T result = caseToken(token);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACE: {
-				Trace trace = (Trace)theEObject;
-				T result = caseTrace(trace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -319,20 +307,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 			case ActivitydiagramPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.CONTROL_TOKEN: {
-				ControlToken controlToken = (ControlToken)theEObject;
-				T result = caseControlToken(controlToken);
-				if (result == null) result = caseToken(controlToken);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.FORKED_TOKEN: {
-				ForkedToken forkedToken = (ForkedToken)theEObject;
-				T result = caseForkedToken(forkedToken);
-				if (result == null) result = caseToken(forkedToken);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -811,21 +785,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Offer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Offer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOffer(Offer object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Token</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -837,21 +796,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseToken(Token object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Trace</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Trace</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrace(Trace object) {
 		return null;
 	}
 
@@ -882,36 +826,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInput(Input object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Control Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Control Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseControlToken(ControlToken object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Forked Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Forked Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseForkedToken(ForkedToken object) {
 		return null;
 	}
 

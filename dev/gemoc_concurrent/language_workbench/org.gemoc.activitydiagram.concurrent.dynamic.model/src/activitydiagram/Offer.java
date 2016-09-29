@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see activitydiagram.DynamicPackage#getOffer()
+ * @see activitydiagram.ActivitydiagramDynamicPackage#getOffer()
  * @model
  * @generated
  */

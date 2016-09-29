@@ -38,6 +38,11 @@ import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3
 import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.IntegerComparisonExpressionAspect.*
 import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.BooleanUnaryExpressionAspect.*
 import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.BooleanBinaryExpressionAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.ForkedTokenAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.OfferAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.TokenAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.TraceAspect.*
+import static extension org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.VariableAspect.*
 
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
 import activitydiagram.OpaqueAction
@@ -78,6 +83,8 @@ import fr.inria.diverse.k3.al.annotationprocessor.Containment
 import activitydiagram.SendSignalAction
 import activitydiagram.AcceptEventAction
 import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.common.util.BasicEList
+import activitydiagram.ActivitydiagramDynamicFactory
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -157,8 +164,8 @@ class Util {
 //	}
 //}
 
-@Aspect(className=RuntimeTrace)
-class RuntimeTraceAspect {
+@Aspect(className=Trace)
+class TraceAspect {
 	public EList<ActivityNode> executedNodes;
 }
 //
@@ -171,17 +178,17 @@ class RuntimeTraceAspect {
 //}
 
 class Context {
-	public RuntimeTrace output;
+	public Trace output;
 	public Activity activity;
 	public Context parent;
-	public List<InputValue> inputValues ;
+	public EList<InputValue> inputValues ;
 	public JoinNode node ;
 
 	new() {
 		//output = ActivitydiagramFactory.eINSTANCE.createTrace()
 	}
 
-	new(RuntimeTrace c, Activity a, List<InputValue> inputValues, Context parent) {
+	new(Trace c, Activity a, EList<InputValue> inputValues, Context parent) {
 		this.output = c
 		this.activity = a
 		this.inputValues = inputValues
@@ -193,7 +200,7 @@ class Context {
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
 
-	RuntimeTrace runtimeTrace
+	public Trace trace
 	public Context context
 	long start
 	long stop
@@ -201,7 +208,7 @@ class ActivityAspect extends NamedElementAspect {
 	@ReplaceAspectMethod
 	public def void initialize() {
 		println("############## let's start ! ##############")
-		var List<InputValue> inputValues = new ArrayList<InputValue>();
+		var EList<InputValue> inputValues = new BasicEList<InputValue>();
 		var String inputPath = _self.inputValuePath
         if (inputPath != null && inputPath != ""){
 	
@@ -225,8 +232,8 @@ class ActivityAspect extends NamedElementAspect {
 		_self.context.inputValues = inputValues
 		_self.context.activity = _self
 		//_self.trace = new Trace;
-		_self.runtimeTrace = new RuntimeTrace
-		_self.context.output = _self.runtimeTrace
+		_self.trace = ActivitydiagramDynamicFactory.eINSTANCE.createTrace();
+		_self.context.output = _self.trace
 		
 		_self.nodes.forEach[n|n.running =true] //this is creapy strange to do that but it is in the spec
 		//_self.execute()
@@ -246,7 +253,7 @@ class ActivityAspect extends NamedElementAspect {
 	}
 
 	def void reset() {
-		_self.runtimeTrace = null;
+		_self.trace = null;
 	}
 
 	def void writeToFile() {
@@ -263,7 +270,7 @@ class ActivityAspect extends NamedElementAspect {
 
 	def String printTrace() {
 		val text = new StringBuffer();
-		_self.runtimeTrace.executedNodes.forEach[n|text.append(n.getName()); text.append(Util.LINE_BREAK);]
+		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(Util.LINE_BREAK);]
 
 		_self.getLocals().forEach [ v |
 			text.append(v.print);
@@ -292,7 +299,7 @@ class ActivityAspect extends NamedElementAspect {
 
 	def Value getVariableValue(String variableName) {
 		var variable = _self.getVariable(variableName);
-		var currentValue = variable.getCurrentValue();
+		var currentValue = variable.currentValue;
 		return currentValue;
 	}
 
@@ -329,7 +336,9 @@ class NamedElementAspect {
 
 @Aspect(className=ActivityNode)
 class ActivityNodeAspect extends org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.NamedElementAspect {
-//	public List<Token> heldTokens = new ArrayList<Token>
+	
+	public EList<Token> heldTokens = new BasicEList<Token>
+	public Boolean running
 
 	public def void execute() {
 		//_self.sendOffers1(_self.takeOfferdTokens1)
@@ -361,11 +370,11 @@ class ActivityNodeAspect extends org.modelexecution.operationalsemantics.ad.conc
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
 	@Containment
-	public List<Offer> offers = new ArrayList<Offer>
+	public EList<Offer> offers = new BasicEList<Offer>
 
 	//write
 	public def void sendOffer() {
-		val offer = ActivitydiagramFactory.eINSTANCE.createOffer();
+		val offer = ActivitydiagramDynamicFactory.eINSTANCE.createOffer();
 		if (_self.source instanceof ForkNode){
 			var indexOfSelf = _self.source.outgoing.indexOf(_self)
 			offer.offeredTokens.add(_self.source.heldTokens.get(indexOfSelf))
@@ -454,7 +463,7 @@ class AcceptEventActionAspect extends ActivityNodeAspect {
 class InitialNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	public def void execute() {
-		var r = ActivitydiagramFactory.eINSTANCE.createControlToken();
+		var r = ActivitydiagramDynamicFactory.eINSTANCE.createControlToken();
 		r.holder = _self
 		_self.heldTokens.add(r)
 		(_self.eContainer() as Activity).context.output.executedNodes.add(_self)
@@ -490,7 +499,7 @@ class ForkNodeAspect extends ActivityNodeAspect {
 		var forkedTokens = new ArrayList<Token>();
 		for(Token token : tokens) {
 			for (var int i = 0; i < _self.outgoing.size() ; i++){
-				var forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken();
+				var forkedToken = ActivitydiagramDynamicFactory.eINSTANCE.createForkedToken();
 				forkedToken.baseToken = token;
 				forkedTokens.add(forkedToken);
 			//	forkedToken.remainingOffersCount = _self.outgoing.size();
@@ -562,6 +571,8 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 @Aspect(className=Variable)
 class VariableAspect {
 	
+	public Value currentValue
+	
 	public def void execute() {
 	}
 
@@ -586,7 +597,7 @@ class IntegerVariableAspect extends org.modelexecution.operationalsemantics.ad.c
 		var text = new StringBuffer();
 		text.append(_self.getName());
 		text.append(" = ");
-		text.append((_self.getCurrentValue() as IntegerValue).getValue());
+		text.append((_self.currentValue as IntegerValue).getValue());
 		return text.toString();
 	}
 }
@@ -602,7 +613,7 @@ class BooleanVariableAspect extends org.modelexecution.operationalsemantics.ad.c
 		var text = new StringBuffer();
 		text.append(_self.getName());
 		text.append(" = ");
-		text.append((_self.getCurrentValue() as BooleanValue).isValue());
+		text.append((_self.currentValue as BooleanValue).isValue());
 		return text.toString();
 	}
 
@@ -674,3 +685,25 @@ class BooleanBinaryExpressionAspect extends org.modelexecution.operationalsemant
 	}
 }
 
+@Aspect(className=Offer)
+class OfferAspect {
+	
+	public EList<Token> offeredTokens = new BasicEList
+
+}
+
+@Aspect(className=Token)
+class TokenAspect {
+	
+	public ActivityNode holder
+
+}
+
+@Aspect(className=ForkedToken)
+class ForkedTokenAspect {
+	
+	public Token baseToken
+	
+	public int remainingOffersCount
+	
+}

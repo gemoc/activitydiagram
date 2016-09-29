@@ -10,10 +10,10 @@ package activitydiagram;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.SendSignalAction#getSignal <em>Signal</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getSendSignalAction()
  * @model
@@ -45,13 +45,5 @@ public interface SendSignalAction extends Action {
 	 * @generated
 	 */
 	void setSignal(Signal value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // SendSignalAction

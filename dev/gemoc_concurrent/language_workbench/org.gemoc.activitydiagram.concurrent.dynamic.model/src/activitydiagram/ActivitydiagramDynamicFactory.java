@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see activitydiagram.DynamicPackage
+ * @see activitydiagram.ActivitydiagramDynamicPackage
  * @generated
  */
-public interface DynamicFactory extends EFactory {
+public interface ActivitydiagramDynamicFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	DynamicFactory eINSTANCE = activitydiagram.impl.DynamicFactoryImpl.init();
+	ActivitydiagramDynamicFactory eINSTANCE = activitydiagram.impl.ActivitydiagramDynamicFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Offer</em>'.
@@ -31,13 +31,13 @@ public interface DynamicFactory extends EFactory {
 	Offer createOffer();
 
 	/**
-	 * Returns a new object of class '<em>Runtime Trace</em>'.
+	 * Returns a new object of class '<em>Trace</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Runtime Trace</em>'.
+	 * @return a new object of class '<em>Trace</em>'.
 	 * @generated
 	 */
-	RuntimeTrace createRuntimeTrace();
+	Trace createTrace();
 
 	/**
 	 * Returns a new object of class '<em>Input Value</em>'.
@@ -76,12 +76,21 @@ public interface DynamicFactory extends EFactory {
 	ForkedToken createForkedToken();
 
 	/**
+	 * Returns a new object of class '<em>Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Context</em>'.
+	 * @generated
+	 */
+	Context createContext();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	DynamicPackage getDynamicPackage();
+	ActivitydiagramDynamicPackage getActivitydiagramDynamicPackage();
 
-} //DynamicFactory
+} //ActivitydiagramDynamicFactory

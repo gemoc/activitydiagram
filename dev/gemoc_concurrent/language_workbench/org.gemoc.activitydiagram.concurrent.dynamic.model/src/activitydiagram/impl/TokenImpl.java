@@ -2,7 +2,7 @@
  */
 package activitydiagram.impl;
 
-import activitydiagram.DynamicPackage;
+import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.Token;
 
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +33,7 @@ public abstract class TokenImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return DynamicPackage.Literals.TOKEN;
+		return ActivitydiagramDynamicPackage.Literals.TOKEN;
 	}
 
 } //TokenImpl

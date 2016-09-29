@@ -10,10 +10,10 @@ package activitydiagram;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.AcceptEventAction#getTrigger <em>Trigger</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getAcceptEventAction()
  * @model
@@ -45,13 +45,5 @@ public interface AcceptEventAction extends Action {
 	 * @generated
 	 */
 	void setTrigger(SignalEvent value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // AcceptEventAction

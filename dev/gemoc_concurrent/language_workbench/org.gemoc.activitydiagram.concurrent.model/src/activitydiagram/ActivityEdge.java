@@ -2,8 +2,6 @@
  */
 package activitydiagram;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Activity Edge</b></em>'.
@@ -11,12 +9,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.ActivityEdge#getSource <em>Source</em>}</li>
  *   <li>{@link activitydiagram.ActivityEdge#getTarget <em>Target</em>}</li>
- *   <li>{@link activitydiagram.ActivityEdge#getOffers <em>Offers</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getActivityEdge()
  * @model abstract="true"
@@ -78,37 +75,5 @@ public interface ActivityEdge extends NamedElement {
 	 * @generated
 	 */
 	void setTarget(ActivityNode value);
-
-	/**
-	 * Returns the value of the '<em><b>Offers</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagram.Offer}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Offers</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Offers</em>' containment reference list.
-	 * @see activitydiagram.ActivitydiagramPackage#getActivityEdge_Offers()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Offer> getOffers();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean evaluateGuard();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void clearOffer();
 
 } // ActivityEdge

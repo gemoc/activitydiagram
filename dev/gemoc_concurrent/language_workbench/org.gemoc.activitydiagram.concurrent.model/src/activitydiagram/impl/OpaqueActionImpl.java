@@ -5,7 +5,6 @@ package activitydiagram.impl;
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.Expression;
 import activitydiagram.OpaqueAction;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -24,10 +23,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.impl.OpaqueActionImpl#getExpressions <em>Expressions</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

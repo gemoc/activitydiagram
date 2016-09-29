@@ -9,7 +9,7 @@ package activitydiagram;
  * <!-- end-user-doc -->
  *
  *
- * @see activitydiagram.DynamicPackage#getForkedToken()
+ * @see activitydiagram.ActivitydiagramDynamicPackage#getForkedToken()
  * @model
  * @generated
  */

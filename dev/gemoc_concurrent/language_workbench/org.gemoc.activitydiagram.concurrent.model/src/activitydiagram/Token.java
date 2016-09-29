@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.Token#getHolder <em>Holder</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getToken()
  * @model abstract="true"
@@ -22,28 +22,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Token extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Holder</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link activitydiagram.ActivityNode#getHeldTokens <em>Held Tokens</em>}'.
+	 * Returns the value of the '<em><b>Holder</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Holder</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Holder</em>' container reference.
+	 * @return the value of the '<em>Holder</em>' reference.
 	 * @see #setHolder(ActivityNode)
 	 * @see activitydiagram.ActivitydiagramPackage#getToken_Holder()
-	 * @see activitydiagram.ActivityNode#getHeldTokens
-	 * @model opposite="heldTokens" required="true" transient="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	ActivityNode getHolder();
 
 	/**
-	 * Sets the value of the '{@link activitydiagram.Token#getHolder <em>Holder</em>}' container reference.
+	 * Sets the value of the '{@link activitydiagram.Token#getHolder <em>Holder</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Holder</em>' container reference.
+	 * @param value the new value of the '<em>Holder</em>' reference.
 	 * @see #getHolder()
 	 * @generated
 	 */

@@ -9,7 +9,7 @@ package activitydiagram;
  * <!-- end-user-doc -->
  *
  *
- * @see activitydiagram.DynamicPackage#getControlToken()
+ * @see activitydiagram.ActivitydiagramDynamicPackage#getControlToken()
  * @model
  * @generated
  */

@@ -14,12 +14,5 @@ package activitydiagram;
  * @generated
  */
 public interface ForkNode extends ControlNode {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void execute();
 
 } // ForkNode

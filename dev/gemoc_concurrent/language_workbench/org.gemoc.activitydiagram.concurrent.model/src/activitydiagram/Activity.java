@@ -11,16 +11,15 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link activitydiagram.Activity#getNodes <em>Nodes</em>}</li>
  *   <li>{@link activitydiagram.Activity#getEdges <em>Edges</em>}</li>
  *   <li>{@link activitydiagram.Activity#getLocals <em>Locals</em>}</li>
  *   <li>{@link activitydiagram.Activity#getInputs <em>Inputs</em>}</li>
- *   <li>{@link activitydiagram.Activity#getTrace <em>Trace</em>}</li>
  *   <li>{@link activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}</li>
  *   <li>{@link activitydiagram.Activity#getSignals <em>Signals</em>}</li>
  * </ul>
- * </p>
  *
  * @see activitydiagram.ActivitydiagramPackage#getActivity()
  * @model
@@ -94,32 +93,6 @@ public interface Activity extends NamedElement {
 	EList<Variable> getInputs();
 
 	/**
-	 * Returns the value of the '<em><b>Trace</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Trace</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trace</em>' containment reference.
-	 * @see #setTrace(Trace)
-	 * @see activitydiagram.ActivitydiagramPackage#getActivity_Trace()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Trace getTrace();
-
-	/**
-	 * Sets the value of the '{@link activitydiagram.Activity#getTrace <em>Trace</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trace</em>' containment reference.
-	 * @see #getTrace()
-	 * @generated
-	 */
-	void setTrace(Trace value);
-
-	/**
 	 * Returns the value of the '<em><b>Input Value Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -160,21 +133,5 @@ public interface Activity extends NamedElement {
 	 * @generated
 	 */
 	EList<Signal> getSignals();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void initialize();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void finish();
 
 } // Activity

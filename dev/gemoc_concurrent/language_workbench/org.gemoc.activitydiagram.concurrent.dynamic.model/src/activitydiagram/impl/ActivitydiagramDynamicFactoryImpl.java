@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DynamicFactoryImpl extends EFactoryImpl implements DynamicFactory {
+public class ActivitydiagramDynamicFactoryImpl extends EFactoryImpl implements ActivitydiagramDynamicFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static DynamicFactory init() {
+	public static ActivitydiagramDynamicFactory init() {
 		try {
-			DynamicFactory theDynamicFactory = (DynamicFactory)EPackage.Registry.INSTANCE.getEFactory(DynamicPackage.eNS_URI);
-			if (theDynamicFactory != null) {
-				return theDynamicFactory;
+			ActivitydiagramDynamicFactory theActivitydiagramDynamicFactory = (ActivitydiagramDynamicFactory)EPackage.Registry.INSTANCE.getEFactory(ActivitydiagramDynamicPackage.eNS_URI);
+			if (theActivitydiagramDynamicFactory != null) {
+				return theActivitydiagramDynamicFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new DynamicFactoryImpl();
+		return new ActivitydiagramDynamicFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class DynamicFactoryImpl extends EFactoryImpl implements DynamicFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DynamicFactoryImpl() {
+	public ActivitydiagramDynamicFactoryImpl() {
 		super();
 	}
 
@@ -56,12 +56,13 @@ public class DynamicFactoryImpl extends EFactoryImpl implements DynamicFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case DynamicPackage.OFFER: return createOffer();
-			case DynamicPackage.RUNTIME_TRACE: return createRuntimeTrace();
-			case DynamicPackage.INPUT_VALUE: return createInputValue();
-			case DynamicPackage.INPUT: return createInput();
-			case DynamicPackage.CONTROL_TOKEN: return createControlToken();
-			case DynamicPackage.FORKED_TOKEN: return createForkedToken();
+			case ActivitydiagramDynamicPackage.OFFER: return createOffer();
+			case ActivitydiagramDynamicPackage.TRACE: return createTrace();
+			case ActivitydiagramDynamicPackage.INPUT_VALUE: return createInputValue();
+			case ActivitydiagramDynamicPackage.INPUT: return createInput();
+			case ActivitydiagramDynamicPackage.CONTROL_TOKEN: return createControlToken();
+			case ActivitydiagramDynamicPackage.FORKED_TOKEN: return createForkedToken();
+			case ActivitydiagramDynamicPackage.CONTEXT: return createContext();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,9 +83,9 @@ public class DynamicFactoryImpl extends EFactoryImpl implements DynamicFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RuntimeTrace createRuntimeTrace() {
-		RuntimeTraceImpl runtimeTrace = new RuntimeTraceImpl();
-		return runtimeTrace;
+	public Trace createTrace() {
+		TraceImpl trace = new TraceImpl();
+		return trace;
 	}
 
 	/**
@@ -132,8 +133,18 @@ public class DynamicFactoryImpl extends EFactoryImpl implements DynamicFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DynamicPackage getDynamicPackage() {
-		return (DynamicPackage)getEPackage();
+	public Context createContext() {
+		ContextImpl context = new ContextImpl();
+		return context;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActivitydiagramDynamicPackage getActivitydiagramDynamicPackage() {
+		return (ActivitydiagramDynamicPackage)getEPackage();
 	}
 
 	/**
@@ -143,8 +154,8 @@ public class DynamicFactoryImpl extends EFactoryImpl implements DynamicFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static DynamicPackage getPackage() {
-		return DynamicPackage.eINSTANCE;
+	public static ActivitydiagramDynamicPackage getPackage() {
+		return ActivitydiagramDynamicPackage.eINSTANCE;
 	}
 
-} //DynamicFactoryImpl
+} //ActivitydiagramDynamicFactoryImpl

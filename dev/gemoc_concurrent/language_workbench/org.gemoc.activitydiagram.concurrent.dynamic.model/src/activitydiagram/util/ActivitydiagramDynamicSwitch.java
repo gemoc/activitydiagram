@@ -19,17 +19,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see activitydiagram.DynamicPackage
+ * @see activitydiagram.ActivitydiagramDynamicPackage
  * @generated
  */
-public class DynamicSwitch<T> extends Switch<T> {
+public class ActivitydiagramDynamicSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static DynamicPackage modelPackage;
+	protected static ActivitydiagramDynamicPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class DynamicSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DynamicSwitch() {
+	public ActivitydiagramDynamicSwitch() {
 		if (modelPackage == null) {
-			modelPackage = DynamicPackage.eINSTANCE;
+			modelPackage = ActivitydiagramDynamicPackage.eINSTANCE;
 		}
 	}
 
@@ -66,47 +66,53 @@ public class DynamicSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case DynamicPackage.TOKEN: {
+			case ActivitydiagramDynamicPackage.TOKEN: {
 				Token token = (Token)theEObject;
 				T result = caseToken(token);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DynamicPackage.OFFER: {
+			case ActivitydiagramDynamicPackage.OFFER: {
 				Offer offer = (Offer)theEObject;
 				T result = caseOffer(offer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DynamicPackage.RUNTIME_TRACE: {
-				RuntimeTrace runtimeTrace = (RuntimeTrace)theEObject;
-				T result = caseRuntimeTrace(runtimeTrace);
+			case ActivitydiagramDynamicPackage.TRACE: {
+				Trace trace = (Trace)theEObject;
+				T result = caseTrace(trace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DynamicPackage.INPUT_VALUE: {
+			case ActivitydiagramDynamicPackage.INPUT_VALUE: {
 				InputValue inputValue = (InputValue)theEObject;
 				T result = caseInputValue(inputValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DynamicPackage.INPUT: {
+			case ActivitydiagramDynamicPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DynamicPackage.CONTROL_TOKEN: {
+			case ActivitydiagramDynamicPackage.CONTROL_TOKEN: {
 				ControlToken controlToken = (ControlToken)theEObject;
 				T result = caseControlToken(controlToken);
 				if (result == null) result = caseToken(controlToken);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case DynamicPackage.FORKED_TOKEN: {
+			case ActivitydiagramDynamicPackage.FORKED_TOKEN: {
 				ForkedToken forkedToken = (ForkedToken)theEObject;
 				T result = caseForkedToken(forkedToken);
 				if (result == null) result = caseToken(forkedToken);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramDynamicPackage.CONTEXT: {
+				Context context = (Context)theEObject;
+				T result = caseContext(context);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -145,17 +151,17 @@ public class DynamicSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Runtime Trace</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Trace</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Runtime Trace</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Trace</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRuntimeTrace(RuntimeTrace object) {
+	public T caseTrace(Trace object) {
 		return null;
 	}
 
@@ -220,6 +226,21 @@ public class DynamicSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Context</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Context</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseContext(Context object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -235,4 +256,4 @@ public class DynamicSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //DynamicSwitch
+} //ActivitydiagramDynamicSwitch

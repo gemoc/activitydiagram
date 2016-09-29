@@ -74,12 +74,8 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION: return createIntegerComparisonExpression();
 			case ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION: return createBooleanUnaryExpression();
 			case ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION: return createBooleanBinaryExpression();
-			case ActivitydiagramPackage.OFFER: return createOffer();
-			case ActivitydiagramPackage.TRACE: return createTrace();
 			case ActivitydiagramPackage.INPUT_VALUE: return createInputValue();
 			case ActivitydiagramPackage.INPUT: return createInput();
-			case ActivitydiagramPackage.CONTROL_TOKEN: return createControlToken();
-			case ActivitydiagramPackage.FORKED_TOKEN: return createForkedToken();
 			case ActivitydiagramPackage.SEND_SIGNAL_ACTION: return createSendSignalAction();
 			case ActivitydiagramPackage.ACCEPT_EVENT_ACTION: return createAcceptEventAction();
 			case ActivitydiagramPackage.SIGNAL: return createSignal();
@@ -306,26 +302,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Offer createOffer() {
-		OfferImpl offer = new OfferImpl();
-		return offer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Trace createTrace() {
-		TraceImpl trace = new TraceImpl();
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InputValue createInputValue() {
 		InputValueImpl inputValue = new InputValueImpl();
 		return inputValue;
@@ -339,26 +315,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	public Input createInput() {
 		InputImpl input = new InputImpl();
 		return input;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ControlToken createControlToken() {
-		ControlTokenImpl controlToken = new ControlTokenImpl();
-		return controlToken;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ForkedToken createForkedToken() {
-		ForkedTokenImpl forkedToken = new ForkedTokenImpl();
-		return forkedToken;
 	}
 
 	/**
