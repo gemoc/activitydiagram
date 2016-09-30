@@ -96,7 +96,7 @@
 									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.editor/" />
 								</zip>
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar./" />
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar/" />
 								</zip>
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide.zip">
 									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide/" />
