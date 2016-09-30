@@ -75,53 +75,19 @@ import activitydiagram.IntegerComparisonOperator
 import activitydiagram.BooleanUnaryOperator
 import activitydiagram.BooleanBinaryOperator
 import java.util.Scanner
-import activitydiagram.Trace
-import activitydiagram.Token
-import activitydiagram.Offer
-import activitydiagram.ActivitydiagramFactory
-import activitydiagram.ForkedToken
+import dynamic.activitydiagram.Trace
+import dynamic.activitydiagram.Token
+import dynamic.activitydiagram.Offer
+import dynamic.activitydiagram.ForkedToken
 import fr.inria.diverse.k3.al.annotationprocessor.Containment
 import activitydiagram.SendSignalAction
 import activitydiagram.AcceptEventAction
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.BasicEList
-import activitydiagram.ActivitydiagramDynamicFactory
+import dynamic.activitydiagram.ActivitydiagramFactory
 import fr.inria.diverse.k3.al.annotationprocessor.Opposite
-import activitydiagram.Context
+import dynamic.activitydiagram.Context
 
-class Util {
-	public static final Object LINE_BREAK = System.getProperty("line.separator");
-
-	public static final  def Input getInput(String inputPath) {
-		var Input input = null;
-		if (inputPath != null) {
-			var XtextResourceSet resourceSet ;resourceSet = new XtextResourceSet();
-			var resource = resourceSet.getResource(createFileURI(inputPath), true);
-			var eObject = resource.getContents().get(0);
-			if (eObject instanceof Input) {
-				input = eObject as Input;
-			}
-		}
-		return input;
-	}
-	
-	public static final	def List<InputValue> getInputValues(String inputPath) {
-		var inputValues = new ArrayList<InputValue>();
-		var input = Util.getInput(inputPath);
-		if (input != null) {
-			inputValues.addAll(input.getInputValues());
-		}
-		return inputValues;
-	}
-	
-	public static final  def URI createFileURI(String path) {
-		return URI.createFileURI(createFile(path).getAbsolutePath());
-	}
-	public static final  def File createFile(String path) {
-		return new File(path);
-	}
-
-}
 
 //class Offer { 
 //	public List<Token> offeredTokens = new ArrayList<Token>() ;
@@ -204,7 +170,7 @@ class ActivityAspect extends NamedElementAspect {
 		var String inputPath = _self.inputValuePath
         if (inputPath != null && inputPath != ""){
 	
-			var input = Util.getInput(inputPath);
+			var input = _self.getInput(inputPath);
 			if (input != null) {
 				inputValues.addAll(input.getInputValues());
 				inputValues?.forEach[v|
@@ -220,11 +186,11 @@ class ActivityAspect extends NamedElementAspect {
 		
 		_self.start = System.nanoTime;
 		
-		_self.context = ActivitydiagramDynamicFactory.eINSTANCE.createContext
+		_self.context = ActivitydiagramFactory.eINSTANCE.createContext
 		_self.context.inputValues = inputValues
 		_self.context.activity = _self
 		//_self.trace = new Trace;
-		_self.trace = ActivitydiagramDynamicFactory.eINSTANCE.createTrace();
+		_self.trace = ActivitydiagramFactory.eINSTANCE.createTrace();
 		_self.context.output = _self.trace
 		
 		_self.nodes.forEach[n|n.running =true] //this is creapy strange to do that but it is in the spec
@@ -250,7 +216,7 @@ class ActivityAspect extends NamedElementAspect {
 		_self.trace = null;
 	}
 
-	def void writeToFile() {
+	def private void writeToFile() {
 		var text = _self.printTrace();
 		try {
 			var writer = new BufferedWriter(new OutputStreamWriter(
@@ -262,17 +228,31 @@ class ActivityAspect extends NamedElementAspect {
 		}
 	}
 
-	def String printTrace() {
+	def private String printTrace() {
+		val LINE_BREAK = System.getProperty("line.separator")
 		val text = new StringBuffer();
-		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(Util.LINE_BREAK);]
+		_self.trace.executedNodes.forEach[n|text.append(n.getName()); text.append(LINE_BREAK);]
 
 		_self.getLocals().forEach [ v |
 			text.append(v.print);
-			text.append(Util.LINE_BREAK);
+			text.append(LINE_BREAK);
 		]
 		return text.toString();
 	}
 
+	private def Input getInput(String inputPath) {
+		var Input input = null;
+		if (inputPath != null) {
+			var XtextResourceSet resourceSet ;resourceSet = new XtextResourceSet();
+			URI.createFileURI(new File(inputPath).getAbsolutePath())
+			var resource = resourceSet.getResource(URI.createFileURI(new File(inputPath).getAbsolutePath()), true);
+			var eObject = resource.getContents().get(0);
+			if (eObject instanceof Input) {
+				input = eObject as Input;
+			}
+		}
+		return input;
+	}
 	def int getIntegerVariableValue(String variableName) {
 		var currentValue = _self.getVariableValue(variableName);
 		if (currentValue instanceof IntegerValue) {
@@ -373,7 +353,7 @@ class ActivityEdgeAspect extends NamedElementAspect {
 
 	//write
 	public def void sendOffer() {
-		val offer = ActivitydiagramDynamicFactory.eINSTANCE.createOffer();
+		val offer = ActivitydiagramFactory.eINSTANCE.createOffer();
 		if (_self.source instanceof ForkNode){
 			var indexOfSelf = _self.source.outgoing.indexOf(_self)
 			offer.offeredTokens.add(_self.source.heldTokens.get(indexOfSelf))
@@ -462,7 +442,7 @@ class AcceptEventActionAspect extends ActivityNodeAspect {
 class InitialNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	public def void execute() {
-		var r = ActivitydiagramDynamicFactory.eINSTANCE.createControlToken();
+		var r = ActivitydiagramFactory.eINSTANCE.createControlToken();
 		r.holder = _self	// unnecessary when @Opposite will work
 		_self.heldTokens.add(r)
 		(_self.eContainer() as Activity).context.output.executedNodes.add(_self)
@@ -498,7 +478,7 @@ class ForkNodeAspect extends ActivityNodeAspect {
 		var forkedTokens = new BasicEList<Token>();
 		for(Token token : tokens) {
 			for (var int i = 0; i < _self.outgoing.size(); i++){
-				var forkedToken = ActivitydiagramDynamicFactory.eINSTANCE.createForkedToken();
+				var forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken();
 				forkedToken.baseToken = token;
 				forkedTokens.add(forkedToken);
 			//	forkedToken.remainingOffersCount = _self.outgoing.size();
