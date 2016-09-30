@@ -20,12 +20,21 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.gemoc.activitydiagram.concurrent.xactivitydiagram;bundle-version="0.1.0"
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.formatting,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.generator,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.parser.antlr,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.parser.antlr.internal,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.scoping,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.serializer,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.services,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.validation
+Export-Package: org.gemoc.activitydiagram.concurrent.xactivitydiagram,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.formatting,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.generator,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.formatting,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.generator,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr.internal,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.scoping,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.serializer,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.services,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.validation,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr.internal,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.scoping,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.serializer,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.services,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.validation
+

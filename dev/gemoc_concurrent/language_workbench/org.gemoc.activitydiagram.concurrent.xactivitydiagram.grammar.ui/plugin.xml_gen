@@ -6,48 +6,48 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="ad"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
             name="ActivityDiagram Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+                    definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="org.modelexecution.operationalsemantics.ActivityDiagram.validate">
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.validate">
          <activeWhen>
             <reference
-                    definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+                    definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
             </reference>
          </activeWhen>
       	</handler>
       	<!-- copy qualified name -->
         <handler
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
             <activeWhen>
-				<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened" />
+				<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened" />
             </activeWhen>
         </handler>
         <handler
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
             <activeWhen>
             	<and>
-            		<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.XtextEditor.opened" />
+            		<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.XtextEditor.opened" />
 	                <iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -56,22 +56,22 @@
         </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+        <definition id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="org.modelexecution.operationalsemantics.ActivityDiagram" 
+                        value="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
         </definition>
-        <definition id="org.modelexecution.operationalsemantics.ActivityDiagram.XtextEditor.opened">
+        <definition id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.XtextEditor.opened">
             <and>
                 <reference definitionId="isXtextEditorActive"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="org.modelexecution.operationalsemantics.ActivityDiagram" 
+                        value="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -80,33 +80,33 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
             name="ActivityDiagram">
-            <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+            <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
         </page>
         <page
-            category="org.modelexecution.operationalsemantics.ActivityDiagram"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram.coloring"
+            category="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.coloring"
             name="Syntax Coloring">
-            <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+            <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
         </page>
         <page
-            category="org.modelexecution.operationalsemantics.ActivityDiagram"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram.templates"
+            category="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.templates"
             name="Templates">
-            <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+            <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
             name="ActivityDiagram">
-            <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+            <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -116,14 +116,14 @@
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"
             label="ActivityDiagram"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram.validate"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.validate"
             name="Validate">
       </command>
       <!-- copy qualified name -->
@@ -144,12 +144,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="org.modelexecution.operationalsemantics.ActivityDiagram.validate"
+                 commandId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+                    definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -159,7 +159,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
          		style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened" />
+                	<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -167,7 +167,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
             	style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened" />
+                	<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -176,7 +176,7 @@
 				style="push" tooltip="Copy Qualified Name">
          		<visibleWhen checkEnabled="false">
 	            	<and>
-	            		<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.XtextEditor.opened" />
+	            		<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -189,7 +189,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+                	<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -197,11 +197,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+                    definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -212,19 +212,19 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="ad">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="ad">
         </resourceServiceProvider>
     </extension>
 
 
-	<!-- marker definitions for org.modelexecution.operationalsemantics.ActivityDiagram -->
+	<!-- marker definitions for org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram -->
 	<extension
 	        id="activitydiagram.check.fast"
 	        name="ActivityDiagram Problem"
@@ -250,7 +250,7 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
             fileExtensions="ad"
             >
       </participant>
@@ -258,21 +258,21 @@
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            category="org.modelexecution.operationalsemantics.ActivityDiagram"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram.compiler.preferencePage"
+            category="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.compiler.preferencePage"
             name="Compiler">
-            <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+            <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            category="org.modelexecution.operationalsemantics.ActivityDiagram"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="org.modelexecution.operationalsemantics.ActivityDiagram.compiler.propertyPage"
+            category="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.compiler.propertyPage"
             name="Compiler">
-            <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+            <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -283,20 +283,20 @@
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
-				id="org.modelexecution.operationalsemantics.ActivityDiagram.OpenGeneratedCode"
+				id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.OpenGeneratedCode"
 				style="push">
 					<visibleWhen checkEnabled="false">
-						<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened" />
+						<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened" />
 					</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
 				<activeWhen>
-					<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened" />
+					<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened" />
 				</activeWhen>
 		</handler>
 	</extension>
@@ -305,11 +305,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -329,33 +329,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened"/>
+					<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-    <!-- quickfix marker resolution generator for org.modelexecution.operationalsemantics.ActivityDiagram -->
+    <!-- quickfix marker resolution generator for org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram -->
     <extension
             point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="org.modelexecution.operationalsemantics.ui.activitydiagram.check.fast">
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.activitydiagram.check.fast">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="org.modelexecution.operationalsemantics.ui.activitydiagram.check.normal">
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.activitydiagram.check.normal">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="org.modelexecution.operationalsemantics.ui.activitydiagram.check.expensive">
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.activitydiagram.check.expensive">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
@@ -365,11 +365,11 @@
    	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
-			class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+					definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -381,7 +381,7 @@
                style="push">
             <visibleWhen checkEnabled="false">
                <reference
-                     definitionId="org.modelexecution.operationalsemantics.ActivityDiagram.Editor.opened">
+                     definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.Editor.opened">
                </reference>
             </visibleWhen>
          </command>
@@ -389,29 +389,29 @@
    </extension>
    <extension point="org.eclipse.ui.preferencePages">
 	    <page
-	        category="org.modelexecution.operationalsemantics.ActivityDiagram"
-	        class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-	        id="org.modelexecution.operationalsemantics.ActivityDiagram.refactoring"
+	        category="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram"
+	        class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+	        id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.refactoring"
 	        name="Refactoring">
-	        <keywordReference id="org.modelexecution.operationalsemantics.ui.keyword_ActivityDiagram"/>
+	        <keywordReference id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.keyword_ActivityDiagram"/>
 	    </page>
 	</extension>
 
   <extension point="org.eclipse.compare.contentViewers">
-    <viewer id="org.modelexecution.operationalsemantics.ActivityDiagram.compare.contentViewers"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+    <viewer id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.compare.contentViewers"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
             extensions="ad">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
-    <viewer id="org.modelexecution.operationalsemantics.ActivityDiagram.compare.contentMergeViewers"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+    <viewer id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.compare.contentMergeViewers"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
             extensions="ad" label="ActivityDiagram Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
-    <provider id="org.modelexecution.operationalsemantics.ActivityDiagram.editors.documentProviders"
-            class="org.modelexecution.operationalsemantics.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+    <provider id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagram.editors.documentProviders"
+            class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
             extensions="ad">
     </provider>
   </extension>
