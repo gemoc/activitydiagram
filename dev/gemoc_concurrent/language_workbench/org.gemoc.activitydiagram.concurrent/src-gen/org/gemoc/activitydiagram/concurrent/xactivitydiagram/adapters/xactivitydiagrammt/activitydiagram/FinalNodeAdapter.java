@@ -2,7 +2,6 @@ package org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivity
 
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import java.util.Collection;
-import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.FinalNode;
@@ -61,7 +60,7 @@ public class FinalNodeAdapter extends EObjectAdapter<FinalNode> implements org.g
   }
   
   @Override
-  public void addTokens(final List<Token> tokens) {
+  public void addTokens(final EList<Token> tokens) {
     org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspect.addTokens(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
     );
   }

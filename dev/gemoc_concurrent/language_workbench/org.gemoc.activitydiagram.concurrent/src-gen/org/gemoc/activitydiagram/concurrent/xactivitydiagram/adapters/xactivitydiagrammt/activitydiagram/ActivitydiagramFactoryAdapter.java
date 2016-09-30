@@ -35,7 +35,6 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.S
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.SignalEvent;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Token;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Trace;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Util;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Value;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Variable;
 
@@ -203,11 +202,6 @@ public class ActivitydiagramFactoryAdapter extends EFactoryImpl implements Activ
   @Override
   public Context createContext() {
     return adaptersFactory.createContextAdapter(activitydiagramAdaptee.createContext(), null);
-  }
-  
-  @Override
-  public Util createUtil() {
-    return adaptersFactory.createUtilAdapter(activitydiagramAdaptee.createUtil(), null);
   }
   
   @Override

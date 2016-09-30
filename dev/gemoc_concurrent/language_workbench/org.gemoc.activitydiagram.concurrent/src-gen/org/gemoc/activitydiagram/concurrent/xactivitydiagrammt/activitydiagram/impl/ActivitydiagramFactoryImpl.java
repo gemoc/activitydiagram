@@ -2,10 +2,6 @@
  */
 package org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl;
 
-import java.io.File;
-
-import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -93,7 +89,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.CONTROL_TOKEN: return createControlToken();
 			case ActivitydiagramPackage.FORKED_TOKEN: return createForkedToken();
 			case ActivitydiagramPackage.CONTEXT: return createContext();
-			case ActivitydiagramPackage.UTIL: return createUtil();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -115,10 +110,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 				return createBooleanUnaryOperatorFromString(eDataType, initialValue);
 			case ActivitydiagramPackage.BOOLEAN_BINARY_OPERATOR:
 				return createBooleanBinaryOperatorFromString(eDataType, initialValue);
-			case ActivitydiagramPackage.URI:
-				return createURIFromString(eDataType, initialValue);
-			case ActivitydiagramPackage.FILE:
-				return createFileFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -140,10 +131,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 				return convertBooleanUnaryOperatorToString(eDataType, instanceValue);
 			case ActivitydiagramPackage.BOOLEAN_BINARY_OPERATOR:
 				return convertBooleanBinaryOperatorToString(eDataType, instanceValue);
-			case ActivitydiagramPackage.URI:
-				return convertURIToString(eDataType, instanceValue);
-			case ActivitydiagramPackage.FILE:
-				return convertFileToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -442,15 +429,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Util createUtil() {
-		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IntegerCalculationOperator createIntegerCalculationOperatorFromString(EDataType eDataType, String initialValue) {
 		IntegerCalculationOperator result = IntegerCalculationOperator.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -524,42 +502,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 */
 	public String convertBooleanBinaryOperatorToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public URI createURIFromString(EDataType eDataType, String initialValue) {
-		return (URI)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertURIToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public File createFileFromString(EDataType eDataType, String initialValue) {
-		return (File)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertFileToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

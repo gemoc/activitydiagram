@@ -10,13 +10,6 @@
     <eOperations name="reset">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="writeToFile">
-      <eAnnotations source="aspect"/>
-    </eOperations>
-    <eOperations name="printTrace">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eOperations>
     <eOperations name="getIntegerVariableValue">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -334,38 +327,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" unique="false" eType="//JoinNode">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Util">
-    <eAnnotations source="aspect"/>
-    <eOperations name="getInput" eType="//Input">
-      <eAnnotations source="aspect"/>
-      <eParameters name="inputPath">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
-    <eOperations name="getInputValues" upperBound="-1" eType="//InputValue">
-      <eAnnotations source="aspect"/>
-      <eParameters name="inputPath">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
-    <eOperations name="createFileURI" eType="//URI">
-      <eAnnotations source="aspect"/>
-      <eParameters name="path">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
-    <eOperations name="createFile" eType="//File">
-      <eAnnotations source="aspect"/>
-      <eParameters name="path">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="URI" instanceClassName="org.eclipse.emf.common.util.URI">
-    <eAnnotations source="aspect"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="File" instanceClassName="java.io.File">
-    <eAnnotations source="aspect"/>
   </eClassifiers>
 </ecore:EPackage>

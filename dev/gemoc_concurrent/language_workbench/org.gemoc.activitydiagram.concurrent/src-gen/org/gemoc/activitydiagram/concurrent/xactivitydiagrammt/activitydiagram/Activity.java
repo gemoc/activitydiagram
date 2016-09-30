@@ -218,22 +218,6 @@ public interface Activity extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	void writeToFile();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	String printTrace();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	int getIntegerVariableValue(String variableName);
 
 	/**

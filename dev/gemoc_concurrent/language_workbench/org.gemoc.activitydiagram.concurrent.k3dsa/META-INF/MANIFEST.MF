@@ -1,5 +1,5 @@
 Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent.k3dsa;singleton:=true
-Export-Package: org.gemoc.activitydiagram.concurrent.k3dsa
+Export-Package: org.gemoc.activitydiagram.concurrent.k3dsa,org.gemoc.activitydiagram.concurrent.k3dsa.utils
 Bundle-Name: %pluginName
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
@@ -19,7 +19,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar;bundle-version="1.0.0",
  org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar;bundle-version="1.0.0",
  org.aspectj.runtime;bundle-version="0.0.0";visibility:=reexport,
- org.gemoc.activitydiagram.concurrent.dynamic.model;bundle-version="0.1.0"
+ org.gemoc.activitydiagram.concurrent.dynamic.model;bundle-version="0.1.0",
+ org.eclipse.xtext;bundle-version="2.9.1"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

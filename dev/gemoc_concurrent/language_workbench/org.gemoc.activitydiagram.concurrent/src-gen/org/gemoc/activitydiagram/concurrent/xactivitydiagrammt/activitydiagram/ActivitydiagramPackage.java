@@ -4,7 +4,6 @@ package org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -2205,25 +2204,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int CONTEXT_FEATURE_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.UtilImpl <em>Util</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.UtilImpl
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getUtil()
-	 * @generated
-	 */
-	int UTIL = 41;
-
-	/**
-	 * The number of structural features of the '<em>Util</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UTIL_FEATURE_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2231,7 +2211,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationOperator()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_OPERATOR = 42;
+	int INTEGER_CALCULATION_OPERATOR = 41;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.IntegerComparisonOperator <em>Integer Comparison Operator</em>}' enum.
@@ -2241,7 +2221,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonOperator()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_OPERATOR = 43;
+	int INTEGER_COMPARISON_OPERATOR = 42;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.BooleanUnaryOperator <em>Boolean Unary Operator</em>}' enum.
@@ -2251,7 +2231,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_OPERATOR = 44;
+	int BOOLEAN_UNARY_OPERATOR = 43;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.BooleanBinaryOperator <em>Boolean Binary Operator</em>}' enum.
@@ -2261,27 +2241,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_OPERATOR = 45;
-
-	/**
-	 * The meta object id for the '<em>URI</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.common.util.URI
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getURI()
-	 * @generated
-	 */
-	int URI = 46;
-
-	/**
-	 * The meta object id for the '<em>File</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see java.io.File
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getFile()
-	 * @generated
-	 */
-	int FILE = 47;
+	int BOOLEAN_BINARY_OPERATOR = 44;
 
 
 	/**
@@ -3256,16 +3216,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getContext_Node();
 
 	/**
-	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Util <em>Util</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Util</em>'.
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Util
-	 * @generated
-	 */
-	EClass getUtil();
-
-	/**
 	 * Returns the meta object for enum '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3304,28 +3254,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getBooleanBinaryOperator();
-
-	/**
-	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.URI <em>URI</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>URI</em>'.
-	 * @see org.eclipse.emf.common.util.URI
-	 * @model instanceClass="org.eclipse.emf.common.util.URI"
-	 * @generated
-	 */
-	EDataType getURI();
-
-	/**
-	 * Returns the meta object for data type '{@link java.io.File <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>File</em>'.
-	 * @see java.io.File
-	 * @model instanceClass="java.io.File"
-	 * @generated
-	 */
-	EDataType getFile();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4168,16 +4096,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference CONTEXT__NODE = eINSTANCE.getContext_Node();
 
 		/**
-		 * The meta object literal for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.UtilImpl <em>Util</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.UtilImpl
-		 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getUtil()
-		 * @generated
-		 */
-		EClass UTIL = eINSTANCE.getUtil();
-
-		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4216,26 +4134,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum BOOLEAN_BINARY_OPERATOR = eINSTANCE.getBooleanBinaryOperator();
-
-		/**
-		 * The meta object literal for the '<em>URI</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.emf.common.util.URI
-		 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getURI()
-		 * @generated
-		 */
-		EDataType URI = eINSTANCE.getURI();
-
-		/**
-		 * The meta object literal for the '<em>File</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.io.File
-		 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getFile()
-		 * @generated
-		 */
-		EDataType FILE = eINSTANCE.getFile();
 
 	}
 

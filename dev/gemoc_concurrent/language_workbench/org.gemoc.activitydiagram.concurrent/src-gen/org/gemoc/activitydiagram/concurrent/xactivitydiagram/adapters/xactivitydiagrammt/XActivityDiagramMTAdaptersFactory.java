@@ -44,7 +44,6 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Sig
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.SignalEvent;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Token;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Trace;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Util;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Value;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Variable;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.AcceptEventActionAdapter;
@@ -86,7 +85,6 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivityd
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.SignalEventAdapter;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TokenAdapter;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.UtilAdapter;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ValueAdapter;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.VariableAdapter;
 
@@ -203,9 +201,6 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     }
     if (o instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context){
     	return createContextAdapter((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context) o, res);
-    }
-    if (o instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Util){
-    	return createUtilAdapter((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Util) o, res);
     }
     
     return null;
@@ -823,21 +818,6 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
     	return (org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ContextAdapter) adapter;
-    }
-  }
-  
-  public UtilAdapter createUtilAdapter(final Util adaptee, final Resource res) {
-    if (adaptee == null)
-    	return null;
-    EObjectAdapter adapter = register.get(adaptee);
-    if(adapter != null)
-    	 return (org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.UtilAdapter) adapter;
-    else {
-    	adapter = new org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.UtilAdapter();
-    	adapter.setAdaptee(adaptee);
-    	adapter.setResource(res);
-    	register.put(adaptee, adapter);
-    	return (org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.UtilAdapter) adapter;
     }
   }
 }

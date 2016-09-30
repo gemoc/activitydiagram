@@ -10,7 +10,7 @@
       <!-- @generated dynamic -->
       <package
             uri="http://org.gemoc.activitydiagram.concurrent/activitydiagram_dynamic"
-            class="activitydiagram.ActivitydiagramDynamicPackage"
+            class="dynamic.activitydiagram.ActivitydiagramPackage"
             genModel="model/dynamic.genmodel"/>
    </extension>
 

@@ -1,0 +1,57 @@
+package org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects;
+
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityEdge;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityFinalNode;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityNode;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Token;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Trace;
+import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
+import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
+import java.util.function.Consumer;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityEdgeAspect;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityFinalNodeAspectActivityFinalNodeAspectProperties;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspect;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspect;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.TraceAspect;
+
+@Aspect(className = ActivityFinalNode.class)
+@SuppressWarnings("all")
+public class ActivityFinalNodeAspect extends ActivityNodeAspect {
+  @OverrideAspectMethod
+  public static void execute(final ActivityFinalNode _self) {
+    final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityFinalNodeAspectActivityFinalNodeAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityFinalNodeAspectActivityFinalNodeAspectContext.getSelf(_self);
+     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityFinalNode){
+    					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityFinalNodeAspect._privk3_execute(_self_, (org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityNode){
+    					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivityNode)_self);
+    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
+  }
+  
+  private static void super_execute(final ActivityFinalNode _self) {
+    final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
+     org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspect._privk3_execute(_self_, _self);
+  }
+  
+  protected static void _privk3_execute(final ActivityFinalNodeAspectActivityFinalNodeAspectProperties _self_, final ActivityFinalNode _self) {
+    EList<ActivityEdge> _incoming = _self.getIncoming();
+    final Consumer<ActivityEdge> _function = new Consumer<ActivityEdge>() {
+      @Override
+      public void accept(final ActivityEdge i) {
+        ActivityEdgeAspect.takeOfferedTokens(i);
+      }
+    };
+    _incoming.forEach(_function);
+    EObject _eContainer = _self.eContainer();
+    Context _context = ActivityAspect.context(((Activity) _eContainer));
+    Trace _output = ContextAspect.output(_context);
+    EList<ActivityNode> _executedNodes = TraceAspect.executedNodes(_output);
+    _executedNodes.add(_self);
+    EList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
+    _heldTokens.clear();
+  }
+}

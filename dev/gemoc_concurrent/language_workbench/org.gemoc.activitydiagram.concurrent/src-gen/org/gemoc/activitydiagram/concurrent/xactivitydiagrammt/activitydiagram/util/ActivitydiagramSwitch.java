@@ -377,12 +377,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.UTIL: {
-				Util util = (Util)theEObject;
-				T result = caseUtil(util);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -999,21 +993,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContext(Context object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Util</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Util</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUtil(Util object) {
 		return null;
 	}
 

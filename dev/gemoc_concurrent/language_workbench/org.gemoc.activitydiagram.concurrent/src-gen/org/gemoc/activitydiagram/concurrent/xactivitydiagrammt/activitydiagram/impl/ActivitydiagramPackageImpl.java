@@ -2,11 +2,8 @@
  */
 package org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.impl;
 
-import java.io.File;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -60,7 +57,6 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.S
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.SignalEvent;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Token;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Trace;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Util;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Value;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Variable;
 
@@ -363,13 +359,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass utilEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum integerCalculationOperatorEEnum = null;
 
 	/**
@@ -392,20 +381,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	private EEnum booleanBinaryOperatorEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType uriEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType fileEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1304,15 +1279,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUtil() {
-		return utilEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getIntegerCalculationOperator() {
 		return integerCalculationOperatorEEnum;
 	}
@@ -1342,24 +1308,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 */
 	public EEnum getBooleanBinaryOperator() {
 		return booleanBinaryOperatorEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getURI() {
-		return uriEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getFile() {
-		return fileEDataType;
 	}
 
 	/**
@@ -1523,17 +1471,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(contextEClass, CONTEXT__INPUT_VALUES);
 		createEReference(contextEClass, CONTEXT__NODE);
 
-		utilEClass = createEClass(UTIL);
-
 		// Create enums
 		integerCalculationOperatorEEnum = createEEnum(INTEGER_CALCULATION_OPERATOR);
 		integerComparisonOperatorEEnum = createEEnum(INTEGER_COMPARISON_OPERATOR);
 		booleanUnaryOperatorEEnum = createEEnum(BOOLEAN_UNARY_OPERATOR);
 		booleanBinaryOperatorEEnum = createEEnum(BOOLEAN_BINARY_OPERATOR);
-
-		// Create data types
-		uriEDataType = createEDataType(URI);
-		fileEDataType = createEDataType(FILE);
 	}
 
 	/**
@@ -1612,10 +1554,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		addEOperation(activityEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(activityEClass, null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(activityEClass, null, "writeToFile", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(activityEClass, ecorePackage.getEString(), "printTrace", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		EOperation op = addEOperation(activityEClass, ecorePackage.getEInt(), "getIntegerVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1816,20 +1754,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getContext_InputValues(), this.getInputValue(), null, "inputValues", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Node(), this.getJoinNode(), null, "node", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(utilEClass, Util.class, "Util", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = addEOperation(utilEClass, this.getInput(), "getInput", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "inputPath", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = addEOperation(utilEClass, this.getInputValue(), "getInputValues", 0, -1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "inputPath", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = addEOperation(utilEClass, this.getURI(), "createFileURI", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "path", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = addEOperation(utilEClass, this.getFile(), "createFile", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "path", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		// Initialize enums and add enum literals
 		initEEnum(integerCalculationOperatorEEnum, IntegerCalculationOperator.class, "IntegerCalculationOperator");
 		addEEnumLiteral(integerCalculationOperatorEEnum, IntegerCalculationOperator.ADD);
@@ -1848,10 +1772,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEEnum(booleanBinaryOperatorEEnum, BooleanBinaryOperator.class, "BooleanBinaryOperator");
 		addEEnumLiteral(booleanBinaryOperatorEEnum, BooleanBinaryOperator.AND);
 		addEEnumLiteral(booleanBinaryOperatorEEnum, BooleanBinaryOperator.OR);
-
-		// Initialize data types
-		initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(fileEDataType, File.class, "File", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1906,16 +1826,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (activityEClass.getEOperations().get(7), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (activityEClass.getEOperations().get(8), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (activityEClass.getEOperations().get(9), 
 		   source, 
 		   new String[] {
 		   });	
@@ -2176,41 +2086,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (getContext_Node(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (utilEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (utilEClass.getEOperations().get(0), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (utilEClass.getEOperations().get(1), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (utilEClass.getEOperations().get(2), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (utilEClass.getEOperations().get(3), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (uriEDataType, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (fileEDataType, 
 		   source, 
 		   new String[] {
 		   });

@@ -232,10 +232,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createContextAdapter();
 			}
 			@Override
-			public Adapter caseUtil(Util object) {
-				return createUtilAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -826,20 +822,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContextAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Util <em>Util</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Util
-	 * @generated
-	 */
-	public Adapter createUtilAdapter() {
 		return null;
 	}
 

@@ -139,11 +139,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
   }
   
   @Override
-  public String printTrace() {
-    return org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.printTrace(adaptee);
-  }
-  
-  @Override
   public void reset() {
     org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.reset(adaptee);
   }
@@ -157,11 +152,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
   public void setTrace(final Trace trace) {
     org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.trace(adaptee, (org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Trace)((EObjectAdapter)trace).getAdaptee()
     );
-  }
-  
-  @Override
-  public void writeToFile() {
-    org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.writeToFile(adaptee);
   }
   
   protected final static String NAME_EDEFAULT = null;
