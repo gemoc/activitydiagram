@@ -1,4 +1,4 @@
-import 'http://activitydiagram/1.0'
+import 'http://org.gemoc.activitydiagram.concurrent.xactivitydiagram/activitydiagram/'
 
 ECLimport  "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib"
 ECLimport "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib" 
