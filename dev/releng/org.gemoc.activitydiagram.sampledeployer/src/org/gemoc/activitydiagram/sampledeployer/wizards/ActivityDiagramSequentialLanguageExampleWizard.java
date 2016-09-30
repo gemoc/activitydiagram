@@ -26,17 +26,22 @@ public class ActivityDiagramSequentialLanguageExampleWizard
 		// We need the statements example to be unzipped along with the
 		// EMF library example model, edit and editor examples
 		List<ProjectDescriptor> projects = new ArrayList<ProjectDescriptor>(1);
-		// commons projects
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.design.zip", "org.modelexecution.operationalsemantics.ad.design"));
 		
 		// sequential projects
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_sequential.zip", "org.modelexecution.operationalsemantics.ad"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.zip", "org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.sequential.xdsml.zip", "org.modelexecution.operationalsemantics.ad.sequential.xdsml"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_sequential.grammar.zip", "org.modelexecution.operationalsemantics.ad.grammar"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_sequential.grammar.ui.zip", "org.modelexecution.operationalsemantics.ad.grammar.ui"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_sequential.input.grammar.zip", "org.modelexecution.operationalsemantics.ad.input.grammar"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_sequential.input.grammar.ui.zip", "org.modelexecution.operationalsemantics.ad.input.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.zip", "org.gemoc.activitydiagram.sequential"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.k3dsa.zip", "org.gemoc.activitydiagram.sequential.k3dsa"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.model.zip", "org.gemoc.activitydiagram.sequential.model"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.design.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.design"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.edit.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.edit"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.editor.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.editor"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.trace.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.trace"));
 
 		return projects;
 	}

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gemoc" version="8.1.0">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gemoc" version="10.1.3.201511131800">
   <ownedViewpoints name="ActivityDiagram viewpoint" modelFileExtension="* ad xmi">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Activity Diagram" titleExpression="[self.oclAsType(NamedElement).name +' Activity Diagram'/]" initialisation="true" showOnStartup="true" domainClass="activitydiagram.Activity" enablePopupBars="true">
-      <metamodel href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#/"/>
+      <metamodel href="../../org.modelexecution.operationalsemantics.ad.sequential.xdsml.sequentialactivitydiagram/model/SequentialActivityDiagram.ecore#/"/>
       <defaultLayer name="Activity">
         <edgeMappings name="AD_ControlFlow" semanticElements="service:getSemanticElements" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode'] //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']" targetMapping="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="ControlFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlSource'] //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlTarget']">
-          <style sizeComputationExpression="1" routingStyle="manhattan">
+          <style routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="[self.name /]">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -68,14 +68,16 @@
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               </style>
             </borderedNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" labelExpression="[self.name/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20green']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" showIcon="false" labelExpression="[self.name/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20green']">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+              <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
             <conditionnalStyles predicateExpression="[self.oclIsTypeOf(OpaqueAction)/]">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" labelExpression="[self.name/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20orange']">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" showIcon="false" labelExpression="[self.name/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20orange']">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+                <labelFormat>bold</labelFormat>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
@@ -103,7 +105,7 @@
                 </style>
               </conditionnalStyles>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" labelExpression="[self.name/]" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20blue']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1" arcHeight="1" borderSizeComputationExpression="1" labelExpression="[self.name/]" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20blue']">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
@@ -131,7 +133,7 @@
                 </style>
               </conditionnalStyles>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" labelExpression="[self.name/]" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20green']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1" arcHeight="1" borderSizeComputationExpression="1" labelExpression="[self.name/]" labelAlignment="LEFT" backgroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20green']">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
@@ -383,13 +385,13 @@
         <containerMappings xsi:type="description_1:ContainerMappingImport" name="AD_Activity_animation_import" semanticCandidatesExpression="var:self" importedMapping="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']">
           <subNodeMappings xsi:type="description_1:NodeMappingImport" name="AD_ControlNode_animation_import" semanticCandidatesExpression="feature:nodes" importedMapping="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']">
             <borderedNodeMappings name="AD_ControlNodeToken" semanticCandidatesExpression="[self.heldTokens/]" domainClass="Token">
-              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[''/]" sizeComputationExpression="1" hideLabelByDefault="true">
+              <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true" sizeComputationExpression="1">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
               </style>
               <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ForkedToken)/]">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[''/]" sizeComputationExpression="1" hideLabelByDefault="true">
+                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true" sizeComputationExpression="1">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
@@ -451,7 +453,7 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
               </style>
               <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ForkedToken)/]">
-                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[''/]" sizeComputationExpression="1" hideLabelByDefault="true">
+                <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true" sizeComputationExpression="1">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
@@ -459,8 +461,9 @@
               </conditionnalStyles>
             </borderedNodeMappings>
             <conditionnalStyles predicateExpression="[self.oclIsTypeOf(OpaqueAction)/]">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" labelExpression="[self.name + '\nheldTokens =' +self.oclAsType(ActivityNode).heldTokens->size()/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20orange']">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="25" arcHeight="25" borderSizeComputationExpression="1" showIcon="false" labelExpression="[self.name + '\nheldTokens =' +self.oclAsType(ActivityNode).heldTokens->size()/]" roundedCorner="true" backgroundStyle="Liquid" foregroundColor="//@userColorsPalettes[name='UMLPalette']/@entries[name='lighter%20orange']">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+                <labelFormat>bold</labelFormat>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
