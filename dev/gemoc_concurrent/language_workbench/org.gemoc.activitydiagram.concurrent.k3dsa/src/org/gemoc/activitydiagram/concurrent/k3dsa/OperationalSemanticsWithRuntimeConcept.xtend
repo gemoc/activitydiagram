@@ -21,8 +21,6 @@ import java.util.List
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.EPackage
 import org.eclipse.xtext.resource.XtextResourceSet
-import org.modelexecution.operationalsemantics.ActivityDiagramInputStandaloneSetup
-import org.modelexecution.operationalsemantics.ActivityDiagramStandaloneSetup
 import static extension org.gemoc.activitydiagram.concurrent.k3dsa.ActivityAspect.*
 import static extension org.gemoc.activitydiagram.concurrent.k3dsa.ControlFlowAspect.*
 import static extension org.gemoc.activitydiagram.concurrent.k3dsa.OpaqueActionAspect.*
