@@ -1,4 +1,4 @@
-module org.modelexecution.operationalsemantics.ActivityDiagram
+module org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ActivityDiagram
 
 import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
@@ -14,7 +14,7 @@ Workflow {
 	bean = StandaloneSetup {
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
-		registerGeneratedEPackage = "org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivitydiagramPackage"
+		registerGeneratedEPackage = "org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivitydiagramPackage"
 		registerGenModelFile = "platform:/resource/org.gemoc.activitydiagram.concurrent.xactivitydiagram/model/XActivityDiagram.genmodel"
 	}
 

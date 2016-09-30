@@ -1,6 +1,6 @@
 Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent;singleton:=true
-Export-Package: concurrentactivitydiagram.xdsml.api.impl,xactivitydiagram.xdsml.api.impl
-Bundle-Name: org.modelexecution.operationalsemantics.ad.concurrent.xdsml
+Export-Package: xactivitydiagram.xdsml.api.impl
+Bundle-Name: org.gemoc.activitydiagram.concurrent
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="private",
