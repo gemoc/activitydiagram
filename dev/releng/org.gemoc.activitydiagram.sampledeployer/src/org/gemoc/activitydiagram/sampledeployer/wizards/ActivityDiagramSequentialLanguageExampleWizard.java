@@ -31,6 +31,7 @@ public class ActivityDiagramSequentialLanguageExampleWizard
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.zip", "org.gemoc.activitydiagram.sequential"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.k3dsa.zip", "org.gemoc.activitydiagram.sequential.k3dsa"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.model.zip", "org.gemoc.activitydiagram.sequential.model"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.model.dynamic.zip", "org.gemoc.activitydiagram.sequential.model.dynamic"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.design.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.design"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.edit.zip", "org.gemoc.activitydiagram.sequential.xactivitydiagram.edit"));

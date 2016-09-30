@@ -10,6 +10,7 @@
         <gemoc_concurrent_lw_root>${gemoc_concurrent_root}/language_workbench</gemoc_concurrent_lw_root>
         <gemoc_sequential_root>${sample_root}/gemoc_sequential</gemoc_sequential_root>
         <gemoc_sequential_lw_root>${gemoc_sequential_root}/language_workbench</gemoc_sequential_lw_root>
+        <gemoc_sequential_mw_root>${gemoc_sequential_root}/modeling_workbench</gemoc_sequential_mw_root>
     </properties>
     
 	<parent>
@@ -70,28 +71,57 @@
 								
 								<!-- Activity diagram Sequential Language Workbench  -->
 								
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.sequential.k3.dynamic/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.k3dsa.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.k3dsa/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.sequential.xdsml.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.sequential.xdsml/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.model.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.model/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.grammar.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.grammar/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.model.dynamic.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.model.dynamic/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.grammar.ui.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.grammar.ui/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.input.grammar.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.design.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_sequential.input.grammar.ui.zip">
-									<fileset dir="${gemoc_sequential_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar.ui/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.edit.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.edit/" />
 								</zip>
-
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.editor.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.editor/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar./" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.sequential.xactivitydiagram.trace.zip">
+									<fileset dir="${gemoc_sequential_lw_root}/org.gemoc.activitydiagram.sequential.xactivitydiagram.trace/" />
+								</zip>
+								
+								<!-- Activity diagram sequential Modeling Workbench  -->
+								
+								<zip destfile="${basedir}/zips/org.gemoc.sample.activitydiagram.sequential.examples.zip">
+									<fileset dir="${gemoc_sequential_mw_root}/org.gemoc.sample.activitydiagram.sequential.examples/" />
+								</zip>
 
 								<!-- Activity diagram commons Modeling Workbench  -->
 								

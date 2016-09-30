@@ -1818,7 +1818,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
+		  (tokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (tokenEClass.getEOperations().get(0), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (offerEClass, 
 		   source, 
 		   new String[] {
 		   });	
@@ -1838,6 +1848,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
+		  (inputValueEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getInputValue_Variable(), 
 		   source, 
 		   new String[] {
@@ -1848,7 +1863,22 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
+		  (inputEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getInput_InputValues(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (controlTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (forkedTokenEClass, 
 		   source, 
 		   new String[] {
 		   });	
@@ -1859,6 +1889,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (getForkedToken_RemainingOffersCount(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (traceEClass, 
 		   source, 
 		   new String[] {
 		   });	
