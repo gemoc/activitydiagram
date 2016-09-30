@@ -31,15 +31,6 @@ public interface StepsFactory extends EFactory {
 	Activitydiagram_ActivityNode_AddTokens1 createActivitydiagram_ActivityNode_AddTokens1();
 
 	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>'.
-	 * @generated
-	 */
-	Activitydiagram_ActivityNode_AddTokens1_ImplicitStep createActivitydiagram_ActivityNode_AddTokens1_ImplicitStep();
-
-	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Execute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,15 +74,6 @@ public interface StepsFactory extends EFactory {
 	 * @generated
 	 */
 	Activitydiagram_ActivityNode_TakeOfferdTokens1 createActivitydiagram_ActivityNode_TakeOfferdTokens1();
-
-	/**
-	 * Returns a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1 Implicit Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Activitydiagram Activity Node Take Offerd Tokens1 Implicit Step</em>'.
-	 * @generated
-	 */
-	Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep createActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep();
 
 	/**
 	 * Returns a new object of class '<em>Activitydiagram Activity Node Terminate</em>'.

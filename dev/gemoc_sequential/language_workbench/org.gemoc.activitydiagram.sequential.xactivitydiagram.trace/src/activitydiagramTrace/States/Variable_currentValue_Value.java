@@ -2,7 +2,6 @@
  */
 package activitydiagramTrace.States;
 
-import activitydiagramTrace.States.activitydiagram.TracedValue;
 import activitydiagramTrace.States.activitydiagram.TracedVariable;
 
 import org.eclipse.emf.common.util.EList;
@@ -35,12 +34,12 @@ public interface Variable_currentValue_Value extends Value {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' reference.
-	 * @see #setCurrentValue(TracedValue)
+	 * @see #setCurrentValue(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value)
 	 * @see activitydiagramTrace.States.StatesPackage#getVariable_currentValue_Value_CurrentValue()
 	 * @model
 	 * @generated
 	 */
-	TracedValue getCurrentValue();
+	org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value getCurrentValue();
 
 	/**
 	 * Sets the value of the '{@link activitydiagramTrace.States.Variable_currentValue_Value#getCurrentValue <em>Current Value</em>}' reference.
@@ -50,7 +49,7 @@ public interface Variable_currentValue_Value extends Value {
 	 * @see #getCurrentValue()
 	 * @generated
 	 */
-	void setCurrentValue(TracedValue value);
+	void setCurrentValue(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value value);
 
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.

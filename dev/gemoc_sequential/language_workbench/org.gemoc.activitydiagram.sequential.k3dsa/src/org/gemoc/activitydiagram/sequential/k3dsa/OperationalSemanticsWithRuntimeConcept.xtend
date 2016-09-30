@@ -29,6 +29,8 @@ import activitydiagram.OpaqueAction
 import activitydiagram.Value
 import activitydiagram.Variable
 import dynamic.activitydiagram.ForkedToken
+import dynamic.activitydiagram.Input
+import dynamic.activitydiagram.InputValue
 import dynamic.activitydiagram.Offer
 import dynamic.activitydiagram.Token
 import dynamic.activitydiagram.Trace
@@ -40,7 +42,6 @@ import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import fr.inria.diverse.k3.al.annotationprocessor.Step
 import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.emf.common.util.EList
-import org.eclipse.emf.common.util.UniqueEList
 
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ActivityEdgeAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ActivityNodeAspect.*
@@ -49,8 +50,6 @@ import static extension org.gemoc.activitydiagram.sequential.k3dsa.OfferAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TokenAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TraceAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect.*
-import dynamic.activitydiagram.Input
-import dynamic.activitydiagram.InputValue
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -60,7 +59,9 @@ class Util {
 @Aspect(className=Activity)
 class ActivityAspect extends NamedElementAspect {
 
+	@Containment
 	public Trace trace
+	
 
 	@InitializeModel
 	def void initializeModel(EList<String> args) {
@@ -68,7 +69,6 @@ class ActivityAspect extends NamedElementAspect {
 
 	@Main
 	def void main() {
-		_self.trace = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createTrace
 		_self.execute
 	}
 
@@ -78,6 +78,7 @@ class ActivityAspect extends NamedElementAspect {
 		_self.locals.forEach[v|v.init()]
 		_self.inputs.forEach[v|v.init()]
 		var toExecute = _self.nodes.filter[node|node instanceof InitialNode].get(0)
+		_self.trace = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createTrace
 		_self.trace.executedNodes.add(toExecute)
 		toExecute.execute
 
@@ -142,7 +143,7 @@ class NamedElementAspect {
 class ActivityNodeAspect extends NamedElementAspect {
 	
 	@Containment
-	public UniqueEList<Token> heldTokens = new UniqueEList
+	public EList<Token> heldTokens
 	
 	@OverrideAspectMethod
 	@Step
@@ -171,8 +172,6 @@ class ActivityNodeAspect extends NamedElementAspect {
 		for (ActivityEdge edge : _self.getIncoming()) {
 			val tokens = edge.takeOfferedTokens1()
 			for (Token token : tokens) {
-				token.withdraw1
-				token.holder = _self
 				_self.heldTokens.add(token)
 			}
 			allTokens.addAll(tokens)
@@ -183,8 +182,7 @@ class ActivityNodeAspect extends NamedElementAspect {
 	@Step
 	def void addTokens1(EList<Token> tokens) {
 		for (Token token : tokens) {
-			var transferredToken = token.transfer1(_self)
-			_self.heldTokens.add(transferredToken)
+			_self.heldTokens.add(token)
 		}
 	}
 
@@ -208,7 +206,7 @@ class ActivityNodeAspect extends NamedElementAspect {
 class ActivityEdgeAspect extends NamedElementAspect {
 	
 	@Containment
-	public UniqueEList<Offer> offers = new UniqueEList
+	public EList<Offer> offers
 	
 	def void sendOffer1(EList<Token> tokens) {
 		val offer = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer
@@ -245,7 +243,6 @@ class InitialNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
 		var r = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createControlToken
-		r.holder = _self
 		_self.heldTokens.add(r)
 		var list = new BasicEList<Token>
 		list.add(r)
@@ -481,7 +478,7 @@ class BooleanBinaryExpressionAspect extends ExpressionAspect {
 @Aspect(className=Offer)
 class OfferAspect {
 	
-	public EList<Token> offeredTokens = new BasicEList
+	public EList<Token> offeredTokens
 
 	def boolean hasTokens1() {
 		_self.removeWithdrawnTokens1();
@@ -502,25 +499,10 @@ class OfferAspect {
 @Aspect(className=Token)
 class TokenAspect {
 	
-	public ActivityNode holder
-
-	def Token transfer1(ActivityNode holder) {
-		if (_self.holder != null) {
-			_self.withdraw1();
-		}
-		_self.holder = holder;
-		return _self;
-	}
-
-	def void withdraw1() {
-		if (!_self.isWithdrawn) {
-			_self.holder.removeToken1(_self);
-			_self.holder = null;
-		}
-	}
+//	public ActivityNode holder
 
 	def boolean isWithdrawn() {
-		return _self.holder == null;
+		return _self.eContainer == null;
 	}
 }
 
@@ -536,7 +518,7 @@ class ForkedTokenAspect {
 @Aspect(className=Trace)
 class TraceAspect {
 	
-	public EList<ActivityNode> executedNodes = new BasicEList
+	public EList<ActivityNode> executedNodes
 	
 }
 
@@ -544,7 +526,7 @@ class TraceAspect {
 class InputAspect {
 	
 	@Containment
-	public UniqueEList<InputValue> inputValues
+	public EList<InputValue> inputValues
 	
 }
 

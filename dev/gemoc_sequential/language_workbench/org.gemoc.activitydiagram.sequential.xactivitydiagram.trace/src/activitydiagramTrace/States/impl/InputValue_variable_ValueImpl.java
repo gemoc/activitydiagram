@@ -2,12 +2,13 @@
  */
 package activitydiagramTrace.States.impl;
 
-import activitydiagramTrace.States.BooleanValue_value_Value;
+import activitydiagramTrace.States.InputValue_variable_Value;
 import activitydiagramTrace.States.State;
 import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
-import activitydiagramTrace.States.activitydiagram.TracedBooleanValue;
+import activitydiagramTrace.States.activitydiagram.TracedInputValue;
+import activitydiagramTrace.States.activitydiagram.TracedVariable;
 
 import java.util.Collection;
 
@@ -28,21 +29,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Boolean Value value Value</b></em>'.
+ * An implementation of the model object '<em><b>Input Value variable Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#getStatesNoOpposite <em>States No Opposite</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#getStates <em>States</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.BooleanValue_value_ValueImpl#isValue <em>Value</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getStatesNoOpposite <em>States No Opposite</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_variable_ValueImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container implements BooleanValue_value_Value {
+public class InputValue_variable_ValueImpl extends MinimalEObjectImpl.Container implements InputValue_variable_Value {
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -54,31 +55,21 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	protected EList<State> states;
 
 	/**
-	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VALUE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean value = VALUE_EDEFAULT;
+	protected TracedVariable variable;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BooleanValue_value_ValueImpl() {
+	protected InputValue_variable_ValueImpl() {
 		super();
 	}
 
@@ -89,7 +80,7 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StatesPackage.Literals.BOOLEAN_VALUE_VALUE_VALUE;
+		return StatesPackage.Literals.INPUT_VALUE_VARIABLE_VALUE;
 	}
 
 	/**
@@ -106,9 +97,9 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedBooleanValue getParent() {
-		if (eContainerFeatureID() != StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT) return null;
-		return (TracedBooleanValue)eInternalContainer();
+	public TracedInputValue getParent() {
+		if (eContainerFeatureID() != StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT) return null;
+		return (TracedInputValue)eInternalContainer();
 	}
 
 	/**
@@ -116,8 +107,8 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParent(TracedBooleanValue newParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParent, StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT, msgs);
+	public NotificationChain basicSetParent(TracedInputValue newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newParent, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT, msgs);
 		return msgs;
 	}
 
@@ -126,20 +117,20 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParent(TracedBooleanValue newParent) {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT && newParent != null)) {
+	public void setParent(TracedInputValue newParent) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, ActivitydiagramPackage.TRACED_BOOLEAN_VALUE__VALUE_SEQUENCE, TracedBooleanValue.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_SEQUENCE, TracedInputValue.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT, newParent, newParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT, newParent, newParent));
 	}
 
 	/**
@@ -149,7 +140,7 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<State> getStates() {
 		if (states == null) {
-			states = new EObjectWithInverseResolvingEList.ManyInverse<State>(State.class, this, StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES, StatesPackage.STATE__BOOLEAN_VALUE_VALUE_VALUES);
+			states = new EObjectWithInverseResolvingEList.ManyInverse<State>(State.class, this, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES, StatesPackage.STATE__INPUT_VALUE_VARIABLE_VALUES);
 		}
 		return states;
 	}
@@ -159,8 +150,16 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
-		return value;
+	public TracedVariable getVariable() {
+		if (variable != null && variable.eIsProxy()) {
+			InternalEObject oldVariable = (InternalEObject)variable;
+			variable = (TracedVariable)eResolveProxy(oldVariable);
+			if (variable != oldVariable) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE, oldVariable, variable));
+			}
+		}
+		return variable;
 	}
 
 	/**
@@ -168,11 +167,20 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
-		value = newValue;
+	public TracedVariable basicGetVariable() {
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVariable(TracedVariable newVariable) {
+		TracedVariable oldVariable = variable;
+		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE, oldVariable, variable));
 	}
 
 	/**
@@ -184,11 +192,11 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((TracedBooleanValue)otherEnd, msgs);
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
+				return basicSetParent((TracedInputValue)otherEnd, msgs);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -202,9 +210,9 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				return basicSetParent(null, msgs);
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -218,8 +226,8 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
-				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.TRACED_BOOLEAN_VALUE__VALUE_SEQUENCE, TracedBooleanValue.class, msgs);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
+				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VARIABLE_SEQUENCE, TracedInputValue.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -232,14 +240,15 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES_NO_OPPOSITE:
 				return getStatesNoOpposite();
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				return getParent();
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				return getStates();
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				return isValue();
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				if (resolve) return getVariable();
+				return basicGetVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,15 +262,15 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
-				setParent((TracedBooleanValue)newValue);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
+				setParent((TracedInputValue)newValue);
 				return;
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
 				return;
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				setValue((Boolean)newValue);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				setVariable((TracedVariable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,14 +284,14 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
-				setParent((TracedBooleanValue)null);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
+				setParent((TracedInputValue)null);
 				return;
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				getStates().clear();
 				return;
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				setVariable((TracedVariable)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -296,32 +305,16 @@ public class BooleanValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES_NO_OPPOSITE:
 				return !getStatesNoOpposite().isEmpty();
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__PARENT:
 				return getParent() != null;
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__STATES:
 				return states != null && !states.isEmpty();
-			case StatesPackage.BOOLEAN_VALUE_VALUE_VALUE__VALUE:
-				return value != VALUE_EDEFAULT;
+			case StatesPackage.INPUT_VALUE_VARIABLE_VALUE__VARIABLE:
+				return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(')');
-		return result.toString();
-	}
-
-} //BooleanValue_value_ValueImpl
+} //InputValue_variable_ValueImpl

@@ -32,7 +32,7 @@ public class ActivityDiagramStandaloneSetupGenerated implements ISetup {
 		IResourceFactory resourceFactory = injector.getInstance(IResourceFactory.class);
 		IResourceServiceProvider serviceProvider = injector.getInstance(IResourceServiceProvider.class);
 		
-		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ad", resourceFactory);
-		IResourceServiceProvider.Registry.INSTANCE.getExtensionToFactoryMap().put("ad", serviceProvider);
+		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("xsad", resourceFactory);
+		IResourceServiceProvider.Registry.INSTANCE.getExtensionToFactoryMap().put("xsad", serviceProvider);
 	}
 }

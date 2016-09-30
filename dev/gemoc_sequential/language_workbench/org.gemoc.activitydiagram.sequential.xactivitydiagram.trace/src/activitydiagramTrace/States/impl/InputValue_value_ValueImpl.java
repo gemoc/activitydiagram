@@ -2,12 +2,12 @@
  */
 package activitydiagramTrace.States.impl;
 
-import activitydiagramTrace.States.IntegerValue_value_Value;
+import activitydiagramTrace.States.InputValue_value_Value;
 import activitydiagramTrace.States.State;
 import activitydiagramTrace.States.StatesPackage;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
-import activitydiagramTrace.States.activitydiagram.TracedIntegerValue;
+import activitydiagramTrace.States.activitydiagram.TracedInputValue;
 
 import java.util.Collection;
 
@@ -26,23 +26,25 @@ import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Integer Value value Value</b></em>'.
+ * An implementation of the model object '<em><b>Input Value value Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl#getStatesNoOpposite <em>States No Opposite</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl#getStates <em>States</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.IntegerValue_value_ValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getStatesNoOpposite <em>States No Opposite</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.InputValue_value_ValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container implements IntegerValue_value_Value {
+public class InputValue_value_ValueImpl extends MinimalEObjectImpl.Container implements InputValue_value_Value {
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -54,31 +56,21 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	protected EList<State> states;
 
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int VALUE_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected int value = VALUE_EDEFAULT;
+	protected Value value;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntegerValue_value_ValueImpl() {
+	protected InputValue_value_ValueImpl() {
 		super();
 	}
 
@@ -89,7 +81,7 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StatesPackage.Literals.INTEGER_VALUE_VALUE_VALUE;
+		return StatesPackage.Literals.INPUT_VALUE_VALUE_VALUE;
 	}
 
 	/**
@@ -106,9 +98,9 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedIntegerValue getParent() {
-		if (eContainerFeatureID() != StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT) return null;
-		return (TracedIntegerValue)eInternalContainer();
+	public TracedInputValue getParent() {
+		if (eContainerFeatureID() != StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT) return null;
+		return (TracedInputValue)eInternalContainer();
 	}
 
 	/**
@@ -116,8 +108,8 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParent(TracedIntegerValue newParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParent, StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT, msgs);
+	public NotificationChain basicSetParent(TracedInputValue newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newParent, StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT, msgs);
 		return msgs;
 	}
 
@@ -126,20 +118,20 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParent(TracedIntegerValue newParent) {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT && newParent != null)) {
+	public void setParent(TracedInputValue newParent) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, ActivitydiagramPackage.TRACED_INTEGER_VALUE__VALUE_SEQUENCE, TracedIntegerValue.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_SEQUENCE, TracedInputValue.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT, newParent, newParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT, newParent, newParent));
 	}
 
 	/**
@@ -149,7 +141,7 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<State> getStates() {
 		if (states == null) {
-			states = new EObjectWithInverseResolvingEList.ManyInverse<State>(State.class, this, StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES, StatesPackage.STATE__INTEGER_VALUE_VALUE_VALUES);
+			states = new EObjectWithInverseResolvingEList.ManyInverse<State>(State.class, this, StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES, StatesPackage.STATE__INPUT_VALUE_VALUE_VALUES);
 		}
 		return states;
 	}
@@ -159,7 +151,15 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getValue() {
+	public Value getValue() {
+		if (value != null && value.eIsProxy()) {
+			InternalEObject oldValue = (InternalEObject)value;
+			value = (Value)eResolveProxy(oldValue);
+			if (value != oldValue) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE, oldValue, value));
+			}
+		}
 		return value;
 	}
 
@@ -168,11 +168,20 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(int newValue) {
-		int oldValue = value;
+	public Value basicGetValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(Value newValue) {
+		Value oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INTEGER_VALUE_VALUE_VALUE__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -184,11 +193,11 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((TracedIntegerValue)otherEnd, msgs);
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES:
+				return basicSetParent((TracedInputValue)otherEnd, msgs);
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -202,9 +211,9 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				return basicSetParent(null, msgs);
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -218,8 +227,8 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
-				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.TRACED_INTEGER_VALUE__VALUE_SEQUENCE, TracedIntegerValue.class, msgs);
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
+				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.TRACED_INPUT_VALUE__VALUE_SEQUENCE, TracedInputValue.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -232,14 +241,15 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE:
 				return getStatesNoOpposite();
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				return getParent();
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				return getStates();
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__VALUE:
-				return getValue();
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				if (resolve) return getValue();
+				return basicGetValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,15 +263,15 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
-				setParent((TracedIntegerValue)newValue);
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
+				setParent((TracedInputValue)newValue);
 				return;
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
 				return;
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__VALUE:
-				setValue((Integer)newValue);
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				setValue((Value)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -275,14 +285,14 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
-				setParent((TracedIntegerValue)null);
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
+				setParent((TracedInputValue)null);
 				return;
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				getStates().clear();
 				return;
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				setValue((Value)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -296,32 +306,16 @@ public class IntegerValue_value_ValueImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES_NO_OPPOSITE:
 				return !getStatesNoOpposite().isEmpty();
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__PARENT:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__PARENT:
 				return getParent() != null;
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__STATES:
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__STATES:
 				return states != null && !states.isEmpty();
-			case StatesPackage.INTEGER_VALUE_VALUE_VALUE__VALUE:
-				return value != VALUE_EDEFAULT;
+			case StatesPackage.INPUT_VALUE_VALUE_VALUE__VALUE:
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(')');
-		return result.toString();
-	}
-
-} //IntegerValue_value_ValueImpl
+} //InputValue_value_ValueImpl

@@ -77,14 +77,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 				return createActivitydiagram_ActivityNode_AddTokens1Adapter();
 			}
 			@Override
-			public Adapter caseActivitydiagram_ActivityNode_AddTokens1_AbstractSubStep(Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep object) {
-				return createActivitydiagram_ActivityNode_AddTokens1_AbstractSubStepAdapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_AddTokens1_ImplicitStep(Activitydiagram_ActivityNode_AddTokens1_ImplicitStep object) {
-				return createActivitydiagram_ActivityNode_AddTokens1_ImplicitStepAdapter();
-			}
-			@Override
 			public Adapter caseActivitydiagram_ActivityNode_Execute(Activitydiagram_ActivityNode_Execute object) {
 				return createActivitydiagram_ActivityNode_ExecuteAdapter();
 			}
@@ -107,14 +99,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1(Activitydiagram_ActivityNode_TakeOfferdTokens1 object) {
 				return createActivitydiagram_ActivityNode_TakeOfferdTokens1Adapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep object) {
-				return createActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepAdapter();
-			}
-			@Override
-			public Adapter caseActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep(Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep object) {
-				return createActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepAdapter();
 			}
 			@Override
 			public Adapter caseActivitydiagram_ActivityNode_Terminate(Activitydiagram_ActivityNode_Terminate object) {
@@ -177,16 +161,16 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 				return createStepAdapter();
 			}
 			@Override
+			public Adapter caseSmallStep(SmallStep object) {
+				return createSmallStepAdapter();
+			}
+			@Override
 			public <StepSubtype extends Step> Adapter caseBigStep(BigStep<StepSubtype> object) {
 				return createBigStepAdapter();
 			}
 			@Override
 			public <StepSubtype extends Step> Adapter caseSequentialStep(SequentialStep<StepSubtype> object) {
 				return createSequentialStepAdapter();
-			}
-			@Override
-			public Adapter caseSmallStep(SmallStep object) {
-				return createSmallStepAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -219,34 +203,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActivitydiagram_ActivityNode_AddTokens1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep <em>Activitydiagram Activity Node Add Tokens1 Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_AddTokens1_AbstractSubStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep <em>Activitydiagram Activity Node Add Tokens1 Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_AddTokens1_ImplicitStepAdapter() {
 		return null;
 	}
 
@@ -331,34 +287,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep <em>Activitydiagram Activity Node Take Offerd Tokens1 Abstract Sub Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep <em>Activitydiagram Activity Node Take Offerd Tokens1 Implicit Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep
-	 * @generated
-	 */
-	public Adapter createActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepAdapter() {
 		return null;
 	}
 
@@ -573,6 +501,20 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.trace.commons.model.trace.SmallStep <em>Small Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.inria.diverse.trace.commons.model.trace.SmallStep
+	 * @generated
+	 */
+	public Adapter createSmallStepAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.trace.commons.model.trace.BigStep <em>Big Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -597,20 +539,6 @@ public class StepsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSequentialStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fr.inria.diverse.trace.commons.model.trace.SmallStep <em>Small Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fr.inria.diverse.trace.commons.model.trace.SmallStep
-	 * @generated
-	 */
-	public Adapter createSmallStepAdapter() {
 		return null;
 	}
 

@@ -3,6 +3,7 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -22,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Input extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Input Values</b></em>' containment reference list.
 	 * The list contents are of type {@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.InputValue}.
@@ -38,4 +38,5 @@ public interface Input extends EObject {
 	 * @generated
 	 */
 	EList<InputValue> getInputValues();
+
 } // Input

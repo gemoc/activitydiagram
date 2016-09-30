@@ -49,15 +49,6 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedActivityNode createTracedActivityNode();
 
 	/**
-	 * Returns a new object of class '<em>Traced Boolean Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Boolean Value</em>'.
-	 * @generated
-	 */
-	TracedBooleanValue createTracedBooleanValue();
-
-	/**
 	 * Returns a new object of class '<em>Traced Boolean Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,15 +130,6 @@ public interface ActivitydiagramFactory extends EFactory {
 	TracedInputValue createTracedInputValue();
 
 	/**
-	 * Returns a new object of class '<em>Traced Integer Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Integer Value</em>'.
-	 * @generated
-	 */
-	TracedIntegerValue createTracedIntegerValue();
-
-	/**
 	 * Returns a new object of class '<em>Traced Integer Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,15 +191,6 @@ public interface ActivitydiagramFactory extends EFactory {
 	 * @generated
 	 */
 	TracedTrace createTracedTrace();
-
-	/**
-	 * Returns a new object of class '<em>Traced Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Traced Value</em>'.
-	 * @generated
-	 */
-	TracedValue createTracedValue();
 
 	/**
 	 * Returns a new object of class '<em>Traced Variable</em>'.

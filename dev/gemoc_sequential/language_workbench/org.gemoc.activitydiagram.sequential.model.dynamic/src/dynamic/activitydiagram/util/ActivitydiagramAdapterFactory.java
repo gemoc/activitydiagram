@@ -76,10 +76,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createOfferAdapter();
 			}
 			@Override
-			public Adapter caseTrace(Trace object) {
-				return createTraceAdapter();
-			}
-			@Override
 			public Adapter caseInputValue(InputValue object) {
 				return createInputValueAdapter();
 			}
@@ -94,6 +90,10 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseForkedToken(ForkedToken object) {
 				return createForkedTokenAdapter();
+			}
+			@Override
+			public Adapter caseTrace(Trace object) {
+				return createTraceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -140,20 +140,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOfferAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link dynamic.activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see dynamic.activitydiagram.Trace
-	 * @generated
-	 */
-	public Adapter createTraceAdapter() {
 		return null;
 	}
 
@@ -210,6 +196,20 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createForkedTokenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link dynamic.activitydiagram.Trace <em>Trace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see dynamic.activitydiagram.Trace
+	 * @generated
+	 */
+	public Adapter createTraceAdapter() {
 		return null;
 	}
 

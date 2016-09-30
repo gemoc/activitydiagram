@@ -49,15 +49,6 @@ public interface StatesFactory extends EFactory {
 	Activity_trace_Value createActivity_trace_Value();
 
 	/**
-	 * Returns a new object of class '<em>Boolean Value value Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Value value Value</em>'.
-	 * @generated
-	 */
-	BooleanValue_value_Value createBooleanValue_value_Value();
-
-	/**
 	 * Returns a new object of class '<em>Forked Token base Token Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,13 +67,31 @@ public interface StatesFactory extends EFactory {
 	ForkedToken_remainingOffersCount_Value createForkedToken_remainingOffersCount_Value();
 
 	/**
-	 * Returns a new object of class '<em>Integer Value value Value</em>'.
+	 * Returns a new object of class '<em>Input Value value Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer Value value Value</em>'.
+	 * @return a new object of class '<em>Input Value value Value</em>'.
 	 * @generated
 	 */
-	IntegerValue_value_Value createIntegerValue_value_Value();
+	InputValue_value_Value createInputValue_value_Value();
+
+	/**
+	 * Returns a new object of class '<em>Input Value variable Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Input Value variable Value</em>'.
+	 * @generated
+	 */
+	InputValue_variable_Value createInputValue_variable_Value();
+
+	/**
+	 * Returns a new object of class '<em>Input input Values Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Input input Values Value</em>'.
+	 * @generated
+	 */
+	Input_inputValues_Value createInput_inputValues_Value();
 
 	/**
 	 * Returns a new object of class '<em>Offer offered Tokens Value</em>'.
@@ -101,15 +110,6 @@ public interface StatesFactory extends EFactory {
 	 * @generated
 	 */
 	State createState();
-
-	/**
-	 * Returns a new object of class '<em>Token holder Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Token holder Value</em>'.
-	 * @generated
-	 */
-	Token_holder_Value createToken_holder_Value();
 
 	/**
 	 * Returns a new object of class '<em>Trace executed Nodes Value</em>'.

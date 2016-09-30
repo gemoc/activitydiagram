@@ -1,9 +1,9 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects;
 
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
-import org.eclipse.emf.common.util.UniqueEList;
+import org.eclipse.emf.common.util.EList;
 
 @SuppressWarnings("all")
 public class ActivityNodeAspectActivityNodeAspectProperties {
-  public UniqueEList<Token> heldTokens = new UniqueEList<Token>();
+  public EList<Token> heldTokens;
 }

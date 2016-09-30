@@ -11,7 +11,6 @@ import dynamic.activitydiagram.InputValue;
 import dynamic.activitydiagram.Offer;
 import dynamic.activitydiagram.Token;
 import dynamic.activitydiagram.Trace;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -43,13 +42,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass traceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass inputValueEClass = null;
 
 	/**
@@ -72,6 +64,13 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	private EClass forkedTokenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass traceEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -157,15 +156,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTrace() {
-		return traceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getInputValue() {
 		return inputValueEClass;
 	}
@@ -202,6 +192,15 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTrace() {
+		return traceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ActivitydiagramFactory getActivitydiagramFactory() {
 		return (ActivitydiagramFactory)getEFactoryInstance();
 	}
@@ -229,8 +228,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		offerEClass = createEClass(OFFER);
 
-		traceEClass = createEClass(TRACE);
-
 		inputValueEClass = createEClass(INPUT_VALUE);
 
 		inputEClass = createEClass(INPUT);
@@ -238,6 +235,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		controlTokenEClass = createEClass(CONTROL_TOKEN);
 
 		forkedTokenEClass = createEClass(FORKED_TOKEN);
+
+		traceEClass = createEClass(TRACE);
 	}
 
 	/**
@@ -276,8 +275,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		initEClass(offerEClass, Offer.class, "Offer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(traceEClass, Trace.class, "Trace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -286,8 +283,59 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		initEClass(forkedTokenEClass, ForkedToken.class, "ForkedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(traceEClass, Trace.class, "Trace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// aspect
+		createAspectAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>aspect</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createAspectAnnotations() {
+		String source = "aspect";	
+		addAnnotation
+		  (tokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (offerEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (inputValueEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (inputEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (controlTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (forkedTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (traceEClass, 
+		   source, 
+		   new String[] {
+		   });
 	}
 
 } //ActivitydiagramPackageImpl

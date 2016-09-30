@@ -59,7 +59,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.TRACED_ACTIVITY: return createTracedActivity();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_FINAL_NODE: return createTracedActivityFinalNode();
 			case ActivitydiagramPackage.TRACED_ACTIVITY_NODE: return createTracedActivityNode();
-			case ActivitydiagramPackage.TRACED_BOOLEAN_VALUE: return createTracedBooleanValue();
 			case ActivitydiagramPackage.TRACED_BOOLEAN_VARIABLE: return createTracedBooleanVariable();
 			case ActivitydiagramPackage.TRACED_CONTROL_FLOW: return createTracedControlFlow();
 			case ActivitydiagramPackage.TRACED_CONTROL_TOKEN: return createTracedControlToken();
@@ -69,7 +68,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.TRACED_INITIAL_NODE: return createTracedInitialNode();
 			case ActivitydiagramPackage.TRACED_INPUT: return createTracedInput();
 			case ActivitydiagramPackage.TRACED_INPUT_VALUE: return createTracedInputValue();
-			case ActivitydiagramPackage.TRACED_INTEGER_VALUE: return createTracedIntegerValue();
 			case ActivitydiagramPackage.TRACED_INTEGER_VARIABLE: return createTracedIntegerVariable();
 			case ActivitydiagramPackage.TRACED_JOIN_NODE: return createTracedJoinNode();
 			case ActivitydiagramPackage.TRACED_MERGE_NODE: return createTracedMergeNode();
@@ -77,7 +75,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.TRACED_OPAQUE_ACTION: return createTracedOpaqueAction();
 			case ActivitydiagramPackage.TRACED_TOKEN: return createTracedToken();
 			case ActivitydiagramPackage.TRACED_TRACE: return createTracedTrace();
-			case ActivitydiagramPackage.TRACED_VALUE: return createTracedValue();
 			case ActivitydiagramPackage.TRACED_VARIABLE: return createTracedVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -112,16 +109,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	public TracedActivityNode createTracedActivityNode() {
 		TracedActivityNodeImpl tracedActivityNode = new TracedActivityNodeImpl();
 		return tracedActivityNode;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedBooleanValue createTracedBooleanValue() {
-		TracedBooleanValueImpl tracedBooleanValue = new TracedBooleanValueImpl();
-		return tracedBooleanValue;
 	}
 
 	/**
@@ -219,16 +206,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedIntegerValue createTracedIntegerValue() {
-		TracedIntegerValueImpl tracedIntegerValue = new TracedIntegerValueImpl();
-		return tracedIntegerValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TracedIntegerVariable createTracedIntegerVariable() {
 		TracedIntegerVariableImpl tracedIntegerVariable = new TracedIntegerVariableImpl();
 		return tracedIntegerVariable;
@@ -292,16 +269,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	public TracedTrace createTracedTrace() {
 		TracedTraceImpl tracedTrace = new TracedTraceImpl();
 		return tracedTrace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedValue createTracedValue() {
-		TracedValueImpl tracedValue = new TracedValueImpl();
-		return tracedValue;
 	}
 
 	/**

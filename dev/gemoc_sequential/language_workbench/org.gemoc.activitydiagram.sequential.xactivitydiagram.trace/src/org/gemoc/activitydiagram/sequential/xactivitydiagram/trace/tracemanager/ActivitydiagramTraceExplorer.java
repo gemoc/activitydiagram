@@ -71,10 +71,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				.getActivitydiagram_tracedActivityNodes()) {
 			result.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedBooleanValue tracedObject : traceRoot
-				.getActivitydiagram_tracedBooleanValues()) {
-			result.add(tracedObject.getValueSequence());
-		}
 		for (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable tracedObject : traceRoot
 				.getActivitydiagram_tracedBooleanVariables()) {
 			result.add(tracedObject.getCurrentValueSequence());
@@ -82,10 +78,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 		for (activitydiagramTrace.States.activitydiagram.TracedControlFlow tracedObject : traceRoot
 				.getActivitydiagram_tracedControlFlows()) {
 			result.add(tracedObject.getOffersSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedControlToken tracedObject : traceRoot
-				.getActivitydiagram_tracedControlTokens()) {
-			result.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedDecisionNode tracedObject : traceRoot
 				.getActivitydiagram_tracedDecisionNodes()) {
@@ -99,15 +91,19 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				.getActivitydiagram_tracedForkedTokens()) {
 			result.add(tracedObject.getBaseTokenSequence());
 			result.add(tracedObject.getRemainingOffersCountSequence());
-			result.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedInitialNode tracedObject : traceRoot
 				.getActivitydiagram_tracedInitialNodes()) {
 			result.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedIntegerValue tracedObject : traceRoot
-				.getActivitydiagram_tracedIntegerValues()) {
+		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : traceRoot
+				.getActivitydiagram_tracedInputs()) {
+			result.add(tracedObject.getInputValuesSequence());
+		}
+		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : traceRoot
+				.getActivitydiagram_tracedInputValues()) {
 			result.add(tracedObject.getValueSequence());
+			result.add(tracedObject.getVariableSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable tracedObject : traceRoot
 				.getActivitydiagram_tracedIntegerVariables()) {
@@ -128,10 +124,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 		for (activitydiagramTrace.States.activitydiagram.TracedOpaqueAction tracedObject : traceRoot
 				.getActivitydiagram_tracedOpaqueActions()) {
 			result.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedToken tracedObject : traceRoot
-				.getActivitydiagram_tracedTokens()) {
-			result.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedTrace tracedObject : traceRoot
 				.getActivitydiagram_tracedTraces()) {
@@ -412,8 +404,8 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedBooleanVariable) {
 					activitydiagramTrace.States.activitydiagram.TracedBooleanVariable parent_cast = (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable) value
 							.getParent();
-					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value toset = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) getTracedToExe(
-							value.getCurrentValue());
+					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value toset = value
+							.getCurrentValue();
 					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value current = ((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) parent_cast
 							.getOriginalObject_Variable()).getCurrentValue();
 					if (current != toset) {
@@ -425,8 +417,8 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedIntegerVariable) {
 					activitydiagramTrace.States.activitydiagram.TracedIntegerVariable parent_cast = (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable) value
 							.getParent();
-					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value toset = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) getTracedToExe(
-							value.getCurrentValue());
+					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value toset = value
+							.getCurrentValue();
 					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value current = ((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) parent_cast
 							.getOriginalObject_Variable()).getCurrentValue();
 					if (current != toset) {
@@ -438,8 +430,8 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				if (value.getParent() instanceof activitydiagramTrace.States.activitydiagram.TracedVariable) {
 					activitydiagramTrace.States.activitydiagram.TracedVariable parent_cast = (activitydiagramTrace.States.activitydiagram.TracedVariable) value
 							.getParent();
-					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value toset = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) getTracedToExe(
-							value.getCurrentValue());
+					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value toset = value
+							.getCurrentValue();
 					org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value current = ((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) parent_cast
 							.getOriginalObject_Variable()).getCurrentValue();
 					if (current != toset) {
@@ -560,12 +552,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 					}
 				}
 			}
-			for (activitydiagramTrace.States.BooleanValue_value_Value value : stateToGo
-					.getBooleanValue_value_Values()) {
-				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue) getTracedToExe(
-						value.getParent());
-				exeObject.setValue((boolean) value.isValue());
-			}
 			for (activitydiagramTrace.States.ForkedToken_baseToken_Value value : stateToGo
 					.getForkedToken_baseToken_Values()) {
 				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) getTracedToExe(
@@ -580,11 +566,27 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 						value.getParent());
 				exeObject.setRemainingOffersCount((int) value.getRemainingOffersCount());
 			}
-			for (activitydiagramTrace.States.IntegerValue_value_Value value : stateToGo
-					.getIntegerValue_value_Values()) {
-				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue) getTracedToExe(
+			for (activitydiagramTrace.States.Input_inputValues_Value value : stateToGo.getInput_inputValues_Values()) {
+				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input) getTracedToExe(
 						value.getParent());
-				exeObject.setValue((int) value.getValue());
+				exeObject.getInputValues().clear();
+				exeObject.getInputValues()
+						.addAll((Collection<? extends org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue>) getTracedToExe(
+								value.getInputValues()));
+			}
+			for (activitydiagramTrace.States.InputValue_value_Value value : stateToGo.getInputValue_value_Values()) {
+				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) getTracedToExe(
+						value.getParent());
+				exeObject.setValue(
+						(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) value.getValue());
+			}
+			for (activitydiagramTrace.States.InputValue_variable_Value value : stateToGo
+					.getInputValue_variable_Values()) {
+				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) getTracedToExe(
+						value.getParent());
+				exeObject.setVariable(
+						(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) getTracedToExe(
+								value.getVariable()));
 			}
 			for (activitydiagramTrace.States.Offer_offeredTokens_Value value : stateToGo
 					.getOffer_offeredTokens_Values()) {
@@ -594,13 +596,6 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				exeObject.getOfferedTokens()
 						.addAll((Collection<? extends org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token>) getTracedToExe(
 								value.getOfferedTokens()));
-			}
-			for (activitydiagramTrace.States.Token_holder_Value value : stateToGo.getToken_holder_Values()) {
-				org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token exeObject = (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) getTracedToExe(
-						value.getParent());
-				exeObject.setHolder(
-						(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode) (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode) getTracedToExe(
-								value.getHolder()));
 			}
 			for (activitydiagramTrace.States.Trace_executedNodes_Value value : stateToGo
 					.getTrace_executedNodes_Values()) {

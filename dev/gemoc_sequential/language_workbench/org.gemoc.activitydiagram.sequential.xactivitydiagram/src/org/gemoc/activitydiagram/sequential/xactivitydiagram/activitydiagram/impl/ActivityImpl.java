@@ -85,7 +85,7 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	protected EList<Variable> inputs;
 
 	/**
-	 * The cached value of the '{@link #getTrace() <em>Trace</em>}' reference.
+	 * The cached value of the '{@link #getTrace() <em>Trace</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTrace()
@@ -167,14 +167,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * @generated
 	 */
 	public Trace getTrace() {
-		if (trace != null && trace.eIsProxy()) {
-			InternalEObject oldTrace = (InternalEObject)trace;
-			trace = (Trace)eResolveProxy(oldTrace);
-			if (trace != oldTrace) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ActivitydiagramPackage.ACTIVITY__TRACE, oldTrace, trace));
-			}
-		}
 		return trace;
 	}
 
@@ -183,8 +175,14 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trace basicGetTrace() {
-		return trace;
+	public NotificationChain basicSetTrace(Trace newTrace, NotificationChain msgs) {
+		Trace oldTrace = trace;
+		trace = newTrace;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__TRACE, oldTrace, newTrace);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -193,10 +191,17 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * @generated
 	 */
 	public void setTrace(Trace newTrace) {
-		Trace oldTrace = trace;
-		trace = newTrace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__TRACE, oldTrace, trace));
+		if (newTrace != trace) {
+			NotificationChain msgs = null;
+			if (trace != null)
+				msgs = ((InternalEObject)trace).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.ACTIVITY__TRACE, null, msgs);
+			if (newTrace != null)
+				msgs = ((InternalEObject)newTrace).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ActivitydiagramPackage.ACTIVITY__TRACE, null, msgs);
+			msgs = basicSetTrace(newTrace, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__TRACE, newTrace, newTrace));
 	}
 
 	/**
@@ -307,6 +312,8 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return ((InternalEList<?>)getLocals()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+			case ActivitydiagramPackage.ACTIVITY__TRACE:
+				return basicSetTrace(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -328,8 +335,7 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return getInputs();
 			case ActivitydiagramPackage.ACTIVITY__TRACE:
-				if (resolve) return getTrace();
-				return basicGetTrace();
+				return getTrace();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

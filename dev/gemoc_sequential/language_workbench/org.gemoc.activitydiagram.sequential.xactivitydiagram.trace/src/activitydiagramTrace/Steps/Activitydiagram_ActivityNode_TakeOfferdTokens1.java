@@ -4,7 +4,7 @@ package activitydiagramTrace.Steps;
 
 import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
 
-import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
+import fr.inria.diverse.trace.commons.model.trace.SmallStep;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_TakeOfferdTokens1 extends SpecificStep, SequentialStep<Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep>, Activitydiagram_Activity_Execute_AbstractSubStep, Activitydiagram_ActivityNode_Execute_AbstractSubStep {
+public interface Activitydiagram_ActivityNode_TakeOfferdTokens1 extends SpecificStep, SmallStep, Activitydiagram_Activity_Execute_AbstractSubStep, Activitydiagram_ActivityNode_Execute_AbstractSubStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

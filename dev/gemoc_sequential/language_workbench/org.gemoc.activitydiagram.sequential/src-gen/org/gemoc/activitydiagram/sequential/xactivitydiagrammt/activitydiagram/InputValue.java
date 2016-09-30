@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface InputValue extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -53,7 +52,7 @@ public interface InputValue extends EObject {
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' reference isn't clear,
+	 * If the meaning of the '<em>Value</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -74,4 +73,5 @@ public interface InputValue extends EObject {
 	 * @generated
 	 */
 	void setValue(Value value);
+
 } // InputValue

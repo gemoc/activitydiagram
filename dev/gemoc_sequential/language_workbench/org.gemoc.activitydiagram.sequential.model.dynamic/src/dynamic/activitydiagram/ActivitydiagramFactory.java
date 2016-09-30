@@ -31,15 +31,6 @@ public interface ActivitydiagramFactory extends EFactory {
 	Offer createOffer();
 
 	/**
-	 * Returns a new object of class '<em>Trace</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Trace</em>'.
-	 * @generated
-	 */
-	Trace createTrace();
-
-	/**
 	 * Returns a new object of class '<em>Input Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +65,15 @@ public interface ActivitydiagramFactory extends EFactory {
 	 * @generated
 	 */
 	ForkedToken createForkedToken();
+
+	/**
+	 * Returns a new object of class '<em>Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trace</em>'.
+	 * @generated
+	 */
+	Trace createTrace();
 
 	/**
 	 * Returns the package supported by this factory.

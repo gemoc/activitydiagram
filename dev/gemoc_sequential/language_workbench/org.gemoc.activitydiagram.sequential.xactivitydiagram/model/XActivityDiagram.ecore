@@ -46,7 +46,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1" eType="//ActivityEdge" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locals" upperBound="-1" eType="//Variable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1" eType="//Variable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trace" unique="false" eType="//Trace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="//Trace" containment="true">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -214,17 +214,13 @@
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Value">
-    <eAnnotations source="aspect"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Value"/>
   <eClassifiers xsi:type="ecore:EClass" name="BooleanValue" eSuperTypes="//Value">
-    <eAnnotations source="aspect"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntegerValue" eSuperTypes="//Value">
-    <eAnnotations source="aspect"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eStructuralFeatures>
@@ -290,20 +286,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Token">
     <eAnnotations source="aspect"/>
-    <eOperations name="transfer1" eType="//Token">
-      <eAnnotations source="aspect"/>
-      <eParameters name="holder" eType="//ActivityNode"/>
-    </eOperations>
-    <eOperations name="withdraw1">
-      <eAnnotations source="aspect"/>
-    </eOperations>
     <eOperations name="isWithdrawn">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="holder" unique="false" eType="//ActivityNode">
-      <eAnnotations source="aspect"/>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Offer">
     <eAnnotations source="aspect"/>
@@ -318,18 +304,12 @@
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Trace">
-    <eAnnotations source="aspect"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false" upperBound="-1" eType="//ActivityNode">
-      <eAnnotations source="aspect"/>
-    </eStructuralFeatures>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputValue">
     <eAnnotations source="aspect"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" unique="false" eType="//Variable">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" unique="false" eType="//Value" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="//Value" containment="true">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -350,6 +330,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="remainingOffersCount" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trace">
+    <eAnnotations source="aspect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executedNodes" unique="false" upperBound="-1" eType="//ActivityNode">
+      <eAnnotations source="aspect"/>
     </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

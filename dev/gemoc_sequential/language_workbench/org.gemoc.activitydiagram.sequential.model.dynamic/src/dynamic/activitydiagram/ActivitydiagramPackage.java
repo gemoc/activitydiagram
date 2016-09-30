@@ -111,34 +111,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int OFFER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link dynamic.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see dynamic.activitydiagram.impl.TraceImpl
-	 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-	 * @generated
-	 */
-	int TRACE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Trace</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Trace</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link dynamic.activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,7 +118,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getInputValue()
 	 * @generated
 	 */
-	int INPUT_VALUE = 3;
+	int INPUT_VALUE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Input Value</em>' class.
@@ -174,7 +146,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 4;
+	int INPUT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -202,7 +174,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getControlToken()
 	 * @generated
 	 */
-	int CONTROL_TOKEN = 5;
+	int CONTROL_TOKEN = 4;
 
 	/**
 	 * The number of structural features of the '<em>Control Token</em>' class.
@@ -230,7 +202,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getForkedToken()
 	 * @generated
 	 */
-	int FORKED_TOKEN = 6;
+	int FORKED_TOKEN = 5;
 
 	/**
 	 * The number of structural features of the '<em>Forked Token</em>' class.
@@ -252,6 +224,35 @@ public interface ActivitydiagramPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link dynamic.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see dynamic.activitydiagram.impl.TraceImpl
+	 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
+	 * @generated
+	 */
+	int TRACE = 6;
+
+	/**
+	 * The number of structural features of the '<em>Trace</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Trace</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link dynamic.activitydiagram.Token <em>Token</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -270,16 +271,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOffer();
-
-	/**
-	 * Returns the meta object for class '{@link dynamic.activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Trace</em>'.
-	 * @see dynamic.activitydiagram.Trace
-	 * @generated
-	 */
-	EClass getTrace();
 
 	/**
 	 * Returns the meta object for class '{@link dynamic.activitydiagram.InputValue <em>Input Value</em>}'.
@@ -320,6 +311,16 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getForkedToken();
+
+	/**
+	 * Returns the meta object for class '{@link dynamic.activitydiagram.Trace <em>Trace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trace</em>'.
+	 * @see dynamic.activitydiagram.Trace
+	 * @generated
+	 */
+	EClass getTrace();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -365,16 +366,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass OFFER = eINSTANCE.getOffer();
 
 		/**
-		 * The meta object literal for the '{@link dynamic.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see dynamic.activitydiagram.impl.TraceImpl
-		 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-		 * @generated
-		 */
-		EClass TRACE = eINSTANCE.getTrace();
-
-		/**
 		 * The meta object literal for the '{@link dynamic.activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -413,6 +404,16 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FORKED_TOKEN = eINSTANCE.getForkedToken();
+
+		/**
+		 * The meta object literal for the '{@link dynamic.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see dynamic.activitydiagram.impl.TraceImpl
+		 * @see dynamic.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
+		 * @generated
+		 */
+		EClass TRACE = eINSTANCE.getTrace();
 
 	}
 

@@ -140,7 +140,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY__INPUTS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Trace</b></em>' reference.
+	 * The feature id for the '<em><b>Trace</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1680,24 +1680,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TOKEN = 29;
 
 	/**
-	 * The feature id for the '<em><b>Holder</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN__HOLDER = 0;
-
-	/**
-	 * The number of structural features of the '<em>Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN_FEATURE_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.OfferImpl <em>Offer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1706,6 +1688,25 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	int OFFER = 30;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
+	 * @generated
+	 */
+	int TRACE = 35;
+
+	/**
+	 * The number of structural features of the '<em>Token</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN_FEATURE_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
@@ -1726,34 +1727,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int OFFER_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-	 * @generated
-	 */
-	int TRACE = 31;
-
-	/**
-	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE__EXECUTED_NODES = 0;
-
-	/**
-	 * The number of structural features of the '<em>Trace</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRACE_FEATURE_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1761,7 +1734,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getInputValue()
 	 * @generated
 	 */
-	int INPUT_VALUE = 32;
+	int INPUT_VALUE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -1798,7 +1771,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 33;
+	int INPUT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Input Values</b></em>' containment reference list.
@@ -1826,16 +1799,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getControlToken()
 	 * @generated
 	 */
-	int CONTROL_TOKEN = 34;
-
-	/**
-	 * The feature id for the '<em><b>Holder</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_TOKEN__HOLDER = TOKEN__HOLDER;
+	int CONTROL_TOKEN = 33;
 
 	/**
 	 * The number of structural features of the '<em>Control Token</em>' class.
@@ -1854,16 +1818,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getForkedToken()
 	 * @generated
 	 */
-	int FORKED_TOKEN = 35;
-
-	/**
-	 * The feature id for the '<em><b>Holder</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORKED_TOKEN__HOLDER = TOKEN__HOLDER;
+	int FORKED_TOKEN = 34;
 
 	/**
 	 * The feature id for the '<em><b>Base Token</b></em>' reference.
@@ -1891,6 +1846,24 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORKED_TOKEN_FEATURE_COUNT = TOKEN_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE__EXECUTED_NODES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Trace</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACE_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.
@@ -1988,10 +1961,10 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getActivity_Inputs();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Activity#getTrace <em>Trace</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Activity#getTrace <em>Trace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Trace</em>'.
+	 * @return the meta object for the containment reference '<em>Trace</em>'.
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Activity#getTrace()
 	 * @see #getActivity()
 	 * @generated
@@ -2597,17 +2570,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getToken();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Token#getHolder <em>Holder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Holder</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Token#getHolder()
-	 * @see #getToken()
-	 * @generated
-	 */
-	EReference getToken_Holder();
-
-	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Offer <em>Offer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2849,7 +2811,7 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference ACTIVITY__INPUTS = eINSTANCE.getActivity_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Trace</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Trace</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3369,14 +3331,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TOKEN = eINSTANCE.getToken();
-
-		/**
-		 * The meta object literal for the '<em><b>Holder</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TOKEN__HOLDER = eINSTANCE.getToken_Holder();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.OfferImpl <em>Offer</em>}' class.

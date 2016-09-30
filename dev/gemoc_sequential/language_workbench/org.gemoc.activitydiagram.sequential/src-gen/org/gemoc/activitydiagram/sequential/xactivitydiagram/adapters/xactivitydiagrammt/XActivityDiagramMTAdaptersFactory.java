@@ -156,17 +156,11 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanBinaryExpression){
     	return createBooleanBinaryExpressionAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanBinaryExpression) o, res);
     }
-    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken){
-    	return createForkedTokenAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) o, res);
-    }
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token){
     	return createTokenAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) o, res);
     }
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer){
     	return createOfferAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer) o, res);
-    }
-    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace){
-    	return createTraceAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o, res);
     }
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue){
     	return createInputValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue) o, res);
@@ -176,6 +170,12 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     }
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken){
     	return createControlTokenAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken) o, res);
+    }
+    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken){
+    	return createForkedTokenAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkedToken) o, res);
+    }
+    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace){
+    	return createTraceAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace) o, res);
     }
     
     return null;
@@ -646,21 +646,6 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     }
   }
   
-  public TraceAdapter createTraceAdapter(final Trace adaptee, final Resource res) {
-    if (adaptee == null)
-    	return null;
-    EObjectAdapter adapter = register.get(adaptee);
-    if(adapter != null)
-    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter) adapter;
-    else {
-    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter();
-    	adapter.setAdaptee(adaptee);
-    	adapter.setResource(res);
-    	register.put(adaptee, adapter);
-    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter) adapter;
-    }
-  }
-  
   public InputValueAdapter createInputValueAdapter(final InputValue adaptee, final Resource res) {
     if (adaptee == null)
     	return null;
@@ -718,6 +703,21 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
     	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ForkedTokenAdapter) adapter;
+    }
+  }
+  
+  public TraceAdapter createTraceAdapter(final Trace adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter) adapter;
+    else {
+    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter) adapter;
     }
   }
 }

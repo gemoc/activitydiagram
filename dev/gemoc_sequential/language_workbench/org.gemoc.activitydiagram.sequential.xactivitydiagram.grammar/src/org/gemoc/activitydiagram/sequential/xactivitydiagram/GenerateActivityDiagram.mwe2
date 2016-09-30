@@ -30,7 +30,7 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram"
-			fileExtensions = "ad"
+			fileExtensions = "xsad"
 			referencedResource = "platform:/resource/org.gemoc.activitydiagram.sequential.xactivitydiagram/model/XActivityDiagram.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}

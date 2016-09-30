@@ -304,12 +304,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.TRACE: {
-				Trace trace = (Trace)theEObject;
-				T result = caseTrace(trace);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.INPUT_VALUE: {
 				InputValue inputValue = (InputValue)theEObject;
 				T result = caseInputValue(inputValue);
@@ -333,6 +327,12 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				ForkedToken forkedToken = (ForkedToken)theEObject;
 				T result = caseForkedToken(forkedToken);
 				if (result == null) result = caseToken(forkedToken);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.TRACE: {
+				Trace trace = (Trace)theEObject;
+				T result = caseTrace(trace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -7,7 +7,6 @@ import activitydiagramTrace.States.StatesPackage;
 import activitydiagramTrace.States.Variable_currentValue_Value;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
-import activitydiagramTrace.States.activitydiagram.TracedValue;
 import activitydiagramTrace.States.activitydiagram.TracedVariable;
 
 import java.util.Collection;
@@ -26,6 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +53,7 @@ public class Variable_currentValue_ValueImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedValue currentValue;
+	protected Value currentValue;
 
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
@@ -97,10 +98,10 @@ public class Variable_currentValue_ValueImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedValue getCurrentValue() {
+	public Value getCurrentValue() {
 		if (currentValue != null && currentValue.eIsProxy()) {
 			InternalEObject oldCurrentValue = (InternalEObject)currentValue;
-			currentValue = (TracedValue)eResolveProxy(oldCurrentValue);
+			currentValue = (Value)eResolveProxy(oldCurrentValue);
 			if (currentValue != oldCurrentValue) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE, oldCurrentValue, currentValue));
@@ -114,7 +115,7 @@ public class Variable_currentValue_ValueImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedValue basicGetCurrentValue() {
+	public Value basicGetCurrentValue() {
 		return currentValue;
 	}
 
@@ -123,8 +124,8 @@ public class Variable_currentValue_ValueImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCurrentValue(TracedValue newCurrentValue) {
-		TracedValue oldCurrentValue = currentValue;
+	public void setCurrentValue(Value newCurrentValue) {
+		Value oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE, oldCurrentValue, currentValue));
@@ -263,7 +264,7 @@ public class Variable_currentValue_ValueImpl extends MinimalEObjectImpl.Containe
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE:
-				setCurrentValue((TracedValue)newValue);
+				setCurrentValue((Value)newValue);
 				return;
 			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE__PARENT:
 				setParent((TracedVariable)newValue);
@@ -285,7 +286,7 @@ public class Variable_currentValue_ValueImpl extends MinimalEObjectImpl.Containe
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE__CURRENT_VALUE:
-				setCurrentValue((TracedValue)null);
+				setCurrentValue((Value)null);
 				return;
 			case StatesPackage.VARIABLE_CURRENT_VALUE_VALUE__PARENT:
 				setParent((TracedVariable)null);

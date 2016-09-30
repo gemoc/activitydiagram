@@ -1188,35 +1188,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// aspect
-		createAspectAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>aspect</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createAspectAnnotations() {
-		String source = "aspect";	
-		addAnnotation
-		  (valueEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (booleanValueEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (integerValueEClass, 
-		   source, 
-		   new String[] {
-		   });
 	}
 
 } //ActivitydiagramPackageImpl

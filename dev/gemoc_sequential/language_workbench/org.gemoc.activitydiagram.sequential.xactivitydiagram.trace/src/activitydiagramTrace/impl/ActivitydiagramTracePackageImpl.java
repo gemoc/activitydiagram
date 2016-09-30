@@ -293,7 +293,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedBooleanValues() {
+	public EReference getSpecificTrace_Activitydiagram_tracedBooleanVariables() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -302,7 +302,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedBooleanVariables() {
+	public EReference getSpecificTrace_Activitydiagram_tracedControlFlows() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -311,7 +311,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedControlFlows() {
+	public EReference getSpecificTrace_Activitydiagram_tracedControlTokens() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -320,7 +320,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedControlTokens() {
+	public EReference getSpecificTrace_Activitydiagram_tracedDecisionNodes() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -329,7 +329,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedDecisionNodes() {
+	public EReference getSpecificTrace_Activitydiagram_tracedForkNodes() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -338,7 +338,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedForkNodes() {
+	public EReference getSpecificTrace_Activitydiagram_tracedForkedTokens() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -347,7 +347,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedForkedTokens() {
+	public EReference getSpecificTrace_Activitydiagram_tracedInitialNodes() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -356,7 +356,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedInitialNodes() {
+	public EReference getSpecificTrace_Activitydiagram_tracedInputValues() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -365,7 +365,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedInputValues() {
+	public EReference getSpecificTrace_Activitydiagram_tracedInputs() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(26);
 	}
 
@@ -374,7 +374,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedInputs() {
+	public EReference getSpecificTrace_Activitydiagram_tracedIntegerVariables() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(27);
 	}
 
@@ -383,7 +383,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedIntegerValues() {
+	public EReference getSpecificTrace_Activitydiagram_tracedJoinNodes() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(28);
 	}
 
@@ -392,7 +392,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedIntegerVariables() {
+	public EReference getSpecificTrace_Activitydiagram_tracedMergeNodes() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(29);
 	}
 
@@ -401,7 +401,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedJoinNodes() {
+	public EReference getSpecificTrace_Activitydiagram_tracedOffers() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(30);
 	}
 
@@ -410,7 +410,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedMergeNodes() {
+	public EReference getSpecificTrace_Activitydiagram_tracedOpaqueActions() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(31);
 	}
 
@@ -419,7 +419,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedOffers() {
+	public EReference getSpecificTrace_Activitydiagram_tracedTokens() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(32);
 	}
 
@@ -428,7 +428,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedOpaqueActions() {
+	public EReference getSpecificTrace_Activitydiagram_tracedTraces() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(33);
 	}
 
@@ -437,7 +437,7 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedTokens() {
+	public EReference getSpecificTrace_Activitydiagram_tracedVariables() {
 		return (EReference)specificTraceEClass.getEStructuralFeatures().get(34);
 	}
 
@@ -446,35 +446,8 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedTraces() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(35);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedValues() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(36);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSpecificTrace_Activitydiagram_tracedVariables() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(37);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getSpecificTrace_StatesTrace() {
-		return (EReference)specificTraceEClass.getEStructuralFeatures().get(38);
+		return (EReference)specificTraceEClass.getEStructuralFeatures().get(35);
 	}
 
 	/**
@@ -524,7 +497,6 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITY_FINAL_NODES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITY_NODES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS);
-		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_TOKENS);
@@ -534,7 +506,6 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INITIAL_NODES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUT_VALUES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS);
-		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_MERGE_NODES);
@@ -542,7 +513,6 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_OPAQUE_ACTIONS);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TOKENS);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES);
-		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES);
 		createEReference(specificTraceEClass, SPECIFIC_TRACE__STATES_TRACE);
 	}
@@ -612,7 +582,6 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		initEReference(getSpecificTrace_Activitydiagram_tracedActivityFinalNodes(), theActivitydiagramPackage_1.getTracedActivityFinalNode(), null, "activitydiagram_tracedActivityFinalNodes", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedActivityNodes(), theActivitydiagramPackage_1.getTracedActivityNode(), null, "activitydiagram_tracedActivityNodes", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedActivitys(), theActivitydiagramPackage_1.getTracedActivity(), null, "activitydiagram_tracedActivitys", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSpecificTrace_Activitydiagram_tracedBooleanValues(), theActivitydiagramPackage_1.getTracedBooleanValue(), null, "activitydiagram_tracedBooleanValues", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedBooleanVariables(), theActivitydiagramPackage_1.getTracedBooleanVariable(), null, "activitydiagram_tracedBooleanVariables", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedControlFlows(), theActivitydiagramPackage_1.getTracedControlFlow(), null, "activitydiagram_tracedControlFlows", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedControlTokens(), theActivitydiagramPackage_1.getTracedControlToken(), null, "activitydiagram_tracedControlTokens", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -622,7 +591,6 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		initEReference(getSpecificTrace_Activitydiagram_tracedInitialNodes(), theActivitydiagramPackage_1.getTracedInitialNode(), null, "activitydiagram_tracedInitialNodes", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedInputValues(), theActivitydiagramPackage_1.getTracedInputValue(), null, "activitydiagram_tracedInputValues", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedInputs(), theActivitydiagramPackage_1.getTracedInput(), null, "activitydiagram_tracedInputs", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSpecificTrace_Activitydiagram_tracedIntegerValues(), theActivitydiagramPackage_1.getTracedIntegerValue(), null, "activitydiagram_tracedIntegerValues", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedIntegerVariables(), theActivitydiagramPackage_1.getTracedIntegerVariable(), null, "activitydiagram_tracedIntegerVariables", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedJoinNodes(), theActivitydiagramPackage_1.getTracedJoinNode(), null, "activitydiagram_tracedJoinNodes", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedMergeNodes(), theActivitydiagramPackage_1.getTracedMergeNode(), null, "activitydiagram_tracedMergeNodes", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -630,7 +598,6 @@ public class ActivitydiagramTracePackageImpl extends EPackageImpl implements Act
 		initEReference(getSpecificTrace_Activitydiagram_tracedOpaqueActions(), theActivitydiagramPackage_1.getTracedOpaqueAction(), null, "activitydiagram_tracedOpaqueActions", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedTokens(), theActivitydiagramPackage_1.getTracedToken(), null, "activitydiagram_tracedTokens", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedTraces(), theActivitydiagramPackage_1.getTracedTrace(), null, "activitydiagram_tracedTraces", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getSpecificTrace_Activitydiagram_tracedValues(), theActivitydiagramPackage_1.getTracedValue(), null, "activitydiagram_tracedValues", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_Activitydiagram_tracedVariables(), theActivitydiagramPackage_1.getTracedVariable(), null, "activitydiagram_tracedVariables", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSpecificTrace_StatesTrace(), theStatesPackage.getState(), null, "statesTrace", null, 0, -1, SpecificTrace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

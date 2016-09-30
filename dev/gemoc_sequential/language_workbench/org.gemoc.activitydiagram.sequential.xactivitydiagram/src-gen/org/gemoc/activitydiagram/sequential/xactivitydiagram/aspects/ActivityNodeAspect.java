@@ -9,11 +9,9 @@ import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.UniqueEList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspect;
 
 @Aspect(className = ActivityNode.class)
 @SuppressWarnings("all")
@@ -26,14 +24,14 @@ public class ActivityNodeAspect extends NamedElementAspect {
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ForkNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InitialNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode){
+    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityFinalNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
     					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
@@ -173,15 +171,15 @@ public class ActivityNodeAspect extends NamedElementAspect {
   }
   
   @Containment
-  public static UniqueEList<Token> heldTokens(final ActivityNode _self) {
+  public static EList<Token> heldTokens(final ActivityNode _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
     Object result = null;
     result = _privk3_heldTokens(_self_, _self);;
-    return (org.eclipse.emf.common.util.UniqueEList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token>)result;
+    return (org.eclipse.emf.common.util.EList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token>)result;
   }
   
   @Containment
-  public static void heldTokens(final ActivityNode _self, final UniqueEList<Token> heldTokens) {
+  public static void heldTokens(final ActivityNode _self, final EList<Token> heldTokens) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
     _privk3_heldTokens(_self_, _self,heldTokens);;
   }
@@ -216,12 +214,8 @@ public class ActivityNodeAspect extends NamedElementAspect {
       {
         final EList<Token> tokens = ActivityEdgeAspect.takeOfferedTokens1(edge);
         for (final Token token : tokens) {
-          {
-            TokenAspect.withdraw1(token);
-            TokenAspect.holder(token, _self);
-            UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
-            _heldTokens.add(token);
-          }
+          EList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
+          _heldTokens.add(token);
         }
         allTokens.addAll(tokens);
       }
@@ -231,11 +225,8 @@ public class ActivityNodeAspect extends NamedElementAspect {
   
   protected static void _privk3_addTokens1(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self, final EList<Token> tokens) {
     for (final Token token : tokens) {
-      {
-        Token transferredToken = TokenAspect.transfer1(token, _self);
-        UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
-        _heldTokens.add(transferredToken);
-      }
+      EList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
+      _heldTokens.add(token);
     }
   }
   
@@ -253,18 +244,18 @@ public class ActivityNodeAspect extends NamedElementAspect {
   }
   
   protected static void _privk3_removeToken1(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self, final Token token) {
-    UniqueEList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
+    EList<Token> _heldTokens = ActivityNodeAspect.heldTokens(_self);
     _heldTokens.remove(token);
   }
   
-  protected static UniqueEList<Token> _privk3_heldTokens(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self) {
+  protected static EList<Token> _privk3_heldTokens(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
     		if (m.getName().equals("getHeldTokens") &&
     			m.getParameterTypes().length == 0) {
     				Object ret = m.invoke(_self);
     				if (ret != null) {
-    					return (org.eclipse.emf.common.util.UniqueEList) ret;
+    					return (org.eclipse.emf.common.util.EList) ret;
     				}
     		}
     	}
@@ -274,7 +265,7 @@ public class ActivityNodeAspect extends NamedElementAspect {
     return _self_.heldTokens;
   }
   
-  protected static void _privk3_heldTokens(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self, final UniqueEList<Token> heldTokens) {
+  protected static void _privk3_heldTokens(final ActivityNodeAspectActivityNodeAspectProperties _self_, final ActivityNode _self, final EList<Token> heldTokens) {
     _self_.heldTokens = heldTokens; try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
     		if (m.getName().equals("setHeldTokens")

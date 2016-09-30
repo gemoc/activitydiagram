@@ -11,6 +11,7 @@ import com.google.common.base.Objects;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramFactory;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
+import fr.inria.diverse.k3.al.annotationprocessor.Containment;
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel;
 import fr.inria.diverse.k3.al.annotationprocessor.Main;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
@@ -111,6 +112,7 @@ public class ActivityAspect extends NamedElementAspect {
     return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)result;
   }
   
+  @Containment
   public static Trace trace(final Activity _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectContext.getSelf(_self);
     Object result = null;
@@ -118,6 +120,7 @@ public class ActivityAspect extends NamedElementAspect {
     return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace)result;
   }
   
+  @Containment
   public static void trace(final Activity _self, final Trace trace) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspectActivityAspectContext.getSelf(_self);
     _privk3_trace(_self_, _self,trace);;
@@ -127,8 +130,6 @@ public class ActivityAspect extends NamedElementAspect {
   }
   
   protected static void _privk3_main(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
-    Trace _createTrace = ActivitydiagramFactory.eINSTANCE.createTrace();
-    ActivityAspect.trace(_self, _createTrace);
     ActivityAspect.execute(_self);
   }
   
@@ -154,6 +155,8 @@ public class ActivityAspect extends NamedElementAspect {
     };
     Iterable<ActivityNode> _filter = IterableExtensions.<ActivityNode>filter(_nodes, _function_2);
     ActivityNode toExecute = ((ActivityNode[])Conversions.unwrapArray(_filter, ActivityNode.class))[0];
+    Trace _createTrace = ActivitydiagramFactory.eINSTANCE.createTrace();
+    ActivityAspect.trace(_self, _createTrace);
     Trace _trace = ActivityAspect.trace(_self);
     EList<ActivityNode> _executedNodes = TraceAspect.executedNodes(_trace);
     _executedNodes.add(toExecute);

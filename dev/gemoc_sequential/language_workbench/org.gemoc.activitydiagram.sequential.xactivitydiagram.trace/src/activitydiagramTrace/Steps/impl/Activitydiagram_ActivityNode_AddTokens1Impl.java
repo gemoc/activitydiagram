@@ -8,19 +8,11 @@ import activitydiagramTrace.States.StatesPackage;
 import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
 
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1;
-import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep;
-import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_AbstractSubStep;
 import activitydiagramTrace.Steps.StepsPackage;
-
-import fr.inria.diverse.trace.commons.model.trace.BigStep;
-import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
-import fr.inria.diverse.trace.commons.model.trace.TracePackage;
 
 import fr.inria.diverse.trace.commons.model.trace.impl.StepImpl;
 
 import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -32,9 +24,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Activitydiagram Activity Node Add Tokens1</b></em>'.
@@ -45,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getEndingState <em>Ending State</em>}</li>
  *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getStartingState <em>Starting State</em>}</li>
- *   <li>{@link activitydiagramTrace.Steps.impl.Activitydiagram_ActivityNode_AddTokens1Impl#getSubSteps <em>Sub Steps</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,16 +58,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 	 * @ordered
 	 */
 	protected State startingState;
-
-	/**
-	 * The cached value of the '{@link #getSubSteps() <em>Sub Steps</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubSteps()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep> subSteps;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,18 +203,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep> getSubSteps() {
-		if (subSteps == null) {
-			subSteps = new EObjectContainmentEList<Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep>(Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep.class, this, StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS);
-		}
-		return subSteps;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TracedActivityNode getCaller() {
 		return (activitydiagramTrace.States.activitydiagram.TracedActivityNode) this.getMseoccurrence().getMse().getCaller();
 	}
@@ -273,8 +239,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 				return basicSetEndingState(null, msgs);
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
 				return basicSetStartingState(null, msgs);
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
-				return ((InternalEList<?>)getSubSteps()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -293,8 +257,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
 				if (resolve) return getStartingState();
 				return basicGetStartingState();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
-				return getSubSteps();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,7 +266,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -313,10 +274,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 				return;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
 				setStartingState((State)newValue);
-				return;
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
-				getSubSteps().clear();
-				getSubSteps().addAll((Collection<? extends Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -336,9 +293,6 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
 				setStartingState((State)null);
 				return;
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
-				getSubSteps().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -355,62 +309,8 @@ public class Activitydiagram_ActivityNode_AddTokens1Impl extends StepImpl implem
 				return endingState != null;
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__STARTING_STATE:
 				return startingState != null;
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS:
-				return subSteps != null && !subSteps.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Activitydiagram_ActivityNode_Execute_AbstractSubStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == BigStep.class) {
-			switch (derivedFeatureID) {
-				case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS: return TracePackage.BIG_STEP__SUB_STEPS;
-				default: return -1;
-			}
-		}
-		if (baseClass == SequentialStep.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Activitydiagram_ActivityNode_Execute_AbstractSubStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		if (baseClass == BigStep.class) {
-			switch (baseFeatureID) {
-				case TracePackage.BIG_STEP__SUB_STEPS: return StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1__SUB_STEPS;
-				default: return -1;
-			}
-		}
-		if (baseClass == SequentialStep.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

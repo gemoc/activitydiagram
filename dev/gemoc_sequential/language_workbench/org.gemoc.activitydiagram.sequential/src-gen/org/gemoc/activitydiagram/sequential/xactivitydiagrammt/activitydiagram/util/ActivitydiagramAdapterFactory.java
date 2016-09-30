@@ -192,10 +192,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createOfferAdapter();
 			}
 			@Override
-			public Adapter caseTrace(Trace object) {
-				return createTraceAdapter();
-			}
-			@Override
 			public Adapter caseInputValue(InputValue object) {
 				return createInputValueAdapter();
 			}
@@ -210,6 +206,10 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseForkedToken(ForkedToken object) {
 				return createForkedTokenAdapter();
+			}
+			@Override
+			public Adapter caseTrace(Trace object) {
+				return createTraceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {

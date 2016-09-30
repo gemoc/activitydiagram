@@ -79,11 +79,11 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.BOOLEAN_BINARY_EXPRESSION: return createBooleanBinaryExpression();
 			case ActivitydiagramPackage.TOKEN: return createToken();
 			case ActivitydiagramPackage.OFFER: return createOffer();
-			case ActivitydiagramPackage.TRACE: return createTrace();
 			case ActivitydiagramPackage.INPUT_VALUE: return createInputValue();
 			case ActivitydiagramPackage.INPUT: return createInput();
 			case ActivitydiagramPackage.CONTROL_TOKEN: return createControlToken();
 			case ActivitydiagramPackage.FORKED_TOKEN: return createForkedToken();
+			case ActivitydiagramPackage.TRACE: return createTrace();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -356,16 +356,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trace createTrace() {
-		TraceImpl trace = new TraceImpl();
-		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InputValue createInputValue() {
 		InputValueImpl inputValue = new InputValueImpl();
 		return inputValue;
@@ -399,6 +389,16 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	public ForkedToken createForkedToken() {
 		ForkedTokenImpl forkedToken = new ForkedTokenImpl();
 		return forkedToken;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Trace createTrace() {
+		TraceImpl trace = new TraceImpl();
+		return trace;
 	}
 
 	/**

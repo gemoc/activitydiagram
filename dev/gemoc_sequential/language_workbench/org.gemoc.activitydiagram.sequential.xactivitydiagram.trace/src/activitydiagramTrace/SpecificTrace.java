@@ -7,7 +7,6 @@ import activitydiagramTrace.States.State;
 import activitydiagramTrace.States.activitydiagram.TracedActivity;
 import activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode;
 import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
-import activitydiagramTrace.States.activitydiagram.TracedBooleanValue;
 import activitydiagramTrace.States.activitydiagram.TracedBooleanVariable;
 import activitydiagramTrace.States.activitydiagram.TracedControlFlow;
 import activitydiagramTrace.States.activitydiagram.TracedControlToken;
@@ -17,7 +16,6 @@ import activitydiagramTrace.States.activitydiagram.TracedForkedToken;
 import activitydiagramTrace.States.activitydiagram.TracedInitialNode;
 import activitydiagramTrace.States.activitydiagram.TracedInput;
 import activitydiagramTrace.States.activitydiagram.TracedInputValue;
-import activitydiagramTrace.States.activitydiagram.TracedIntegerValue;
 import activitydiagramTrace.States.activitydiagram.TracedIntegerVariable;
 import activitydiagramTrace.States.activitydiagram.TracedJoinNode;
 import activitydiagramTrace.States.activitydiagram.TracedMergeNode;
@@ -25,7 +23,6 @@ import activitydiagramTrace.States.activitydiagram.TracedOffer;
 import activitydiagramTrace.States.activitydiagram.TracedOpaqueAction;
 import activitydiagramTrace.States.activitydiagram.TracedToken;
 import activitydiagramTrace.States.activitydiagram.TracedTrace;
-import activitydiagramTrace.States.activitydiagram.TracedValue;
 import activitydiagramTrace.States.activitydiagram.TracedVariable;
 
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1;
@@ -77,7 +74,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedActivityFinalNodes <em>Activitydiagram traced Activity Final Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedActivityNodes <em>Activitydiagram traced Activity Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedActivitys <em>Activitydiagram traced Activitys</em>}</li>
- *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedBooleanValues <em>Activitydiagram traced Boolean Values</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedBooleanVariables <em>Activitydiagram traced Boolean Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedControlFlows <em>Activitydiagram traced Control Flows</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedControlTokens <em>Activitydiagram traced Control Tokens</em>}</li>
@@ -87,7 +83,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedInitialNodes <em>Activitydiagram traced Initial Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedInputValues <em>Activitydiagram traced Input Values</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedInputs <em>Activitydiagram traced Inputs</em>}</li>
- *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedIntegerValues <em>Activitydiagram traced Integer Values</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedIntegerVariables <em>Activitydiagram traced Integer Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedJoinNodes <em>Activitydiagram traced Join Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedMergeNodes <em>Activitydiagram traced Merge Nodes</em>}</li>
@@ -95,7 +90,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedOpaqueActions <em>Activitydiagram traced Opaque Actions</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedTokens <em>Activitydiagram traced Tokens</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedTraces <em>Activitydiagram traced Traces</em>}</li>
- *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedValues <em>Activitydiagram traced Values</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedVariables <em>Activitydiagram traced Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.SpecificTrace#getStatesTrace <em>States Trace</em>}</li>
  * </ul>
@@ -394,22 +388,6 @@ public interface SpecificTrace extends Trace<SequentialStep<SpecificStep>> {
 	EList<TracedActivity> getActivitydiagram_tracedActivitys();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanValue}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Boolean Values</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Boolean Values</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getSpecificTrace_Activitydiagram_tracedBooleanValues()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedBooleanValue> getActivitydiagram_tracedBooleanValues();
-
-	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedBooleanVariable}.
 	 * <!-- begin-user-doc -->
@@ -554,22 +532,6 @@ public interface SpecificTrace extends Trace<SequentialStep<SpecificStep>> {
 	EList<TracedInput> getActivitydiagram_tracedInputs();
 
 	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Integer Values</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Integer Values</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getSpecificTrace_Activitydiagram_tracedIntegerValues()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedIntegerValue> getActivitydiagram_tracedIntegerValues();
-
-	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Integer Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedIntegerVariable}.
 	 * <!-- begin-user-doc -->
@@ -680,22 +642,6 @@ public interface SpecificTrace extends Trace<SequentialStep<SpecificStep>> {
 	 * @generated
 	 */
 	EList<TracedTrace> getActivitydiagram_tracedTraces();
-
-	/**
-	 * Returns the value of the '<em><b>Activitydiagram traced Values</b></em>' containment reference list.
-	 * The list contents are of type {@link activitydiagramTrace.States.activitydiagram.TracedValue}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Activitydiagram traced Values</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activitydiagram traced Values</em>' containment reference list.
-	 * @see activitydiagramTrace.ActivitydiagramTracePackage#getSpecificTrace_Activitydiagram_tracedValues()
-	 * @model containment="true" ordered="false"
-	 * @generated
-	 */
-	EList<TracedValue> getActivitydiagram_tracedValues();
 
 	/**
 	 * Returns the value of the '<em><b>Activitydiagram traced Variables</b></em>' containment reference list.

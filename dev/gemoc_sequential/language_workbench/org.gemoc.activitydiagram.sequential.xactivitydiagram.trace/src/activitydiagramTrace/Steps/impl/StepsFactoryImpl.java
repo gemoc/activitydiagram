@@ -57,13 +57,11 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1: return createActivitydiagram_ActivityNode_AddTokens1();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_ADD_TOKENS1_IMPLICIT_STEP: return createActivitydiagram_ActivityNode_AddTokens1_ImplicitStep();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE: return createActivitydiagram_ActivityNode_Execute();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_EXECUTE_IMPLICIT_STEP: return createActivitydiagram_ActivityNode_Execute_ImplicitStep();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_REMOVE_TOKEN1: return createActivitydiagram_ActivityNode_RemoveToken1();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_SEND_OFFERS1: return createActivitydiagram_ActivityNode_SendOffers1();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1: return createActivitydiagram_ActivityNode_TakeOfferdTokens1();
-			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TAKE_OFFERD_TOKENS1_IMPLICIT_STEP: return createActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_NODE_TERMINATE: return createActivitydiagram_ActivityNode_Terminate();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE: return createActivitydiagram_Activity_Execute();
 			case StepsPackage.ACTIVITYDIAGRAM_ACTIVITY_EXECUTE_IMPLICIT_STEP: return createActivitydiagram_Activity_Execute_ImplicitStep();
@@ -89,16 +87,6 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public Activitydiagram_ActivityNode_AddTokens1 createActivitydiagram_ActivityNode_AddTokens1() {
 		Activitydiagram_ActivityNode_AddTokens1Impl activitydiagram_ActivityNode_AddTokens1 = new Activitydiagram_ActivityNode_AddTokens1Impl();
 		return activitydiagram_ActivityNode_AddTokens1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activitydiagram_ActivityNode_AddTokens1_ImplicitStep createActivitydiagram_ActivityNode_AddTokens1_ImplicitStep() {
-		Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl activitydiagram_ActivityNode_AddTokens1_ImplicitStep = new Activitydiagram_ActivityNode_AddTokens1_ImplicitStepImpl();
-		return activitydiagram_ActivityNode_AddTokens1_ImplicitStep;
 	}
 
 	/**
@@ -149,16 +137,6 @@ public class StepsFactoryImpl extends EFactoryImpl implements StepsFactory {
 	public Activitydiagram_ActivityNode_TakeOfferdTokens1 createActivitydiagram_ActivityNode_TakeOfferdTokens1() {
 		Activitydiagram_ActivityNode_TakeOfferdTokens1Impl activitydiagram_ActivityNode_TakeOfferdTokens1 = new Activitydiagram_ActivityNode_TakeOfferdTokens1Impl();
 		return activitydiagram_ActivityNode_TakeOfferdTokens1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep createActivitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep() {
-		Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepImpl activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep = new Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStepImpl();
-		return activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep;
 	}
 
 	/**

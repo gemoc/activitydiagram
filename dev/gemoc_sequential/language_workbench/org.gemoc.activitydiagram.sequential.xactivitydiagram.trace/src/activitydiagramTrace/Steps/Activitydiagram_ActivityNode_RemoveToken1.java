@@ -16,7 +16,7 @@ import fr.inria.diverse.trace.commons.model.trace.SmallStep;
  * @model
  * @generated
  */
-public interface Activitydiagram_ActivityNode_RemoveToken1 extends Activitydiagram_ActivityNode_TakeOfferdTokens1_AbstractSubStep, SpecificStep, SmallStep, Activitydiagram_ActivityNode_AddTokens1_AbstractSubStep {
+public interface Activitydiagram_ActivityNode_RemoveToken1 extends SpecificStep, SmallStep {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

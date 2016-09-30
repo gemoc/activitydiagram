@@ -88,10 +88,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createTracedActivityNodeAdapter();
 			}
 			@Override
-			public Adapter caseTracedBooleanValue(TracedBooleanValue object) {
-				return createTracedBooleanValueAdapter();
-			}
-			@Override
 			public Adapter caseTracedBooleanVariable(TracedBooleanVariable object) {
 				return createTracedBooleanVariableAdapter();
 			}
@@ -140,10 +136,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createTracedInputValueAdapter();
 			}
 			@Override
-			public Adapter caseTracedIntegerValue(TracedIntegerValue object) {
-				return createTracedIntegerValueAdapter();
-			}
-			@Override
 			public Adapter caseTracedIntegerVariable(TracedIntegerVariable object) {
 				return createTracedIntegerVariableAdapter();
 			}
@@ -174,10 +166,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTracedTrace(TracedTrace object) {
 				return createTracedTraceAdapter();
-			}
-			@Override
-			public Adapter caseTracedValue(TracedValue object) {
-				return createTracedValueAdapter();
 			}
 			@Override
 			public Adapter caseTracedVariable(TracedVariable object) {
@@ -270,20 +258,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTracedActivityNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.activitydiagram.TracedBooleanValue <em>Traced Boolean Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.States.activitydiagram.TracedBooleanValue
-	 * @generated
-	 */
-	public Adapter createTracedBooleanValueAdapter() {
 		return null;
 	}
 
@@ -456,20 +430,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.activitydiagram.TracedIntegerValue <em>Traced Integer Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.States.activitydiagram.TracedIntegerValue
-	 * @generated
-	 */
-	public Adapter createTracedIntegerValueAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.activitydiagram.TracedIntegerVariable <em>Traced Integer Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -578,20 +538,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTracedTraceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagramTrace.States.activitydiagram.TracedValue <em>Traced Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagramTrace.States.activitydiagram.TracedValue
-	 * @generated
-	 */
-	public Adapter createTracedValueAdapter() {
 		return null;
 	}
 

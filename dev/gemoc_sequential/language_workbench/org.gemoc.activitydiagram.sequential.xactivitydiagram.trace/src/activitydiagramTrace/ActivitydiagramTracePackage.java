@@ -248,22 +248,13 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS = TracePackage.TRACE_FEATURE_COUNT + 17;
 
 	/**
-	 * The feature id for the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES = TracePackage.TRACE_FEATURE_COUNT + 18;
-
-	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES = TracePackage.TRACE_FEATURE_COUNT + 19;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES = TracePackage.TRACE_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Control Flows</b></em>' containment reference list.
@@ -272,7 +263,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS = TracePackage.TRACE_FEATURE_COUNT + 20;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS = TracePackage.TRACE_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Control Tokens</b></em>' containment reference list.
@@ -281,7 +272,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 21;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Decision Nodes</b></em>' containment reference list.
@@ -290,7 +281,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_DECISION_NODES = TracePackage.TRACE_FEATURE_COUNT + 22;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_DECISION_NODES = TracePackage.TRACE_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Fork Nodes</b></em>' containment reference list.
@@ -299,7 +290,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_FORK_NODES = TracePackage.TRACE_FEATURE_COUNT + 23;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_FORK_NODES = TracePackage.TRACE_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Forked Tokens</b></em>' containment reference list.
@@ -308,7 +299,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_FORKED_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 24;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_FORKED_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Initial Nodes</b></em>' containment reference list.
@@ -317,7 +308,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INITIAL_NODES = TracePackage.TRACE_FEATURE_COUNT + 25;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INITIAL_NODES = TracePackage.TRACE_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Input Values</b></em>' containment reference list.
@@ -326,7 +317,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUT_VALUES = TracePackage.TRACE_FEATURE_COUNT + 26;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUT_VALUES = TracePackage.TRACE_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Inputs</b></em>' containment reference list.
@@ -335,16 +326,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS = TracePackage.TRACE_FEATURE_COUNT + 27;
-
-	/**
-	 * The feature id for the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES = TracePackage.TRACE_FEATURE_COUNT + 28;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS = TracePackage.TRACE_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Integer Variables</b></em>' containment reference list.
@@ -353,7 +335,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES = TracePackage.TRACE_FEATURE_COUNT + 29;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES = TracePackage.TRACE_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Join Nodes</b></em>' containment reference list.
@@ -362,7 +344,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES = TracePackage.TRACE_FEATURE_COUNT + 30;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES = TracePackage.TRACE_FEATURE_COUNT + 28;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Merge Nodes</b></em>' containment reference list.
@@ -371,7 +353,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_MERGE_NODES = TracePackage.TRACE_FEATURE_COUNT + 31;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_MERGE_NODES = TracePackage.TRACE_FEATURE_COUNT + 29;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Offers</b></em>' containment reference list.
@@ -380,7 +362,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_OFFERS = TracePackage.TRACE_FEATURE_COUNT + 32;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_OFFERS = TracePackage.TRACE_FEATURE_COUNT + 30;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Opaque Actions</b></em>' containment reference list.
@@ -389,7 +371,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_OPAQUE_ACTIONS = TracePackage.TRACE_FEATURE_COUNT + 33;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_OPAQUE_ACTIONS = TracePackage.TRACE_FEATURE_COUNT + 31;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Tokens</b></em>' containment reference list.
@@ -398,7 +380,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 34;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TOKENS = TracePackage.TRACE_FEATURE_COUNT + 32;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Traces</b></em>' containment reference list.
@@ -407,16 +389,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES = TracePackage.TRACE_FEATURE_COUNT + 35;
-
-	/**
-	 * The feature id for the '<em><b>Activitydiagram traced Values</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES = TracePackage.TRACE_FEATURE_COUNT + 36;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES = TracePackage.TRACE_FEATURE_COUNT + 33;
 
 	/**
 	 * The feature id for the '<em><b>Activitydiagram traced Variables</b></em>' containment reference list.
@@ -425,7 +398,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES = TracePackage.TRACE_FEATURE_COUNT + 37;
+	int SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES = TracePackage.TRACE_FEATURE_COUNT + 34;
 
 	/**
 	 * The feature id for the '<em><b>States Trace</b></em>' containment reference list.
@@ -434,7 +407,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE__STATES_TRACE = TracePackage.TRACE_FEATURE_COUNT + 38;
+	int SPECIFIC_TRACE__STATES_TRACE = TracePackage.TRACE_FEATURE_COUNT + 35;
 
 	/**
 	 * The number of structural features of the '<em>Specific Trace</em>' class.
@@ -443,7 +416,7 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFIC_TRACE_FEATURE_COUNT = TracePackage.TRACE_FEATURE_COUNT + 39;
+	int SPECIFIC_TRACE_FEATURE_COUNT = TracePackage.TRACE_FEATURE_COUNT + 36;
 
 	/**
 	 * The number of operations of the '<em>Specific Trace</em>' class.
@@ -664,17 +637,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	EReference getSpecificTrace_Activitydiagram_tracedActivitys();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedBooleanValues <em>Activitydiagram traced Boolean Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Boolean Values</em>'.
-	 * @see activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedBooleanValues()
-	 * @see #getSpecificTrace()
-	 * @generated
-	 */
-	EReference getSpecificTrace_Activitydiagram_tracedBooleanValues();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedBooleanVariables <em>Activitydiagram traced Boolean Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -774,17 +736,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	EReference getSpecificTrace_Activitydiagram_tracedInputs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedIntegerValues <em>Activitydiagram traced Integer Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Integer Values</em>'.
-	 * @see activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedIntegerValues()
-	 * @see #getSpecificTrace()
-	 * @generated
-	 */
-	EReference getSpecificTrace_Activitydiagram_tracedIntegerValues();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedIntegerVariables <em>Activitydiagram traced Integer Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -860,17 +811,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecificTrace_Activitydiagram_tracedTraces();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedValues <em>Activitydiagram traced Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activitydiagram traced Values</em>'.
-	 * @see activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedValues()
-	 * @see #getSpecificTrace()
-	 * @generated
-	 */
-	EReference getSpecificTrace_Activitydiagram_tracedValues();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagramTrace.SpecificTrace#getActivitydiagram_tracedVariables <em>Activitydiagram traced Variables</em>}'.
@@ -1072,14 +1012,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 		EReference SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS = eINSTANCE.getSpecificTrace_Activitydiagram_tracedActivitys();
 
 		/**
-		 * The meta object literal for the '<em><b>Activitydiagram traced Boolean Values</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES = eINSTANCE.getSpecificTrace_Activitydiagram_tracedBooleanValues();
-
-		/**
 		 * The meta object literal for the '<em><b>Activitydiagram traced Boolean Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1152,14 +1084,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 		EReference SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS = eINSTANCE.getSpecificTrace_Activitydiagram_tracedInputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Activitydiagram traced Integer Values</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES = eINSTANCE.getSpecificTrace_Activitydiagram_tracedIntegerValues();
-
-		/**
 		 * The meta object literal for the '<em><b>Activitydiagram traced Integer Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1214,14 +1138,6 @@ public interface ActivitydiagramTracePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES = eINSTANCE.getSpecificTrace_Activitydiagram_tracedTraces();
-
-		/**
-		 * The meta object literal for the '<em><b>Activitydiagram traced Values</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES = eINSTANCE.getSpecificTrace_Activitydiagram_tracedValues();
 
 		/**
 		 * The meta object literal for the '<em><b>Activitydiagram traced Variables</b></em>' containment reference list feature.

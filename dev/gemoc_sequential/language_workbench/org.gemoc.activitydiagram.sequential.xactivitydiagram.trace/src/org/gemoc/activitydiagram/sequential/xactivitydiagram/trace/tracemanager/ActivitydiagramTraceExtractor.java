@@ -94,10 +94,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 				.getActivitydiagram_tracedActivityNodes()) {
 			result.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedBooleanValue tracedObject : traceRoot
-				.getActivitydiagram_tracedBooleanValues()) {
-			result.add(tracedObject.getValueSequence());
-		}
 		for (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable tracedObject : traceRoot
 				.getActivitydiagram_tracedBooleanVariables()) {
 			result.add(tracedObject.getCurrentValueSequence());
@@ -105,10 +101,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		for (activitydiagramTrace.States.activitydiagram.TracedControlFlow tracedObject : traceRoot
 				.getActivitydiagram_tracedControlFlows()) {
 			result.add(tracedObject.getOffersSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedControlToken tracedObject : traceRoot
-				.getActivitydiagram_tracedControlTokens()) {
-			result.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedDecisionNode tracedObject : traceRoot
 				.getActivitydiagram_tracedDecisionNodes()) {
@@ -122,15 +114,19 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 				.getActivitydiagram_tracedForkedTokens()) {
 			result.add(tracedObject.getBaseTokenSequence());
 			result.add(tracedObject.getRemainingOffersCountSequence());
-			result.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedInitialNode tracedObject : traceRoot
 				.getActivitydiagram_tracedInitialNodes()) {
 			result.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedIntegerValue tracedObject : traceRoot
-				.getActivitydiagram_tracedIntegerValues()) {
+		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : traceRoot
+				.getActivitydiagram_tracedInputs()) {
+			result.add(tracedObject.getInputValuesSequence());
+		}
+		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : traceRoot
+				.getActivitydiagram_tracedInputValues()) {
 			result.add(tracedObject.getValueSequence());
+			result.add(tracedObject.getVariableSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable tracedObject : traceRoot
 				.getActivitydiagram_tracedIntegerVariables()) {
@@ -151,10 +147,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		for (activitydiagramTrace.States.activitydiagram.TracedOpaqueAction tracedObject : traceRoot
 				.getActivitydiagram_tracedOpaqueActions()) {
 			result.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedToken tracedObject : traceRoot
-				.getActivitydiagram_tracedTokens()) {
-			result.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedTrace tracedObject : traceRoot
 				.getActivitydiagram_tracedTraces()) {
@@ -555,10 +547,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 				.eContainer()).getActivitydiagram_tracedActivityNodes()) {
 			traces.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedBooleanValue tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedBooleanValues()) {
-			traces.add(tracedObject.getValueSequence());
-		}
 		for (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedBooleanVariables()) {
 			traces.add(tracedObject.getCurrentValueSequence());
@@ -566,10 +554,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		for (activitydiagramTrace.States.activitydiagram.TracedControlFlow tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedControlFlows()) {
 			traces.add(tracedObject.getOffersSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedControlToken tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedControlTokens()) {
-			traces.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedDecisionNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedDecisionNodes()) {
@@ -583,15 +567,19 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 				.eContainer()).getActivitydiagram_tracedForkedTokens()) {
 			traces.add(tracedObject.getBaseTokenSequence());
 			traces.add(tracedObject.getRemainingOffersCountSequence());
-			traces.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedInitialNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedInitialNodes()) {
 			traces.add(tracedObject.getHeldTokensSequence());
 		}
-		for (activitydiagramTrace.States.activitydiagram.TracedIntegerValue tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedIntegerValues()) {
+		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : ((activitydiagramTrace.SpecificTrace) state
+				.eContainer()).getActivitydiagram_tracedInputs()) {
+			traces.add(tracedObject.getInputValuesSequence());
+		}
+		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : ((activitydiagramTrace.SpecificTrace) state
+				.eContainer()).getActivitydiagram_tracedInputValues()) {
 			traces.add(tracedObject.getValueSequence());
+			traces.add(tracedObject.getVariableSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedIntegerVariables()) {
@@ -612,10 +600,6 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		for (activitydiagramTrace.States.activitydiagram.TracedOpaqueAction tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedOpaqueActions()) {
 			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedToken tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedTokens()) {
-			traces.add(tracedObject.getHolderSequence());
 		}
 		for (activitydiagramTrace.States.activitydiagram.TracedTrace tracedObject : ((activitydiagramTrace.SpecificTrace) state
 				.eContainer()).getActivitydiagram_tracedTraces()) {
@@ -675,9 +659,7 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		final boolean b = state.getStartedSteps().size() == 1;
 		if (b) {
 			activitydiagramTrace.Steps.SpecificStep s = state.getStartedSteps().get(0);
-			return !(s instanceof activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1_ImplicitStep
-					|| s instanceof activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_ImplicitStep
-					|| s instanceof activitydiagramTrace.Steps.Activitydiagram_ActivityNode_TakeOfferdTokens1_ImplicitStep
+			return !(s instanceof activitydiagramTrace.Steps.Activitydiagram_ActivityNode_Execute_ImplicitStep
 					|| s instanceof activitydiagramTrace.Steps.Activitydiagram_Activity_Execute_ImplicitStep);
 		}
 		return true;

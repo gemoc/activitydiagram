@@ -106,13 +106,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.TRACED_BOOLEAN_VALUE: {
-				TracedBooleanValue tracedBooleanValue = (TracedBooleanValue)theEObject;
-				T result = caseTracedBooleanValue(tracedBooleanValue);
-				if (result == null) result = caseTracedValue(tracedBooleanValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.TRACED_BOOLEAN_VARIABLE: {
 				TracedBooleanVariable tracedBooleanVariable = (TracedBooleanVariable)theEObject;
 				T result = caseTracedBooleanVariable(tracedBooleanVariable);
@@ -206,13 +199,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.TRACED_INTEGER_VALUE: {
-				TracedIntegerValue tracedIntegerValue = (TracedIntegerValue)theEObject;
-				T result = caseTracedIntegerValue(tracedIntegerValue);
-				if (result == null) result = caseTracedValue(tracedIntegerValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.TRACED_INTEGER_VARIABLE: {
 				TracedIntegerVariable tracedIntegerVariable = (TracedIntegerVariable)theEObject;
 				T result = caseTracedIntegerVariable(tracedIntegerVariable);
@@ -269,12 +255,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 			case ActivitydiagramPackage.TRACED_TRACE: {
 				TracedTrace tracedTrace = (TracedTrace)theEObject;
 				T result = caseTracedTrace(tracedTrace);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramPackage.TRACED_VALUE: {
-				TracedValue tracedValue = (TracedValue)theEObject;
-				T result = caseTracedValue(tracedValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -360,21 +340,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTracedActivityNode(TracedActivityNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Boolean Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Boolean Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedBooleanValue(TracedBooleanValue object) {
 		return null;
 	}
 
@@ -559,21 +524,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Integer Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Integer Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedIntegerValue(TracedIntegerValue object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Traced Integer Variable</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -690,21 +640,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTracedTrace(TracedTrace object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Traced Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Traced Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTracedValue(TracedValue object) {
 		return null;
 	}
 

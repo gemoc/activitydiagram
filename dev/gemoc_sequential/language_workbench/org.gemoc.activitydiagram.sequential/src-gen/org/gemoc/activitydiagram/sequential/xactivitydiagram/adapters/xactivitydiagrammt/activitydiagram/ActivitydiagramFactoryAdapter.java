@@ -150,11 +150,6 @@ public class ActivitydiagramFactoryAdapter extends EFactoryImpl implements Activ
   }
   
   @Override
-  public Trace createTrace() {
-    return adaptersFactory.createTraceAdapter(activitydiagramAdaptee.createTrace(), null);
-  }
-  
-  @Override
   public InputValue createInputValue() {
     return adaptersFactory.createInputValueAdapter(activitydiagramAdaptee.createInputValue(), null);
   }
@@ -172,6 +167,11 @@ public class ActivitydiagramFactoryAdapter extends EFactoryImpl implements Activ
   @Override
   public ForkedToken createForkedToken() {
     return adaptersFactory.createForkedTokenAdapter(activitydiagramAdaptee.createForkedToken(), null);
+  }
+  
+  @Override
+  public Trace createTrace() {
+    return adaptersFactory.createTraceAdapter(activitydiagramAdaptee.createTrace(), null);
   }
   
   @Override

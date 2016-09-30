@@ -10,7 +10,6 @@ import activitydiagramTrace.States.State;
 import activitydiagramTrace.States.activitydiagram.TracedActivity;
 import activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode;
 import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
-import activitydiagramTrace.States.activitydiagram.TracedBooleanValue;
 import activitydiagramTrace.States.activitydiagram.TracedBooleanVariable;
 import activitydiagramTrace.States.activitydiagram.TracedControlFlow;
 import activitydiagramTrace.States.activitydiagram.TracedControlToken;
@@ -20,7 +19,6 @@ import activitydiagramTrace.States.activitydiagram.TracedForkedToken;
 import activitydiagramTrace.States.activitydiagram.TracedInitialNode;
 import activitydiagramTrace.States.activitydiagram.TracedInput;
 import activitydiagramTrace.States.activitydiagram.TracedInputValue;
-import activitydiagramTrace.States.activitydiagram.TracedIntegerValue;
 import activitydiagramTrace.States.activitydiagram.TracedIntegerVariable;
 import activitydiagramTrace.States.activitydiagram.TracedJoinNode;
 import activitydiagramTrace.States.activitydiagram.TracedMergeNode;
@@ -28,7 +26,6 @@ import activitydiagramTrace.States.activitydiagram.TracedOffer;
 import activitydiagramTrace.States.activitydiagram.TracedOpaqueAction;
 import activitydiagramTrace.States.activitydiagram.TracedToken;
 import activitydiagramTrace.States.activitydiagram.TracedTrace;
-import activitydiagramTrace.States.activitydiagram.TracedValue;
 import activitydiagramTrace.States.activitydiagram.TracedVariable;
 
 import activitydiagramTrace.Steps.Activitydiagram_ActivityNode_AddTokens1;
@@ -91,7 +88,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedActivityFinalNodes <em>Activitydiagram traced Activity Final Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedActivityNodes <em>Activitydiagram traced Activity Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedActivitys <em>Activitydiagram traced Activitys</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedBooleanValues <em>Activitydiagram traced Boolean Values</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedBooleanVariables <em>Activitydiagram traced Boolean Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedControlFlows <em>Activitydiagram traced Control Flows</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedControlTokens <em>Activitydiagram traced Control Tokens</em>}</li>
@@ -101,7 +97,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedInitialNodes <em>Activitydiagram traced Initial Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedInputValues <em>Activitydiagram traced Input Values</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedInputs <em>Activitydiagram traced Inputs</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedIntegerValues <em>Activitydiagram traced Integer Values</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedIntegerVariables <em>Activitydiagram traced Integer Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedJoinNodes <em>Activitydiagram traced Join Nodes</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedMergeNodes <em>Activitydiagram traced Merge Nodes</em>}</li>
@@ -109,7 +104,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedOpaqueActions <em>Activitydiagram traced Opaque Actions</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedTokens <em>Activitydiagram traced Tokens</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedTraces <em>Activitydiagram traced Traces</em>}</li>
- *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedValues <em>Activitydiagram traced Values</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getActivitydiagram_tracedVariables <em>Activitydiagram traced Variables</em>}</li>
  *   <li>{@link activitydiagramTrace.impl.SpecificTraceImpl#getStatesTrace <em>States Trace</em>}</li>
  * </ul>
@@ -298,16 +292,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	protected EList<TracedActivity> activitydiagram_tracedActivitys;
 
 	/**
-	 * The cached value of the '{@link #getActivitydiagram_tracedBooleanValues() <em>Activitydiagram traced Boolean Values</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActivitydiagram_tracedBooleanValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TracedBooleanValue> activitydiagram_tracedBooleanValues;
-
-	/**
 	 * The cached value of the '{@link #getActivitydiagram_tracedBooleanVariables() <em>Activitydiagram traced Boolean Variables</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -398,16 +382,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	protected EList<TracedInput> activitydiagram_tracedInputs;
 
 	/**
-	 * The cached value of the '{@link #getActivitydiagram_tracedIntegerValues() <em>Activitydiagram traced Integer Values</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActivitydiagram_tracedIntegerValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TracedIntegerValue> activitydiagram_tracedIntegerValues;
-
-	/**
 	 * The cached value of the '{@link #getActivitydiagram_tracedIntegerVariables() <em>Activitydiagram traced Integer Variables</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -476,16 +450,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	 * @ordered
 	 */
 	protected EList<TracedTrace> activitydiagram_tracedTraces;
-
-	/**
-	 * The cached value of the '{@link #getActivitydiagram_tracedValues() <em>Activitydiagram traced Values</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActivitydiagram_tracedValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TracedValue> activitydiagram_tracedValues;
 
 	/**
 	 * The cached value of the '{@link #getActivitydiagram_tracedVariables() <em>Activitydiagram traced Variables</em>}' containment reference list.
@@ -758,18 +722,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedBooleanValue> getActivitydiagram_tracedBooleanValues() {
-		if (activitydiagram_tracedBooleanValues == null) {
-			activitydiagram_tracedBooleanValues = new EObjectContainmentEList<TracedBooleanValue>(TracedBooleanValue.class, this, ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES);
-		}
-		return activitydiagram_tracedBooleanValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<TracedBooleanVariable> getActivitydiagram_tracedBooleanVariables() {
 		if (activitydiagram_tracedBooleanVariables == null) {
 			activitydiagram_tracedBooleanVariables = new EObjectContainmentEList<TracedBooleanVariable>(TracedBooleanVariable.class, this, ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES);
@@ -878,18 +830,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedIntegerValue> getActivitydiagram_tracedIntegerValues() {
-		if (activitydiagram_tracedIntegerValues == null) {
-			activitydiagram_tracedIntegerValues = new EObjectContainmentEList<TracedIntegerValue>(TracedIntegerValue.class, this, ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES);
-		}
-		return activitydiagram_tracedIntegerValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<TracedIntegerVariable> getActivitydiagram_tracedIntegerVariables() {
 		if (activitydiagram_tracedIntegerVariables == null) {
 			activitydiagram_tracedIntegerVariables = new EObjectContainmentEList<TracedIntegerVariable>(TracedIntegerVariable.class, this, ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES);
@@ -974,18 +914,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TracedValue> getActivitydiagram_tracedValues() {
-		if (activitydiagram_tracedValues == null) {
-			activitydiagram_tracedValues = new EObjectContainmentEList<TracedValue>(TracedValue.class, this, ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES);
-		}
-		return activitydiagram_tracedValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<TracedVariable> getActivitydiagram_tracedVariables() {
 		if (activitydiagram_tracedVariables == null) {
 			activitydiagram_tracedVariables = new EObjectContainmentEList<TracedVariable>(TracedVariable.class, this, ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES);
@@ -1019,8 +947,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return ((InternalEList<?>)getActivitydiagram_tracedActivityNodes()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS:
 				return ((InternalEList<?>)getActivitydiagram_tracedActivitys()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES:
-				return ((InternalEList<?>)getActivitydiagram_tracedBooleanValues()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES:
 				return ((InternalEList<?>)getActivitydiagram_tracedBooleanVariables()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS:
@@ -1039,8 +965,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return ((InternalEList<?>)getActivitydiagram_tracedInputValues()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS:
 				return ((InternalEList<?>)getActivitydiagram_tracedInputs()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES:
-				return ((InternalEList<?>)getActivitydiagram_tracedIntegerValues()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES:
 				return ((InternalEList<?>)getActivitydiagram_tracedIntegerVariables()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES:
@@ -1055,8 +979,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return ((InternalEList<?>)getActivitydiagram_tracedTokens()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES:
 				return ((InternalEList<?>)getActivitydiagram_tracedTraces()).basicRemove(otherEnd, msgs);
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES:
-				return ((InternalEList<?>)getActivitydiagram_tracedValues()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES:
 				return ((InternalEList<?>)getActivitydiagram_tracedVariables()).basicRemove(otherEnd, msgs);
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__STATES_TRACE:
@@ -1109,8 +1031,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return getActivitydiagram_tracedActivityNodes();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS:
 				return getActivitydiagram_tracedActivitys();
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES:
-				return getActivitydiagram_tracedBooleanValues();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES:
 				return getActivitydiagram_tracedBooleanVariables();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS:
@@ -1129,8 +1049,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return getActivitydiagram_tracedInputValues();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS:
 				return getActivitydiagram_tracedInputs();
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES:
-				return getActivitydiagram_tracedIntegerValues();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES:
 				return getActivitydiagram_tracedIntegerVariables();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES:
@@ -1145,8 +1063,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return getActivitydiagram_tracedTokens();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES:
 				return getActivitydiagram_tracedTraces();
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES:
-				return getActivitydiagram_tracedValues();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES:
 				return getActivitydiagram_tracedVariables();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__STATES_TRACE:
@@ -1236,10 +1152,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				getActivitydiagram_tracedActivitys().clear();
 				getActivitydiagram_tracedActivitys().addAll((Collection<? extends TracedActivity>)newValue);
 				return;
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES:
-				getActivitydiagram_tracedBooleanValues().clear();
-				getActivitydiagram_tracedBooleanValues().addAll((Collection<? extends TracedBooleanValue>)newValue);
-				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES:
 				getActivitydiagram_tracedBooleanVariables().clear();
 				getActivitydiagram_tracedBooleanVariables().addAll((Collection<? extends TracedBooleanVariable>)newValue);
@@ -1276,10 +1188,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				getActivitydiagram_tracedInputs().clear();
 				getActivitydiagram_tracedInputs().addAll((Collection<? extends TracedInput>)newValue);
 				return;
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES:
-				getActivitydiagram_tracedIntegerValues().clear();
-				getActivitydiagram_tracedIntegerValues().addAll((Collection<? extends TracedIntegerValue>)newValue);
-				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES:
 				getActivitydiagram_tracedIntegerVariables().clear();
 				getActivitydiagram_tracedIntegerVariables().addAll((Collection<? extends TracedIntegerVariable>)newValue);
@@ -1307,10 +1215,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES:
 				getActivitydiagram_tracedTraces().clear();
 				getActivitydiagram_tracedTraces().addAll((Collection<? extends TracedTrace>)newValue);
-				return;
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES:
-				getActivitydiagram_tracedValues().clear();
-				getActivitydiagram_tracedValues().addAll((Collection<? extends TracedValue>)newValue);
 				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES:
 				getActivitydiagram_tracedVariables().clear();
@@ -1386,9 +1290,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS:
 				getActivitydiagram_tracedActivitys().clear();
 				return;
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES:
-				getActivitydiagram_tracedBooleanValues().clear();
-				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES:
 				getActivitydiagram_tracedBooleanVariables().clear();
 				return;
@@ -1416,9 +1317,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS:
 				getActivitydiagram_tracedInputs().clear();
 				return;
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES:
-				getActivitydiagram_tracedIntegerValues().clear();
-				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES:
 				getActivitydiagram_tracedIntegerVariables().clear();
 				return;
@@ -1439,9 +1337,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES:
 				getActivitydiagram_tracedTraces().clear();
-				return;
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES:
-				getActivitydiagram_tracedValues().clear();
 				return;
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES:
 				getActivitydiagram_tracedVariables().clear();
@@ -1497,8 +1392,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return activitydiagram_tracedActivityNodes != null && !activitydiagram_tracedActivityNodes.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_ACTIVITYS:
 				return activitydiagram_tracedActivitys != null && !activitydiagram_tracedActivitys.isEmpty();
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VALUES:
-				return activitydiagram_tracedBooleanValues != null && !activitydiagram_tracedBooleanValues.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_BOOLEAN_VARIABLES:
 				return activitydiagram_tracedBooleanVariables != null && !activitydiagram_tracedBooleanVariables.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_CONTROL_FLOWS:
@@ -1517,8 +1410,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return activitydiagram_tracedInputValues != null && !activitydiagram_tracedInputValues.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INPUTS:
 				return activitydiagram_tracedInputs != null && !activitydiagram_tracedInputs.isEmpty();
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VALUES:
-				return activitydiagram_tracedIntegerValues != null && !activitydiagram_tracedIntegerValues.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_INTEGER_VARIABLES:
 				return activitydiagram_tracedIntegerVariables != null && !activitydiagram_tracedIntegerVariables.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_JOIN_NODES:
@@ -1533,8 +1424,6 @@ public class SpecificTraceImpl extends TraceImpl<SequentialStep<SpecificStep>> i
 				return activitydiagram_tracedTokens != null && !activitydiagram_tracedTokens.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_TRACES:
 				return activitydiagram_tracedTraces != null && !activitydiagram_tracedTraces.isEmpty();
-			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VALUES:
-				return activitydiagram_tracedValues != null && !activitydiagram_tracedValues.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__ACTIVITYDIAGRAM_TRACED_VARIABLES:
 				return activitydiagram_tracedVariables != null && !activitydiagram_tracedVariables.isEmpty();
 			case ActivitydiagramTracePackage.SPECIFIC_TRACE__STATES_TRACE:

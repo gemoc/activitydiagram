@@ -2,13 +2,13 @@
  */
 package activitydiagramTrace.States.impl;
 
+import activitydiagramTrace.States.Input_inputValues_Value;
 import activitydiagramTrace.States.State;
 import activitydiagramTrace.States.StatesPackage;
-import activitydiagramTrace.States.Token_holder_Value;
 
 import activitydiagramTrace.States.activitydiagram.ActivitydiagramPackage;
-import activitydiagramTrace.States.activitydiagram.TracedActivityNode;
-import activitydiagramTrace.States.activitydiagram.TracedToken;
+import activitydiagramTrace.States.activitydiagram.TracedInput;
+import activitydiagramTrace.States.activitydiagram.TracedInputValue;
 
 import java.util.Collection;
 
@@ -23,36 +23,37 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Token holder Value</b></em>'.
+ * An implementation of the model object '<em><b>Input input Values Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link activitydiagramTrace.States.impl.Token_holder_ValueImpl#getStatesNoOpposite <em>States No Opposite</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.Token_holder_ValueImpl#getHolder <em>Holder</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.Token_holder_ValueImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link activitydiagramTrace.States.impl.Token_holder_ValueImpl#getStates <em>States</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl#getStatesNoOpposite <em>States No Opposite</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl#getInputValues <em>Input Values</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link activitydiagramTrace.States.impl.Input_inputValues_ValueImpl#getStates <em>States</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container implements Token_holder_Value {
+public class Input_inputValues_ValueImpl extends MinimalEObjectImpl.Container implements Input_inputValues_Value {
 	/**
-	 * The cached value of the '{@link #getHolder() <em>Holder</em>}' reference.
+	 * The cached value of the '{@link #getInputValues() <em>Input Values</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHolder()
+	 * @see #getInputValues()
 	 * @generated
 	 * @ordered
 	 */
-	protected TracedActivityNode holder;
+	protected EList<TracedInputValue> inputValues;
 
 	/**
 	 * The cached value of the '{@link #getStates() <em>States</em>}' reference list.
@@ -69,7 +70,7 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Token_holder_ValueImpl() {
+	protected Input_inputValues_ValueImpl() {
 		super();
 	}
 
@@ -80,7 +81,7 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StatesPackage.Literals.TOKEN_HOLDER_VALUE;
+		return StatesPackage.Literals.INPUT_INPUT_VALUES_VALUE;
 	}
 
 	/**
@@ -97,16 +98,11 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode getHolder() {
-		if (holder != null && holder.eIsProxy()) {
-			InternalEObject oldHolder = (InternalEObject)holder;
-			holder = (TracedActivityNode)eResolveProxy(oldHolder);
-			if (holder != oldHolder) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StatesPackage.TOKEN_HOLDER_VALUE__HOLDER, oldHolder, holder));
-			}
+	public EList<TracedInputValue> getInputValues() {
+		if (inputValues == null) {
+			inputValues = new EObjectResolvingEList<TracedInputValue>(TracedInputValue.class, this, StatesPackage.INPUT_INPUT_VALUES_VALUE__INPUT_VALUES);
 		}
-		return holder;
+		return inputValues;
 	}
 
 	/**
@@ -114,8 +110,9 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TracedActivityNode basicGetHolder() {
-		return holder;
+	public TracedInput getParent() {
+		if (eContainerFeatureID() != StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT) return null;
+		return (TracedInput)eInternalContainer();
 	}
 
 	/**
@@ -123,30 +120,8 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHolder(TracedActivityNode newHolder) {
-		TracedActivityNode oldHolder = holder;
-		holder = newHolder;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.TOKEN_HOLDER_VALUE__HOLDER, oldHolder, holder));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TracedToken getParent() {
-		if (eContainerFeatureID() != StatesPackage.TOKEN_HOLDER_VALUE__PARENT) return null;
-		return (TracedToken)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetParent(TracedToken newParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParent, StatesPackage.TOKEN_HOLDER_VALUE__PARENT, msgs);
+	public NotificationChain basicSetParent(TracedInput newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newParent, StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT, msgs);
 		return msgs;
 	}
 
@@ -155,20 +130,20 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParent(TracedToken newParent) {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != StatesPackage.TOKEN_HOLDER_VALUE__PARENT && newParent != null)) {
+	public void setParent(TracedInput newParent) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, ActivitydiagramPackage.TRACED_TOKEN__HOLDER_SEQUENCE, TracedToken.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, ActivitydiagramPackage.TRACED_INPUT__INPUT_VALUES_SEQUENCE, TracedInput.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.TOKEN_HOLDER_VALUE__PARENT, newParent, newParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT, newParent, newParent));
 	}
 
 	/**
@@ -178,7 +153,7 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<State> getStates() {
 		if (states == null) {
-			states = new EObjectWithInverseResolvingEList.ManyInverse<State>(State.class, this, StatesPackage.TOKEN_HOLDER_VALUE__STATES, StatesPackage.STATE__TOKEN_HOLDER_VALUES);
+			states = new EObjectWithInverseResolvingEList.ManyInverse<State>(State.class, this, StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES, StatesPackage.STATE__INPUT_INPUT_VALUES_VALUES);
 		}
 		return states;
 	}
@@ -192,11 +167,11 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((TracedToken)otherEnd, msgs);
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES:
+				return basicSetParent((TracedInput)otherEnd, msgs);
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStates()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -210,9 +185,9 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
 				return basicSetParent(null, msgs);
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -226,8 +201,8 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
-				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.TRACED_TOKEN__HOLDER_SEQUENCE, TracedToken.class, msgs);
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
+				return eInternalContainer().eInverseRemove(this, ActivitydiagramPackage.TRACED_INPUT__INPUT_VALUES_SEQUENCE, TracedInput.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -240,14 +215,13 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES_NO_OPPOSITE:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES_NO_OPPOSITE:
 				return getStatesNoOpposite();
-			case StatesPackage.TOKEN_HOLDER_VALUE__HOLDER:
-				if (resolve) return getHolder();
-				return basicGetHolder();
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__INPUT_VALUES:
+				return getInputValues();
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
 				return getParent();
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES:
 				return getStates();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -262,13 +236,14 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__HOLDER:
-				setHolder((TracedActivityNode)newValue);
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__INPUT_VALUES:
+				getInputValues().clear();
+				getInputValues().addAll((Collection<? extends TracedInputValue>)newValue);
 				return;
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
-				setParent((TracedToken)newValue);
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
+				setParent((TracedInput)newValue);
 				return;
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
 				return;
@@ -284,13 +259,13 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__HOLDER:
-				setHolder((TracedActivityNode)null);
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__INPUT_VALUES:
+				getInputValues().clear();
 				return;
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
-				setParent((TracedToken)null);
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
+				setParent((TracedInput)null);
 				return;
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES:
 				getStates().clear();
 				return;
 		}
@@ -305,16 +280,16 @@ public class Token_holder_ValueImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES_NO_OPPOSITE:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES_NO_OPPOSITE:
 				return !getStatesNoOpposite().isEmpty();
-			case StatesPackage.TOKEN_HOLDER_VALUE__HOLDER:
-				return holder != null;
-			case StatesPackage.TOKEN_HOLDER_VALUE__PARENT:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__INPUT_VALUES:
+				return inputValues != null && !inputValues.isEmpty();
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__PARENT:
 				return getParent() != null;
-			case StatesPackage.TOKEN_HOLDER_VALUE__STATES:
+			case StatesPackage.INPUT_INPUT_VALUES_VALUE__STATES:
 				return states != null && !states.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //Token_holder_ValueImpl
+} //Input_inputValues_ValueImpl
