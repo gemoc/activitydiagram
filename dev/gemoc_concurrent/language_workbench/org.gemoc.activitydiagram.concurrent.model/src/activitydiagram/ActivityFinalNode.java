@@ -14,5 +14,4 @@ package activitydiagram;
  * @generated
  */
 public interface ActivityFinalNode extends FinalNode {
-
 } // ActivityFinalNode

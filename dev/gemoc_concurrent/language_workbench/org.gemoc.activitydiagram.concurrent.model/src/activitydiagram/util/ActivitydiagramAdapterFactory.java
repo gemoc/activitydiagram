@@ -184,10 +184,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createBooleanBinaryExpressionAdapter();
 			}
 			@Override
-			public Adapter caseToken(Token object) {
-				return createTokenAdapter();
-			}
-			@Override
 			public Adapter caseInputValue(InputValue object) {
 				return createInputValueAdapter();
 			}
@@ -634,20 +630,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBooleanBinaryExpressionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.Token <em>Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.Token
-	 * @generated
-	 */
-	public Adapter createTokenAdapter() {
 		return null;
 	}
 

@@ -5,7 +5,9 @@ package activitydiagram.impl;
 import activitydiagram.AcceptEventAction;
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.SignalEvent;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagram" nsURI="http://org.gemoc.activitydiagram.concurrent/activitydiagram_dynamic"
-    nsPrefix="activitydiagram">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagram" nsURI="http://org.gemoc.activitydiagram.concurrent/activitydiagram_dynamic" nsPrefix="activitydiagram">
   <eClassifiers xsi:type="ecore:EClass" name="Token" abstract="true">
     <eAnnotations source="aspect"/>
   </eClassifiers>
@@ -11,17 +9,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="Trace">
     <eAnnotations source="aspect"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputValue">
+  <eClassifiers xsi:type="ecore:EClass" name="ControlToken" eSuperTypes="//Token">
     <eAnnotations source="aspect"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Input">
+  <eClassifiers xsi:type="ecore:EClass" name="ForkedToken" eSuperTypes="//Token">
     <eAnnotations source="aspect"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ControlToken" eSuperTypes="#//Token">
+  <eClassifiers xsi:type="ecore:EClass" name="Context">
     <eAnnotations source="aspect"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ForkedToken" eSuperTypes="#//Token">
-    <eAnnotations source="aspect"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Context"/>
 </ecore:EPackage>

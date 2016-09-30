@@ -1680,43 +1680,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	int BOOLEAN_BINARY_EXPRESSION_OPERATION_COUNT = BOOLEAN_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagram.impl.TokenImpl <em>Token</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.TokenImpl
-	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
-	 * @generated
-	 */
-	int TOKEN = 29;
-
-	/**
-	 * The feature id for the '<em><b>Holder</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN__HOLDER = 0;
-
-	/**
-	 * The number of structural features of the '<em>Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1724,7 +1687,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getInputValue()
 	 * @generated
 	 */
-	int INPUT_VALUE = 30;
+	int INPUT_VALUE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1770,7 +1733,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 31;
+	int INPUT = 30;
 
 	/**
 	 * The feature id for the '<em><b>Input Values</b></em>' containment reference list.
@@ -1807,7 +1770,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSendSignalAction()
 	 * @generated
 	 */
-	int SEND_SIGNAL_ACTION = 32;
+	int SEND_SIGNAL_ACTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1880,7 +1843,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getAcceptEventAction()
 	 * @generated
 	 */
-	int ACCEPT_EVENT_ACTION = 33;
+	int ACCEPT_EVENT_ACTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1953,7 +1916,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignal()
 	 * @generated
 	 */
-	int SIGNAL = 34;
+	int SIGNAL = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1990,7 +1953,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getSignalEvent()
 	 * @generated
 	 */
-	int SIGNAL_EVENT = 35;
+	int SIGNAL_EVENT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2027,7 +1990,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationOperator()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_OPERATOR = 36;
+	int INTEGER_CALCULATION_OPERATOR = 35;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.IntegerComparisonOperator <em>Integer Comparison Operator</em>}' enum.
@@ -2037,7 +2000,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonOperator()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_OPERATOR = 37;
+	int INTEGER_COMPARISON_OPERATOR = 36;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanUnaryOperator <em>Boolean Unary Operator</em>}' enum.
@@ -2047,7 +2010,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_OPERATOR = 38;
+	int BOOLEAN_UNARY_OPERATOR = 37;
 
 	/**
 	 * The meta object id for the '{@link activitydiagram.BooleanBinaryOperator <em>Boolean Binary Operator</em>}' enum.
@@ -2057,7 +2020,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_OPERATOR = 39;
+	int BOOLEAN_BINARY_OPERATOR = 38;
 
 
 	/**
@@ -2679,27 +2642,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBooleanBinaryExpression_Operator();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagram.Token <em>Token</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Token</em>'.
-	 * @see activitydiagram.Token
-	 * @generated
-	 */
-	EClass getToken();
-
-	/**
-	 * Returns the meta object for the reference '{@link activitydiagram.Token#getHolder <em>Holder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Holder</em>'.
-	 * @see activitydiagram.Token#getHolder()
-	 * @see #getToken()
-	 * @generated
-	 */
-	EReference getToken_Holder();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.InputValue <em>Input Value</em>}'.
@@ -3408,24 +3350,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOLEAN_BINARY_EXPRESSION__OPERATOR = eINSTANCE.getBooleanBinaryExpression_Operator();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.TokenImpl <em>Token</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.TokenImpl
-		 * @see activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
-		 * @generated
-		 */
-		EClass TOKEN = eINSTANCE.getToken();
-
-		/**
-		 * The meta object literal for the '<em><b>Holder</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TOKEN__HOLDER = eINSTANCE.getToken_Holder();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.

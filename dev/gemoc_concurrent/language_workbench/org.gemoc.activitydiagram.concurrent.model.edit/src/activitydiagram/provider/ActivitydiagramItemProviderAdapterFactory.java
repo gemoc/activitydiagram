@@ -463,52 +463,6 @@ public class ActivitydiagramItemProviderAdapterFactory extends ActivitydiagramAd
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link activitydiagram.Offer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OfferItemProvider offerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link activitydiagram.Offer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOfferAdapter() {
-		if (offerItemProvider == null) {
-			offerItemProvider = new OfferItemProvider(this);
-		}
-
-		return offerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link activitydiagram.Trace} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TraceItemProvider traceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link activitydiagram.Trace}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTraceAdapter() {
-		if (traceItemProvider == null) {
-			traceItemProvider = new TraceItemProvider(this);
-		}
-
-		return traceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link activitydiagram.InputValue} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -552,52 +506,6 @@ public class ActivitydiagramItemProviderAdapterFactory extends ActivitydiagramAd
 		}
 
 		return inputItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link activitydiagram.ControlToken} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ControlTokenItemProvider controlTokenItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link activitydiagram.ControlToken}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createControlTokenAdapter() {
-		if (controlTokenItemProvider == null) {
-			controlTokenItemProvider = new ControlTokenItemProvider(this);
-		}
-
-		return controlTokenItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link activitydiagram.ForkedToken} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ForkedTokenItemProvider forkedTokenItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link activitydiagram.ForkedToken}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createForkedTokenAdapter() {
-		if (forkedTokenItemProvider == null) {
-			forkedTokenItemProvider = new ForkedTokenItemProvider(this);
-		}
-
-		return forkedTokenItemProvider;
 	}
 
 	/**
@@ -808,12 +716,8 @@ public class ActivitydiagramItemProviderAdapterFactory extends ActivitydiagramAd
 		if (integerComparisonExpressionItemProvider != null) integerComparisonExpressionItemProvider.dispose();
 		if (booleanUnaryExpressionItemProvider != null) booleanUnaryExpressionItemProvider.dispose();
 		if (booleanBinaryExpressionItemProvider != null) booleanBinaryExpressionItemProvider.dispose();
-		if (offerItemProvider != null) offerItemProvider.dispose();
-		if (traceItemProvider != null) traceItemProvider.dispose();
 		if (inputValueItemProvider != null) inputValueItemProvider.dispose();
 		if (inputItemProvider != null) inputItemProvider.dispose();
-		if (controlTokenItemProvider != null) controlTokenItemProvider.dispose();
-		if (forkedTokenItemProvider != null) forkedTokenItemProvider.dispose();
 		if (sendSignalActionItemProvider != null) sendSignalActionItemProvider.dispose();
 		if (acceptEventActionItemProvider != null) acceptEventActionItemProvider.dispose();
 		if (signalItemProvider != null) signalItemProvider.dispose();

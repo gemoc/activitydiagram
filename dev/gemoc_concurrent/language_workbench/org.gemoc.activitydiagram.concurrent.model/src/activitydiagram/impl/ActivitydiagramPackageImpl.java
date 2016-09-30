@@ -41,7 +41,6 @@ import activitydiagram.OpaqueAction;
 import activitydiagram.SendSignalAction;
 import activitydiagram.Signal;
 import activitydiagram.SignalEvent;
-import activitydiagram.Token;
 import activitydiagram.Value;
 import activitydiagram.Variable;
 
@@ -262,13 +261,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	private EClass booleanBinaryExpressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tokenEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -937,24 +929,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getToken() {
-		return tokenEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getToken_Holder() {
-		return (EReference)tokenEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getInputValue() {
 		return inputValueEClass;
 	}
@@ -1201,9 +1175,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(booleanBinaryExpressionEClass, BOOLEAN_BINARY_EXPRESSION__OPERAND2);
 		createEAttribute(booleanBinaryExpressionEClass, BOOLEAN_BINARY_EXPRESSION__OPERATOR);
 
-		tokenEClass = createEClass(TOKEN);
-		createEReference(tokenEClass, TOKEN__HOLDER);
-
 		inputValueEClass = createEClass(INPUT_VALUE);
 		createEReference(inputValueEClass, INPUT_VALUE__VALUE);
 		createEReference(inputValueEClass, INPUT_VALUE__VARIABLE);
@@ -1375,9 +1346,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getBooleanBinaryExpression_Operand2(), this.getBooleanVariable(), null, "operand2", null, 1, 1, BooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBooleanBinaryExpression_Operator(), this.getBooleanBinaryOperator(), "operator", null, 1, 1, BooleanBinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tokenEClass, Token.class, "Token", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getToken_Holder(), this.getActivityNode(), null, "holder", null, 1, 1, Token.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputValue_Value(), this.getValue(), null, "value", null, 1, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInputValue_Variable(), this.getVariable(), null, "variable", null, 1, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1416,40 +1384,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// aspect
-		createAspectAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>aspect</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createAspectAnnotations() {
-		String source = "aspect";	
-		addAnnotation
-		  (valueEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (tokenEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (inputValueEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (inputEClass, 
-		   source, 
-		   new String[] {
-		   });
 	}
 
 } //ActivitydiagramPackageImpl

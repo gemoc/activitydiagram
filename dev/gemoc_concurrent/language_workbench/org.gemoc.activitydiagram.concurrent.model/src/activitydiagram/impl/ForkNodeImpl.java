@@ -4,6 +4,7 @@ package activitydiagram.impl;
 
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.ForkNode;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

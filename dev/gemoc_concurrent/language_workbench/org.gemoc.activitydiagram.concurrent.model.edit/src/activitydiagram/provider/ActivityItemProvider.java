@@ -91,7 +91,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__EDGES);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__LOCALS);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__INPUTS);
-			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__TRACE);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.ACTIVITY__SIGNALS);
 		}
 		return childrenFeatures;
@@ -155,7 +154,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			case ActivitydiagramPackage.ACTIVITY__EDGES:
 			case ActivitydiagramPackage.ACTIVITY__LOCALS:
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
-			case ActivitydiagramPackage.ACTIVITY__TRACE:
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -243,11 +241,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(ActivitydiagramPackage.Literals.ACTIVITY__INPUTS,
 				 ActivitydiagramFactory.eINSTANCE.createBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ActivitydiagramPackage.Literals.ACTIVITY__TRACE,
-				 ActivitydiagramFactory.eINSTANCE.createTrace()));
 
 		newChildDescriptors.add
 			(createChildParameter

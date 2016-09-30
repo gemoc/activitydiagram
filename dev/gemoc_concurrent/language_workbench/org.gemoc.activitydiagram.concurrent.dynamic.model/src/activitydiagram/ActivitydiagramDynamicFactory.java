@@ -40,24 +40,6 @@ public interface ActivitydiagramDynamicFactory extends EFactory {
 	Trace createTrace();
 
 	/**
-	 * Returns a new object of class '<em>Input Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Value</em>'.
-	 * @generated
-	 */
-	InputValue createInputValue();
-
-	/**
-	 * Returns a new object of class '<em>Input</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input</em>'.
-	 * @generated
-	 */
-	Input createInput();
-
-	/**
 	 * Returns a new object of class '<em>Control Token</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

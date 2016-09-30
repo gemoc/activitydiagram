@@ -14,5 +14,4 @@ package activitydiagram;
  * @generated
  */
 public interface JoinNode extends ControlNode {
-
 } // JoinNode

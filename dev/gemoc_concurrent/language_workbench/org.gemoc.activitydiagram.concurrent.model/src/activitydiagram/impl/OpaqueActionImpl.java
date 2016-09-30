@@ -5,6 +5,7 @@ package activitydiagram.impl;
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.Expression;
 import activitydiagram.OpaqueAction;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

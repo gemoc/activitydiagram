@@ -4,6 +4,7 @@ package activitydiagram.impl;
 
 import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.ControlToken;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

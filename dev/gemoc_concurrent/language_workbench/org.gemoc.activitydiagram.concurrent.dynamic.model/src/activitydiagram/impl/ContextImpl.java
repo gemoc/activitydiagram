@@ -4,6 +4,7 @@ package activitydiagram.impl;
 
 import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.Context;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;

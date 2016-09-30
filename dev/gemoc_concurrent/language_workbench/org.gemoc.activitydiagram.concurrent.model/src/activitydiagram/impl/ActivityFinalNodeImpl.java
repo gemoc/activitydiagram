@@ -4,6 +4,7 @@ package activitydiagram.impl;
 
 import activitydiagram.ActivityFinalNode;
 import activitydiagram.ActivitydiagramPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

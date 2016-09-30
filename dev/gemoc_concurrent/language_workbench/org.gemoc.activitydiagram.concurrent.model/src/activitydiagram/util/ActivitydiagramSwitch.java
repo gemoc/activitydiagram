@@ -292,12 +292,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.TOKEN: {
-				Token token = (Token)theEObject;
-				T result = caseToken(token);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramPackage.INPUT_VALUE: {
 				InputValue inputValue = (InputValue)theEObject;
 				T result = caseInputValue(inputValue);
@@ -781,21 +775,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBooleanBinaryExpression(BooleanBinaryExpression object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Token</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Token</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseToken(Token object) {
 		return null;
 	}
 

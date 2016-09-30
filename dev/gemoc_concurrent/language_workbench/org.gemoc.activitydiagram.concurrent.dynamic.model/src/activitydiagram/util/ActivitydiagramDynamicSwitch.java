@@ -84,18 +84,6 @@ public class ActivitydiagramDynamicSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramDynamicPackage.INPUT_VALUE: {
-				InputValue inputValue = (InputValue)theEObject;
-				T result = caseInputValue(inputValue);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ActivitydiagramDynamicPackage.INPUT: {
-				Input input = (Input)theEObject;
-				T result = caseInput(input);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ActivitydiagramDynamicPackage.CONTROL_TOKEN: {
 				ControlToken controlToken = (ControlToken)theEObject;
 				T result = caseControlToken(controlToken);
@@ -162,36 +150,6 @@ public class ActivitydiagramDynamicSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTrace(Trace object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputValue(InputValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInput(Input object) {
 		return null;
 	}
 

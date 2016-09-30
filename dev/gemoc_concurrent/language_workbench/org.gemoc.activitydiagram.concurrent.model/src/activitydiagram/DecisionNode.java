@@ -14,5 +14,4 @@ package activitydiagram;
  * @generated
  */
 public interface DecisionNode extends ControlNode {
-
 } // DecisionNode

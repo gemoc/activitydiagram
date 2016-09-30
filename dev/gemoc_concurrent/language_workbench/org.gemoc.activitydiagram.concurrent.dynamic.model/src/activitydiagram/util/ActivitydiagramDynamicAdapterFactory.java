@@ -80,14 +80,6 @@ public class ActivitydiagramDynamicAdapterFactory extends AdapterFactoryImpl {
 				return createTraceAdapter();
 			}
 			@Override
-			public Adapter caseInputValue(InputValue object) {
-				return createInputValueAdapter();
-			}
-			@Override
-			public Adapter caseInput(Input object) {
-				return createInputAdapter();
-			}
-			@Override
 			public Adapter caseControlToken(ControlToken object) {
 				return createControlTokenAdapter();
 			}
@@ -158,34 +150,6 @@ public class ActivitydiagramDynamicAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTraceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.InputValue <em>Input Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.InputValue
-	 * @generated
-	 */
-	public Adapter createInputValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link activitydiagram.Input <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see activitydiagram.Input
-	 * @generated
-	 */
-	public Adapter createInputAdapter() {
 		return null;
 	}
 

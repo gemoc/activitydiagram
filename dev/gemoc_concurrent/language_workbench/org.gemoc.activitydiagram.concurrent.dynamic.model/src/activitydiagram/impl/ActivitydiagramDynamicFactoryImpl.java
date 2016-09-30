@@ -58,8 +58,6 @@ public class ActivitydiagramDynamicFactoryImpl extends EFactoryImpl implements A
 		switch (eClass.getClassifierID()) {
 			case ActivitydiagramDynamicPackage.OFFER: return createOffer();
 			case ActivitydiagramDynamicPackage.TRACE: return createTrace();
-			case ActivitydiagramDynamicPackage.INPUT_VALUE: return createInputValue();
-			case ActivitydiagramDynamicPackage.INPUT: return createInput();
 			case ActivitydiagramDynamicPackage.CONTROL_TOKEN: return createControlToken();
 			case ActivitydiagramDynamicPackage.FORKED_TOKEN: return createForkedToken();
 			case ActivitydiagramDynamicPackage.CONTEXT: return createContext();
@@ -86,26 +84,6 @@ public class ActivitydiagramDynamicFactoryImpl extends EFactoryImpl implements A
 	public Trace createTrace() {
 		TraceImpl trace = new TraceImpl();
 		return trace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputValue createInputValue() {
-		InputValueImpl inputValue = new InputValueImpl();
-		return inputValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Input createInput() {
-		InputImpl input = new InputImpl();
-		return input;
 	}
 
 	/**

@@ -14,5 +14,4 @@ package activitydiagram;
  * @generated
  */
 public interface InitialNode extends ControlNode {
-
 } // InitialNode

@@ -139,62 +139,6 @@ public interface ActivitydiagramDynamicPackage extends EPackage {
 	int TRACE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.InputValueImpl
-	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInputValue()
-	 * @generated
-	 */
-	int INPUT_VALUE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Input Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Input Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link activitydiagram.impl.InputImpl <em>Input</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see activitydiagram.impl.InputImpl
-	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInput()
-	 * @generated
-	 */
-	int INPUT = 4;
-
-	/**
-	 * The number of structural features of the '<em>Input</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Input</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,7 +146,7 @@ public interface ActivitydiagramDynamicPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getControlToken()
 	 * @generated
 	 */
-	int CONTROL_TOKEN = 5;
+	int CONTROL_TOKEN = 3;
 
 	/**
 	 * The number of structural features of the '<em>Control Token</em>' class.
@@ -230,7 +174,7 @@ public interface ActivitydiagramDynamicPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getForkedToken()
 	 * @generated
 	 */
-	int FORKED_TOKEN = 6;
+	int FORKED_TOKEN = 4;
 
 	/**
 	 * The number of structural features of the '<em>Forked Token</em>' class.
@@ -258,7 +202,7 @@ public interface ActivitydiagramDynamicPackage extends EPackage {
 	 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getContext()
 	 * @generated
 	 */
-	int CONTEXT = 7;
+	int CONTEXT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -308,26 +252,6 @@ public interface ActivitydiagramDynamicPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTrace();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagram.InputValue <em>Input Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Value</em>'.
-	 * @see activitydiagram.InputValue
-	 * @generated
-	 */
-	EClass getInputValue();
-
-	/**
-	 * Returns the meta object for class '{@link activitydiagram.Input <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input</em>'.
-	 * @see activitydiagram.Input
-	 * @generated
-	 */
-	EClass getInput();
 
 	/**
 	 * Returns the meta object for class '{@link activitydiagram.ControlToken <em>Control Token</em>}'.
@@ -411,26 +335,6 @@ public interface ActivitydiagramDynamicPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRACE = eINSTANCE.getTrace();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.InputValueImpl
-		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInputValue()
-		 * @generated
-		 */
-		EClass INPUT_VALUE = eINSTANCE.getInputValue();
-
-		/**
-		 * The meta object literal for the '{@link activitydiagram.impl.InputImpl <em>Input</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see activitydiagram.impl.InputImpl
-		 * @see activitydiagram.impl.ActivitydiagramDynamicPackageImpl#getInput()
-		 * @generated
-		 */
-		EClass INPUT = eINSTANCE.getInput();
 
 		/**
 		 * The meta object literal for the '{@link activitydiagram.impl.ControlTokenImpl <em>Control Token</em>}' class.

@@ -7,8 +7,6 @@ import activitydiagram.ActivitydiagramDynamicPackage;
 import activitydiagram.Context;
 import activitydiagram.ControlToken;
 import activitydiagram.ForkedToken;
-import activitydiagram.Input;
-import activitydiagram.InputValue;
 import activitydiagram.Offer;
 import activitydiagram.Token;
 import activitydiagram.Trace;
@@ -45,20 +43,6 @@ public class ActivitydiagramDynamicPackageImpl extends EPackageImpl implements A
 	 * @generated
 	 */
 	private EClass traceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass inputValueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass inputEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,24 +158,6 @@ public class ActivitydiagramDynamicPackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInputValue() {
-		return inputValueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInput() {
-		return inputEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getControlToken() {
 		return controlTokenEClass;
 	}
@@ -248,10 +214,6 @@ public class ActivitydiagramDynamicPackageImpl extends EPackageImpl implements A
 
 		traceEClass = createEClass(TRACE);
 
-		inputValueEClass = createEClass(INPUT_VALUE);
-
-		inputEClass = createEClass(INPUT);
-
 		controlTokenEClass = createEClass(CONTROL_TOKEN);
 
 		forkedTokenEClass = createEClass(FORKED_TOKEN);
@@ -297,10 +259,6 @@ public class ActivitydiagramDynamicPackageImpl extends EPackageImpl implements A
 
 		initEClass(traceEClass, Trace.class, "Trace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(controlTokenEClass, ControlToken.class, "ControlToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(forkedTokenEClass, ForkedToken.class, "ForkedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -339,22 +297,17 @@ public class ActivitydiagramDynamicPackageImpl extends EPackageImpl implements A
 		   new String[] {
 		   });	
 		addAnnotation
-		  (inputValueEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (inputEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (controlTokenEClass, 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
 		  (forkedTokenEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (contextEClass, 
 		   source, 
 		   new String[] {
 		   });

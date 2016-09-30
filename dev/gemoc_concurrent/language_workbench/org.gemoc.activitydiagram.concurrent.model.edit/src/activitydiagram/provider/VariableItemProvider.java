@@ -103,7 +103,6 @@ public class VariableItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ActivitydiagramPackage.Literals.VARIABLE__INITIAL_VALUE);
-			childrenFeatures.add(ActivitydiagramPackage.Literals.VARIABLE__CURRENT_VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -152,7 +151,6 @@ public class VariableItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ActivitydiagramPackage.VARIABLE__INITIAL_VALUE:
-			case ActivitydiagramPackage.VARIABLE__CURRENT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -179,39 +177,6 @@ public class VariableItemProvider
 			(createChildParameter
 				(ActivitydiagramPackage.Literals.VARIABLE__INITIAL_VALUE,
 				 ActivitydiagramFactory.eINSTANCE.createIntegerValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ActivitydiagramPackage.Literals.VARIABLE__CURRENT_VALUE,
-				 ActivitydiagramFactory.eINSTANCE.createBooleanValue()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ActivitydiagramPackage.Literals.VARIABLE__CURRENT_VALUE,
-				 ActivitydiagramFactory.eINSTANCE.createIntegerValue()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == ActivitydiagramPackage.Literals.VARIABLE__INITIAL_VALUE ||
-			childFeature == ActivitydiagramPackage.Literals.VARIABLE__CURRENT_VALUE;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

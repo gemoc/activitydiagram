@@ -4,6 +4,7 @@ package activitydiagram.impl;
 
 import activitydiagram.ActivitydiagramPackage;
 import activitydiagram.DecisionNode;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

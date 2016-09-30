@@ -13,12 +13,6 @@
       <ecoreClass href="dynamic.ecore#//Trace"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="dynamic.ecore#//InputValue"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="dynamic.ecore#//Input"/>
-    </genClasses>
-    <genClasses>
       <ecoreClass href="dynamic.ecore#//ControlToken"/>
     </genClasses>
     <genClasses>
