@@ -5,7 +5,7 @@ import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
 var grammarURI = "classpath:/org/gemoc/activitydiagram/concurrent/xactivitydiagram/ActivityDiagramInput.xtext"
-var fileExtensions = "adinput"
+var fileExtensions = "xcadinput"
 var projectName = "org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar"
 var runtimeProject = "../${projectName}"
 var generateXtendStub = true
