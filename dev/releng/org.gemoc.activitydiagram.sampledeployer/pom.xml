@@ -39,34 +39,47 @@
 								<mkdir dir="${basedir}/zips" />
 								
 								<!-- Activity diagram commons Language Workbench  -->
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.design.zip">
+								<!-- <zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.design.zip">
 									<fileset dir="${gemoc_commons_lw_root}/org.modelexecution.operationalsemantics.ad.design/" />
-								</zip>
+								</zip>-->
 								
 								<!-- Activity diagram Concurrent Language Workbench  -->
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.concurrent.ecl.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.concurrent.ecl/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.dynamic.model.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.dynamic.model/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic/" />
+								
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.k3dsa.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.k3dsa/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.concurrent.xdsml.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.concurrent.xdsml/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.moc.dse.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.moc.dse/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.grammar/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.model.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.model/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.ui.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.grammar.ui/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.model.edit.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.model.edit/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/oorg.gemoc.activitydiagram.concurrent.xactivitydiagram/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.ui.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.modelexecution.operationalsemantics.ad.input.grammar.ui/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/oorg.gemoc.activitydiagram.concurrent.xactivitydiagram.design/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar/" />
+								</zip>
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar.ui.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar.ui/" />
 								</zip>
 								
 								<!-- Activity diagram Sequential Language Workbench  -->
@@ -125,8 +138,8 @@
 
 								<!-- Activity diagram commons Modeling Workbench  -->
 								
-								<zip destfile="${basedir}/zips/org.modelexecution.operationalsemantics.ad.samplemodels.zip">
-									<fileset dir="${gemoc_commons_root}/modeling_workbench/org.modelexecution.operationalsemantics.ad.samplemodels/" />
+								<zip destfile="${basedir}/zips/org.gemoc.sample.activitydiagram.concurrent.examples.zip">
+									<fileset dir="${gemoc_sequential_mw_root}/org.gemoc.sample.activitydiagram.concurrent.examples/" />
 								</zip>
 							</tasks>
 						</configuration>

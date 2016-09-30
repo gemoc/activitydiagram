@@ -31,14 +31,17 @@ public class ActivityDiagramConcurrentLanguageExampleWizard
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.design.zip", "org.modelexecution.operationalsemantics.ad.design"));
 		
 		// concurrent projects
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.zip", "org.modelexecution.operationalsemantics.ad"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.concurrent.ecl.zip", "org.modelexecution.operationalsemantics.ad.concurrent.ecl"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic.zip", "org.modelexecution.operationalsemantics.ad.concurrent.k3.dynamic"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad.concurrent.xdsml.zip", "org.modelexecution.operationalsemantics.ad.concurrent.xdsml"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.zip", "org.modelexecution.operationalsemantics.ad.grammar"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.grammar.ui.zip", "org.modelexecution.operationalsemantics.ad.grammar.ui"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.zip", "org.modelexecution.operationalsemantics.ad.input.grammar"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.modelexecution.operationalsemantics.ad_concurrent.input.grammar.ui.zip", "org.modelexecution.operationalsemantics.ad.input.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.zip", 				"org.gemoc.activitydiagram.concurrent"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.dynamic.model.zip", 	"org.gemoc.activitydiagram.concurrent.dynamic.model"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.k3dsa.zip", 			"org.gemoc.activitydiagram.concurrent.k3dsa"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.moc.dse.zip", 		"org.gemoc.activitydiagram.concurrent.moc.dse"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.model.zip", 			"org.gemoc.activitydiagram.concurrent.model"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.model.edit.zip", 	"org.gemoc.activitydiagram.concurrent.model.edit"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.zip", 	"org.gemoc.activitydiagram.concurrent.xactivitydiagram"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.zip", "org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui.zip", "org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar.zip", "org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar.ui.zip", "org.gemoc.activitydiagram.concurrent.xactivitydiagram.input.grammar.ui"));
 		return projects;
 	}
 

@@ -9,7 +9,7 @@
             class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="adinput"
+            extensions="xcadinput"
             id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput"
             name="ActivityDiagramInput Editor">
         </editor>
@@ -213,13 +213,13 @@
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
 			class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="adinput">
+			type="xcadinput">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
             class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="adinput">
+            uriExtension="xcadinput">
         </resourceServiceProvider>
     </extension>
 
@@ -251,7 +251,7 @@
          point="org.eclipse.xtext.builder.participant">
       <participant
             class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-            fileExtensions="adinput"
+            fileExtensions="xcadinput"
             >
       </participant>
    </extension>
@@ -279,6 +279,27 @@
 	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
         </page>
     </extension>
+    <extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
+			<command
+				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
+				id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput.OpenGeneratedCode"
+				style="push">
+					<visibleWhen checkEnabled="false">
+						<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput.Editor.opened" />
+					</visibleWhen>
+			</command>
+		</menuContribution>
+	</extension>
+	<extension point="org.eclipse.ui.handlers">
+		<handler
+			class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
+				<activeWhen>
+					<reference definitionId="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput.Editor.opened" />
+				</activeWhen>
+		</handler>
+	</extension>
 
 	<!-- Quick Outline -->
 	<extension
@@ -379,20 +400,26 @@
   <extension point="org.eclipse.compare.contentViewers">
     <viewer id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput.compare.contentViewers"
             class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="adinput">
+            extensions="xcadinput">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
     <viewer id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput.compare.contentMergeViewers"
             class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="adinput" label="ActivityDiagramInput Compare">
+            extensions="xcadinput" label="ActivityDiagramInput Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
     <provider id="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ActivityDiagramInput.editors.documentProviders"
             class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-            extensions="adinput">
+            extensions="xcadinput">
     </provider>
+  </extension>
+  <extension point="org.eclipse.team.core.fileTypes">
+    <fileTypes
+            extension="xcadinput"
+            type="text">
+    </fileTypes>
   </extension>
 
 </plugin>
