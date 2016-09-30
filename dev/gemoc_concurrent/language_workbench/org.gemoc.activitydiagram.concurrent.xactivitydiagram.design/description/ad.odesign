@@ -2,7 +2,7 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="gemoc" version="8.1.0">
   <ownedViewpoints name="ActivityDiagram viewpoint" modelFileExtension="* ad xmi">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Activity Diagram" titleExpression="[self.oclAsType(NamedElement).name +' Activity Diagram'/]" initialisation="true" showOnStartup="true" domainClass="activitydiagram.Activity" enablePopupBars="true">
-      <metamodel href="../../org.modelexecution.operationalsemantics.ad/ad/activitydiagram.ecore#/"/>
+      <metamodel href="../../org.gemoc.activitydiagram.concurrent.xactivitydiagram/model/XActivityDiagram.ecore#/"/>
       <defaultLayer name="Activity">
         <edgeMappings name="AD_ControlFlow" semanticElements="service:getSemanticElements" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode'] //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']" targetMapping="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.source/]" domainClass="ControlFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlSource'] //@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlTarget']">
           <style sizeComputationExpression="1" routingStyle="manhattan">
@@ -20,7 +20,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
             </style>
             <conditionnalStyles predicateExpression="[self.oclIsTypeOf(InitialNode)/]">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[self.name/]" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/InitNode.png">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[self.name/]" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/InitNode.png">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -40,7 +40,7 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="[self.oclIsTypeOf(ActivityFinalNode)/]">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[self.name/]" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.modelexecution.operationalsemantics.ad.design/images/FinalNode.png">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="[self.name/]" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/FinalNode.png">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -486,8 +486,8 @@
       </additionalLayers>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.uml2.design.api.services.ActivityDiagramServices"/>
-    <ownedJavaExtensions qualifiedClassName="org.modelexecution.operationalsemantics.ad.design.services.ActivityDiagramDebugServices"/>
-    <ownedJavaExtensions qualifiedClassName="org.modelexecution.operationalsemantics.ad.design.services.ActivityDiagramAnimationServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.services.ActivityDiagramDebugServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.services.ActivityDiagramAnimationServices"/>
   </ownedViewpoints>
   <userColorsPalettes name="UMLPalette">
     <entries xsi:type="description:UserFixedColor" red="235" green="235" blue="235" name="Nested Package Foreground"/>

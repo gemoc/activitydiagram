@@ -1,19 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.modelexecution.operationalsemantics.ad.design
+Bundle-Name: org.gemoc.activitydiagram.concurrent.xactivitydiagram.design
 Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent.xactivitydiagram.design;singleton:=true
 Bundle-Version: 1.0.0
-Bundle-Activator: org.modelexecution.operationalsemantics.ad.design.Activator
+Bundle-Activator: org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.sirius;visibility:=reexport,
  org.eclipse.sirius.common.acceleo.mtl;visibility:=reexport,
  org.gemoc.executionframework.extensions.sirius,
- org.gemoc.activitydiagram.concurrent.model;bundle-version="0.1.0",
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram,
  org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar;bundle-version="1.0.0",
- org.gemoc.execution.sequential.javaengine.ui;bundle-version="0.1.0"
+ org.gemoc.execution.concurrent.ccsljavaengine.ui;bundle-version="2.2.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.modelexecution.operationalsemantics.ad.design,
- org.modelexecution.operationalsemantics.ad.design.services
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.gemoc.activitydiagram.concurrent.xactivitydiagram.design,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.services

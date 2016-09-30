@@ -1,4 +1,4 @@
-package org.modelexecution.operationalsemantics.ad.design;
+package org.gemoc.activitydiagram.concurrent.xactivitydiagram.design;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
     // The plug-in ID
-    public static final String PLUGIN_ID = "org.modelexecution.operationalsemantics.ad.design";
+    public static final String PLUGIN_ID = "org.gemoc.activitydiagram.concurrent.xactivitydiagram.design";
 
     // The shared instance
     private static Activator plugin;

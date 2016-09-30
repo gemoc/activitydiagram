@@ -1,4 +1,4 @@
-package org.modelexecution.operationalsemantics.ad.design.services;
+package org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.services;
 
 import java.util.ArrayList;
 import java.util.List;
