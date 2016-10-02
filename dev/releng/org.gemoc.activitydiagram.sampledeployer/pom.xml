@@ -64,10 +64,10 @@
 									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.model.edit/" />
 								</zip>
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/oorg.gemoc.activitydiagram.concurrent.xactivitydiagram/" />
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram/" />
 								</zip>
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/oorg.gemoc.activitydiagram.concurrent.xactivitydiagram.design/" />
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/" />
 								</zip>
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.zip">
 									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar/" />
