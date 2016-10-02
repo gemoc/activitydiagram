@@ -8,6 +8,7 @@
         <gemoc_commons_lw_root>${gemoc_commons_root}/language_workbench</gemoc_commons_lw_root>
         <gemoc_concurrent_root>${sample_root}/gemoc_concurrent</gemoc_concurrent_root>
         <gemoc_concurrent_lw_root>${gemoc_concurrent_root}/language_workbench</gemoc_concurrent_lw_root>
+        <gemoc_concurrent_mw_root>${gemoc_concurrent_root}/modeling_workbench</gemoc_concurrent_mw_root>
         <gemoc_sequential_root>${sample_root}/gemoc_sequential</gemoc_sequential_root>
         <gemoc_sequential_lw_root>${gemoc_sequential_root}/language_workbench</gemoc_sequential_lw_root>
         <gemoc_sequential_mw_root>${gemoc_sequential_root}/modeling_workbench</gemoc_sequential_mw_root>
@@ -136,10 +137,10 @@
 									<fileset dir="${gemoc_sequential_mw_root}/org.gemoc.sample.activitydiagram.sequential.examples/" />
 								</zip>
 
-								<!-- Activity diagram commons Modeling Workbench  -->
+								<!-- Activity diagram concurrent Modeling Workbench  -->
 								
 								<zip destfile="${basedir}/zips/org.gemoc.sample.activitydiagram.concurrent.examples.zip">
-									<fileset dir="${gemoc_sequential_mw_root}/org.gemoc.sample.activitydiagram.concurrent.examples/" />
+									<fileset dir="${gemoc_concurrent_mw_root}/org.gemoc.sample.activitydiagram.concurrent.examples/" />
 								</zip>
 							</tasks>
 						</configuration>
