@@ -3,7 +3,7 @@
 <plugin>
   <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
     <XDSML_Definition codeExecutor_class="xactivitydiagram.xdsml.api.impl.XActivityDiagramCodeExecutor" modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.concurrent.XActivityDiagram" solver_class="org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" toCCSLQVTOFilePath="/org.gemoc.activitydiagram.concurrent.moc.dse/qvto-gen/modeling/ActivitiyDiagramV2.qvto" xdsmlFilePath="/org.gemoc.activitydiagram.concurrent/src/org/gemoc/activitydiagram/concurrent/ConcurrentActivityDiagram.melange">
-      <XDSML_Definition_Customization fileExtensions="ad" />
+      <XDSML_Definition_Customization fileExtensions="xcad" />
     </XDSML_Definition>
   </extension>
   <extension point="fr.inria.diverse.melange.modeltype">

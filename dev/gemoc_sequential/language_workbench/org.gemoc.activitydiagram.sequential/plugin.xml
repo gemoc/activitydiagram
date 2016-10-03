@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?><plugin>
   <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
     <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.sequential.XActivityDiagram" xdsmlFilePath="/org.gemoc.activitydiagram.sequential/bin/org/gemoc/activitydiagram/sequential/XActivityDiagram.melange">
-      <XDSML_Definition_Customization fileExtensions="ad"/>
+      <XDSML_Definition_Customization fileExtensions="xsad"/>
     </XDSML_Definition>
   </extension>
   <extension point="org.eclipse.emf.ecore.generated_package">
