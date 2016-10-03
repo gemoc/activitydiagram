@@ -61,8 +61,8 @@
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.model.zip">
 									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.model/" />
 								</zip>
-								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.model.edit.zip">
-									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.model.edit/" />
+								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.edit.zip">
+									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram.edit/" />
 								</zip>
 								<zip destfile="${basedir}/zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.zip">
 									<fileset dir="${gemoc_concurrent_lw_root}/org.gemoc.activitydiagram.concurrent.xactivitydiagram/" />

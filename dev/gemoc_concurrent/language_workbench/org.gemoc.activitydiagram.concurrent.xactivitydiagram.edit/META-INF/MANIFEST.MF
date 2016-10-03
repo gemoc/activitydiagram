@@ -4,12 +4,13 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.gemoc.activitydiagram.concurrent.xactivitydiagram.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: activitydiagram.provider.ActivitydiagramEditPlugin$Implementation
+Bundle-Activator: org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.provider.XActivityDiagramEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: activitydiagram.provider
+Export-Package: org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.provider
 Require-Bundle: org.eclipse.core.runtime,
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram;visibility:=reexport,
  org.gemoc.activitydiagram.concurrent.model;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -36,7 +36,7 @@ public class ActivityDiagramConcurrentLanguageExampleWizard
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.k3dsa.zip", 			"org.gemoc.activitydiagram.concurrent.k3dsa"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.moc.dse.zip", 		"org.gemoc.activitydiagram.concurrent.moc.dse"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.model.zip", 			"org.gemoc.activitydiagram.concurrent.model"));
-		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.model.edit.zip", 	"org.gemoc.activitydiagram.concurrent.model.edit"));
+		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.edit.zip", 	"org.gemoc.activitydiagram.concurrent.xactivitydiagram.edit"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.zip", 	"org.gemoc.activitydiagram.concurrent.xactivitydiagram"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.zip", "org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar"));
 		projects.add(new ProjectDescriptor(Activator.PLUGIN_ID, "zips/org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui.zip", "org.gemoc.activitydiagram.concurrent.xactivitydiagram.grammar.ui"));
