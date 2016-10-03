@@ -1551,10 +1551,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(activityEClass, null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(activityEClass, null, "writeToFile", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(activityEClass, ecorePackage.getEString(), "printTrace", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		EOperation op = addEOperation(activityEClass, ecorePackage.getEInt(), "getIntegerVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1826,16 +1822,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (activityEClass.getEOperations().get(7), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (activityEClass.getEOperations().get(8), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (activityEClass.getEOperations().get(9), 
 		   source, 
 		   new String[] {
 		   });	

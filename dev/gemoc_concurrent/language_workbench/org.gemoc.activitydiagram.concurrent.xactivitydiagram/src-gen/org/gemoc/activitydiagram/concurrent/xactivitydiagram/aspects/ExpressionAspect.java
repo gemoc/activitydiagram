@@ -9,10 +9,10 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ExpressionA
 public class ExpressionAspect {
   public static void execute(final Expression _self) {
     final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ExpressionAspectExpressionAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ExpressionAspectExpressionAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerComparisonExpression){
-    					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerComparisonExpressionAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerComparisonExpression)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerCalculationExpression){
+     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerCalculationExpression){
     					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerCalculationExpressionAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerCalculationExpression)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerComparisonExpression){
+    					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerComparisonExpressionAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerComparisonExpression)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanUnaryExpression){
     					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.BooleanUnaryExpressionAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanUnaryExpression)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanBinaryExpression){
