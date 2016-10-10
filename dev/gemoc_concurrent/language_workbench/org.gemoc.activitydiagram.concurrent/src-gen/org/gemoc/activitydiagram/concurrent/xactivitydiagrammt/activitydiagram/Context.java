@@ -2,8 +2,6 @@
  */
 package org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Context#getOutput <em>Output</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Context#getActivity <em>Activity</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Context#getParent <em>Parent</em>}</li>
- *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Context#getInputValues <em>Input Values</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Context#getNode <em>Node</em>}</li>
  * </ul>
  *
@@ -104,22 +101,6 @@ public interface Context extends EObject {
 	 * @generated
 	 */
 	void setParent(Context value);
-
-	/**
-	 * Returns the value of the '<em><b>Input Values</b></em>' reference list.
-	 * The list contents are of type {@link org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.InputValue}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Values</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Values</em>' reference list.
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage#getContext_InputValues()
-	 * @model
-	 * @generated
-	 */
-	EList<InputValue> getInputValues();
 
 	/**
 	 * Returns the value of the '<em><b>Node</b></em>' reference.

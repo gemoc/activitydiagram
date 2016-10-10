@@ -33,16 +33,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
     adaptee.setName(o);
   }
   
-  @Override
-  public String getInputValuePath() {
-    return adaptee.getInputValuePath();
-  }
-  
-  @Override
-  public void setInputValuePath(final String o) {
-    adaptee.setInputValuePath(o);
-  }
-  
   private EList<ActivityNode> nodes_;
   
   @Override
@@ -139,6 +129,12 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
   }
   
   @Override
+  public void initializeModel(final org.eclipse.emf.common.util.EList<java.lang.String> args) {
+    org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.initializeModel(adaptee, args
+    );
+  }
+  
+  @Override
   public void reset() {
     org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.reset(adaptee);
   }
@@ -155,8 +151,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
   }
   
   protected final static String NAME_EDEFAULT = null;
-  
-  protected final static String INPUT_VALUE_PATH_EDEFAULT = null;
   
   @Override
   public EClass eClass() {
@@ -176,8 +170,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
     		return getLocals();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__INPUTS:
     		return getInputs();
-    	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-    		return getInputValuePath();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__SIGNALS:
     		return getSignals();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__TRACE:
@@ -202,8 +194,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
     		return getLocals() != null && !getLocals().isEmpty();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__INPUTS:
     		return getInputs() != null && !getInputs().isEmpty();
-    	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-    		return getInputValuePath() != INPUT_VALUE_PATH_EDEFAULT;
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__SIGNALS:
     		return getSignals() != null && !getSignals().isEmpty();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__TRACE:
@@ -238,11 +228,6 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__INPUTS:
     		getInputs().clear();
     		getInputs().addAll((Collection) newValue);
-    		return;
-    	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-    		setInputValuePath(
-    		(java.lang.String)
-    		 newValue);
     		return;
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.ACTIVITY__SIGNALS:
     		getSignals().clear();

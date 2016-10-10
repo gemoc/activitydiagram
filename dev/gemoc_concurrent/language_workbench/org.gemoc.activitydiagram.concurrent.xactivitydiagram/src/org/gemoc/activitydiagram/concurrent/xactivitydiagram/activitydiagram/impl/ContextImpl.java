@@ -2,11 +2,7 @@
  */
 package org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -14,12 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.ActivitydiagramPackage;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.InputValue;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.JoinNode;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Trace;
 
@@ -34,7 +27,6 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Tra
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ContextImpl#getOutput <em>Output</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ContextImpl#getActivity <em>Activity</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ContextImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ContextImpl#getInputValues <em>Input Values</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ContextImpl#getNode <em>Node</em>}</li>
  * </ul>
  *
@@ -70,16 +62,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 	 * @ordered
 	 */
 	protected Context parent;
-
-	/**
-	 * The cached value of the '{@link #getInputValues() <em>Input Values</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputValues()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputValue> inputValues;
 
 	/**
 	 * The cached value of the '{@link #getNode() <em>Node</em>}' reference.
@@ -229,18 +211,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InputValue> getInputValues() {
-		if (inputValues == null) {
-			inputValues = new EObjectResolvingEList<InputValue>(InputValue.class, this, ActivitydiagramPackage.CONTEXT__INPUT_VALUES);
-		}
-		return inputValues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public JoinNode getNode() {
 		if (node != null && node.eIsProxy()) {
 			InternalEObject oldNode = (InternalEObject)node;
@@ -291,8 +261,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 			case ActivitydiagramPackage.CONTEXT__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-				return getInputValues();
 			case ActivitydiagramPackage.CONTEXT__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
@@ -305,7 +273,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -317,10 +284,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 				return;
 			case ActivitydiagramPackage.CONTEXT__PARENT:
 				setParent((Context)newValue);
-				return;
-			case ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-				getInputValues().clear();
-				getInputValues().addAll((Collection<? extends InputValue>)newValue);
 				return;
 			case ActivitydiagramPackage.CONTEXT__NODE:
 				setNode((JoinNode)newValue);
@@ -346,9 +309,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 			case ActivitydiagramPackage.CONTEXT__PARENT:
 				setParent((Context)null);
 				return;
-			case ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-				getInputValues().clear();
-				return;
 			case ActivitydiagramPackage.CONTEXT__NODE:
 				setNode((JoinNode)null);
 				return;
@@ -370,8 +330,6 @@ public class ContextImpl extends EObjectImpl implements Context {
 				return activity != null;
 			case ActivitydiagramPackage.CONTEXT__PARENT:
 				return parent != null;
-			case ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-				return inputValues != null && !inputValues.isEmpty();
 			case ActivitydiagramPackage.CONTEXT__NODE:
 				return node != null;
 		}

@@ -59,9 +59,6 @@
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="activitydiagram.ecore#//Activity/inputs"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="activitydiagram.ecore#//Activity/inputValuePath"/>
-      </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="activitydiagram.ecore#//Activity/signals"/>
       </genFeatures>

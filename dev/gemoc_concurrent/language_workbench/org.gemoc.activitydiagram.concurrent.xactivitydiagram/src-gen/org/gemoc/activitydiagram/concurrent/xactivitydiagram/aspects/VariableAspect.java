@@ -11,10 +11,10 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAsp
 public class VariableAspect {
   public static void execute(final Variable _self) {
     final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspectVariableAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspectVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable){
-    					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerVariableAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanVariable){
+     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanVariable){
     					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.BooleanVariableAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanVariable)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable){
+    					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerVariableAspect.execute((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Variable){
     					org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspect._privk3_execute(_self_, (org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Variable)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
@@ -28,10 +28,10 @@ public class VariableAspect {
   public static String print(final Variable _self) {
     final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspectVariableAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspectVariableAspectContext.getSelf(_self);
     Object result = null;
-     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable){
-    					result = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerVariableAspect.print((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanVariable){
+     if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanVariable){
     					result = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.BooleanVariableAspect.print((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.BooleanVariable)_self);
+    } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable){
+    					result = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerVariableAspect.print((org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerVariable)_self);
     } else  if (_self instanceof org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Variable){
     					result = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspect._privk3_print(_self_, (org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Variable)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };

@@ -60,7 +60,6 @@ public class ContextItemProvider
 			addOutputPropertyDescriptor(object);
 			addActivityPropertyDescriptor(object);
 			addParentPropertyDescriptor(object);
-			addInputValuesPropertyDescriptor(object);
 			addNodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -124,28 +123,6 @@ public class ContextItemProvider
 				 getString("_UI_Context_parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_parent_feature", "_UI_Context_type"),
 				 ActivitydiagramPackage.Literals.CONTEXT__PARENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Values feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputValuesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Context_inputValues_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Context_inputValues_feature", "_UI_Context_type"),
-				 ActivitydiagramPackage.Literals.CONTEXT__INPUT_VALUES,
 				 true,
 				 false,
 				 true,

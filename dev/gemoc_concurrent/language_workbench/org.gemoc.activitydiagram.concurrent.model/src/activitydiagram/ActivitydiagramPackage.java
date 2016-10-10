@@ -150,22 +150,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY__INPUTS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Input Value Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__INPUT_VALUE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -174,7 +165,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -2078,17 +2069,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getActivity_Inputs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Value Path</em>'.
-	 * @see activitydiagram.Activity#getInputValuePath()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_InputValuePath();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link activitydiagram.Activity#getSignals <em>Signals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2862,14 +2842,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__INPUTS = eINSTANCE.getActivity_Inputs();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Value Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__INPUT_VALUE_PATH = eINSTANCE.getActivity_InputValuePath();
 
 		/**
 		 * The meta object literal for the '<em><b>Signals</b></em>' containment reference list feature.

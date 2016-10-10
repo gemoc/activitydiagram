@@ -496,17 +496,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getActivity_InputValuePath() {
-		return (EAttribute)activityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getActivity_Signals() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(5);
+		return (EReference)activityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -515,7 +506,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	public EReference getActivity_Trace() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(6);
+		return (EReference)activityEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -524,7 +515,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * @generated
 	 */
 	public EReference getActivity_Context() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(7);
+		return (EReference)activityEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1261,17 +1252,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContext_InputValues() {
-		return (EReference)contextEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getContext_Node() {
-		return (EReference)contextEClass.getEStructuralFeatures().get(4);
+		return (EReference)contextEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1343,7 +1325,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(activityEClass, ACTIVITY__EDGES);
 		createEReference(activityEClass, ACTIVITY__LOCALS);
 		createEReference(activityEClass, ACTIVITY__INPUTS);
-		createEAttribute(activityEClass, ACTIVITY__INPUT_VALUE_PATH);
 		createEReference(activityEClass, ACTIVITY__SIGNALS);
 		createEReference(activityEClass, ACTIVITY__TRACE);
 		createEReference(activityEClass, ACTIVITY__CONTEXT);
@@ -1468,7 +1449,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(contextEClass, CONTEXT__OUTPUT);
 		createEReference(contextEClass, CONTEXT__ACTIVITY);
 		createEReference(contextEClass, CONTEXT__PARENT);
-		createEReference(contextEClass, CONTEXT__INPUT_VALUES);
 		createEReference(contextEClass, CONTEXT__NODE);
 
 		// Create enums
@@ -1544,10 +1524,12 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivity_Edges(), this.getActivityEdge(), null, "edges", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Locals(), this.getVariable(), null, "locals", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Inputs(), this.getVariable(), null, "inputs", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivity_InputValuePath(), ecorePackage.getEString(), "inputValuePath", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Signals(), this.getSignal(), null, "signals", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Trace(), this.getTrace(), null, "trace", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Context(), this.getContext(), null, "context", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = addEOperation(activityEClass, null, "initializeModel", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "args", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(activityEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1555,7 +1537,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(activityEClass, null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = addEOperation(activityEClass, ecorePackage.getEInt(), "getIntegerVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(activityEClass, ecorePackage.getEInt(), "getIntegerVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(activityEClass, ecorePackage.getEBoolean(), "getBooleanVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1751,7 +1733,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getContext_Output(), this.getTrace(), null, "output", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Activity(), this.getActivity(), null, "activity", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Parent(), this.getContext(), null, "parent", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContext_InputValues(), this.getInputValue(), null, "inputValues", null, 0, -1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContext_Node(), this.getJoinNode(), null, "node", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
@@ -1826,6 +1807,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (activityEClass.getEOperations().get(7), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (activityEClass.getEOperations().get(8), 
 		   source, 
 		   new String[] {
 		   });	
@@ -2076,11 +2062,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (getContext_Parent(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getContext_InputValues(), 
 		   source, 
 		   new String[] {
 		   });	

@@ -1,12 +1,10 @@
 package org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects;
 
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.InputValue;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.JoinNode;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Trace;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
-import org.eclipse.emf.common.util.EList;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectProperties;
 
 @Aspect(className = Context.class)
@@ -46,18 +44,6 @@ public class ContextAspect {
   public static void parent(final Context _self, final Context parent) {
     final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectContext.getSelf(_self);
     _privk3_parent(_self_, _self,parent);;
-  }
-  
-  public static EList<InputValue> inputValues(final Context _self) {
-    final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_inputValues(_self_, _self);;
-    return (org.eclipse.emf.common.util.EList<org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.InputValue>)result;
-  }
-  
-  public static void inputValues(final Context _self, final EList<InputValue> inputValues) {
-    final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspectContextAspectContext.getSelf(_self);
-    _privk3_inputValues(_self_, _self,inputValues);;
   }
   
   public static JoinNode node(final Context _self) {
@@ -155,36 +141,6 @@ public class ContextAspect {
     		if (m.getName().equals("setParent")
     				&& m.getParameterTypes().length == 1) {
     			m.invoke(_self, parent);
-    		}
-    	}
-    } catch (Exception e) {
-    	// Chut !
-    }
-  }
-  
-  protected static EList<InputValue> _privk3_inputValues(final ContextAspectContextAspectProperties _self_, final Context _self) {
-    try {
-    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
-    		if (m.getName().equals("getInputValues") &&
-    			m.getParameterTypes().length == 0) {
-    				Object ret = m.invoke(_self);
-    				if (ret != null) {
-    					return (org.eclipse.emf.common.util.EList) ret;
-    				}
-    		}
-    	}
-    } catch (Exception e) {
-    	// Chut !
-    }
-    return _self_.inputValues;
-  }
-  
-  protected static void _privk3_inputValues(final ContextAspectContextAspectProperties _self_, final Context _self, final EList<InputValue> inputValues) {
-    _self_.inputValues = inputValues; try {
-    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
-    		if (m.getName().equals("setInputValues")
-    				&& m.getParameterTypes().length == 1) {
-    			m.invoke(_self, inputValues);
     		}
     	}
     } catch (Exception e) {

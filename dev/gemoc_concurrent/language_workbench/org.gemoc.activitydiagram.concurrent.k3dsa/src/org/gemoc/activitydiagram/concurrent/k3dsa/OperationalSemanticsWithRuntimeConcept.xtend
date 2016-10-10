@@ -85,7 +85,7 @@ import org.eclipse.emf.common.util.BasicEList
 import dynamic.activitydiagram.ActivitydiagramFactory
 import fr.inria.diverse.k3.al.annotationprocessor.Opposite
 import dynamic.activitydiagram.Context
-
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 
 //class Offer { 
 //	public List<Token> offeredTokens = new ArrayList<Token>() ;
@@ -149,7 +149,6 @@ class ContextAspect {
 	public Trace output;
 	public Activity activity;
 	public Context parent;
-	public EList<InputValue> inputValues ;
 	public JoinNode node ;
 }
 
@@ -161,13 +160,14 @@ class ActivityAspect extends NamedElementAspect {
 	long start
 	long stop
 	
-	@ReplaceAspectMethod
-	public def void initialize() {
-		println("############## let's start ! ##############")
+	@InitializeModel
+	public def void initializeModel(EList<String> args){
+		
 		var EList<InputValue> inputValues = new BasicEList<InputValue>();
-		var String inputPath = _self.inputValuePath
-        if (inputPath != null && inputPath != ""){
-	
+		
+        if (args.size == 1){
+			val String inputPath = args.get(0)
+			println("Loading input values from "+inputPath)
 			var input = _self.getInput(inputPath);
 			if (input != null) {
 				inputValues.addAll(input.getInputValues());
@@ -182,10 +182,15 @@ class ActivityAspect extends NamedElementAspect {
 			}
 		}
 		
+	}
+	
+	@ReplaceAspectMethod
+	public def void initialize() {
+		println("############## let's start ! ##############")
+
 		_self.start = System.nanoTime;
 		
 		_self.context = ActivitydiagramFactory.eINSTANCE.createContext
-		_self.context.inputValues = inputValues
 		_self.context.activity = _self
 		//_self.trace = new Trace;
 		_self.trace = ActivitydiagramFactory.eINSTANCE.createTrace();
@@ -242,8 +247,7 @@ class ActivityAspect extends NamedElementAspect {
 		var Input input = null;
 		if (inputPath != null) {
 			var XtextResourceSet resourceSet ;resourceSet = new XtextResourceSet();
-			URI.createFileURI(new File(inputPath).getAbsolutePath())
-			var resource = resourceSet.getResource(URI.createFileURI(new File(inputPath).getAbsolutePath()), true);
+			var resource = resourceSet.getResource(URI.createURI(inputPath), true);
 			var eObject = resource.getContents().get(0);
 			if (eObject instanceof Input) {
 				input = eObject as Input;

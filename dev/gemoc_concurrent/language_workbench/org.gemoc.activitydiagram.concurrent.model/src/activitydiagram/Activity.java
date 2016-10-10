@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link activitydiagram.Activity#getEdges <em>Edges</em>}</li>
  *   <li>{@link activitydiagram.Activity#getLocals <em>Locals</em>}</li>
  *   <li>{@link activitydiagram.Activity#getInputs <em>Inputs</em>}</li>
- *   <li>{@link activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}</li>
  *   <li>{@link activitydiagram.Activity#getSignals <em>Signals</em>}</li>
  * </ul>
  *
@@ -91,32 +90,6 @@ public interface Activity extends NamedElement {
 	 * @generated
 	 */
 	EList<Variable> getInputs();
-
-	/**
-	 * Returns the value of the '<em><b>Input Value Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input Value Path</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input Value Path</em>' attribute.
-	 * @see #setInputValuePath(String)
-	 * @see activitydiagram.ActivitydiagramPackage#getActivity_InputValuePath()
-	 * @model
-	 * @generated
-	 */
-	String getInputValuePath();
-
-	/**
-	 * Sets the value of the '{@link activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input Value Path</em>' attribute.
-	 * @see #getInputValuePath()
-	 * @generated
-	 */
-	void setInputValuePath(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Signals</b></em>' containment reference list.

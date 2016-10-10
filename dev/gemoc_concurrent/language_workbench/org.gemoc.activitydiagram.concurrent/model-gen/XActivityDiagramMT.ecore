@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="activitydiagram" nsURI="http://org.gemoc.activitydiagram.concurrent.xactivitydiagrammt/activitydiagram/" nsPrefix="activitydiagram">
   <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="//NamedElement">
+    <eOperations name="initializeModel">
+      <eAnnotations source="aspect"/>
+      <eParameters name="args" upperBound="-1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+    </eOperations>
     <eOperations name="initialize">
       <eAnnotations source="aspect"/>
     </eOperations>
@@ -43,9 +49,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1" eType="//ActivityEdge" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locals" upperBound="-1" eType="//Variable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1" eType="//Variable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputValuePath">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="signals" upperBound="-1" eType="//Signal" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trace" unique="false" eType="//Trace">
       <eAnnotations source="aspect"/>
@@ -319,9 +322,6 @@
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" unique="false" eType="//Context">
-      <eAnnotations source="aspect"/>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputValues" unique="false" upperBound="-1" eType="//InputValue">
       <eAnnotations source="aspect"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" unique="false" eType="//JoinNode">

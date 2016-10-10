@@ -1,13 +1,10 @@
 package org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram;
 
 import fr.inria.diverse.melange.adapters.EObjectAdapter;
-import java.util.Collection;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramMTAdaptersFactory;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Activity;
-import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.InputValue;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.JoinNode;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Trace;
 
@@ -29,11 +26,6 @@ public class ContextAdapter extends EObjectAdapter<Context> implements org.gemoc
   public void setActivity(final Activity activity) {
     org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspect.activity(adaptee, (org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity)((EObjectAdapter)activity).getAdaptee()
     );
-  }
-  
-  @Override
-  public EList<InputValue> getInputValues() {
-    return fr.inria.diverse.melange.adapters.EListAdapter.newInstance(org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspect.inputValues(adaptee), adaptersFactory, eResource);
   }
   
   @Override
@@ -83,8 +75,6 @@ public class ContextAdapter extends EObjectAdapter<Context> implements org.gemoc
     		return getActivity();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__PARENT:
     		return getParent();
-    	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-    		return getInputValues();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__NODE:
     		return getNode();
     }
@@ -101,8 +91,6 @@ public class ContextAdapter extends EObjectAdapter<Context> implements org.gemoc
     		return getActivity() != null;
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__PARENT:
     		return getParent() != null;
-    	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-    		return getInputValues() != null && !getInputValues().isEmpty();
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__NODE:
     		return getNode() != null;
     }
@@ -127,10 +115,6 @@ public class ContextAdapter extends EObjectAdapter<Context> implements org.gemoc
     		setParent(
     		(org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.Context)
     		 newValue);
-    		return;
-    	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__INPUT_VALUES:
-    		getInputValues().clear();
-    		getInputValues().addAll((Collection) newValue);
     		return;
     	case org.gemoc.activitydiagram.concurrent.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage.CONTEXT__NODE:
     		setNode(

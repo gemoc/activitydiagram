@@ -13,6 +13,7 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Act
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context;
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Trace;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel;
 import fr.inria.diverse.k3.al.annotationprocessor.ReplaceAspectMethod;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -39,6 +40,12 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAsp
 @Aspect(className = Activity.class)
 @SuppressWarnings("all")
 public class ActivityAspect extends NamedElementAspect {
+  @InitializeModel
+  public static void initializeModel(final Activity _self, final EList<String> args) {
+    final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspectActivityAspectContext.getSelf(_self);
+    _privk3_initializeModel(_self_, _self,args);;
+  }
+  
   @ReplaceAspectMethod
   public static void initialize(final Activity _self) {
     final org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspectActivityAspectProperties _self_ = org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspectActivityAspectContext.getSelf(_self);
@@ -157,22 +164,15 @@ public class ActivityAspect extends NamedElementAspect {
     _privk3_stop(_self_, _self,stop);;
   }
   
-  protected static void _privk3_initialize(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
-    InputOutput.<String>println("############## let\'s start ! ##############");
+  protected static void _privk3_initializeModel(final ActivityAspectActivityAspectProperties _self_, final Activity _self, final EList<String> args) {
     EList<InputValue> inputValues = new BasicEList<InputValue>();
-    String inputPath = _self.getInputValuePath();
-    boolean _and = false;
-    boolean _notEquals = (!Objects.equal(inputPath, null));
-    if (!_notEquals) {
-      _and = false;
-    } else {
-      boolean _notEquals_1 = (!Objects.equal(inputPath, ""));
-      _and = _notEquals_1;
-    }
-    if (_and) {
+    int _size = args.size();
+    boolean _equals = (_size == 1);
+    if (_equals) {
+      String inputPath = args.get(0);
       Input input = ActivityAspect.getInput(_self, inputPath);
-      boolean _notEquals_2 = (!Objects.equal(input, null));
-      if (_notEquals_2) {
+      boolean _notEquals = (!Objects.equal(input, null));
+      if (_notEquals) {
         EList<InputValue> _inputValues = input.getInputValues();
         inputValues.addAll(_inputValues);
         if (inputValues!=null) {
@@ -202,35 +202,37 @@ public class ActivityAspect extends NamedElementAspect {
         }
       }
     }
+  }
+  
+  protected static void _privk3_initialize(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
+    InputOutput.<String>println("############## let\'s start ! ##############");
     long _nanoTime = System.nanoTime();
     ActivityAspect.start(_self, _nanoTime);
     Context _createContext = ActivitydiagramFactory.eINSTANCE.createContext();
     ActivityAspect.context(_self, _createContext);
     Context _context = ActivityAspect.context(_self);
-    ContextAspect.inputValues(_context, inputValues);
-    Context _context_1 = ActivityAspect.context(_self);
-    ContextAspect.activity(_context_1, _self);
+    ContextAspect.activity(_context, _self);
     Trace _createTrace = ActivitydiagramFactory.eINSTANCE.createTrace();
     ActivityAspect.trace(_self, _createTrace);
-    Context _context_2 = ActivityAspect.context(_self);
+    Context _context_1 = ActivityAspect.context(_self);
     Trace _trace = ActivityAspect.trace(_self);
-    ContextAspect.output(_context_2, _trace);
+    ContextAspect.output(_context_1, _trace);
     EList<ActivityNode> _nodes = _self.getNodes();
-    final Consumer<ActivityNode> _function_1 = new Consumer<ActivityNode>() {
+    final Consumer<ActivityNode> _function = new Consumer<ActivityNode>() {
       @Override
       public void accept(final ActivityNode n) {
         ActivityNodeAspect.running(n, Boolean.valueOf(true));
       }
     };
-    _nodes.forEach(_function_1);
+    _nodes.forEach(_function);
     EList<Variable> _locals = _self.getLocals();
-    final Consumer<Variable> _function_2 = new Consumer<Variable>() {
+    final Consumer<Variable> _function_1 = new Consumer<Variable>() {
       @Override
       public void accept(final Variable v) {
         VariableAspect.init(v);
       }
     };
-    _locals.forEach(_function_2);
+    _locals.forEach(_function_1);
   }
   
   protected static void _privk3_execute(final ActivityAspectActivityAspectProperties _self_, final Activity _self) {
@@ -295,13 +297,8 @@ public class ActivityAspect extends NamedElementAspect {
       XtextResourceSet resourceSet = null;
       XtextResourceSet _xtextResourceSet = new XtextResourceSet();
       resourceSet = _xtextResourceSet;
-      File _file = new File(inputPath);
-      String _absolutePath = _file.getAbsolutePath();
-      URI.createFileURI(_absolutePath);
-      File _file_1 = new File(inputPath);
-      String _absolutePath_1 = _file_1.getAbsolutePath();
-      URI _createFileURI = URI.createFileURI(_absolutePath_1);
-      Resource resource = resourceSet.getResource(_createFileURI, true);
+      URI _createURI = URI.createURI(inputPath);
+      Resource resource = resourceSet.getResource(_createURI, true);
       EList<EObject> _contents = resource.getContents();
       EObject eObject = _contents.get(0);
       if ((eObject instanceof Input)) {

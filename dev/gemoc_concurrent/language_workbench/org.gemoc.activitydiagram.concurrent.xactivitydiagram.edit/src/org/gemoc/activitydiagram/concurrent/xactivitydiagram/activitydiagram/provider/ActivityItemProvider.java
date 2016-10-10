@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity;
@@ -48,33 +47,10 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addInputValuePathPropertyDescriptor(object);
 			addTracePropertyDescriptor(object);
 			addContextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Input Value Path feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputValuePathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Activity_inputValuePath_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_inputValuePath_feature", "_UI_Activity_type"),
-				 ActivitydiagramPackage.Literals.ACTIVITY__INPUT_VALUE_PATH,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -193,9 +169,6 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Activity.class)) {
-			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case ActivitydiagramPackage.ACTIVITY__NODES:
 			case ActivitydiagramPackage.ACTIVITY__EDGES:
 			case ActivitydiagramPackage.ACTIVITY__LOCALS:

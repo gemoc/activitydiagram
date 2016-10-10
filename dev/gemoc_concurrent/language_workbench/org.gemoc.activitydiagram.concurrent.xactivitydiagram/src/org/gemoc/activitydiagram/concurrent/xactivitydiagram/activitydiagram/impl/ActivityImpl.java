@@ -40,7 +40,6 @@ import org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Var
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getEdges <em>Edges</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getLocals <em>Locals</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getInputs <em>Inputs</em>}</li>
- *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getInputValuePath <em>Input Value Path</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getSignals <em>Signals</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getTrace <em>Trace</em>}</li>
  *   <li>{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityImpl#getContext <em>Context</em>}</li>
@@ -88,26 +87,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * @ordered
 	 */
 	protected EList<Variable> inputs;
-
-	/**
-	 * The default value of the '{@link #getInputValuePath() <em>Input Value Path</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputValuePath()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String INPUT_VALUE_PATH_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getInputValuePath() <em>Input Value Path</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputValuePath()
-	 * @generated
-	 * @ordered
-	 */
-	protected String inputValuePath = INPUT_VALUE_PATH_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSignals() <em>Signals</em>}' containment reference list.
@@ -211,27 +190,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInputValuePath() {
-		return inputValuePath;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInputValuePath(String newInputValuePath) {
-		String oldInputValuePath = inputValuePath;
-		inputValuePath = newInputValuePath;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH, oldInputValuePath, inputValuePath));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Signal> getSignals() {
 		if (signals == null) {
 			signals = new EObjectContainmentEList<Signal>(Signal.class, this, ActivitydiagramPackage.ACTIVITY__SIGNALS);
@@ -313,6 +271,17 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 		context = newContext;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ActivitydiagramPackage.ACTIVITY__CONTEXT, oldContext, context));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializeModel(EList<String> args) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -456,8 +425,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return getLocals();
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return getInputs();
-			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-				return getInputValuePath();
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				return getSignals();
 			case ActivitydiagramPackage.ACTIVITY__TRACE:
@@ -495,9 +462,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				getInputs().clear();
 				getInputs().addAll((Collection<? extends Variable>)newValue);
 				return;
-			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-				setInputValuePath((String)newValue);
-				return;
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				getSignals().clear();
 				getSignals().addAll((Collection<? extends Signal>)newValue);
@@ -532,9 +496,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				getInputs().clear();
 				return;
-			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-				setInputValuePath(INPUT_VALUE_PATH_EDEFAULT);
-				return;
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				getSignals().clear();
 				return;
@@ -564,8 +525,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return locals != null && !locals.isEmpty();
 			case ActivitydiagramPackage.ACTIVITY__INPUTS:
 				return inputs != null && !inputs.isEmpty();
-			case ActivitydiagramPackage.ACTIVITY__INPUT_VALUE_PATH:
-				return INPUT_VALUE_PATH_EDEFAULT == null ? inputValuePath != null : !INPUT_VALUE_PATH_EDEFAULT.equals(inputValuePath);
 			case ActivitydiagramPackage.ACTIVITY__SIGNALS:
 				return signals != null && !signals.isEmpty();
 			case ActivitydiagramPackage.ACTIVITY__TRACE:
@@ -574,22 +533,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 				return context != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (inputValuePath: ");
-		result.append(inputValuePath);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ActivityImpl

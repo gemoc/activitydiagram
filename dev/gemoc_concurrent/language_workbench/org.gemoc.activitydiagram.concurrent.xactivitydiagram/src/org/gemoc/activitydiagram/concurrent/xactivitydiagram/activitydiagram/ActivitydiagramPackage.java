@@ -140,22 +140,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int ACTIVITY__INPUTS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Input Value Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__INPUT_VALUE_PATH = NAMED_ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int ACTIVITY__SIGNALS = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Trace</b></em>' reference.
@@ -164,7 +155,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__TRACE = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int ACTIVITY__TRACE = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Context</b></em>' reference.
@@ -173,7 +164,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__CONTEXT = NAMED_ELEMENT_FEATURE_COUNT + 7;
+	int ACTIVITY__CONTEXT = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -182,7 +173,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 8;
+	int ACTIVITY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.impl.ActivityNodeImpl <em>Activity Node</em>}' class.
@@ -2177,22 +2168,13 @@ public interface ActivitydiagramPackage extends EPackage {
 	int CONTEXT__PARENT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Input Values</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTEXT__INPUT_VALUES = 3;
-
-	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT__NODE = 4;
+	int CONTEXT__NODE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Context</em>' class.
@@ -2201,7 +2183,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTEXT_FEATURE_COUNT = 5;
+	int CONTEXT_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.
@@ -2297,17 +2279,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivity_Inputs();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity#getInputValuePath <em>Input Value Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Input Value Path</em>'.
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity#getInputValuePath()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_InputValuePath();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Activity#getSignals <em>Signals</em>}'.
@@ -3194,17 +3165,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getContext_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context#getInputValues <em>Input Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Input Values</em>'.
-	 * @see org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context#getInputValues()
-	 * @see #getContext()
-	 * @generated
-	 */
-	EReference getContext_InputValues();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.concurrent.xactivitydiagram.activitydiagram.Context#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3318,14 +3278,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__INPUTS = eINSTANCE.getActivity_Inputs();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Value Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__INPUT_VALUE_PATH = eINSTANCE.getActivity_InputValuePath();
 
 		/**
 		 * The meta object literal for the '<em><b>Signals</b></em>' containment reference list feature.
@@ -4078,14 +4030,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONTEXT__PARENT = eINSTANCE.getContext_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Input Values</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTEXT__INPUT_VALUES = eINSTANCE.getContext_InputValues();
 
 		/**
 		 * The meta object literal for the '<em><b>Node</b></em>' reference feature.

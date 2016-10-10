@@ -59,9 +59,6 @@
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagramMT.ecore#//Activity/inputs"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagramMT.ecore#//Activity/inputValuePath"/>
-      </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagramMT.ecore#//Activity/signals"/>
       </genFeatures>
@@ -71,6 +68,12 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagramMT.ecore#//Activity/context"/>
       </genFeatures>
+      <genOperations>
+        <ecoreOperation href="XActivityDiagramMT.ecore#//Activity/initializeModel"/>
+        <genParameters>
+          <ecoreParameter href="XActivityDiagramMT.ecore#//Activity/initializeModel/args"/>
+        </genParameters>
+      </genOperations>
       <genOperations>
         <ecoreOperation href="XActivityDiagramMT.ecore#//Activity/initialize"/>
       </genOperations>
@@ -445,9 +448,6 @@
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagramMT.ecore#//Context/parent"/>
-      </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagramMT.ecore#//Context/inputValues"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagramMT.ecore#//Context/node"/>
