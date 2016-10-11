@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<activitydiagram:Activity xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activitydiagram="http://org.gemoc.activitydiagram.concurrent.xactivitydiagram/activitydiagram/" name="demoFork1">
+  <nodes xsi:type="activitydiagram:InitialNode" name="initialNode6" outgoing="//@edges.0"/>
+  <nodes xsi:type="activitydiagram:OpaqueAction" name="actionB3" outgoing="//@edges.1" incoming="//@edges.4"/>
+  <nodes xsi:type="activitydiagram:ForkNode" name="fork1" outgoing="//@edges.2 //@edges.3" incoming="//@edges.0"/>
+  <nodes xsi:type="activitydiagram:OpaqueAction" name="actionB2" outgoing="//@edges.4" incoming="//@edges.2"/>
+  <nodes xsi:type="activitydiagram:OpaqueAction" name="actionB1" outgoing="//@edges.5" incoming="//@edges.3"/>
+  <nodes xsi:type="activitydiagram:JoinNode" name="join1" outgoing="//@edges.6" incoming="//@edges.5 //@edges.1"/>
+  <nodes xsi:type="activitydiagram:OpaqueAction" name="actionC" outgoing="//@edges.7" incoming="//@edges.6"/>
+  <nodes xsi:type="activitydiagram:ActivityFinalNode" name="finalNode6" incoming="//@edges.7"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge1" source="//@nodes.0" target="//@nodes.2"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge2" source="//@nodes.1" target="//@nodes.5"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge4_1" source="//@nodes.2" target="//@nodes.3"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge3_1" source="//@nodes.2" target="//@nodes.4"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge4_2" source="//@nodes.3" target="//@nodes.1"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge3_2" source="//@nodes.4" target="//@nodes.5"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge5" source="//@nodes.5" target="//@nodes.6"/>
+  <edges xsi:type="activitydiagram:ControlFlow" name="edge6" source="//@nodes.6" target="//@nodes.7"/>
+</activitydiagram:Activity>

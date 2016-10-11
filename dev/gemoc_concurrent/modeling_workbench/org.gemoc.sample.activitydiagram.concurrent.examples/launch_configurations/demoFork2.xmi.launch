@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.gemoc.execution.concurrent.ccsljavaengine.ui.launcher">
+<stringAttribute key="First Instruction" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
+<intAttribute key="GEMOC_ANIMATE_DELAY" value="0"/>
+<booleanAttribute key="GEMOC_LAUNCH_BREAK_START" value="false"/>
+<stringAttribute key="GEMOC_LAUNCH_INITIALIZATION_ARGUMENTS" value=""/>
+<stringAttribute key="GEMOC_LAUNCH_INITIALIZATION_METHOD" value="org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect.initializeModel"/>
+<stringAttribute key="GEMOC_LAUNCH_SELECTED_DECIDER" value="Step by step user decider"/>
+<stringAttribute key="GEMOC_LAUNCH_SELECTED_LANGUAGE" value="org.gemoc.activitydiagram.concurrent.XActivityDiagram"/>
+<booleanAttribute key="MultiBranch Reflective Trace" value="true"/>
+<stringAttribute key="Resource" value="/org.gemoc.sample.activitydiagram.concurrent.examples/models/xmi/demoFork2.xmi"/>
+<booleanAttribute key="VCD visualization" value="true"/>
+<booleanAttribute key="activitydiagram MultiDimensional Trace" value="false"/>
+<stringAttribute key="airdResource" value="/org.gemoc.sample.activitydiagram.concurrent.examples/models/xmi/demoFork2.aird"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/org.gemoc.sample.activitydiagram.concurrent.examples/models/xmi/demoFork2.xmi"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+</launchConfiguration>

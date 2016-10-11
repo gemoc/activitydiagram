@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activitydiagram="http://org.gemoc.activitydiagram.concurrent.xactivitydiagram/activitydiagram/" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_NFZSMI-KEeaw49XHUork8Q" selectedViews="_Ns-PkI-KEeaw49XHUork8Q" version="10.1.0.201509162000">
+  <semanticResources>demoFork2.xmi</semanticResources>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_Ns-PkI-KEeaw49XHUork8Q">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_NuAxYI-KEeaw49XHUork8Q" name="demoFork1 Activity Diagram">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_NuAxYY-KEeaw49XHUork8Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_NuAxYo-KEeaw49XHUork8Q">
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rhlH0I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rhlH0Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge1&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rhlH1I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rhlH1Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge2&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rhu40I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rhu40Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge4_1&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rhu41I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rhu41Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge3_1&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rh4p0I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rh4p0Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge4_2&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rh4p1I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rh4p1Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge3_2&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rh4p2I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rh4p2Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge5&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_rh4p3I-KEeaw49XHUork8Q" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_rh4p3Y-KEeaw49XHUork8Q" showIcon="false" labelExpression="edge6&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_NuAxjo-KEeaw49XHUork8Q" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_NuAxj4-KEeaw49XHUork8Q" type="Sirius" element="_NuAxYI-KEeaw49XHUork8Q" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_NuAxkY-KEeaw49XHUork8Q" type="2002" element="_NuAxY4-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_NuAxlI-KEeaw49XHUork8Q" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_NuAxlY-KEeaw49XHUork8Q" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_NuAxmI-KEeaw49XHUork8Q" type="3009" element="_rhb94I-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxm4-KEeaw49XHUork8Q" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_NuAxnI-KEeaw49XHUork8Q" type="7003">
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_NuAxnY-KEeaw49XHUork8Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_NuAxno-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxmY-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxmo-KEeaw49XHUork8Q" x="225" y="204"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxn4-KEeaw49XHUork8Q" type="3009" element="_rhb94o-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxoo-KEeaw49XHUork8Q" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_NuAxo4-KEeaw49XHUork8Q" type="7003">
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_NuAxpI-KEeaw49XHUork8Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_NuAxpY-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxoI-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxoY-KEeaw49XHUork8Q" x="220" y="294"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxpo-KEeaw49XHUork8Q" type="3009" element="_rhb95I-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxqY-KEeaw49XHUork8Q" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_NuAxqo-KEeaw49XHUork8Q" type="7003">
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_NuAxq4-KEeaw49XHUork8Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_NuAxrI-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxp4-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxqI-KEeaw49XHUork8Q" x="60" y="294"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxrY-KEeaw49XHUork8Q" type="3009" element="_rhb95o-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxsI-KEeaw49XHUork8Q" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_NuAxsY-KEeaw49XHUork8Q" type="7003">
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_NuAxso-KEeaw49XHUork8Q"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_NuAxs4-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxro-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxr4-KEeaw49XHUork8Q" x="65" y="99"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxtI-KEeaw49XHUork8Q" type="3007" element="_NuAxbY-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxt4-KEeaw49XHUork8Q" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_NuAxuI-KEeaw49XHUork8Q" x="31"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_NuAxyI-KEeaw49XHUork8Q" type="3005" element="_NuAxbo-KEeaw49XHUork8Q">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxyY-KEeaw49XHUork8Q" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxyo-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxtY-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxto-KEeaw49XHUork8Q" x="171" y="465" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxuY-KEeaw49XHUork8Q" type="3007" element="_NuAxb4-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxvI-KEeaw49XHUork8Q" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_NuAxvY-KEeaw49XHUork8Q" x="-10" y="11"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_NuAxy4-KEeaw49XHUork8Q" type="3003" element="_NuAxcI-KEeaw49XHUork8Q">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxzI-KEeaw49XHUork8Q" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxzY-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxuo-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxu4-KEeaw49XHUork8Q" x="171" y="404" width="30" height="10"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxvo-KEeaw49XHUork8Q" type="3007" element="_NuAxcY-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxwY-KEeaw49XHUork8Q" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_NuAxwo-KEeaw49XHUork8Q" x="21" y="-10"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_NuAxzo-KEeaw49XHUork8Q" type="3003" element="_NuAxco-KEeaw49XHUork8Q">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxz4-KEeaw49XHUork8Q" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx0I-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxv4-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxwI-KEeaw49XHUork8Q" x="95" y="209" width="20" height="10"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NuAxw4-KEeaw49XHUork8Q" type="3007" element="_NuAxc4-KEeaw49XHUork8Q">
+                <children xmi:type="notation:Node" xmi:id="_NuAxxo-KEeaw49XHUork8Q" type="5003">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_NuAxx4-KEeaw49XHUork8Q" x="31"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_NuAx0Y-KEeaw49XHUork8Q" type="3005" element="_NuAxdI-KEeaw49XHUork8Q">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAx0o-KEeaw49XHUork8Q" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx04-KEeaw49XHUork8Q"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxxI-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxxY-KEeaw49XHUork8Q" x="90" y="30" width="30" height="30"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_NuAxlo-KEeaw49XHUork8Q"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_NuAxl4-KEeaw49XHUork8Q"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_NuAxko-KEeaw49XHUork8Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAxk4-KEeaw49XHUork8Q" x="-35" width="368" height="538"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_NuAxkI-KEeaw49XHUork8Q"/>
+          <edges xmi:type="notation:Edge" xmi:id="_NuAx7I-KEeaw49XHUork8Q" type="4001" element="_NuAxe4-KEeaw49XHUork8Q" source="_NuAxuY-KEeaw49XHUork8Q" target="_NuAxn4-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_NuAx8I-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx8Y-KEeaw49XHUork8Q" x="45" y="13"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAx8o-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx84-KEeaw49XHUork8Q" x="18" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAx9I-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx9Y-KEeaw49XHUork8Q" x="-28" y="-17"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_NuAx7Y-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_NuAx7o-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NuAx74-KEeaw49XHUork8Q" points="[0, 0, -73, 61]$[0, -40, -73, 21]$[69, -40, -4, 21]$[69, -61, -4, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAx9o-KEeaw49XHUork8Q" id="(0.5,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAx94-KEeaw49XHUork8Q" id="(0.4938271604938271,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_NuAx-I-KEeaw49XHUork8Q" type="4001" element="_NuAxfo-KEeaw49XHUork8Q" source="_NuAxuY-KEeaw49XHUork8Q" target="_NuAxpo-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_NuAx_I-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx_Y-KEeaw49XHUork8Q" x="60" y="-20"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAx_o-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAx_4-KEeaw49XHUork8Q" x="53" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyAI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyAY-KEeaw49XHUork8Q" x="-9" y="19"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_NuAx-Y-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_NuAx-o-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NuAx-4-KEeaw49XHUork8Q" points="[0, 0, 87, 61]$[0, -40, 87, 21]$[-87, -40, 0, 21]$[-87, -61, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyAo-KEeaw49XHUork8Q" id="(0.5,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyA4-KEeaw49XHUork8Q" id="(0.4938271604938271,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_NuAyEI-KEeaw49XHUork8Q" type="4001" element="_NuAxhI-KEeaw49XHUork8Q" source="_NuAxpo-KEeaw49XHUork8Q" target="_NuAxvo-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_NuAyFI-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyFY-KEeaw49XHUork8Q" x="-6" y="-54"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyFo-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyF4-KEeaw49XHUork8Q" x="18" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyGI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyGY-KEeaw49XHUork8Q" x="-15" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_NuAyEY-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_NuAyEo-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NuAyE4-KEeaw49XHUork8Q" points="[6, 0, 0, 75]$[6, -75, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyGo-KEeaw49XHUork8Q" id="(0.4938271604938271,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyG4-KEeaw49XHUork8Q" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_NuAyHI-KEeaw49XHUork8Q" type="4001" element="_NuAxh4-KEeaw49XHUork8Q" source="_NuAxvo-KEeaw49XHUork8Q" target="_NuAxrY-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_NuAyII-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyIY-KEeaw49XHUork8Q" x="6" y="61"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyIo-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyI4-KEeaw49XHUork8Q" x="-7" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyJI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyJY-KEeaw49XHUork8Q" x="-21" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_NuAyHY-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_NuAyHo-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NuAyH4-KEeaw49XHUork8Q" points="[-1, 0, 0, 61]$[-1, -61, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyJo-KEeaw49XHUork8Q" id="(0.5,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyJ4-KEeaw49XHUork8Q" id="(0.4938271604938271,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_NuAyKI-KEeaw49XHUork8Q" type="4001" element="_NuAxio-KEeaw49XHUork8Q" source="_NuAxrY-KEeaw49XHUork8Q" target="_NuAxw4-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_NuAyLI-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyLY-KEeaw49XHUork8Q" x="2" y="-54"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyLo-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyL4-KEeaw49XHUork8Q" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NuAyMI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NuAyMY-KEeaw49XHUork8Q" x="-3" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_NuAyKY-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_NuAyKo-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NuAyK4-KEeaw49XHUork8Q" points="[1, 0, 0, 39]$[1, -40, 0, -1]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyMo-KEeaw49XHUork8Q" id="(0.4938271604938271,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NuAyM4-KEeaw49XHUork8Q" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_gAj7sI-KEeaw49XHUork8Q" type="4001" element="_NuAxgY-KEeaw49XHUork8Q" source="_NuAxn4-KEeaw49XHUork8Q" target="_NuAxmI-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_gAj7tI-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gAj7tY-KEeaw49XHUork8Q" x="1" y="57"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_gAj7to-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gAj7t4-KEeaw49XHUork8Q" x="-6"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_gAj7uI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gAj7uY-KEeaw49XHUork8Q" x="-5" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_gAj7sY-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_gAj7so-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gAj7s4-KEeaw49XHUork8Q" points="[0, 0, -5, 41]$[0, -41, -5, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gAj7uo-KEeaw49XHUork8Q" id="(0.4938271604938271,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lP5HUI-KEeaw49XHUork8Q" id="(0.4938271604938271,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_iTjSAI-KEeaw49XHUork8Q" type="4001" element="_NuAxeI-KEeaw49XHUork8Q" source="_NuAxmI-KEeaw49XHUork8Q" target="_NuAxvo-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_iTjSBI-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iTjSBY-KEeaw49XHUork8Q" x="5" y="-16"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_iTjSBo-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iTjSB4-KEeaw49XHUork8Q" x="-8" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_iTjSCI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iTjSCY-KEeaw49XHUork8Q" y="-10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_iTjSAY-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_iTjSAo-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iTjSA4-KEeaw49XHUork8Q" points="[-39, 9, 120, -6]$[-149, 9, 10, -6]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iTjSCo-KEeaw49XHUork8Q" id="(0.4938271604938271,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r_yGwI-KEeaw49XHUork8Q" id="(0.5,1.0)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_kw9IkI-KEeaw49XHUork8Q" type="4001" element="_NuAxdY-KEeaw49XHUork8Q" source="_NuAxtI-KEeaw49XHUork8Q" target="_NuAxuY-KEeaw49XHUork8Q">
+            <children xmi:type="notation:Node" xmi:id="_kw9IlI-KEeaw49XHUork8Q" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kw9IlY-KEeaw49XHUork8Q" x="2" y="61"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_kw9Ilo-KEeaw49XHUork8Q" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kw9Il4-KEeaw49XHUork8Q" x="40" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_kw9ImI-KEeaw49XHUork8Q" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kw9ImY-KEeaw49XHUork8Q" x="8" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_kw9IkY-KEeaw49XHUork8Q" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_kw9Iko-KEeaw49XHUork8Q" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kw9Ik4-KEeaw49XHUork8Q" points="[4, 0, 4, 51]$[4, -51, 4, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kw9Imo-KEeaw49XHUork8Q" id="(0.5,0.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kw9Im4-KEeaw49XHUork8Q" id="(0.5,1.0)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NuAxY4-KEeaw49XHUork8Q" name="demoFork1">
+        <target xmi:type="activitydiagram:Activity" href="demoFork2.xmi#/"/>
+        <semanticElements xmi:type="activitydiagram:Activity" href="demoFork2.xmi#/"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_NuAxZI-KEeaw49XHUork8Q" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundStyle="Liquid" foregroundColor="245,239,244">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxbY-KEeaw49XHUork8Q" name="initialNode6" outgoingEdges="_NuAxdY-KEeaw49XHUork8Q" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="activitydiagram:InitialNode" href="demoFork2.xmi#//@nodes.0"/>
+          <semanticElements xmi:type="activitydiagram:InitialNode" href="demoFork2.xmi#//@nodes.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_NuAxbo-KEeaw49XHUork8Q" showIcon="false" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/InitNode.png">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxb4-KEeaw49XHUork8Q" name="fork1" outgoingEdges="_NuAxe4-KEeaw49XHUork8Q _NuAxfo-KEeaw49XHUork8Q" incomingEdges="_NuAxdY-KEeaw49XHUork8Q" width="3" height="1" resizeKind="EAST_WEST">
+          <target xmi:type="activitydiagram:ForkNode" href="demoFork2.xmi#//@nodes.2"/>
+          <semanticElements xmi:type="activitydiagram:ForkNode" href="demoFork2.xmi#//@nodes.2"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_NuAxcI-KEeaw49XHUork8Q" showIcon="false" borderColor="39,76,114" width="3" height="1" color="114,159,207">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.1/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxcY-KEeaw49XHUork8Q" name="join1" outgoingEdges="_NuAxh4-KEeaw49XHUork8Q" incomingEdges="_NuAxhI-KEeaw49XHUork8Q _NuAxeI-KEeaw49XHUork8Q" width="2" height="1" resizeKind="EAST_WEST">
+          <target xmi:type="activitydiagram:JoinNode" href="demoFork2.xmi#//@nodes.5"/>
+          <semanticElements xmi:type="activitydiagram:JoinNode" href="demoFork2.xmi#//@nodes.5"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_NuAxco-KEeaw49XHUork8Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" width="2" height="1" color="173,127,168">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.2/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxc4-KEeaw49XHUork8Q" name="finalNode6" incomingEdges="_NuAxio-KEeaw49XHUork8Q" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="activitydiagram:ActivityFinalNode" href="demoFork2.xmi#//@nodes.7"/>
+          <semanticElements xmi:type="activitydiagram:ActivityFinalNode" href="demoFork2.xmi#//@nodes.7"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_NuAxdI-KEeaw49XHUork8Q" showIcon="false" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/FinalNode.png">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb94I-KEeaw49XHUork8Q" name="actionB3&#xA;heldTokens =0" outgoingEdges="_NuAxeI-KEeaw49XHUork8Q" incomingEdges="_NuAxgY-KEeaw49XHUork8Q">
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.1"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_rhb94Y-KEeaw49XHUork8Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb94o-KEeaw49XHUork8Q" name="actionB2&#xA;heldTokens =0" outgoingEdges="_NuAxgY-KEeaw49XHUork8Q" incomingEdges="_NuAxe4-KEeaw49XHUork8Q">
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.3"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.3"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_rhb944-KEeaw49XHUork8Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb95I-KEeaw49XHUork8Q" name="actionB1&#xA;heldTokens =0" outgoingEdges="_NuAxhI-KEeaw49XHUork8Q" incomingEdges="_NuAxfo-KEeaw49XHUork8Q">
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.4"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.4"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_rhb95Y-KEeaw49XHUork8Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb95o-KEeaw49XHUork8Q" name="actionC&#xA;heldTokens =0" outgoingEdges="_NuAxio-KEeaw49XHUork8Q" incomingEdges="_NuAxh4-KEeaw49XHUork8Q">
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.6"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.6"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_rhb954-KEeaw49XHUork8Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxdY-KEeaw49XHUork8Q" name="edge1&#xA;tokenOfferCount=0" sourceNode="_NuAxbY-KEeaw49XHUork8Q" targetNode="_NuAxb4-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.0"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhlH0o-KEeaw49XHUork8Q" description="_rhlH0I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhlH04-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxeI-KEeaw49XHUork8Q" name="edge2&#xA;tokenOfferCount=0" sourceNode="_rhb94I-KEeaw49XHUork8Q" targetNode="_NuAxcY-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.1"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhlH1o-KEeaw49XHUork8Q" description="_rhlH1I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhlH14-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxe4-KEeaw49XHUork8Q" name="edge4_1&#xA;tokenOfferCount=0" sourceNode="_NuAxb4-KEeaw49XHUork8Q" targetNode="_rhb94o-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.2"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.2"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhu40o-KEeaw49XHUork8Q" description="_rhu40I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhu404-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxfo-KEeaw49XHUork8Q" name="edge3_1&#xA;tokenOfferCount=0" sourceNode="_NuAxb4-KEeaw49XHUork8Q" targetNode="_rhb95I-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.3"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.3"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhu41o-KEeaw49XHUork8Q" description="_rhu41I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhu414-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxgY-KEeaw49XHUork8Q" name="edge4_2&#xA;tokenOfferCount=0" sourceNode="_rhb94o-KEeaw49XHUork8Q" targetNode="_rhb94I-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.4"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.4"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p0o-KEeaw49XHUork8Q" description="_rh4p0I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p04-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxhI-KEeaw49XHUork8Q" name="edge3_2&#xA;tokenOfferCount=0" sourceNode="_rhb95I-KEeaw49XHUork8Q" targetNode="_NuAxcY-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.5"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.5"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p1o-KEeaw49XHUork8Q" description="_rh4p1I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p14-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxh4-KEeaw49XHUork8Q" name="edge5&#xA;tokenOfferCount=0" sourceNode="_NuAxcY-KEeaw49XHUork8Q" targetNode="_rhb95o-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.6"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.6"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p2o-KEeaw49XHUork8Q" description="_rh4p2I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p24-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxio-KEeaw49XHUork8Q" name="edge6&#xA;tokenOfferCount=0" sourceNode="_rhb95o-KEeaw49XHUork8Q" targetNode="_NuAxc4-KEeaw49XHUork8Q">
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.7"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.7"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p3o-KEeaw49XHUork8Q" description="_rh4p3I-KEeaw49XHUork8Q" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p34-KEeaw49XHUork8Q" showIcon="false"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_NuAxjY-KEeaw49XHUork8Q"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Debug']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']"/>
+      <target xmi:type="activitydiagram:Activity" href="demoFork2.xmi#/"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>
