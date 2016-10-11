@@ -84,55 +84,55 @@
         </data>
       </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_D6PEg4cWEeaH2Ox48ikH-A" name="test1">
+        <target xmi:type="activitydiagram:Activity" href="test1.xcad#test1"/>
+        <semanticElements xmi:type="activitydiagram:Activity" href="test1.xcad#test1"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_D6PEhIcWEeaH2Ox48ikH-A" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundStyle="Liquid" foregroundColor="245,239,244">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']"/>
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_D6PEhYcWEeaH2Ox48ikH-A" name="action1" outgoingEdges="_D6PEjocWEeaH2Ox48ikH-A" incomingEdges="_D6PEi4cWEeaH2Ox48ikH-A">
+          <target xmi:type="activitydiagram:OpaqueAction" href="test1.xcad#action1"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="test1.xcad#action1"/>
           <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_D6PEhocWEeaH2Ox48ikH-A" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']"/>
-          <target xmi:type="activitydiagram:OpaqueAction" href="test1.xcad#action1"/>
-          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="test1.xcad#action1"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_D6PEh4cWEeaH2Ox48ikH-A" name="initialNode1" outgoingEdges="_D6PEi4cWEeaH2Ox48ikH-A" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="activitydiagram:InitialNode" href="test1.xcad#initialNode1"/>
+          <semanticElements xmi:type="activitydiagram:InitialNode" href="test1.xcad#initialNode1"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_D6PEiIcWEeaH2Ox48ikH-A" showIcon="false" workspacePath="/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/images/InitNode.png">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']"/>
-          <target xmi:type="activitydiagram:InitialNode" href="test1.xcad#initialNode1"/>
-          <semanticElements xmi:type="activitydiagram:InitialNode" href="test1.xcad#initialNode1"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_D6PEiYcWEeaH2Ox48ikH-A" name="finalNode1" incomingEdges="_D6PEjocWEeaH2Ox48ikH-A" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="activitydiagram:ActivityFinalNode" href="test1.xcad#finalNode1"/>
+          <semanticElements xmi:type="activitydiagram:ActivityFinalNode" href="test1.xcad#finalNode1"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_D6PEiocWEeaH2Ox48ikH-A" showIcon="false" workspacePath="/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/images/FinalNode.png">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']"/>
-          <target xmi:type="activitydiagram:ActivityFinalNode" href="test1.xcad#finalNode1"/>
-          <semanticElements xmi:type="activitydiagram:ActivityFinalNode" href="test1.xcad#finalNode1"/>
         </ownedDiagramElements>
-        <target xmi:type="activitydiagram:Activity" href="test1.xcad#test1"/>
-        <semanticElements xmi:type="activitydiagram:Activity" href="test1.xcad#test1"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_D6PEi4cWEeaH2Ox48ikH-A" name="edge1" sourceNode="_D6PEh4cWEeaH2Ox48ikH-A" targetNode="_D6PEhYcWEeaH2Ox48ikH-A">
+        <target xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge1"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge1"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_D6PEjIcWEeaH2Ox48ikH-A" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']/@style"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_D6PEjYcWEeaH2Ox48ikH-A" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
-        <target xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge1"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge1"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_D6PEjocWEeaH2Ox48ikH-A" name="edge2" sourceNode="_D6PEhYcWEeaH2Ox48ikH-A" targetNode="_D6PEiYcWEeaH2Ox48ikH-A">
+        <target xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge2"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge2"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_D6PEj4cWEeaH2Ox48ikH-A" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']/@style"/>
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_D6PEkIcWEeaH2Ox48ikH-A" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
-        <target xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge2"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="test1.xcad#edge2"/>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.gemoc.activitydiagram.sequential.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_D6PEkYcWEeaH2Ox48ikH-A"/>
@@ -145,16 +145,29 @@
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_b47lkIdTEeaGWvBfgKf85Q">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_cAdw8IdTEeaGWvBfgKf85Q" name="test1 Activity Diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_cAdw8YdTEeaGWvBfgKf85Q" source="DANNOTATION_CUSTOMIZATION_KEY">
-        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_cAdw8odTEeaGWvBfgKf85Q"/>
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_cAdw8odTEeaGWvBfgKf85Q">
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_yZo44I-XEea8Mq3L-mDk2w" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_yZo44Y-XEea8Mq3L-mDk2w" showIcon="false" labelExpression="edge1&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+          <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_yZyp4I-XEea8Mq3L-mDk2w" routingStyle="manhattan">
+            <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_yZyp4Y-XEea8Mq3L-mDk2w" showIcon="false" labelExpression="edge2&#xA;tokenOfferCount=0">
+              <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </computedStyleDescriptions>
+        </data>
       </ownedAnnotationEntries>
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_cAzIIIdTEeaGWvBfgKf85Q" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_cAzIIYdTEeaGWvBfgKf85Q" type="Sirius" element="_cAdw8IdTEeaGWvBfgKf85Q" measurementUnit="Pixel">
           <children xmi:type="notation:Node" xmi:id="_cA_8cIdTEeaGWvBfgKf85Q" type="2002" element="_cAdw84dTEeaGWvBfgKf85Q">
             <children xmi:type="notation:Node" xmi:id="_cBTecIdTEeaGWvBfgKf85Q" type="5006"/>
             <children xmi:type="notation:Node" xmi:id="_cBUskIdTEeaGWvBfgKf85Q" type="7001">
-              <children xmi:type="notation:Node" xmi:id="_cBcoYIdTEeaGWvBfgKf85Q" type="3008" element="_cAdw9YdTEeaGWvBfgKf85Q">
-                <children xmi:type="notation:Node" xmi:id="_cBdPcIdTEeaGWvBfgKf85Q" type="5005"/>
-                <children xmi:type="notation:Node" xmi:id="_cBd2gIdTEeaGWvBfgKf85Q" type="7002">
+              <children xmi:type="notation:Node" xmi:id="_cBcoYIdTEeaGWvBfgKf85Q" type="3009" element="_yZM0AI-XEea8Mq3L-mDk2w">
+                <children xmi:type="notation:Node" xmi:id="_cBdPcIdTEeaGWvBfgKf85Q" type="5004"/>
+                <children xmi:type="notation:Node" xmi:id="_cBd2gIdTEeaGWvBfgKf85Q" type="7003">
                   <styles xmi:type="notation:SortingStyle" xmi:id="_cBd2gYdTEeaGWvBfgKf85Q"/>
                   <styles xmi:type="notation:FilteringStyle" xmi:id="_cBd2godTEeaGWvBfgKf85Q"/>
                 </children>
@@ -230,23 +243,14 @@
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_cAdw9IdTEeaGWvBfgKf85Q" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundStyle="Liquid" foregroundColor="245,239,244">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_cAdw9YdTEeaGWvBfgKf85Q" name="action1" outgoingEdges="_cAdw_odTEeaGWvBfgKf85Q" incomingEdges="_cAdw-4dTEeaGWvBfgKf85Q">
-          <target xmi:type="activitydiagram_1:OpaqueAction" href="test1.xcad#//@nodes.1"/>
-          <semanticElements xmi:type="activitydiagram_1:OpaqueAction" href="test1.xcad#//@nodes.1"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_cAdw9odTEeaGWvBfgKf85Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
-            <labelFormat>bold</labelFormat>
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']/@conditionnalStyles.0/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExecutableNode']"/>
-        </ownedDiagramElements>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']"/>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_cAdw94dTEeaGWvBfgKf85Q" name="initialNode1" outgoingEdges="_cAdw-4dTEeaGWvBfgKf85Q" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="activitydiagram_1:InitialNode" href="test1.xcad#//@nodes.0"/>
           <semanticElements xmi:type="activitydiagram_1:InitialNode" href="test1.xcad#//@nodes.0"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_cAdw-IdTEeaGWvBfgKf85Q" showIcon="false" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/InitNode.png">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']"/>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_cAdw-YdTEeaGWvBfgKf85Q" name="finalNode1" incomingEdges="_cAdw_odTEeaGWvBfgKf85Q" width="3" height="3" resizeKind="NSEW">
           <target xmi:type="activitydiagram_1:ActivityFinalNode" href="test1.xcad#//@nodes.2"/>
@@ -254,24 +258,31 @@
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_cAdw-odTEeaGWvBfgKf85Q" showIcon="false" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/FinalNode.png">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style"/>
           </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']"/>
+          <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_yZM0AI-XEea8Mq3L-mDk2w" name="action1&#xA;heldTokens =0" outgoingEdges="_cAdw_odTEeaGWvBfgKf85Q" incomingEdges="_cAdw-4dTEeaGWvBfgKf85Q">
+          <target xmi:type="activitydiagram_1:OpaqueAction" href="test1.xcad#//@nodes.1"/>
+          <semanticElements xmi:type="activitydiagram_1:OpaqueAction" href="test1.xcad#//@nodes.1"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_yZV98I-XEea8Mq3L-mDk2w" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="224,133,3" backgroundStyle="Liquid" foregroundColor="254,238,214">
+            <labelFormat>bold</labelFormat>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']/@conditionnalStyles.0/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_cAdw-4dTEeaGWvBfgKf85Q" name="edge1" sourceNode="_cAdw94dTEeaGWvBfgKf85Q" targetNode="_cAdw9YdTEeaGWvBfgKf85Q">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_cAdw-4dTEeaGWvBfgKf85Q" name="edge1&#xA;tokenOfferCount=0" sourceNode="_cAdw94dTEeaGWvBfgKf85Q" targetNode="_yZM0AI-XEea8Mq3L-mDk2w">
         <target xmi:type="activitydiagram_1:ControlFlow" href="test1.xcad#//@edges.0"/>
         <semanticElements xmi:type="activitydiagram_1:ControlFlow" href="test1.xcad#//@edges.0"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_cAdw_IdTEeaGWvBfgKf85Q" routingStyle="manhattan">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']/@style"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_cAdw_YdTEeaGWvBfgKf85Q" showIcon="false"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_yZo44o-XEea8Mq3L-mDk2w" description="_yZo44I-XEea8Mq3L-mDk2w" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_yZo444-XEea8Mq3L-mDk2w" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_cAdw_odTEeaGWvBfgKf85Q" name="edge2" sourceNode="_cAdw9YdTEeaGWvBfgKf85Q" targetNode="_cAdw-YdTEeaGWvBfgKf85Q">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_cAdw_odTEeaGWvBfgKf85Q" name="edge2&#xA;tokenOfferCount=0" sourceNode="_yZM0AI-XEea8Mq3L-mDk2w" targetNode="_cAdw-YdTEeaGWvBfgKf85Q">
         <target xmi:type="activitydiagram_1:ControlFlow" href="test1.xcad#//@edges.1"/>
         <semanticElements xmi:type="activitydiagram_1:ControlFlow" href="test1.xcad#//@edges.1"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_cAdw_4dTEeaGWvBfgKf85Q" routingStyle="manhattan">
-          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']/@style"/>
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_cAdxAIdTEeaGWvBfgKf85Q" showIcon="false"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_yZyp4o-XEea8Mq3L-mDk2w" description="_yZyp4I-XEea8Mq3L-mDk2w" routingStyle="manhattan">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_yZyp44-XEea8Mq3L-mDk2w" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
@@ -279,6 +290,7 @@
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_cAdxAYdTEeaGWvBfgKf85Q"/>
       <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Debug']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']"/>
       <target xmi:type="activitydiagram_1:Activity" href="test1.xcad#/"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']"/>

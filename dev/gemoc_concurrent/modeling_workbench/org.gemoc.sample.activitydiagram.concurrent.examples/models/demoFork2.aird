@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activitydiagram="http://org.gemoc.activitydiagram.concurrent.xactivitydiagram/activitydiagram/" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_NFZSMI-KEeaw49XHUork8Q" selectedViews="_Ns-PkI-KEeaw49XHUork8Q" version="10.1.0.201509162000">
-  <semanticResources>demoFork2.xmi</semanticResources>
+  <semanticResources>demoFork2.xcad</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_Ns-PkI-KEeaw49XHUork8Q">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_NuAxYI-KEeaw49XHUork8Q" name="demoFork1 Activity Diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_NuAxYY-KEeaw49XHUork8Q" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -278,15 +278,15 @@
         </data>
       </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NuAxY4-KEeaw49XHUork8Q" name="demoFork1">
-        <target xmi:type="activitydiagram:Activity" href="demoFork2.xmi#/"/>
-        <semanticElements xmi:type="activitydiagram:Activity" href="demoFork2.xmi#/"/>
+        <target xmi:type="activitydiagram:Activity" href="demoFork2.xcad#/"/>
+        <semanticElements xmi:type="activitydiagram:Activity" href="demoFork2.xcad#/"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_NuAxZI-KEeaw49XHUork8Q" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundStyle="Liquid" foregroundColor="245,239,244">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']"/>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxbY-KEeaw49XHUork8Q" name="initialNode6" outgoingEdges="_NuAxdY-KEeaw49XHUork8Q" width="3" height="3" resizeKind="NSEW">
-          <target xmi:type="activitydiagram:InitialNode" href="demoFork2.xmi#//@nodes.0"/>
-          <semanticElements xmi:type="activitydiagram:InitialNode" href="demoFork2.xmi#//@nodes.0"/>
+          <target xmi:type="activitydiagram:InitialNode" href="demoFork2.xcad#//@nodes.0"/>
+          <semanticElements xmi:type="activitydiagram:InitialNode" href="demoFork2.xcad#//@nodes.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -296,8 +296,8 @@
           <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxb4-KEeaw49XHUork8Q" name="fork1" outgoingEdges="_NuAxe4-KEeaw49XHUork8Q _NuAxfo-KEeaw49XHUork8Q" incomingEdges="_NuAxdY-KEeaw49XHUork8Q" width="3" height="1" resizeKind="EAST_WEST">
-          <target xmi:type="activitydiagram:ForkNode" href="demoFork2.xmi#//@nodes.2"/>
-          <semanticElements xmi:type="activitydiagram:ForkNode" href="demoFork2.xmi#//@nodes.2"/>
+          <target xmi:type="activitydiagram:ForkNode" href="demoFork2.xcad#//@nodes.2"/>
+          <semanticElements xmi:type="activitydiagram:ForkNode" href="demoFork2.xcad#//@nodes.2"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -307,8 +307,8 @@
           <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxcY-KEeaw49XHUork8Q" name="join1" outgoingEdges="_NuAxh4-KEeaw49XHUork8Q" incomingEdges="_NuAxhI-KEeaw49XHUork8Q _NuAxeI-KEeaw49XHUork8Q" width="2" height="1" resizeKind="EAST_WEST">
-          <target xmi:type="activitydiagram:JoinNode" href="demoFork2.xmi#//@nodes.5"/>
-          <semanticElements xmi:type="activitydiagram:JoinNode" href="demoFork2.xmi#//@nodes.5"/>
+          <target xmi:type="activitydiagram:JoinNode" href="demoFork2.xcad#//@nodes.5"/>
+          <semanticElements xmi:type="activitydiagram:JoinNode" href="demoFork2.xcad#//@nodes.5"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -318,16 +318,16 @@
           <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_NuAxc4-KEeaw49XHUork8Q" name="finalNode6" incomingEdges="_NuAxio-KEeaw49XHUork8Q" width="3" height="3" resizeKind="NSEW">
-          <target xmi:type="activitydiagram:ActivityFinalNode" href="demoFork2.xmi#//@nodes.7"/>
-          <semanticElements xmi:type="activitydiagram:ActivityFinalNode" href="demoFork2.xmi#//@nodes.7"/>
+          <target xmi:type="activitydiagram:ActivityFinalNode" href="demoFork2.xcad#//@nodes.7"/>
+          <semanticElements xmi:type="activitydiagram:ActivityFinalNode" href="demoFork2.xcad#//@nodes.7"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_NuAxdI-KEeaw49XHUork8Q" showIcon="false" workspacePath="/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/images/FinalNode.png">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode']/@conditionnalStyles.3/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subNodeMappings[name='AD_ControlNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb94I-KEeaw49XHUork8Q" name="actionB3&#xA;heldTokens =0" outgoingEdges="_NuAxeI-KEeaw49XHUork8Q" incomingEdges="_NuAxgY-KEeaw49XHUork8Q">
-          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.1"/>
-          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.1"/>
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.1"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.1"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -338,8 +338,8 @@
           <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb94o-KEeaw49XHUork8Q" name="actionB2&#xA;heldTokens =0" outgoingEdges="_NuAxgY-KEeaw49XHUork8Q" incomingEdges="_NuAxe4-KEeaw49XHUork8Q">
-          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.3"/>
-          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.3"/>
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.3"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.3"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -350,8 +350,8 @@
           <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb95I-KEeaw49XHUork8Q" name="actionB1&#xA;heldTokens =0" outgoingEdges="_NuAxhI-KEeaw49XHUork8Q" incomingEdges="_NuAxfo-KEeaw49XHUork8Q">
-          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.4"/>
-          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.4"/>
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.4"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.4"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -362,8 +362,8 @@
           <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']/@containerMappings[name='AD_Activity_animation_import']/@subContainerMappings[name='AD_ExecutableNode_animation_import']"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_rhb95o-KEeaw49XHUork8Q" name="actionC&#xA;heldTokens =0" outgoingEdges="_NuAxio-KEeaw49XHUork8Q" incomingEdges="_NuAxh4-KEeaw49XHUork8Q">
-          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.6"/>
-          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xmi#//@nodes.6"/>
+          <target xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.6"/>
+          <semanticElements xmi:type="activitydiagram:OpaqueAction" href="demoFork2.xcad#//@nodes.6"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
           <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
           <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -375,64 +375,64 @@
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxdY-KEeaw49XHUork8Q" name="edge1&#xA;tokenOfferCount=0" sourceNode="_NuAxbY-KEeaw49XHUork8Q" targetNode="_NuAxb4-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.0"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.0"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.0"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhlH0o-KEeaw49XHUork8Q" description="_rhlH0I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhlH04-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxeI-KEeaw49XHUork8Q" name="edge2&#xA;tokenOfferCount=0" sourceNode="_rhb94I-KEeaw49XHUork8Q" targetNode="_NuAxcY-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.1"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.1"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.1"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.1"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhlH1o-KEeaw49XHUork8Q" description="_rhlH1I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhlH14-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxe4-KEeaw49XHUork8Q" name="edge4_1&#xA;tokenOfferCount=0" sourceNode="_NuAxb4-KEeaw49XHUork8Q" targetNode="_rhb94o-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.2"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.2"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.2"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.2"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhu40o-KEeaw49XHUork8Q" description="_rhu40I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhu404-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxfo-KEeaw49XHUork8Q" name="edge3_1&#xA;tokenOfferCount=0" sourceNode="_NuAxb4-KEeaw49XHUork8Q" targetNode="_rhb95I-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.3"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.3"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.3"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.3"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rhu41o-KEeaw49XHUork8Q" description="_rhu41I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rhu414-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxgY-KEeaw49XHUork8Q" name="edge4_2&#xA;tokenOfferCount=0" sourceNode="_rhb94o-KEeaw49XHUork8Q" targetNode="_rhb94I-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.4"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.4"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.4"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.4"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p0o-KEeaw49XHUork8Q" description="_rh4p0I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p04-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxhI-KEeaw49XHUork8Q" name="edge3_2&#xA;tokenOfferCount=0" sourceNode="_rhb95I-KEeaw49XHUork8Q" targetNode="_NuAxcY-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.5"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.5"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.5"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.5"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p1o-KEeaw49XHUork8Q" description="_rh4p1I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p14-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxh4-KEeaw49XHUork8Q" name="edge5&#xA;tokenOfferCount=0" sourceNode="_NuAxcY-KEeaw49XHUork8Q" targetNode="_rhb95o-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.6"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.6"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.6"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.6"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p2o-KEeaw49XHUork8Q" description="_rh4p2I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p24-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@edgeMappings[name='AD_ControlFlow']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_NuAxio-KEeaw49XHUork8Q" name="edge6&#xA;tokenOfferCount=0" sourceNode="_rhb95o-KEeaw49XHUork8Q" targetNode="_NuAxc4-KEeaw49XHUork8Q">
-        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.7"/>
-        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xmi#//@edges.7"/>
+        <target xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.7"/>
+        <semanticElements xmi:type="activitydiagram:ControlFlow" href="demoFork2.xcad#//@edges.7"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rh4p3o-KEeaw49XHUork8Q" description="_rh4p3I-KEeaw49XHUork8Q" routingStyle="manhattan">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rh4p34-KEeaw49XHUork8Q" showIcon="false"/>
         </ownedStyle>
@@ -443,7 +443,7 @@
       <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Debug']"/>
       <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Animation']"/>
-      <target xmi:type="activitydiagram:Activity" href="demoFork2.xmi#/"/>
+      <target xmi:type="activitydiagram:Activity" href="demoFork2.xcad#/"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.gemoc.activitydiagram.concurrent.xactivitydiagram.design/description/ad.odesign#//@ownedViewpoints[name='ActivityDiagram%20viewpoint']"/>
   </ownedViews>
