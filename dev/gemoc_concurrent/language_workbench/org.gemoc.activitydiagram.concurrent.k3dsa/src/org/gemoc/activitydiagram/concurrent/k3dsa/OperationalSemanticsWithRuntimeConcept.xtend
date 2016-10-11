@@ -245,7 +245,7 @@ class ActivityAspect extends NamedElementAspect {
 
 	private def Input getInput(String inputPath) {
 		var Input input = null;
-		if (inputPath != null) {
+		if (inputPath != null && !inputPath.isEmpty) {
 			var XtextResourceSet resourceSet ;resourceSet = new XtextResourceSet();
 			var resource = resourceSet.getResource(URI.createURI(inputPath), true);
 			var eObject = resource.getContents().get(0);

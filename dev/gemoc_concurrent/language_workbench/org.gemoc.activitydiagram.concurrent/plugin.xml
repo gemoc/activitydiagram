@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?eclipse version="3.4"?><plugin>
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
   <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
     <XDSML_Definition codeExecutor_class="xactivitydiagram.xdsml.api.impl.XActivityDiagramCodeExecutor" modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.concurrent.XActivityDiagram" solver_class="org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" toCCSLQVTOFilePath="/org.gemoc.activitydiagram.concurrent.moc.dse/qvto-gen/modeling/ActivitiyDiagramV2.qvto" xdsmlFilePath="/org.gemoc.activitydiagram.concurrent/src/org/gemoc/activitydiagram/concurrent/ConcurrentActivityDiagram.melange">
-      <XDSML_Definition_Customization fileExtensions="xcad"/>
+      <XDSML_Definition_Customization fileExtensions="xcad" />
     </XDSML_Definition>
   </extension>
-  
-<extension point="fr.inria.diverse.melange.modeltype">
-    <modeltype id="org.gemoc.activitydiagram.concurrent.XActivityDiagramMT" uri="http://org.gemoc.activitydiagram.concurrent.xactivitydiagrammt/"/>
+  <extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="org.gemoc.activitydiagram.concurrent.XActivityDiagramMT" uri="http://org.gemoc.activitydiagram.concurrent.xactivitydiagrammt/" />
   </extension>
   <extension point="fr.inria.diverse.melange.language">
     <language aspects="IntegerCalculationExpression:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerCalculationExpressionAspect;Variable:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.VariableAspect;Activity:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityAspect;BooleanBinaryExpression:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.BooleanBinaryExpressionAspect;ActivityFinalNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityFinalNodeAspect;Token:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.TokenAspect;DecisionNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.DecisionNodeAspect;ActivityNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityNodeAspect;MergeNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.MergeNodeAspect;IntegerVariable:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerVariableAspect;ActivityEdge:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ActivityEdgeAspect;IntegerComparisonExpression:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.IntegerComparisonExpressionAspect;Context:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ContextAspect;JoinNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.JoinNodeAspect;OpaqueAction:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.OpaqueActionAspect;InitialNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.InitialNodeAspect;ControlFlow:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ControlFlowAspect;Trace:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.TraceAspect;ForkNode:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ForkNodeAspect;Expression:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ExpressionAspect;AcceptEventAction:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.AcceptEventActionAspect;Offer:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.OfferAspect;BooleanVariable:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.BooleanVariableAspect;ForkedToken:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.ForkedTokenAspect;NamedElement:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.NamedElementAspect;SendSignalAction:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.SendSignalActionAspect;BooleanUnaryExpression:org.gemoc.activitydiagram.concurrent.xactivitydiagram.aspects.BooleanUnaryExpressionAspect" entryPoints="" exactType="org.gemoc.activitydiagram.concurrent.XActivityDiagramMT" id="org.gemoc.activitydiagram.concurrent.XActivityDiagram" uri="http://org.gemoc.activitydiagram.concurrent.xactivitydiagram/activitydiagram/">
-      <adapter class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter" modeltypeId="org.gemoc.activitydiagram.concurrent.XActivityDiagramMT"/>
+      <adapter class="org.gemoc.activitydiagram.concurrent.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter" modeltypeId="org.gemoc.activitydiagram.concurrent.XActivityDiagramMT" />
     </language>
   </extension>
 </plugin>

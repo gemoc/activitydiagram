@@ -169,7 +169,8 @@ public class ActivityAspect extends NamedElementAspect {
     int _size = args.size();
     boolean _equals = (_size == 1);
     if (_equals) {
-      String inputPath = args.get(0);
+      final String inputPath = args.get(0);
+      InputOutput.<String>println(("Loading input values from " + inputPath));
       Input input = ActivityAspect.getInput(_self, inputPath);
       boolean _notEquals = (!Objects.equal(input, null));
       if (_notEquals) {
@@ -292,8 +293,16 @@ public class ActivityAspect extends NamedElementAspect {
   
   protected static Input _privk3_getInput(final ActivityAspectActivityAspectProperties _self_, final Activity _self, final String inputPath) {
     Input input = null;
+    boolean _and = false;
     boolean _notEquals = (!Objects.equal(inputPath, null));
-    if (_notEquals) {
+    if (!_notEquals) {
+      _and = false;
+    } else {
+      boolean _isEmpty = inputPath.isEmpty();
+      boolean _not = (!_isEmpty);
+      _and = _not;
+    }
+    if (_and) {
       XtextResourceSet resourceSet = null;
       XtextResourceSet _xtextResourceSet = new XtextResourceSet();
       resourceSet = _xtextResourceSet;
