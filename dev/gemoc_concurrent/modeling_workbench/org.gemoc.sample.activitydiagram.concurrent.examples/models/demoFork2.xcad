@@ -1,4 +1,4 @@
-activity demoFork1 {
+activity demoFork2 {
 	nodes {
 		initial initialNode6 out ( edge1 ),
 		action actionB3 in ( edge4_2 ) out ( edge2 ),

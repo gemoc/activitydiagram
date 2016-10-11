@@ -277,7 +277,7 @@
           </edges>
         </data>
       </ownedAnnotationEntries>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NuAxY4-KEeaw49XHUork8Q" name="demoFork1">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NuAxY4-KEeaw49XHUork8Q" name="demoFork2">
         <target xmi:type="activitydiagram:Activity" href="demoFork2.xcad#/"/>
         <semanticElements xmi:type="activitydiagram:Activity" href="demoFork2.xcad#/"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_NuAxZI-KEeaw49XHUork8Q" labelSize="9" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="114,73,110" backgroundStyle="Liquid" foregroundColor="245,239,244">
