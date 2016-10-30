@@ -1,0 +1,30 @@
+activity loginRegister {
+	
+	bool isRegistered = true,
+	bool formValid = false
+	
+	nodes {
+		initial init out (initToTestRegistered),
+		decision testRegistered in (initToTestRegistered) out (testRegisteredTologin) ,
+		action login,
+		action clickRegistered,
+		action fillRegistrationForm,
+		decision testFormValid in (fillRegistrationFormToTestFormValid) out (testFormValidToFillRegistrationForm),
+		action submitRegistrationForm,
+		merge endMerge in (loginToEndMerge,submitRegistrationFormToEndMerge) out (endMergeToEnd),
+		final end in (endMergeToEnd) 
+	}	
+	
+	edges {
+		flow initToTestRegistered from init to testRegistered,
+		flow testRegisteredTologin from testRegistered to login [isRegistered],
+		flow testRegisteredToClickRegister from testRegistered to clickRegistered,
+		flow clickRegisterToFillRegistrationForm from clickRegistered to fillRegistrationForm,
+		flow fillRegistrationFormToTestFormValid from fillRegistrationForm to testFormValid, 
+		flow testFormValidToFillRegistrationForm from testFormValid to fillRegistrationForm,
+		flow testFormValidToSubmitRegistrationForm  from testFormValid to submitRegistrationForm [formValid],
+		flow loginToEndMerge from login to endMerge,
+		flow submitRegistrationFormToEndMerge from submitRegistrationForm to endMerge,
+		flow endMergeToEnd from endMerge to end
+	}
+}
