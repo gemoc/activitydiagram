@@ -4,11 +4,14 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.gemoc.xdsmlframework.api.engine_addon.modelchangelistener.BatchModelChangeListener;
 
 import fr.inria.diverse.trace.gemoc.api.IStepFactory;
 import fr.inria.diverse.trace.gemoc.api.ITraceConstructor;
 import fr.inria.diverse.trace.gemoc.api.ITraceExplorer;
 import fr.inria.diverse.trace.gemoc.api.ITraceExtractor;
+import fr.inria.diverse.trace.gemoc.api.ITraceListener;
+import fr.inria.diverse.trace.gemoc.api.ITraceNotifier;
 import fr.inria.diverse.trace.gemoc.traceaddon.AbstractTraceAddon;
 
 public class ActivitydiagramTraceEngineAddon extends AbstractTraceAddon {
@@ -67,4 +70,8 @@ public class ActivitydiagramTraceEngineAddon extends AbstractTraceAddon {
 		return root instanceof activitydiagramTrace.SpecificTrace;
 	}
 
+	@Override
+	public ITraceNotifier constructTraceNotifier(BatchModelChangeListener traceListener) {
+		return new ActivitydiagramTraceNotifier(traceListener);
+	}
 }

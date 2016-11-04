@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -19,7 +21,8 @@ import org.gemoc.executionframework.engine.core.CommandExecution;
 import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
 import fr.inria.diverse.trace.commons.model.trace.Step;
 import fr.inria.diverse.trace.gemoc.api.ITraceExplorer;
-import fr.inria.diverse.trace.gemoc.api.ITraceListener;
+import fr.inria.diverse.trace.gemoc.api.ITraceViewListener;
+import fr.inria.diverse.trace.gemoc.api.ITraceViewNotifier.TraceViewCommand;
 
 public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 	private activitydiagramTrace.SpecificTrace traceRoot;
@@ -45,9 +48,9 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 	final private Map<activitydiagramTrace.Steps.SpecificStep, Integer> stepToStartingIndex = new HashMap<>();
 	final private Map<activitydiagramTrace.Steps.SpecificStep, Integer> stepToEndingIndex = new HashMap<>();
 
-	private final HashMap<Integer, Boolean> canBackValueCache = new HashMap<>();
+	private final HashMap<List<? extends activitydiagramTrace.States.Value>, EObject> backValueCache = new HashMap<>();
 
-	final private List<ITraceListener> listeners = new ArrayList<>();
+	private Map<ITraceViewListener,Set<TraceViewCommand>> listeners = new HashMap<>();
 
 	public ActivitydiagramTraceExplorer(Map<EObject, EObject> tracedToExe) {
 		this.tracedToExe = tracedToExe;
@@ -148,21 +151,23 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 		return result;
 	}
 
-	private int getPreviousValueIndex(final List<? extends activitydiagramTrace.States.Value> valueTrace) {
+	private EObject getPreviousValueIndex(final List<? extends activitydiagramTrace.States.Value> valueTrace) {
 		activitydiagramTrace.States.Value value = getActiveValue(valueTrace, currentState);
 		if (value != null) {
-			return valueTrace.indexOf(value) - 1;
+			return value;
+//			return valueTrace.indexOf(value) - 1;
 		} else {
 			int i = getCurrentStateIndex() - 1;
 			while (i > -1 && value == null) {
 				value = getActiveValue(valueTrace, statesTrace.get(i));
 				i--;
 			}
-			if (value == null) {
-				return -1;
-			} else {
-				return valueTrace.indexOf(value) - 1;
-			}
+			return value;
+//			if (value == null) {
+//				return -1;
+//			} else {
+//				return valueTrace.indexOf(value) - 1;
+//			}
 		}
 	}
 
@@ -675,11 +680,9 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 	@Override
 	public boolean canBackValue(int traceIndex) {
 		if (traceIndex > -1 && traceIndex < valueTraces.size()) {
-			return canBackValueCache.computeIfAbsent(traceIndex, i -> {
-				final List<? extends activitydiagramTrace.States.Value> valueTrace = valueTraces.get(traceIndex);
-				final int previousValueIndex = getPreviousValueIndex(valueTrace);
-				return previousValueIndex > -1;
-			});
+			return backValueCache.computeIfAbsent(valueTraces.get(traceIndex), valueTrace -> {
+				return getPreviousValueIndex(valueTrace);
+			}) != null;
 		}
 		return false;
 	}
@@ -692,10 +695,9 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 	@Override
 	public void backValue(int traceIndex) {
 		if (traceIndex > -1 && traceIndex < valueTraces.size()) {
-			final List<? extends activitydiagramTrace.States.Value> valueTrace = valueTraces.get(traceIndex);
-			final int previousValueIndex = getPreviousValueIndex(valueTrace);
-			if (previousValueIndex > -1) {
-				jump(valueTrace.get(previousValueIndex));
+			final EObject previousValue = backValueCache.get(valueTraces.get(traceIndex));
+			if (previousValue != null) {
+				jump(previousValue);
 			}
 		}
 	}
@@ -845,31 +847,28 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 
 	@Override
 	public void notifyListeners() {
-		for (ITraceListener listener : listeners) {
-			listener.update();
+		for (Map.Entry<ITraceViewListener,Set<TraceViewCommand>> entry : listeners.entrySet()) {
+			entry.getValue().forEach(c -> c.execute());
 		}
 	}
 
 	@Override
-	public void addListener(ITraceListener listener) {
+	public void registerCommand(ITraceViewListener listener, TraceViewCommand command) {
 		if (listener != null) {
-			listeners.add(listener);
+			Set<TraceViewCommand> commands = listeners.get(listener);
+			if (commands == null) {
+				commands = new HashSet<>();
+				listeners.put(listener, commands);
+			}
+			commands.add(command);
 		}
 	}
 
 	@Override
-	public void removeListener(ITraceListener listener) {
+	public void removeListener(ITraceViewListener listener) {
 		if (listener != null) {
 			listeners.remove(listener);
 		}
-	}
-
-	@Override
-	public void update() {
-		valueTraces.clear();
-		valueTraces.addAll(getAllValueTraces());
-		canBackValueCache.clear();
-		notifyListeners();
 	}
 
 	@Override
@@ -995,10 +994,42 @@ public class ActivitydiagramTraceExplorer implements ITraceExplorer {
 				container = container.eContainer();
 			}
 			computeExplorerState(newPath);
-			update();
+			notifyListeners();
 		} else {
 			throw new IllegalArgumentException(
 					"ActivitydiagramTraceExplorer expects specific steps and cannot handle this: " + step);
 		}
 	}
+
+	@Override
+	public void statesAdded(List<EObject> state) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void valuesAdded(List<EObject> value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dimensionsAdded(List<List<? extends EObject>> dimensions) {
+		valueTraces.clear();
+		valueTraces.addAll(getAllValueTraces());
+		notifyListeners();
+	}
+
+	@Override
+	public void stepsStarted(List<EObject> steps) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void stepsEnded(List<EObject> steps) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

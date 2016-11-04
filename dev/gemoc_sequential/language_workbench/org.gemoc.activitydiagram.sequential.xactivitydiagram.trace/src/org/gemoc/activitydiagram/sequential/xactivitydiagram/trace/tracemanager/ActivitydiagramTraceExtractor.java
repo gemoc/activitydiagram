@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Optional;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
@@ -15,7 +16,6 @@ import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.compare.Comparison;
-import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.EMFCompare;
 import org.eclipse.emf.compare.Match;
 import org.eclipse.emf.compare.diff.DefaultDiffEngine;
@@ -41,6 +41,7 @@ import fr.inria.diverse.trace.commons.model.trace.LaunchConfiguration;
 import fr.inria.diverse.trace.commons.model.trace.SequentialStep;
 import fr.inria.diverse.trace.commons.model.trace.Step;
 import fr.inria.diverse.trace.gemoc.api.ITraceExtractor;
+import fr.inria.diverse.trace.gemoc.api.ITraceViewListener;
 
 public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 
@@ -58,7 +59,13 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 
 	final private Map<Integer, Boolean> ignoredValueTraces = new HashMap<>();
 
+	private final Map<List<Integer>, List<EObject>> cachedStateEquivalenceClasses = Collections.synchronizedMap(new HashMap<>());
+	private final Map<List<Integer>, List<EObject>> cachedMaskedStateEquivalenceClasses = Collections.synchronizedMap(new HashMap<>());
+
+	private final List<activitydiagramTrace.States.Value> observedValues = new ArrayList<>();
+
 	public ActivitydiagramTraceExtractor() {
+		observedValues.add(null);
 		configureDiffEngine();
 	}
 
@@ -264,9 +271,13 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 
 	private EMFCompare compare;
 
-	private List<Diff> compareEObjects(EObject e1, EObject e2) {
+	private boolean compareEObjects(EObject e1, EObject e2) {
 		if (e1 == e2) {
-			return Collections.emptyList();
+			return true;
+		}
+		
+		if (e1 == null || e2 == null) {
+			return false;
 		}
 
 		if (!compareInitialized) {
@@ -279,105 +290,101 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 
 		final IComparisonScope scope = new DefaultComparisonScope(e1, e2, null);
 		final Comparison comparison = compare.compare(scope);
-		return comparison.getDifferences();
+		return comparison.getDifferences().isEmpty();
 	}
 
-	private void computeStateComparisonValue(final activitydiagramTrace.States.State state,
-			final List<activitydiagramTrace.States.Value> values,
-			final Map<activitydiagramTrace.States.State, Integer> stateToComparisonValue,
-			final List<activitydiagramTrace.States.Value> observedValues, final int statesNb) {
-		Integer stateComparisonValue = stateToComparisonValue.get(state);
+	private List<Integer> computeStateComparisonList(List<activitydiagramTrace.States.Value> values) {
+		final List<Integer> valueIndexes = new ArrayList<>();
 		for (int i = 0; i < values.size(); i++) {
 			final activitydiagramTrace.States.Value value = values.get(i);
 			int idx = -1;
 			for (int j = 0; j < observedValues.size(); j++) {
-				final activitydiagramTrace.States.Value v1 = observedValues.get(j);
-				final activitydiagramTrace.States.Value v2 = value;
-				if (v1.eClass() == v2.eClass() && compareEObjects(v1, v2).isEmpty()) {
+				final EObject v1 = observedValues.get(j);
+				final EObject v2 = value;
+				if (compareEObjects(v1, v2)) {
 					idx = j;
 					break;
 				}
 			}
-			final int pow = (int) Math.pow(statesNb, i);
 			if (idx != -1) {
-				if (stateComparisonValue == null) {
-					stateComparisonValue = (idx + 1) * pow;
-				} else {
-					stateComparisonValue = stateComparisonValue + (idx + 1) * pow;
-				}
+				valueIndexes.add(idx);
 			} else {
+				valueIndexes.add(observedValues.size());
 				observedValues.add(value);
-				idx = observedValues.size();
-				if (stateComparisonValue == null) {
-					stateComparisonValue = idx * pow;
-				} else {
-					stateComparisonValue = stateComparisonValue + idx * pow;
-				}
 			}
-			stateToComparisonValue.put(state, stateComparisonValue);
 		}
+		return valueIndexes;
+	}
+
+	private void updateEquivalenceClasses(activitydiagramTrace.States.State state) {
+		final List<activitydiagramTrace.States.Value> values = getAllStateValues(state, true);
+		final List<Integer> valueIndexes = computeStateComparisonList(values);
+		List<EObject> equivalenceClass = cachedStateEquivalenceClasses.get(valueIndexes);
+		if (equivalenceClass == null) {
+			equivalenceClass = new ArrayList<>();
+			cachedStateEquivalenceClasses.put(valueIndexes, equivalenceClass);
+		}
+		equivalenceClass.add(state);
+	}
+
+	private void updateEquivalenceClasses(List<activitydiagramTrace.States.State> states) {
+		states.stream().distinct()
+				.forEach(s -> updateEquivalenceClasses(s));
+	}
+	
+	/*
+	 * Return the list of indexes of value traces that are ignored.
+	 */
+	private List<Integer> computeDimensionMask() {
+		final List<Integer> result = new ArrayList<>();
+		for (int i = 0; i < valueTraces.size(); i++) {
+			if (isValueTraceIgnored(i)) {
+				result.add(i);
+			}
+		}
+		return result;
+	}
+	
+	private List<Integer> applyMask(List<Integer> source, List<Integer> mask) {
+		final List<Integer> result = new ArrayList<>(source);
+		int j = 0;
+		for (Integer i : mask) {
+			result.remove(i - j);
+			j++;
+		}
+		return result;
 	}
 
 	@Override
-	public Collection<List<EObject>> computeStateEquivalenceClasses() {
-		return computeStateEquivalenceClasses(statesTrace);
+	public List<List<EObject>> computeStateEquivalenceClasses() {
+//		if (cachedMaskedStateEquivalenceClasses.isEmpty()) {
+			cachedMaskedStateEquivalenceClasses.clear();
+			final List<Integer> dimensionsToMask = computeDimensionMask();
+			if (dimensionsToMask.isEmpty()) {
+				return cachedStateEquivalenceClasses.values().stream().collect(Collectors.toList());
+			}
+			cachedStateEquivalenceClasses.forEach((indexList, stateList) -> {
+				final List<Integer> maskedIndexList = applyMask(indexList, dimensionsToMask);
+				List<EObject> equivalenceClass = cachedMaskedStateEquivalenceClasses.get(maskedIndexList);
+				if (equivalenceClass == null) {
+					equivalenceClass = new ArrayList<>();
+					cachedMaskedStateEquivalenceClasses.put(maskedIndexList, equivalenceClass);
+				}
+				equivalenceClass.addAll(stateList);
+			});
+//		}
+		return cachedMaskedStateEquivalenceClasses.values().stream().collect(Collectors.toList());
 	}
 
 	@Override
-	public Collection<List<EObject>> computeStateEquivalenceClasses(List<? extends EObject> states) {
-		final Map<Integer, List<activitydiagramTrace.States.State>> statesMap = new HashMap<>();
-		final Map<activitydiagramTrace.States.State, List<activitydiagramTrace.States.Value>> stateToValues = new HashMap<>();
-		final Map<activitydiagramTrace.States.State, Integer> stateToIndex = new HashMap<>();
-		// First we build the map of states, grouped by their number of dimensions
-		// and we associate to each state the list of its values
-		states.stream().distinct().map(e -> (activitydiagramTrace.States.State) e).forEach(s -> {
-			stateToIndex.put(s, stateToIndex.size());
-			final List<activitydiagramTrace.States.Value> values = getAllStateValues(s);
-			stateToValues.put(s, values);
-			final int size = values.size();
-			List<activitydiagramTrace.States.State> tmp = statesMap.get(size);
-			if (tmp == null) {
-				tmp = new ArrayList<>();
-				statesMap.put(size, tmp);
-			}
-			tmp.add(s);
-		});
-		final int statesNb = stateToValues.keySet().size();
-
-		final List<activitydiagramTrace.States.Value> observedValues = new ArrayList<>();
-		final Map<activitydiagramTrace.States.State, Integer> stateToComparisonValue = new HashMap<>();
-
-		for (Entry<Integer, List<activitydiagramTrace.States.State>> entry : statesMap.entrySet()) {
-			for (activitydiagramTrace.States.State state : entry.getValue()) {
-				final List<activitydiagramTrace.States.Value> values = stateToValues.get(state);
-				// Filling stateTocomparisonValue by side-effect
-				computeStateComparisonValue(state, values, stateToComparisonValue, observedValues, statesNb);
-			}
-		}
-
-		final Map<Integer, List<EObject>> accumulator = new HashMap<>();
-
-		stateToComparisonValue.entrySet().stream().forEach(e -> {
-			final activitydiagramTrace.States.State state = e.getKey();
-			final Integer n = e.getValue();
-			if (n != null) {
-				List<EObject> equivalentStates = accumulator.get(n);
-				if (equivalentStates == null) {
-					equivalentStates = new ArrayList<>();
-					accumulator.put(n, equivalentStates);
-				}
-				if (equivalentStates.isEmpty()) {
-					equivalentStates.add(state);
-				} else {
-					if (stateToIndex.get(state) < stateToIndex.get(equivalentStates.get(0))) {
-						equivalentStates.add(0, state);
-					} else {
-						equivalentStates.add(state);
-					}
-				}
-			}
-		});
-		return accumulator.values();
+	public List<List<EObject>> computeStateEquivalenceClasses(List<? extends EObject> states) {
+		final List<List<EObject>> result = computeStateEquivalenceClasses();
+		result.stream()
+				.map(l -> l.stream()
+						.filter(s -> states.contains(s))
+						.collect(Collectors.toList()))
+				.collect(Collectors.toList());
+		return result;
 	}
 
 	@Override
@@ -404,21 +411,21 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 			return false;
 		}
 
-		final List<List<Diff>> result = new ArrayList<>();
+		boolean result = true;
 		for (int i = 0; i < values1.size(); i++) {
 			if (!respectIgnored || !isValueTraceIgnored(i)) {
 				final activitydiagramTrace.States.Value value1 = values1.get(i);
 				final activitydiagramTrace.States.Value value2 = values2.get(i);
 				if (value1 != value2) {
-					final List<Diff> diffs = compareEObjects(value1, value2);
-					if (!diffs.isEmpty()) {
-						result.add(diffs);
+					result = result && compareEObjects(value1, value2);
+					if (!result) {
+						break;
 					}
 				}
 			}
 		}
 
-		return result.isEmpty();
+		return result;
 	}
 
 	public boolean compareSteps(EObject eObject1, EObject eObject2) {
@@ -533,90 +540,25 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 	}
 
 	private List<activitydiagramTrace.States.Value> getAllStateValues(activitydiagramTrace.States.State state) {
-		final List<List<? extends activitydiagramTrace.States.Value>> traces = new ArrayList<>();
+		return getAllStateValues(state, false);
+	}
+
+	private List<activitydiagramTrace.States.Value> getAllStateValues(activitydiagramTrace.States.State state,
+			boolean includeHiddenValues) {
 		final List<activitydiagramTrace.States.Value> result = new ArrayList<>();
-		for (activitydiagramTrace.States.activitydiagram.TracedActivity tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedActivitys()) {
-			traces.add(tracedObject.getTraceSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedActivityFinalNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedActivityFinalNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedActivityNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedActivityNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedBooleanVariable tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedBooleanVariables()) {
-			traces.add(tracedObject.getCurrentValueSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedControlFlow tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedControlFlows()) {
-			traces.add(tracedObject.getOffersSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedDecisionNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedDecisionNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedForkNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedForkNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedForkedToken tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedForkedTokens()) {
-			traces.add(tracedObject.getBaseTokenSequence());
-			traces.add(tracedObject.getRemainingOffersCountSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInitialNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedInitialNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInput tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedInputs()) {
-			traces.add(tracedObject.getInputValuesSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedInputValue tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedInputValues()) {
-			traces.add(tracedObject.getValueSequence());
-			traces.add(tracedObject.getVariableSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedIntegerVariable tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedIntegerVariables()) {
-			traces.add(tracedObject.getCurrentValueSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedJoinNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedJoinNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedMergeNode tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedMergeNodes()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedOffer tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedOffers()) {
-			traces.add(tracedObject.getOfferedTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedOpaqueAction tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedOpaqueActions()) {
-			traces.add(tracedObject.getHeldTokensSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedTrace tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedTraces()) {
-			traces.add(tracedObject.getExecutedNodesSequence());
-		}
-		for (activitydiagramTrace.States.activitydiagram.TracedVariable tracedObject : ((activitydiagramTrace.SpecificTrace) state
-				.eContainer()).getActivitydiagram_tracedVariables()) {
-			traces.add(tracedObject.getCurrentValueSequence());
-		}
-		for (int i = 0; i < traces.size(); i++) {
-			if (!isValueTraceIgnored(i)) {
-				final List<? extends activitydiagramTrace.States.Value> trace = traces.get(i);
+		for (int i = 0; i < valueTraces.size(); i++) {
+			if (includeHiddenValues || !isValueTraceIgnored(i)) {
+				final List<? extends activitydiagramTrace.States.Value> trace = valueTraces.get(i);
+				boolean notFound = true;
 				for (activitydiagramTrace.States.Value value : trace) {
 					if (value.getStatesNoOpposite().contains(state)) {
 						result.add(value);
+						notFound = false;
 						break;
 					}
+				}
+				if (notFound) {
+					result.add(null);
 				}
 			}
 		}
@@ -642,6 +584,7 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 		traceRoot = root;
 		statesTrace = traceRoot.getStatesTrace();
 		valueTraces.addAll(getAllValueTraces());
+		updateEquivalenceClasses(statesTrace);
 	}
 
 	@Override
@@ -880,18 +823,124 @@ public class ActivitydiagramTraceExtractor implements ITraceExtractor {
 
 	@Override
 	public void ignoreValueTrace(int trace, boolean ignore) {
-		ignoredValueTraces.put(trace, ignore);
+		if (trace > -1 && trace < valueTraces.size()) {
+			ignoredValueTraces.put(trace, ignore);
+			cachedMaskedStateEquivalenceClasses.clear();
+			notifyListeners();
+		}
 	}
 
 	@Override
 	public boolean isValueTraceIgnored(int trace) {
-		Boolean result = ignoredValueTraces.get(trace);
+		Boolean result = null;
+		if (trace > -1 && trace < valueTraces.size()) {
+			result = ignoredValueTraces.get(trace);
+		}
 		return result != null && result;
 	}
 
 	@Override
-	public void update() {
-		valueTraces.clear();
-		valueTraces.addAll(getAllValueTraces());
+	public void statesAdded(List<EObject> states) {
+		updateEquivalenceClasses(states.stream()
+				.map(e -> (activitydiagramTrace.States.State) e).collect(Collectors.toList()));
+		notifyListeners();
+	}
+
+	private Map<EObject,Map<EReference,List<EObject>>> valuesTracesMap = new HashMap<>();
+
+	private Map<ITraceViewListener,Set<TraceViewCommand>> listeners = new HashMap<>();
+	
+	@Override
+	public void valuesAdded(List<EObject> values) {
+		for (EObject value : values) {
+			final EReference r = value.eContainmentFeature();
+			final EObject c = value.eContainer();
+			List<EObject> l = null;
+			Map<EReference,List<EObject>> m = valuesTracesMap.get(c);
+			if (m == null) {
+				m = new HashMap<>();
+				l = Collections.synchronizedList(new ArrayList<>());
+				m.put(r, l);
+				valuesTracesMap.put(c, m);
+			} else {
+				l = m.get(r);
+				if (l == null) {
+					l = Collections.synchronizedList(new ArrayList<>());
+					m.put(r, l);
+				}
+			}
+			l.add(value);
+		}
+		// Nothing to do here.
+	}
+
+	@Override
+	public void dimensionsAdded(List<List<? extends EObject>> dimensions) {
+		if (!dimensions.isEmpty()) {
+			valueTraces.clear();
+			valueTraces.addAll(getAllValueTraces());
+			final List<Integer> insertedTracesIndexes = new ArrayList<>();
+			for (List<? extends EObject> valueTrace : dimensions) {
+				final int i = valueTraces.indexOf(valueTrace);
+				insertedTracesIndexes.add(i);
+			}
+			Collections.sort(insertedTracesIndexes);
+			final List<List<Integer>> keys = cachedStateEquivalenceClasses.keySet().stream().collect(Collectors.toList());
+			for (List<Integer> key : keys) {
+				List<EObject> states = cachedStateEquivalenceClasses.remove(key);
+				for (Integer i : insertedTracesIndexes) {
+					key.add(i, -1);
+				}
+				cachedStateEquivalenceClasses.put(key, states);
+			}
+			final List<Integer> ignoredTracesIndexes = ignoredValueTraces.keySet().stream().collect(Collectors.toList());
+			Collections.sort(ignoredTracesIndexes);
+			while (!ignoredTracesIndexes.isEmpty()) {
+				int i = ignoredTracesIndexes.remove(0);
+				if (insertedTracesIndexes.get(0) <= i) {
+					for (int j = ignoredTracesIndexes.size(); j >= 0; j--) {
+						ignoredValueTraces.put(j+1, ignoredValueTraces.remove(j));
+					}
+					ignoredValueTraces.put(i+1, ignoredValueTraces.remove(i));
+					insertedTracesIndexes.remove(0);
+				}
+			}
+		}
+	}
+
+	@Override
+	public void notifyListeners() {
+		for (Map.Entry<ITraceViewListener,Set<TraceViewCommand>> entry : listeners.entrySet()) {
+			entry.getValue().forEach(c -> c.execute());
+		}
+	}
+
+	@Override
+	public void registerCommand(ITraceViewListener listener, TraceViewCommand command) {
+		if (listener != null) {
+			Set<TraceViewCommand> commands = listeners.get(listener);
+			if (commands == null) {
+				commands = new HashSet<>();
+				listeners.put(listener, commands);
+			}
+			commands.add(command);
+		}
+	}
+
+	@Override
+	public void removeListener(ITraceViewListener listener) {
+		if (listener != null) {
+			listeners.remove(listener);
+		}
+	}
+
+	@Override
+	public void stepsStarted(List<EObject> steps) {
+		// Nothing to do here.
+	}
+
+	@Override
+	public void stepsEnded(List<EObject> steps) {
+		// Nothing to do here.
 	}
 }

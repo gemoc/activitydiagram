@@ -205,18 +205,24 @@ class ActivityNodeAspect extends NamedElementAspect {
 @Aspect(className=ActivityEdge)
 class ActivityEdgeAspect extends NamedElementAspect {
 	
+	private EList<Offer> offersPool = new BasicEList
+	
 	@Containment
 	public EList<Offer> offers
 	
 	def void sendOffer1(EList<Token> tokens) {
-		val offer = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer
+		val offer = if (_self.offersPool.empty) {
+				dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer
+			} else {
+				_self.offersPool.remove(0)
+			}
 		_self.offers.add(offer)
 		tokens.forEach[token|offer.offeredTokens.add(token)]
 	}
 
 	def EList<Token> takeOfferedTokens1() {
 		val tokens = new BasicEList<Token>
-		_self.offers.forEach[o|tokens.addAll(o.offeredTokens)]
+		_self.offers.forEach[o|tokens.addAll(o.offeredTokens) _self.offersPool.add(o)]
 		_self.offers.clear
 		return tokens
 	}
