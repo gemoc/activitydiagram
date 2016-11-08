@@ -77,7 +77,7 @@ import dynamic.activitydiagram.Trace
 import dynamic.activitydiagram.Token
 import dynamic.activitydiagram.Offer
 import dynamic.activitydiagram.ForkedToken
-import fr.inria.diverse.k3.al.annotationprocessor.Containment
+import fr.inria.diverse.melange.annotation.Containment
 import activitydiagram.SendSignalAction
 import activitydiagram.AcceptEventAction
 import org.eclipse.emf.common.util.EList

@@ -35,7 +35,7 @@ import dynamic.activitydiagram.Offer
 import dynamic.activitydiagram.Token
 import dynamic.activitydiagram.Trace
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
-import fr.inria.diverse.k3.al.annotationprocessor.Containment
+import fr.inria.diverse.melange.annotation.Containment
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 import fr.inria.diverse.k3.al.annotationprocessor.Main
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
