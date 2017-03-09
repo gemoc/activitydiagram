@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated XActivityDiagram -->
+      <package
+            uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/"
+            class="org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage"
+            genModel="model/XActivityDiagram.genmodel"/>
+   </extension>
+
+</plugin>

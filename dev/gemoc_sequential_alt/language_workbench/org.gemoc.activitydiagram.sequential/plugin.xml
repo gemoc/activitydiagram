@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.sequential.XActivityDiagram" xdsmlFilePath="/org.gemoc.activitydiagram.sequential/bin/org/gemoc/activitydiagram/sequential/XActivityDiagram.melange">
+      <XDSML_Definition_Customization fileExtensions="xsad" />
+    </XDSML_Definition>
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated activitydiagram -->
+    <package class="activitydiagram.ActivitydiagramPackage" uri="http://activitydiagram/1.0" />
+  </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated XActivityDiagramMT -->
+    <package class="org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage" genModel="model-gen/XActivityDiagramMT.genmodel" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/activitydiagram/" />
+  </extension>
+  <extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="org.gemoc.activitydiagram.sequential.XActivityDiagramMT" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/" />
+  </extension>
+  <extension point="fr.inria.diverse.melange.language">
+    <language aspects="Variable:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect;FlowFinalNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.FlowFinalNodeAspect;Activity:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect;BooleanBinaryExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanBinaryExpressionAspect;ActivityFinalNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect;DecisionNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect;BooleanVariableAssignment:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAssignmentAspect;ControlToken:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ControlTokenAspect;ActivityNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;MergeNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect;BooleanExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanExpressionAspect;IntegerVariable:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableEvaluateAspect,org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect;ActivityEdge:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect;IntegerComparisonExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerComparisonExpressionAspect;FinalNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.FinalNodeAspect;IntegerBinaryExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerBinaryExpressionAspect;JoinNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect;VariableAssignment:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAssignmentAspect;OpaqueAction:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect;IntegerExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerExpressionAspect;InitialNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect;ControlFlow:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ControlFlowAspect;ForkNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect;BooleanVariable:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect,org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableEvaluateAspect;IntegerVariableAssignment:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAssignmentAspect;NamedElement:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect;BooleanUnaryExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanUnaryExpressionAspect" entryPoints="org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.main(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity)" exactType="org.gemoc.activitydiagram.sequential.XActivityDiagramMT" id="org.gemoc.activitydiagram.sequential.XActivityDiagram" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/">
+      <adapter class="org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter" modeltypeId="org.gemoc.activitydiagram.sequential.XActivityDiagramMT" />
+    </language>
+  </extension>
+</plugin>

@@ -1,0 +1,40 @@
+package org.gemoc.activitydiagram.sequential
+
+
+language XActivityDiagram {
+
+	syntax "platform:/resource/org.gemoc.activitydiagram.sequential.model/ad/activitydiagram.ecore"
+	syntax "platform:/resource/org.gemoc.activitydiagram.sequential.model.dynamic/model/dynamic.ecore"
+	
+	with org.gemoc.activitydiagram.sequential.k3dsa.MergeNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanUnaryExpressionAspect
+	with  org.gemoc.activitydiagram.sequential.k3dsa.BooleanExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityAspect
+	with  org.gemoc.activitydiagram.sequential.k3dsa.IntegerVariableEvaluateAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.VariableAssignmentAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.InitialNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanBinaryExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.NamedElementAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanVariableAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.DecisionNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerVariableAssignmentAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerVariableAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.OpaqueActionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityFinalNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerBinaryExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.FlowFinalNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.JoinNodeAspect
+	with  org.gemoc.activitydiagram.sequential.k3dsa.BooleanVariableEvaluateAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.BooleanVariableAssignmentAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ControlTokenAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ControlFlowAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ActivityEdgeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.FinalNodeAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.IntegerComparisonExpressionAspect
+	with org.gemoc.activitydiagram.sequential.k3dsa.ForkNodeAspect
+
+}

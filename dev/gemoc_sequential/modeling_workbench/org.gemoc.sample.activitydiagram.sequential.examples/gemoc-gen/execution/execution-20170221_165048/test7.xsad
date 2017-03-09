@@ -1,0 +1,36 @@
+activity test3 {
+	int counter0 = 0,
+	int counter1 = 0,
+	int counter01 = 0,
+	int counter11 = 0,
+	int counter01 = 0,
+	int counter11 = 0,
+	int counter011 = 0,
+	int counter111 = 0,
+	int inc = 1,
+	int iterations = 10000,
+	bool doLoop = true,
+	bool finish = false
+	
+	
+	nodes {
+		initial initialNode out (edge1),
+		merge mergeNode in(edge1, edge4) out(edge2),
+		action actionNode
+			comp {
+				counter0 = counter0 + inc,
+				doLoop = counter0 < iterations,
+				finish = !doLoop
+			}
+			in(edge2) out (edge3),
+		decision decisionNode in(edge3) out(edge4, edge5),
+		final finalNode in(edge5)
+	}
+	edges {
+		flow edge1 from initialNode to mergeNode,
+		flow edge2 from mergeNode to actionNode, 
+		flow edge3 from actionNode to decisionNode,
+		flow edge4 from decisionNode to mergeNode [doLoop],
+		flow edge5 from decisionNode to finalNode [finish]
+	}
+}

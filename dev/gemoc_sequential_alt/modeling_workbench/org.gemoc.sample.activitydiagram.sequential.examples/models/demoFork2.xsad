@@ -1,0 +1,22 @@
+activity demoFork2 {
+	nodes {
+		initial initialNode6 out ( edge1 ),
+		action actionB3 in ( edge4_2 ) out ( edge2 ),
+		fork fork1 in ( edge1 ) out ( edge4_1, edge3_1 ),
+		action actionB2 in ( edge4_1 ) out ( edge4_2 ),
+		action actionB1 in ( edge3_1 ) out ( edge3_2 ),
+		join join1 in ( edge3_2, edge2 ) out ( edge5 ),
+		action actionC in ( edge5 ) out ( edge6 ),
+		final finalNode6 in ( edge6 )
+	}
+	edges {
+		flow edge1 from initialNode6 to fork1,
+		flow edge2 from actionB3 to join1,
+		flow edge4_1 from fork1 to actionB2,
+		flow edge3_1 from fork1 to actionB1,
+		flow edge4_2 from actionB2 to actionB3,
+		flow edge3_2 from actionB1 to join1,
+		flow edge5 from join1 to actionC,
+		flow edge6 from actionC to finalNode6
+	}
+}

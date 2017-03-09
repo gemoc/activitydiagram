@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activitydiagram:ResetTraceEvent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:activitydiagram="http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/">
+  <activity href="models/test7.xsad#test7"/>
+</activitydiagram:ResetTraceEvent>

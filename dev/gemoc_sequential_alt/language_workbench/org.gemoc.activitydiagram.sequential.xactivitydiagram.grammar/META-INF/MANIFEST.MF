@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.gemoc.activitydiagram.sequential.xactivitydiagram,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.gemoc.activitydiagram.sequential.xactivitydiagram.scoping,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.formatting,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.parser.antlr.internal,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.serializer,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.parser.antlr,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.services,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.validation,
+ org.gemoc.activitydiagram.sequential.xactivitydiagram.generator
+Import-Package: org.apache.log4j
