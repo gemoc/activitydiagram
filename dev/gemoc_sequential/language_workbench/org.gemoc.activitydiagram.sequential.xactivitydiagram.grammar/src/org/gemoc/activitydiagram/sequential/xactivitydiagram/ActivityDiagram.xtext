@@ -29,7 +29,7 @@ Expression returns Expression:
 
 
 Value returns Value:
-	BooleanValue | IntegerValue;
+	StaticBooleanValue | StaticIntegerValue;
 
 EString returns ecore::EString:
 	STRING | ID;
@@ -116,19 +116,27 @@ IntegerVariable returns IntegerVariable:
 	{IntegerVariable}
 	'int'
 	name=EString
-		('=' initialValue=Value)?;
+		('=' initialValue=Value)?
+		currentValue=DynamicIntegerValue;
 	
 BooleanVariable returns BooleanVariable:
 	{BooleanVariable}
 	'bool'
 	name=EString
-		('=' initialValue=Value)?;
+		('=' initialValue=Value)?
+		currentValue=DynamicBooleanValue;
 
-BooleanValue returns BooleanValue:
+StaticBooleanValue returns StaticBooleanValue:
 	value=EBoolean;
 
-IntegerValue returns IntegerValue:
+StaticIntegerValue returns StaticIntegerValue:
 	value=EInt;
+
+DynamicIntegerValue returns DynamicIntegerValue:
+	{DynamicIntegerValue};
+
+DynamicBooleanValue returns DynamicBooleanValue:
+	{DynamicBooleanValue};
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';

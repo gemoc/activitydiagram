@@ -150,7 +150,7 @@
 					definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram.Editor.opened">
 				</reference>
 			</visibleWhen>
-		</command>  
+		</command>
 		</menuContribution>
 		<!-- copy qualified name -->
 		<menuContribution locationURI="popup:#TextEditorContext?after=copy">
@@ -159,7 +159,7 @@
 				<visibleWhen checkEnabled="false">
 					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram.Editor.opened" />
 				</visibleWhen>
-			</command>  
+			</command>
 		</menuContribution>
 		<menuContribution locationURI="menu:edit?after=copy">
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
@@ -167,7 +167,7 @@
 				<visibleWhen checkEnabled="false">
 					<reference definitionId="org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram.Editor.opened" />
 				</visibleWhen>
-			</command>  
+			</command>
 		</menuContribution>
 		<menuContribution locationURI="popup:org.eclipse.xtext.ui.outline?after=additions">
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName" 
@@ -213,10 +213,10 @@
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
-	    <resourceServiceProvider
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-	        uriExtension="xsad">
-	    </resourceServiceProvider>
+		<resourceServiceProvider
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+			uriExtension="xsad">
+		</resourceServiceProvider>
 	</extension>
 	<!-- marker definitions for org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram -->
 	<extension
@@ -323,31 +323,31 @@
 	</extension>
 	<!-- quickfix marker resolution generator for org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram -->
 	<extension
-	        point="org.eclipse.ui.ide.markerResolution">
-	    <markerResolutionGenerator
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.activitydiagram.check.fast">
-	        <attribute
-	            name="FIXABLE_KEY"
-	            value="true">
-	        </attribute>
-	    </markerResolutionGenerator>
-	    <markerResolutionGenerator
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.activitydiagram.check.normal">
-	        <attribute
-	            name="FIXABLE_KEY"
-	            value="true">
-	        </attribute>
-	    </markerResolutionGenerator>
-	    <markerResolutionGenerator
-	        class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-	        markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.activitydiagram.check.expensive">
-	        <attribute
-	            name="FIXABLE_KEY"
-	            value="true">
-	        </attribute>
-	    </markerResolutionGenerator>
+			point="org.eclipse.ui.ide.markerResolution">
+		<markerResolutionGenerator
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.activitydiagram.check.fast">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+		<markerResolutionGenerator
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.activitydiagram.check.normal">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
+		<markerResolutionGenerator
+			class="org.gemoc.activitydiagram.sequential.xactivitydiagram.ui.ActivityDiagramExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui.activitydiagram.check.expensive">
+			<attribute
+				name="FIXABLE_KEY"
+				value="true">
+			</attribute>
+		</markerResolutionGenerator>
 	</extension>
 	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">

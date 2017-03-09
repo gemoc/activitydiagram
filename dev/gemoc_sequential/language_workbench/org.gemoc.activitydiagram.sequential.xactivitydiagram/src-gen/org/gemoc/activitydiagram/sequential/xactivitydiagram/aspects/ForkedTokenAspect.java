@@ -9,28 +9,36 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedToken
 @SuppressWarnings("all")
 public class ForkedTokenAspect {
   public static Token baseToken(final ForkedToken _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_baseToken(_self_, _self);;
-    return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_baseToken(_self_, _self);
+	;
+	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token) result;
+}
   
   public static void baseToken(final ForkedToken _self, final Token baseToken) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext.getSelf(_self);
-    _privk3_baseToken(_self_, _self,baseToken);;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext
+			.getSelf(_self);
+	_privk3_baseToken(_self_, _self, baseToken);
+	;
+}
   
   public static int remainingOffersCount(final ForkedToken _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_remainingOffersCount(_self_, _self);;
-    return (int)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_remainingOffersCount(_self_, _self);
+	;
+	return (int) result;
+}
   
   public static void remainingOffersCount(final ForkedToken _self, final int remainingOffersCount) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext.getSelf(_self);
-    _privk3_remainingOffersCount(_self_, _self,remainingOffersCount);;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspectForkedTokenAspectContext
+			.getSelf(_self);
+	_privk3_remainingOffersCount(_self_, _self, remainingOffersCount);
+	;
+}
   
   protected static Token _privk3_baseToken(final ForkedTokenAspectForkedTokenAspectProperties _self_, final ForkedToken _self) {
     try {

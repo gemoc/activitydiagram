@@ -10,11 +10,12 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.A
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.BooleanBinaryExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.BooleanUnaryExpression;
-import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.BooleanValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.BooleanVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ControlFlow;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ControlToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DecisionNode;
+import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DynamicBooleanValue;
+import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DynamicIntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ForkNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ForkedToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.InitialNode;
@@ -22,15 +23,15 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.I
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.InputValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerCalculationExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerComparisonExpression;
-import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.JoinNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.MergeNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Offer;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.OpaqueAction;
+import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.StaticBooleanValue;
+import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.StaticIntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Token;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace;
-import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Value;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Variable;
 
 @SuppressWarnings("all")
@@ -105,18 +106,23 @@ public class ActivitydiagramFactoryAdapter extends EFactoryImpl implements Activ
   }
   
   @Override
-  public Value createValue() {
-    return adaptersFactory.createValueAdapter(activitydiagramAdaptee.createValue(), null);
+  public StaticBooleanValue createStaticBooleanValue() {
+    return adaptersFactory.createStaticBooleanValueAdapter(activitydiagramAdaptee.createStaticBooleanValue(), null);
   }
   
   @Override
-  public BooleanValue createBooleanValue() {
-    return adaptersFactory.createBooleanValueAdapter(activitydiagramAdaptee.createBooleanValue(), null);
+  public DynamicBooleanValue createDynamicBooleanValue() {
+    return adaptersFactory.createDynamicBooleanValueAdapter(activitydiagramAdaptee.createDynamicBooleanValue(), null);
   }
   
   @Override
-  public IntegerValue createIntegerValue() {
-    return adaptersFactory.createIntegerValueAdapter(activitydiagramAdaptee.createIntegerValue(), null);
+  public StaticIntegerValue createStaticIntegerValue() {
+    return adaptersFactory.createStaticIntegerValueAdapter(activitydiagramAdaptee.createStaticIntegerValue(), null);
+  }
+  
+  @Override
+  public DynamicIntegerValue createDynamicIntegerValue() {
+    return adaptersFactory.createDynamicIntegerValueAdapter(activitydiagramAdaptee.createDynamicIntegerValue(), null);
   }
   
   @Override

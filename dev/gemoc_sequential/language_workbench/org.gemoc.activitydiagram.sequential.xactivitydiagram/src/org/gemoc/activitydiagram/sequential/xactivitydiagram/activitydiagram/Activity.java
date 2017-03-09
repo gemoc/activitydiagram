@@ -155,30 +155,6 @@ public interface Activity extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	int getIntegerVariableValue(String variableName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean getBooleanVariableValue(String variableName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	Value getVariableValue(String variableName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	Variable getVariable(String variableName);
 
 } // Activity

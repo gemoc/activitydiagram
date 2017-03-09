@@ -145,6 +145,14 @@ public interface ActivityNode extends NamedElement {
 	 * @model
 	 * @generated
 	 */
+	void addToken();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
 	void terminate();
 
 	/**

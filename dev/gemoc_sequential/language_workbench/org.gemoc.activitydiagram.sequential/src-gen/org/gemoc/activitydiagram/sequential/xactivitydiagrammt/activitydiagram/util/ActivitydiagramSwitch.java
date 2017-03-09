@@ -226,17 +226,31 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.BOOLEAN_VALUE: {
-				BooleanValue booleanValue = (BooleanValue)theEObject;
-				T result = caseBooleanValue(booleanValue);
-				if (result == null) result = caseValue(booleanValue);
+			case ActivitydiagramPackage.STATIC_BOOLEAN_VALUE: {
+				StaticBooleanValue staticBooleanValue = (StaticBooleanValue)theEObject;
+				T result = caseStaticBooleanValue(staticBooleanValue);
+				if (result == null) result = caseValue(staticBooleanValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ActivitydiagramPackage.INTEGER_VALUE: {
-				IntegerValue integerValue = (IntegerValue)theEObject;
-				T result = caseIntegerValue(integerValue);
-				if (result == null) result = caseValue(integerValue);
+			case ActivitydiagramPackage.DYNAMIC_BOOLEAN_VALUE: {
+				DynamicBooleanValue dynamicBooleanValue = (DynamicBooleanValue)theEObject;
+				T result = caseDynamicBooleanValue(dynamicBooleanValue);
+				if (result == null) result = caseValue(dynamicBooleanValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.STATIC_INTEGER_VALUE: {
+				StaticIntegerValue staticIntegerValue = (StaticIntegerValue)theEObject;
+				T result = caseStaticIntegerValue(staticIntegerValue);
+				if (result == null) result = caseValue(staticIntegerValue);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ActivitydiagramPackage.DYNAMIC_INTEGER_VALUE: {
+				DynamicIntegerValue dynamicIntegerValue = (DynamicIntegerValue)theEObject;
+				T result = caseDynamicIntegerValue(dynamicIntegerValue);
+				if (result == null) result = caseValue(dynamicIntegerValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -641,32 +655,62 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Boolean Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Static Boolean Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Boolean Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Static Boolean Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseBooleanValue(BooleanValue object) {
+	public T caseStaticBooleanValue(StaticBooleanValue object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Dynamic Boolean Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Dynamic Boolean Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerValue(IntegerValue object) {
+	public T caseDynamicBooleanValue(DynamicBooleanValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Static Integer Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Static Integer Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStaticIntegerValue(StaticIntegerValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dynamic Integer Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dynamic Integer Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDynamicIntegerValue(DynamicIntegerValue object) {
 		return null;
 	}
 
@@ -806,21 +850,6 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Trace</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Trace</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTrace(Trace object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Input Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -877,6 +906,21 @@ public class ActivitydiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseForkedToken(ForkedToken object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trace</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrace(Trace object) {
 		return null;
 	}
 

@@ -1451,23 +1451,23 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // InternalActivityDiagram.g:541:1: ruleValue returns [EObject current=null] : (this_BooleanValue_0= ruleBooleanValue | this_IntegerValue_1= ruleIntegerValue ) ;
+    // InternalActivityDiagram.g:541:1: ruleValue returns [EObject current=null] : (this_StaticBooleanValue_0= ruleStaticBooleanValue | this_StaticIntegerValue_1= ruleStaticIntegerValue ) ;
     public final EObject ruleValue() throws RecognitionException {
         EObject current = null;
 
-        EObject this_BooleanValue_0 = null;
+        EObject this_StaticBooleanValue_0 = null;
 
-        EObject this_IntegerValue_1 = null;
+        EObject this_StaticIntegerValue_1 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:547:2: ( (this_BooleanValue_0= ruleBooleanValue | this_IntegerValue_1= ruleIntegerValue ) )
-            // InternalActivityDiagram.g:548:2: (this_BooleanValue_0= ruleBooleanValue | this_IntegerValue_1= ruleIntegerValue )
+            // InternalActivityDiagram.g:547:2: ( (this_StaticBooleanValue_0= ruleStaticBooleanValue | this_StaticIntegerValue_1= ruleStaticIntegerValue ) )
+            // InternalActivityDiagram.g:548:2: (this_StaticBooleanValue_0= ruleStaticBooleanValue | this_StaticIntegerValue_1= ruleStaticIntegerValue )
             {
-            // InternalActivityDiagram.g:548:2: (this_BooleanValue_0= ruleBooleanValue | this_IntegerValue_1= ruleIntegerValue )
+            // InternalActivityDiagram.g:548:2: (this_StaticBooleanValue_0= ruleStaticBooleanValue | this_StaticIntegerValue_1= ruleStaticIntegerValue )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1485,36 +1485,36 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalActivityDiagram.g:549:3: this_BooleanValue_0= ruleBooleanValue
+                    // InternalActivityDiagram.g:549:3: this_StaticBooleanValue_0= ruleStaticBooleanValue
                     {
 
-                    			newCompositeNode(grammarAccess.getValueAccess().getBooleanValueParserRuleCall_0());
+                    			newCompositeNode(grammarAccess.getValueAccess().getStaticBooleanValueParserRuleCall_0());
                     		
                     pushFollow(FOLLOW_2);
-                    this_BooleanValue_0=ruleBooleanValue();
+                    this_StaticBooleanValue_0=ruleStaticBooleanValue();
 
                     state._fsp--;
 
 
-                    			current = this_BooleanValue_0;
+                    			current = this_StaticBooleanValue_0;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 2 :
-                    // InternalActivityDiagram.g:558:3: this_IntegerValue_1= ruleIntegerValue
+                    // InternalActivityDiagram.g:558:3: this_StaticIntegerValue_1= ruleStaticIntegerValue
                     {
 
-                    			newCompositeNode(grammarAccess.getValueAccess().getIntegerValueParserRuleCall_1());
+                    			newCompositeNode(grammarAccess.getValueAccess().getStaticIntegerValueParserRuleCall_1());
                     		
                     pushFollow(FOLLOW_2);
-                    this_IntegerValue_1=ruleIntegerValue();
+                    this_StaticIntegerValue_1=ruleStaticIntegerValue();
 
                     state._fsp--;
 
 
-                    			current = this_IntegerValue_1;
+                    			current = this_StaticIntegerValue_1;
                     			afterParserOrEnumRuleCall();
                     		
 
@@ -4363,7 +4363,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerVariable"
-    // InternalActivityDiagram.g:1799:1: ruleIntegerVariable returns [EObject current=null] : ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ) ;
+    // InternalActivityDiagram.g:1799:1: ruleIntegerVariable returns [EObject current=null] : ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicIntegerValue ) ) ) ;
     public final EObject ruleIntegerVariable() throws RecognitionException {
         EObject current = null;
 
@@ -4373,16 +4373,18 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
         EObject lv_initialValue_4_0 = null;
 
+        EObject lv_currentValue_5_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:1805:2: ( ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ) )
-            // InternalActivityDiagram.g:1806:2: ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? )
+            // InternalActivityDiagram.g:1805:2: ( ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicIntegerValue ) ) ) )
+            // InternalActivityDiagram.g:1806:2: ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicIntegerValue ) ) )
             {
-            // InternalActivityDiagram.g:1806:2: ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? )
-            // InternalActivityDiagram.g:1807:3: () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )?
+            // InternalActivityDiagram.g:1806:2: ( () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicIntegerValue ) ) )
+            // InternalActivityDiagram.g:1807:3: () otherlv_1= 'int' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicIntegerValue ) )
             {
             // InternalActivityDiagram.g:1807:3: ()
             // InternalActivityDiagram.g:1808:4: 
@@ -4408,7 +4410,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getIntegerVariableAccess().getNameEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_24);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -4441,7 +4443,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalActivityDiagram.g:1838:4: otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) )
                     {
-                    otherlv_3=(Token)match(input,29,FOLLOW_30); 
+                    otherlv_3=(Token)match(input,29,FOLLOW_29); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getIntegerVariableAccess().getEqualsSignKeyword_3_0());
                     			
@@ -4454,7 +4456,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
                     						newCompositeNode(grammarAccess.getIntegerVariableAccess().getInitialValueValueParserRuleCall_3_1_0());
                     					
-                    pushFollow(FOLLOW_2);
+                    pushFollow(FOLLOW_1);
                     lv_initialValue_4_0=ruleValue();
 
                     state._fsp--;
@@ -4482,6 +4484,37 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             }
 
+            // InternalActivityDiagram.g:1862:3: ( (lv_currentValue_5_0= ruleDynamicIntegerValue ) )
+            // InternalActivityDiagram.g:1863:4: (lv_currentValue_5_0= ruleDynamicIntegerValue )
+            {
+            // InternalActivityDiagram.g:1863:4: (lv_currentValue_5_0= ruleDynamicIntegerValue )
+            // InternalActivityDiagram.g:1864:5: lv_currentValue_5_0= ruleDynamicIntegerValue
+            {
+
+            					newCompositeNode(grammarAccess.getIntegerVariableAccess().getCurrentValueDynamicIntegerValueParserRuleCall_4_0());
+            				
+            pushFollow(FOLLOW_2);
+            lv_currentValue_5_0=ruleDynamicIntegerValue();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getIntegerVariableRule());
+            					}
+            					set(
+            						current,
+            						"currentValue",
+            						lv_currentValue_5_0,
+            						"org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram.DynamicIntegerValue");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
 
             }
 
@@ -4505,7 +4538,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanVariable"
-    // InternalActivityDiagram.g:1866:1: entryRuleBooleanVariable returns [EObject current=null] : iv_ruleBooleanVariable= ruleBooleanVariable EOF ;
+    // InternalActivityDiagram.g:1885:1: entryRuleBooleanVariable returns [EObject current=null] : iv_ruleBooleanVariable= ruleBooleanVariable EOF ;
     public final EObject entryRuleBooleanVariable() throws RecognitionException {
         EObject current = null;
 
@@ -4513,8 +4546,8 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalActivityDiagram.g:1866:56: (iv_ruleBooleanVariable= ruleBooleanVariable EOF )
-            // InternalActivityDiagram.g:1867:2: iv_ruleBooleanVariable= ruleBooleanVariable EOF
+            // InternalActivityDiagram.g:1885:56: (iv_ruleBooleanVariable= ruleBooleanVariable EOF )
+            // InternalActivityDiagram.g:1886:2: iv_ruleBooleanVariable= ruleBooleanVariable EOF
             {
              newCompositeNode(grammarAccess.getBooleanVariableRule()); 
             pushFollow(FOLLOW_1);
@@ -4541,7 +4574,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanVariable"
-    // InternalActivityDiagram.g:1873:1: ruleBooleanVariable returns [EObject current=null] : ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ) ;
+    // InternalActivityDiagram.g:1892:1: ruleBooleanVariable returns [EObject current=null] : ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicBooleanValue ) ) ) ;
     public final EObject ruleBooleanVariable() throws RecognitionException {
         EObject current = null;
 
@@ -4551,19 +4584,21 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
         EObject lv_initialValue_4_0 = null;
 
+        EObject lv_currentValue_5_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:1879:2: ( ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ) )
-            // InternalActivityDiagram.g:1880:2: ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? )
+            // InternalActivityDiagram.g:1898:2: ( ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicBooleanValue ) ) ) )
+            // InternalActivityDiagram.g:1899:2: ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicBooleanValue ) ) )
             {
-            // InternalActivityDiagram.g:1880:2: ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? )
-            // InternalActivityDiagram.g:1881:3: () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )?
+            // InternalActivityDiagram.g:1899:2: ( () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicBooleanValue ) ) )
+            // InternalActivityDiagram.g:1900:3: () otherlv_1= 'bool' ( (lv_name_2_0= ruleEString ) ) (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )? ( (lv_currentValue_5_0= ruleDynamicBooleanValue ) )
             {
-            // InternalActivityDiagram.g:1881:3: ()
-            // InternalActivityDiagram.g:1882:4: 
+            // InternalActivityDiagram.g:1900:3: ()
+            // InternalActivityDiagram.g:1901:4: 
             {
 
             				current = forceCreateModelElement(
@@ -4577,16 +4612,16 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getBooleanVariableAccess().getBoolKeyword_1());
             		
-            // InternalActivityDiagram.g:1892:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalActivityDiagram.g:1893:4: (lv_name_2_0= ruleEString )
+            // InternalActivityDiagram.g:1911:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalActivityDiagram.g:1912:4: (lv_name_2_0= ruleEString )
             {
-            // InternalActivityDiagram.g:1893:4: (lv_name_2_0= ruleEString )
-            // InternalActivityDiagram.g:1894:5: lv_name_2_0= ruleEString
+            // InternalActivityDiagram.g:1912:4: (lv_name_2_0= ruleEString )
+            // InternalActivityDiagram.g:1913:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getBooleanVariableAccess().getNameEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_24);
             lv_name_2_0=ruleEString();
 
             state._fsp--;
@@ -4608,7 +4643,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalActivityDiagram.g:1911:3: (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )?
+            // InternalActivityDiagram.g:1930:3: (otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) ) )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -4617,22 +4652,22 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalActivityDiagram.g:1912:4: otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) )
+                    // InternalActivityDiagram.g:1931:4: otherlv_3= '=' ( (lv_initialValue_4_0= ruleValue ) )
                     {
-                    otherlv_3=(Token)match(input,29,FOLLOW_30); 
+                    otherlv_3=(Token)match(input,29,FOLLOW_29); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getBooleanVariableAccess().getEqualsSignKeyword_3_0());
                     			
-                    // InternalActivityDiagram.g:1916:4: ( (lv_initialValue_4_0= ruleValue ) )
-                    // InternalActivityDiagram.g:1917:5: (lv_initialValue_4_0= ruleValue )
+                    // InternalActivityDiagram.g:1935:4: ( (lv_initialValue_4_0= ruleValue ) )
+                    // InternalActivityDiagram.g:1936:5: (lv_initialValue_4_0= ruleValue )
                     {
-                    // InternalActivityDiagram.g:1917:5: (lv_initialValue_4_0= ruleValue )
-                    // InternalActivityDiagram.g:1918:6: lv_initialValue_4_0= ruleValue
+                    // InternalActivityDiagram.g:1936:5: (lv_initialValue_4_0= ruleValue )
+                    // InternalActivityDiagram.g:1937:6: lv_initialValue_4_0= ruleValue
                     {
 
                     						newCompositeNode(grammarAccess.getBooleanVariableAccess().getInitialValueValueParserRuleCall_3_1_0());
                     					
-                    pushFollow(FOLLOW_2);
+                    pushFollow(FOLLOW_1);
                     lv_initialValue_4_0=ruleValue();
 
                     state._fsp--;
@@ -4660,6 +4695,37 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             }
 
+            // InternalActivityDiagram.g:1955:3: ( (lv_currentValue_5_0= ruleDynamicBooleanValue ) )
+            // InternalActivityDiagram.g:1956:4: (lv_currentValue_5_0= ruleDynamicBooleanValue )
+            {
+            // InternalActivityDiagram.g:1956:4: (lv_currentValue_5_0= ruleDynamicBooleanValue )
+            // InternalActivityDiagram.g:1957:5: lv_currentValue_5_0= ruleDynamicBooleanValue
+            {
+
+            					newCompositeNode(grammarAccess.getBooleanVariableAccess().getCurrentValueDynamicBooleanValueParserRuleCall_4_0());
+            				
+            pushFollow(FOLLOW_2);
+            lv_currentValue_5_0=ruleDynamicBooleanValue();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getBooleanVariableRule());
+            					}
+            					set(
+            						current,
+            						"currentValue",
+            						lv_currentValue_5_0,
+            						"org.gemoc.activitydiagram.sequential.xactivitydiagram.ActivityDiagram.DynamicBooleanValue");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
 
             }
 
@@ -4682,25 +4748,25 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleBooleanVariable"
 
 
-    // $ANTLR start "entryRuleBooleanValue"
-    // InternalActivityDiagram.g:1940:1: entryRuleBooleanValue returns [EObject current=null] : iv_ruleBooleanValue= ruleBooleanValue EOF ;
-    public final EObject entryRuleBooleanValue() throws RecognitionException {
+    // $ANTLR start "entryRuleStaticBooleanValue"
+    // InternalActivityDiagram.g:1978:1: entryRuleStaticBooleanValue returns [EObject current=null] : iv_ruleStaticBooleanValue= ruleStaticBooleanValue EOF ;
+    public final EObject entryRuleStaticBooleanValue() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleBooleanValue = null;
+        EObject iv_ruleStaticBooleanValue = null;
 
 
         try {
-            // InternalActivityDiagram.g:1940:53: (iv_ruleBooleanValue= ruleBooleanValue EOF )
-            // InternalActivityDiagram.g:1941:2: iv_ruleBooleanValue= ruleBooleanValue EOF
+            // InternalActivityDiagram.g:1978:59: (iv_ruleStaticBooleanValue= ruleStaticBooleanValue EOF )
+            // InternalActivityDiagram.g:1979:2: iv_ruleStaticBooleanValue= ruleStaticBooleanValue EOF
             {
-             newCompositeNode(grammarAccess.getBooleanValueRule()); 
+             newCompositeNode(grammarAccess.getStaticBooleanValueRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleBooleanValue=ruleBooleanValue();
+            iv_ruleStaticBooleanValue=ruleStaticBooleanValue();
 
             state._fsp--;
 
-             current =iv_ruleBooleanValue; 
+             current =iv_ruleStaticBooleanValue; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -4715,12 +4781,12 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleBooleanValue"
+    // $ANTLR end "entryRuleStaticBooleanValue"
 
 
-    // $ANTLR start "ruleBooleanValue"
-    // InternalActivityDiagram.g:1947:1: ruleBooleanValue returns [EObject current=null] : ( (lv_value_0_0= ruleEBoolean ) ) ;
-    public final EObject ruleBooleanValue() throws RecognitionException {
+    // $ANTLR start "ruleStaticBooleanValue"
+    // InternalActivityDiagram.g:1985:1: ruleStaticBooleanValue returns [EObject current=null] : ( (lv_value_0_0= ruleEBoolean ) ) ;
+    public final EObject ruleStaticBooleanValue() throws RecognitionException {
         EObject current = null;
 
         AntlrDatatypeRuleToken lv_value_0_0 = null;
@@ -4730,17 +4796,17 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:1953:2: ( ( (lv_value_0_0= ruleEBoolean ) ) )
-            // InternalActivityDiagram.g:1954:2: ( (lv_value_0_0= ruleEBoolean ) )
+            // InternalActivityDiagram.g:1991:2: ( ( (lv_value_0_0= ruleEBoolean ) ) )
+            // InternalActivityDiagram.g:1992:2: ( (lv_value_0_0= ruleEBoolean ) )
             {
-            // InternalActivityDiagram.g:1954:2: ( (lv_value_0_0= ruleEBoolean ) )
-            // InternalActivityDiagram.g:1955:3: (lv_value_0_0= ruleEBoolean )
+            // InternalActivityDiagram.g:1992:2: ( (lv_value_0_0= ruleEBoolean ) )
+            // InternalActivityDiagram.g:1993:3: (lv_value_0_0= ruleEBoolean )
             {
-            // InternalActivityDiagram.g:1955:3: (lv_value_0_0= ruleEBoolean )
-            // InternalActivityDiagram.g:1956:4: lv_value_0_0= ruleEBoolean
+            // InternalActivityDiagram.g:1993:3: (lv_value_0_0= ruleEBoolean )
+            // InternalActivityDiagram.g:1994:4: lv_value_0_0= ruleEBoolean
             {
 
-            				newCompositeNode(grammarAccess.getBooleanValueAccess().getValueEBooleanParserRuleCall_0());
+            				newCompositeNode(grammarAccess.getStaticBooleanValueAccess().getValueEBooleanParserRuleCall_0());
             			
             pushFollow(FOLLOW_2);
             lv_value_0_0=ruleEBoolean();
@@ -4749,7 +4815,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
             				if (current==null) {
-            					current = createModelElementForParent(grammarAccess.getBooleanValueRule());
+            					current = createModelElementForParent(grammarAccess.getStaticBooleanValueRule());
             				}
             				set(
             					current,
@@ -4780,28 +4846,28 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleBooleanValue"
+    // $ANTLR end "ruleStaticBooleanValue"
 
 
-    // $ANTLR start "entryRuleIntegerValue"
-    // InternalActivityDiagram.g:1976:1: entryRuleIntegerValue returns [EObject current=null] : iv_ruleIntegerValue= ruleIntegerValue EOF ;
-    public final EObject entryRuleIntegerValue() throws RecognitionException {
+    // $ANTLR start "entryRuleStaticIntegerValue"
+    // InternalActivityDiagram.g:2014:1: entryRuleStaticIntegerValue returns [EObject current=null] : iv_ruleStaticIntegerValue= ruleStaticIntegerValue EOF ;
+    public final EObject entryRuleStaticIntegerValue() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleIntegerValue = null;
+        EObject iv_ruleStaticIntegerValue = null;
 
 
         try {
-            // InternalActivityDiagram.g:1976:53: (iv_ruleIntegerValue= ruleIntegerValue EOF )
-            // InternalActivityDiagram.g:1977:2: iv_ruleIntegerValue= ruleIntegerValue EOF
+            // InternalActivityDiagram.g:2014:59: (iv_ruleStaticIntegerValue= ruleStaticIntegerValue EOF )
+            // InternalActivityDiagram.g:2015:2: iv_ruleStaticIntegerValue= ruleStaticIntegerValue EOF
             {
-             newCompositeNode(grammarAccess.getIntegerValueRule()); 
+             newCompositeNode(grammarAccess.getStaticIntegerValueRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleIntegerValue=ruleIntegerValue();
+            iv_ruleStaticIntegerValue=ruleStaticIntegerValue();
 
             state._fsp--;
 
-             current =iv_ruleIntegerValue; 
+             current =iv_ruleStaticIntegerValue; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -4816,12 +4882,12 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleIntegerValue"
+    // $ANTLR end "entryRuleStaticIntegerValue"
 
 
-    // $ANTLR start "ruleIntegerValue"
-    // InternalActivityDiagram.g:1983:1: ruleIntegerValue returns [EObject current=null] : ( (lv_value_0_0= ruleEInt ) ) ;
-    public final EObject ruleIntegerValue() throws RecognitionException {
+    // $ANTLR start "ruleStaticIntegerValue"
+    // InternalActivityDiagram.g:2021:1: ruleStaticIntegerValue returns [EObject current=null] : ( (lv_value_0_0= ruleEInt ) ) ;
+    public final EObject ruleStaticIntegerValue() throws RecognitionException {
         EObject current = null;
 
         AntlrDatatypeRuleToken lv_value_0_0 = null;
@@ -4831,17 +4897,17 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:1989:2: ( ( (lv_value_0_0= ruleEInt ) ) )
-            // InternalActivityDiagram.g:1990:2: ( (lv_value_0_0= ruleEInt ) )
+            // InternalActivityDiagram.g:2027:2: ( ( (lv_value_0_0= ruleEInt ) ) )
+            // InternalActivityDiagram.g:2028:2: ( (lv_value_0_0= ruleEInt ) )
             {
-            // InternalActivityDiagram.g:1990:2: ( (lv_value_0_0= ruleEInt ) )
-            // InternalActivityDiagram.g:1991:3: (lv_value_0_0= ruleEInt )
+            // InternalActivityDiagram.g:2028:2: ( (lv_value_0_0= ruleEInt ) )
+            // InternalActivityDiagram.g:2029:3: (lv_value_0_0= ruleEInt )
             {
-            // InternalActivityDiagram.g:1991:3: (lv_value_0_0= ruleEInt )
-            // InternalActivityDiagram.g:1992:4: lv_value_0_0= ruleEInt
+            // InternalActivityDiagram.g:2029:3: (lv_value_0_0= ruleEInt )
+            // InternalActivityDiagram.g:2030:4: lv_value_0_0= ruleEInt
             {
 
-            				newCompositeNode(grammarAccess.getIntegerValueAccess().getValueEIntParserRuleCall_0());
+            				newCompositeNode(grammarAccess.getStaticIntegerValueAccess().getValueEIntParserRuleCall_0());
             			
             pushFollow(FOLLOW_2);
             lv_value_0_0=ruleEInt();
@@ -4850,7 +4916,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
             				if (current==null) {
-            					current = createModelElementForParent(grammarAccess.getIntegerValueRule());
+            					current = createModelElementForParent(grammarAccess.getStaticIntegerValueRule());
             				}
             				set(
             					current,
@@ -4881,11 +4947,157 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleIntegerValue"
+    // $ANTLR end "ruleStaticIntegerValue"
+
+
+    // $ANTLR start "entryRuleDynamicIntegerValue"
+    // InternalActivityDiagram.g:2050:1: entryRuleDynamicIntegerValue returns [EObject current=null] : iv_ruleDynamicIntegerValue= ruleDynamicIntegerValue EOF ;
+    public final EObject entryRuleDynamicIntegerValue() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDynamicIntegerValue = null;
+
+
+        try {
+            // InternalActivityDiagram.g:2050:60: (iv_ruleDynamicIntegerValue= ruleDynamicIntegerValue EOF )
+            // InternalActivityDiagram.g:2051:2: iv_ruleDynamicIntegerValue= ruleDynamicIntegerValue EOF
+            {
+             newCompositeNode(grammarAccess.getDynamicIntegerValueRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleDynamicIntegerValue=ruleDynamicIntegerValue();
+
+            state._fsp--;
+
+             current =iv_ruleDynamicIntegerValue; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleDynamicIntegerValue"
+
+
+    // $ANTLR start "ruleDynamicIntegerValue"
+    // InternalActivityDiagram.g:2057:1: ruleDynamicIntegerValue returns [EObject current=null] : () ;
+    public final EObject ruleDynamicIntegerValue() throws RecognitionException {
+        EObject current = null;
+
+
+        	enterRule();
+
+        try {
+            // InternalActivityDiagram.g:2063:2: ( () )
+            // InternalActivityDiagram.g:2064:2: ()
+            {
+            // InternalActivityDiagram.g:2064:2: ()
+            // InternalActivityDiagram.g:2065:3: 
+            {
+
+            			current = forceCreateModelElement(
+            				grammarAccess.getDynamicIntegerValueAccess().getDynamicIntegerValueAction(),
+            				current);
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleDynamicIntegerValue"
+
+
+    // $ANTLR start "entryRuleDynamicBooleanValue"
+    // InternalActivityDiagram.g:2074:1: entryRuleDynamicBooleanValue returns [EObject current=null] : iv_ruleDynamicBooleanValue= ruleDynamicBooleanValue EOF ;
+    public final EObject entryRuleDynamicBooleanValue() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDynamicBooleanValue = null;
+
+
+        try {
+            // InternalActivityDiagram.g:2074:60: (iv_ruleDynamicBooleanValue= ruleDynamicBooleanValue EOF )
+            // InternalActivityDiagram.g:2075:2: iv_ruleDynamicBooleanValue= ruleDynamicBooleanValue EOF
+            {
+             newCompositeNode(grammarAccess.getDynamicBooleanValueRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleDynamicBooleanValue=ruleDynamicBooleanValue();
+
+            state._fsp--;
+
+             current =iv_ruleDynamicBooleanValue; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleDynamicBooleanValue"
+
+
+    // $ANTLR start "ruleDynamicBooleanValue"
+    // InternalActivityDiagram.g:2081:1: ruleDynamicBooleanValue returns [EObject current=null] : () ;
+    public final EObject ruleDynamicBooleanValue() throws RecognitionException {
+        EObject current = null;
+
+
+        	enterRule();
+
+        try {
+            // InternalActivityDiagram.g:2087:2: ( () )
+            // InternalActivityDiagram.g:2088:2: ()
+            {
+            // InternalActivityDiagram.g:2088:2: ()
+            // InternalActivityDiagram.g:2089:3: 
+            {
+
+            			current = forceCreateModelElement(
+            				grammarAccess.getDynamicBooleanValueAccess().getDynamicBooleanValueAction(),
+            				current);
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleDynamicBooleanValue"
 
 
     // $ANTLR start "entryRuleEBoolean"
-    // InternalActivityDiagram.g:2012:1: entryRuleEBoolean returns [String current=null] : iv_ruleEBoolean= ruleEBoolean EOF ;
+    // InternalActivityDiagram.g:2098:1: entryRuleEBoolean returns [String current=null] : iv_ruleEBoolean= ruleEBoolean EOF ;
     public final String entryRuleEBoolean() throws RecognitionException {
         String current = null;
 
@@ -4893,8 +5105,8 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalActivityDiagram.g:2012:48: (iv_ruleEBoolean= ruleEBoolean EOF )
-            // InternalActivityDiagram.g:2013:2: iv_ruleEBoolean= ruleEBoolean EOF
+            // InternalActivityDiagram.g:2098:48: (iv_ruleEBoolean= ruleEBoolean EOF )
+            // InternalActivityDiagram.g:2099:2: iv_ruleEBoolean= ruleEBoolean EOF
             {
              newCompositeNode(grammarAccess.getEBooleanRule()); 
             pushFollow(FOLLOW_1);
@@ -4921,7 +5133,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEBoolean"
-    // InternalActivityDiagram.g:2019:1: ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // InternalActivityDiagram.g:2105:1: ruleEBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleEBoolean() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4931,10 +5143,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2025:2: ( (kw= 'true' | kw= 'false' ) )
-            // InternalActivityDiagram.g:2026:2: (kw= 'true' | kw= 'false' )
+            // InternalActivityDiagram.g:2111:2: ( (kw= 'true' | kw= 'false' ) )
+            // InternalActivityDiagram.g:2112:2: (kw= 'true' | kw= 'false' )
             {
-            // InternalActivityDiagram.g:2026:2: (kw= 'true' | kw= 'false' )
+            // InternalActivityDiagram.g:2112:2: (kw= 'true' | kw= 'false' )
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -4952,7 +5164,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // InternalActivityDiagram.g:2027:3: kw= 'true'
+                    // InternalActivityDiagram.g:2113:3: kw= 'true'
                     {
                     kw=(Token)match(input,32,FOLLOW_2); 
 
@@ -4963,7 +5175,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalActivityDiagram.g:2033:3: kw= 'false'
+                    // InternalActivityDiagram.g:2119:3: kw= 'false'
                     {
                     kw=(Token)match(input,33,FOLLOW_2); 
 
@@ -4996,7 +5208,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // InternalActivityDiagram.g:2042:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
+    // InternalActivityDiagram.g:2128:1: entryRuleEInt returns [String current=null] : iv_ruleEInt= ruleEInt EOF ;
     public final String entryRuleEInt() throws RecognitionException {
         String current = null;
 
@@ -5004,8 +5216,8 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalActivityDiagram.g:2042:44: (iv_ruleEInt= ruleEInt EOF )
-            // InternalActivityDiagram.g:2043:2: iv_ruleEInt= ruleEInt EOF
+            // InternalActivityDiagram.g:2128:44: (iv_ruleEInt= ruleEInt EOF )
+            // InternalActivityDiagram.g:2129:2: iv_ruleEInt= ruleEInt EOF
             {
              newCompositeNode(grammarAccess.getEIntRule()); 
             pushFollow(FOLLOW_1);
@@ -5032,7 +5244,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEInt"
-    // InternalActivityDiagram.g:2049:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // InternalActivityDiagram.g:2135:1: ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleEInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5043,13 +5255,13 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2055:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // InternalActivityDiagram.g:2056:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalActivityDiagram.g:2141:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // InternalActivityDiagram.g:2142:2: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // InternalActivityDiagram.g:2056:2: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // InternalActivityDiagram.g:2057:3: (kw= '-' )? this_INT_1= RULE_INT
+            // InternalActivityDiagram.g:2142:2: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // InternalActivityDiagram.g:2143:3: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // InternalActivityDiagram.g:2057:3: (kw= '-' )?
+            // InternalActivityDiagram.g:2143:3: (kw= '-' )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -5058,9 +5270,9 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt33) {
                 case 1 :
-                    // InternalActivityDiagram.g:2058:4: kw= '-'
+                    // InternalActivityDiagram.g:2144:4: kw= '-'
                     {
-                    kw=(Token)match(input,34,FOLLOW_31); 
+                    kw=(Token)match(input,34,FOLLOW_30); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
@@ -5101,7 +5313,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleControlFlow"
-    // InternalActivityDiagram.g:2075:1: entryRuleControlFlow returns [EObject current=null] : iv_ruleControlFlow= ruleControlFlow EOF ;
+    // InternalActivityDiagram.g:2161:1: entryRuleControlFlow returns [EObject current=null] : iv_ruleControlFlow= ruleControlFlow EOF ;
     public final EObject entryRuleControlFlow() throws RecognitionException {
         EObject current = null;
 
@@ -5109,8 +5321,8 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalActivityDiagram.g:2075:52: (iv_ruleControlFlow= ruleControlFlow EOF )
-            // InternalActivityDiagram.g:2076:2: iv_ruleControlFlow= ruleControlFlow EOF
+            // InternalActivityDiagram.g:2161:52: (iv_ruleControlFlow= ruleControlFlow EOF )
+            // InternalActivityDiagram.g:2162:2: iv_ruleControlFlow= ruleControlFlow EOF
             {
              newCompositeNode(grammarAccess.getControlFlowRule()); 
             pushFollow(FOLLOW_1);
@@ -5137,7 +5349,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleControlFlow"
-    // InternalActivityDiagram.g:2082:1: ruleControlFlow returns [EObject current=null] : (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) ;
+    // InternalActivityDiagram.g:2168:1: ruleControlFlow returns [EObject current=null] : (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) ;
     public final EObject ruleControlFlow() throws RecognitionException {
         EObject current = null;
 
@@ -5156,26 +5368,26 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2088:2: ( (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) )
-            // InternalActivityDiagram.g:2089:2: (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
+            // InternalActivityDiagram.g:2174:2: ( (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? ) )
+            // InternalActivityDiagram.g:2175:2: (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
             {
-            // InternalActivityDiagram.g:2089:2: (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
-            // InternalActivityDiagram.g:2090:3: otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
+            // InternalActivityDiagram.g:2175:2: (otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )? )
+            // InternalActivityDiagram.g:2176:3: otherlv_0= 'flow' ( (lv_name_1_0= ruleEString ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
             {
             otherlv_0=(Token)match(input,35,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getControlFlowAccess().getFlowKeyword_0());
             		
-            // InternalActivityDiagram.g:2094:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalActivityDiagram.g:2095:4: (lv_name_1_0= ruleEString )
+            // InternalActivityDiagram.g:2180:3: ( (lv_name_1_0= ruleEString ) )
+            // InternalActivityDiagram.g:2181:4: (lv_name_1_0= ruleEString )
             {
-            // InternalActivityDiagram.g:2095:4: (lv_name_1_0= ruleEString )
-            // InternalActivityDiagram.g:2096:5: lv_name_1_0= ruleEString
+            // InternalActivityDiagram.g:2181:4: (lv_name_1_0= ruleEString )
+            // InternalActivityDiagram.g:2182:5: lv_name_1_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getControlFlowAccess().getNameEStringParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_31);
             lv_name_1_0=ruleEString();
 
             state._fsp--;
@@ -5201,18 +5413,18 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getControlFlowAccess().getFromKeyword_2());
             		
-            // InternalActivityDiagram.g:2117:3: ( (otherlv_3= RULE_ID ) )
-            // InternalActivityDiagram.g:2118:4: (otherlv_3= RULE_ID )
+            // InternalActivityDiagram.g:2203:3: ( (otherlv_3= RULE_ID ) )
+            // InternalActivityDiagram.g:2204:4: (otherlv_3= RULE_ID )
             {
-            // InternalActivityDiagram.g:2118:4: (otherlv_3= RULE_ID )
-            // InternalActivityDiagram.g:2119:5: otherlv_3= RULE_ID
+            // InternalActivityDiagram.g:2204:4: (otherlv_3= RULE_ID )
+            // InternalActivityDiagram.g:2205:5: otherlv_3= RULE_ID
             {
 
             					if (current==null) {
             						current = createModelElement(grammarAccess.getControlFlowRule());
             					}
             				
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_33); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_32); 
 
             					newLeafNode(otherlv_3, grammarAccess.getControlFlowAccess().getSourceActivityNodeCrossReference_3_0());
             				
@@ -5226,18 +5438,18 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getControlFlowAccess().getToKeyword_4());
             		
-            // InternalActivityDiagram.g:2134:3: ( (otherlv_5= RULE_ID ) )
-            // InternalActivityDiagram.g:2135:4: (otherlv_5= RULE_ID )
+            // InternalActivityDiagram.g:2220:3: ( (otherlv_5= RULE_ID ) )
+            // InternalActivityDiagram.g:2221:4: (otherlv_5= RULE_ID )
             {
-            // InternalActivityDiagram.g:2135:4: (otherlv_5= RULE_ID )
-            // InternalActivityDiagram.g:2136:5: otherlv_5= RULE_ID
+            // InternalActivityDiagram.g:2221:4: (otherlv_5= RULE_ID )
+            // InternalActivityDiagram.g:2222:5: otherlv_5= RULE_ID
             {
 
             					if (current==null) {
             						current = createModelElement(grammarAccess.getControlFlowRule());
             					}
             				
-            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_34); 
+            otherlv_5=(Token)match(input,RULE_ID,FOLLOW_33); 
 
             					newLeafNode(otherlv_5, grammarAccess.getControlFlowAccess().getTargetActivityNodeCrossReference_5_0());
             				
@@ -5247,7 +5459,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalActivityDiagram.g:2147:3: (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
+            // InternalActivityDiagram.g:2233:3: (otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']' )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -5256,24 +5468,24 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalActivityDiagram.g:2148:4: otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']'
+                    // InternalActivityDiagram.g:2234:4: otherlv_6= '[' ( (otherlv_7= RULE_ID ) ) otherlv_8= ']'
                     {
                     otherlv_6=(Token)match(input,38,FOLLOW_16); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getControlFlowAccess().getLeftSquareBracketKeyword_6_0());
                     			
-                    // InternalActivityDiagram.g:2152:4: ( (otherlv_7= RULE_ID ) )
-                    // InternalActivityDiagram.g:2153:5: (otherlv_7= RULE_ID )
+                    // InternalActivityDiagram.g:2238:4: ( (otherlv_7= RULE_ID ) )
+                    // InternalActivityDiagram.g:2239:5: (otherlv_7= RULE_ID )
                     {
-                    // InternalActivityDiagram.g:2153:5: (otherlv_7= RULE_ID )
-                    // InternalActivityDiagram.g:2154:6: otherlv_7= RULE_ID
+                    // InternalActivityDiagram.g:2239:5: (otherlv_7= RULE_ID )
+                    // InternalActivityDiagram.g:2240:6: otherlv_7= RULE_ID
                     {
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getControlFlowRule());
                     						}
                     					
-                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_35); 
+                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_34); 
 
                     						newLeafNode(otherlv_7, grammarAccess.getControlFlowAccess().getGuardBooleanVariableCrossReference_6_1_0());
                     					
@@ -5316,7 +5528,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerCalculationOperator"
-    // InternalActivityDiagram.g:2174:1: ruleIntegerCalculationOperator returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
+    // InternalActivityDiagram.g:2260:1: ruleIntegerCalculationOperator returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
     public final Enumerator ruleIntegerCalculationOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -5327,10 +5539,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2180:2: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
-            // InternalActivityDiagram.g:2181:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalActivityDiagram.g:2266:2: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
+            // InternalActivityDiagram.g:2267:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             {
-            // InternalActivityDiagram.g:2181:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // InternalActivityDiagram.g:2267:2: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -5348,10 +5560,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // InternalActivityDiagram.g:2182:3: (enumLiteral_0= '+' )
+                    // InternalActivityDiagram.g:2268:3: (enumLiteral_0= '+' )
                     {
-                    // InternalActivityDiagram.g:2182:3: (enumLiteral_0= '+' )
-                    // InternalActivityDiagram.g:2183:4: enumLiteral_0= '+'
+                    // InternalActivityDiagram.g:2268:3: (enumLiteral_0= '+' )
+                    // InternalActivityDiagram.g:2269:4: enumLiteral_0= '+'
                     {
                     enumLiteral_0=(Token)match(input,40,FOLLOW_2); 
 
@@ -5365,10 +5577,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalActivityDiagram.g:2190:3: (enumLiteral_1= '-' )
+                    // InternalActivityDiagram.g:2276:3: (enumLiteral_1= '-' )
                     {
-                    // InternalActivityDiagram.g:2190:3: (enumLiteral_1= '-' )
-                    // InternalActivityDiagram.g:2191:4: enumLiteral_1= '-'
+                    // InternalActivityDiagram.g:2276:3: (enumLiteral_1= '-' )
+                    // InternalActivityDiagram.g:2277:4: enumLiteral_1= '-'
                     {
                     enumLiteral_1=(Token)match(input,34,FOLLOW_2); 
 
@@ -5404,7 +5616,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntegerComparisonOperator"
-    // InternalActivityDiagram.g:2201:1: ruleIntegerComparisonOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) ) ;
+    // InternalActivityDiagram.g:2287:1: ruleIntegerComparisonOperator returns [Enumerator current=null] : ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) ) ;
     public final Enumerator ruleIntegerComparisonOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -5418,10 +5630,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2207:2: ( ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) ) )
-            // InternalActivityDiagram.g:2208:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) )
+            // InternalActivityDiagram.g:2293:2: ( ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) ) )
+            // InternalActivityDiagram.g:2294:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) )
             {
-            // InternalActivityDiagram.g:2208:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) )
+            // InternalActivityDiagram.g:2294:2: ( (enumLiteral_0= '<' ) | (enumLiteral_1= '<=' ) | (enumLiteral_2= '==' ) | (enumLiteral_3= '>=' ) | (enumLiteral_4= '>' ) )
             int alt36=5;
             switch ( input.LA(1) ) {
             case 41:
@@ -5458,10 +5670,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
             switch (alt36) {
                 case 1 :
-                    // InternalActivityDiagram.g:2209:3: (enumLiteral_0= '<' )
+                    // InternalActivityDiagram.g:2295:3: (enumLiteral_0= '<' )
                     {
-                    // InternalActivityDiagram.g:2209:3: (enumLiteral_0= '<' )
-                    // InternalActivityDiagram.g:2210:4: enumLiteral_0= '<'
+                    // InternalActivityDiagram.g:2295:3: (enumLiteral_0= '<' )
+                    // InternalActivityDiagram.g:2296:4: enumLiteral_0= '<'
                     {
                     enumLiteral_0=(Token)match(input,41,FOLLOW_2); 
 
@@ -5475,10 +5687,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalActivityDiagram.g:2217:3: (enumLiteral_1= '<=' )
+                    // InternalActivityDiagram.g:2303:3: (enumLiteral_1= '<=' )
                     {
-                    // InternalActivityDiagram.g:2217:3: (enumLiteral_1= '<=' )
-                    // InternalActivityDiagram.g:2218:4: enumLiteral_1= '<='
+                    // InternalActivityDiagram.g:2303:3: (enumLiteral_1= '<=' )
+                    // InternalActivityDiagram.g:2304:4: enumLiteral_1= '<='
                     {
                     enumLiteral_1=(Token)match(input,42,FOLLOW_2); 
 
@@ -5492,10 +5704,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalActivityDiagram.g:2225:3: (enumLiteral_2= '==' )
+                    // InternalActivityDiagram.g:2311:3: (enumLiteral_2= '==' )
                     {
-                    // InternalActivityDiagram.g:2225:3: (enumLiteral_2= '==' )
-                    // InternalActivityDiagram.g:2226:4: enumLiteral_2= '=='
+                    // InternalActivityDiagram.g:2311:3: (enumLiteral_2= '==' )
+                    // InternalActivityDiagram.g:2312:4: enumLiteral_2= '=='
                     {
                     enumLiteral_2=(Token)match(input,43,FOLLOW_2); 
 
@@ -5509,10 +5721,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalActivityDiagram.g:2233:3: (enumLiteral_3= '>=' )
+                    // InternalActivityDiagram.g:2319:3: (enumLiteral_3= '>=' )
                     {
-                    // InternalActivityDiagram.g:2233:3: (enumLiteral_3= '>=' )
-                    // InternalActivityDiagram.g:2234:4: enumLiteral_3= '>='
+                    // InternalActivityDiagram.g:2319:3: (enumLiteral_3= '>=' )
+                    // InternalActivityDiagram.g:2320:4: enumLiteral_3= '>='
                     {
                     enumLiteral_3=(Token)match(input,44,FOLLOW_2); 
 
@@ -5526,10 +5738,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalActivityDiagram.g:2241:3: (enumLiteral_4= '>' )
+                    // InternalActivityDiagram.g:2327:3: (enumLiteral_4= '>' )
                     {
-                    // InternalActivityDiagram.g:2241:3: (enumLiteral_4= '>' )
-                    // InternalActivityDiagram.g:2242:4: enumLiteral_4= '>'
+                    // InternalActivityDiagram.g:2327:3: (enumLiteral_4= '>' )
+                    // InternalActivityDiagram.g:2328:4: enumLiteral_4= '>'
                     {
                     enumLiteral_4=(Token)match(input,45,FOLLOW_2); 
 
@@ -5565,7 +5777,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanUnaryOperator"
-    // InternalActivityDiagram.g:2252:1: ruleBooleanUnaryOperator returns [Enumerator current=null] : (enumLiteral_0= '!' ) ;
+    // InternalActivityDiagram.g:2338:1: ruleBooleanUnaryOperator returns [Enumerator current=null] : (enumLiteral_0= '!' ) ;
     public final Enumerator ruleBooleanUnaryOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -5575,11 +5787,11 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2258:2: ( (enumLiteral_0= '!' ) )
-            // InternalActivityDiagram.g:2259:2: (enumLiteral_0= '!' )
+            // InternalActivityDiagram.g:2344:2: ( (enumLiteral_0= '!' ) )
+            // InternalActivityDiagram.g:2345:2: (enumLiteral_0= '!' )
             {
-            // InternalActivityDiagram.g:2259:2: (enumLiteral_0= '!' )
-            // InternalActivityDiagram.g:2260:3: enumLiteral_0= '!'
+            // InternalActivityDiagram.g:2345:2: (enumLiteral_0= '!' )
+            // InternalActivityDiagram.g:2346:3: enumLiteral_0= '!'
             {
             enumLiteral_0=(Token)match(input,46,FOLLOW_2); 
 
@@ -5609,7 +5821,7 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanBinaryOperator"
-    // InternalActivityDiagram.g:2269:1: ruleBooleanBinaryOperator returns [Enumerator current=null] : ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) ) ;
+    // InternalActivityDiagram.g:2355:1: ruleBooleanBinaryOperator returns [Enumerator current=null] : ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) ) ;
     public final Enumerator ruleBooleanBinaryOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -5620,10 +5832,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalActivityDiagram.g:2275:2: ( ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) ) )
-            // InternalActivityDiagram.g:2276:2: ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) )
+            // InternalActivityDiagram.g:2361:2: ( ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) ) )
+            // InternalActivityDiagram.g:2362:2: ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) )
             {
-            // InternalActivityDiagram.g:2276:2: ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) )
+            // InternalActivityDiagram.g:2362:2: ( (enumLiteral_0= '&' ) | (enumLiteral_1= '|' ) )
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -5641,10 +5853,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
             }
             switch (alt37) {
                 case 1 :
-                    // InternalActivityDiagram.g:2277:3: (enumLiteral_0= '&' )
+                    // InternalActivityDiagram.g:2363:3: (enumLiteral_0= '&' )
                     {
-                    // InternalActivityDiagram.g:2277:3: (enumLiteral_0= '&' )
-                    // InternalActivityDiagram.g:2278:4: enumLiteral_0= '&'
+                    // InternalActivityDiagram.g:2363:3: (enumLiteral_0= '&' )
+                    // InternalActivityDiagram.g:2364:4: enumLiteral_0= '&'
                     {
                     enumLiteral_0=(Token)match(input,47,FOLLOW_2); 
 
@@ -5658,10 +5870,10 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalActivityDiagram.g:2285:3: (enumLiteral_1= '|' )
+                    // InternalActivityDiagram.g:2371:3: (enumLiteral_1= '|' )
                     {
-                    // InternalActivityDiagram.g:2285:3: (enumLiteral_1= '|' )
-                    // InternalActivityDiagram.g:2286:4: enumLiteral_1= '|'
+                    // InternalActivityDiagram.g:2371:3: (enumLiteral_1= '|' )
+                    // InternalActivityDiagram.g:2372:4: enumLiteral_1= '|'
                     {
                     enumLiteral_1=(Token)match(input,48,FOLLOW_2); 
 
@@ -5728,12 +5940,11 @@ public class InternalActivityDiagramParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x00003E0000000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0001800000000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000700000040L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000700000040L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000008000000000L});
 
 }

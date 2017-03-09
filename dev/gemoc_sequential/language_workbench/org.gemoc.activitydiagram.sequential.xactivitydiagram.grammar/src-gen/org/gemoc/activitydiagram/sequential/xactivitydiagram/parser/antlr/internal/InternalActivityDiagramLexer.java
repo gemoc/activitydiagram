@@ -860,10 +860,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2295:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalActivityDiagram.g:2295:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalActivityDiagram.g:2381:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalActivityDiagram.g:2381:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalActivityDiagram.g:2295:11: ( '^' )?
+            // InternalActivityDiagram.g:2381:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -872,7 +872,7 @@ public class InternalActivityDiagramLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalActivityDiagram.g:2295:11: '^'
+                    // InternalActivityDiagram.g:2381:11: '^'
                     {
                     match('^'); 
 
@@ -890,7 +890,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalActivityDiagram.g:2295:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalActivityDiagram.g:2381:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -939,10 +939,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2297:10: ( ( '0' .. '9' )+ )
-            // InternalActivityDiagram.g:2297:12: ( '0' .. '9' )+
+            // InternalActivityDiagram.g:2383:10: ( ( '0' .. '9' )+ )
+            // InternalActivityDiagram.g:2383:12: ( '0' .. '9' )+
             {
-            // InternalActivityDiagram.g:2297:12: ( '0' .. '9' )+
+            // InternalActivityDiagram.g:2383:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -956,7 +956,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalActivityDiagram.g:2297:13: '0' .. '9'
+            	    // InternalActivityDiagram.g:2383:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -988,10 +988,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2299:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalActivityDiagram.g:2299:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalActivityDiagram.g:2385:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalActivityDiagram.g:2385:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalActivityDiagram.g:2299:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalActivityDiagram.g:2385:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1009,10 +1009,10 @@ public class InternalActivityDiagramLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalActivityDiagram.g:2299:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalActivityDiagram.g:2385:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalActivityDiagram.g:2299:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalActivityDiagram.g:2385:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1028,7 +1028,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalActivityDiagram.g:2299:21: '\\\\' .
+                    	    // InternalActivityDiagram.g:2385:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1036,7 +1036,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalActivityDiagram.g:2299:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalActivityDiagram.g:2385:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1061,10 +1061,10 @@ public class InternalActivityDiagramLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalActivityDiagram.g:2299:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalActivityDiagram.g:2385:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalActivityDiagram.g:2299:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalActivityDiagram.g:2385:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1080,7 +1080,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalActivityDiagram.g:2299:54: '\\\\' .
+                    	    // InternalActivityDiagram.g:2385:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1088,7 +1088,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalActivityDiagram.g:2299:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalActivityDiagram.g:2385:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1131,12 +1131,12 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2301:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalActivityDiagram.g:2301:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalActivityDiagram.g:2387:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalActivityDiagram.g:2387:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalActivityDiagram.g:2301:24: ( options {greedy=false; } : . )*
+            // InternalActivityDiagram.g:2387:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1161,7 +1161,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalActivityDiagram.g:2301:52: .
+            	    // InternalActivityDiagram.g:2387:52: .
             	    {
             	    matchAny(); 
 
@@ -1191,12 +1191,12 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2303:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalActivityDiagram.g:2303:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalActivityDiagram.g:2389:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalActivityDiagram.g:2389:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalActivityDiagram.g:2303:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalActivityDiagram.g:2389:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1209,7 +1209,7 @@ public class InternalActivityDiagramLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalActivityDiagram.g:2303:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalActivityDiagram.g:2389:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1229,7 +1229,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalActivityDiagram.g:2303:40: ( ( '\\r' )? '\\n' )?
+            // InternalActivityDiagram.g:2389:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1238,9 +1238,9 @@ public class InternalActivityDiagramLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalActivityDiagram.g:2303:41: ( '\\r' )? '\\n'
+                    // InternalActivityDiagram.g:2389:41: ( '\\r' )? '\\n'
                     {
-                    // InternalActivityDiagram.g:2303:41: ( '\\r' )?
+                    // InternalActivityDiagram.g:2389:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1249,7 +1249,7 @@ public class InternalActivityDiagramLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalActivityDiagram.g:2303:41: '\\r'
+                            // InternalActivityDiagram.g:2389:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1281,10 +1281,10 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2305:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalActivityDiagram.g:2305:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalActivityDiagram.g:2391:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalActivityDiagram.g:2391:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalActivityDiagram.g:2305:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalActivityDiagram.g:2391:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1338,8 +1338,8 @@ public class InternalActivityDiagramLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalActivityDiagram.g:2307:16: ( . )
-            // InternalActivityDiagram.g:2307:18: .
+            // InternalActivityDiagram.g:2393:16: ( . )
+            // InternalActivityDiagram.g:2393:18: .
             {
             matchAny(); 
 

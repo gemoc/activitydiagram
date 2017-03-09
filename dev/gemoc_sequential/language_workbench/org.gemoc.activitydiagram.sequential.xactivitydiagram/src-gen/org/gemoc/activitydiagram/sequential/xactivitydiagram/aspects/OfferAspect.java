@@ -13,23 +13,29 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspect
 @SuppressWarnings("all")
 public class OfferAspect {
   public static boolean hasTokens1(final Offer _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_hasTokens1(_self_, _self);;
-    return (boolean)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_hasTokens1(_self_, _self);
+	;
+	return (boolean) result;
+}
   
   public static void removeWithdrawnTokens1(final Offer _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext.getSelf(_self);
-    _privk3_removeWithdrawnTokens1(_self_, _self);;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext
+			.getSelf(_self);
+	_privk3_removeWithdrawnTokens1(_self_, _self);
+	;
+}
   
   public static EList<Token> offeredTokens(final Offer _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_offeredTokens(_self_, _self);;
-    return (org.eclipse.emf.common.util.EList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token>)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_offeredTokens(_self_, _self);
+	;
+	return (org.eclipse.emf.common.util.EList) result;
+}
   
   public static void offeredTokens(final Offer _self, final EList<Token> offeredTokens) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspectOfferAspectContext.getSelf(_self);

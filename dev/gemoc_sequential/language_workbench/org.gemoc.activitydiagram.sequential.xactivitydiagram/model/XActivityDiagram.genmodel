@@ -78,24 +78,6 @@
         <ecoreOperation href="XActivityDiagram.ecore#//Activity/reset"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//Activity/getIntegerVariableValue"/>
-        <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//Activity/getIntegerVariableValue/variableName"/>
-        </genParameters>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//Activity/getBooleanVariableValue"/>
-        <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//Activity/getBooleanVariableValue/variableName"/>
-        </genParameters>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//Activity/getVariableValue"/>
-        <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//Activity/getVariableValue/variableName"/>
-        </genParameters>
-      </genOperations>
-      <genOperations>
         <ecoreOperation href="XActivityDiagram.ecore#//Activity/getVariable"/>
         <genParameters>
           <ecoreParameter href="XActivityDiagram.ecore#//Activity/getVariable/variableName"/>
@@ -121,6 +103,9 @@
       </genFeatures>
       <genOperations>
         <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/execute"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/addToken"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/terminate"/>
@@ -269,7 +254,7 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//Variable/name"/>
       </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+      <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//Variable/currentValue"/>
       </genFeatures>
       <genOperations>
@@ -306,19 +291,31 @@
         <ecoreOperation href="XActivityDiagram.ecore#//BooleanVariable/print"/>
       </genOperations>
     </genClasses>
-    <genClasses>
+    <genClasses image="false">
       <ecoreClass href="XActivityDiagram.ecore#//Value"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="XActivityDiagram.ecore#//BooleanValue"/>
+      <ecoreClass href="XActivityDiagram.ecore#//StaticBooleanValue"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//BooleanValue/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//StaticBooleanValue/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="XActivityDiagram.ecore#//IntegerValue"/>
+      <ecoreClass href="XActivityDiagram.ecore#//DynamicBooleanValue"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//IntegerValue/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//DynamicBooleanValue/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XActivityDiagram.ecore#//StaticIntegerValue"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//StaticIntegerValue/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XActivityDiagram.ecore#//DynamicIntegerValue"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XActivityDiagram.ecore#//DynamicIntegerValue/value"/>
       </genFeatures>
     </genClasses>
     <genClasses image="false">
@@ -413,12 +410,6 @@
     </genClasses>
     <genClasses>
       <ecoreClass href="XActivityDiagram.ecore#//InputValue"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//InputValue/variable"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//InputValue/value"/>
-      </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="XActivityDiagram.ecore#//Input"/>

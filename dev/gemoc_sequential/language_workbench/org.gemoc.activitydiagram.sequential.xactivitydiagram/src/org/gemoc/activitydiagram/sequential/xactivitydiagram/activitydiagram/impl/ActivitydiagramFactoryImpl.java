@@ -70,9 +70,10 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.VARIABLE: return createVariable();
 			case ActivitydiagramPackage.INTEGER_VARIABLE: return createIntegerVariable();
 			case ActivitydiagramPackage.BOOLEAN_VARIABLE: return createBooleanVariable();
-			case ActivitydiagramPackage.VALUE: return createValue();
-			case ActivitydiagramPackage.BOOLEAN_VALUE: return createBooleanValue();
-			case ActivitydiagramPackage.INTEGER_VALUE: return createIntegerValue();
+			case ActivitydiagramPackage.STATIC_BOOLEAN_VALUE: return createStaticBooleanValue();
+			case ActivitydiagramPackage.DYNAMIC_BOOLEAN_VALUE: return createDynamicBooleanValue();
+			case ActivitydiagramPackage.STATIC_INTEGER_VALUE: return createStaticIntegerValue();
+			case ActivitydiagramPackage.DYNAMIC_INTEGER_VALUE: return createDynamicIntegerValue();
 			case ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION: return createIntegerCalculationExpression();
 			case ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION: return createIntegerComparisonExpression();
 			case ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION: return createBooleanUnaryExpression();
@@ -266,9 +267,9 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value createValue() {
-		ValueImpl value = new ValueImpl();
-		return value;
+	public StaticBooleanValue createStaticBooleanValue() {
+		StaticBooleanValueImpl staticBooleanValue = new StaticBooleanValueImpl();
+		return staticBooleanValue;
 	}
 
 	/**
@@ -276,9 +277,9 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BooleanValue createBooleanValue() {
-		BooleanValueImpl booleanValue = new BooleanValueImpl();
-		return booleanValue;
+	public DynamicBooleanValue createDynamicBooleanValue() {
+		DynamicBooleanValueImpl dynamicBooleanValue = new DynamicBooleanValueImpl();
+		return dynamicBooleanValue;
 	}
 
 	/**
@@ -286,9 +287,19 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegerValue createIntegerValue() {
-		IntegerValueImpl integerValue = new IntegerValueImpl();
-		return integerValue;
+	public StaticIntegerValue createStaticIntegerValue() {
+		StaticIntegerValueImpl staticIntegerValue = new StaticIntegerValueImpl();
+		return staticIntegerValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DynamicIntegerValue createDynamicIntegerValue() {
+		DynamicIntegerValueImpl dynamicIntegerValue = new DynamicIntegerValueImpl();
+		return dynamicIntegerValue;
 	}
 
 	/**

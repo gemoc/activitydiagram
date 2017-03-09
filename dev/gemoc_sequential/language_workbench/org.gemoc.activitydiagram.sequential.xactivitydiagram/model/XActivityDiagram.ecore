@@ -16,26 +16,6 @@
     <eOperations name="reset">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="getIntegerVariableValue">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eParameters name="variableName">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
-    <eOperations name="getBooleanVariableValue">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="variableName">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
-    <eOperations name="getVariableValue" eType="//Value">
-      <eAnnotations source="aspect"/>
-      <eParameters name="variableName">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eParameters>
-    </eOperations>
     <eOperations name="getVariable" eType="//Variable">
       <eAnnotations source="aspect"/>
       <eParameters name="variableName">
@@ -52,6 +32,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityNode" eSuperTypes="//NamedElement">
     <eOperations name="execute">
+      <eAnnotations source="aspect"/>
+    </eOperations>
+    <eOperations name="addToken">
       <eAnnotations source="aspect"/>
     </eOperations>
     <eOperations name="terminate">
@@ -186,9 +169,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" unique="false" eType="//Value">
-      <eAnnotations source="aspect"/>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentValue" lowerBound="1" eType="//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntegerVariable" eSuperTypes="//Variable">
     <eOperations name="execute">
@@ -214,14 +195,26 @@
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eOperations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Value"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BooleanValue" eSuperTypes="//Value">
+  <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticBooleanValue" eSuperTypes="//Value">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntegerValue" eSuperTypes="//Value">
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicBooleanValue" eSuperTypes="//Value">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false">
+      <eAnnotations source="aspect"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticIntegerValue" eSuperTypes="//Value">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicIntegerValue" eSuperTypes="//Value">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false">
+      <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -306,12 +299,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputValue">
     <eAnnotations source="aspect"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" unique="false" eType="//Variable">
-      <eAnnotations source="aspect"/>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="//Value" containment="true">
-      <eAnnotations source="aspect"/>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input">
     <eAnnotations source="aspect"/>

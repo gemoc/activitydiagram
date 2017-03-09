@@ -12,7 +12,7 @@ activity test3 {
 		action actionNode
 			comp {
 				counter = counter + inc,
-				doLoop = counter > iterations,
+				doLoop = counter < iterations,
 				finish = !doLoop
 			}
 			in(edge2) out (edge3),

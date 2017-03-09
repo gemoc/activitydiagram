@@ -148,12 +148,20 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createValueAdapter();
 			}
 			@Override
-			public Adapter caseBooleanValue(BooleanValue object) {
-				return createBooleanValueAdapter();
+			public Adapter caseStaticBooleanValue(StaticBooleanValue object) {
+				return createStaticBooleanValueAdapter();
 			}
 			@Override
-			public Adapter caseIntegerValue(IntegerValue object) {
-				return createIntegerValueAdapter();
+			public Adapter caseDynamicBooleanValue(DynamicBooleanValue object) {
+				return createDynamicBooleanValueAdapter();
+			}
+			@Override
+			public Adapter caseStaticIntegerValue(StaticIntegerValue object) {
+				return createStaticIntegerValueAdapter();
+			}
+			@Override
+			public Adapter caseDynamicIntegerValue(DynamicIntegerValue object) {
+				return createDynamicIntegerValueAdapter();
 			}
 			@Override
 			public Adapter caseExpression(Expression object) {
@@ -512,30 +520,58 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.BooleanValue <em>Boolean Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.StaticBooleanValue <em>Static Boolean Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.BooleanValue
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.StaticBooleanValue
 	 * @generated
 	 */
-	public Adapter createBooleanValueAdapter() {
+	public Adapter createStaticBooleanValueAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerValue <em>Integer Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DynamicBooleanValue <em>Dynamic Boolean Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerValue
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DynamicBooleanValue
 	 * @generated
 	 */
-	public Adapter createIntegerValueAdapter() {
+	public Adapter createDynamicBooleanValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.StaticIntegerValue <em>Static Integer Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.StaticIntegerValue
+	 * @generated
+	 */
+	public Adapter createStaticIntegerValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DynamicIntegerValue <em>Dynamic Integer Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.DynamicIntegerValue
+	 * @generated
+	 */
+	public Adapter createDynamicIntegerValueAdapter() {
 		return null;
 	}
 
@@ -666,20 +702,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace
-	 * @generated
-	 */
-	public Adapter createTraceAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.InputValue <em>Input Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -732,6 +754,20 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createForkedTokenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace <em>Trace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace
+	 * @generated
+	 */
+	public Adapter createTraceAdapter() {
 		return null;
 	}
 

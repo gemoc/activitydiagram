@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 @SuppressWarnings("all")
 public class ActivityEdgeAspectActivityEdgeAspectProperties {
-	public EList<Offer> offersPool = new BasicEList<Offer>();
-	  
-	public EList<Offer> offers;
+  public EList<Offer> offersPool = new BasicEList<Offer>();
+  
+  public EList<Offer> offers;
 }

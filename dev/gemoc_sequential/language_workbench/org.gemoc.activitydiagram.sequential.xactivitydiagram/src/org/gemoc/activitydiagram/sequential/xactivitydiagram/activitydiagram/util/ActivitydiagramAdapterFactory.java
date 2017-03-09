@@ -148,12 +148,20 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 				return createValueAdapter();
 			}
 			@Override
-			public Adapter caseBooleanValue(BooleanValue object) {
-				return createBooleanValueAdapter();
+			public Adapter caseStaticBooleanValue(StaticBooleanValue object) {
+				return createStaticBooleanValueAdapter();
 			}
 			@Override
-			public Adapter caseIntegerValue(IntegerValue object) {
-				return createIntegerValueAdapter();
+			public Adapter caseDynamicBooleanValue(DynamicBooleanValue object) {
+				return createDynamicBooleanValueAdapter();
+			}
+			@Override
+			public Adapter caseStaticIntegerValue(StaticIntegerValue object) {
+				return createStaticIntegerValueAdapter();
+			}
+			@Override
+			public Adapter caseDynamicIntegerValue(DynamicIntegerValue object) {
+				return createDynamicIntegerValueAdapter();
 			}
 			@Override
 			public Adapter caseExpression(Expression object) {
@@ -512,30 +520,58 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue <em>Boolean Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue <em>Static Boolean Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue
 	 * @generated
 	 */
-	public Adapter createBooleanValueAdapter() {
+	public Adapter createStaticBooleanValueAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue <em>Integer Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue <em>Dynamic Boolean Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue
 	 * @generated
 	 */
-	public Adapter createIntegerValueAdapter() {
+	public Adapter createDynamicBooleanValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue <em>Static Integer Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue
+	 * @generated
+	 */
+	public Adapter createStaticIntegerValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue <em>Dynamic Integer Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue
+	 * @generated
+	 */
+	public Adapter createDynamicIntegerValueAdapter() {
 		return null;
 	}
 

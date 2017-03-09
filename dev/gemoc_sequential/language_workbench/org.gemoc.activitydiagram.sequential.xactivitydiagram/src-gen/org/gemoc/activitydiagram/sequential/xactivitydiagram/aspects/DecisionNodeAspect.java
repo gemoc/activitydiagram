@@ -1,10 +1,10 @@
 package org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects;
 
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityEdge;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlFlow;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
 import com.google.common.base.Objects;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
@@ -14,22 +14,18 @@ import org.eclipse.emf.common.util.EList;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspectDecisionNodeAspectProperties;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DynamicBooleanValueAspect;
 
 @Aspect(className = DecisionNode.class)
 @SuppressWarnings("all")
 public class DecisionNodeAspect extends ActivityNodeAspect {
   @OverrideAspectMethod
   public static void execute(final DecisionNode _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspectDecisionNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspectDecisionNodeAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect._privk3_execute(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspectDecisionNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspectDecisionNodeAspectContext
+			.getSelf(_self);
+	_privk3_execute(_self_, _self);
+	;
+}
   
   @OverrideAspectMethod
   public static void sendOffers1(final DecisionNode _self, final EList<Token> tokens) {
@@ -59,19 +55,11 @@ public class DecisionNodeAspect extends ActivityNodeAspect {
   protected static void _privk3_sendOffers1(final DecisionNodeAspectDecisionNodeAspectProperties _self_, final DecisionNode _self, final EList<Token> tokens) {
     EList<ActivityEdge> _outgoing = _self.getOutgoing();
     for (final ActivityEdge edge : _outgoing) {
-      boolean _and = false;
-      if (!(edge instanceof ControlFlow)) {
-        _and = false;
-      } else {
+      if (((edge instanceof ControlFlow) && (!Objects.equal(((ControlFlow) edge).getGuard(), null)))) {
         BooleanVariable _guard = ((ControlFlow) edge).getGuard();
-        boolean _notEquals = (!Objects.equal(_guard, null));
-        _and = _notEquals;
-      }
-      if (_and) {
-        BooleanVariable _guard_1 = ((ControlFlow) edge).getGuard();
-        Value _currentValue = VariableAspect.currentValue(_guard_1);
-        boolean _isValue = ((BooleanValue) _currentValue).isValue();
-        if (_isValue) {
+        Value _currentValue = _guard.getCurrentValue();
+        boolean _value = DynamicBooleanValueAspect.value(((DynamicBooleanValue) _currentValue));
+        if (_value) {
           ActivityEdgeAspect.sendOffer1(edge, tokens);
         }
       }

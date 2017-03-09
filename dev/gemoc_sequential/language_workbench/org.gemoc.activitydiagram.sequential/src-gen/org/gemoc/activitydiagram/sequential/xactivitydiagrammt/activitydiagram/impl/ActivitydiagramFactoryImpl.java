@@ -70,9 +70,10 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 			case ActivitydiagramPackage.VARIABLE: return createVariable();
 			case ActivitydiagramPackage.INTEGER_VARIABLE: return createIntegerVariable();
 			case ActivitydiagramPackage.BOOLEAN_VARIABLE: return createBooleanVariable();
-			case ActivitydiagramPackage.VALUE: return createValue();
-			case ActivitydiagramPackage.BOOLEAN_VALUE: return createBooleanValue();
-			case ActivitydiagramPackage.INTEGER_VALUE: return createIntegerValue();
+			case ActivitydiagramPackage.STATIC_BOOLEAN_VALUE: return createStaticBooleanValue();
+			case ActivitydiagramPackage.DYNAMIC_BOOLEAN_VALUE: return createDynamicBooleanValue();
+			case ActivitydiagramPackage.STATIC_INTEGER_VALUE: return createStaticIntegerValue();
+			case ActivitydiagramPackage.DYNAMIC_INTEGER_VALUE: return createDynamicIntegerValue();
 			case ActivitydiagramPackage.INTEGER_CALCULATION_EXPRESSION: return createIntegerCalculationExpression();
 			case ActivitydiagramPackage.INTEGER_COMPARISON_EXPRESSION: return createIntegerComparisonExpression();
 			case ActivitydiagramPackage.BOOLEAN_UNARY_EXPRESSION: return createBooleanUnaryExpression();
@@ -253,7 +254,7 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value createValue() {
+	public StaticBooleanValue createStaticBooleanValue() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 
@@ -262,7 +263,7 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BooleanValue createBooleanValue() {
+	public DynamicBooleanValue createDynamicBooleanValue() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 
@@ -271,7 +272,16 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegerValue createIntegerValue() {
+	public StaticIntegerValue createStaticIntegerValue() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DynamicIntegerValue createDynamicIntegerValue() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 
@@ -334,15 +344,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trace createTrace() {
-		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InputValue createInputValue() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
@@ -371,6 +372,15 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * @generated
 	 */
 	public ForkedToken createForkedToken() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Trace createTrace() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 

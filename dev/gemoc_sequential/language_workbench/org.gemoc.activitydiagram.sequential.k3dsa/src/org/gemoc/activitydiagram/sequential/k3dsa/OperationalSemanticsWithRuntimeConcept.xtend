@@ -4,15 +4,15 @@ import activitydiagram.Activity
 import activitydiagram.ActivityEdge
 import activitydiagram.ActivityFinalNode
 import activitydiagram.ActivityNode
-import activitydiagram.ActivitydiagramFactory
 import activitydiagram.BooleanBinaryExpression
 import activitydiagram.BooleanBinaryOperator
 import activitydiagram.BooleanUnaryExpression
 import activitydiagram.BooleanUnaryOperator
-import activitydiagram.BooleanValue
 import activitydiagram.BooleanVariable
 import activitydiagram.ControlFlow
 import activitydiagram.DecisionNode
+import activitydiagram.DynamicBooleanValue
+import activitydiagram.DynamicIntegerValue
 import activitydiagram.Expression
 import activitydiagram.ForkNode
 import activitydiagram.InitialNode
@@ -20,14 +20,15 @@ import activitydiagram.IntegerCalculationExpression
 import activitydiagram.IntegerCalculationOperator
 import activitydiagram.IntegerComparisonExpression
 import activitydiagram.IntegerComparisonOperator
-import activitydiagram.IntegerValue
 import activitydiagram.IntegerVariable
 import activitydiagram.JoinNode
 import activitydiagram.MergeNode
 import activitydiagram.NamedElement
 import activitydiagram.OpaqueAction
-import activitydiagram.Value
+import activitydiagram.StaticBooleanValue
+import activitydiagram.StaticIntegerValue
 import activitydiagram.Variable
+import dynamic.activitydiagram.ActivitydiagramFactory
 import dynamic.activitydiagram.ForkedToken
 import dynamic.activitydiagram.Input
 import dynamic.activitydiagram.InputValue
@@ -35,21 +36,24 @@ import dynamic.activitydiagram.Offer
 import dynamic.activitydiagram.Token
 import dynamic.activitydiagram.Trace
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
-import fr.inria.diverse.k3.al.annotationprocessor.Containment
 import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
 import fr.inria.diverse.k3.al.annotationprocessor.Main
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import fr.inria.diverse.k3.al.annotationprocessor.Step
+import fr.inria.diverse.melange.annotation.Containment
 import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.emf.common.util.EList
 
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ActivityEdgeAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ActivityNodeAspect.*
+import static extension org.gemoc.activitydiagram.sequential.k3dsa.ExpressionAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.ForkedTokenAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.OfferAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TokenAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TraceAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect.*
+import static extension org.gemoc.activitydiagram.sequential.k3dsa.DynamicBooleanValueAspect.*
+import static extension org.gemoc.activitydiagram.sequential.k3dsa.DynamicIntegerValueAspect.*
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -61,7 +65,6 @@ class ActivityAspect extends NamedElementAspect {
 
 	@Containment
 	public Trace trace
-	
 
 	@InitializeModel
 	def void initializeModel(EList<String> args) {
@@ -78,7 +81,7 @@ class ActivityAspect extends NamedElementAspect {
 		_self.locals.forEach[v|v.init()]
 		_self.inputs.forEach[v|v.init()]
 		var toExecute = _self.nodes.filter[node|node instanceof InitialNode].get(0)
-		_self.trace = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createTrace
+		_self.trace = ActivitydiagramFactory.eINSTANCE.createTrace
 		_self.trace.executedNodes.add(toExecute)
 		toExecute.execute
 
@@ -96,29 +99,29 @@ class ActivityAspect extends NamedElementAspect {
 		_self.trace = null
 	}
 	
-	def int getIntegerVariableValue(String variableName) {
-		var currentValue = _self.getVariableValue(variableName);
-		if (currentValue instanceof IntegerValue) {
-			var integerValue = currentValue as IntegerValue;
-			return integerValue.getValue();
-		}
-		return -1;
-	}
+//	def int getIntegerVariableValue(String variableName) {
+//		var currentValue = _self.getVariableValue(variableName);
+//		if (currentValue instanceof DynamicIntegerValue) {
+//			var integerValue = currentValue as DynamicIntegerValue;
+//			return integerValue.getValue();
+//		}
+//		return -1;
+//	}
 
-	def boolean getBooleanVariableValue(String variableName) {
-		var currentValue = _self.getVariableValue(variableName)
-		if (currentValue instanceof BooleanValue) {
-			var booleanValue = currentValue as BooleanValue
-			return booleanValue.isValue()
-		}
-		return false;
-	}
+//	def boolean getBooleanVariableValue(String variableName) {
+//		var currentValue = _self.getVariableValue(variableName)
+//		if (currentValue instanceof DynamicBooleanValue) {
+//			var booleanValue = currentValue as DynamicBooleanValue
+//			return booleanValue.isValue()
+//		}
+//		return false;
+//	}
 
-	def Value getVariableValue(String variableName) {
-		var variable = _self.getVariable(variableName)
-		var currentValue = variable.currentValue
-		return currentValue;
-	}
+//	def DynamicValue getVariableValue(String variableName) {
+//		var variable = _self.getVariable(variableName)
+//		var currentValue = variable.currentValue
+//		return currentValue;
+//	}
 
 	def Variable getVariable(String variableName) {
 		var allVariables = new BasicEList<Variable>();
@@ -149,7 +152,12 @@ class ActivityNodeAspect extends NamedElementAspect {
 	@Step
 	def void execute() {
 	}
-
+	
+	@Step
+	def void addToken() {
+		_self.heldTokens.add(ActivitydiagramFactory.eINSTANCE.createControlToken)
+	}
+	
 	@Step
 	def void terminate() {
 		_self.running = false
@@ -212,7 +220,7 @@ class ActivityEdgeAspect extends NamedElementAspect {
 	
 	def void sendOffer1(EList<Token> tokens) {
 		val offer = if (_self.offersPool.empty) {
-				dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer
+				ActivitydiagramFactory.eINSTANCE.createOffer
 			} else {
 				_self.offersPool.remove(0)
 			}
@@ -222,7 +230,10 @@ class ActivityEdgeAspect extends NamedElementAspect {
 
 	def EList<Token> takeOfferedTokens1() {
 		val tokens = new BasicEList<Token>
-		_self.offers.forEach[o|tokens.addAll(o.offeredTokens) _self.offersPool.add(o)]
+		_self.offers.forEach[o|
+			tokens.addAll(o.offeredTokens)
+			_self.offersPool.add(o)
+		]
 		_self.offers.clear
 		return tokens
 	}
@@ -240,6 +251,7 @@ class ControlFlowAspect extends ActivityEdgeAspect {
 class OpaqueActionAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
+		_self.expressions.forEach[e|e.execute]
 		_self.sendOffers1(_self.takeOfferdTokens1)
 	}
 }
@@ -248,7 +260,7 @@ class OpaqueActionAspect extends ActivityNodeAspect {
 class InitialNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		var r = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createControlToken
+		var r = ActivitydiagramFactory.eINSTANCE.createControlToken
 		_self.heldTokens.add(r)
 		var list = new BasicEList<Token>
 		list.add(r)
@@ -283,7 +295,7 @@ class ForkNodeAspect extends ActivityNodeAspect {
 		var tokens = _self.takeOfferdTokens1
 		var forkedTokens = new BasicEList<Token>()
 		for (Token token : tokens) {
-			var forkedToken = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createForkedToken
+			var forkedToken = ActivitydiagramFactory.eINSTANCE.createForkedToken
 			forkedToken.baseToken = token
 			forkedToken.remainingOffersCount = _self.outgoing.size()
 			forkedTokens.add(forkedToken)
@@ -299,11 +311,12 @@ class JoinNodeAspect extends ActivityNodeAspect {
 	def void execute() {
 		var tokens = _self.takeOfferdTokens1
 		tokens.forEach [ t |
-			if ((t as ForkedToken).remainingOffersCount > 1) {
-				(t as ForkedToken).remainingOffersCount = (t as ForkedToken).remainingOffersCount - 1
+			val forkedToken = t as ForkedToken
+			if (forkedToken.remainingOffersCount > 1) {
+				forkedToken.remainingOffersCount = forkedToken.remainingOffersCount - 1
 			} else {
 				var list = new BasicEList<Token>
-				list.add(t)
+				list.add(forkedToken.baseToken)
 				_self.sendOffers1(list)
 			}
 		]
@@ -333,7 +346,7 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 	def void sendOffers1(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
 			if (edge instanceof ControlFlow && ( edge as ControlFlow).guard != null) {
-				if ((( edge as ControlFlow).guard.currentValue as BooleanValue).value) {
+				if (((edge as ControlFlow).guard.currentValue as DynamicBooleanValue).value) {
 					edge.sendOffer1(tokens);
 				}
 			}
@@ -343,8 +356,6 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 
 @Aspect(className=Variable)
 class VariableAspect {
-	
-	public Value currentValue
 	
 	@Step
 	def void execute() {
@@ -367,14 +378,10 @@ class IntegerVariableAspect extends VariableAspect {
 
 	@OverrideAspectMethod
 	def void init() {
-		if (_self.currentValue == null) {
-			if (_self.initialValue != null)
-				_self.currentValue = _self.initialValue
-			else {
-				val defaultValue = ActivitydiagramFactory.eINSTANCE.createIntegerValue
-				defaultValue.value = 0;
-				_self.currentValue = defaultValue
-			}
+		if (_self.initialValue != null) {
+			(_self.currentValue as DynamicIntegerValue).value = (_self.initialValue as StaticIntegerValue).value
+		} else {
+			(_self.currentValue as DynamicIntegerValue).value = 0;
 		}
 	}
 
@@ -383,7 +390,7 @@ class IntegerVariableAspect extends VariableAspect {
 		var text = new StringBuffer();
 		text.append(_self.getName());
 		text.append(" = ");
-		text.append((_self.currentValue as IntegerValue).getValue());
+		text.append((_self.currentValue as DynamicIntegerValue).value);
 		return text.toString();
 	}
 }
@@ -396,14 +403,10 @@ class BooleanVariableAspect extends VariableAspect {
 
 	@OverrideAspectMethod
 	def void init() {
-		if (_self.currentValue == null) {
-			if (_self.initialValue != null)
-				_self.currentValue = _self.initialValue
-			else {
-				val defaultValue = ActivitydiagramFactory.eINSTANCE.createBooleanValue
-				defaultValue.value = false;
-				_self.currentValue = defaultValue
-			}
+		if (_self.initialValue != null) {
+			(_self.currentValue as DynamicBooleanValue).value = (_self.initialValue as StaticBooleanValue).value
+		} else {
+			(_self.currentValue as DynamicIntegerValue).value = 0;
 		}
 	}
 
@@ -412,7 +415,7 @@ class BooleanVariableAspect extends VariableAspect {
 		var text = new StringBuffer();
 		text.append(_self.getName());
 		text.append(" = ");
-		text.append((_self.currentValue as BooleanValue).isValue());
+		text.append((_self.currentValue as DynamicBooleanValue).value);
 		return text.toString();
 	}
 
@@ -422,14 +425,15 @@ class BooleanVariableAspect extends VariableAspect {
 class IntegerCalculationExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
 	def void execute() {
+		var int intValue = 0
 		if (_self.operator.value == IntegerCalculationOperator.ADD_VALUE) {
-			(_self.assignee.currentValue as IntegerValue).value = (_self.operand1.currentValue as IntegerValue).value +
-				(_self.operand2.currentValue as IntegerValue).value
+			intValue = (_self.operand1.currentValue as DynamicIntegerValue).value + (_self.operand2.currentValue as DynamicIntegerValue).value
 		} else if (_self.operator.value == IntegerCalculationOperator.SUBRACT_VALUE) {
-			(_self.assignee.currentValue as IntegerValue).value = (_self.operand1.currentValue as IntegerValue).value -
-				(_self.operand2.currentValue as IntegerValue).value
+			intValue = (_self.operand1.currentValue as DynamicIntegerValue).value - (_self.operand2.currentValue as DynamicIntegerValue).value
 		}
-
+		if (intValue != (_self.assignee.currentValue as DynamicIntegerValue).value) {
+			(_self.assignee.currentValue as DynamicIntegerValue).value = intValue
+		}
 	}
 }
 
@@ -437,21 +441,20 @@ class IntegerCalculationExpressionAspect extends ExpressionAspect {
 class IntegerComparisonExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
 	def void execute() {
+		var boolean boolValue = false
 		if (_self.operator.value == IntegerComparisonOperator.EQUALS_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as IntegerValue).value ==
-				(_self.operand2.currentValue as IntegerValue).value
+			boolValue = (_self.operand1.currentValue as DynamicIntegerValue).value == (_self.operand2.currentValue as DynamicIntegerValue).value
 		} else if (_self.operator.value == IntegerComparisonOperator.GREATER_EQUALS_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as IntegerValue).value >=
-				(_self.operand2.currentValue as IntegerValue).value
+			boolValue = (_self.operand1.currentValue as DynamicIntegerValue).value >= (_self.operand2.currentValue as DynamicIntegerValue).value
 		} else if (_self.operator.value == IntegerComparisonOperator.GREATER_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as IntegerValue).value >
-				(_self.operand2.currentValue as IntegerValue).value
+			boolValue = (_self.operand1.currentValue as DynamicIntegerValue).value > (_self.operand2.currentValue as DynamicIntegerValue).value
 		} else if (_self.operator.value == IntegerComparisonOperator.SMALLER_EQUALS_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as IntegerValue).value <=
-				(_self.operand2.currentValue as IntegerValue).value
+			boolValue = (_self.operand1.currentValue as DynamicIntegerValue).value <= (_self.operand2.currentValue as DynamicIntegerValue).value
 		} else if (_self.operator.value == IntegerComparisonOperator.SMALLER_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as IntegerValue).value <
-				(_self.operand2.currentValue as IntegerValue).value
+			boolValue = (_self.operand1.currentValue as DynamicIntegerValue).value < (_self.operand2.currentValue as DynamicIntegerValue).value
+		}
+		if (boolValue != (_self.assignee.currentValue as DynamicBooleanValue).value) {
+			(_self.assignee.currentValue as DynamicBooleanValue).value = boolValue
 		}
 	}
 }
@@ -460,10 +463,13 @@ class IntegerComparisonExpressionAspect extends ExpressionAspect {
 class BooleanUnaryExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
 	def void execute() {
+		var boolean boolValue = false
 		if (_self.operator.value == BooleanUnaryOperator.NOT_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = !(_self.operand.currentValue as BooleanValue).value
+			boolValue = !(_self.operand.currentValue as DynamicBooleanValue).value
 		}
-
+		if (boolValue != (_self.assignee.currentValue as DynamicBooleanValue).value) {
+			(_self.assignee.currentValue as DynamicBooleanValue).value = boolValue
+		}
 	}
 }
 
@@ -471,12 +477,14 @@ class BooleanUnaryExpressionAspect extends ExpressionAspect {
 class BooleanBinaryExpressionAspect extends ExpressionAspect {
 	@OverrideAspectMethod
 	def void execute() {
+		var boolean boolValue = false
 		if (_self.operator.value == BooleanBinaryOperator.AND_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as BooleanValue).value &&
-				(_self.operand2.currentValue as BooleanValue).value
+			boolValue = (_self.operand1.currentValue as DynamicBooleanValue).value && (_self.operand2.currentValue as DynamicBooleanValue).value
 		} else if (_self.operator.value == BooleanBinaryOperator.OR_VALUE) {
-			(_self.assignee.currentValue as BooleanValue).value = (_self.operand1.currentValue as BooleanValue).value ||
-				(_self.operand2.currentValue as BooleanValue).value
+			boolValue = (_self.operand1.currentValue as DynamicBooleanValue).value || (_self.operand2.currentValue as DynamicBooleanValue).value
+		}
+		if (boolValue != (_self.assignee.currentValue as DynamicBooleanValue).value) {
+			(_self.assignee.currentValue as DynamicBooleanValue).value = boolValue
 		}
 	}
 }
@@ -504,8 +512,6 @@ class OfferAspect {
 
 @Aspect(className=Token)
 class TokenAspect {
-	
-//	public ActivityNode holder
 
 	def boolean isWithdrawn() {
 		return _self.eContainer == null;
@@ -536,12 +542,16 @@ class InputAspect {
 	
 }
 
-@Aspect(className=InputValue)
-class InputValueAspect {
+@Aspect(className=DynamicBooleanValue)
+@OverrideAspectMethod
+class DynamicBooleanValueAspect {
 	
-	public Variable variable
+	public boolean value
+}
+
+@Aspect(className=DynamicIntegerValue)
+@OverrideAspectMethod
+class DynamicIntegerValueAspect {
 	
-	@Containment
-	public Value value
-	
+	public int value
 }

@@ -139,31 +139,40 @@ public interface ActivitydiagramFactory extends EFactory {
 	BooleanVariable createBooleanVariable();
 
 	/**
-	 * Returns a new object of class '<em>Value</em>'.
+	 * Returns a new object of class '<em>Static Boolean Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value</em>'.
+	 * @return a new object of class '<em>Static Boolean Value</em>'.
 	 * @generated
 	 */
-	Value createValue();
+	StaticBooleanValue createStaticBooleanValue();
 
 	/**
-	 * Returns a new object of class '<em>Boolean Value</em>'.
+	 * Returns a new object of class '<em>Dynamic Boolean Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Value</em>'.
+	 * @return a new object of class '<em>Dynamic Boolean Value</em>'.
 	 * @generated
 	 */
-	BooleanValue createBooleanValue();
+	DynamicBooleanValue createDynamicBooleanValue();
 
 	/**
-	 * Returns a new object of class '<em>Integer Value</em>'.
+	 * Returns a new object of class '<em>Static Integer Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer Value</em>'.
+	 * @return a new object of class '<em>Static Integer Value</em>'.
 	 * @generated
 	 */
-	IntegerValue createIntegerValue();
+	StaticIntegerValue createStaticIntegerValue();
+
+	/**
+	 * Returns a new object of class '<em>Dynamic Integer Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dynamic Integer Value</em>'.
+	 * @generated
+	 */
+	DynamicIntegerValue createDynamicIntegerValue();
 
 	/**
 	 * Returns a new object of class '<em>Integer Calculation Expression</em>'.
@@ -220,15 +229,6 @@ public interface ActivitydiagramFactory extends EFactory {
 	Offer createOffer();
 
 	/**
-	 * Returns a new object of class '<em>Trace</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Trace</em>'.
-	 * @generated
-	 */
-	Trace createTrace();
-
-	/**
 	 * Returns a new object of class '<em>Input Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,6 +263,15 @@ public interface ActivitydiagramFactory extends EFactory {
 	 * @generated
 	 */
 	ForkedToken createForkedToken();
+
+	/**
+	 * Returns a new object of class '<em>Trace</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trace</em>'.
+	 * @generated
+	 */
+	Trace createTrace();
 
 	/**
 	 * Returns the package supported by this factory.

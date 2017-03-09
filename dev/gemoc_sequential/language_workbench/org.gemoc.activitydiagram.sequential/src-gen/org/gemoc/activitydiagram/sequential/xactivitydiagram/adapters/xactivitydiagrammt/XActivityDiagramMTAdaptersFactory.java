@@ -13,12 +13,13 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Act
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanBinaryExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanUnaryExpression;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlFlow;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ExecutableNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Expression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.FinalNode;
@@ -30,13 +31,14 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Inp
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerCalculationExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerComparisonExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerExpression;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
@@ -49,12 +51,13 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivityd
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanBinaryExpressionAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanExpressionAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanUnaryExpressionAdapter;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanValueAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanVariableAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ControlFlowAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ControlNodeAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ControlTokenAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DecisionNodeAdapter;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicBooleanValueAdapter;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicIntegerValueAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ExecutableNodeAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ExpressionAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.FinalNodeAdapter;
@@ -66,13 +69,14 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivityd
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerCalculationExpressionAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerComparisonExpressionAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerExpressionAdapter;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerValueAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerVariableAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.JoinNodeAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.MergeNodeAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.NamedElementAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.OfferAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.OpaqueActionAdapter;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticBooleanValueAdapter;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticIntegerValueAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TokenAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.TraceAdapter;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ValueAdapter;
@@ -135,14 +139,17 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
     	return createVariableAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable) o, res);
     }
-    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue){
-    	return createBooleanValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue) o, res);
+    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue){
+    	return createStaticBooleanValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue) o, res);
     }
-    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue){
-    	return createIntegerValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue) o, res);
+    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue){
+    	return createDynamicBooleanValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue) o, res);
     }
-    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value){
-    	return createValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value) o, res);
+    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue){
+    	return createStaticIntegerValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue) o, res);
+    }
+    if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue){
+    	return createDynamicIntegerValueAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue) o, res);
     }
     if (o instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerCalculationExpression){
     	return createIntegerCalculationExpressionAdapter((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerCalculationExpression) o, res);
@@ -481,33 +488,63 @@ public class XActivityDiagramMTAdaptersFactory implements AdaptersFactory {
     }
   }
   
-  public BooleanValueAdapter createBooleanValueAdapter(final BooleanValue adaptee, final Resource res) {
+  public StaticBooleanValueAdapter createStaticBooleanValueAdapter(final StaticBooleanValue adaptee, final Resource res) {
     if (adaptee == null)
     	return null;
     EObjectAdapter adapter = register.get(adaptee);
     if(adapter != null)
-    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanValueAdapter) adapter;
+    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticBooleanValueAdapter) adapter;
     else {
-    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanValueAdapter();
+    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticBooleanValueAdapter();
     	adapter.setAdaptee(adaptee);
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
-    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.BooleanValueAdapter) adapter;
+    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticBooleanValueAdapter) adapter;
     }
   }
   
-  public IntegerValueAdapter createIntegerValueAdapter(final IntegerValue adaptee, final Resource res) {
+  public DynamicBooleanValueAdapter createDynamicBooleanValueAdapter(final DynamicBooleanValue adaptee, final Resource res) {
     if (adaptee == null)
     	return null;
     EObjectAdapter adapter = register.get(adaptee);
     if(adapter != null)
-    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerValueAdapter) adapter;
+    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicBooleanValueAdapter) adapter;
     else {
-    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerValueAdapter();
+    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicBooleanValueAdapter();
     	adapter.setAdaptee(adaptee);
     	adapter.setResource(res);
     	register.put(adaptee, adapter);
-    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.IntegerValueAdapter) adapter;
+    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicBooleanValueAdapter) adapter;
+    }
+  }
+  
+  public StaticIntegerValueAdapter createStaticIntegerValueAdapter(final StaticIntegerValue adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticIntegerValueAdapter) adapter;
+    else {
+    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticIntegerValueAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.StaticIntegerValueAdapter) adapter;
+    }
+  }
+  
+  public DynamicIntegerValueAdapter createDynamicIntegerValueAdapter(final DynamicIntegerValue adaptee, final Resource res) {
+    if (adaptee == null)
+    	return null;
+    EObjectAdapter adapter = register.get(adaptee);
+    if(adapter != null)
+    	 return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicIntegerValueAdapter) adapter;
+    else {
+    	adapter = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicIntegerValueAdapter();
+    	adapter.setAdaptee(adaptee);
+    	adapter.setResource(res);
+    	register.put(adaptee, adapter);
+    	return (org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.DynamicIntegerValueAdapter) adapter;
     }
   }
   

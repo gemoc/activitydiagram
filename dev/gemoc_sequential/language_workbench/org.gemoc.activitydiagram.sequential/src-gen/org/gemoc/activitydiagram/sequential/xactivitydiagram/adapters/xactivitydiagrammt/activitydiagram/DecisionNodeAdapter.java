@@ -81,6 +81,11 @@ public class DecisionNodeAdapter extends EObjectAdapter<DecisionNode> implements
   }
   
   @Override
+  public void addToken() {
+    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.addToken(adaptee);
+  }
+  
+  @Override
   public void addTokens1(final EList<Token> tokens) {
     org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.addTokens1(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
     );

@@ -38,6 +38,18 @@ public class BooleanVariableAdapter extends EObjectAdapter<BooleanVariable> impl
   }
   
   @Override
+  public Value getCurrentValue() {
+    return (Value) adaptersFactory.createAdapter(adaptee.getCurrentValue(), eResource);
+  }
+  
+  @Override
+  public void setCurrentValue(final Value o) {
+    if (o != null)
+    	adaptee.setCurrentValue(((org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ValueAdapter) o).getAdaptee());
+    else adaptee.setCurrentValue(null);
+  }
+  
+  @Override
   public void execute() {
     org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.execute(adaptee);
   }
@@ -50,17 +62,6 @@ public class BooleanVariableAdapter extends EObjectAdapter<BooleanVariable> impl
   @Override
   public String print() {
     return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect.print(adaptee);
-  }
-  
-  @Override
-  public Value getCurrentValue() {
-    return (Value) adaptersFactory.createAdapter(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.currentValue(adaptee), eResource);
-  }
-  
-  @Override
-  public void setCurrentValue(final Value currentValue) {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.currentValue(adaptee, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value)((EObjectAdapter)currentValue).getAdaptee()
-    );
   }
   
   protected final static String NAME_EDEFAULT = null;

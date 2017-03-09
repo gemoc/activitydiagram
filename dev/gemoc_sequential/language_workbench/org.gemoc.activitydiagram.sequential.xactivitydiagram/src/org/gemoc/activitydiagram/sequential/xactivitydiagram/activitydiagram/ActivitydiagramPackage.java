@@ -1190,7 +1190,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int VARIABLE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1236,7 +1236,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int INTEGER_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1282,7 +1282,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	int BOOLEAN_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Current Value</b></em>' reference.
+	 * The feature id for the '<em><b>Current Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1319,14 +1319,14 @@ public interface ActivitydiagramPackage extends EPackage {
 	int VALUE_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.BooleanValueImpl <em>Boolean Value</em>}' class.
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticBooleanValueImpl <em>Static Boolean Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.BooleanValueImpl
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanValue()
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticBooleanValueImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getStaticBooleanValue()
 	 * @generated
 	 */
-	int BOOLEAN_VALUE = 20;
+	int STATIC_BOOLEAN_VALUE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1335,26 +1335,26 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
+	int STATIC_BOOLEAN_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Boolean Value</em>' class.
+	 * The number of structural features of the '<em>Static Boolean Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+	int STATIC_BOOLEAN_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.IntegerValueImpl <em>Integer Value</em>}' class.
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicBooleanValueImpl <em>Dynamic Boolean Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.IntegerValueImpl
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerValue()
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicBooleanValueImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getDynamicBooleanValue()
 	 * @generated
 	 */
-	int INTEGER_VALUE = 21;
+	int DYNAMIC_BOOLEAN_VALUE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1363,16 +1363,72 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
+	int DYNAMIC_BOOLEAN_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Integer Value</em>' class.
+	 * The number of structural features of the '<em>Dynamic Boolean Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+	int DYNAMIC_BOOLEAN_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticIntegerValueImpl <em>Static Integer Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticIntegerValueImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getStaticIntegerValue()
+	 * @generated
+	 */
+	int STATIC_INTEGER_VALUE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_INTEGER_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Static Integer Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_INTEGER_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicIntegerValueImpl <em>Dynamic Integer Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicIntegerValueImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getDynamicIntegerValue()
+	 * @generated
+	 */
+	int DYNAMIC_INTEGER_VALUE = 23;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_INTEGER_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Dynamic Integer Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DYNAMIC_INTEGER_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -1382,7 +1438,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSION = 22;
+	int EXPRESSION = 24;
 
 	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
@@ -1401,7 +1457,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerExpression()
 	 * @generated
 	 */
-	int INTEGER_EXPRESSION = 23;
+	int INTEGER_EXPRESSION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Operand2</b></em>' reference.
@@ -1438,7 +1494,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanExpression()
 	 * @generated
 	 */
-	int BOOLEAN_EXPRESSION = 24;
+	int BOOLEAN_EXPRESSION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Assignee</b></em>' reference.
@@ -1466,7 +1522,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationExpression()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_EXPRESSION = 25;
+	int INTEGER_CALCULATION_EXPRESSION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Operand2</b></em>' reference.
@@ -1521,7 +1577,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonExpression()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_EXPRESSION = 26;
+	int INTEGER_COMPARISON_EXPRESSION = 28;
 
 	/**
 	 * The feature id for the '<em><b>Operand2</b></em>' reference.
@@ -1576,7 +1632,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryExpression()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_EXPRESSION = 27;
+	int BOOLEAN_UNARY_EXPRESSION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Assignee</b></em>' reference.
@@ -1622,7 +1678,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryExpression()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_EXPRESSION = 28;
+	int BOOLEAN_BINARY_EXPRESSION = 30;
 
 	/**
 	 * The feature id for the '<em><b>Assignee</b></em>' reference.
@@ -1677,7 +1733,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getToken()
 	 * @generated
 	 */
-	int TOKEN = 29;
+	int TOKEN = 31;
 
 	/**
 	 * The number of structural features of the '<em>Token</em>' class.
@@ -1696,7 +1752,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getOffer()
 	 * @generated
 	 */
-	int OFFER = 30;
+	int OFFER = 32;
 
 	/**
 	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
@@ -1724,25 +1780,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getInputValue()
 	 * @generated
 	 */
-	int INPUT_VALUE = 31;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE__VARIABLE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_VALUE__VALUE = 1;
+	int INPUT_VALUE = 33;
 
 	/**
 	 * The number of structural features of the '<em>Input Value</em>' class.
@@ -1751,7 +1789,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_VALUE_FEATURE_COUNT = 2;
+	int INPUT_VALUE_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.InputImpl <em>Input</em>}' class.
@@ -1761,7 +1799,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 32;
+	int INPUT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Input Values</b></em>' containment reference list.
@@ -1789,7 +1827,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getControlToken()
 	 * @generated
 	 */
-	int CONTROL_TOKEN = 33;
+	int CONTROL_TOKEN = 35;
 
 	/**
 	 * The number of structural features of the '<em>Control Token</em>' class.
@@ -1808,7 +1846,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getForkedToken()
 	 * @generated
 	 */
-	int FORKED_TOKEN = 34;
+	int FORKED_TOKEN = 36;
 
 	/**
 	 * The feature id for the '<em><b>Base Token</b></em>' reference.
@@ -1845,7 +1883,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
 	 * @generated
 	 */
-	int TRACE = 35;
+	int TRACE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
@@ -1873,7 +1911,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerCalculationOperator()
 	 * @generated
 	 */
-	int INTEGER_CALCULATION_OPERATOR = 36;
+	int INTEGER_CALCULATION_OPERATOR = 38;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerComparisonOperator <em>Integer Comparison Operator</em>}' enum.
@@ -1883,7 +1921,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerComparisonOperator()
 	 * @generated
 	 */
-	int INTEGER_COMPARISON_OPERATOR = 37;
+	int INTEGER_COMPARISON_OPERATOR = 39;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanUnaryOperator <em>Boolean Unary Operator</em>}' enum.
@@ -1893,7 +1931,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanUnaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_UNARY_OPERATOR = 38;
+	int BOOLEAN_UNARY_OPERATOR = 40;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanBinaryOperator <em>Boolean Binary Operator</em>}' enum.
@@ -1903,7 +1941,7 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanBinaryOperator()
 	 * @generated
 	 */
-	int BOOLEAN_BINARY_OPERATOR = 39;
+	int BOOLEAN_BINARY_OPERATOR = 41;
 
 
 	/**
@@ -2275,10 +2313,10 @@ public interface ActivitydiagramPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue <em>Current Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue <em>Current Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Current Value</em>'.
+	 * @return the meta object for the containment reference '<em>Current Value</em>'.
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue()
 	 * @see #getVariable()
 	 * @generated
@@ -2316,46 +2354,88 @@ public interface ActivitydiagramPackage extends EPackage {
 	EClass getValue();
 
 	/**
-	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue <em>Boolean Value</em>}'.
+	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue <em>Static Boolean Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Boolean Value</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue
+	 * @return the meta object for class '<em>Static Boolean Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue
 	 * @generated
 	 */
-	EClass getBooleanValue();
+	EClass getStaticBooleanValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue#isValue()
-	 * @see #getBooleanValue()
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue#isValue()
+	 * @see #getStaticBooleanValue()
 	 * @generated
 	 */
-	EAttribute getBooleanValue_Value();
+	EAttribute getStaticBooleanValue_Value();
 
 	/**
-	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue <em>Integer Value</em>}'.
+	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue <em>Dynamic Boolean Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Integer Value</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue
+	 * @return the meta object for class '<em>Dynamic Boolean Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue
 	 * @generated
 	 */
-	EClass getIntegerValue();
+	EClass getDynamicBooleanValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue#getValue()
-	 * @see #getIntegerValue()
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue#isValue()
+	 * @see #getDynamicBooleanValue()
 	 * @generated
 	 */
-	EAttribute getIntegerValue_Value();
+	EAttribute getDynamicBooleanValue_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue <em>Static Integer Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Static Integer Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue
+	 * @generated
+	 */
+	EClass getStaticIntegerValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue#getValue()
+	 * @see #getStaticIntegerValue()
+	 * @generated
+	 */
+	EAttribute getStaticIntegerValue_Value();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue <em>Dynamic Integer Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dynamic Integer Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue
+	 * @generated
+	 */
+	EClass getDynamicIntegerValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue#getValue()
+	 * @see #getDynamicIntegerValue()
+	 * @generated
+	 */
+	EAttribute getDynamicIntegerValue_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Expression <em>Expression</em>}'.
@@ -2599,28 +2679,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInputValue();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getVariable()
-	 * @see #getInputValue()
-	 * @generated
-	 */
-	EReference getInputValue_Variable();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.InputValue#getValue()
-	 * @see #getInputValue()
-	 * @generated
-	 */
-	EReference getInputValue_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Input <em>Input</em>}'.
@@ -3083,7 +3141,7 @@ public interface ActivitydiagramPackage extends EPackage {
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Current Value</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Current Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3121,14 +3179,14 @@ public interface ActivitydiagramPackage extends EPackage {
 		EClass VALUE = eINSTANCE.getValue();
 
 		/**
-		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.BooleanValueImpl <em>Boolean Value</em>}' class.
+		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticBooleanValueImpl <em>Static Boolean Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.BooleanValueImpl
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getBooleanValue()
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticBooleanValueImpl
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getStaticBooleanValue()
 		 * @generated
 		 */
-		EClass BOOLEAN_VALUE = eINSTANCE.getBooleanValue();
+		EClass STATIC_BOOLEAN_VALUE = eINSTANCE.getStaticBooleanValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3136,17 +3194,17 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BOOLEAN_VALUE__VALUE = eINSTANCE.getBooleanValue_Value();
+		EAttribute STATIC_BOOLEAN_VALUE__VALUE = eINSTANCE.getStaticBooleanValue_Value();
 
 		/**
-		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.IntegerValueImpl <em>Integer Value</em>}' class.
+		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicBooleanValueImpl <em>Dynamic Boolean Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.IntegerValueImpl
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getIntegerValue()
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicBooleanValueImpl
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getDynamicBooleanValue()
 		 * @generated
 		 */
-		EClass INTEGER_VALUE = eINSTANCE.getIntegerValue();
+		EClass DYNAMIC_BOOLEAN_VALUE = eINSTANCE.getDynamicBooleanValue();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3154,7 +3212,43 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INTEGER_VALUE__VALUE = eINSTANCE.getIntegerValue_Value();
+		EAttribute DYNAMIC_BOOLEAN_VALUE__VALUE = eINSTANCE.getDynamicBooleanValue_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticIntegerValueImpl <em>Static Integer Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.StaticIntegerValueImpl
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getStaticIntegerValue()
+		 * @generated
+		 */
+		EClass STATIC_INTEGER_VALUE = eINSTANCE.getStaticIntegerValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATIC_INTEGER_VALUE__VALUE = eINSTANCE.getStaticIntegerValue_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicIntegerValueImpl <em>Dynamic Integer Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.DynamicIntegerValueImpl
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ActivitydiagramPackageImpl#getDynamicIntegerValue()
+		 * @generated
+		 */
+		EClass DYNAMIC_INTEGER_VALUE = eINSTANCE.getDynamicIntegerValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DYNAMIC_INTEGER_VALUE__VALUE = eINSTANCE.getDynamicIntegerValue_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -3359,22 +3453,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT_VALUE = eINSTANCE.getInputValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE__VARIABLE = eINSTANCE.getInputValue_Variable();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_VALUE__VALUE = eINSTANCE.getInputValue_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.impl.InputImpl <em>Input</em>}' class.

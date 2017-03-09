@@ -23,12 +23,13 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Boo
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanUnaryExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanUnaryOperator;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlFlow;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ControlToken;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DecisionNode;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicBooleanValue;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.DynamicIntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ExecutableNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Expression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.FinalNode;
@@ -42,13 +43,14 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Int
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerComparisonExpression;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerComparisonOperator;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerExpression;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.MergeNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.OpaqueAction;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticBooleanValue;
+import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.StaticIntegerValue;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
@@ -206,14 +208,28 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass booleanValueEClass = null;
+	private EClass staticBooleanValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass integerValueEClass = null;
+	private EClass dynamicBooleanValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass staticIntegerValueEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dynamicIntegerValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -758,8 +774,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBooleanValue() {
-		return booleanValueEClass;
+	public EClass getStaticBooleanValue() {
+		return staticBooleanValueEClass;
 	}
 
 	/**
@@ -767,8 +783,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBooleanValue_Value() {
-		return (EAttribute)booleanValueEClass.getEStructuralFeatures().get(0);
+	public EAttribute getStaticBooleanValue_Value() {
+		return (EAttribute)staticBooleanValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -776,8 +792,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntegerValue() {
-		return integerValueEClass;
+	public EClass getDynamicBooleanValue() {
+		return dynamicBooleanValueEClass;
 	}
 
 	/**
@@ -785,8 +801,44 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIntegerValue_Value() {
-		return (EAttribute)integerValueEClass.getEStructuralFeatures().get(0);
+	public EAttribute getDynamicBooleanValue_Value() {
+		return (EAttribute)dynamicBooleanValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStaticIntegerValue() {
+		return staticIntegerValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStaticIntegerValue_Value() {
+		return (EAttribute)staticIntegerValueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDynamicIntegerValue() {
+		return dynamicIntegerValueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDynamicIntegerValue_Value() {
+		return (EAttribute)dynamicIntegerValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1001,24 +1053,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInputValue_Variable() {
-		return (EReference)inputValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInputValue_Value() {
-		return (EReference)inputValueEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getInput() {
 		return inputEClass;
 	}
@@ -1209,11 +1243,17 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		valueEClass = createEClass(VALUE);
 
-		booleanValueEClass = createEClass(BOOLEAN_VALUE);
-		createEAttribute(booleanValueEClass, BOOLEAN_VALUE__VALUE);
+		staticBooleanValueEClass = createEClass(STATIC_BOOLEAN_VALUE);
+		createEAttribute(staticBooleanValueEClass, STATIC_BOOLEAN_VALUE__VALUE);
 
-		integerValueEClass = createEClass(INTEGER_VALUE);
-		createEAttribute(integerValueEClass, INTEGER_VALUE__VALUE);
+		dynamicBooleanValueEClass = createEClass(DYNAMIC_BOOLEAN_VALUE);
+		createEAttribute(dynamicBooleanValueEClass, DYNAMIC_BOOLEAN_VALUE__VALUE);
+
+		staticIntegerValueEClass = createEClass(STATIC_INTEGER_VALUE);
+		createEAttribute(staticIntegerValueEClass, STATIC_INTEGER_VALUE__VALUE);
+
+		dynamicIntegerValueEClass = createEClass(DYNAMIC_INTEGER_VALUE);
+		createEAttribute(dynamicIntegerValueEClass, DYNAMIC_INTEGER_VALUE__VALUE);
 
 		expressionEClass = createEClass(EXPRESSION);
 
@@ -1247,8 +1287,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		createEReference(offerEClass, OFFER__OFFERED_TOKENS);
 
 		inputValueEClass = createEClass(INPUT_VALUE);
-		createEReference(inputValueEClass, INPUT_VALUE__VARIABLE);
-		createEReference(inputValueEClass, INPUT_VALUE__VALUE);
 
 		inputEClass = createEClass(INPUT);
 		createEReference(inputEClass, INPUT__INPUT_VALUES);
@@ -1314,8 +1352,10 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		decisionNodeEClass.getESuperTypes().add(this.getControlNode());
 		integerVariableEClass.getESuperTypes().add(this.getVariable());
 		booleanVariableEClass.getESuperTypes().add(this.getVariable());
-		booleanValueEClass.getESuperTypes().add(this.getValue());
-		integerValueEClass.getESuperTypes().add(this.getValue());
+		staticBooleanValueEClass.getESuperTypes().add(this.getValue());
+		dynamicBooleanValueEClass.getESuperTypes().add(this.getValue());
+		staticIntegerValueEClass.getESuperTypes().add(this.getValue());
+		dynamicIntegerValueEClass.getESuperTypes().add(this.getValue());
 		integerExpressionEClass.getESuperTypes().add(this.getExpression());
 		booleanExpressionEClass.getESuperTypes().add(this.getExpression());
 		integerCalculationExpressionEClass.getESuperTypes().add(this.getIntegerExpression());
@@ -1342,15 +1382,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(activityEClass, null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(activityEClass, ecorePackage.getEInt(), "getIntegerVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = addEOperation(activityEClass, ecorePackage.getEBoolean(), "getBooleanVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		op = addEOperation(activityEClass, this.getValue(), "getVariableValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		op = addEOperation(activityEClass, this.getVariable(), "getVariable", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "variableName", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1362,6 +1393,8 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivityNode_HeldTokens(), this.getToken(), null, "heldTokens", null, 0, -1, ActivityNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(activityNodeEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(activityNodeEClass, null, "addToken", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(activityNodeEClass, null, "terminate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1447,7 +1480,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_InitialValue(), this.getValue(), null, "initialValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariable_CurrentValue(), this.getValue(), null, "currentValue", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_CurrentValue(), this.getValue(), null, "currentValue", null, 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(variableEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1471,13 +1504,19 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(booleanVariableEClass, ecorePackage.getEString(), "print", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(booleanValueEClass, BooleanValue.class, "BooleanValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBooleanValue_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, BooleanValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(staticBooleanValueEClass, StaticBooleanValue.class, "StaticBooleanValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStaticBooleanValue_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, StaticBooleanValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(integerValueEClass, IntegerValue.class, "IntegerValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerValue_Value(), ecorePackage.getEInt(), "value", null, 1, 1, IntegerValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dynamicBooleanValueEClass, DynamicBooleanValue.class, "DynamicBooleanValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDynamicBooleanValue_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, DynamicBooleanValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(staticIntegerValueEClass, StaticIntegerValue.class, "StaticIntegerValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStaticIntegerValue_Value(), ecorePackage.getEInt(), "value", null, 1, 1, StaticIntegerValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dynamicIntegerValueEClass, DynamicIntegerValue.class, "DynamicIntegerValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDynamicIntegerValue_Value(), ecorePackage.getEInt(), "value", null, 0, 1, DynamicIntegerValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1527,8 +1566,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		addEOperation(offerEClass, null, "removeWithdrawnTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInputValue_Variable(), this.getVariable(), null, "variable", null, 0, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInputValue_Value(), this.getValue(), null, "value", null, 0, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInput_InputValues(), this.getInputValue(), null, "inputValues", null, 0, -1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1603,21 +1640,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
-		  (activityEClass.getEOperations().get(5), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (activityEClass.getEOperations().get(6), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (activityEClass.getEOperations().get(7), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (getActivity_Trace(), 
 		   source, 
 		   new String[] {
@@ -1659,6 +1681,11 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (activityNodeEClass.getEOperations().get(7), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (activityNodeEClass.getEOperations().get(8), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1758,11 +1785,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   new String[] {
 		   });	
 		addAnnotation
-		  (getVariable_CurrentValue(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (integerVariableEClass.getEOperations().get(0), 
 		   source, 
 		   new String[] {
@@ -1789,6 +1811,16 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (booleanVariableEClass.getEOperations().get(2), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getDynamicBooleanValue_Value(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getDynamicIntegerValue_Value(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -1849,16 +1881,6 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		   });	
 		addAnnotation
 		  (inputValueEClass, 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getInputValue_Variable(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getInputValue_Value(), 
 		   source, 
 		   new String[] {
 		   });	

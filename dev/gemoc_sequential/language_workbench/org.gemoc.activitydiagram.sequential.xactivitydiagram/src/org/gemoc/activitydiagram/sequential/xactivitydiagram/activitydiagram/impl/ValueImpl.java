@@ -16,7 +16,7 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Val
  *
  * @generated
  */
-public class ValueImpl extends EObjectImpl implements Value {
+public abstract class ValueImpl extends EObjectImpl implements Value {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -10,11 +10,13 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspect
 @SuppressWarnings("all")
 public class TraceAspect {
   public static EList<ActivityNode> executedNodes(final Trace _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspectTraceAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspectTraceAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_executedNodes(_self_, _self);;
-    return (org.eclipse.emf.common.util.EList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode>)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspectTraceAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspectTraceAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_executedNodes(_self_, _self);
+	;
+	return (org.eclipse.emf.common.util.EList) result;
+}
   
   public static void executedNodes(final Trace _self, final EList<ActivityNode> executedNodes) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspectTraceAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspectTraceAspectContext.getSelf(_self);

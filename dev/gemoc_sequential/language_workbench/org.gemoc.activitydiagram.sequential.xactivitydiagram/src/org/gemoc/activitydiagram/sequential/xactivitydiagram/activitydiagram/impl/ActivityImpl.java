@@ -23,7 +23,6 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Act
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Trace;
-import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable;
 
 /**
@@ -232,39 +231,6 @@ public class ActivityImpl extends NamedElementImpl implements Activity {
 	 * @generated
 	 */
 	public void reset() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIntegerVariableValue(String variableName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean getBooleanVariableValue(String variableName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Value getVariableValue(String variableName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

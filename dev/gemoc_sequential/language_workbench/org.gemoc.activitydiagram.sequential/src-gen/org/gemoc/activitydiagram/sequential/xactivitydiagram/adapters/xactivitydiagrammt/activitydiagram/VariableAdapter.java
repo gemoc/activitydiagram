@@ -39,13 +39,14 @@ public class VariableAdapter extends EObjectAdapter<Variable> implements org.gem
   
   @Override
   public Value getCurrentValue() {
-    return (Value) adaptersFactory.createAdapter(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.currentValue(adaptee), eResource);
+    return (Value) adaptersFactory.createAdapter(adaptee.getCurrentValue(), eResource);
   }
   
   @Override
-  public void setCurrentValue(final Value currentValue) {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.currentValue(adaptee, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Value)((EObjectAdapter)currentValue).getAdaptee()
-    );
+  public void setCurrentValue(final Value o) {
+    if (o != null)
+    	adaptee.setCurrentValue(((org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram.ValueAdapter) o).getAdaptee());
+    else adaptee.setCurrentValue(null);
   }
   
   @Override

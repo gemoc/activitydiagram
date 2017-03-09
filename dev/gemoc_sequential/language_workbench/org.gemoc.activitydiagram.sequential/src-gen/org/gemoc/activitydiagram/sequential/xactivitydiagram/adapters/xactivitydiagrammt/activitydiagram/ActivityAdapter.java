@@ -9,7 +9,6 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivityd
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ActivityEdge;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ActivityNode;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace;
-import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Value;
 import org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Variable;
 
 @SuppressWarnings("all")
@@ -73,26 +72,8 @@ public class ActivityAdapter extends EObjectAdapter<Activity> implements org.gem
   }
   
   @Override
-  public boolean getBooleanVariableValue(final String variableName) {
-    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.getBooleanVariableValue(adaptee, variableName
-    );
-  }
-  
-  @Override
-  public int getIntegerVariableValue(final String variableName) {
-    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.getIntegerVariableValue(adaptee, variableName
-    );
-  }
-  
-  @Override
   public Variable getVariable(final String variableName) {
     return (Variable) adaptersFactory.createAdapter(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.getVariable(adaptee, variableName
-    ), eResource);
-  }
-  
-  @Override
-  public Value getVariableValue(final String variableName) {
-    return (Value) adaptersFactory.createAdapter(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.getVariableValue(adaptee, variableName
     ), eResource);
   }
   

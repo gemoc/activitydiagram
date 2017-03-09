@@ -76,26 +76,26 @@ public interface Variable extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Current Value</b></em>' reference.
+	 * Returns the value of the '<em><b>Current Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Current Value</em>' reference isn't clear,
+	 * If the meaning of the '<em>Current Value</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current Value</em>' reference.
+	 * @return the value of the '<em>Current Value</em>' containment reference.
 	 * @see #setCurrentValue(Value)
 	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage#getVariable_CurrentValue()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Value getCurrentValue();
 
 	/**
-	 * Sets the value of the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue <em>Current Value</em>}' reference.
+	 * Sets the value of the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable#getCurrentValue <em>Current Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current Value</em>' reference.
+	 * @param value the new value of the '<em>Current Value</em>' containment reference.
 	 * @see #getCurrentValue()
 	 * @generated
 	 */
