@@ -83,7 +83,7 @@ class ActivityAspect extends NamedElementAspect {
 		toExecute.execute
 
 		var list = _self.nodes.filter[node|node.hasOffers]
-		while (list != null && list.size > 0) {
+		while (list !== null && list.size > 0) {
 			toExecute = list.get(0)
 			_self.trace.executedNodes.add(toExecute)
 			toExecute.execute
@@ -326,7 +326,7 @@ class DecisionNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void sendOffers(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
-			if (edge instanceof ControlFlow && ( edge as ControlFlow).guard != null) {
+			if (edge instanceof ControlFlow && ( edge as ControlFlow).guard !== null) {
 				if ((( edge as ControlFlow).guard.currentValue as BooleanValue).value) {
 					edge.sendOffer(tokens);
 				}
@@ -361,8 +361,8 @@ class IntegerVariableAspect extends VariableAspect {
 
 	@OverrideAspectMethod
 	def void init() {
-		if (_self.currentValue == null) {
-			if (_self.initialValue != null)
+		if (_self.currentValue === null) {
+			if (_self.initialValue !== null)
 				_self.currentValue = _self.initialValue
 			else {
 				val defaultValue = ActivitydiagramFactory.eINSTANCE.createIntegerValue
@@ -390,8 +390,8 @@ class BooleanVariableAspect extends VariableAspect {
 
 	@OverrideAspectMethod
 	def void init() {
-		if (_self.currentValue == null) {
-			if (_self.initialValue != null)
+		if (_self.currentValue === null) {
+			if (_self.initialValue !== null)
 				_self.currentValue = _self.initialValue
 			else {
 				val defaultValue = ActivitydiagramFactory.eINSTANCE.createBooleanValue
@@ -502,7 +502,7 @@ class TokenAspect {
 //	public ActivityNode holder
 
 	def boolean isWithdrawn() {
-		return _self.eContainer == null;
+		return _self.eContainer === null;
 	}
 }
 
