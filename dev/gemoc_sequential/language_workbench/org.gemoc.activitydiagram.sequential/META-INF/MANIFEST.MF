@@ -3,11 +3,7 @@ Bundle-SymbolicName: org.gemoc.activitydiagram.sequential;singleton:=true
 Export-Package: org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl,
  org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram,
  org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.util,
- org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.activitydiagram,
- org.gemoc.activitydiagram.sequential,
- org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.activitydiagram,
- org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt,
- org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt
+ org.gemoc.activitydiagram.sequential
 Bundle-Name: org.modelexecution.operationalsemantics.ad.sequential.xdsml
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .

@@ -46,8 +46,6 @@ public class StandaloneSetup {
     MelangeRegistry.LanguageDescriptor xActivityDiagram = new MelangeRegistryImpl.LanguageDescriptorImpl(
     	"org.gemoc.activitydiagram.sequential.XActivityDiagram", "", "http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/", "org.gemoc.activitydiagram.sequential.XActivityDiagramMT"
     );
-    xActivityDiagram.addAdapter("org.gemoc.activitydiagram.sequential.ActivityDiagramMT", org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter.class);
-    xActivityDiagram.addAdapter("org.gemoc.activitydiagram.sequential.XActivityDiagramMT", org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter.class);
     MelangeRegistry.INSTANCE.getLanguageMap().put(
     	"org.gemoc.activitydiagram.sequential.XActivityDiagram",
     	xActivityDiagram

@@ -28,15 +28,5 @@ public class XActivityDiagram implements IMetamodel {
     return mm ;
   }
   
-  public ActivityDiagramMT toActivityDiagramMT() {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter adaptee = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter() ;
-    adaptee.setAdaptee(resource);
-    return adaptee;
-  }
-  
-  public XActivityDiagramMT toXActivityDiagramMT() {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter adaptee = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter() ;
-    adaptee.setAdaptee(resource);
-    return adaptee;
-  }
+
 }
