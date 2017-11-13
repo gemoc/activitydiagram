@@ -129,22 +129,22 @@
         <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/isReady"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/sendOffers1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/sendOffers"/>
         <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//ActivityNode/sendOffers1/tokens"/>
+          <ecoreParameter href="XActivityDiagram.ecore#//ActivityNode/sendOffers/tokens"/>
         </genParameters>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/takeOfferdTokens1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/takeOfferdTokens"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/addTokens1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/addTokens"/>
         <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//ActivityNode/addTokens1/tokens"/>
+          <ecoreParameter href="XActivityDiagram.ecore#//ActivityNode/addTokens/tokens"/>
         </genParameters>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/hasOffers1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/hasOffers"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XActivityDiagram.ecore#//ActivityNode/removeToken1"/>
@@ -165,16 +165,16 @@
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//ActivityEdge/offers"/>
       </genFeatures>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityEdge/sendOffer1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityEdge/sendOffer"/>
         <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//ActivityEdge/sendOffer1/tokens"/>
+          <ecoreParameter href="XActivityDiagram.ecore#//ActivityEdge/sendOffer/tokens"/>
         </genParameters>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityEdge/takeOfferedTokens1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityEdge/takeOfferedTokens"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//ActivityEdge/hasOffer1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//ActivityEdge/hasOffer"/>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -216,7 +216,7 @@
         <ecoreOperation href="XActivityDiagram.ecore#//InitialNode/execute"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//InitialNode/hasOffers1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//InitialNode/hasOffers"/>
       </genOperations>
     </genClasses>
     <genClasses image="false">
@@ -246,7 +246,7 @@
         <ecoreOperation href="XActivityDiagram.ecore#//MergeNode/execute"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//MergeNode/hasOffers1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//MergeNode/hasOffers"/>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -255,9 +255,9 @@
         <ecoreOperation href="XActivityDiagram.ecore#//DecisionNode/execute"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//DecisionNode/sendOffers1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//DecisionNode/sendOffers"/>
         <genParameters>
-          <ecoreParameter href="XActivityDiagram.ecore#//DecisionNode/sendOffers1/tokens"/>
+          <ecoreParameter href="XActivityDiagram.ecore#//DecisionNode/sendOffers/tokens"/>
         </genParameters>
       </genOperations>
     </genClasses>
@@ -405,10 +405,10 @@
         <ecoreFeature xsi:type="ecore:EReference" href="XActivityDiagram.ecore#//Offer/offeredTokens"/>
       </genFeatures>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//Offer/hasTokens1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//Offer/hasTokens"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XActivityDiagram.ecore#//Offer/removeWithdrawnTokens1"/>
+        <ecoreOperation href="XActivityDiagram.ecore#//Offer/removeWithdrawnTokens"/>
       </genOperations>
     </genClasses>
     <genClasses>

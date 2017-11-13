@@ -237,7 +237,7 @@ public class ActivityNodeImpl extends NamedElementImpl implements ActivityNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void sendOffers1(EList<Token> tokens) {
+	public void sendOffers(EList<Token> tokens) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -248,7 +248,7 @@ public class ActivityNodeImpl extends NamedElementImpl implements ActivityNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Token> takeOfferdTokens1() {
+	public EList<Token> takeOfferdTokens() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -259,7 +259,7 @@ public class ActivityNodeImpl extends NamedElementImpl implements ActivityNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addTokens1(EList<Token> tokens) {
+	public void addTokens(EList<Token> tokens) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -270,7 +270,7 @@ public class ActivityNodeImpl extends NamedElementImpl implements ActivityNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean hasOffers1() {
+	public boolean hasOffers() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

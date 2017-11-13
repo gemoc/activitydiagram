@@ -54,8 +54,8 @@ public class ActivityEdgeAdapter extends EObjectAdapter<ActivityEdge> implements
   }
   
   @Override
-  public boolean hasOffer1() {
-    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect.hasOffer1(adaptee);
+  public boolean hasOffer() {
+    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect.hasOffer(adaptee);
   }
   
   @Override
@@ -64,14 +64,14 @@ public class ActivityEdgeAdapter extends EObjectAdapter<ActivityEdge> implements
   }
   
   @Override
-  public void sendOffer1(final EList<Token> tokens) {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect.sendOffer1(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
+  public void sendOffer(final EList<Token> tokens) {
+    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect.sendOffer(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
     );
   }
   
   @Override
-  public EList<Token> takeOfferedTokens1() {
-    return fr.inria.diverse.melange.adapters.EListAdapter.newInstance(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect.takeOfferedTokens1(adaptee), adaptersFactory, eResource);
+  public EList<Token> takeOfferedTokens() {
+    return fr.inria.diverse.melange.adapters.EListAdapter.newInstance(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect.takeOfferedTokens(adaptee), adaptersFactory, eResource);
   }
   
   @Override

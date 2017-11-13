@@ -61,18 +61,18 @@
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
-    <eOperations name="sendOffers1">
+    <eOperations name="sendOffers">
       <eAnnotations source="aspect"/>
       <eParameters name="tokens" upperBound="-1" eType="//Token"/>
     </eOperations>
-    <eOperations name="takeOfferdTokens1" upperBound="-1" eType="//Token">
+    <eOperations name="takeOfferdTokens" upperBound="-1" eType="//Token">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="addTokens1">
+    <eOperations name="addTokens">
       <eAnnotations source="aspect"/>
       <eParameters name="tokens" upperBound="-1" eType="//Token"/>
     </eOperations>
-    <eOperations name="hasOffers1">
+    <eOperations name="hasOffers">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
@@ -91,14 +91,14 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityEdge" abstract="true" eSuperTypes="//NamedElement">
-    <eOperations name="sendOffer1">
+    <eOperations name="sendOffer">
       <eAnnotations source="aspect"/>
       <eParameters name="tokens" upperBound="-1" eType="//Token"/>
     </eOperations>
-    <eOperations name="takeOfferedTokens1" upperBound="-1" eType="//Token">
+    <eOperations name="takeOfferedTokens" upperBound="-1" eType="//Token">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="hasOffer1">
+    <eOperations name="hasOffer">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
@@ -132,7 +132,7 @@
     <eOperations name="execute">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="hasOffers1">
+    <eOperations name="hasOffers">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
@@ -157,7 +157,7 @@
     <eOperations name="execute">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="hasOffers1">
+    <eOperations name="hasOffers">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
@@ -166,7 +166,7 @@
     <eOperations name="execute">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="sendOffers1">
+    <eOperations name="sendOffers">
       <eAnnotations source="aspect"/>
       <eParameters name="tokens" upperBound="-1" eType="//Token"/>
     </eOperations>
@@ -293,11 +293,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Offer">
     <eAnnotations source="aspect"/>
-    <eOperations name="hasTokens1">
+    <eOperations name="hasTokens">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
-    <eOperations name="removeWithdrawnTokens1">
+    <eOperations name="removeWithdrawnTokens">
       <eAnnotations source="aspect"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="offeredTokens" unique="false" upperBound="-1" eType="//Token">

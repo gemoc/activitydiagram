@@ -28,6 +28,6 @@ public interface InitialNode extends ControlNode {
 	 * @model
 	 * @generated
 	 */
-	boolean hasOffers1();
+	boolean hasOffers();
 
 } // InitialNode

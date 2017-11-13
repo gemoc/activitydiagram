@@ -666,20 +666,6 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace
-	 * @generated
-	 */
-	public Adapter createTraceAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.InputValue <em>Input Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -732,6 +718,20 @@ public class ActivitydiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createForkedTokenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace <em>Trace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace
+	 * @generated
+	 */
+	public Adapter createTraceAdapter() {
 		return null;
 	}
 

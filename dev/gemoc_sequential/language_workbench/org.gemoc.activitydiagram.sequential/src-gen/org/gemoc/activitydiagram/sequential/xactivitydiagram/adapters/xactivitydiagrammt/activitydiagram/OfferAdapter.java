@@ -18,8 +18,8 @@ public class OfferAdapter extends EObjectAdapter<Offer> implements org.gemoc.act
   }
   
   @Override
-  public boolean hasTokens1() {
-    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspect.hasTokens1(adaptee);
+  public boolean hasTokens() {
+    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspect.hasTokens(adaptee);
   }
   
   @Override
@@ -28,8 +28,8 @@ public class OfferAdapter extends EObjectAdapter<Offer> implements org.gemoc.act
   }
   
   @Override
-  public void removeWithdrawnTokens1() {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspect.removeWithdrawnTokens1(adaptee);
+  public void removeWithdrawnTokens() {
+    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspect.removeWithdrawnTokens(adaptee);
   }
   
   @Override

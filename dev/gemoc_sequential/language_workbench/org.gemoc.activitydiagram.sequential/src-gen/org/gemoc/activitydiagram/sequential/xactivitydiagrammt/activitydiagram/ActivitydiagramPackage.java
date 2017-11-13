@@ -1680,6 +1680,15 @@ public interface ActivitydiagramPackage extends EPackage {
 	int TOKEN = 29;
 
 	/**
+	 * The number of structural features of the '<em>Token</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN_FEATURE_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.OfferImpl <em>Offer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1688,25 +1697,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	int OFFER = 30;
-
-	/**
-	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-	 * @generated
-	 */
-	int TRACE = 35;
-
-	/**
-	 * The number of structural features of the '<em>Token</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOKEN_FEATURE_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Offered Tokens</b></em>' reference list.
@@ -1846,6 +1836,16 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORKED_TOKEN_FEATURE_COUNT = TOKEN_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
+	 * @generated
+	 */
+	int TRACE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Executed Nodes</b></em>' reference list.
@@ -2591,27 +2591,6 @@ public interface ActivitydiagramPackage extends EPackage {
 	EReference getOffer_OfferedTokens();
 
 	/**
-	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace <em>Trace</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Trace</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace
-	 * @generated
-	 */
-	EClass getTrace();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace#getExecutedNodes <em>Executed Nodes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Executed Nodes</em>'.
-	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace#getExecutedNodes()
-	 * @see #getTrace()
-	 * @generated
-	 */
-	EReference getTrace_ExecutedNodes();
-
-	/**
 	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.InputValue <em>Input Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2705,6 +2684,27 @@ public interface ActivitydiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getForkedToken_RemainingOffersCount();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace <em>Trace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trace</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace
+	 * @generated
+	 */
+	EClass getTrace();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace#getExecutedNodes <em>Executed Nodes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Executed Nodes</em>'.
+	 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.Trace#getExecutedNodes()
+	 * @see #getTrace()
+	 * @generated
+	 */
+	EReference getTrace_ExecutedNodes();
 
 	/**
 	 * Returns the meta object for enum '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}'.
@@ -3351,24 +3351,6 @@ public interface ActivitydiagramPackage extends EPackage {
 		EReference OFFER__OFFERED_TOKENS = eINSTANCE.getOffer_OfferedTokens();
 
 		/**
-		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl
-		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
-		 * @generated
-		 */
-		EClass TRACE = eINSTANCE.getTrace();
-
-		/**
-		 * The meta object literal for the '<em><b>Executed Nodes</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRACE__EXECUTED_NODES = eINSTANCE.getTrace_ExecutedNodes();
-
-		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.InputValueImpl <em>Input Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3447,6 +3429,24 @@ public interface ActivitydiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FORKED_TOKEN__REMAINING_OFFERS_COUNT = eINSTANCE.getForkedToken_RemainingOffersCount();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl <em>Trace</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.TraceImpl
+		 * @see org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.impl.ActivitydiagramPackageImpl#getTrace()
+		 * @generated
+		 */
+		EClass TRACE = eINSTANCE.getTrace();
+
+		/**
+		 * The meta object literal for the '<em><b>Executed Nodes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRACE__EXECUTED_NODES = eINSTANCE.getTrace_ExecutedNodes();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.IntegerCalculationOperator <em>Integer Calculation Operator</em>}' enum.

@@ -161,7 +161,7 @@ public interface ActivityNode extends NamedElement {
 	 * @model tokensMany="true"
 	 * @generated
 	 */
-	void sendOffers1(EList<Token> tokens);
+	void sendOffers(EList<Token> tokens);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,7 +169,7 @@ public interface ActivityNode extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Token> takeOfferdTokens1();
+	EList<Token> takeOfferdTokens();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,7 +177,7 @@ public interface ActivityNode extends NamedElement {
 	 * @model tokensMany="true"
 	 * @generated
 	 */
-	void addTokens1(EList<Token> tokens);
+	void addTokens(EList<Token> tokens);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,7 +185,7 @@ public interface ActivityNode extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	boolean hasOffers1();
+	boolean hasOffers();
 
 	/**
 	 * <!-- begin-user-doc -->

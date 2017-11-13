@@ -45,7 +45,7 @@ public interface Offer extends EObject {
 	 * @model
 	 * @generated
 	 */
-	boolean hasTokens1();
+	boolean hasTokens();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -53,6 +53,6 @@ public interface Offer extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void removeWithdrawnTokens1();
+	void removeWithdrawnTokens();
 
 } // Offer

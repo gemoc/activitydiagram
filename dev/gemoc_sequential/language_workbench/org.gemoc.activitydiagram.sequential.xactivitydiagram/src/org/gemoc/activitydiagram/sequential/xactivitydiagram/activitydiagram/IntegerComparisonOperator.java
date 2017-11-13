@@ -77,7 +77,7 @@ public enum IntegerComparisonOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SMALLER
-	 * @model literal="<"
+	 * @model literal="&lt;"
 	 * @generated
 	 * @ordered
 	 */
@@ -92,7 +92,7 @@ public enum IntegerComparisonOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SMALLER_EQUALS
-	 * @model literal="<="
+	 * @model literal="&lt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -122,7 +122,7 @@ public enum IntegerComparisonOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GREATER_EQUALS
-	 * @model literal=">="
+	 * @model literal="&gt;="
 	 * @generated
 	 * @ordered
 	 */
@@ -137,7 +137,7 @@ public enum IntegerComparisonOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GREATER
-	 * @model literal=">"
+	 * @model literal="&gt;"
 	 * @generated
 	 * @ordered
 	 */

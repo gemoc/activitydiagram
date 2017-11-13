@@ -76,7 +76,7 @@ public class OfferImpl extends EObjectImpl implements Offer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean hasTokens1() {
+	public boolean hasTokens() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -87,7 +87,7 @@ public class OfferImpl extends EObjectImpl implements Offer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeWithdrawnTokens1() {
+	public void removeWithdrawnTokens() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

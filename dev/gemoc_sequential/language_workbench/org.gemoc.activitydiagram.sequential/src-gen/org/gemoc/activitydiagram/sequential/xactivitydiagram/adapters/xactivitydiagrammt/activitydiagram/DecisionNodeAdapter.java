@@ -75,20 +75,20 @@ public class DecisionNodeAdapter extends EObjectAdapter<DecisionNode> implements
   }
   
   @Override
-  public void sendOffers1(final EList<Token> tokens) {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.sendOffers1(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
+  public void sendOffers(final EList<Token> tokens) {
+    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect.sendOffers(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
     );
   }
   
   @Override
-  public void addTokens1(final EList<Token> tokens) {
-    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.addTokens1(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
+  public void addTokens(final EList<Token> tokens) {
+    org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.addTokens(adaptee, ((fr.inria.diverse.melange.adapters.EListAdapter) tokens).getAdaptee()
     );
   }
   
   @Override
-  public boolean hasOffers1() {
-    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.hasOffers1(adaptee);
+  public boolean hasOffers() {
+    return org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.hasOffers(adaptee);
   }
   
   @Override
@@ -108,8 +108,8 @@ public class DecisionNodeAdapter extends EObjectAdapter<DecisionNode> implements
   }
   
   @Override
-  public EList<Token> takeOfferdTokens1() {
-    return fr.inria.diverse.melange.adapters.EListAdapter.newInstance(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.takeOfferdTokens1(adaptee), adaptersFactory, eResource);
+  public EList<Token> takeOfferdTokens() {
+    return fr.inria.diverse.melange.adapters.EListAdapter.newInstance(org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.takeOfferdTokens(adaptee), adaptersFactory, eResource);
   }
   
   @Override

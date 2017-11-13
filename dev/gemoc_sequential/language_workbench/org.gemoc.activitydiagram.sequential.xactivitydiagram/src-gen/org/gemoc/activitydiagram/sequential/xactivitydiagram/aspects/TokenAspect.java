@@ -10,11 +10,13 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspect
 @SuppressWarnings("all")
 public class TokenAspect {
   public static boolean isWithdrawn(final Token _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspectTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspectTokenAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_isWithdrawn(_self_, _self);;
-    return (boolean)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspectTokenAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspectTokenAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_isWithdrawn(_self_, _self);
+	;
+	return (boolean) result;
+}
   
   protected static boolean _privk3_isWithdrawn(final TokenAspectTokenAspectProperties _self_, final Token _self) {
     EObject _eContainer = _self.eContainer();

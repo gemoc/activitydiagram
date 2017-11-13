@@ -5,7 +5,7 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Act
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer;
 import org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
-import fr.inria.diverse.k3.al.annotationprocessor.Containment;
+import fr.inria.diverse.melange.annotation.Containment;
 import java.util.function.Consumer;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -18,32 +18,38 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspect
 @Aspect(className = ActivityEdge.class)
 @SuppressWarnings("all")
 public class ActivityEdgeAspect extends NamedElementAspect {
-  public static void sendOffer1(final ActivityEdge _self, final EList<Token> tokens) {
+  public static void sendOffer(final ActivityEdge _self, final EList<Token> tokens) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext.getSelf(_self);
-    _privk3_sendOffer1(_self_, _self,tokens);;
+    _privk3_sendOffer(_self_, _self,tokens);;
   }
   
-  public static EList<Token> takeOfferedTokens1(final ActivityEdge _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_takeOfferedTokens1(_self_, _self);;
-    return (org.eclipse.emf.common.util.EList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Token>)result;
-  }
+  public static EList<Token> takeOfferedTokens(final ActivityEdge _self) {
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_takeOfferedTokens(_self_, _self);
+	;
+	return (org.eclipse.emf.common.util.EList) result;
+}
   
-  public static boolean hasOffer1(final ActivityEdge _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_hasOffer1(_self_, _self);;
-    return (boolean)result;
-  }
+  public static boolean hasOffer(final ActivityEdge _self) {
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_hasOffer(_self_, _self);
+	;
+	return (boolean) result;
+}
   
   @Containment
   public static EList<Offer> offers(final ActivityEdge _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext.getSelf(_self);
-    Object result = null;
-    result = _privk3_offers(_self_, _self);;
-    return (org.eclipse.emf.common.util.EList<org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Offer>)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspectActivityEdgeAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_offers(_self_, _self);
+	;
+	return (org.eclipse.emf.common.util.EList) result;
+}
   
   @Containment
   public static void offers(final ActivityEdge _self, final EList<Offer> offers) {
@@ -51,36 +57,30 @@ public class ActivityEdgeAspect extends NamedElementAspect {
     _privk3_offers(_self_, _self,offers);;
   }
   
-  protected static void _privk3_sendOffer1(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self, final EList<Token> tokens) {
+  protected static void _privk3_sendOffer(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self, final EList<Token> tokens) {
     final Offer offer = ActivitydiagramFactory.eINSTANCE.createOffer();
-    EList<Offer> _offers = ActivityEdgeAspect.offers(_self);
-    _offers.add(offer);
+    ActivityEdgeAspect.offers(_self).add(offer);
     final Consumer<Token> _function = (Token token) -> {
-      EList<Token> _offeredTokens = OfferAspect.offeredTokens(offer);
-      _offeredTokens.add(token);
+      OfferAspect.offeredTokens(offer).add(token);
     };
     tokens.forEach(_function);
   }
   
-  protected static EList<Token> _privk3_takeOfferedTokens1(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
+  protected static EList<Token> _privk3_takeOfferedTokens(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
     final BasicEList<Token> tokens = new BasicEList<Token>();
-    EList<Offer> _offers = ActivityEdgeAspect.offers(_self);
     final Consumer<Offer> _function = (Offer o) -> {
-      EList<Token> _offeredTokens = OfferAspect.offeredTokens(o);
-      tokens.addAll(_offeredTokens);
+      tokens.addAll(OfferAspect.offeredTokens(o));
     };
-    _offers.forEach(_function);
-    EList<Offer> _offers_1 = ActivityEdgeAspect.offers(_self);
-    _offers_1.clear();
+    ActivityEdgeAspect.offers(_self).forEach(_function);
+    ActivityEdgeAspect.offers(_self).clear();
     return tokens;
   }
   
-  protected static boolean _privk3_hasOffer1(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
-    EList<Offer> _offers = ActivityEdgeAspect.offers(_self);
+  protected static boolean _privk3_hasOffer(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
     final Function1<Offer, Boolean> _function = (Offer o1) -> {
-      return Boolean.valueOf(OfferAspect.hasTokens1(o1));
+      return Boolean.valueOf(OfferAspect.hasTokens(o1));
     };
-    return IterableExtensions.<Offer>exists(_offers, _function);
+    return IterableExtensions.<Offer>exists(ActivityEdgeAspect.offers(_self), _function);
   }
   
   protected static EList<Offer> _privk3_offers(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self) {
@@ -91,6 +91,8 @@ public class ActivityEdgeAspect extends NamedElementAspect {
     				Object ret = m.invoke(_self);
     				if (ret != null) {
     					return (org.eclipse.emf.common.util.EList) ret;
+    				} else {
+    					return null;
     				}
     		}
     	}
@@ -101,15 +103,20 @@ public class ActivityEdgeAspect extends NamedElementAspect {
   }
   
   protected static void _privk3_offers(final ActivityEdgeAspectActivityEdgeAspectProperties _self_, final ActivityEdge _self, final EList<Offer> offers) {
-    _self_.offers = offers; try {
+    boolean setterCalled = false;
+    try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
     		if (m.getName().equals("setOffers")
     				&& m.getParameterTypes().length == 1) {
     			m.invoke(_self, offers);
+    			setterCalled = true;
     		}
     	}
     } catch (Exception e) {
     	// Chut !
+    }
+    if (!setterCalled) {
+    	_self_.offers = offers;
     }
   }
 }

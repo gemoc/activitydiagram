@@ -5,6 +5,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.gemoc.activitydiagram.sequential.ActivityDiagramMT;
 import org.gemoc.activitydiagram.sequential.XActivityDiagramMT;
 
 @SuppressWarnings("all")
@@ -25,6 +26,12 @@ public class XActivityDiagram implements IMetamodel {
     XActivityDiagram mm = new XActivityDiagram();
     mm.setResource(res);
     return mm ;
+  }
+  
+  public ActivityDiagramMT toActivityDiagramMT() {
+    org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter adaptee = new org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter() ;
+    adaptee.setAdaptee(resource);
+    return adaptee;
   }
   
   public XActivityDiagramMT toXActivityDiagramMT() {

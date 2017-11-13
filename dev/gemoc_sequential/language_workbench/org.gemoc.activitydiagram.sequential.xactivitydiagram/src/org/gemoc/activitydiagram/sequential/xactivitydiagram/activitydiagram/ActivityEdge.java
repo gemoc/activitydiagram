@@ -101,7 +101,7 @@ public interface ActivityEdge extends NamedElement {
 	 * @model tokensMany="true"
 	 * @generated
 	 */
-	void sendOffer1(EList<Token> tokens);
+	void sendOffer(EList<Token> tokens);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public interface ActivityEdge extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	EList<Token> takeOfferedTokens1();
+	EList<Token> takeOfferedTokens();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,6 +117,6 @@ public interface ActivityEdge extends NamedElement {
 	 * @model
 	 * @generated
 	 */
-	boolean hasOffer1();
+	boolean hasOffer();
 
 } // ActivityEdge

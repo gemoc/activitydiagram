@@ -1367,15 +1367,15 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(activityNodeEClass, ecorePackage.getEBoolean(), "isReady", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(activityNodeEClass, null, "sendOffers1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(activityNodeEClass, null, "sendOffers", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getToken(), "tokens", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(activityNodeEClass, this.getToken(), "takeOfferdTokens1", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(activityNodeEClass, this.getToken(), "takeOfferdTokens", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(activityNodeEClass, null, "addTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(activityNodeEClass, null, "addTokens", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getToken(), "tokens", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(activityNodeEClass, ecorePackage.getEBoolean(), "hasOffers1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(activityNodeEClass, ecorePackage.getEBoolean(), "hasOffers", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(activityNodeEClass, null, "removeToken1", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getToken(), "token", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1385,12 +1385,12 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEReference(getActivityEdge_Target(), this.getActivityNode(), this.getActivityNode_Incoming(), "target", null, 1, 1, ActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityEdge_Offers(), this.getOffer(), null, "offers", null, 0, -1, ActivityEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		op = addEOperation(activityEdgeEClass, null, "sendOffer1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(activityEdgeEClass, null, "sendOffer", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getToken(), "tokens", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(activityEdgeEClass, this.getToken(), "takeOfferedTokens1", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(activityEdgeEClass, this.getToken(), "takeOfferedTokens", 0, -1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(activityEdgeEClass, ecorePackage.getEBoolean(), "hasOffer1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(activityEdgeEClass, ecorePackage.getEBoolean(), "hasOffer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(controlFlowEClass, ControlFlow.class, "ControlFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getControlFlow_Guard(), this.getBooleanVariable(), null, "guard", null, 0, 1, ControlFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1415,7 +1415,7 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(initialNodeEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(initialNodeEClass, ecorePackage.getEBoolean(), "hasOffers1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(initialNodeEClass, ecorePackage.getEBoolean(), "hasOffers", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(finalNodeEClass, FinalNode.class, "FinalNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1435,13 +1435,13 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 
 		addEOperation(mergeNodeEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(mergeNodeEClass, ecorePackage.getEBoolean(), "hasOffers1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(mergeNodeEClass, ecorePackage.getEBoolean(), "hasOffers", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(decisionNodeEClass, DecisionNode.class, "DecisionNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		addEOperation(decisionNodeEClass, null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(decisionNodeEClass, null, "sendOffers1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(decisionNodeEClass, null, "sendOffers", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getToken(), "tokens", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1522,9 +1522,9 @@ public class ActivitydiagramPackageImpl extends EPackageImpl implements Activity
 		initEClass(offerEClass, Offer.class, "Offer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOffer_OfferedTokens(), this.getToken(), null, "offeredTokens", null, 0, -1, Offer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		addEOperation(offerEClass, ecorePackage.getEBoolean(), "hasTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(offerEClass, ecorePackage.getEBoolean(), "hasTokens", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(offerEClass, null, "removeWithdrawnTokens1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(offerEClass, null, "removeWithdrawnTokens", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(inputValueEClass, InputValue.class, "InputValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputValue_Variable(), this.getVariable(), null, "variable", null, 0, 1, InputValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

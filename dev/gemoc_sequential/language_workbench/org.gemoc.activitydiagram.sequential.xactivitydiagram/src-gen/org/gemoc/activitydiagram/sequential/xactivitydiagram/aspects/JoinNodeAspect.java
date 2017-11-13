@@ -17,15 +17,11 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAsp
 public class JoinNodeAspect extends ActivityNodeAspect {
   @OverrideAspectMethod
   public static void execute(final JoinNode _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspectJoinNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspectJoinNodeAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect._privk3_execute(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.JoinNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivityNode)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.NamedElement)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspectJoinNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspectJoinNodeAspectContext
+			.getSelf(_self);
+	_privk3_execute(_self_, _self);
+	;
+}
   
   private static void super_execute(final JoinNode _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspectActivityNodeAspectContext.getSelf(_self);
@@ -33,7 +29,7 @@ public class JoinNodeAspect extends ActivityNodeAspect {
   }
   
   protected static void _privk3_execute(final JoinNodeAspectJoinNodeAspectProperties _self_, final JoinNode _self) {
-    EList<Token> tokens = ActivityNodeAspect.takeOfferdTokens1(_self);
+    EList<Token> tokens = ActivityNodeAspect.takeOfferdTokens(_self);
     final Consumer<Token> _function = (Token t) -> {
       int _remainingOffersCount = ForkedTokenAspect.remainingOffersCount(((ForkedToken) t));
       boolean _greaterThan = (_remainingOffersCount > 1);
@@ -44,7 +40,7 @@ public class JoinNodeAspect extends ActivityNodeAspect {
       } else {
         BasicEList<Token> list = new BasicEList<Token>();
         list.add(t);
-        ActivityNodeAspect.sendOffers1(_self, list);
+        ActivityNodeAspect.sendOffers(_self, list);
       }
     };
     tokens.forEach(_function);

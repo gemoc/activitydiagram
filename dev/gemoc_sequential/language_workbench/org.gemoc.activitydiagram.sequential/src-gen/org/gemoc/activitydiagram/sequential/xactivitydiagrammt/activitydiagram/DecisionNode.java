@@ -29,6 +29,6 @@ public interface DecisionNode extends ControlNode {
 	 * @model tokensMany="true"
 	 * @generated
 	 */
-	void sendOffers1(EList<Token> tokens);
+	void sendOffers(EList<Token> tokens);
 
 } // DecisionNode

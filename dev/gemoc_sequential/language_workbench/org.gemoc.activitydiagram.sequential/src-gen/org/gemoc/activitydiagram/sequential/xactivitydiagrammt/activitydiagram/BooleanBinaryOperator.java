@@ -47,7 +47,7 @@ public enum BooleanBinaryOperator implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #AND
-	 * @model literal="&&"
+	 * @model literal="&amp;&amp;"
 	 * @generated
 	 * @ordered
 	 */

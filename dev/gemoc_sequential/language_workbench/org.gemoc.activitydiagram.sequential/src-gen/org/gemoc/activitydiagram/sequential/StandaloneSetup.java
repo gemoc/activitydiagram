@@ -17,6 +17,10 @@ public class StandaloneSetup {
   
   public void doEMFRegistration() {
     EPackage.Registry.INSTANCE.put(
+    	activitydiagram.ActivitydiagramPackage.eNS_URI,
+    	activitydiagram.ActivitydiagramPackage.eINSTANCE
+    );
+    EPackage.Registry.INSTANCE.put(
     	org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eNS_URI,
     	org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.ActivitydiagramPackage.eINSTANCE
     );
@@ -32,17 +36,33 @@ public class StandaloneSetup {
   }
   
   public void doAdaptersRegistration() {
+    MelangeRegistry.LanguageDescriptor activityDiagram = new MelangeRegistryImpl.LanguageDescriptorImpl(
+    	"org.gemoc.activitydiagram.sequential.ActivityDiagram", "", "http://activitydiagram/1.0", "org.gemoc.activitydiagram.sequential.ActivityDiagramMT"
+    );
+    MelangeRegistry.INSTANCE.getLanguageMap().put(
+    	"org.gemoc.activitydiagram.sequential.ActivityDiagram",
+    	activityDiagram
+    );
     MelangeRegistry.LanguageDescriptor xActivityDiagram = new MelangeRegistryImpl.LanguageDescriptorImpl(
     	"org.gemoc.activitydiagram.sequential.XActivityDiagram", "", "http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/", "org.gemoc.activitydiagram.sequential.XActivityDiagramMT"
     );
+    xActivityDiagram.addAdapter("org.gemoc.activitydiagram.sequential.ActivityDiagramMT", org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter.class);
     xActivityDiagram.addAdapter("org.gemoc.activitydiagram.sequential.XActivityDiagramMT", org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter.class);
     MelangeRegistry.INSTANCE.getLanguageMap().put(
     	"org.gemoc.activitydiagram.sequential.XActivityDiagram",
     	xActivityDiagram
     );
+    MelangeRegistry.ModelTypeDescriptor activityDiagramMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
+    	"org.gemoc.activitydiagram.sequential.ActivityDiagramMT", "", "http://org.gemoc.activitydiagram.sequential.activitydiagrammt/"
+    );
+    MelangeRegistry.INSTANCE.getModelTypeMap().put(
+    	"org.gemoc.activitydiagram.sequential.ActivityDiagramMT",
+    	activityDiagramMT
+    );
     MelangeRegistry.ModelTypeDescriptor xActivityDiagramMT = new MelangeRegistryImpl.ModelTypeDescriptorImpl(
     	"org.gemoc.activitydiagram.sequential.XActivityDiagramMT", "", "http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/"
     );
+    xActivityDiagramMT.addSuperType("org.gemoc.activitydiagram.sequential.ActivityDiagramMT");
     MelangeRegistry.INSTANCE.getModelTypeMap().put(
     	"org.gemoc.activitydiagram.sequential.XActivityDiagramMT",
     	xActivityDiagramMT

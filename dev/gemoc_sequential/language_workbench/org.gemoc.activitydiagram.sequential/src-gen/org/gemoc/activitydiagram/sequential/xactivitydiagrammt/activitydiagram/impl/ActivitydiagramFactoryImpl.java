@@ -334,15 +334,6 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Trace createTrace() {
-		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InputValue createInputValue() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
@@ -371,6 +362,15 @@ public class ActivitydiagramFactoryImpl extends EFactoryImpl implements Activity
 	 * @generated
 	 */
 	public ForkedToken createForkedToken() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Trace createTrace() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 

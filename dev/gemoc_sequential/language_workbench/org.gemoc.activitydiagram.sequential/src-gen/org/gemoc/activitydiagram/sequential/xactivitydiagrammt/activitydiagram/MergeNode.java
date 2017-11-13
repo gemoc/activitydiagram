@@ -28,6 +28,6 @@ public interface MergeNode extends ControlNode {
 	 * @model
 	 * @generated
 	 */
-	boolean hasOffers1();
+	boolean hasOffers();
 
 } // MergeNode

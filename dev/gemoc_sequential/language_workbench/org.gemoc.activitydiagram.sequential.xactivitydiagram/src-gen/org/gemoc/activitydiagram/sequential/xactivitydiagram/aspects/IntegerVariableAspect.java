@@ -15,35 +15,29 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAsp
 public class IntegerVariableAspect extends VariableAspect {
   @OverrideAspectMethod
   public static void execute(final IntegerVariable _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect._privk3_execute(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectContext
+			.getSelf(_self);
+	_privk3_execute(_self_, _self);
+	;
+}
   
   @OverrideAspectMethod
   public static void init(final IntegerVariable _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect._privk3_init(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.init((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectContext
+			.getSelf(_self);
+	_privk3_init(_self_, _self);
+	;
+}
   
   @OverrideAspectMethod
   public static String print(final IntegerVariable _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectContext.getSelf(_self);
-    Object result = null;
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect._privk3_print(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.IntegerVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.print((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-    return (java.lang.String)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspectIntegerVariableAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_print(_self_, _self);
+	;
+	return (java.lang.String) result;
+}
   
   private static void super_execute(final IntegerVariable _self) {
     final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspectVariableAspectContext.getSelf(_self);
@@ -65,8 +59,7 @@ public class IntegerVariableAspect extends VariableAspect {
       Value _initialValue = _self.getInitialValue();
       boolean _notEquals = (!Objects.equal(_initialValue, null));
       if (_notEquals) {
-        Value _initialValue_1 = _self.getInitialValue();
-        VariableAspect.currentValue(_self, _initialValue_1);
+        VariableAspect.currentValue(_self, _self.getInitialValue());
       } else {
         final IntegerValue defaultValue = ActivitydiagramFactory.eINSTANCE.createIntegerValue();
         defaultValue.setValue(0);
@@ -82,12 +75,10 @@ public class IntegerVariableAspect extends VariableAspect {
   
   protected static String _privk3_print(final IntegerVariableAspectIntegerVariableAspectProperties _self_, final IntegerVariable _self) {
     StringBuffer text = new StringBuffer();
-    String _name = _self.getName();
-    text.append(_name);
+    text.append(_self.getName());
     text.append(" = ");
     Value _currentValue = VariableAspect.currentValue(_self);
-    int _value = ((IntegerValue) _currentValue).getValue();
-    text.append(_value);
+    text.append(((IntegerValue) _currentValue).getValue());
     return text.toString();
   }
 }

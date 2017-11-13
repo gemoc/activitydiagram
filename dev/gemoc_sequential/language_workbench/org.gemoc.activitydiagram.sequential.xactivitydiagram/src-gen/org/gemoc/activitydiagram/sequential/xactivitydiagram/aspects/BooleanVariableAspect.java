@@ -15,35 +15,29 @@ import org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAsp
 @SuppressWarnings("all")
 public class BooleanVariableAspect extends VariableAspect {
   public static void execute(final BooleanVariable _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect._privk3_execute(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.execute((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectContext
+			.getSelf(_self);
+	_privk3_execute(_self_, _self);
+	;
+}
   
   @OverrideAspectMethod
   public static void init(final BooleanVariable _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectContext.getSelf(_self);
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect._privk3_init(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
-    					org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.init((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectContext
+			.getSelf(_self);
+	_privk3_init(_self_, _self);
+	;
+}
   
   @OverrideAspectMethod
   public static String print(final BooleanVariable _self) {
-    final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectContext.getSelf(_self);
-    Object result = null;
-     if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect._privk3_print(_self_, (org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.BooleanVariable)_self);
-    } else  if (_self instanceof org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable){
-    					result = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect.print((org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Variable)_self);
-    } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
-    return (java.lang.String)result;
-  }
+	final org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectProperties _self_ = org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspectBooleanVariableAspectContext
+			.getSelf(_self);
+	Object result = null;
+	result = _privk3_print(_self_, _self);
+	;
+	return (java.lang.String) result;
+}
   
   protected static void _privk3_execute(final BooleanVariableAspectBooleanVariableAspectProperties _self_, final BooleanVariable _self) {
   }
@@ -60,8 +54,7 @@ public class BooleanVariableAspect extends VariableAspect {
       Value _initialValue = _self.getInitialValue();
       boolean _notEquals = (!Objects.equal(_initialValue, null));
       if (_notEquals) {
-        Value _initialValue_1 = _self.getInitialValue();
-        VariableAspect.currentValue(_self, _initialValue_1);
+        VariableAspect.currentValue(_self, _self.getInitialValue());
       } else {
         final BooleanValue defaultValue = ActivitydiagramFactory.eINSTANCE.createBooleanValue();
         defaultValue.setValue(false);
@@ -77,12 +70,10 @@ public class BooleanVariableAspect extends VariableAspect {
   
   protected static String _privk3_print(final BooleanVariableAspectBooleanVariableAspectProperties _self_, final BooleanVariable _self) {
     StringBuffer text = new StringBuffer();
-    String _name = _self.getName();
-    text.append(_name);
+    text.append(_self.getName());
     text.append(" = ");
     Value _currentValue = VariableAspect.currentValue(_self);
-    boolean _isValue = ((BooleanValue) _currentValue).isValue();
-    text.append(_isValue);
+    text.append(((BooleanValue) _currentValue).isValue());
     return text.toString();
   }
 }
