@@ -1,3 +1,4 @@
+Manifest-Version: 1.0
 Bundle-SymbolicName: org.gemoc.activitydiagram.sequential.k3dsa;singleton:=true
 Export-Package: org.gemoc.activitydiagram.sequential.k3dsa
 Bundle-Name: %pluginName
@@ -14,8 +15,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
  org.eclipse.xtext;bundle-version="2.7.3",
- org.gemoc.execution.concurrent.ccsljavaxdsml.api;bundle-version="0.1.0",
- org.gemoc.execution.concurrent.ccsljavaengine.extensions.k3;bundle-version="0.1.0",
  org.gemoc.activitydiagram.sequential.model;bundle-version="0.1.0",
  org.aspectj.runtime;bundle-version="0.0.0";visibility:=reexport,
  org.eclipse.emf.transaction;bundle-version="1.8.0",
@@ -24,4 +23,3 @@ Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
-Manifest-Version: 1.0
