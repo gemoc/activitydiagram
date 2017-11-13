@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse version="3.4"?><plugin>
-  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
-    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.sequential.XActivityDiagram" xdsmlFilePath="/org.gemoc.activitydiagram.sequential/bin/org/gemoc/activitydiagram/sequential/XActivityDiagram.melange">
+  <extension point="org.eclipse.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.sequential.XActivityDiagram" xdsmlFilePath="/org.gemoc.activitydiagram.sequential/src/org/gemoc/activitydiagram/sequential/XActivityDiagram.melange">
       <XDSML_Definition_Customization fileExtensions="xsad"/>
     </XDSML_Definition>
   </extension>
@@ -9,12 +9,21 @@
     <!-- @generated activitydiagram -->
     <package class="activitydiagram.ActivitydiagramPackage" uri="http://activitydiagram/1.0"/>
   </extension>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <!-- @generated XActivityDiagramMT -->
+    <package class="org.gemoc.activitydiagram.sequential.xactivitydiagrammt.activitydiagram.ActivitydiagramPackage" genModel="model-gen/XActivityDiagramMT.genmodel" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/activitydiagram/"/>
+  </extension>
   
 <extension point="fr.inria.diverse.melange.modeltype">
-    <modeltype id="org.gemoc.activitydiagram.sequential.XActivityDiagramMT" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/"/>
+    <modeltype id="org.gemoc.activitydiagram.sequential.ActivityDiagramMT" uri="http://org.gemoc.activitydiagram.sequential.activitydiagrammt/"/>
+    <modeltype id="org.gemoc.activitydiagram.sequential.XActivityDiagramMT" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagrammt/">
+      <subtyping modeltypeId="org.gemoc.activitydiagram.sequential.ActivityDiagramMT"/>
+    </modeltype>
   </extension>
   <extension point="fr.inria.diverse.melange.language">
+    <language aspects="" entryPoints="" exactType="org.gemoc.activitydiagram.sequential.ActivityDiagramMT" id="org.gemoc.activitydiagram.sequential.ActivityDiagram" uri="http://activitydiagram/1.0"/>
     <language aspects="IntegerCalculationExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerCalculationExpressionAspect;Variable:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.VariableAspect;Activity:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect;BooleanBinaryExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanBinaryExpressionAspect;ActivityFinalNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityFinalNodeAspect;Token:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TokenAspect;DecisionNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.DecisionNodeAspect;ActivityNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityNodeAspect;MergeNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.MergeNodeAspect;Input:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InputAspect;IntegerVariable:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerVariableAspect;ActivityEdge:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityEdgeAspect;InputValue:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InputValueAspect;IntegerComparisonExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.IntegerComparisonExpressionAspect;JoinNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.JoinNodeAspect;OpaqueAction:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OpaqueActionAspect;InitialNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.InitialNodeAspect;ControlFlow:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ControlFlowAspect;Trace:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.TraceAspect;ForkNode:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkNodeAspect;Expression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ExpressionAspect;Offer:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.OfferAspect;BooleanVariable:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanVariableAspect;ForkedToken:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ForkedTokenAspect;NamedElement:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.NamedElementAspect;BooleanUnaryExpression:org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.BooleanUnaryExpressionAspect" entryPoints="org.gemoc.activitydiagram.sequential.xactivitydiagram.aspects.ActivityAspect.main(org.gemoc.activitydiagram.sequential.xactivitydiagram.activitydiagram.Activity)" exactType="org.gemoc.activitydiagram.sequential.XActivityDiagramMT" id="org.gemoc.activitydiagram.sequential.XActivityDiagram" uri="http://org.gemoc.activitydiagram.sequential.xactivitydiagram/activitydiagram/">
+      <adapter class="org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.activitydiagrammt.XActivityDiagramAdapter" modeltypeId="org.gemoc.activitydiagram.sequential.ActivityDiagramMT"/>
       <adapter class="org.gemoc.activitydiagram.sequential.xactivitydiagram.adapters.xactivitydiagrammt.XActivityDiagramAdapter" modeltypeId="org.gemoc.activitydiagram.sequential.XActivityDiagramMT"/>
     </language>
   </extension>
