@@ -1,8 +1,12 @@
 package org.gemoc.activitydiagram.sequential
 
-language XActivityDiagram { 
+external language ActivityDiagram {
 	syntax "platform:/resource/org.gemoc.activitydiagram.sequential.model/ad/activitydiagram.ecore"
-	syntax "platform:/resource/org.gemoc.activitydiagram.sequential.model.dynamic/model/dynamic.ecore"
+} 
+
+language XActivityDiagram inherits ActivityDiagram {
+	
+	syntax "platform:/resource/org.gemoc.activitydiagram.sequential.model.dynamic/model/dynamic.ecore" 
 	
 	with org.gemoc.activitydiagram.sequential.k3dsa.OpaqueActionAspect
 	with org.gemoc.activitydiagram.sequential.k3dsa.MergeNodeAspect
@@ -31,4 +35,3 @@ language XActivityDiagram {
 	with org.gemoc.activitydiagram.sequential.k3dsa.InputAspect
 	with org.gemoc.activitydiagram.sequential.k3dsa.InputValueAspect
 }
-
