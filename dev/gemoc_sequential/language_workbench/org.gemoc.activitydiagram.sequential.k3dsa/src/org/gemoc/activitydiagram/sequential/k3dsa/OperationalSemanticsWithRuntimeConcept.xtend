@@ -82,12 +82,12 @@ class ActivityAspect extends NamedElementAspect {
 		_self.trace.executedNodes.add(toExecute)
 		toExecute.execute
 
-		var list = _self.nodes.filter[node|node.hasOffers1]
+		var list = _self.nodes.filter[node|node.hasOffers]
 		while (list != null && list.size > 0) {
 			toExecute = list.get(0)
 			_self.trace.executedNodes.add(toExecute)
 			toExecute.execute
-			list = _self.nodes.filter[node|node.hasOffers1]
+			list = _self.nodes.filter[node|node.hasOffers]
 		}
 	}
 
@@ -160,17 +160,17 @@ class ActivityNodeAspect extends NamedElementAspect {
 	}
 
 	@Step
-	def void sendOffers1(EList<Token> tokens) {
+	def void sendOffers(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
-			edge.sendOffer1(tokens)
+			edge.sendOffer(tokens)
 		}
 	}
 
 	@Step
-	def EList<Token> takeOfferdTokens1() {
+	def EList<Token> takeOfferdTokens() {
 		val allTokens = new BasicEList<Token>()
 		for (ActivityEdge edge : _self.getIncoming()) {
-			val tokens = edge.takeOfferedTokens1()
+			val tokens = edge.takeOfferedTokens()
 			for (Token token : tokens) {
 				_self.heldTokens.add(token)
 			}
@@ -180,16 +180,16 @@ class ActivityNodeAspect extends NamedElementAspect {
 	}
 
 	@Step
-	def void addTokens1(EList<Token> tokens) {
+	def void addTokens(EList<Token> tokens) {
 		for (Token token : tokens) {
 			_self.heldTokens.add(token)
 		}
 	}
 
-	def boolean hasOffers1() {
+	def boolean hasOffers() {
 		var hasOffer = true
 		for (ActivityEdge edge : _self.getIncoming()) {
-			if (!edge.hasOffer1()) {
+			if (!edge.hasOffer()) {
 				hasOffer = false
 			}
 		}
@@ -208,21 +208,21 @@ class ActivityEdgeAspect extends NamedElementAspect {
 	@Containment
 	public EList<Offer> offers
 	
-	def void sendOffer1(EList<Token> tokens) {
+	def void sendOffer(EList<Token> tokens) {
 		val offer = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createOffer
 		_self.offers.add(offer)
 		tokens.forEach[token|offer.offeredTokens.add(token)]
 	}
 
-	def EList<Token> takeOfferedTokens1() {
+	def EList<Token> takeOfferedTokens() {
 		val tokens = new BasicEList<Token>
 		_self.offers.forEach[o|tokens.addAll(o.offeredTokens)]
 		_self.offers.clear
 		return tokens
 	}
 
-	def boolean hasOffer1() {
-		return _self.offers.exists[o1|o1.hasTokens1]
+	def boolean hasOffer() {
+		return _self.offers.exists[o1|o1.hasTokens]
 	}
 }
 
@@ -234,7 +234,7 @@ class ControlFlowAspect extends ActivityEdgeAspect {
 class OpaqueActionAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		_self.sendOffers1(_self.takeOfferdTokens1)
+		_self.sendOffers(_self.takeOfferdTokens)
 	}
 }
 
@@ -246,11 +246,11 @@ class InitialNodeAspect extends ActivityNodeAspect {
 		_self.heldTokens.add(r)
 		var list = new BasicEList<Token>
 		list.add(r)
-		_self.sendOffers1(list)
+		_self.sendOffers(list)
 	}
 
 	@OverrideAspectMethod
-	def boolean hasOffers1() {
+	def boolean hasOffers() {
 		return false;
 	}
 
@@ -266,7 +266,7 @@ class ExpressionAspect {
 class ActivityFinalNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		_self.sendOffers1(_self.takeOfferdTokens1)
+		_self.sendOffers(_self.takeOfferdTokens)
 	}
 }
 
@@ -274,7 +274,7 @@ class ActivityFinalNodeAspect extends ActivityNodeAspect {
 class ForkNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		var tokens = _self.takeOfferdTokens1
+		var tokens = _self.takeOfferdTokens
 		var forkedTokens = new BasicEList<Token>()
 		for (Token token : tokens) {
 			var forkedToken = dynamic.activitydiagram.ActivitydiagramFactory.eINSTANCE.createForkedToken
@@ -282,8 +282,8 @@ class ForkNodeAspect extends ActivityNodeAspect {
 			forkedToken.remainingOffersCount = _self.outgoing.size()
 			forkedTokens.add(forkedToken)
 		}
-		_self.addTokens1(forkedTokens)
-		_self.sendOffers1(forkedTokens)
+		_self.addTokens(forkedTokens)
+		_self.sendOffers(forkedTokens)
 	}
 }
 
@@ -291,14 +291,14 @@ class ForkNodeAspect extends ActivityNodeAspect {
 class JoinNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		var tokens = _self.takeOfferdTokens1
+		var tokens = _self.takeOfferdTokens
 		tokens.forEach [ t |
 			if ((t as ForkedToken).remainingOffersCount > 1) {
 				(t as ForkedToken).remainingOffersCount = (t as ForkedToken).remainingOffersCount - 1
 			} else {
 				var list = new BasicEList<Token>
 				list.add(t)
-				_self.sendOffers1(list)
+				_self.sendOffers(list)
 			}
 		]
 	}
@@ -308,11 +308,11 @@ class JoinNodeAspect extends ActivityNodeAspect {
 class MergeNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		_self.sendOffers1(_self.takeOfferdTokens1)
+		_self.sendOffers(_self.takeOfferdTokens)
 	}
 
-	def boolean hasOffers1() {
-		return _self.incoming.exists[edge|edge.hasOffer1()]
+	def boolean hasOffers() {
+		return _self.incoming.exists[edge|edge.hasOffer()]
 	}
 }
 
@@ -320,15 +320,15 @@ class MergeNodeAspect extends ActivityNodeAspect {
 class DecisionNodeAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
-		_self.sendOffers1(_self.takeOfferdTokens1)
+		_self.sendOffers(_self.takeOfferdTokens)
 	}
 
 	@OverrideAspectMethod
-	def void sendOffers1(EList<Token> tokens) {
+	def void sendOffers(EList<Token> tokens) {
 		for (ActivityEdge edge : _self.getOutgoing()) {
 			if (edge instanceof ControlFlow && ( edge as ControlFlow).guard != null) {
 				if ((( edge as ControlFlow).guard.currentValue as BooleanValue).value) {
-					edge.sendOffer1(tokens);
+					edge.sendOffer(tokens);
 				}
 			}
 		}
@@ -480,12 +480,12 @@ class OfferAspect {
 	
 	public EList<Token> offeredTokens
 
-	def boolean hasTokens1() {
-		_self.removeWithdrawnTokens1();
+	def boolean hasTokens() {
+		_self.removeWithdrawnTokens();
 		return _self.offeredTokens.size() > 0;
 	}
 
-	def void removeWithdrawnTokens1() {
+	def void removeWithdrawnTokens() {
 		val tokensToBeRemoved = new BasicEList<Token>();
 		_self.offeredTokens.forEach [ token |
 			if (token.withdrawn) {
