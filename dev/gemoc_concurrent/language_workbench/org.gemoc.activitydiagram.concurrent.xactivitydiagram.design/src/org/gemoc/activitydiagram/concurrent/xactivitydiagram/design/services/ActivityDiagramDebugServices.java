@@ -3,7 +3,8 @@ package org.gemoc.activitydiagram.concurrent.xactivitydiagram.design.services;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.gemoc.executionframework.extensions.sirius.services.AbstractGemocDebuggerServices;
+import org.eclipse.gemoc.executionframework.extensions.sirius.services.AbstractGemocAnimatorServices.StringCouple;
+import org.eclipse.gemoc.executionframework.extensions.sirius.services.AbstractGemocDebuggerServices;
 
 public class ActivityDiagramDebugServices extends AbstractGemocDebuggerServices {
 
@@ -18,6 +19,6 @@ public class ActivityDiagramDebugServices extends AbstractGemocDebuggerServices 
 
 	@Override
 	public String getModelIdentifier() {
-		return org.gemoc.execution.concurrent.ccsljavaengine.ui.Activator.PLUGIN_ID + ".debugModel";
+		return org.eclipse.gemoc.execution.concurrent.ccsljavaengine.ui.Activator.PLUGIN_ID + ".debugModel";
 	}
 }

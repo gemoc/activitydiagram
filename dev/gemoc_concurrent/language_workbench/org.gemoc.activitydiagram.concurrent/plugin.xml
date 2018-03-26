@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-  <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
-    <XDSML_Definition codeExecutor_class="xactivitydiagram.xdsml.api.impl.XActivityDiagramCodeExecutor" modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.concurrent.XActivityDiagram" solver_class="org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" toCCSLQVTOFilePath="/org.gemoc.activitydiagram.concurrent.moc.dse/qvto-gen/modeling/ActivitiyDiagramV2.qvto" xdsmlFilePath="/org.gemoc.activitydiagram.concurrent/src/org/gemoc/activitydiagram/concurrent/ConcurrentActivityDiagram.melange">
+  <extension point="org.eclipse.gemoc.gemoc_language_workbench.concurrent.xdsml">
+    <XDSML_Definition codeExecutor_class="xactivitydiagram.xdsml.api.impl.XActivityDiagramCodeExecutor" modelLoader_class="org.eclipse.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.activitydiagram.concurrent.XActivityDiagram" solver_class="org.eclipse.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" toCCSLQVTOFilePath="/org.gemoc.activitydiagram.concurrent.moc.dse/qvto-gen/modeling/ActivitiyDiagramV2.qvto" xdsmlFilePath="/org.gemoc.activitydiagram.concurrent/src/org/gemoc/activitydiagram/concurrent/ConcurrentActivityDiagram.melange">
       <XDSML_Definition_Customization fileExtensions="xcad" />
     </XDSML_Definition>
   </extension>

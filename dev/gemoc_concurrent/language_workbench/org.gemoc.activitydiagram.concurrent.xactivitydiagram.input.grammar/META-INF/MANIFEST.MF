@@ -22,11 +22,5 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.gemoc.activitydiagram.concurrent.xactivitydiagram,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.formatting,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.generator,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr,
  org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr.internal,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.scoping,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.serializer,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.services,
- org.gemoc.activitydiagram.concurrent.xactivitydiagram.validation
+ org.gemoc.activitydiagram.concurrent.xactivitydiagram.services

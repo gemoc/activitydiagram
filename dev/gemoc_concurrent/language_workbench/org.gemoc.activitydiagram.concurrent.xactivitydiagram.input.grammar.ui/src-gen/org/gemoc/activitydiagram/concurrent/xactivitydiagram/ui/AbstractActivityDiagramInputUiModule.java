@@ -5,6 +5,7 @@
 package org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.gemoc.activitydiagram.concurrent.xactivitydiagram.parser.antlr.internal.InternalActivityDiagramInputLexer;
 
 /**
  * Manual modifications go to {org.gemoc.activitydiagram.concurrent.xactivitydiagram.ui.ActivityDiagramInputUiModule}
