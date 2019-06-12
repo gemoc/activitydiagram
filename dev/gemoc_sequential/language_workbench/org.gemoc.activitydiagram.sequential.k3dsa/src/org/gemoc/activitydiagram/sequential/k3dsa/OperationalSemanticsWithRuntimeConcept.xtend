@@ -50,6 +50,7 @@ import static extension org.gemoc.activitydiagram.sequential.k3dsa.OfferAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TokenAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.TraceAspect.*
 import static extension org.gemoc.activitydiagram.sequential.k3dsa.VariableAspect.*
+import static extension org.gemoc.activitydiagram.sequential.k3dsa.ExpressionAspect.*
 
 class Util {
 	public static final Object LINE_BREAK = System.getProperty("line.separator");
@@ -234,6 +235,7 @@ class ControlFlowAspect extends ActivityEdgeAspect {
 class OpaqueActionAspect extends ActivityNodeAspect {
 	@OverrideAspectMethod
 	def void execute() {
+		_self.expressions.forEach[e | e.execute]
 		_self.sendOffers(_self.takeOfferdTokens)
 	}
 }
@@ -258,6 +260,7 @@ class InitialNodeAspect extends ActivityNodeAspect {
 
 @Aspect(className=Expression)
 class ExpressionAspect {
+	@Step
 	def void execute() {
 	}
 }
