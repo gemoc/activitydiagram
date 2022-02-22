@@ -7,12 +7,10 @@ on:
   push:
     branches: 
       - '*'
-  pull_request:
-    branches: [ master ]
 
 jobs:
-  build:
-
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +28,19 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
         
-    - name: Build with Maven
+    - name: Build Example Deployer update site 🔧
       run: |
           cd dev
           mvn -B clean package
+          cd ..
+          mkdir public
+          mkdir public/updates
+          mkdir public/updates/nightly
+          cp -r dev/releng/org.gemoc.activitydiagram.repository/target/repository/* public/updates/nightly 
+          
     
+	- name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: public # The folder the action should deploy.
