@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (c) 2017 Inria and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        Inria - initial API and implementation
+ -->
+
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <relativePath>../..</relativePath>
+    <groupId>org.gemoc.activitydiagram</groupId>
+    <artifactId>org.gemoc.activitydiagram.root</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>org.gemoc.activitydiagram.gemoc_sequential.language_workbench.plugins</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  
+  <modules>
+        <module>org.gemoc.activitydiagram.sequential</module>
+        <module>org.gemoc.activitydiagram.sequential.model</module>
+		<module>org.gemoc.activitydiagram.sequential.model.dynamic</module>
+		<module>org.gemoc.activitydiagram.sequential.k3dsa</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.design</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.edit</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.editor</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ide</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.grammar.ui</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ide</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.input.grammar.ui</module>
+		<module>org.gemoc.activitydiagram.sequential.xactivitydiagram.trace</module>
+  </modules>
+</project>

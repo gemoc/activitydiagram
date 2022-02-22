@@ -1,13 +1,12 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Build and test compilation on latest GEMOC Studio
+name: Build, test compilation on latest GEMOC Studio and deploy update site
 
 on:
   push:
     branches: 
-      - '**'        # matches every branch
-      - '!master'   # excludes master
+      - 'master'
 
 jobs:
   build-and-deploy:
@@ -29,9 +28,20 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
         
-    - name: Build  🔧
+    - name: Build 🔧
       run: |
           cd dev
           mvn -B clean package
-          
-
+          cd ..
+    - name: Build Example Deployer update site 🔧  
+      run: |
+          mkdir public
+          mkdir public/updates
+          mkdir public/updates/nightly
+          cp -r dev/releng/org.gemoc.activitydiagram.repository/target/repository/* public/updates/nightly   
+    
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: public # The folder the action should deploy.
