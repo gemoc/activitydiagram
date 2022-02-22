@@ -13,11 +13,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.core.resources.IProject;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.gemoc.activitydiagram.sampledeployer.Activator;
 
-import fr.inria.diverse.commons.eclipse.jface.wizards.AbstractExampleWizard;
 
 public class ActivityDiagramSequentialModelExampleWizard
 	extends AbstractExampleWizard {
@@ -36,13 +34,4 @@ public class ActivityDiagramSequentialModelExampleWizard
 		return Activator.getDefault();
 	}
 
-	@Override
-	public void error(String message, Throwable e) {
-		Activator.getDefault().error(message, e);
-	}
-
-	@Override
-	public ActionIfProjectExist getActionIfProjectExist(IProject project) {		
-		return ActionIfProjectExist.ASKUSER;
-	}
 }
